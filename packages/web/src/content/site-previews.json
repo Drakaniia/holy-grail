@@ -1863,6 +1863,15 @@
     "height": 600,
     "bytes": 57936
   },
+  "jamboxplus": {
+    "image": "/previews/jamboxplus.webp",
+    "small": "/previews/jamboxplus-sm.webp",
+    "sourceUrl": "https://jamboxplusph.dpdns.org/",
+    "capturedAt": "2026-08-29T09:09:27.214Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25870
+  },
   "javii-tools": {
     "image": "/previews/javii-tools.webp",
     "small": "/previews/javii-tools-sm.webp",
@@ -2010,6 +2019,15 @@
     "height": 600,
     "bytes": 7838,
     "fallback": true
+  },
+  "kokonutui": {
+    "image": "/previews/kokonutui.webp",
+    "small": "/previews/kokonutui-sm.webp",
+    "sourceUrl": "https://kokonutui.com/",
+    "capturedAt": "2026-08-29T09:09:21.618Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 7206
   },
   "koyeb": {
     "image": "/previews/koyeb.webp",
@@ -3263,6 +3281,15 @@
     "height": 600,
     "bytes": 12538,
     "fallback": true
+  },
+  "screensdesign": {
+    "image": "/previews/screensdesign.webp",
+    "small": "/previews/screensdesign-sm.webp",
+    "sourceUrl": "https://screensdesign.com/",
+    "capturedAt": "2026-08-29T09:09:25.858Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8066
   },
   "screenshot-studio": {
     "image": "/previews/screenshot-studio.webp",

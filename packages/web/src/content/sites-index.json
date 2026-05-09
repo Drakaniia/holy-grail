@@ -9422,6 +9422,110 @@
     ]
   },
   {
+    "slug": "kokonutui",
+    "name": "Kokonut UI",
+    "description": "Free open-source React and Tailwind CSS component library with 100+ copy-paste UI components.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 2100,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://kokonutui.com",
+    "docs": "https://kokonutui.com",
+    "sourceCode": "https://github.com/dorianbaffier/kokonutui",
+    "icon": "kokonutui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "react",
+      "tailwind",
+      "components"
+    ],
+    "atGlance": "100+ free React components with live previews and shadcn CLI install.",
+    "fullDescription": "Kokonut UI is a collection of 100+ open-source React components built with Tailwind CSS and Motion. It features live previews, copy-paste source, and one-command install via the shadcn CLI. Includes templates and MCP registry support for AI coding agents.",
+    "coreFeatures": [
+      {
+        "name": "100+ Components",
+        "description": "Extensive library of React and Tailwind CSS UI components.",
+        "icon": "layers"
+      },
+      {
+        "name": "Live Previews",
+        "description": "Interactive demos for every component before you install.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn CLI Install",
+        "description": "One command adds any component directly to your project.",
+        "icon": "rocket"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "MCP Registry",
+        "description": "Machine-readable registry for AI coding agents like Claude and Cursor.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Templates",
+        "description": "Professional starter templates built with React, Next.js, and Tailwind.",
+        "icon": "check"
+      },
+      {
+        "name": "Motion Animations",
+        "description": "Components include built-in Framer Motion animations.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
     "slug": "chanhdai-components",
     "name": "Chánh Đại Components",
     "description": "Pixel-perfect shadcn registry with uniquely crafted React components.",
@@ -30368,6 +30472,105 @@
     ]
   },
   {
+    "slug": "screensdesign",
+    "name": "ScreensDesign",
+    "description": "App design library and UI inspiration showcasing iOS app screenshots and mobile design patterns.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://screensdesign.com",
+    "docs": "https://screensdesign.com",
+    "sourceCode": "",
+    "icon": "screensdesign",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "mobile",
+      "ios"
+    ],
+    "atGlance": "App design library with iOS screenshots and mobile UI inspiration.",
+    "fullDescription": "ScreensDesign is a curated library of mobile app design screenshots and UI patterns. It organizes examples by category (AI assistant, fitness, meditation, etc.) and features app teardowns and articles on mobile design best practices.",
+    "coreFeatures": [
+      {
+        "name": "App Screenshot Library",
+        "description": "Curated collection of iOS app screenshots organized by category.",
+        "icon": "check"
+      },
+      {
+        "name": "App Teardowns",
+        "description": "Featured breakdowns of popular app designs and UX patterns.",
+        "icon": "check"
+      },
+      {
+        "name": "Design Articles",
+        "description": "Guides covering mobile app UI design, onboarding, and more.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Category Browsing",
+        "description": "Browse screenshots by app type and design discipline.",
+        "icon": "layers"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "mobbin",
+        "name": "Mobbin",
+        "description": "Design reference library with real-world mobile and web UI patterns.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mobbin.com/"
+      },
+      {
+        "slug": "dribbble",
+        "name": "Dribbble",
+        "description": "Design inspiration platform for discovering creative work and UI references.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://dribbble.com/"
+      },
+      {
+        "slug": "recent-design",
+        "name": "Recent Design - Curated Design Inspiration & Tools",
+        "description": "Recent Design - Curated Design Inspiration & Tools bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://recent.design/"
+      }
+    ]
+  },
+  {
     "slug": "seesaw",
     "name": "SEESAW Design Inspiration",
     "description": "SEESAW Design Inspiration bookmarked for inspiration resources.",
@@ -44703,6 +44906,99 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://123movieslive.top/home/"
+      }
+    ]
+  },
+  {
+    "slug": "jamboxplus",
+    "name": "JamBox+",
+    "description": "Movie and TV show streaming site for watching content online.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://jamboxplusph.dpdns.org",
+    "docs": "https://jamboxplusph.dpdns.org",
+    "sourceCode": "",
+    "icon": "jamboxplus",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie and TV show streaming site.",
+    "fullDescription": "JamBox+ is a web-based movie and TV show streaming site kept as a watch source in the catalog.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie and TV streaming bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the streaming site directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movies, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
+      },
+      {
+        "slug": "nextflicks",
+        "name": "NextFlicks",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nextflicks.link"
       }
     ]
   },

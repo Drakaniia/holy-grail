@@ -1,0 +1,76 @@
+slug: screensdesign
+name: ScreensDesign
+description: App design library and UI inspiration showcasing iOS app screenshots and mobile design patterns.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://screensdesign.com
+docs: https://screensdesign.com
+sourceCode: ""
+icon: screensdesign
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - mobile
+  - ios
+atGlance: App design library with iOS screenshots and mobile UI inspiration.
+fullDescription: >-
+  ScreensDesign is a curated library of mobile app design screenshots and UI
+  patterns. It organizes examples by category (AI assistant, fitness, meditation,
+  etc.) and features app teardowns and articles on mobile design best practices.
+coreFeatures:
+  - name: App Screenshot Library
+    description: Curated collection of iOS app screenshots organized by category.
+    icon: check
+  - name: App Teardowns
+    description: Featured breakdowns of popular app designs and UX patterns.
+    icon: check
+  - name: Design Articles
+    description: Guides covering mobile app UI design, onboarding, and more.
+    icon: check
+additionalFeatures:
+  - name: Category Browsing
+    description: Browse screenshots by app type and design discipline.
+    icon: layers
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: mobbin
+    name: Mobbin
+    description: Design reference library with real-world mobile and web UI patterns.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://mobbin.com/
+  - slug: dribbble
+    name: Dribbble
+    description: Design inspiration platform for discovering creative work and UI references.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dribbble.com/
+  - slug: recent-design
+    name: Recent Design - Curated Design Inspiration & Tools
+    description: Recent Design - Curated Design Inspiration & Tools bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://recent.design/
