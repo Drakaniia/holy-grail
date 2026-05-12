@@ -1,0 +1,33 @@
+<script setup>
+import Navbar from './components/Navbar.vue'
+import Sidebar from './components/Sidebar.vue'
+import HolyGrailFooter from './components/DailyFossFooter.vue'
+</script>
+
+<template>
+  <div class="h-screen flex bg-black text-white overflow-hidden">
+    <Sidebar />
+    <div class="flex-1 flex flex-col overflow-hidden">
+      <Navbar />
+      <main class="flex-grow flex items-center justify-center p-8 overflow-y-auto">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4">You did it!</h1>
+          <p class="text-gray-400">
+            Visit
+            <a
+              href="https://vuejs.org/"
+              target="_blank"
+              rel="noopener"
+              class="text-blue-400 hover:underline"
+              >vuejs.org</a
+            >
+            to read the documentation
+          </p>
+        </div>
+      </main>
+      <HolyGrailFooter />
+    </div>
+  </div>
+</template>
+
+<style scoped></style>
