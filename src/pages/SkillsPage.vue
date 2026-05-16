@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Search, TrendingUp, Clock, Plus, Sparkles } from 'lucide-vue-next'
+import { Search, TrendingUp, Clock, Sparkles } from 'lucide-vue-next'
 import { useSkillsStore } from '@/stores/skills'
 import SkillCard from '@/components/skills/SkillCard.vue'
 
@@ -88,17 +88,11 @@ const store = useSkillsStore()
             </button>
           </div>
 
-          <!-- Right Side: Count and Add Button -->
+          <!-- Right Side: Count -->
           <div class="flex items-center gap-3">
             <span class="text-xs text-gray-500">
               Showing {{ store.filteredSkills.length }} of {{ store.allSkills.length }} skills
             </span>
-            <button
-              class="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-            >
-              <Plus class="w-4 h-4" />
-              Add Skill
-            </button>
           </div>
         </div>
 
