@@ -72,7 +72,7 @@ const categories = [
         <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
            <path d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71L16.29 21L21 21V13H17.71L18.71 14.29L17.29 15.71L16.29 14.71L13 18V21H11V13L3 3ZM5 5L11 11V5H5Z" />
         </svg>
-        <span class="font-bold text-sm tracking-tight text-white uppercase">Toolfolio</span>
+        <span class="font-bold text-sm tracking-tight text-white uppercase">Holy Grail</span>
       </div>
     </div>
 
