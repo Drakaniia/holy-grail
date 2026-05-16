@@ -21,7 +21,7 @@ import {
   PlusCircle
 } from 'lucide-vue-next'
 
-const activeItem = ref('Explore')
+const activeItem = ref('Sites')
 const expandedGroups = ref<Record<string, boolean>>({
   Tools: true,
   Libraries: false,
@@ -41,11 +41,13 @@ const toggleGroup = (group: string) => {
 }
 
 const mainNav = [
-  { name: 'Explore', icon: Compass },
-  { name: 'Articles', icon: FileText },
-  { name: 'Collections', icon: Folder, hasDot: true },
-  { name: 'Marketplace', icon: Store },
-  { name: 'ogfolio', icon: Users },
+  { name: 'Sites', icon: Globe, route: '/sites' },
+  { name: 'Explore', icon: Compass, route: '/sites' },
+  { name: 'Skills', icon: Sparkles, route: '/skills' },
+  { name: 'Articles', icon: FileText, route: '/sites' },
+  { name: 'Collections', icon: Folder, route: '/sites', hasDot: true },
+  { name: 'Marketplace', icon: Store, route: '/sites' },
+  { name: 'ogfolio', icon: Users, route: '/sites' },
 ]
 
 const categories = [
@@ -78,10 +80,11 @@ const categories = [
     <nav class="flex-1 pt-1">
       <ul class="space-y-0.5 px-4">
         <li v-for="item in mainNav" :key="item.name">
-          <button 
-            @click="activeItem = item.name"
+          <RouterLink
+            :to="item.route"
             class="w-full flex items-center gap-3 px-0 py-2 rounded-md transition-colors group relative"
             :class="activeItem === item.name ? 'bg-zinc-900 text-white' : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'"
+            @click="activeItem = item.name"
           >
             <!-- Active Indicator (vertical line) -->
             <div 
@@ -93,7 +96,7 @@ const categories = [
             <span class="font-medium text-sm">{{ item.name }}</span>
             
             <div v-if="item.hasDot" class="ml-auto w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-          </button>
+          </RouterLink>
         </li>
       </ul>
 

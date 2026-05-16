@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun run scripts/generate-skills-index.js && vite",
-    "build": "bun run scripts/generate-skills-index.js && vue-tsc && vite build",
+    "dev": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && vite",
+    "build": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && vue-tsc && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "run-s lint:*",
@@ -15,6 +15,7 @@
     "generate:skills": "bun run scripts/generate-skills-index.js"
   },
   "dependencies": {
+    "@fontsource/geist-sans": "^5.2.5",
     "@mdx-js/rollup": "^3.1.1",
     "@mdx-js/vue": "^3.1.1",
     "js-yaml": "^4.1.1",

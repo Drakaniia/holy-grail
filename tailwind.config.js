@@ -6,7 +6,11 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Geist Sans', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

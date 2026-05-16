@@ -1,0 +1,43 @@
+slug: lovable
+name: Lovable
+description: AI-powered full-stack web app builder that turns ideas into production-ready applications
+category: Website Development
+stars: 8900
+watchers: 320
+addedDaysAgo: 3
+license: Proprietary
+lastCommit: "1 day ago"
+lastRelease: "3 days ago"
+version: "2.8.0"
+contributors: 56
+commitsThisYear: 670
+releases: 18
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://lovable.dev
+docs: https://docs.lovable.dev
+sourceCode: https://github.com/lovable-dev/lovable
+icon: lovable
+verified: true
+featured: true
+atGlance: AI-powered full-stack web app builder that turns ideas into production-ready applications
+fullDescription: Lovable is an AI-powered development platform that helps you build full-stack web applications from natural language descriptions. Generate React components, connect databases, and deploy instantly.
+coreFeatures:
+  - name: AI Code Generation
+    description: Build apps from natural language prompts
+    icon: sparkles
+  - name: Full-Stack Support
+    description: Frontend and backend in one platform
+    icon: layers
+additionalFeatures:
+  - name: Database Integration
+    description: Connect to Supabase and other databases
+    icon: database
+  - name: Component Library
+    description: Pre-built UI components and templates
+    icon: layout
+  - name: One-Click Deploy
+    description: Deploy to Vercel, Netlify, or custom domains
+    icon: rocket
