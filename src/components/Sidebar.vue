@@ -90,7 +90,7 @@ const categories = [
             ></div>
             
             <component :is="item.icon" class="w-5 h-5" />
-            <span class="font-medium text-[15px]">{{ item.name }}</span>
+            <span class="font-medium text-sm">{{ item.name }}</span>
             
             <div v-if="item.hasDot" class="ml-auto w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
           </button>
@@ -114,7 +114,7 @@ const categories = [
               class="w-full flex items-center gap-3 px-2 py-2 rounded-md text-gray-400 hover:text-white hover:bg-zinc-900/50 transition-colors group"
             >
               <component :is="cat.icon" class="w-5 h-5" />
-              <span class="font-medium text-[15px] flex-1 text-left">{{ cat.name }}</span>
+              <span class="font-medium text-sm flex-1 text-left">{{ cat.name }}</span>
               <ChevronDown class="w-4 h-4 text-gray-600 group-hover:text-gray-400" />
             </button>
           </li>
@@ -129,7 +129,7 @@ const categories = [
            <PlusCircle class="w-5 h-5" />
            <div class="absolute -top-1 -left-1 w-2 h-2 bg-blue-500 rounded-full border border-black"></div>
         </div>
-        <span class="font-medium text-[15px]">Submit a Tool</span>
+        <span class="font-medium text-sm">Submit a Tool</span>
       </button>
     </div>
   </aside>
