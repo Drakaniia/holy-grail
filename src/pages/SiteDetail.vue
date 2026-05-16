@@ -23,8 +23,10 @@ import {
   Share2,
   ChevronDown,
   Layers,
+  ImageOff,
 } from 'lucide-vue-next'
 import { useSitesStore } from '@/stores/sites'
+import SiteFavicon from '@/components/sites/SiteFavicon.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -35,6 +37,11 @@ const site = computed(() => store.getSiteBySlug(slug.value))
 
 const copied = ref(false)
 const composeExpanded = ref(true)
+const screenshotError = ref(false)
+
+function getScreenshotUrl(website: string): string {
+  return `https://image.thum.io/get/width/800/crop/600/noanimate/${website}`
+}
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -76,16 +83,14 @@ async function copyCompose() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#0a0a0a] text-white">
+  <div class="min-h-screen bg-black text-white">
     <div v-if="site" class="max-w-6xl mx-auto px-6 py-6">
       <!-- Header Section -->
       <div class="mb-8">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-start gap-4">
             <!-- Icon -->
-            <div class="w-16 h-16 rounded-xl bg-[#161b22] border border-gray-800 flex items-center justify-center flex-shrink-0">
-              <span class="text-3xl font-bold text-white">{{ site.name.charAt(0).toUpperCase() }}</span>
-            </div>
+            <SiteFavicon :website="site.website" :name="site.name" size="lg" />
 
             <!-- Title and Meta -->
             <div>
@@ -154,7 +159,7 @@ async function copyCompose() {
         </div>
 
         <!-- Platform & Deployment -->
-        <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-4 mb-6">
+        <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
           <h3 class="text-sm font-medium text-gray-400 mb-3">Platform & Deployment</h3>
           <div class="flex flex-wrap gap-4">
             <div class="flex items-center gap-2">
@@ -188,7 +193,7 @@ async function copyCompose() {
       </div>
 
       <!-- Screenshot Preview -->
-      <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-4 mb-6">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="bg-[#161b22] rounded-lg overflow-hidden">
           <div class="flex items-center gap-2 px-4 py-2 border-b border-gray-800">
             <div class="flex gap-1.5">
@@ -198,15 +203,32 @@ async function copyCompose() {
             </div>
             <span class="text-xs text-gray-500 ml-2">{{ site.website }}</span>
           </div>
-          <div class="p-8 text-center text-gray-500">
-            <Globe class="w-16 h-16 mx-auto mb-4 text-gray-700" />
-            <p class="text-sm">Preview of {{ site.name }}</p>
+          <div class="relative">
+            <a
+              v-if="!screenshotError"
+              :href="site.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block group"
+            >
+              <img
+                :src="getScreenshotUrl(site.website)"
+                :alt="`${site.name} screenshot`"
+                class="w-full h-auto transition-opacity group-hover:opacity-90"
+                loading="lazy"
+                @error="screenshotError = true"
+              />
+            </a>
+            <div v-else class="p-12 text-center text-gray-500">
+              <ImageOff class="w-12 h-12 mx-auto mb-3 text-gray-700" />
+              <p class="text-sm">Screenshot unavailable for {{ site.name }}</p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- At a Glance -->
-      <div v-if="site.atGlance" class="bg-[#1a1f36] border border-blue-900/50 rounded-lg p-4 mb-6">
+      <div v-if="site.atGlance" class="border border-blue-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <h3 class="text-sm font-medium text-blue-400 mb-1">At a Glance</h3>
         <p class="text-sm text-blue-300 italic">{{ site.atGlance }}</p>
       </div>
@@ -224,7 +246,8 @@ async function copyCompose() {
           <div
             v-for="feature in site.coreFeatures"
             :key="feature.name"
-            class="bg-[#0d1117] border border-gray-800 rounded-lg p-4"
+            class="border border-gray-800 rounded-lg p-4"
+            style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
           >
             <div class="flex items-start gap-3">
               <div class="w-8 h-8 rounded-lg bg-[#161b22] border border-gray-700 flex items-center justify-center flex-shrink-0">
@@ -246,7 +269,8 @@ async function copyCompose() {
           <div
             v-for="feature in site.additionalFeatures"
             :key="feature.name"
-            class="bg-[#0d1117] border border-gray-800 rounded-lg p-4"
+            class="border border-gray-800 rounded-lg p-4"
+            style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
           >
             <div class="flex items-start gap-3">
               <div class="w-8 h-8 rounded-lg bg-[#161b22] border border-gray-700 flex items-center justify-center flex-shrink-0">
@@ -262,7 +286,7 @@ async function copyCompose() {
       </div>
 
       <!-- Community Feedback -->
-      <div class="bg-[#0d1117] border border-gray-800 rounded-xl p-4 mb-6">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="flex items-center gap-2 mb-4">
           <Heart class="w-4 h-4 text-gray-500" />
           <span class="text-sm text-gray-400">
@@ -283,7 +307,7 @@ async function copyCompose() {
       </div>
 
       <!-- Installation & Deployment -->
-      <div v-if="site.deployCompose" class="bg-[#0d1117] border border-gray-800 rounded-xl mb-6">
+      <div v-if="site.deployCompose" class="border border-gray-800 rounded-xl mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="p-4 border-b border-gray-800">
           <h3 class="text-base font-semibold text-white mb-1">Installation & Deployment</h3>
           <p class="text-sm text-gray-500">Choose a deployment method based on your environment and preferences</p>
@@ -336,11 +360,12 @@ async function copyCompose() {
             v-for="tool in site.similarTools"
             :key="tool.slug"
             :to="`/sites/${tool.slug}`"
-            class="bg-[#0d1117] border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all group block"
+            class="border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all group block"
+            style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
           >
             <div class="flex items-start gap-3 mb-3">
-              <div class="w-10 h-10 rounded-lg bg-[#161b22] border border-gray-800 flex items-center justify-center flex-shrink-0">
-                <span class="text-lg font-bold text-white">{{ tool.name.charAt(0).toUpperCase() }}</span>
+              <div class="w-10 h-10 rounded-lg bg-[#161b22] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <SiteFavicon :website="tool.website" :name="tool.name" size="sm" />
               </div>
               <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2">

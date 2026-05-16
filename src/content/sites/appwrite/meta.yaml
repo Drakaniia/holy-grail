@@ -67,9 +67,11 @@ similarTools:
     stars: 102000
     addedDaysAgo: 5
     verified: true
+    website: https://supabase.com
   - slug: pocketbase
     name: pocketbase
     description: A single-binary backend platform with database auth and real-time APIs
     stars: 58200
     addedDaysAgo: 5
     verified: true
+    website: https://pocketbase.io

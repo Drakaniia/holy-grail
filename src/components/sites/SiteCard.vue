@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Star, Eye, ExternalLink, CheckCircle2, RefreshCw } from 'lucide-vue-next'
+import SiteFavicon from './SiteFavicon.vue'
 import type { Site } from '@/stores/sites'
 
 defineProps<{
@@ -17,13 +18,12 @@ function formatNumber(num: number): string {
 <template>
   <RouterLink
     :to="`/sites/${site.slug}`"
-    class="bg-[#0d1117] border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-all group block"
+    class="border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-all group block"
+    style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
   >
     <div class="flex items-start gap-4 mb-3">
       <!-- Icon -->
-      <div class="w-12 h-12 rounded-lg bg-[#161b22] border border-gray-800 flex items-center justify-center flex-shrink-0">
-        <span class="text-xl font-bold text-white">{{ site.name.charAt(0).toUpperCase() }}</span>
-      </div>
+      <SiteFavicon :website="site.website" :name="site.name" size="md" />
 
       <!-- Name and Category -->
       <div class="flex-1 min-w-0">

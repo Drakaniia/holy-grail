@@ -17,7 +17,8 @@ function formatNumber(num: number): string {
 <template>
   <RouterLink
     :to="`/skills/${skill.slug}`"
-    class="bg-[#1a1a1a] border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-all group block"
+    class="border border-gray-800 rounded-xl p-5 hover:border-gray-700 transition-all group block"
+    style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
   >
     <div class="flex items-start justify-between mb-3">
       <h3 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors pr-6">

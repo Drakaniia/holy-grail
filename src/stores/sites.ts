@@ -15,6 +15,7 @@ export interface SimilarTool {
   stars: number
   addedDaysAgo: number
   verified: boolean
+  website?: string
 }
 
 export interface Site {

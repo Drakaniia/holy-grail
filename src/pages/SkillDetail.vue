@@ -64,7 +64,7 @@ async function copyInstallCommand() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#0a0a0a] text-white">
+  <div class="min-h-screen bg-black text-white">
     <div v-if="skill" class="max-w-4xl mx-auto px-6 py-8">
       <!-- Back Button -->
       <button
@@ -86,7 +86,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Stats Bar -->
-      <div class="bg-[#1a1a1a] border border-gray-800 rounded-xl p-4 mb-6">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="flex flex-wrap items-center gap-6">
           <div class="flex items-center gap-2 text-sm text-gray-400">
             <Eye class="w-4 h-4" />
@@ -122,7 +122,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Install Command -->
-      <div class="bg-[#1a1a1a] border border-gray-800 rounded-xl p-4 mb-6">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="flex items-center justify-between">
           <div>
             <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Install Command</p>
@@ -140,7 +140,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Content Area -->
-      <div class="bg-[#1a1a1a] border border-gray-800 rounded-xl p-6 md:p-8">
+      <div class="border border-gray-800 rounded-xl p-6 md:p-8" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <!-- Loading State -->
         <div v-if="isLoading" class="flex items-center justify-center py-12">
           <div class="flex items-center gap-2 text-gray-500">

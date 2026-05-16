@@ -1,104 +1,57 @@
-# DailyFOSS Development Guidelines
+HOLY GRAIL — Agent Guidelines
 
-## Core Principles
+## Stack
+Vue 3 (Composition API + `<script setup>`) · Vite 8 · TypeScript · Tailwind CSS 3 · Pinia · Vue Router 5
 
-### 🎯 Always Read Skills Before Implementing
+## Package Manager
+**Bun only.** Never use npm/yarn/pnpm.
 
-**MANDATORY**: Before implementing any feature, component, or functionality, you MUST:
-
-1. **Check Available Skills**: Use the `skill` tool to list and read all available skills
-2. **Relevant Skills**: Identify skills relevant to your current task
-3. **Apply Best Practices**: Follow the specific best practices and patterns outlined in those skills
-4. **Skill-First Development**: Let the skills guide your implementation approach
-
-### 🛠️ Available Skills Categories
-
-- **Frontend Design**: For UI components, layouts, and styling
-- **Vue.js**: Vue 3 Composition API, components, and best practices
-- **TypeScript**: Advanced types and type safety
-- **Build Tools**: Vite configuration and optimization
-- **Linting**: oxlint configuration and code quality
-
-### 📋 Implementation Checklist
-
-Before writing any code:
-
-- [ ] Read relevant skills for the technology stack
-- [ ] Follow Vue 3 Composition API with `<script setup>` (unless project requires Options API)
-- [ ] Use TypeScript for type safety
-- [ ] Apply oxlint for code quality
-- [ ] Follow responsive design principles
-- [ ] Ensure accessibility standards
-
-### 🔄 Development Workflow
-
-1. **Skill Assessment**: Read skills related to the task
-2. **Planning**: Create/update todo list based on skill recommendations
-3. **Implementation**: Follow skill-guided patterns
-4. **Validation**: Ensure code meets skill-defined standards
-5. **Integration**: Test within the DailyFOSS context
-
-### 🚨 Critical Rules
-
-- **NEVER skip skill reading** - This is non-negotiable
-- **ALWAYS use Composition API** with `<script setup>` for Vue components
-- **ALWAYS use TypeScript** for type safety
-- **ALWAYS run oxlint** after code changes
-- **ALWAYS follow responsive design** principles
-
-### 📚 Skill Integration Examples
-
-#### Vue Components
-```vue
-<script setup lang="ts">
-// Follow vue-best-practices skill guidelines
-import { ref, computed } from 'vue'
-</script>
-
-<template>
-  <!-- Follow frontend-design skill for UI -->
-</template>
+## Commands
+```
+bun install              # install deps
+bun dev                  # dev server (auto-runs generate scripts first)
+bun run build            # production build (auto-runs generate scripts + typecheck)
+bun run type-check       # vue-tsc --noEmit
+bun lint                 # oxlint --fix then eslint --fix (parallel via run-s)
+bun run format           # prettier --write src/
+bun run generate:skills  # regenerate skills-index.json only
 ```
 
-#### TypeScript
-```typescript
-// Follow typescript-advanced-types skill for complex types
-interface AppData {
-  id: string
-  name: string
-  category: string
-}
-```
+## CI Order (on push/PR to main)
+`type-check` → `lint` → `build`
 
-#### Build Configuration
-```typescript
-// Follow vite skill for build optimization
-export default defineConfig({
-  // Vite best practices
-})
-```
+## Build Prerequisites — Critical
+Both `dev` and `build` run two generation scripts **before** Vite starts:
+- `scripts/generate-skills-index.js` — reads `src/content/skills/*/meta.yaml` → writes `src/content/skills-index.json`
+- `scripts/generate-sites-index.js` — reads `src/content/sites/*/meta.yaml` → writes `src/content/sites-index.json`
 
-## Project-Specific Guidelines
+These JSON files are imported directly by Pinia stores. If you add/edit a skill or site, the corresponding `meta.yaml` must exist and the index will be regenerated on next `dev`/`build`.
 
-### DailyFOSS Context
-- Focus on open-source software curation
-- Community-driven content
-- Responsive, accessible design
-- Modern web technologies
+## Architecture
+- **Entry**: `src/main.ts`
+- **Routes**: `/` → `/sites`, `/sites`, `/sites/:slug`, `/skills`, `/skills/:slug`
+- **Stores**: `src/stores/sites.ts` and `src/stores/skills.ts` — both load from generated JSON indexes (not API calls)
+- **Skills store** fetches remote `SKILL.md` content from GitHub repos at runtime with localStorage cache (24h TTL)
+- **Path alias**: `@/` → `./src/`
+- **Deploy**: Vercel, SPA rewrites to `index.html`
 
-### Code Quality Standards
-- oxlint for JavaScript/TypeScript linting
-- Prettier for code formatting
-- TypeScript for type safety
-- Vue 3 Composition API
+## Content Model
+Skills and sites are defined as directories under `src/content/skills/` and `src/content/sites/`, each containing a `meta.yaml`.
 
-### Performance Considerations
-- Lazy loading for large datasets
-- Optimized bundle sizes
-- Efficient state management with Pinia
+- **Adding sites**: see `docs/ADDING-SITES.md`
+- **Adding skills**: see `docs/ADDING-SKILLS.md`
 
----
+## Linting
+- **oxlint** runs first (correctness category = error), then **eslint** (Vue essential rules)
+- ESLint config imports oxlint config via `eslint-plugin-oxlint` — they share rules
+- Prettier config disables conflicting ESLint rules via `eslint-config-prettier`
+- Run `bun lint` after any code change
 
-**Remember**: Skills are your primary development resource. Always read them first!
+## TypeScript
+Strict mode with `noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`. Project references: `tsconfig.app.json` (app) + `tsconfig.node.json` (tooling).
 
-use bun
+## Testing
+No test framework is configured. Do not introduce one without asking.
+
+## Skills
+Available opencode skills: `vue`, `vue-best-practices`, `vue-pinia-best-practices`, `vite`, `typescript-advanced-types`, `oxlint`, `frontend-design`, `bun`, `web-design-guidelines`, `vue-debug-guides`. Read relevant skills before implementing.

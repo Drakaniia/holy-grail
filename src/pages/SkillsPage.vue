@@ -7,7 +7,7 @@ const store = useSkillsStore()
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#0a0a0a] text-white">
+  <div class="min-h-screen bg-black text-white">
     <!-- Header Section -->
     <div class="border-b border-gray-800">
       <div class="max-w-7xl mx-auto px-6 py-12">
@@ -25,7 +25,7 @@ const store = useSkillsStore()
           </div>
 
           <div class="flex-shrink-0">
-            <div class="bg-[#111111] border border-gray-800 rounded-xl px-6 py-5 min-w-[200px]">
+            <div class="border border-gray-800 rounded-xl px-6 py-5 min-w-[200px]" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
               <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
                 LIBRARY PULSE
               </p>
@@ -46,7 +46,7 @@ const store = useSkillsStore()
     <!-- Main Content Area -->
     <div class="max-w-7xl mx-auto px-6 py-8">
       <!-- Search and Filter Bar -->
-      <div class="bg-[#1a1a1a] border border-gray-800 rounded-xl p-4 mb-6">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <!-- Search Input -->
           <div class="flex-1 relative">
@@ -56,16 +56,16 @@ const store = useSkillsStore()
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
               placeholder="Search skills by name or intent"
-              class="w-full bg-[#111111] border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all"
+              class="w-full bg-black border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all"
             />
           </div>
 
           <!-- Filter Tabs -->
-          <div class="flex items-center gap-1 bg-[#111111] border border-gray-700 rounded-lg p-1">
+          <div class="flex items-center gap-1 border border-gray-700 rounded-lg p-1" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
             <button
               @click="store.setTab('popular')"
               class="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'popular' ? 'bg-[#2a2a2a] text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <TrendingUp class="w-3.5 h-3.5" />
               POPULAR
@@ -73,7 +73,7 @@ const store = useSkillsStore()
             <button
               @click="store.setTab('trending')"
               class="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'trending' ? 'bg-[#2a2a2a] text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <TrendingUp class="w-3.5 h-3.5" />
               TRENDING
@@ -81,7 +81,7 @@ const store = useSkillsStore()
             <button
               @click="store.setTab('recent')"
               class="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'recent' ? 'bg-[#2a2a2a] text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="store.activeTab === 'recent' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <Clock class="w-3.5 h-3.5" />
               RECENT
@@ -109,9 +109,9 @@ const store = useSkillsStore()
             :key="category"
             @click="store.setCategory(category)"
             class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
-            :class="store.activeCategory === category
-              ? 'bg-blue-600 text-white'
-              : 'bg-[#111111] text-gray-400 hover:text-white border border-gray-700'"
+              :class="store.activeCategory === category
+                ? 'bg-blue-600 text-white'
+                : 'text-gray-400 hover:text-white border border-gray-700'"
           >
             {{ category }}
           </button>
@@ -143,7 +143,8 @@ const store = useSkillsStore()
         <button
           @click="store.setPage(store.currentPage - 1)"
           :disabled="store.currentPage === 1"
-          class="px-3 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-[#1a1a1a] border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700"
+          class="px-3 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700"
+          style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
         >
           Previous
         </button>
@@ -155,7 +156,8 @@ const store = useSkillsStore()
             class="w-10 h-10 rounded-lg text-sm font-medium transition-all"
             :class="store.currentPage === page
               ? 'bg-blue-600 text-white'
-              : 'bg-[#1a1a1a] border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700'"
+              : 'border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700'"
+          style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
           >
             {{ page }}
           </button>
@@ -170,7 +172,8 @@ const store = useSkillsStore()
         <button
           @click="store.setPage(store.currentPage + 1)"
           :disabled="store.currentPage === store.totalPages"
-          class="px-3 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-[#1a1a1a] border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700"
+          class="px-3 py-2 rounded-lg text-sm font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed border border-gray-800 text-gray-400 hover:text-white hover:border-gray-700"
+          style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
         >
           Next
         </button>

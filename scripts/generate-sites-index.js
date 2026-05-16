@@ -48,7 +48,15 @@ function buildSitesIndex() {
       coreFeatures: meta.coreFeatures || [],
       additionalFeatures: meta.additionalFeatures || [],
       deployCompose: meta.deployCompose || '',
-      similarTools: meta.similarTools || [],
+      similarTools: (meta.similarTools || []).map(t => ({
+        slug: t.slug || '',
+        name: t.name || '',
+        description: t.description || '',
+        stars: t.stars || 0,
+        addedDaysAgo: t.addedDaysAgo || 0,
+        verified: t.verified || false,
+        website: t.website || '',
+      })),
     })
   }
 
