@@ -92,8 +92,8 @@ const categories = [
               class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
             ></div>
             
-            <component :is="item.icon" class="w-5 h-5" />
-            <span class="font-medium text-sm">{{ item.name }}</span>
+            <component :is="item.icon" class="w-4 h-4" />
+            <span class="font-medium text-xs">{{ item.name }}</span>
             
             <div v-if="item.hasDot" class="ml-auto w-1.5 h-1.5 bg-accent-500 rounded-full"></div>
           </RouterLink>
@@ -107,7 +107,7 @@ const categories = [
           class="w-full flex items-center justify-between text-gray-500 hover:text-gray-300 transition-colors py-2"
         >
           <span class="text-xs font-semibold uppercase tracking-wider">Tools</span>
-          <component :is="expandedGroups['Tools'] ? ChevronUp : ChevronDown" class="w-4 h-4" />
+          <component :is="expandedGroups['Tools'] ? ChevronUp : ChevronDown" class="w-3 h-3" />
         </button>
         
         <ul v-if="expandedGroups['Tools']" class="mt-2 space-y-1">
@@ -116,9 +116,9 @@ const categories = [
               @click="toggleGroup(cat.name)"
               class="w-full flex items-center gap-3 px-0 py-2 rounded-md text-gray-400 hover:text-white hover:bg-zinc-900/50 transition-colors group"
             >
-              <component :is="cat.icon" class="w-5 h-5" />
-              <span class="font-medium text-sm flex-1 text-left">{{ cat.name }}</span>
-              <ChevronDown class="w-4 h-4 text-gray-600 group-hover:text-gray-400" />
+              <component :is="cat.icon" class="w-4 h-4" />
+              <span class="font-medium text-xs flex-1 text-left">{{ cat.name }}</span>
+              <ChevronDown class="w-3 h-3 text-gray-600 group-hover:text-gray-400" />
             </button>
           </li>
         </ul>
@@ -129,10 +129,10 @@ const categories = [
     <div class="p-4 border-t border-gray-800">
       <button class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group">
         <div class="relative">
-           <PlusCircle class="w-5 h-5" />
+           <PlusCircle class="w-4 h-4" />
            <div class="absolute -top-1 -left-1 w-2 h-2 bg-accent-500 rounded-full border border-black"></div>
         </div>
-        <span class="font-medium text-sm">Submit a Tool</span>
+        <span class="font-medium text-xs">Submit a Tool</span>
       </button>
     </div>
   </aside>
