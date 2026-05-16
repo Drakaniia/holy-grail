@@ -65,7 +65,8 @@
         "description": "An open-source backend platform with Postgres, auth, storage, and real-time APIs",
         "stars": 102000,
         "addedDaysAgo": 5,
-        "verified": true
+        "verified": true,
+        "website": "https://supabase.com"
       },
       {
         "slug": "pocketbase",
@@ -73,7 +74,8 @@
         "description": "A single-binary backend platform with database auth and real-time APIs",
         "stars": 58200,
         "addedDaysAgo": 5,
-        "verified": true
+        "verified": true,
+        "website": "https://pocketbase.io"
       }
     ]
   },

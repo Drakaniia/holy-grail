@@ -56,7 +56,7 @@ const store = useSkillsStore()
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
               placeholder="Search skills by name or intent"
-              class="w-full bg-black border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all"
+              class="w-full bg-black border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
             />
           </div>
 
@@ -104,7 +104,7 @@ const store = useSkillsStore()
             @click="store.setCategory(category)"
             class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
               :class="store.activeCategory === category
-                ? 'bg-blue-600 text-white'
+? 'bg-accent-600 text-white'
                 : 'text-gray-400 hover:text-white border border-gray-700'"
           >
             {{ category }}
@@ -126,7 +126,7 @@ const store = useSkillsStore()
         <p class="text-gray-500 text-lg">No skills found matching your search.</p>
         <button
           @click="store.setSearchQuery(''); store.setCategory('All')"
-          class="mt-4 text-blue-400 hover:text-blue-300 text-sm"
+          class="mt-4 text-accent-400 hover:text-accent-300 text-sm"
         >
           Clear filters
         </button>

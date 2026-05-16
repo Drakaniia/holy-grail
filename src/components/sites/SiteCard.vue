@@ -28,7 +28,7 @@ function formatNumber(num: number): string {
       <!-- Name and Category -->
       <div class="flex-1 min-w-0">
         <div class="flex items-center gap-2 mb-1">
-          <h3 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors truncate">
+          <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">
             {{ site.name }}
           </h3>
           <CheckCircle2 v-if="site.verified" class="w-4 h-4 text-green-500 flex-shrink-0" />

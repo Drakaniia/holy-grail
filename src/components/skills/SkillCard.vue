@@ -21,7 +21,7 @@ function formatNumber(num: number): string {
     style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
   >
     <div class="flex items-start justify-between mb-3">
-      <h3 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors pr-6">
+      <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors pr-6">
         {{ skill.title }}
       </h3>
       <ExternalLink class="w-4 h-4 text-gray-600 group-hover:text-gray-400 transition-colors flex-shrink-0" />

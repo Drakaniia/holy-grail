@@ -102,7 +102,7 @@ async function copyInstallCommand() {
           </div>
           <div class="flex items-center gap-2 text-sm text-gray-400">
             <ExternalLink class="w-4 h-4" />
-            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="hover:text-blue-400 transition-colors">
+            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="hover:text-accent-400 transition-colors">
               {{ skill.repoLink }}
             </a>
           </div>
@@ -156,7 +156,7 @@ async function copyInstallCommand() {
           <p class="text-gray-400 text-sm mb-4">{{ error }}</p>
           <p class="text-gray-500 text-xs">
             Showing description only. Visit the
-            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="text-blue-400 hover:underline">
+            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="text-accent-400 hover:underline">
               repository
             </a>
             for full documentation.
@@ -179,7 +179,7 @@ async function copyInstallCommand() {
       <p class="text-gray-400 mb-6">The skill you're looking for doesn't exist.</p>
       <button
         @click="router.push('/skills')"
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+        class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
       >
         Browse Skills
       </button>
@@ -221,7 +221,7 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(code) {
-  @apply bg-[#111111] text-blue-400 px-1.5 py-0.5 rounded text-sm;
+  @apply bg-[#111111] text-accent-400 px-1.5 py-0.5 rounded text-sm;
 }
 
 .skill-content :deep(pre) {
@@ -237,7 +237,7 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(a) {
-  @apply text-blue-400 hover:text-blue-300;
+  @apply text-accent-400 hover:text-accent-300;
 }
 
 .skill-content :deep(blockquote) {

@@ -115,15 +115,15 @@ async function copyCompose() {
                   <GitCommit class="w-4 h-4" />
                   {{ site.lastCommit }}
                 </span>
-                <a :href="site.website" target="_blank" class="flex items-center gap-1 hover:text-blue-400 transition-colors">
+                <a :href="site.website" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
                   <Globe class="w-4 h-4" />
                   Website
                 </a>
-                <a :href="site.docs" target="_blank" class="flex items-center gap-1 hover:text-blue-400 transition-colors">
+                <a :href="site.docs" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
                   <BookOpen class="w-4 h-4" />
                   Docs
                 </a>
-                <a :href="site.sourceCode" target="_blank" class="flex items-center gap-1 hover:text-blue-400 transition-colors">
+                <a :href="site.sourceCode" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
                   <Code2 class="w-4 h-4" />
                   Source code
                 </a>
@@ -228,9 +228,9 @@ async function copyCompose() {
       </div>
 
       <!-- At a Glance -->
-      <div v-if="site.atGlance" class="border border-blue-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
-        <h3 class="text-sm font-medium text-blue-400 mb-1">At a Glance</h3>
-        <p class="text-sm text-blue-300 italic">{{ site.atGlance }}</p>
+      <div v-if="site.atGlance" class="border border-accent-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+        <h3 class="text-sm font-medium text-accent-400 mb-1">At a Glance</h3>
+        <p class="text-sm text-accent-300 italic">{{ site.atGlance }}</p>
       </div>
 
       <!-- Description -->
@@ -369,7 +369,7 @@ async function copyCompose() {
               </div>
               <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors truncate">{{ tool.name }}</h4>
+                  <h4 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">{{ tool.name }}</h4>
                   <CheckCircle2 v-if="tool.verified" class="w-4 h-4 text-green-500 flex-shrink-0" />
                 </div>
               </div>
@@ -393,7 +393,7 @@ async function copyCompose() {
       <p class="text-gray-400 mb-6">The site you're looking for doesn't exist.</p>
       <button
         @click="router.push('/sites')"
-        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+        class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
       >
         Browse Sites
       </button>

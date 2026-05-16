@@ -22,7 +22,7 @@ const shortcutKey = isMac ? '⌘' : 'Ctrl'
       <div class="relative hidden md:block group">
         <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
           <svg
-            class="w-4 h-4 text-gray-500 group-focus-within:text-blue-400 transition-colors"
+            class="w-4 h-4 text-gray-500 group-focus-within:text-accent-400 transition-colors"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ const shortcutKey = isMac ? '⌘' : 'Ctrl'
           v-model="searchQuery"
           type="text"
           placeholder="Search scripts..."
-          class="bg-[#0f172a] border border-gray-700 rounded-lg py-1.5 pl-10 pr-16 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 w-64 transition-all"
+          class="bg-[#0f172a] border border-gray-700 rounded-lg py-1.5 pl-10 pr-16 text-sm focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 w-64 transition-all"
         />
         <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
           <span
