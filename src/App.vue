@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue'
 import HolyGrailFooter from './components/DailyFossFooter.vue'
@@ -28,21 +29,8 @@ onUnmounted(() => {
     <Sidebar />
     <div class="flex-1 flex flex-col overflow-hidden">
       <Navbar />
-      <main ref="mainRef" class="flex-grow flex items-center justify-center p-8 overflow-y-auto">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold mb-4">You did it!</h1>
-          <p class="text-gray-400">
-            Visit
-            <a
-              href="https://vuejs.org/"
-              target="_blank"
-              rel="noopener"
-              class="text-blue-400 hover:underline"
-              >vuejs.org</a
-            >
-            to read the documentation
-          </p>
-        </div>
+      <main ref="mainRef" class="flex-grow overflow-y-auto">
+        <RouterView />
       </main>
       <HolyGrailFooter v-if="showFooter" />
     </div>

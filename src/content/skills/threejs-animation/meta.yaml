@@ -1,0 +1,19 @@
+title: Three.js Animation
+slug: threejs-animation
+description: Guide to creating, controlling, and optimizing animations in Three.js, including keyframes, skeletal rigs, morph targets, blending, and more.
+category: Design
+tags:
+  - threejs
+  - animation
+  - 3d
+  - webgl
+views: 6700
+uses: 473
+author: CloudAI-X
+authorName: CloudAI-X
+repoLink: CloudAI-X/threejs-skills
+skillPath: skills/threejs-animation
+branch: main
+addedBy: Meng To
+featured: false
+dateAdded: '2026-05-11'

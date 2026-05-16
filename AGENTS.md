@@ -100,3 +100,5 @@ export default defineConfig({
 ---
 
 **Remember**: Skills are your primary development resource. Always read them first!
+
+use bun

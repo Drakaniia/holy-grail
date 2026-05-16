@@ -1,0 +1,19 @@
+title: UI Design System
+slug: ui-design-system
+description: Toolkit for creating and maintaining scalable UI design systems with tokens, responsive rules, accessibility and developer handoff docs.
+category: Design
+tags:
+  - ui
+  - design-system
+  - tokens
+  - accessibility
+views: 14600
+uses: 1300
+author: davila7
+authorName: davila7
+repoLink: davila7/claude-code-templates
+skillPath: skills/ui-design-system
+branch: main
+addedBy: Meng To
+featured: true
+dateAdded: '2026-05-10'

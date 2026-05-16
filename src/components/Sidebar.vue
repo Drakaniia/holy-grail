@@ -65,22 +65,22 @@ const categories = [
 <template>
   <aside class="w-64 bg-black border-r border-gray-800 flex flex-col h-full overflow-y-auto custom-scrollbar select-none">
     <!-- Header/Logo Area (Optional if not in App.vue) -->
-    <div class="p-4 border-b border-gray-800 flex items-center gap-2">
-      <div class="flex items-center gap-1">
-        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+    <div class="px-4 h-12 border-b border-gray-800 flex items-center gap-2">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
            <path d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71L16.29 21L21 21V13H17.71L18.71 14.29L17.29 15.71L16.29 14.71L13 18V21H11V13L3 3ZM5 5L11 11V5H5Z" />
         </svg>
-        <span class="font-bold text-xl tracking-tight text-white uppercase">Toolfolio</span>
+        <span class="font-bold text-sm tracking-tight text-white uppercase">Toolfolio</span>
       </div>
     </div>
 
     <!-- Main Navigation -->
-    <nav class="flex-1 py-4">
-      <ul class="space-y-1 px-2">
+    <nav class="flex-1 pt-1">
+      <ul class="space-y-0.5 px-4">
         <li v-for="item in mainNav" :key="item.name">
           <button 
             @click="activeItem = item.name"
-            class="w-full flex items-center gap-3 px-3 py-2 rounded-md transition-colors group relative"
+            class="w-full flex items-center gap-3 px-0 py-2 rounded-md transition-colors group relative"
             :class="activeItem === item.name ? 'bg-zinc-900 text-white' : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'"
           >
             <!-- Active Indicator (vertical line) -->
@@ -111,7 +111,7 @@ const categories = [
           <li v-for="cat in categories" :key="cat.name">
             <button 
               @click="toggleGroup(cat.name)"
-              class="w-full flex items-center gap-3 px-2 py-2 rounded-md text-gray-400 hover:text-white hover:bg-zinc-900/50 transition-colors group"
+              class="w-full flex items-center gap-3 px-0 py-2 rounded-md text-gray-400 hover:text-white hover:bg-zinc-900/50 transition-colors group"
             >
               <component :is="cat.icon" class="w-5 h-5" />
               <span class="font-medium text-sm flex-1 text-left">{{ cat.name }}</span>

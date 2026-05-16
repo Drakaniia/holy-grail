@@ -11,7 +11,7 @@ const shortcutKey = isMac ? '⌘' : 'Ctrl'
 
 <template>
   <nav
-    class="bg-black text-white border-b border-gray-800 px-4 py-2 flex items-center justify-between sticky top-0 z-50"
+    class="bg-black text-white border-b border-gray-800 px-4 h-12 flex items-center justify-between sticky top-0 z-50"
   >
     <!-- Left: Spacer or Breadcrumbs (since logo is in sidebar) -->
     <div class="flex items-center space-x-2"></div>

@@ -1,0 +1,204 @@
+import { defineStore } from 'pinia'
+import { ref, computed } from 'vue'
+import skillsIndex from '@/content/skills-index.json'
+import { fetchSkillContent, type SkillContent } from '@/lib/github'
+
+export interface Skill {
+  slug: string
+  title: string
+  description: string
+  category: string
+  tags: string[]
+  views: number
+  uses: number
+  author: string
+  authorName: string
+  repoLink: string
+  skillPath: string
+  branch: string
+  addedBy: string
+  featured: boolean
+  dateAdded: string
+}
+
+const CACHE_KEY = 'skills-content-cache'
+const CACHE_TTL = 1000 * 60 * 60 * 24 // 24 hours
+
+function getCachedContent(slug: string): SkillContent | null {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY)
+    if (!raw) return null
+
+    const cache: Record<string, { data: SkillContent; timestamp: number }> = JSON.parse(raw)
+    const entry = cache[slug]
+
+    if (!entry) return null
+    if (Date.now() - entry.timestamp > CACHE_TTL) {
+      delete cache[slug]
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
+      return null
+    }
+
+    return entry.data
+  } catch {
+    return null
+  }
+}
+
+function setCachedContent(slug: string, content: SkillContent): void {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY)
+    const cache: Record<string, { data: SkillContent; timestamp: number }> = raw ? JSON.parse(raw) : {}
+    cache[slug] = { data: content, timestamp: Date.now() }
+    localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
+  } catch {
+    // localStorage full or unavailable
+  }
+}
+
+export const useSkillsStore = defineStore('skills', () => {
+  const allSkills = ref<Skill[]>(skillsIndex as Skill[])
+  const searchQuery = ref('')
+  const activeCategory = ref('All')
+  const activeTab = ref<'popular' | 'trending' | 'recent'>('popular')
+  const currentPage = ref(1)
+  const itemsPerPage = 12
+
+  const contentCache = ref<Record<string, SkillContent | null>>({})
+  const contentLoading = ref<Record<string, boolean>>({})
+  const contentError = ref<Record<string, string | null>>({})
+
+  const categories = computed(() => {
+    const cats = new Set(allSkills.value.map(s => s.category))
+    return ['All', ...Array.from(cats).sort()]
+  })
+
+  const filteredSkills = computed(() => {
+    let result = [...allSkills.value]
+
+    if (searchQuery.value) {
+      const query = searchQuery.value.toLowerCase()
+      result = result.filter(
+        s =>
+          s.title.toLowerCase().includes(query) ||
+          s.description.toLowerCase().includes(query) ||
+          s.tags.some(t => t.toLowerCase().includes(query))
+      )
+    }
+
+    if (activeCategory.value !== 'All') {
+      result = result.filter(s => s.category === activeCategory.value)
+    }
+
+    switch (activeTab.value) {
+      case 'popular':
+        result.sort((a, b) => b.views - a.views)
+        break
+      case 'trending':
+        result.sort((a, b) => b.uses - a.uses)
+        break
+      case 'recent':
+        result.sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime())
+        break
+    }
+
+    return result
+  })
+
+  const paginatedSkills = computed(() => {
+    const start = (currentPage.value - 1) * itemsPerPage
+    return filteredSkills.value.slice(start, start + itemsPerPage)
+  })
+
+  const totalPages = computed(() => Math.ceil(filteredSkills.value.length / itemsPerPage))
+
+  const getSkillBySlug = (slug: string) => {
+    return allSkills.value.find(s => s.slug === slug)
+  }
+
+  const getSkillContent = async (slug: string): Promise<SkillContent | null> => {
+    // Check memory cache first
+    if (contentCache.value[slug] !== undefined) {
+      return contentCache.value[slug]
+    }
+
+    // Check localStorage cache
+    const cached = getCachedContent(slug)
+    if (cached) {
+      contentCache.value[slug] = cached
+      return cached
+    }
+
+    const skill = getSkillBySlug(slug)
+    if (!skill) {
+      contentError.value[slug] = 'Skill not found'
+      return null
+    }
+
+    // Parse repoLink to get owner/repo
+    const [owner, repo] = skill.repoLink.split('/')
+    if (!owner || !repo) {
+      contentError.value[slug] = 'Invalid repository link'
+      return null
+    }
+
+    contentLoading.value[slug] = true
+    contentError.value[slug] = null
+
+    try {
+      const content = await fetchSkillContent(owner, repo, skill.skillPath, skill.branch)
+      contentCache.value[slug] = content
+      setCachedContent(slug, content)
+      return content
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Failed to fetch skill content'
+      contentError.value[slug] = message
+      contentCache.value[slug] = null
+      return null
+    } finally {
+      contentLoading.value[slug] = false
+    }
+  }
+
+  const isContentLoading = (slug: string) => contentLoading.value[slug] || false
+  const getContentError = (slug: string) => contentError.value[slug] || null
+
+  const setSearchQuery = (query: string) => {
+    searchQuery.value = query
+    currentPage.value = 1
+  }
+
+  const setCategory = (category: string) => {
+    activeCategory.value = category
+    currentPage.value = 1
+  }
+
+  const setTab = (tab: 'popular' | 'trending' | 'recent') => {
+    activeTab.value = tab
+  }
+
+  const setPage = (page: number) => {
+    currentPage.value = page
+  }
+
+  return {
+    allSkills,
+    searchQuery,
+    activeCategory,
+    activeTab,
+    currentPage,
+    itemsPerPage,
+    categories,
+    filteredSkills,
+    paginatedSkills,
+    totalPages,
+    getSkillBySlug,
+    getSkillContent,
+    isContentLoading,
+    getContentError,
+    setSearchQuery,
+    setCategory,
+    setTab,
+    setPage,
+  }
+})

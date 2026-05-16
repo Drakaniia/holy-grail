@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "ui-design-system",
+    "title": "UI Design System",
+    "description": "Toolkit for creating and maintaining scalable UI design systems with tokens, responsive rules, accessibility and developer handoff docs.",
+    "category": "Design",
+    "tags": [
+      "ui",
+      "design-system",
+      "tokens",
+      "accessibility"
+    ],
+    "views": 14600,
+    "uses": 1300,
+    "author": "davila7",
+    "authorName": "davila7",
+    "repoLink": "davila7/claude-code-templates",
+    "skillPath": "skills/ui-design-system",
+    "branch": "main",
+    "addedBy": "Meng To",
+    "featured": true,
+    "dateAdded": "2026-05-10"
+  },
+  {
+    "slug": "tailwind-design-system-v4",
+    "title": "Tailwind Design System v4",
+    "description": "Build scalable, responsive, and accessible design systems with Tailwind CSS v4, design tokens, and reusable React UI components.",
+    "category": "Design",
+    "tags": [
+      "tailwind",
+      "css",
+      "design-system",
+      "react"
+    ],
+    "views": 7000,
+    "uses": 480,
+    "author": "wshobson",
+    "authorName": "wshobson",
+    "repoLink": "wshobson/agents",
+    "skillPath": "skills/tailwind-design-system",
+    "branch": "main",
+    "addedBy": "Meng To",
+    "featured": true,
+    "dateAdded": "2026-05-12"
+  },
+  {
+    "slug": "web-interface-guidelines",
+    "title": "Web Interface Guidelines",
+    "description": "Checklist for reviewing UI code for compliance with comprehensive web interface, accessibility, performance, and content guidelines.",
+    "category": "Design",
+    "tags": [
+      "accessibility",
+      "performance",
+      "guidelines",
+      "review"
+    ],
+    "views": 5400,
+    "uses": 359,
+    "author": "vercel-labs",
+    "authorName": "vercel-labs",
+    "repoLink": "vercel-labs/web-interface-guidelines",
+    "skillPath": "skills/web-interface-guidelines",
+    "branch": "main",
+    "addedBy": "Meng To",
+    "featured": true,
+    "dateAdded": "2026-05-09"
+  },
+  {
+    "slug": "copywriting",
+    "title": "Copywriting",
+    "description": "Guidelines and workflows for writing high-converting marketing copy for web pages, including headlines, CTAs, and page structures.",
+    "category": "Marketing",
+    "tags": [
+      "copywriting",
+      "marketing",
+      "conversion",
+      "content"
+    ],
+    "views": 6700,
+    "uses": 502,
+    "author": "coreyhaines31",
+    "authorName": "coreyhaines31",
+    "repoLink": "coreyhaines31/marketingskills",
+    "skillPath": "skills/copywriting",
+    "branch": "main",
+    "addedBy": "Meng To",
+    "featured": false,
+    "dateAdded": "2026-05-08"
+  },
+  {
+    "slug": "threejs-animation",
+    "title": "Three.js Animation",
+    "description": "Guide to creating, controlling, and optimizing animations in Three.js, including keyframes, skeletal rigs, morph targets, blending, and more.",
+    "category": "Design",
+    "tags": [
+      "threejs",
+      "animation",
+      "3d",
+      "webgl"
+    ],
+    "views": 6700,
+    "uses": 473,
+    "author": "CloudAI-X",
+    "authorName": "CloudAI-X",
+    "repoLink": "CloudAI-X/threejs-skills",
+    "skillPath": "skills/threejs-animation",
+    "branch": "main",
+    "addedBy": "Meng To",
+    "featured": false,
+    "dateAdded": "2026-05-11"
+  },
+  {
+    "slug": "interaction-design",
+    "title": "Interaction Design",
+    "description": "Design and implement purposeful UI motion, microinteractions, and feedback patterns to enhance usability and user delight.",
+    "category": "Design",
+    "tags": [
+      "interaction",
+      "motion",
+      "microinteractions",
+      "ux"
+    ],
+    "views": 3700,
+    "uses": 410,
+    "author": "wshobson",
+    "authorName": "wshobson",
+    "repoLink": "wshobson/agents",
+    "skillPath": "skills/interaction-design",
+    "branch": "main",
+    "addedBy": "Meng To",
+    "featured": false,
+    "dateAdded": "2026-05-13"
+  }
+]

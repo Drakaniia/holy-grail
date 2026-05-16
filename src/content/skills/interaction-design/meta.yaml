@@ -1,0 +1,19 @@
+title: Interaction Design
+slug: interaction-design
+description: Design and implement purposeful UI motion, microinteractions, and feedback patterns to enhance usability and user delight.
+category: Design
+tags:
+  - interaction
+  - motion
+  - microinteractions
+  - ux
+views: 3700
+uses: 410
+author: wshobson
+authorName: wshobson
+repoLink: wshobson/agents
+skillPath: skills/interaction-design
+branch: main
+addedBy: Meng To
+featured: false
+dateAdded: '2026-05-13'
