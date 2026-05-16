@@ -1,12 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const searchQuery = ref('')
-const starCount = ref(200)
+const starCount = ref(0)
 
 // Helper for keyboard shortcut display
 const isMac = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 const shortcutKey = isMac ? '⌘' : 'Ctrl'
+
+onMounted(async () => {
+  try {
+    const res = await fetch('https://api.github.com/repos/Drakaniia/holy-grail')
+    const data = await res.json()
+    starCount.value = data.stargazers_count ?? 0
+  } catch {
+    starCount.value = 0
+  }
+})
 </script>
 
 <template>
@@ -67,7 +77,7 @@ const shortcutKey = isMac ? '⌘' : 'Ctrl'
 
       <!-- GitHub Stars -->
       <a
-        href="https://github.com/holy-grail/holy-grail"
+        href="https://github.com/Drakaniia/holy-grail"
         target="_blank"
         class="flex items-center bg-white text-black px-3 py-1 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
       >
@@ -86,7 +96,7 @@ const shortcutKey = isMac ? '⌘' : 'Ctrl'
 
       <!-- GitHub Link -->
       <a
-        href="https://github.com/holy-grail"
+        href="https://github.com/Drakaniia/holy-grail"
         target="_blank"
         class="text-gray-400 hover:text-white transition-colors"
       >
