@@ -19,19 +19,22 @@ const resultHeading = computed(() => (hasQuery.value ? 'Best matches' : 'Feature
 
 let previousBodyOverflow: string | null = null
 
-watch(isOpen, async (open) => {
-  if (typeof document === 'undefined') return
+watch(
+  isOpen,
+  async (open) => {
+    if (typeof document === 'undefined') return
 
-  if (open) {
-    previousBodyOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    await nextTick()
-    searchInput.value?.focus()
-    return
-  }
+    if (open) {
+      previousBodyOverflow ??= document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      await focusSearchInput()
+      return
+    }
 
-  restoreBodyOverflow()
-})
+    restoreBodyOverflow()
+  },
+  { immediate: true },
+)
 
 watch(query, () => {
   activeIndex.value = 0
@@ -52,6 +55,11 @@ function restoreBodyOverflow() {
 
   document.body.style.overflow = previousBodyOverflow
   previousBodyOverflow = null
+}
+
+async function focusSearchInput() {
+  await nextTick()
+  searchInput.value?.focus({ preventScroll: true })
 }
 
 function closeDialog() {
