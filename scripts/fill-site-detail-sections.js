@@ -103,6 +103,20 @@ function context(meta) {
     }
   }
 
+  if (parent === 'development') {
+    return {
+      core: [
+        ['Developer Resource', `${name} is tracked as a ${lowerCategory} resource for building and shipping software.`],
+        ['Workflow Reference', 'The saved link keeps the resource close to related development material.'],
+      ],
+      extra: [
+        ['Sorted by Use Case', 'Grouped by learning, references, tooling, repositories, MCP, or monitoring.'],
+        ['Browser Ready', 'Available from the catalog without local setup.'],
+        ['Repeatable Lookup', 'Metadata and tags make the resource easy to find later.'],
+      ],
+    }
+  }
+
   if (parent === 'cli-tools') {
     return {
       core: [
