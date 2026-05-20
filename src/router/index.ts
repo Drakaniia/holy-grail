@@ -9,27 +9,35 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/sites',
-    },
-    {
-      path: '/skills',
-      name: 'skills',
-      component: SkillsPage,
-    },
-    {
-      path: '/skills/:slug',
-      name: 'skill-detail',
-      component: SkillDetail,
+      redirect: '/sites/platforms',
     },
     {
       path: '/sites',
-      name: 'sites',
+      redirect: '/sites/platforms',
+    },
+    {
+      path: '/sites/:category(platforms|ai|design|cli-tools|ui-libraries)/:subcategory?',
+      name: 'sites-category',
       component: SitesPage,
     },
     {
       path: '/sites/:slug',
       name: 'site-detail',
       component: SiteDetail,
+    },
+    {
+      path: '/skills',
+      redirect: '/skills/skills',
+    },
+    {
+      path: '/skills/:category(skills|design)',
+      name: 'skills-category',
+      component: SkillsPage,
+    },
+    {
+      path: '/skills/:slug',
+      name: 'skill-detail',
+      component: SkillDetail,
     },
   ],
 })
