@@ -12,7 +12,14 @@ export default defineConfig([
     files: ['**/*.{vue,js,mjs,jsx,cjs,ts,mts}'],
   },
 
-  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**', 'parse*.js', 'parse*.cjs']),
+  globalIgnores([
+    '**/.vercel/**',
+    '**/dist/**',
+    '**/dist-ssr/**',
+    '**/coverage/**',
+    'parse*.js',
+    'parse*.cjs',
+  ]),
 
   {
     name: 'app/browser-globals',

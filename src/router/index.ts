@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SkillsPage from '@/pages/SkillsPage.vue'
-import SkillDetail from '@/pages/SkillDetail.vue'
-import SitesPage from '@/pages/SitesPage.vue'
-import SiteDetail from '@/pages/SiteDetail.vue'
-import AccountPage from '@/pages/AccountPage.vue'
-import AdminPage from '@/pages/AdminPage.vue'
-import AuthCallbackPage from '@/pages/AuthCallbackPage.vue'
-import AuthPage from '@/pages/AuthPage.vue'
-import BookmarksPage from '@/pages/BookmarksPage.vue'
-import SubmitPage from '@/pages/SubmitPage.vue'
 import { useAuthStore } from '@/stores/auth'
+
+const AccountPage = () => import('@/pages/AccountPage.vue')
+const AdminPage = () => import('@/pages/AdminPage.vue')
+const AuthCallbackPage = () => import('@/pages/AuthCallbackPage.vue')
+const AuthPage = () => import('@/pages/AuthPage.vue')
+const BookmarksPage = () => import('@/pages/BookmarksPage.vue')
+const SiteDetail = () => import('@/pages/SiteDetail.vue')
+const SitesPage = () => import('@/pages/SitesPage.vue')
+const SkillDetail = () => import('@/pages/SkillDetail.vue')
+const SkillsPage = () => import('@/pages/SkillsPage.vue')
+const SubmitPage = () => import('@/pages/SubmitPage.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
