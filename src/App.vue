@@ -1,12 +1,18 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { computed } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue'
 import HolyGrailFooter from './components/DailyFossFooter.vue'
+
+const route = useRoute()
+const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
 </script>
 
 <template>
-  <div class="h-screen flex bg-black text-white overflow-hidden">
+  <RouterView v-if="isAuthRoute" />
+
+  <div v-else class="h-screen flex bg-black text-white overflow-hidden">
     <Sidebar />
     <div class="flex-1 flex flex-col overflow-hidden">
       <Navbar />
