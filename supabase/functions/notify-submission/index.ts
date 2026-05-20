@@ -15,6 +15,8 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
 }
 
+const DEFAULT_PUBLIC_SITE_URL = 'https://holy-grail-eta.vercel.app'
+
 function jsonResponse(body: Record<string, unknown>, status = 200) {
   return new Response(JSON.stringify(body), {
     headers: {
@@ -49,11 +51,11 @@ function getAdminUrl(req: Request) {
   }
 
   const siteUrl = Deno.env.get('PUBLIC_SITE_URL')?.trim()
-  if (siteUrl) {
+  if (siteUrl && !siteUrl.includes('your-real-vercel-app') && !siteUrl.includes('your-vercel-domain')) {
     return new URL('/admin', siteUrl).toString()
   }
 
-  return new URL('/admin', req.url).toString()
+  return new URL('/admin', DEFAULT_PUBLIC_SITE_URL).toString()
 }
 
 function buildEmail(submission: Record<string, string>, adminUrl: string) {
@@ -159,5 +161,5 @@ Deno.serve(async (req) => {
     )
   }
 
-  return jsonResponse({ ok: true })
+  return jsonResponse({ ok: true, reviewUrl: adminUrl })
 })

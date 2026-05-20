@@ -34,7 +34,7 @@ Set these Supabase secrets:
 supabase secrets set RESEND_API_KEY=re_...
 supabase secrets set ADMIN_EMAIL=you@example.com
 supabase secrets set SUBMISSION_FROM_EMAIL="Holy Grail <submissions@your-domain.com>"
-supabase secrets set PUBLIC_SITE_URL=https://your-site.example
+supabase secrets set PUBLIC_SITE_URL=https://holy-grail-eta.vercel.app
 ```
 
 `ADMIN_REVIEW_URL` can be used instead of `PUBLIC_SITE_URL` when the admin link should point to a
