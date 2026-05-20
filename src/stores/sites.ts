@@ -23,6 +23,8 @@ export interface Site {
   name: string
   description: string
   category: string
+  parentCategory: string
+  subcategory: string | null
   stars: number
   watchers: number
   addedDaysAgo: number
@@ -62,6 +64,16 @@ export const useSitesStore = defineStore('sites', () => {
     const cats = new Set(allSites.value.map(s => s.category))
     return ['All', ...Array.from(cats).sort()]
   })
+
+  const getSitesByParentCategory = (parentCategory: string) => {
+    return allSites.value.filter(s => s.parentCategory === parentCategory)
+  }
+
+  const getSitesBySubcategory = (parentCategory: string, subcategory: string) => {
+    return allSites.value.filter(
+      s => s.parentCategory === parentCategory && s.subcategory === subcategory
+    )
+  }
 
   const filteredSites = computed(() => {
     let result = [...allSites.value]
@@ -137,6 +149,8 @@ export const useSitesStore = defineStore('sites', () => {
     paginatedSites,
     totalPages,
     getSiteBySlug,
+    getSitesByParentCategory,
+    getSitesBySubcategory,
     setSearchQuery,
     setCategory,
     setTab,

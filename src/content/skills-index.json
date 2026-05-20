@@ -4,6 +4,7 @@
     "title": "UI Design System",
     "description": "Toolkit for creating and maintaining scalable UI design systems with tokens, responsive rules, accessibility and developer handoff docs.",
     "category": "Design",
+    "parentCategory": "design",
     "tags": [
       "ui",
       "design-system",
@@ -19,13 +20,15 @@
     "branch": "main",
     "addedBy": "Meng To",
     "featured": true,
-    "dateAdded": "2026-05-10"
+    "dateAdded": "2026-05-10",
+    "hasLocalContent": false
   },
   {
     "slug": "tailwind-design-system-v4",
     "title": "Tailwind Design System v4",
     "description": "Build scalable, responsive, and accessible design systems with Tailwind CSS v4, design tokens, and reusable React UI components.",
     "category": "Design",
+    "parentCategory": "design",
     "tags": [
       "tailwind",
       "css",
@@ -41,13 +44,15 @@
     "branch": "main",
     "addedBy": "Meng To",
     "featured": true,
-    "dateAdded": "2026-05-12"
+    "dateAdded": "2026-05-12",
+    "hasLocalContent": false
   },
   {
     "slug": "web-interface-guidelines",
     "title": "Web Interface Guidelines",
     "description": "Checklist for reviewing UI code for compliance with comprehensive web interface, accessibility, performance, and content guidelines.",
     "category": "Design",
+    "parentCategory": "design",
     "tags": [
       "accessibility",
       "performance",
@@ -63,13 +68,15 @@
     "branch": "main",
     "addedBy": "Meng To",
     "featured": true,
-    "dateAdded": "2026-05-09"
+    "dateAdded": "2026-05-09",
+    "hasLocalContent": false
   },
   {
     "slug": "copywriting",
     "title": "Copywriting",
     "description": "Guidelines and workflows for writing high-converting marketing copy for web pages, including headlines, CTAs, and page structures.",
     "category": "Marketing",
+    "parentCategory": "skills",
     "tags": [
       "copywriting",
       "marketing",
@@ -85,13 +92,15 @@
     "branch": "main",
     "addedBy": "Meng To",
     "featured": false,
-    "dateAdded": "2026-05-08"
+    "dateAdded": "2026-05-08",
+    "hasLocalContent": false
   },
   {
     "slug": "threejs-animation",
     "title": "Three.js Animation",
     "description": "Guide to creating, controlling, and optimizing animations in Three.js, including keyframes, skeletal rigs, morph targets, blending, and more.",
     "category": "Design",
+    "parentCategory": "design",
     "tags": [
       "threejs",
       "animation",
@@ -107,13 +116,15 @@
     "branch": "main",
     "addedBy": "Meng To",
     "featured": false,
-    "dateAdded": "2026-05-11"
+    "dateAdded": "2026-05-11",
+    "hasLocalContent": false
   },
   {
     "slug": "interaction-design",
     "title": "Interaction Design",
     "description": "Design and implement purposeful UI motion, microinteractions, and feedback patterns to enhance usability and user delight.",
     "category": "Design",
+    "parentCategory": "design",
     "tags": [
       "interaction",
       "motion",
@@ -129,6 +140,7 @@
     "branch": "main",
     "addedBy": "Meng To",
     "featured": false,
-    "dateAdded": "2026-05-13"
+    "dateAdded": "2026-05-13",
+    "hasLocalContent": false
   }
 ]

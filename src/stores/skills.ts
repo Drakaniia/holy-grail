@@ -8,6 +8,7 @@ export interface Skill {
   title: string
   description: string
   category: string
+  parentCategory: string
   tags: string[]
   views: number
   uses: number
@@ -19,10 +20,11 @@ export interface Skill {
   addedBy: string
   featured: boolean
   dateAdded: string
+  hasLocalContent: boolean
 }
 
 const CACHE_KEY = 'skills-content-cache'
-const CACHE_TTL = 1000 * 60 * 60 * 24 // 24 hours
+const CACHE_TTL = 1000 * 60 * 60 * 24
 
 function getCachedContent(slug: string): SkillContent | null {
   try {
@@ -52,7 +54,6 @@ function setCachedContent(slug: string, content: SkillContent): void {
     cache[slug] = { data: content, timestamp: Date.now() }
     localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
   } catch {
-    // localStorage full or unavailable
   }
 }
 
@@ -72,6 +73,10 @@ export const useSkillsStore = defineStore('skills', () => {
     const cats = new Set(allSkills.value.map(s => s.category))
     return ['All', ...Array.from(cats).sort()]
   })
+
+  const getSkillsByParentCategory = (parentCategory: string) => {
+    return allSkills.value.filter(s => s.parentCategory === parentCategory)
+  }
 
   const filteredSkills = computed(() => {
     let result = [...allSkills.value]
@@ -117,12 +122,10 @@ export const useSkillsStore = defineStore('skills', () => {
   }
 
   const getSkillContent = async (slug: string): Promise<SkillContent | null> => {
-    // Check memory cache first
     if (contentCache.value[slug] !== undefined) {
       return contentCache.value[slug]
     }
 
-    // Check localStorage cache
     const cached = getCachedContent(slug)
     if (cached) {
       contentCache.value[slug] = cached
@@ -135,7 +138,24 @@ export const useSkillsStore = defineStore('skills', () => {
       return null
     }
 
-    // Parse repoLink to get owner/repo
+    if (skill.hasLocalContent) {
+      try {
+        const localPath = `/src/content/skills/${skill.parentCategory}/${slug}/SKILL.md`
+        const response = await fetch(localPath)
+        if (response.ok) {
+          const markdown = await response.text()
+          const content: SkillContent = {
+            markdown,
+            html: '',
+          }
+          contentCache.value[slug] = content
+          setCachedContent(slug, content)
+          return content
+        }
+      } catch {
+      }
+    }
+
     const [owner, repo] = skill.repoLink.split('/')
     if (!owner || !repo) {
       contentError.value[slug] = 'Invalid repository link'
@@ -193,6 +213,7 @@ export const useSkillsStore = defineStore('skills', () => {
     paginatedSkills,
     totalPages,
     getSkillBySlug,
+    getSkillsByParentCategory,
     getSkillContent,
     isContentLoading,
     getContentError,
