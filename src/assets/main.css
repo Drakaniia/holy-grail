@@ -8,7 +8,192 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --scrollbar-thumb: #1f2937;
+    --scrollbar-thumb-hover: #374151;
+    --mocha-bg: #f5eee6;
+    --mocha-surface: #fffaf3;
+    --mocha-surface-strong: #fff5e8;
+    --mocha-surface-muted: #eadcca;
+    --mocha-border: #ddcbbb;
+    --mocha-border-strong: #cbb6a2;
+    --mocha-text: #2d2119;
+    --mocha-text-soft: #5f4c3e;
+    --mocha-muted: #7e6b5e;
+    --mocha-faint: #a08d7f;
+  }
+
+  html.light {
+    --scrollbar-thumb: #cbb6a2;
+    --scrollbar-thumb-hover: #a87955;
+    background: var(--mocha-bg);
+  }
+
+  * {
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+    scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
   body {
+    background: #000;
     font-family: 'Geist Sans', sans-serif;
   }
+
+  html.light body {
+    background:
+      radial-gradient(circle at top left, rgba(255, 140, 26, 0.13), transparent 34rem),
+      var(--mocha-bg);
+    color: var(--mocha-text);
+  }
+}
+
+html.light .bg-black,
+html.light [class*='bg-[#000000]'] {
+  background-color: var(--mocha-bg) !important;
+}
+
+html.light [style*='#000000'],
+html.light [style*='rgb(0, 0, 0)'],
+html.light [style*='linear-gradient(to right'] {
+  background: linear-gradient(135deg, var(--mocha-surface) 0%, var(--mocha-bg) 100%) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light [class*='bg-[#050505]'],
+html.light [class*='bg-[#060606]'],
+html.light [class*='bg-[#080808]'],
+html.light [class*='bg-[#111111]'],
+html.light .bg-zinc-950,
+html.light .bg-zinc-900,
+html.light .bg-gray-900 {
+  background-color: var(--mocha-surface) !important;
+}
+
+html.light [class*='bg-[#0f172a]'],
+html.light [class*='bg-[#161b22]'],
+html.light [class*='bg-[#1e293b]'],
+html.light .bg-gray-800,
+html.light .bg-zinc-800 {
+  background-color: var(--mocha-surface-strong) !important;
+}
+
+html.light [class*='bg-black/70'] {
+  background-color: rgba(60, 45, 34, 0.42) !important;
+}
+
+html.light .text-white,
+html.light .hover\:text-white:hover,
+html.light .group:hover .group-hover\:text-white,
+html.light article .text-white,
+html.light [style*='rgb(0, 0, 0)'] .text-white,
+html.light [style*='linear-gradient(to right'] .text-white {
+  color: var(--mocha-text) !important;
+}
+
+html.light .text-gray-200,
+html.light .text-gray-300,
+html.light .text-zinc-200,
+html.light .text-zinc-300 {
+  color: var(--mocha-text-soft) !important;
+}
+
+html.light .text-gray-400,
+html.light .text-zinc-400,
+html.light .hover\:text-gray-300:hover,
+html.light .group:hover .group-hover\:text-gray-400 {
+  color: var(--mocha-muted) !important;
+}
+
+html.light .text-gray-500,
+html.light .text-gray-600,
+html.light .text-gray-700,
+html.light .text-zinc-500,
+html.light .text-zinc-600 {
+  color: var(--mocha-faint) !important;
+}
+
+html.light .border-gray-700,
+html.light .border-gray-800,
+html.light .border-zinc-700,
+html.light .border-zinc-800,
+html.light .hover\:border-gray-600:hover,
+html.light .hover\:border-gray-700:hover {
+  border-color: var(--mocha-border) !important;
+}
+
+html.light .border-transparent.theme-toggle {
+  border-color: var(--mocha-border) !important;
+}
+
+html.light .theme-toggle {
+  background:
+    linear-gradient(135deg, rgba(255, 140, 26, 0.14), transparent 60%),
+    var(--mocha-surface);
+}
+
+html.light input,
+html.light select,
+html.light textarea {
+  color: var(--mocha-text);
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: var(--mocha-faint);
+}
+
+html.light :focus-visible {
+  outline-color: #ff7a00;
+}
+
+html.light .anonymous-submit-notice {
+  border-color: rgba(255, 122, 0, 0.26) !important;
+  background: rgba(255, 122, 0, 0.1) !important;
+  color: var(--mocha-text-soft) !important;
+}
+
+html.light .anonymous-submit-notice a {
+  color: #8a4b0f !important;
+}
+
+html.light .anonymous-submit-notice a:hover {
+  color: #5f2f05 !important;
+}
+
+html.light .anonymous-submit-notice svg {
+  color: #cc6100 !important;
+}
+
+html.light .nav-icon-button--light-white {
+  border-color: #111827 !important;
+  background: #080808 !important;
+  color: #ffffff !important;
+}
+
+html.light .nav-icon-button--light-white:hover {
+  border-color: #ff8c1a !important;
+  background: #111111 !important;
+  color: #ffffff !important;
 }

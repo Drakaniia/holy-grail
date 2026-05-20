@@ -107,13 +107,13 @@ function resetForm() {
 
 <template>
   <div class="min-h-full bg-black text-white">
-    <div class="mx-auto max-w-3xl px-6 py-10">
+    <div class="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10">
       <!-- Header -->
       <div class="mb-10 border-b border-gray-800 pb-8">
         <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
           Community
         </p>
-        <h1 class="text-4xl font-bold tracking-normal text-white">Submit a Tool</h1>
+        <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">Submit a Tool</h1>
         <p class="mt-3 max-w-xl text-sm leading-6 text-gray-400">
           Know a site, platform, or skill worth adding to Holy Grail? Submit it here. Every
           submission is reviewed before going live.
@@ -229,7 +229,7 @@ function resetForm() {
         <!-- Auth notice -->
         <div
           v-if="!auth.isAuthenticated"
-          class="flex gap-3 border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm leading-6 text-amber-100"
+          class="anonymous-submit-notice flex gap-3 border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm leading-6 text-amber-100"
         >
           <Sparkles class="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-300" />
           <span>

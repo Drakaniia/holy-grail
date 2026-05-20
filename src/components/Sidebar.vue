@@ -21,9 +21,9 @@ import {
   Package,
   Palette,
   Plug,
-  PlusCircle,
   Presentation,
   ScanSearch,
+  Send,
   Server,
   Shapes,
   ShieldCheck,
@@ -122,10 +122,8 @@ const skillsNav = [
 </script>
 
 <template>
-  <aside
-    class="w-64 bg-black border-r border-gray-800 flex flex-col h-full overflow-y-auto custom-scrollbar select-none"
-  >
-    <div class="px-4 h-12 border-b border-gray-800 flex items-center gap-2">
+  <aside class="flex h-full w-64 select-none flex-col overflow-hidden border-r border-gray-800 bg-black">
+    <div class="flex h-12 shrink-0 items-center gap-2 border-b border-gray-800 px-4">
       <RouterLink to="/sites/platforms" class="flex items-center gap-2">
         <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -136,7 +134,7 @@ const skillsNav = [
       </RouterLink>
     </div>
 
-    <nav class="flex-1 pt-1">
+    <nav class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
       <ul class="space-y-0.5 px-4">
         <li>
           <div class="w-full flex items-center gap-3 text-gray-500 py-2">
@@ -152,7 +150,7 @@ const skillsNav = [
                 :class="
                   isActive(item.route)
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
               >
                 <div
@@ -171,7 +169,7 @@ const skillsNav = [
                 :class="
                   isActive('/sites/ai', false)
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
                 :aria-expanded="isAiExpanded"
                 aria-controls="sidebar-ai-branch"
@@ -199,7 +197,7 @@ const skillsNav = [
                       :class="
                         isActive(item.route)
                           ? 'bg-zinc-900 text-white'
-                          : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                          : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                       "
                     >
                       <div
@@ -221,7 +219,7 @@ const skillsNav = [
                 :class="
                   isActive('/sites/design', false)
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
                 :aria-expanded="isDesignExpanded"
                 aria-controls="sidebar-design-branch"
@@ -249,7 +247,7 @@ const skillsNav = [
                       :class="
                         isActive(item.route)
                           ? 'bg-zinc-900 text-white'
-                          : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                          : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                       "
                     >
                       <div
@@ -271,7 +269,7 @@ const skillsNav = [
                 :class="
                   isActive('/sites/development', false)
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
                 :aria-expanded="isDevelopmentExpanded"
                 aria-controls="sidebar-development-branch"
@@ -303,7 +301,7 @@ const skillsNav = [
                       :class="
                         isActive(item.route)
                           ? 'bg-zinc-900 text-white'
-                          : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                          : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                       "
                     >
                       <div
@@ -325,7 +323,7 @@ const skillsNav = [
                 :class="
                   isActive('/sites/cli-tools')
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
               >
                 <div
@@ -344,7 +342,7 @@ const skillsNav = [
                 :class="
                   isActive('/sites/ui-libraries')
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
               >
                 <div
@@ -372,7 +370,7 @@ const skillsNav = [
                 :class="
                   isActive(item.route)
                     ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
               >
                 <div
@@ -388,25 +386,25 @@ const skillsNav = [
       </ul>
     </nav>
 
-    <div class="p-4 border-t border-gray-800 space-y-1">
+    <div class="shrink-0 space-y-1 border-t border-gray-800 p-4">
       <RouterLink
         to="/submit"
-        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-zinc-900/50"
+        class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
         :class="isActive('/submit') ? 'bg-zinc-900 text-white' : ''"
       >
-        <div class="relative">
-          <PlusCircle class="w-4 h-4" />
-          <div
-            class="absolute -top-1 -left-1 w-2 h-2 bg-accent-500 rounded-full border border-black"
-          ></div>
-        </div>
-        <span class="font-medium text-xs">Submit a Tool</span>
+        <Send
+          class="h-4 w-4 transition-colors"
+          :class="
+            isActive('/submit') ? 'text-accent-400' : 'text-accent-500 group-hover:text-accent-400'
+          "
+        />
+        <span class="text-xs font-medium">Submit a Tool</span>
       </RouterLink>
 
       <RouterLink
         v-if="admin.isAdmin"
         to="/admin"
-        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-zinc-900/50"
+        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-accent-500/10"
         :class="isActive('/admin') ? 'bg-zinc-900 text-white' : ''"
       >
         <ShieldCheck class="w-4 h-4" />
