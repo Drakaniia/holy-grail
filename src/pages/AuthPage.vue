@@ -4,11 +4,13 @@ import { useRoute, useRouter } from 'vue-router'
 import AuthCredentialsForm from '@/components/auth/AuthCredentialsForm.vue'
 import AuthFeatureRail from '@/components/auth/AuthFeatureRail.vue'
 import { useAuthStore } from '@/stores/auth'
+import { useToastStore } from '@/stores/toast'
 import type { AuthCredentials, AuthMode, AuthProvider } from '@/types/auth'
 
 const route = useRoute()
 const router = useRouter()
 const auth = useAuthStore()
+const toast = useToastStore()
 const notice = shallowRef<string | null>(null)
 
 const mode = computed<AuthMode>(() => (route.meta.authMode === 'signup' ? 'signup' : 'login'))
@@ -50,6 +52,7 @@ async function handleSubmit(credentials: AuthCredentials) {
     return
   }
 
+  toast.success(`Welcome, ${auth.displayName}.`, 'Your Holy Grail account is ready.')
   await router.push(getRedirectTarget())
 }
 

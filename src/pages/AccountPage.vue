@@ -14,10 +14,12 @@ import {
   UserRound,
 } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
+import { useToastStore } from '@/stores/toast'
 import UserAvatar from '@/components/auth/UserAvatar.vue'
 
 const router = useRouter()
 const auth = useAuthStore()
+const toast = useToastStore()
 const copied = shallowRef(false)
 
 onMounted(() => {
@@ -54,6 +56,7 @@ async function handleSignOut() {
   const result = await auth.signOut()
 
   if (result.ok) {
+    toast.info('Signed out', 'Your Holy Grail session has ended.')
     await router.push({ name: 'login' })
   }
 }

@@ -5,11 +5,13 @@ import { Bookmark, ChevronDown, LogOut, ShieldCheck, UserRound } from 'lucide-vu
 import { useAuthStore } from '@/stores/auth'
 import { useBookmarksStore } from '@/stores/bookmarks'
 import { useAdminStore } from '@/stores/admin'
+import { useToastStore } from '@/stores/toast'
 import UserAvatar from '@/components/auth/UserAvatar.vue'
 
 const auth = useAuthStore()
 const bookmarks = useBookmarksStore()
 const admin = useAdminStore()
+const toast = useToastStore()
 const route = useRoute()
 const router = useRouter()
 const menuRoot = useTemplateRef<HTMLElement>('menuRoot')
@@ -66,7 +68,13 @@ async function handleSignOut() {
   const result = await auth.signOut()
   bookmarks.clear()
 
-  if (result.ok && route.meta.requiresAuth) {
+  if (!result.ok) {
+    return
+  }
+
+  toast.info('Signed out', 'Your Holy Grail session has ended.')
+
+  if (route.meta.requiresAuth) {
     await router.push({ name: 'login' })
   }
 }

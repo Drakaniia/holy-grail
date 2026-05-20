@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, shallowRef, watch } from 'vue'
+import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef, watch } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
-import CommandPalette from './components/search/CommandPalette.vue'
+import AppToast from './components/AppToast.vue'
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue'
 import Footer from './components/Footer.vue'
 
+const CommandPalette = defineAsyncComponent(() => import('./components/search/CommandPalette.vue'))
 const route = useRoute()
 const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
 const isMobileSidebarOpen = shallowRef(false)
@@ -98,8 +99,10 @@ onUnmounted(() => {
       </main>
     </div>
 
-    <CommandPalette v-model:open="isCommandPaletteOpen" />
+    <CommandPalette v-if="isCommandPaletteOpen" v-model:open="isCommandPaletteOpen" />
   </div>
+
+  <AppToast />
 </template>
 
 <style scoped>
