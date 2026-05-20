@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, ref, shallowRef } from 'vue'
 import { supabase } from '@/lib/supabase'
+import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
 import { useAuthStore } from '@/stores/auth'
 
 export type SubmissionStatus = 'pending' | 'approved' | 'rejected'
@@ -28,19 +29,24 @@ interface AdminActionResult {
 const SUBMISSION_COLUMNS =
   'id,name,url,description,category,submitter_note,submitted_by,submitted_by_email,status,reviewed_by,reviewed_at,created_at'
 
-function getErrorMessage(error: unknown): string {
-  if (error instanceof Error && error.message) return error.message
-  if (error && typeof error === 'object' && 'message' in error) {
-    const msg = (error as { message?: unknown }).message
-    if (typeof msg === 'string') return msg
+function hasAdminRole(metadata: unknown): boolean {
+  if (!metadata || typeof metadata !== 'object') {
+    return false
   }
-  return 'Request failed.'
+
+  const appMetadata = metadata as Record<string, unknown>
+  if (appMetadata.role === 'admin') {
+    return true
+  }
+
+  return Array.isArray(appMetadata.roles) && appMetadata.roles.includes('admin')
 }
 
 /**
- * Admin role is stored in Supabase user_metadata.role === 'admin'.
- * Set it via the Supabase dashboard or a server-side function:
- *   UPDATE auth.users SET raw_user_meta_data = raw_user_meta_data || '{"role":"admin"}'
+ * Admin role is stored in server-controlled Supabase app_metadata.
+ * Set it from a trusted server/admin SQL context only:
+ *   UPDATE auth.users
+ *   SET raw_app_meta_data = COALESCE(raw_app_meta_data, '{}'::jsonb) || '{"role":"admin"}'
  *   WHERE id = '<user-id>';
  */
 export const useAdminStore = defineStore('admin', () => {
@@ -50,9 +56,7 @@ export const useAdminStore = defineStore('admin', () => {
 
   const auth = useAuthStore()
 
-  const isAdmin = computed(
-    () => auth.user?.user_metadata?.role === 'admin'
-  )
+  const isAdmin = computed(() => hasAdminRole(auth.user?.app_metadata))
 
   const pendingCount = computed(
     () => submissions.value.filter(s => s.status === 'pending').length
@@ -84,7 +88,7 @@ export const useAdminStore = defineStore('admin', () => {
       submissions.value = (data ?? []) as Submission[]
       return { ok: true }
     } catch (err) {
-      const message = getErrorMessage(err)
+      const message = getSupabaseErrorMessage(err)
       actionError.value = message
       return { ok: false, message }
     } finally {
@@ -105,30 +109,35 @@ export const useAdminStore = defineStore('admin', () => {
     actionError.value = null
 
     try {
-      const { error } = await supabase
+      const reviewedBy = auth.user?.id ?? null
+      const reviewedAt = new Date().toISOString()
+      const { data, error } = await supabase
         .from('submissions')
         .update({
           status,
-          reviewed_by: auth.user?.id ?? null,
-          reviewed_at: new Date().toISOString(),
+          reviewed_by: reviewedBy,
+          reviewed_at: reviewedAt,
         })
         .eq('id', id)
+        .select('id,status,reviewed_by,reviewed_at')
+        .single()
 
       if (error) throw error
+      if (!data) throw new Error('Submission could not be updated.')
 
       const idx = submissions.value.findIndex(s => s.id === id)
       if (idx !== -1) {
         submissions.value[idx] = {
           ...submissions.value[idx],
-          status,
-          reviewed_by: auth.user?.id ?? null,
-          reviewed_at: new Date().toISOString(),
+          status: data.status as SubmissionStatus,
+          reviewed_by: data.reviewed_by,
+          reviewed_at: data.reviewed_at,
         }
       }
 
       return { ok: true }
     } catch (err) {
-      const message = getErrorMessage(err)
+      const message = getSupabaseErrorMessage(err)
       actionError.value = message
       return { ok: false, message }
     } finally {
@@ -153,7 +162,7 @@ export const useAdminStore = defineStore('admin', () => {
       submissions.value = submissions.value.filter(s => s.id !== id)
       return { ok: true }
     } catch (err) {
-      const message = getErrorMessage(err)
+      const message = getSupabaseErrorMessage(err)
       actionError.value = message
       return { ok: false, message }
     } finally {

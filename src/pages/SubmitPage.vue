@@ -10,11 +10,25 @@ import {
   Sparkles,
 } from 'lucide-vue-next'
 import { supabase } from '@/lib/supabase'
+import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
 import { useAuthStore } from '@/stores/auth'
+import { useToastStore } from '@/stores/toast'
 
 const auth = useAuthStore()
+const toast = useToastStore()
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
+
+interface SubmissionPayload {
+  name: string
+  url: string
+  description: string
+  category: string
+  submitter_note: string | null
+  submitted_by: string | null
+  submitted_by_email: string | null
+  status: 'pending'
+}
 
 const status = shallowRef<SubmitStatus>('idle')
 const errorMessage = shallowRef<string | null>(null)
@@ -27,22 +41,22 @@ const submitterNote = shallowRef('')
 
 const CATEGORIES = [
   'Platforms',
-  'AI – Image',
-  'AI – API',
-  'AI – Automation',
-  'AI – Chat',
-  'AI – Video',
-  'AI – Other',
-  'Design – Inspiration',
-  'Design – Fonts',
-  'Design – Icons/SVG',
-  'Design – Tools',
-  'Development – Learning',
-  'Development – References',
-  'Development – Tooling',
-  'Development – Repositories',
-  'Development – MCP',
-  'Development – Monitoring',
+  'AI - Image',
+  'AI - API',
+  'AI - Automation',
+  'AI - Chat',
+  'AI - Video',
+  'AI - Other',
+  'Design - Inspiration',
+  'Design - Fonts',
+  'Design - Icons/SVG',
+  'Design - Tools',
+  'Development - Learning',
+  'Development - References',
+  'Development - Tooling',
+  'Development - Repositories',
+  'Development - MCP',
+  'Development - Monitoring',
   'CLI Tools',
   'UI Libraries',
   'Skills',
@@ -56,6 +70,20 @@ function validateForm(): string | null {
   if (!description.value.trim()) return 'Description is required.'
   if (!category.value) return 'Please select a category.'
   return null
+}
+
+async function notifyAdminSubmission(submission: SubmissionPayload) {
+  if (!supabase) {
+    return
+  }
+
+  try {
+    await supabase.functions.invoke('notify-submission', {
+      body: { submission },
+    })
+  } catch {
+    // Email delivery should never make a saved submission look failed to users.
+  }
 }
 
 async function handleSubmit() {
@@ -74,7 +102,7 @@ async function handleSubmit() {
   errorMessage.value = null
 
   try {
-    const { error } = await supabase.from('submissions').insert({
+    const submission: SubmissionPayload = {
       name: name.value.trim(),
       url: url.value.trim(),
       description: description.value.trim(),
@@ -83,7 +111,9 @@ async function handleSubmit() {
       submitted_by: auth.user?.id ?? null,
       submitted_by_email: auth.user?.email ?? null,
       status: 'pending',
-    })
+    }
+
+    const { error } = await supabase.from('submissions').insert(submission)
 
     if (error) throw error
 
@@ -93,9 +123,14 @@ async function handleSubmit() {
     description.value = ''
     category.value = ''
     submitterNote.value = ''
+    toast.success(
+      'Submission received',
+      "Thanks for submitting. I'll review it and add it if approved.",
+    )
+    void notifyAdminSubmission(submission)
   } catch (err) {
     status.value = 'error'
-    errorMessage.value = err instanceof Error ? err.message : 'Submission failed. Please try again.'
+    errorMessage.value = getSupabaseErrorMessage(err, 'Submission failed. Please try again.')
   }
 }
 
@@ -128,8 +163,7 @@ function resetForm() {
         <CheckCircle2 class="mx-auto mb-4 h-12 w-12 text-emerald-400" />
         <h2 class="mb-2 text-2xl font-bold text-white">Submission received</h2>
         <p class="mb-6 text-sm leading-6 text-gray-400">
-          Thanks for contributing. The team will review your submission and add it if it's a good
-          fit.
+          Thanks for submitting. I'll review it and add it if approved.
         </p>
         <button
           type="button"
@@ -192,7 +226,7 @@ function resetForm() {
             :disabled="status === 'loading'"
             class="h-12 w-full border border-zinc-700 bg-black px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            <option value="" disabled>Select a category…</option>
+            <option value="" disabled>Select a category...</option>
             <option v-for="cat in CATEGORIES" :key="cat" :value="cat">{{ cat }}</option>
           </select>
         </label>
@@ -220,7 +254,7 @@ function resetForm() {
           <textarea
             v-model="submitterNote"
             rows="2"
-            placeholder="Anything the reviewer should know…"
+            placeholder="Anything the reviewer should know..."
             :disabled="status === 'loading'"
             class="w-full resize-none border border-zinc-700 bg-black px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
           ></textarea>
@@ -248,7 +282,7 @@ function resetForm() {
         >
           <Loader2 v-if="status === 'loading'" class="h-4 w-4 animate-spin" />
           <Send v-else class="h-4 w-4" />
-          <span>{{ status === 'loading' ? 'Submitting…' : 'Submit for review' }}</span>
+          <span>{{ status === 'loading' ? 'Submitting...' : 'Submit for review' }}</span>
           <ArrowRight v-if="status !== 'loading'" class="h-4 w-4" />
         </button>
       </form>
