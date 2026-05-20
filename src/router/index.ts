@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  type LocationQueryRaw,
+  type RouteLocationNormalized,
+} from 'vue-router'
 import SkillsPage from '@/pages/SkillsPage.vue'
 import SkillDetail from '@/pages/SkillDetail.vue'
 import SitesPage from '@/pages/SitesPage.vue'
@@ -83,8 +88,46 @@ const router = createRouter({
   ],
 })
 
-router.beforeEach(async to => {
+const OAUTH_CALLBACK_QUERY_KEYS = ['code', 'error', 'error_code', 'error_description', 'state']
+const OAUTH_CALLBACK_HASH_KEYS = ['access_token', 'error', 'error_description', 'refresh_token']
+
+function getCleanOAuthCallbackRoute(to: RouteLocationNormalized) {
+  const query: LocationQueryRaw = {}
+  let hasCallbackParam = false
+
+  for (const [key, value] of Object.entries(to.query)) {
+    if (OAUTH_CALLBACK_QUERY_KEYS.includes(key)) {
+      hasCallbackParam = true
+      continue
+    }
+
+    query[key] = value
+  }
+
+  const hasCallbackHash = OAUTH_CALLBACK_HASH_KEYS.some((key) => to.hash.includes(key))
+
+  if (!hasCallbackParam && !hasCallbackHash) {
+    return null
+  }
+
+  return {
+    path: to.path,
+    query,
+    hash: hasCallbackHash ? '' : to.hash,
+  }
+}
+
+router.beforeEach(async (to) => {
   const auth = useAuthStore()
+
+  const oauthRedirect = await auth.completeOAuthRedirect()
+  if (oauthRedirect.handled) {
+    const cleanRoute = getCleanOAuthCallbackRoute(to)
+
+    if (cleanRoute) {
+      return cleanRoute
+    }
+  }
 
   await auth.initialize()
 

@@ -10,6 +10,10 @@ interface AuthActionResult {
   needsEmailConfirmation?: boolean
 }
 
+interface OAuthRedirectResult extends AuthActionResult {
+  handled: boolean
+}
+
 const AUTH_CONFIG_ERROR =
   'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to .env.local.'
 const EMAIL_RATE_LIMIT_ERROR =
@@ -49,7 +53,10 @@ function getAuthErrorMessage(error: unknown): string {
 function getOAuthErrorMessage(error: unknown, provider: AuthProvider): string {
   const message = getAuthErrorMessage(error)
 
-  if (/provider|oauth|external/i.test(message) && /disabled|enable|unsupported|not found/i.test(message)) {
+  if (
+    /provider|oauth|external/i.test(message) &&
+    /disabled|enable|unsupported|not found/i.test(message)
+  ) {
     const label = getProviderLabel(provider)
     return `${label} sign-in is not enabled in Supabase Auth. Enable the ${label} provider and add its OAuth client credentials in the Supabase dashboard.`
   }
@@ -60,10 +67,6 @@ function getOAuthErrorMessage(error: unknown, provider: AuthProvider): string {
 function getRedirectOrigin() {
   if (typeof window === 'undefined') {
     return DEV_REDIRECT_ORIGIN || ''
-  }
-
-  if (DEV_REDIRECT_ORIGIN) {
-    return DEV_REDIRECT_ORIGIN.replace(/\/$/, '')
   }
 
   const url = new URL(window.location.href)
@@ -112,7 +115,7 @@ function getMetadataValue(metadata: Record<string, unknown> | undefined, keys: s
 function getIdentityMetadata(user: User | null) {
   return (
     user?.identities
-      ?.map(identity => identity.identity_data)
+      ?.map((identity) => identity.identity_data)
       .filter((metadata): metadata is Record<string, unknown> => Boolean(metadata)) ?? []
   )
 }
@@ -175,6 +178,7 @@ export const useAuthStore = defineStore('auth', () => {
   const initializing = shallowRef(false)
   const initialized = shallowRef(false)
   const actionError = shallowRef<string | null>(null)
+  let authStateSubscription: { unsubscribe: () => void } | null = null
 
   const user = computed(() => session.value?.user ?? null)
   const isAuthenticated = computed(() => Boolean(user.value))
@@ -190,7 +194,7 @@ export const useAuthStore = defineStore('auth', () => {
   })
 
   const avatarUrl = computed(() =>
-    getUserMetadataValue(user.value, ['avatar_url', 'picture', 'image', 'profile_image_url'])
+    getUserMetadataValue(user.value, ['avatar_url', 'picture', 'image', 'profile_image_url']),
   )
   const avatarInitial = computed(() => displayName.value.slice(0, 1).toUpperCase())
   const providerLabel = computed(() => {
@@ -217,6 +221,98 @@ export const useAuthStore = defineStore('auth', () => {
     return 'Email'
   })
 
+  function ensureAuthStateListener() {
+    if (!supabase) {
+      return
+    }
+
+    if (authStateSubscription) {
+      return
+    }
+
+    const { data } = supabase.auth.onAuthStateChange((_event, nextSession) => {
+      session.value = nextSession
+    })
+
+    authStateSubscription = data.subscription
+  }
+
+  function getOAuthCallbackParams() {
+    if (typeof window === 'undefined') {
+      return null
+    }
+
+    const url = new URL(window.location.href)
+    const params = new URLSearchParams(url.search)
+
+    if (url.hash) {
+      const hash = url.hash.startsWith('#') ? url.hash.slice(1) : url.hash
+      const hashParams = new URLSearchParams(hash)
+
+      for (const [key, value] of hashParams.entries()) {
+        if (!params.has(key)) {
+          params.set(key, value)
+        }
+      }
+    }
+
+    return params
+  }
+
+  function getOAuthCallbackError(params: URLSearchParams) {
+    const errorDescription = params.get('error_description') || params.get('error')
+
+    return errorDescription?.replace(/\+/g, ' ').trim() || null
+  }
+
+  async function completeOAuthRedirect(): Promise<OAuthRedirectResult> {
+    if (!supabase) {
+      return { handled: false, ok: false, message: AUTH_CONFIG_ERROR }
+    }
+
+    const params = getOAuthCallbackParams()
+    const code = params?.get('code')?.trim()
+    const callbackError = params ? getOAuthCallbackError(params) : null
+
+    if (!code && !callbackError) {
+      return { handled: false, ok: true }
+    }
+
+    ensureAuthStateListener()
+    loading.value = true
+    actionError.value = null
+
+    try {
+      if (callbackError) {
+        throw new Error(callbackError)
+      }
+
+      if (!code) {
+        throw new Error('OAuth callback did not include a session code.')
+      }
+
+      const { data, error } = await supabase.auth.exchangeCodeForSession(code)
+
+      if (error) {
+        throw error
+      }
+
+      session.value = data.session
+      initialized.value = true
+
+      return { handled: true, ok: true }
+    } catch (error) {
+      const message = getAuthErrorMessage(error)
+      actionError.value = message
+      session.value = null
+      initialized.value = true
+
+      return { handled: true, ok: false, message }
+    } finally {
+      loading.value = false
+    }
+  }
+
   async function initialize() {
     if (initialized.value || initializing.value) {
       return
@@ -230,6 +326,8 @@ export const useAuthStore = defineStore('auth', () => {
       return
     }
 
+    ensureAuthStateListener()
+
     const { data, error } = await supabase.auth.getSession()
 
     if (error) {
@@ -237,10 +335,6 @@ export const useAuthStore = defineStore('auth', () => {
     }
 
     session.value = data.session
-
-    supabase.auth.onAuthStateChange((_event, nextSession) => {
-      session.value = nextSession
-    })
 
     initialized.value = true
     initializing.value = false
@@ -321,7 +415,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   async function signInWithOAuth(
     provider: AuthProvider,
-    redirectPath = '/account'
+    redirectPath = '/account',
   ): Promise<AuthActionResult> {
     if (!supabase) {
       actionError.value = AUTH_CONFIG_ERROR
@@ -429,6 +523,7 @@ export const useAuthStore = defineStore('auth', () => {
     avatarInitial,
     avatarUrl,
     clearError,
+    completeOAuthRedirect,
     displayName,
     initialize,
     initialized,

@@ -19,21 +19,40 @@ watch(
     notice.value = null
     auth.clearError()
   },
-  { immediate: true }
+  { immediate: true },
+)
+
+watch(
+  () => auth.isAuthenticated,
+  (isAuthenticated) => {
+    if (!isAuthenticated) {
+      return
+    }
+
+    void router.replace(getRedirectTarget())
+  },
+  { immediate: true },
 )
 
 function getRedirectTarget() {
   const redirect = route.query.redirect
 
-  if (typeof redirect === 'string' && redirect.startsWith('/')) {
-    return redirect
+  if (typeof redirect === 'string' && redirect.startsWith('/') && !redirect.startsWith('//')) {
+    const redirectUrl = new URL(redirect, window.location.origin)
+
+    for (const key of ['code', 'error', 'error_code', 'error_description', 'state']) {
+      redirectUrl.searchParams.delete(key)
+    }
+
+    return `${redirectUrl.pathname}${redirectUrl.search}${redirectUrl.hash}`
   }
 
   return '/account'
 }
 
 async function handleSubmit(credentials: AuthCredentials) {
-  const result = mode.value === 'signup' ? await auth.signUp(credentials) : await auth.signIn(credentials)
+  const result =
+    mode.value === 'signup' ? await auth.signUp(credentials) : await auth.signIn(credentials)
 
   if (!result.ok) {
     notice.value = null
@@ -70,33 +89,37 @@ async function handleOAuth(provider: AuthProvider) {
 
 <template>
   <div class="min-h-full bg-black text-white">
-    <div class="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+    <div
+      class="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8"
+    >
       <RouterLink
         to="/sites/platforms"
         class="inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-normal text-white"
       >
-        <span class="flex h-7 w-7 items-center justify-center border border-zinc-700 bg-zinc-950 text-accent-300">
+        <span
+          class="flex h-7 w-7 items-center justify-center border border-zinc-700 bg-zinc-950 text-accent-300"
+        >
           HG
         </span>
         Holy Grail
       </RouterLink>
 
       <div class="grid flex-1 gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-      <AuthFeatureRail :mode="mode" />
+        <AuthFeatureRail :mode="mode" />
 
-      <div class="flex min-h-[620px] items-center">
-        <AuthCredentialsForm
-          class="w-full"
-          :disabled="!auth.isConfigured"
-          :error="auth.actionError"
-          :loading="auth.loading"
-          :mode="mode"
-          :notice="notice"
-          @oauth="handleOAuth"
-          @request-password-reset="handlePasswordReset"
-          @submit="handleSubmit"
-        />
-      </div>
+        <div class="flex min-h-[620px] items-center">
+          <AuthCredentialsForm
+            class="w-full"
+            :disabled="!auth.isConfigured"
+            :error="auth.actionError"
+            :loading="auth.loading"
+            :mode="mode"
+            :notice="notice"
+            @oauth="handleOAuth"
+            @request-password-reset="handlePasswordReset"
+            @submit="handleSubmit"
+          />
+        </div>
       </div>
     </div>
   </div>
