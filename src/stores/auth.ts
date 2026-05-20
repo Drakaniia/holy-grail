@@ -18,7 +18,6 @@ const AUTH_CONFIG_ERROR =
   'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to .env.local.'
 const EMAIL_RATE_LIMIT_ERROR =
   'Supabase email sending is rate limited for this project. Wait about an hour before trying again, or configure custom SMTP in Supabase Auth.'
-const DEV_REDIRECT_ORIGIN = import.meta.env.VITE_AUTH_REDIRECT_ORIGIN?.trim()
 
 function getProviderLabel(provider: AuthProvider) {
   return provider === 'github' ? 'GitHub' : 'Google'
@@ -66,14 +65,7 @@ function getOAuthErrorMessage(error: unknown, provider: AuthProvider): string {
 
 function getRedirectOrigin() {
   if (typeof window === 'undefined') {
-    return DEV_REDIRECT_ORIGIN || ''
-  }
-
-  const url = new URL(window.location.href)
-
-  if (import.meta.env.DEV && (url.hostname === '127.0.0.1' || url.hostname === '::1')) {
-    url.hostname = 'localhost'
-    return url.origin
+    return ''
   }
 
   return window.location.origin
@@ -95,6 +87,13 @@ function getRedirectUrl(path = '/account') {
   }
 
   return `${getRedirectOrigin()}${redirectPath}`
+}
+
+function getOAuthCallbackUrl(path = '/account') {
+  const redirectPath = getRedirectPath(path)
+  const callbackParams = new URLSearchParams({ next: redirectPath })
+
+  return getRedirectUrl(`/auth/callback?${callbackParams.toString()}`)
 }
 
 function getMetadataValue(metadata: Record<string, unknown> | undefined, keys: string[]) {
@@ -134,42 +133,6 @@ function getUserMetadataValue(user: User | null, keys: string[]) {
   }
 
   return null
-}
-
-async function getOAuthPreflightError(url: string, provider: AuthProvider): Promise<string | null> {
-  if (typeof window === 'undefined') {
-    return null
-  }
-
-  try {
-    const response = await fetch(url, { redirect: 'manual' })
-
-    if (response.status >= 300 && response.status < 400) {
-      return null
-    }
-
-    if (response.type === 'opaqueredirect') {
-      return null
-    }
-
-    if (response.ok) {
-      return null
-    }
-
-    const text = await response.text()
-    const message = text
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim()
-
-    if (/unsupported provider|provider is not enabled/i.test(message)) {
-      return getOAuthErrorMessage(new Error('provider is not enabled'), provider)
-    }
-
-    return message || `${getProviderLabel(provider)} sign-in is not available right now.`
-  } catch {
-    return null
-  }
 }
 
 export const useAuthStore = defineStore('auth', () => {
@@ -429,8 +392,7 @@ export const useAuthStore = defineStore('auth', () => {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: getRedirectUrl(redirectPath),
-          skipBrowserRedirect: true,
+          redirectTo: getOAuthCallbackUrl(redirectPath),
         },
       })
 
@@ -438,16 +400,9 @@ export const useAuthStore = defineStore('auth', () => {
         throw error
       }
 
-      if (!data.url) {
+      if (!data.url && typeof window === 'undefined') {
         throw new Error(`${getProviderLabel(provider)} sign-in could not start.`)
       }
-
-      const preflightError = await getOAuthPreflightError(data.url, provider)
-      if (preflightError) {
-        throw new Error(preflightError)
-      }
-
-      window.location.assign(data.url)
 
       return { ok: true, message: `Redirecting to ${getProviderLabel(provider)}...` }
     } catch (error) {

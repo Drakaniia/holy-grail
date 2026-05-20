@@ -12,6 +12,10 @@ const auth = useAuthStore()
 const notice = shallowRef<string | null>(null)
 
 const mode = computed<AuthMode>(() => (route.meta.authMode === 'signup' ? 'signup' : 'login'))
+const callbackError = computed(() =>
+  typeof route.query.authError === 'string' ? route.query.authError : null,
+)
+const formError = computed(() => callbackError.value || auth.actionError)
 
 watch(
   mode,
@@ -22,29 +26,11 @@ watch(
   { immediate: true },
 )
 
-watch(
-  () => auth.isAuthenticated,
-  (isAuthenticated) => {
-    if (!isAuthenticated) {
-      return
-    }
-
-    void router.replace(getRedirectTarget())
-  },
-  { immediate: true },
-)
-
 function getRedirectTarget() {
   const redirect = route.query.redirect
 
   if (typeof redirect === 'string' && redirect.startsWith('/') && !redirect.startsWith('//')) {
-    const redirectUrl = new URL(redirect, window.location.origin)
-
-    for (const key of ['code', 'error', 'error_code', 'error_description', 'state']) {
-      redirectUrl.searchParams.delete(key)
-    }
-
-    return `${redirectUrl.pathname}${redirectUrl.search}${redirectUrl.hash}`
+    return redirect
   }
 
   return '/account'
@@ -111,7 +97,7 @@ async function handleOAuth(provider: AuthProvider) {
           <AuthCredentialsForm
             class="w-full"
             :disabled="!auth.isConfigured"
-            :error="auth.actionError"
+            :error="formError"
             :loading="auth.loading"
             :mode="mode"
             :notice="notice"
