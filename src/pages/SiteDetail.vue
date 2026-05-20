@@ -108,7 +108,7 @@ async function copyCompose() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-black text-white">
+  <div class="bg-black text-white">
     <div v-if="site" class="max-w-6xl mx-auto px-6 py-6">
       <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button

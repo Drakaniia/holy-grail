@@ -68,7 +68,7 @@ async function copyInstallCommand() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-black text-white">
+  <div class="bg-black text-white">
     <div v-if="skill" class="max-w-4xl mx-auto px-6 py-8">
       <!-- Back Button -->
       <button

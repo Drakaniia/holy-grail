@@ -82,7 +82,7 @@ watch(category, () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-black text-white">
+  <div class="bg-black text-white">
     <div class="border-b border-gray-800">
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
