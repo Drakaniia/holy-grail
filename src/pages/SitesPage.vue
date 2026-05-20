@@ -17,6 +17,7 @@ const routeLabels: Record<string, string> = {
   'ui-libraries': 'UI Libraries',
   ai: 'AI',
   design: 'Design',
+  development: 'Development',
   image: 'Image',
   api: 'API',
   detector: 'Detector',
@@ -34,6 +35,12 @@ const routeLabels: Record<string, string> = {
   'icons-svg': 'ICONS/SVG',
   md: 'MD',
   'design-tools': 'Design Tools',
+  learning: 'Learning',
+  references: 'References',
+  tooling: 'Tooling',
+  repositories: 'Repositories',
+  mcp: 'MCP',
+  monitoring: 'Monitoring',
 }
 
 const pageTitle = computed(() => {
@@ -50,6 +57,7 @@ const pageDescription = computed(() => {
     'ui-libraries': 'UI component libraries and design systems',
     ai: 'AI-powered tools and services',
     design: 'Design resources, inspiration, and tools',
+    development: 'Learning paths, references, repositories, and developer workflow resources',
     image: 'AI image generation and editing tools',
     api: 'AI APIs and model providers',
     detector: 'AI detection and analysis tools',
@@ -67,6 +75,12 @@ const pageDescription = computed(() => {
     'icons-svg': 'Icon libraries and SVG resources',
     md: 'Markdown resources and tools',
     'design-tools': 'Design tools and utilities',
+    learning: 'Courses, coding challenges, and structured programming practice',
+    references: 'Documentation, articles, and implementation references for developers',
+    tooling: 'Developer tools, runtimes, package utilities, and workflow services',
+    repositories: 'Source repositories and curated code collections',
+    mcp: 'Model Context Protocol tools, docs, servers, and integrations',
+    monitoring: 'Uptime, status, analytics, and production observability tools',
   }
   return descriptions[subcategory.value || category.value] || 'Curated tools and resources'
 })

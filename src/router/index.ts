@@ -16,7 +16,7 @@ const router = createRouter({
       redirect: '/sites/platforms',
     },
     {
-      path: '/sites/:category(platforms|ai|design|cli-tools|ui-libraries)/:subcategory?',
+      path: '/sites/:category(platforms|ai|design|development|cli-tools|ui-libraries)/:subcategory?',
       name: 'sites-category',
       component: SitesPage,
     },

@@ -2,13 +2,17 @@
 import { computed, reactive, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
+  Activity,
   Bot,
   BookOpen,
   Box,
   ChevronRight,
+  Code2,
   Component as ComponentIcon,
   FileText,
   Globe,
+  GraduationCap,
+  Github,
   Hammer,
   Image,
   Lightbulb,
@@ -32,11 +36,12 @@ import {
 
 const route = useRoute()
 
-type SiteGroup = 'ai' | 'design'
+type SiteGroup = 'ai' | 'design' | 'development'
 
 const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   ai: true,
   design: true,
+  development: true,
 })
 
 const isSiteGroupRoute = (path: string, group: SiteGroup) => {
@@ -61,12 +66,17 @@ watch(
     if (isSiteGroupRoute(path, 'design')) {
       expandedGroups.design = true
     }
+
+    if (isSiteGroupRoute(path, 'development')) {
+      expandedGroups.development = true
+    }
   },
   { immediate: true },
 )
 
 const isAiExpanded = computed(() => expandedGroups.ai)
 const isDesignExpanded = computed(() => expandedGroups.design)
+const isDevelopmentExpanded = computed(() => expandedGroups.development)
 
 const sitesNav = [{ name: 'Platforms', icon: Server, route: '/sites/platforms' }]
 
@@ -91,6 +101,15 @@ const designSubcategories = [
   { name: 'ICONS/SVG', icon: Shapes, route: '/sites/design/icons-svg' },
   { name: 'MD', icon: BookOpen, route: '/sites/design/md' },
   { name: 'Design Tools', icon: Wrench, route: '/sites/design/design-tools' },
+]
+
+const developmentSubcategories = [
+  { name: 'Learning', icon: GraduationCap, route: '/sites/development/learning' },
+  { name: 'References', icon: BookOpen, route: '/sites/development/references' },
+  { name: 'Tooling', icon: Wrench, route: '/sites/development/tooling' },
+  { name: 'Repositories', icon: Github, route: '/sites/development/repositories' },
+  { name: 'MCP', icon: Plug, route: '/sites/development/mcp' },
+  { name: 'Monitoring', icon: Activity, route: '/sites/development/monitoring' },
 ]
 
 const skillsNav = [
@@ -221,6 +240,60 @@ const skillsNav = [
               <li v-if="isDesignExpanded" id="sidebar-design-branch" class="sidebar-group-shell">
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
                   <li v-for="item in designSubcategories" :key="item.name">
+                    <RouterLink
+                      :to="item.route"
+                      class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
+                      :class="
+                        isActive(item.route)
+                          ? 'bg-zinc-900 text-white'
+                          : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                      "
+                    >
+                      <div
+                        v-if="isActive(item.route)"
+                        class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
+                      ></div>
+                      <component :is="item.icon" class="w-3.5 h-3.5" />
+                      <span class="font-medium">{{ item.name }}</span>
+                    </RouterLink>
+                  </li>
+                </ul>
+              </li>
+            </Transition>
+
+            <li>
+              <button
+                type="button"
+                class="w-full flex items-center rounded-md transition-colors group text-xs"
+                :class="
+                  isActive('/sites/development', false)
+                    ? 'bg-zinc-900 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-zinc-900/50'
+                "
+                :aria-expanded="isDevelopmentExpanded"
+                aria-controls="sidebar-development-branch"
+                aria-label="Toggle development sites"
+                @click="toggleGroup('development')"
+              >
+                <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
+                  <Code2 class="w-3.5 h-3.5 flex-shrink-0" />
+                  <span class="font-medium">Development</span>
+                </span>
+                <ChevronRight
+                  class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
+                  :class="{ 'rotate-90': isDevelopmentExpanded }"
+                />
+              </button>
+            </li>
+
+            <Transition name="sidebar-group">
+              <li
+                v-if="isDevelopmentExpanded"
+                id="sidebar-development-branch"
+                class="sidebar-group-shell"
+              >
+                <ul class="sidebar-group-inner ml-4 space-y-0.5">
+                  <li v-for="item in developmentSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
