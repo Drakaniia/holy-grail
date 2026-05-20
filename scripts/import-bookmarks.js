@@ -5,6 +5,44 @@ import yaml from 'js-yaml'
 const inputPath = path.resolve(process.argv[2] || 'bookmarks_5_20_26.html')
 const sitesDir = path.resolve('src/content/sites')
 
+const placements = {
+  developmentLearning: {
+    parentCategory: 'development',
+    subcategory: 'learning',
+    category: 'Learning',
+  },
+  developmentReferences: {
+    parentCategory: 'development',
+    subcategory: 'references',
+    category: 'References',
+  },
+  developmentTooling: {
+    parentCategory: 'development',
+    subcategory: 'tooling',
+    category: 'Tooling',
+  },
+  developmentRepositories: {
+    parentCategory: 'development',
+    subcategory: 'repositories',
+    category: 'Repositories',
+  },
+  developmentMcp: {
+    parentCategory: 'development',
+    subcategory: 'mcp',
+    category: 'MCP',
+  },
+  developmentMonitoring: {
+    parentCategory: 'development',
+    subcategory: 'monitoring',
+    category: 'Monitoring',
+  },
+  platformHosting: {
+    parentCategory: 'platforms',
+    subcategory: null,
+    category: 'Hosting',
+  },
+}
+
 const folderMap = new Map([
   ['Bookmarks bar > AI', { parentCategory: 'ai', subcategory: null, category: 'AI' }],
   ['Bookmarks bar > AI > Image', { parentCategory: 'ai', subcategory: 'image', category: 'AI Image' }],
@@ -39,13 +77,14 @@ const folderMap = new Map([
   ],
   [
     'Bookmarks bar > CODE > Hosting Service',
-    { parentCategory: 'platforms', subcategory: null, category: 'Hosting' },
+    placements.platformHosting,
   ],
   [
     'Bookmarks bar > CODE > Database',
     { parentCategory: 'platforms', subcategory: null, category: 'Database' },
   ],
-  ['Bookmarks bar > CODE > MCP', { parentCategory: 'cli-tools', subcategory: null, category: 'MCP' }],
+  ['Bookmarks bar > CODE > MCP', placements.developmentMcp],
+  ['Bookmarks bar > CODE > uptimeMonitor', placements.developmentMonitoring],
   [
     'Bookmarks bar > Design',
     { parentCategory: 'design', subcategory: 'design-tools', category: 'Design Tools' },
@@ -132,6 +171,173 @@ function domainSlug(url) {
   }
 }
 
+function canonicalUrl(value) {
+  try {
+    const parsed = new URL(value)
+    parsed.hash = ''
+
+    if (parsed.pathname === '/') {
+      parsed.pathname = ''
+    } else {
+      parsed.pathname = parsed.pathname.replace(/\/+$/g, '')
+    }
+
+    return parsed.toString().replace(/\/$/g, '')
+  } catch {
+    return value
+  }
+}
+
+function withPublicUrl(row, url, name = row.name) {
+  return {
+    ...row,
+    name,
+    url,
+  }
+}
+
+function normalizeBookmarkRow(row) {
+  try {
+    const parsed = new URL(row.url)
+    const hostname = parsed.hostname.toLowerCase().replace(/^www\./, '')
+    const pathname = parsed.pathname.toLowerCase()
+
+    if (hostname === 'editor.wix.com') return null
+    if (hostname === 'archive.org' && pathname === '/details/nasa') return null
+
+    if (hostname === 'dashboard.render.com') {
+      return withPublicUrl(row, 'https://render.com/', 'Render')
+    }
+
+    if (hostname === 'fly.io' && pathname.startsWith('/dashboard')) {
+      return withPublicUrl(row, 'https://fly.io/', 'Fly.io')
+    }
+
+    if (hostname === 'console.neon.tech') {
+      return withPublicUrl(row, 'https://neon.tech/', 'Neon')
+    }
+
+    if (hostname === 'dashboard.uptimerobot.com') {
+      return withPublicUrl(row, 'https://uptimerobot.com/', 'UptimeRobot')
+    }
+
+    if (hostname === 'uptime.betterstack.com') {
+      return withPublicUrl(row, 'https://betterstack.com/uptime', 'Better Stack Uptime')
+    }
+
+    if (hostname === 'testsprite.com' && pathname.startsWith('/dashboard')) {
+      return withPublicUrl(row, 'https://www.testsprite.com/', 'TestSprite')
+    }
+
+    if (hostname === 'replit.com' && pathname === '/~') {
+      return withPublicUrl(row, 'https://replit.com/', 'Replit')
+    }
+
+    if (hostname === 'exercism.org' && pathname.startsWith('/dashboard')) {
+      return withPublicUrl(row, 'https://exercism.org/', 'Exercism')
+    }
+
+    if (hostname === 'scrimba.com') {
+      return withPublicUrl(row, `${parsed.origin}${parsed.pathname}`, row.name)
+    }
+
+    if (hostname === 'prisma.io') {
+      return withPublicUrl(row, 'https://www.prisma.io/', 'Prisma')
+    }
+  } catch {
+    return row
+  }
+
+  return row
+}
+
+function includesAny(value, terms) {
+  return terms.some(term => value.includes(term))
+}
+
+function classifyCodeRoot(row) {
+  const value = `${row.name} ${row.url}`.toLowerCase()
+
+  if (includesAny(value, ['uptimerobot', 'betterstack.com/uptime'])) {
+    return placements.developmentMonitoring
+  }
+
+  if (includesAny(value, ['vercel.com', 'fly.io', 'railway.com', 'cyclic.sh'])) {
+    return placements.platformHosting
+  }
+
+  if (
+    includesAny(value, [
+      'codingame',
+      'codecademy',
+      'freecodecamp',
+      'roadmap.sh',
+      'learn-anything',
+      'tutorialspoint',
+      'codedex',
+      'fullstackopen',
+      'codeproject',
+      'geeksforgeeks',
+      'infinitecourses',
+      'codecrafters',
+      'brilliant',
+      'w3schools',
+      'exercism',
+      'metana',
+      'scrimba',
+    ])
+  ) {
+    return placements.developmentLearning
+  }
+
+  if (
+    includesAny(value, [
+      'code.visualstudio.com/docs',
+      '11ty.dev/docs',
+      'jupyter.org',
+      'medium.com/',
+    ])
+  ) {
+    return placements.developmentReferences
+  }
+
+  if (value.includes('github.com/')) {
+    return placements.developmentRepositories
+  }
+
+  if (includesAny(value, ['console.groq.com', 'groqcloud'])) {
+    return { parentCategory: 'ai', subcategory: 'api', category: 'AI API' }
+  }
+
+  return placements.developmentTooling
+}
+
+function classifyCodeGithub(row) {
+  const value = `${row.name} ${row.url}`.toLowerCase()
+
+  if (value.includes('github.com/')) {
+    return placements.developmentRepositories
+  }
+
+  if (value.includes('frontendmasters.com/courses')) {
+    return placements.developmentLearning
+  }
+
+  return placements.developmentReferences
+}
+
+function configForBookmark(row) {
+  if (row.folder === 'Bookmarks bar > CODE') {
+    return classifyCodeRoot(row)
+  }
+
+  if (row.folder === 'Bookmarks bar > CODE > GitHub') {
+    return classifyCodeGithub(row)
+  }
+
+  return folderMap.get(row.folder)
+}
+
 function siteDirectoryFor(config, slug) {
   const parts = [sitesDir, config.parentCategory]
   if (config.subcategory) parts.push(config.subcategory)
@@ -165,7 +371,7 @@ function readExistingSites() {
     const content = fs.readFileSync(metaPath, 'utf8')
     const meta = yaml.load(content) || {}
     if (meta.slug) slugs.add(meta.slug)
-    if (meta.website) urls.add(meta.website)
+    if (meta.website) urls.add(canonicalUrl(meta.website))
   }
 
   return { slugs, urls }
@@ -221,6 +427,7 @@ function uniqueSlug(baseSlug, name, usedSlugs) {
 }
 
 function metadataFor(row, config, slug) {
+  const sourceCode = githubRepoUrl(row.url)
   const tagParts = [
     'bookmark',
     config.parentCategory,
@@ -249,13 +456,27 @@ function metadataFor(row, config, slug) {
     deployment: ['Cloud'],
     website: row.url,
     docs: row.url,
-    sourceCode: '',
+    sourceCode: sourceCode || '',
     icon: domainSlug(row.url) || slug,
     verified: false,
     featured: false,
     tags: Array.from(new Set(tagParts)),
     atGlance: row.name || slug,
     fullDescription: `${row.name || slug} was imported from the browser bookmark folder "${row.folder}".`,
+  }
+}
+
+function githubRepoUrl(url) {
+  try {
+    const parsed = new URL(url)
+    if (parsed.hostname.toLowerCase() !== 'github.com') return ''
+
+    const parts = parsed.pathname.split('/').filter(Boolean)
+    if (parts.length < 2) return ''
+
+    return `https://github.com/${parts[0]}/${parts[1].replace(/\.git$/i, '')}`
+  } catch {
+    return ''
   }
 }
 
@@ -268,9 +489,16 @@ const bookmarks = parseBookmarks(fs.readFileSync(inputPath, 'utf8'))
 let imported = 0
 let skipped = 0
 
-for (const row of bookmarks) {
-  const config = folderMap.get(row.folder)
-  if (!config || urls.has(row.url)) {
+for (const originalRow of bookmarks) {
+  const row = normalizeBookmarkRow(originalRow)
+  if (!row) {
+    skipped += 1
+    continue
+  }
+
+  const config = configForBookmark(row)
+  const canonical = canonicalUrl(row.url)
+  if (!config || urls.has(canonical)) {
     skipped += 1
     continue
   }
@@ -293,7 +521,7 @@ for (const row of bookmarks) {
       quotingType: '"',
     })}`
   )
-  urls.add(row.url)
+  urls.add(canonical)
   imported += 1
 }
 
