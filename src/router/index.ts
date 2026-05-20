@@ -4,7 +4,10 @@ import SkillDetail from '@/pages/SkillDetail.vue'
 import SitesPage from '@/pages/SitesPage.vue'
 import SiteDetail from '@/pages/SiteDetail.vue'
 import AccountPage from '@/pages/AccountPage.vue'
+import AdminPage from '@/pages/AdminPage.vue'
 import AuthPage from '@/pages/AuthPage.vue'
+import BookmarksPage from '@/pages/BookmarksPage.vue'
+import SubmitPage from '@/pages/SubmitPage.vue'
 import { useAuthStore } from '@/stores/auth'
 
 const router = createRouter({
@@ -58,6 +61,23 @@ const router = createRouter({
       path: '/account',
       name: 'account',
       component: AccountPage,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/bookmarks',
+      name: 'bookmarks',
+      component: BookmarksPage,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/submit',
+      name: 'submit',
+      component: SubmitPage,
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminPage,
       meta: { requiresAuth: true },
     },
   ],

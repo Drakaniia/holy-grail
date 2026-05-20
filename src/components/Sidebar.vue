@@ -26,6 +26,7 @@ import {
   ScanSearch,
   Server,
   Shapes,
+  ShieldCheck,
   Sparkles,
   Terminal,
   Type,
@@ -33,8 +34,10 @@ import {
   Workflow,
   Wrench,
 } from 'lucide-vue-next'
+import { useAdminStore } from '@/stores/admin'
 
 const route = useRoute()
+const admin = useAdminStore()
 
 type SiteGroup = 'ai' | 'design' | 'development'
 
@@ -385,9 +388,11 @@ const skillsNav = [
       </ul>
     </nav>
 
-    <div class="p-4 border-t border-gray-800">
-      <button
-        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group"
+    <div class="p-4 border-t border-gray-800 space-y-1">
+      <RouterLink
+        to="/submit"
+        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-zinc-900/50"
+        :class="isActive('/submit') ? 'bg-zinc-900 text-white' : ''"
       >
         <div class="relative">
           <PlusCircle class="w-4 h-4" />
@@ -396,7 +401,23 @@ const skillsNav = [
           ></div>
         </div>
         <span class="font-medium text-xs">Submit a Tool</span>
-      </button>
+      </RouterLink>
+
+      <RouterLink
+        v-if="admin.isAdmin"
+        to="/admin"
+        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-zinc-900/50"
+        :class="isActive('/admin') ? 'bg-zinc-900 text-white' : ''"
+      >
+        <ShieldCheck class="w-4 h-4" />
+        <span class="font-medium text-xs">Admin</span>
+        <span
+          v-if="admin.pendingCount > 0"
+          class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+        >
+          {{ admin.pendingCount }}
+        </span>
+      </RouterLink>
     </div>
   </aside>
 </template>
