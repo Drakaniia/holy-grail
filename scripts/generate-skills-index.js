@@ -5,26 +5,45 @@ import yaml from 'js-yaml'
 const skillsDir = path.resolve('src/content/skills')
 const outputPath = path.resolve('src/content/skills-index.json')
 
-function buildSkillsIndex() {
-  const skills = []
-  const entries = fs.readdirSync(skillsDir, { withFileTypes: true })
+function findMetaYamlFiles(dir, parentCategory = '') {
+  const results = []
+  const entries = fs.readdirSync(dir, { withFileTypes: true })
 
   for (const entry of entries) {
-    if (!entry.isDirectory()) continue
+    const fullPath = path.join(dir, entry.name)
 
-    const skillDir = path.join(skillsDir, entry.name)
-    const yamlPath = path.join(skillDir, 'meta.yaml')
+    if (entry.isDirectory()) {
+      const yamlPath = path.join(fullPath, 'meta.yaml')
+      if (fs.existsSync(yamlPath)) {
+        results.push({ yamlPath, parentCategory })
+      } else {
+        const nested = findMetaYamlFiles(fullPath, entry.name)
+        results.push(...nested)
+      }
+    }
+  }
 
-    if (!fs.existsSync(yamlPath)) continue
+  return results
+}
 
+function buildSkillsIndex() {
+  const skills = []
+  const metaFiles = findMetaYamlFiles(skillsDir)
+
+  for (const { yamlPath, parentCategory } of metaFiles) {
     const content = fs.readFileSync(yamlPath, 'utf-8')
     const meta = yaml.load(content) || {}
+    const resolvedParentCategory =
+      meta.parentCategory ||
+      parentCategory ||
+      (String(meta.category || '').toLowerCase() === 'design' ? 'design' : 'skills')
 
     skills.push({
-      slug: meta.slug || entry.name,
-      title: meta.title || entry.name,
+      slug: meta.slug || path.basename(path.dirname(yamlPath)),
+      title: meta.title || '',
       description: meta.description || '',
       category: meta.category || 'Uncategorized',
+      parentCategory: resolvedParentCategory,
       tags: meta.tags || [],
       views: meta.views || 0,
       uses: meta.uses || 0,
@@ -36,10 +55,12 @@ function buildSkillsIndex() {
       addedBy: meta.addedBy || '',
       featured: meta.featured || false,
       dateAdded: meta.dateAdded || '',
+      hasLocalContent: fs.existsSync(
+        path.join(path.dirname(yamlPath), 'SKILL.md')
+      ),
     })
   }
 
-  // Sort by featured first, then by views descending
   skills.sort((a, b) => {
     if (a.featured && !b.featured) return -1
     if (!a.featured && b.featured) return 1
