@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Star, Eye, CheckCircle2, RefreshCw } from 'lucide-vue-next'
 import SiteFavicon from './SiteFavicon.vue'
 import type { Site } from '@/stores/sites'
 
-defineProps<{
+const props = defineProps<{
   site: Site
 }>()
+
+const hasRepoStats = computed(() => Boolean(props.site.sourceCode))
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -47,11 +50,11 @@ function formatNumber(num: number): string {
 
     <!-- Stats -->
     <div class="flex items-center gap-4 text-xs text-gray-500 mb-3">
-      <div class="flex items-center gap-1">
+      <div v-if="hasRepoStats && site.stars > 0" class="flex items-center gap-1">
         <Star class="w-3.5 h-3.5" />
         <span>{{ formatNumber(site.stars) }}</span>
       </div>
-      <div class="flex items-center gap-1">
+      <div v-if="hasRepoStats && site.watchers > 0" class="flex items-center gap-1">
         <Eye class="w-3.5 h-3.5" />
         <span>{{ formatNumber(site.watchers) }}</span>
       </div>

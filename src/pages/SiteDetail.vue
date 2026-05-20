@@ -30,6 +30,26 @@ const store = useSitesStore()
 
 const slug = computed(() => route.params.slug as string)
 const site = computed(() => store.getSiteBySlug(slug.value))
+const hasSourceCode = computed(() => Boolean(site.value?.sourceCode))
+const hasReleaseInfo = computed(() => hasSourceCode.value && site.value?.lastRelease !== 'N/A')
+const hasCommitInfo = computed(() => hasSourceCode.value && site.value?.lastCommit !== 'N/A')
+const hasDistinctDocs = computed(() => Boolean(site.value?.docs && site.value.docs !== site.value.website))
+const hasDeploymentInfo = computed(
+  () =>
+    Boolean(site.value?.deployCompose) ||
+    Boolean(site.value?.website) ||
+    hasDistinctDocs.value ||
+    hasSourceCode.value
+)
+const hasRepoActivity = computed(
+  () =>
+    hasSourceCode.value &&
+    Boolean(
+      (site.value?.contributors || 0) > 0 ||
+        (site.value?.commitsThisYear || 0) > 0 ||
+        (site.value?.releases || 0) > 0
+    )
+)
 
 const backRoute = computed(() => {
   if (!site.value) return '/sites/platforms'
@@ -58,6 +78,10 @@ function formatCommits(num: number): string {
     return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
   }
   return num.toString()
+}
+
+function formatAddedMonths(months: number): string {
+  return months === 0 ? 'Added recently' : `Added ${months}mo ago`
 }
 
 async function copyCompose() {
@@ -110,11 +134,11 @@ async function copyCompose() {
                   <Shield class="w-4 h-4" />
                   {{ site.license }}
                 </span>
-                <span class="flex items-center gap-1">
+                <span v-if="hasReleaseInfo" class="flex items-center gap-1">
                   <Tag class="w-4 h-4" />
                   {{ site.lastRelease }}
                 </span>
-                <span class="flex items-center gap-1">
+                <span v-if="hasCommitInfo" class="flex items-center gap-1">
                   <GitCommit class="w-4 h-4" />
                   {{ site.lastCommit }}
                 </span>
@@ -130,23 +154,23 @@ async function copyCompose() {
                   <Code2 class="w-4 h-4" />
                   Source code
                 </a>
-                <span class="flex items-center gap-1">
+                <span v-if="hasSourceCode && site.stars > 0" class="flex items-center gap-1">
                   <Star class="w-4 h-4" />
                   {{ formatNumber(site.stars) }}
                 </span>
               </div>
 
               <!-- Contributors Row -->
-              <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-                <span class="flex items-center gap-1">
+              <div v-if="hasRepoActivity" class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                <span v-if="site.contributors > 0" class="flex items-center gap-1">
                   <Users class="w-4 h-4" />
                   {{ site.contributors }} contributors
                 </span>
-                <span class="flex items-center gap-1">
+                <span v-if="site.commitsThisYear > 0" class="flex items-center gap-1">
                   <GitCommit class="w-4 h-4" />
                   {{ formatCommits(site.commitsThisYear) }} commits this year
                 </span>
-                <span class="flex items-center gap-1">
+                <span v-if="site.releases > 0" class="flex items-center gap-1">
                   <Package class="w-4 h-4" />
                   {{ site.releases }} releases
                 </span>
@@ -310,23 +334,34 @@ async function copyCompose() {
       </div>
 
       <!-- Installation & Deployment -->
-      <div v-if="site.deployCompose" class="border border-gray-800 rounded-xl mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div v-if="hasDeploymentInfo" class="border border-gray-800 rounded-xl mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="p-4 border-b border-gray-800">
           <h3 class="text-base font-semibold text-white mb-1">Installation & Deployment</h3>
           <p class="text-sm text-gray-500">Choose a deployment method based on your environment and preferences</p>
         </div>
 
         <div class="p-4">
-          <!-- Docker Compose Button -->
-          <button class="flex items-center gap-2 px-4 py-2 bg-[#161b22] border border-gray-700 rounded-lg text-sm text-white mb-3">
-            <Package class="w-4 h-4" />
-            Docker Compose
-          </button>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span
+              v-for="deploy in site.deployment"
+              :key="deploy"
+              class="flex items-center gap-2 px-3 py-2 bg-[#161b22] border border-gray-700 rounded-lg text-sm text-white"
+            >
+              <Package class="w-4 h-4" />
+              {{ deploy }}
+            </span>
+          </div>
 
-          <p class="text-xs text-gray-500 mb-3">Container-based deployment with docker-compose.yml</p>
+          <p class="text-xs text-gray-500 mb-3">
+            {{
+              site.deployCompose
+                ? 'Container-based deployment with docker-compose.yml'
+                : 'Cloud-first access through the official website and available project links'
+            }}
+          </p>
 
           <!-- Compose File -->
-          <div class="bg-[#161b22] border border-gray-800 rounded-lg overflow-hidden">
+          <div v-if="site.deployCompose" class="bg-[#161b22] border border-gray-800 rounded-lg overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 border-b border-gray-800">
               <div class="flex items-center gap-2">
                 <Code2 class="w-4 h-4 text-gray-500" />
@@ -346,6 +381,38 @@ async function copyCompose() {
             <div class="relative">
               <pre class="p-4 text-xs text-gray-300 font-mono overflow-x-auto max-h-64 overflow-y-auto"><code>{{ site.deployCompose }}</code></pre>
             </div>
+          </div>
+
+          <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <a
+              :href="site.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#161b22] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
+            >
+              <Globe class="w-4 h-4 text-gray-500" />
+              Open Website
+            </a>
+            <a
+              v-if="hasDistinctDocs"
+              :href="site.docs"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#161b22] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
+            >
+              <BookOpen class="w-4 h-4 text-gray-500" />
+              Read Docs
+            </a>
+            <a
+              v-if="site.sourceCode"
+              :href="site.sourceCode"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#161b22] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
+            >
+              <Code2 class="w-4 h-4 text-gray-500" />
+              Source Code
+            </a>
           </div>
         </div>
       </div>
@@ -379,11 +446,11 @@ async function copyCompose() {
             </div>
             <p class="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">{{ tool.description }}</p>
             <div class="flex items-center gap-3 text-xs text-gray-500">
-              <div class="flex items-center gap-1">
+              <div v-if="tool.stars > 0" class="flex items-center gap-1">
                 <Star class="w-3.5 h-3.5" />
                 <span>{{ formatNumber(tool.stars) }}</span>
               </div>
-              <span>Added {{ tool.addedDaysAgo }}mo ago</span>
+              <span>{{ formatAddedMonths(tool.addedDaysAgo) }}</span>
             </div>
           </RouterLink>
         </div>
