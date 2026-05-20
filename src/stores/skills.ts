@@ -195,10 +195,11 @@ export const useSkillsStore = defineStore('skills', () => {
 
   const setTab = (tab: 'popular' | 'trending' | 'recent') => {
     activeTab.value = tab
+    currentPage.value = 1
   }
 
   const setPage = (page: number) => {
-    currentPage.value = page
+    currentPage.value = Math.max(1, Math.floor(page))
   }
 
   return {

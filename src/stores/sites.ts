@@ -131,10 +131,11 @@ export const useSitesStore = defineStore('sites', () => {
 
   const setTab = (tab: 'trending' | 'newest' | 'popular') => {
     activeTab.value = tab
+    currentPage.value = 1
   }
 
   const setPage = (page: number) => {
-    currentPage.value = page
+    currentPage.value = Math.max(1, Math.floor(page))
   }
 
   return {
