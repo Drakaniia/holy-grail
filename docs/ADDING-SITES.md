@@ -134,14 +134,32 @@ Do not add placeholder Compose YAML just to make the section appear.
 
 ## Images
 
-No manual image upload is required by default.
+Production previews are static files generated from the site index:
 
-- Screenshots use `https://image.thum.io/get/width/800/crop/600/noanimate/{website}`.
-- Favicons use `https://www.google.com/s2/favicons?domain=DOMAIN&sz=64`.
-- Both fall back gracefully when loading fails.
+```bash
+bun run generate:previews       # capture missing previews only
+bun run generate:previews:all   # regenerate every public preview
+```
+
+The generator writes:
+
+```txt
+public/previews/{slug}.webp
+public/previews/{slug}-sm.webp
+public/previews/manifest.json
+src/content/site-previews.json
+```
+
+The app imports `src/content/site-previews.json`, so run the generator before a
+production build when previews have changed. The generated images live under
+`public/`, so Vercel serves them as static assets with no screenshot API call at
+runtime.
+
+Favicons use `https://www.google.com/s2/favicons?domain=DOMAIN&sz=64` and fall
+back gracefully when loading fails.
 
 If curated images are added later, prefer optional metadata fields with fallback
-to the automatic screenshot/favicon services.
+to generated previews and favicons.
 
 ## Example
 
