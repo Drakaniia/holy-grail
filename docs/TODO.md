@@ -7,3 +7,5 @@ whats better if we put all data in supabase or not needed since its a .yml file 
 make it functional (user can login and can bookmark)
 
 make a submit tool functional
+
+add discord, add my resources   
