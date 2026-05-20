@@ -1,0 +1,29 @@
+slug: merlin-staging
+name: merlin-staging
+description: merlin-staging bookmarked for ai detector resources.
+category: AI Detector
+parentCategory: ai
+subcategory: detector
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://merlin-staging.vercel.app/ru/ai-detection
+docs: https://merlin-staging.vercel.app/ru/ai-detection
+sourceCode: ""
+icon: merlin-staging
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - detector
+atGlance: merlin-staging
+fullDescription: merlin-staging was imported from the browser bookmark folder "Bookmarks bar > AI > Detector".

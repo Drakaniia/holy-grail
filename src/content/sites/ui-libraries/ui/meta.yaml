@@ -1,0 +1,30 @@
+slug: ui
+name: Aceternity UI
+description: Aceternity UI bookmarked for ui library resources.
+category: UI Library
+parentCategory: ui-libraries
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://ui.aceternity.com/
+docs: https://ui.aceternity.com/
+sourceCode: ""
+icon: ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Aceternity UI
+fullDescription: Aceternity UI was imported from the browser bookmark folder "Bookmarks bar > CMPNTS".

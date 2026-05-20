@@ -1,0 +1,29 @@
+slug: yiyan
+name: ERNIE
+description: ERNIE bookmarked for ai chat resources.
+category: AI Chat
+parentCategory: ai
+subcategory: chat
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://yiyan.baidu.com/
+docs: https://yiyan.baidu.com/
+sourceCode: ""
+icon: yiyan
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - chat
+atGlance: ERNIE
+fullDescription: ERNIE was imported from the browser bookmark folder "Bookmarks bar > AI > CHAT".

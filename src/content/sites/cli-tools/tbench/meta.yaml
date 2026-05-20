@@ -1,0 +1,30 @@
+slug: tbench
+name: Terminal-Bench
+description: Terminal-Bench bookmarked for ai cli resources.
+category: AI CLI
+parentCategory: cli-tools
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.tbench.ai/leaderboard/terminal-bench/2.0
+docs: https://www.tbench.ai/leaderboard/terminal-bench/2.0
+sourceCode: ""
+icon: tbench
+verified: false
+featured: false
+tags:
+  - bookmark
+  - cli-tools
+  - ai
+  - cli
+atGlance: Terminal-Bench
+fullDescription: Terminal-Bench was imported from the browser bookmark folder "Bookmarks bar > AI > CLI".

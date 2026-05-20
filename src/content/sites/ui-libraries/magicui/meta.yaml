@@ -1,0 +1,30 @@
+slug: magicui
+name: Magic UI
+description: Magic UI bookmarked for ui library resources.
+category: UI Library
+parentCategory: ui-libraries
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://magicui.design/
+docs: https://magicui.design/
+sourceCode: ""
+icon: magicui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Magic UI
+fullDescription: Magic UI was imported from the browser bookmark folder "Bookmarks bar > CMPNTS".

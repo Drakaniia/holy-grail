@@ -1,0 +1,31 @@
+slug: testsprite
+name: Overview | Dashboard | TestSprite
+description: Overview | Dashboard | TestSprite bookmarked for mcp resources.
+category: MCP
+parentCategory: cli-tools
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.testsprite.com/dashboard
+docs: https://www.testsprite.com/dashboard
+sourceCode: ""
+icon: testsprite
+verified: false
+featured: false
+tags:
+  - bookmark
+  - cli-tools
+  - mcp
+atGlance: Overview | Dashboard | TestSprite
+fullDescription: >-
+  Overview | Dashboard | TestSprite was imported from the browser bookmark folder "Bookmarks bar >
+  CODE > MCP".

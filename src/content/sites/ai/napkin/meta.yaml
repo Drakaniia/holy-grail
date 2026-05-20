@@ -1,0 +1,30 @@
+slug: napkin
+name: "- Napkin AI"
+description: "- Napkin AI bookmarked for ai resources."
+category: AI
+parentCategory: ai
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: >-
+  https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDE0N2EyMzBlLTNjOGYtNDgzZS1iMzYwLTMzMDExNzExODJiOQ?tid=onboarding_gen_ai_1&ts=Prompt
+docs: >-
+  https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDE0N2EyMzBlLTNjOGYtNDgzZS1iMzYwLTMzMDExNzExODJiOQ?tid=onboarding_gen_ai_1&ts=Prompt
+sourceCode: ""
+icon: napkin
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+atGlance: "- Napkin AI"
+fullDescription: "- Napkin AI was imported from the browser bookmark folder \"Bookmarks bar > AI\"."

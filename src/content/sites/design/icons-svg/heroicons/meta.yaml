@@ -1,0 +1,31 @@
+slug: heroicons
+name: Heroicons
+description: Heroicons bookmarked for icons/svg resources.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://heroicons.com/solid
+docs: https://heroicons.com/solid
+sourceCode: ""
+icon: heroicons
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+atGlance: Heroicons
+fullDescription: Heroicons was imported from the browser bookmark folder "Bookmarks bar > Design > ICONS/SVG".

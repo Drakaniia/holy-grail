@@ -1,0 +1,31 @@
+slug: neon
+name: Neon Console
+description: Neon Console bookmarked for hosting resources.
+category: Hosting
+parentCategory: platforms
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://console.neon.tech/app/projects/still-violet-01007487
+docs: https://console.neon.tech/app/projects/still-violet-01007487
+sourceCode: ""
+icon: neon
+verified: false
+featured: false
+tags:
+  - bookmark
+  - platforms
+  - hosting
+atGlance: Neon Console
+fullDescription: >-
+  Neon Console was imported from the browser bookmark folder "Bookmarks bar > CODE > Hosting
+  Service".

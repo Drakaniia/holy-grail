@@ -1,0 +1,29 @@
+slug: build
+name: Try NVIDIA NIM APIs
+description: Try NVIDIA NIM APIs bookmarked for ai api resources.
+category: AI API
+parentCategory: ai
+subcategory: api
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://build.nvidia.com/
+docs: https://build.nvidia.com/
+sourceCode: ""
+icon: build
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - api
+atGlance: Try NVIDIA NIM APIs
+fullDescription: Try NVIDIA NIM APIs was imported from the browser bookmark folder "Bookmarks bar > AI > API".

@@ -1,0 +1,31 @@
+slug: copilot
+name: "Microsoft Copilot: Your AI companion"
+description: "Microsoft Copilot: Your AI companion bookmarked for ai chat resources."
+category: AI Chat
+parentCategory: ai
+subcategory: chat
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://copilot.microsoft.com/chats/xwNZHCH99ZSyh1N92zQWV
+docs: https://copilot.microsoft.com/chats/xwNZHCH99ZSyh1N92zQWV
+sourceCode: ""
+icon: copilot
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - chat
+atGlance: "Microsoft Copilot: Your AI companion"
+fullDescription: >-
+  Microsoft Copilot: Your AI companion was imported from the browser bookmark folder "Bookmarks bar
+  > AI > CHAT".

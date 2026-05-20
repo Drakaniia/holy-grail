@@ -1,0 +1,29 @@
+slug: quillbot
+name: QuillBot
+description: QuillBot bookmarked for ai detector resources.
+category: AI Detector
+parentCategory: ai
+subcategory: detector
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://quillbot.com/
+docs: https://quillbot.com/
+sourceCode: ""
+icon: quillbot
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - detector
+atGlance: QuillBot
+fullDescription: QuillBot was imported from the browser bookmark folder "Bookmarks bar > AI > Detector".

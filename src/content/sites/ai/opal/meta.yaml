@@ -1,0 +1,28 @@
+slug: opal
+name: Opal [Experiment]
+description: Opal [Experiment] bookmarked for ai resources.
+category: AI
+parentCategory: ai
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://opal.google/landing/
+docs: https://opal.google/landing/
+sourceCode: ""
+icon: opal
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+atGlance: Opal [Experiment]
+fullDescription: Opal [Experiment] was imported from the browser bookmark folder "Bookmarks bar > AI".

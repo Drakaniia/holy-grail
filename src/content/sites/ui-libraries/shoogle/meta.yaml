@@ -1,0 +1,32 @@
+slug: shoogle
+name: Your shadcn search engine. | shoogle.dev
+description: Your shadcn search engine. | shoogle.dev bookmarked for ui library resources.
+category: UI Library
+parentCategory: ui-libraries
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://shoogle.dev/
+docs: https://shoogle.dev/
+sourceCode: ""
+icon: shoogle
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Your shadcn search engine. | shoogle.dev
+fullDescription: >-
+  Your shadcn search engine. | shoogle.dev was imported from the browser bookmark folder "Bookmarks
+  bar > CMPNTS".

@@ -1,0 +1,31 @@
+slug: pythonanywhere
+name: "Host, run, and code Python in the cloud: PythonAnywhere"
+description: "Host, run, and code Python in the cloud: PythonAnywhere bookmarked for hosting resources."
+category: Hosting
+parentCategory: platforms
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.pythonanywhere.com/
+docs: https://www.pythonanywhere.com/
+sourceCode: ""
+icon: pythonanywhere
+verified: false
+featured: false
+tags:
+  - bookmark
+  - platforms
+  - hosting
+atGlance: "Host, run, and code Python in the cloud: PythonAnywhere"
+fullDescription: >-
+  Host, run, and code Python in the cloud: PythonAnywhere was imported from the browser bookmark
+  folder "Bookmarks bar > CODE > Hosting Service".

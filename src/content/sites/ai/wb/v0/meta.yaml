@@ -1,0 +1,46 @@
+slug: v0
+name: v0
+description: Generative UI system by Vercel that creates React components from text prompts
+parentCategory: ai
+category: Website Development
+subcategory: wb
+stars: 15200
+watchers: 540
+addedDaysAgo: 1
+license: MIT
+lastCommit: "6 hours ago"
+lastRelease: "2 days ago"
+version: "1.3.0"
+contributors: 89
+commitsThisYear: 920
+releases: 22
+platforms:
+  - Web
+deployment:
+  - Cloud
+  - npm
+website: https://v0.dev
+docs: https://v0.dev/docs
+sourceCode: https://github.com/vercel/v0
+icon: v0
+verified: true
+featured: true
+atGlance: Generative UI system by Vercel that creates React components from text prompts
+fullDescription: v0 is a generative user interface system by Vercel. It uses AI to generate React components based on text prompts, supporting Tailwind CSS, shadcn/ui, and custom design systems.
+coreFeatures:
+  - name: AI Component Generation
+    description: Generate React components from text descriptions
+    icon: sparkles
+  - name: shadcn/ui Integration
+    description: Built-in support for shadcn/ui components
+    icon: palette
+additionalFeatures:
+  - name: Tailwind CSS
+    description: Full Tailwind CSS support out of the box
+    icon: wind
+  - name: Copy to Clipboard
+    description: Copy generated code directly to your project
+    icon: copy
+  - name: Iterative Refinement
+    description: Refine components through conversation
+    icon: refresh-cw

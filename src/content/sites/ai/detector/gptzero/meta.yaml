@@ -1,0 +1,29 @@
+slug: gptzero
+name: GPTZero Dashboard
+description: GPTZero Dashboard bookmarked for ai detector resources.
+category: AI Detector
+parentCategory: ai
+subcategory: detector
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://app.gptzero.me/
+docs: https://app.gptzero.me/
+sourceCode: ""
+icon: gptzero
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - detector
+atGlance: GPTZero Dashboard
+fullDescription: GPTZero Dashboard was imported from the browser bookmark folder "Bookmarks bar > AI > Detector".

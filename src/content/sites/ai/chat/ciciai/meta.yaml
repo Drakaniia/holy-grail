@@ -1,0 +1,29 @@
+slug: ciciai
+name: Cici AI
+description: Cici AI bookmarked for ai chat resources.
+category: AI Chat
+parentCategory: ai
+subcategory: chat
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.ciciai.com/chat/?from_login=1&origin_landing=https%3A%2F%2Fwww.ciciai.com%2F
+docs: https://www.ciciai.com/chat/?from_login=1&origin_landing=https%3A%2F%2Fwww.ciciai.com%2F
+sourceCode: ""
+icon: ciciai
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - chat
+atGlance: Cici AI
+fullDescription: Cici AI was imported from the browser bookmark folder "Bookmarks bar > AI > CHAT".

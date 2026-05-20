@@ -1,0 +1,31 @@
+slug: aws
+name: Serverless Computing - AWS Lambda - Amazon Web Services
+description: Serverless Computing - AWS Lambda - Amazon Web Services bookmarked for hosting resources.
+category: Hosting
+parentCategory: platforms
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://aws.amazon.com/lambda/
+docs: https://aws.amazon.com/lambda/
+sourceCode: ""
+icon: aws
+verified: false
+featured: false
+tags:
+  - bookmark
+  - platforms
+  - hosting
+atGlance: Serverless Computing - AWS Lambda - Amazon Web Services
+fullDescription: >-
+  Serverless Computing - AWS Lambda - Amazon Web Services was imported from the browser bookmark
+  folder "Bookmarks bar > CODE > Hosting Service".

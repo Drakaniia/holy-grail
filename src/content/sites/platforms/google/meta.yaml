@@ -1,0 +1,31 @@
+slug: google
+name: Cloud Run | Google Cloud
+description: Cloud Run | Google Cloud bookmarked for hosting resources.
+category: Hosting
+parentCategory: platforms
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://cloud.google.com/run
+docs: https://cloud.google.com/run
+sourceCode: ""
+icon: google
+verified: false
+featured: false
+tags:
+  - bookmark
+  - platforms
+  - hosting
+atGlance: Cloud Run | Google Cloud
+fullDescription: >-
+  Cloud Run | Google Cloud was imported from the browser bookmark folder "Bookmarks bar > CODE >
+  Hosting Service".

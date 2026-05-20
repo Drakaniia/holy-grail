@@ -1,0 +1,30 @@
+slug: fab-ui
+name: fab ui
+description: fab ui bookmarked for ui library resources.
+category: UI Library
+parentCategory: ui-libraries
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.fab-ui.com/?ref=dailydev
+docs: https://www.fab-ui.com/?ref=dailydev
+sourceCode: ""
+icon: fab-ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: fab ui
+fullDescription: fab ui was imported from the browser bookmark folder "Bookmarks bar > CMPNTS".

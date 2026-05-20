@@ -1,0 +1,33 @@
+slug: planetscale
+name: PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres
+description: >-
+  PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres
+  bookmarked for database resources.
+category: Database
+parentCategory: platforms
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://planetscale.com/
+docs: https://planetscale.com/
+sourceCode: ""
+icon: planetscale
+verified: false
+featured: false
+tags:
+  - bookmark
+  - platforms
+  - database
+atGlance: PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres
+fullDescription: >-
+  PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres was
+  imported from the browser bookmark folder "Bookmarks bar > CODE > Database".

@@ -1,0 +1,31 @@
+slug: mongodb
+name: Atlas Database | MongoDB
+description: Atlas Database | MongoDB bookmarked for database resources.
+category: Database
+parentCategory: platforms
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.mongodb.com/products/platform/atlas-database
+docs: https://www.mongodb.com/products/platform/atlas-database
+sourceCode: ""
+icon: mongodb
+verified: false
+featured: false
+tags:
+  - bookmark
+  - platforms
+  - database
+atGlance: Atlas Database | MongoDB
+fullDescription: >-
+  Atlas Database | MongoDB was imported from the browser bookmark folder "Bookmarks bar > CODE >
+  Database".

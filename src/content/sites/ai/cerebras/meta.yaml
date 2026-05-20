@@ -1,0 +1,28 @@
+slug: cerebras
+name: Cerebras Cloud
+description: Cerebras Cloud bookmarked for ai resources.
+category: AI
+parentCategory: ai
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://cloud.cerebras.ai/platform/org_drjncnkmm8y5kw2858w3jf26/get-started
+docs: https://cloud.cerebras.ai/platform/org_drjncnkmm8y5kw2858w3jf26/get-started
+sourceCode: ""
+icon: cerebras
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+atGlance: Cerebras Cloud
+fullDescription: Cerebras Cloud was imported from the browser bookmark folder "Bookmarks bar > AI".
