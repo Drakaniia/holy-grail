@@ -11,13 +11,15 @@ Vue 3 (Composition API + `<script setup>`) · Vite 8 · TypeScript · Tailwind C
 bun install              # install deps
 bun dev                  # dev server (auto-runs generate scripts first)
 bun run build            # production build (auto-runs generate scripts + typecheck)
+bun run preview          # preview production build
 bun run type-check       # vue-tsc --noEmit
-bun lint                 # oxlint --fix then eslint --fix (parallel via run-s)
-bun run format           # prettier --write src/
+bun lint                 # oxlint --fix then eslint --fix --cache (sequential)
+bun run format           # prettier --write --experimental-cli src/
 bun run generate:skills  # regenerate skills-index.json only
+bun run import:bookmarks # import bookmarks via scripts/import-bookmarks.js
 ```
 
-## CI Order (on push/PR to main)
+## CI Order (on push/PR to `grail` branch)
 `type-check` → `lint` → `build`
 
 ## Build Prerequisites — Critical
@@ -29,11 +31,12 @@ These JSON files are imported directly by Pinia stores. If you add/edit a skill 
 
 ## Architecture
 - **Entry**: `src/main.ts`
-- **Routes**: `/` → `/sites`, `/sites`, `/sites/:slug`, `/skills`, `/skills/:slug`
+- **Routes**: `/` → `/sites/platforms` (redirect), `/sites/:category/:subcategory?`, `/sites/:slug`, `/skills` → `/skills/skills` (redirect), `/skills/:category`, `/skills/:slug`
 - **Stores**: `src/stores/sites.ts` and `src/stores/skills.ts` — both load from generated JSON indexes (not API calls)
 - **Skills store** fetches remote `SKILL.md` content from GitHub repos at runtime with localStorage cache (24h TTL)
+- **`src/stores/counter.ts`** is boilerplate — unused, safe to ignore
 - **Path alias**: `@/` → `./src/`
-- **Deploy**: Vercel, SPA rewrites to `index.html`
+- **Deploy**: Vercel SPA, all routes rewrite to `index.html`
 
 ## Content Model
 Skills and sites are defined as directories under `src/content/skills/` and `src/content/sites/`, each containing a `meta.yaml`.
