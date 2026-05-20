@@ -2,12 +2,14 @@
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
+  ArrowLeft,
   Star,
   Users,
   GitCommit,
   Tag,
   BookOpen,
   Code2,
+  ExternalLink,
   Globe,
   CheckCircle2,
   RefreshCw,
@@ -19,10 +21,11 @@ import {
   Heart,
   Share2,
   Layers,
-  ImageOff,
+  X,
 } from 'lucide-vue-next'
 import { useSitesStore } from '@/stores/sites'
 import SiteFavicon from '@/components/sites/SiteFavicon.vue'
+import SitePreview from '@/components/sites/SitePreview.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -60,11 +63,6 @@ const backRoute = computed(() => {
 })
 
 const copied = ref(false)
-const screenshotError = ref(false)
-
-function getScreenshotUrl(website: string): string {
-  return `https://image.thum.io/get/width/800/crop/600/noanimate/${website}`
-}
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -112,6 +110,37 @@ async function copyCompose() {
 <template>
   <div class="min-h-screen bg-black text-white">
     <div v-if="site" class="max-w-6xl mx-auto px-6 py-6">
+      <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <button
+          type="button"
+          class="inline-flex w-fit items-center gap-2 rounded-lg border border-gray-800 bg-[#080808] px-3 py-2 text-sm font-medium text-gray-400 transition-colors hover:border-gray-700 hover:text-white"
+          @click="router.push(backRoute)"
+        >
+          <ArrowLeft class="w-4 h-4" />
+          Back to list
+        </button>
+
+        <div class="flex items-center gap-2">
+          <a
+            :href="site.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-black transition-colors hover:bg-gray-200"
+          >
+            <ExternalLink class="w-4 h-4" />
+            Visit Site
+          </a>
+          <button
+            type="button"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-gray-800 bg-[#080808] text-gray-400 transition-colors hover:border-gray-700 hover:text-white"
+            aria-label="Close site detail"
+            @click="router.push(backRoute)"
+          >
+            <X class="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
       <!-- Header Section -->
       <div class="mb-8">
         <div class="flex items-start justify-between mb-6">
@@ -178,11 +207,6 @@ async function copyCompose() {
             </div>
           </div>
 
-          <!-- Report Button -->
-          <button class="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-400 hover:text-white transition-colors">
-            <Share2 class="w-4 h-4" />
-            Report
-          </button>
         </div>
 
         <!-- Platform & Deployment -->
@@ -219,40 +243,7 @@ async function copyCompose() {
         </div>
       </div>
 
-      <!-- Screenshot Preview -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
-        <div class="bg-[#161b22] rounded-lg overflow-hidden">
-          <div class="flex items-center gap-2 px-4 py-2 border-b border-gray-800">
-            <div class="flex gap-1.5">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-            </div>
-            <span class="text-xs text-gray-500 ml-2">{{ site.website }}</span>
-          </div>
-          <div class="relative">
-            <a
-              v-if="!screenshotError"
-              :href="site.website"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block group"
-            >
-              <img
-                :src="getScreenshotUrl(site.website)"
-                :alt="`${site.name} screenshot`"
-                class="w-full h-auto transition-opacity group-hover:opacity-90"
-                loading="lazy"
-                @error="screenshotError = true"
-              />
-            </a>
-            <div v-else class="p-12 text-center text-gray-500">
-              <ImageOff class="w-12 h-12 mx-auto mb-3 text-gray-700" />
-              <p class="text-sm">Screenshot unavailable for {{ site.name }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SitePreview :site="site" />
 
       <!-- At a Glance -->
       <div v-if="site.atGlance" class="border border-accent-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
