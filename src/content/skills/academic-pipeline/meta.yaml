@@ -1,0 +1,19 @@
+title: Academic Pipeline
+slug: academic-pipeline
+description: End-to-end academic workflow orchestration from research planning through writing, integrity checks, review, revision, and finalization.
+category: Research
+tags:
+  - research-workflow
+  - academic-writing
+  - peer-review
+  - pipeline
+views: 15886
+uses: 1433
+author: Imbad0202
+authorName: Imbad0202
+repoLink: Imbad0202/academic-research-skills
+skillPath: academic-pipeline
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'
