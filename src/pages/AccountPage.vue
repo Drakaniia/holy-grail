@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import {
   CheckCircle2,
   ClipboardCheck,
+  Bookmark,
   Copy,
   Fingerprint,
   KeyRound,
@@ -13,6 +14,7 @@ import {
   UserRound,
 } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
+import UserAvatar from '@/components/auth/UserAvatar.vue'
 
 const router = useRouter()
 const auth = useAuthStore()
@@ -24,10 +26,6 @@ onMounted(() => {
 
 const email = computed(() => auth.user?.email ?? 'No email')
 const userId = computed(() => auth.user?.id ?? 'Unknown')
-const provider = computed(() => {
-  const providerValue = auth.user?.app_metadata?.provider
-  return typeof providerValue === 'string' ? providerValue : 'email'
-})
 const confirmedAt = computed(() => {
   if (!auth.user?.confirmed_at) {
     return 'Pending'
@@ -71,27 +69,40 @@ async function handleSignOut() {
           </p>
           <h1 class="text-4xl font-bold tracking-normal text-white">Your Holy Grail session</h1>
           <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-400">
-            Session state is handled by Supabase Auth and mirrored through the app shell.
+            Your profile image and sign-in source come from Supabase Auth provider metadata.
           </p>
         </div>
 
-        <button
-          type="button"
-          class="inline-flex h-10 items-center justify-center gap-2 border border-zinc-700 px-4 text-sm font-semibold text-zinc-200 transition hover:border-red-300 hover:text-red-200 disabled:cursor-not-allowed disabled:opacity-60"
-          :disabled="auth.loading"
-          @click="handleSignOut"
-        >
-          <LogOut class="h-4 w-4" />
-          Sign out
-        </button>
+        <div class="flex flex-wrap items-center gap-2">
+          <RouterLink
+            to="/bookmarks"
+            class="inline-flex h-10 items-center justify-center gap-2 border border-zinc-700 px-4 text-sm font-semibold text-zinc-200 transition hover:border-accent-300 hover:text-accent-100"
+          >
+            <Bookmark class="h-4 w-4" />
+            Bookmarks
+          </RouterLink>
+
+          <button
+            type="button"
+            class="inline-flex h-10 items-center justify-center gap-2 border border-zinc-700 px-4 text-sm font-semibold text-zinc-200 transition hover:border-red-300 hover:text-red-200 disabled:cursor-not-allowed disabled:opacity-60"
+            :disabled="auth.loading"
+            @click="handleSignOut"
+          >
+            <LogOut class="h-4 w-4" />
+            Sign out
+          </button>
+        </div>
       </div>
 
       <div class="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
         <section class="border border-zinc-800 bg-[#060606] p-6">
           <div class="flex items-start gap-4">
-            <div class="flex h-16 w-16 items-center justify-center border border-accent-500/30 bg-accent-500/10 text-2xl font-bold text-accent-100">
-              {{ auth.avatarInitial }}
-            </div>
+            <UserAvatar
+              :src="auth.avatarUrl"
+              :initial="auth.avatarInitial"
+              :label="auth.displayName"
+              size="lg"
+            />
             <div class="min-w-0">
               <p class="text-xl font-bold text-white">{{ auth.displayName }}</p>
               <p class="mt-1 truncate text-sm text-zinc-500">{{ email }}</p>
@@ -115,7 +126,7 @@ async function handleSignOut() {
               <KeyRound class="h-4 w-4 text-emerald-300" />
               <div>
                 <p class="text-xs uppercase tracking-widest text-zinc-500">Provider</p>
-                <p class="text-sm capitalize text-zinc-200">{{ provider }}</p>
+                <p class="text-sm text-zinc-200">{{ auth.providerLabel }}</p>
               </div>
             </div>
           </div>

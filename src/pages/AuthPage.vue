@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import AuthCredentialsForm from '@/components/auth/AuthCredentialsForm.vue'
 import AuthFeatureRail from '@/components/auth/AuthFeatureRail.vue'
 import { useAuthStore } from '@/stores/auth'
-import type { AuthCredentials, AuthMode } from '@/types/auth'
+import type { AuthCredentials, AuthMode, AuthProvider } from '@/types/auth'
 
 const route = useRoute()
 const router = useRouter()
@@ -55,6 +55,17 @@ async function handlePasswordReset(email: string) {
     notice.value = result.message ?? 'Password reset email sent.'
   }
 }
+
+async function handleOAuth(provider: AuthProvider) {
+  const result = await auth.signInWithOAuth(provider, getRedirectTarget())
+
+  if (!result.ok) {
+    notice.value = null
+    return
+  }
+
+  notice.value = result.message ?? 'Redirecting...'
+}
 </script>
 
 <template>
@@ -81,6 +92,7 @@ async function handlePasswordReset(email: string) {
           :loading="auth.loading"
           :mode="mode"
           :notice="notice"
+          @oauth="handleOAuth"
           @request-password-reset="handlePasswordReset"
           @submit="handleSubmit"
         />

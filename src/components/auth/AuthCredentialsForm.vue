@@ -4,14 +4,16 @@ import {
   AlertCircle,
   ArrowRight,
   CheckCircle2,
+  Chrome,
   Eye,
   EyeOff,
+  Github,
   KeyRound,
   Loader2,
   Mail,
   UserRound,
 } from 'lucide-vue-next'
-import type { AuthCredentials, AuthMode } from '@/types/auth'
+import type { AuthCredentials, AuthMode, AuthProvider } from '@/types/auth'
 
 const props = defineProps<{
   disabled: boolean
@@ -22,6 +24,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
+  oauth: [provider: AuthProvider]
   requestPasswordReset: [email: string]
   submit: [credentials: AuthCredentials]
 }>()
@@ -164,6 +167,34 @@ function requestPasswordReset() {
     >
       <AlertCircle class="mt-0.5 h-4 w-4 flex-shrink-0" />
       <span>{{ validationMessage || error }}</span>
+    </div>
+
+    <div class="mb-6 grid gap-3 sm:grid-cols-2">
+      <button
+        type="button"
+        class="flex h-12 items-center justify-center gap-2 border border-zinc-700 bg-zinc-950 px-4 text-sm font-semibold text-zinc-100 transition hover:border-sky-300/50 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+        :disabled="isFormDisabled"
+        @click="emit('oauth', 'google')"
+      >
+        <Chrome class="h-4 w-4 text-sky-300" />
+        <span>Continue with Google</span>
+      </button>
+
+      <button
+        type="button"
+        class="flex h-12 items-center justify-center gap-2 border border-zinc-700 bg-zinc-950 px-4 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+        :disabled="isFormDisabled"
+        @click="emit('oauth', 'github')"
+      >
+        <Github class="h-4 w-4 text-zinc-200" />
+        <span>Continue with GitHub</span>
+      </button>
+    </div>
+
+    <div class="mb-6 flex items-center gap-3">
+      <span class="h-px flex-1 bg-zinc-800"></span>
+      <span class="text-xs font-semibold uppercase tracking-widest text-zinc-600">or use email</span>
+      <span class="h-px flex-1 bg-zinc-800"></span>
     </div>
 
     <form class="space-y-5" @submit.prevent="handleSubmit">
