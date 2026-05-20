@@ -958,8 +958,8 @@
     "name": "Using Model Context Protocol (MCP) with Expo - Expo Documentation",
     "description": "Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp resources.",
     "category": "MCP",
-    "parentCategory": "cli-tools",
-    "subcategory": null,
+    "parentCategory": "development",
+    "subcategory": "mcp",
     "stars": 49543,
     "watchers": 371,
     "addedDaysAgo": 0,
@@ -984,37 +984,37 @@
     "featured": false,
     "tags": [
       "bookmark",
-      "cli-tools",
+      "development",
       "mcp"
     ],
     "atGlance": "Using Model Context Protocol (MCP) with Expo - Expo Documentation",
     "fullDescription": "Using Model Context Protocol (MCP) with Expo - Expo Documentation was imported from the browser bookmark folder \"Bookmarks bar > CODE > MCP\".",
     "coreFeatures": [
       {
-        "name": "Developer Tooling",
-        "description": "Using Model Context Protocol (MCP) with Expo - Expo Documentation is tracked as a command-line or developer workflow resource.",
+        "name": "Developer Resource",
+        "description": "Using Model Context Protocol (MCP) with Expo - Expo Documentation is tracked as an MCP resource for building and shipping software.",
         "icon": "check"
       },
       {
-        "name": "Reference Access",
-        "description": "Website and docs links are preserved for setup and usage details.",
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Source Visibility",
-        "description": "Public repository stats are shown when a repo is available.",
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
         "icon": "check"
       },
       {
-        "name": "Workflow Utility",
-        "description": "Useful for development, automation, or evaluation tasks.",
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
         "icon": "check"
       },
       {
-        "name": "Catalog Grouping",
-        "description": "Grouped with other CLI and developer tools.",
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
         "icon": "check"
       }
     ],
@@ -11052,102 +11052,6 @@
     ]
   },
   {
-    "slug": "testsprite",
-    "name": "Overview | Dashboard | TestSprite",
-    "description": "Overview | Dashboard | TestSprite bookmarked for mcp resources.",
-    "category": "MCP",
-    "parentCategory": "cli-tools",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.testsprite.com/dashboard",
-    "docs": "https://www.testsprite.com/dashboard",
-    "sourceCode": "",
-    "icon": "testsprite",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "cli-tools",
-      "mcp"
-    ],
-    "atGlance": "Overview | Dashboard | TestSprite",
-    "fullDescription": "Overview | Dashboard | TestSprite was imported from the browser bookmark folder \"Bookmarks bar > CODE > MCP\".",
-    "coreFeatures": [
-      {
-        "name": "Developer Tooling",
-        "description": "Overview - Dashboard - TestSprite is tracked as a command-line or developer workflow resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Reference Access",
-        "description": "Website and docs links are preserved for setup and usage details.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Source Visibility",
-        "description": "Public repository stats are shown when a repo is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Workflow Utility",
-        "description": "Useful for development, automation, or evaluation tasks.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Grouping",
-        "description": "Grouped with other CLI and developer tools.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "similarTools": [
-      {
-        "slug": "openhands",
-        "name": "CLI - OpenHands Docs",
-        "description": "CLI - OpenHands Docs bookmarked for ai cli resources.",
-        "stars": 74203,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode"
-      },
-      {
-        "slug": "expo",
-        "name": "Using Model Context Protocol (MCP) with Expo - Expo Documentation",
-        "description": "Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp resources.",
-        "stars": 49543,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://docs.expo.dev/eas/ai/mcp/"
-      },
-      {
-        "slug": "codebuff",
-        "name": "Codebuff - AI Coding Assistant for Your Terminal",
-        "description": "Codebuff - AI Coding Assistant for Your Terminal bookmarked for ai cli resources.",
-        "stars": 5511,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.codebuff.com/"
-      }
-    ]
-  },
-  {
     "slug": "spline",
     "name": "Spline",
     "description": "Spline bookmarked for 3d resources.",
@@ -18370,6 +18274,4134 @@
     ]
   },
   {
+    "slug": "brilliant",
+    "name": "Brilliant | Learn by doing",
+    "description": "Brilliant | Learn by doing bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://brilliant.org/",
+    "docs": "https://brilliant.org/",
+    "sourceCode": "",
+    "icon": "brilliant",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Brilliant | Learn by doing",
+    "fullDescription": "Brilliant | Learn by doing was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Brilliant - Learn by doing is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "codecademy",
+    "name": "My Home | Codecademy",
+    "description": "My Home | Codecademy bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.codecademy.com/learn",
+    "docs": "https://www.codecademy.com/learn",
+    "sourceCode": "",
+    "icon": "codecademy",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "My Home | Codecademy",
+    "fullDescription": "My Home | Codecademy was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "My Home - Codecademy is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "codecrafters",
+    "name": "CodeCrafters | Advanced programming challenges",
+    "description": "CodeCrafters | Advanced programming challenges bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://codecrafters.io/",
+    "docs": "https://codecrafters.io/",
+    "sourceCode": "",
+    "icon": "codecrafters",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "CodeCrafters | Advanced programming challenges",
+    "fullDescription": "CodeCrafters | Advanced programming challenges was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "CodeCrafters - Advanced programming challenges is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "codedex",
+    "name": "Codedex | Start Your Coding Adventure",
+    "description": "Codedex | Start Your Coding Adventure bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.codedex.io/",
+    "docs": "https://www.codedex.io/",
+    "sourceCode": "",
+    "icon": "codedex",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Codedex | Start Your Coding Adventure",
+    "fullDescription": "Codedex | Start Your Coding Adventure was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Codedex - Start Your Coding Adventure is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "codeproject",
+    "name": "C/C++ Headers and Source Files: How Do They Work?- CodeProject",
+    "description": "C/C++ Headers and Source Files: How Do They Work?- CodeProject bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.codeproject.com/Articles/5341253/C-Cplusplus-Headers-and-Source-Files-How-Do-They-W",
+    "docs": "https://www.codeproject.com/Articles/5341253/C-Cplusplus-Headers-and-Source-Files-How-Do-They-W",
+    "sourceCode": "",
+    "icon": "codeproject",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "C/C++ Headers and Source Files: How Do They Work?- CodeProject",
+    "fullDescription": "C/C++ Headers and Source Files: How Do They Work?- CodeProject was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "C/C++ Headers and Source Files: How Do They Work?- CodeProject is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "codingame",
+    "name": "Coding Games and Programming Challenges to Code Better",
+    "description": "Coding Games and Programming Challenges to Code Better bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.codingame.com/start/",
+    "docs": "https://www.codingame.com/start/",
+    "sourceCode": "",
+    "icon": "codingame",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Coding Games and Programming Challenges to Code Better",
+    "fullDescription": "Coding Games and Programming Challenges to Code Better was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Coding Games and Programming Challenges to Code Better is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "exercism",
+    "name": "Exercism",
+    "description": "Exercism bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://exercism.org/",
+    "docs": "https://exercism.org/",
+    "sourceCode": "",
+    "icon": "exercism",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Exercism",
+    "fullDescription": "Exercism was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Exercism is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "freecodecamp",
+    "name": "Information Security Certification | freeCodeCamp.org",
+    "description": "Information Security Certification | freeCodeCamp.org bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.freecodecamp.org/learn/information-security/",
+    "docs": "https://www.freecodecamp.org/learn/information-security/",
+    "sourceCode": "",
+    "icon": "freecodecamp",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Information Security Certification | freeCodeCamp.org",
+    "fullDescription": "Information Security Certification | freeCodeCamp.org was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Information Security Certification - freeCodeCamp.org is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "frontendmasters",
+    "name": "Project Setup - CSS Foundations | Frontend Masters",
+    "description": "Project Setup - CSS Foundations | Frontend Masters bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://frontendmasters.com/courses/css-foundations/project-setup/",
+    "docs": "https://frontendmasters.com/courses/css-foundations/project-setup/",
+    "sourceCode": "",
+    "icon": "frontendmasters",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Project Setup - CSS Foundations | Frontend Masters",
+    "fullDescription": "Project Setup - CSS Foundations | Frontend Masters was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Project Setup - CSS Foundations - Frontend Masters is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "fullstackopen",
+    "name": "Full stack open",
+    "description": "Full stack open bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://fullstackopen.com/en/",
+    "docs": "https://fullstackopen.com/en/",
+    "sourceCode": "",
+    "icon": "fullstackopen",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Full stack open",
+    "fullDescription": "Full stack open was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Full stack open is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "geeksforgeeks",
+    "name": "Multiple Source Files in C - GeeksforGeeks",
+    "description": "Multiple Source Files in C - GeeksforGeeks bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.geeksforgeeks.org/multiple-source-files-in-c/",
+    "docs": "https://www.geeksforgeeks.org/multiple-source-files-in-c/",
+    "sourceCode": "",
+    "icon": "geeksforgeeks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Multiple Source Files in C - GeeksforGeeks",
+    "fullDescription": "Multiple Source Files in C - GeeksforGeeks was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Multiple Source Files in C - GeeksforGeeks is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "infinitecourses",
+    "name": "InfiniteCourses - Infinite Free Courses",
+    "description": "InfiniteCourses - Infinite Free Courses bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.infinitecourses.org/",
+    "docs": "https://www.infinitecourses.org/",
+    "sourceCode": "",
+    "icon": "infinitecourses",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "InfiniteCourses - Infinite Free Courses",
+    "fullDescription": "InfiniteCourses - Infinite Free Courses was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "InfiniteCourses - Infinite Free Courses is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "learn-anything",
+    "name": "Learn Anything",
+    "description": "Learn Anything bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://learn-anything.xyz/",
+    "docs": "https://learn-anything.xyz/",
+    "sourceCode": "",
+    "icon": "learn-anything",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Learn Anything",
+    "fullDescription": "Learn Anything was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Learn Anything is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "metana",
+    "name": "Metana | Career-Focused Coding Bootcamp",
+    "description": "Metana | Career-Focused Coding Bootcamp bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://metana.io/",
+    "docs": "https://metana.io/",
+    "sourceCode": "",
+    "icon": "metana",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Metana | Career-Focused Coding Bootcamp",
+    "fullDescription": "Metana | Career-Focused Coding Bootcamp was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Metana - Career-Focused Coding Bootcamp is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "roadmap",
+    "name": "Developer Roadmaps - roadmap.sh",
+    "description": "Developer Roadmaps - roadmap.sh bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://roadmap.sh/",
+    "docs": "https://roadmap.sh/",
+    "sourceCode": "",
+    "icon": "roadmap",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Developer Roadmaps - roadmap.sh",
+    "fullDescription": "Developer Roadmaps - roadmap.sh was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Developer Roadmaps - roadmap.sh is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "scrimba",
+    "name": "Courses",
+    "description": "Courses bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://scrimba.com/courses",
+    "docs": "https://scrimba.com/courses",
+    "sourceCode": "",
+    "icon": "scrimba",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "Courses",
+    "fullDescription": "Courses was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Courses is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "tutorialspoint",
+    "name": "C Tutorial: Learn C Programming for Free",
+    "description": "C Tutorial: Learn C Programming for Free bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.tutorialspoint.com/cprogramming/index.htm",
+    "docs": "https://www.tutorialspoint.com/cprogramming/index.htm",
+    "sourceCode": "",
+    "icon": "tutorialspoint",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "C Tutorial: Learn C Programming for Free",
+    "fullDescription": "C Tutorial: Learn C Programming for Free was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "C Tutorial: Learn C Programming for Free is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "w3schools",
+    "name": "W3Schools Online Web Tutorials",
+    "description": "W3Schools Online Web Tutorials bookmarked for learning resources.",
+    "category": "Learning",
+    "parentCategory": "development",
+    "subcategory": "learning",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.w3schools.com/",
+    "docs": "https://www.w3schools.com/",
+    "sourceCode": "",
+    "icon": "w3schools",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "learning"
+    ],
+    "atGlance": "W3Schools Online Web Tutorials",
+    "fullDescription": "W3Schools Online Web Tutorials was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "W3Schools Online Web Tutorials is tracked as a learning resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "testsprite",
+    "name": "TestSprite",
+    "description": "AI testing platform with MCP-oriented workflow support.",
+    "category": "MCP",
+    "parentCategory": "development",
+    "subcategory": "mcp",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.testsprite.com/",
+    "docs": "https://www.testsprite.com/",
+    "sourceCode": "",
+    "icon": "testsprite",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "mcp"
+    ],
+    "atGlance": "AI testing platform with MCP-oriented workflow support.",
+    "fullDescription": "TestSprite was imported from the browser bookmark folder \"Bookmarks bar > CODE > MCP\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "TestSprite is tracked as an MCP resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "openhands",
+        "name": "CLI - OpenHands Docs",
+        "description": "CLI - OpenHands Docs bookmarked for ai cli resources.",
+        "stars": 74203,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode"
+      },
+      {
+        "slug": "expo",
+        "name": "Using Model Context Protocol (MCP) with Expo - Expo Documentation",
+        "description": "Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp resources.",
+        "stars": 49543,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://docs.expo.dev/eas/ai/mcp/"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff - AI Coding Assistant for Your Terminal",
+        "description": "Codebuff - AI Coding Assistant for Your Terminal bookmarked for ai cli resources.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
+    "slug": "betterstack",
+    "name": "Better Stack Uptime",
+    "description": "Better Stack Uptime bookmarked for monitoring resources.",
+    "category": "Monitoring",
+    "parentCategory": "development",
+    "subcategory": "monitoring",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://betterstack.com/uptime",
+    "docs": "https://betterstack.com/uptime",
+    "sourceCode": "",
+    "icon": "betterstack",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "monitoring"
+    ],
+    "atGlance": "Better Stack Uptime",
+    "fullDescription": "Better Stack Uptime was imported from the browser bookmark folder \"Bookmarks bar > CODE > uptimeMonitor\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Better Stack Uptime is tracked as a monitoring resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "uptimerobot",
+    "name": "UptimeRobot",
+    "description": "UptimeRobot bookmarked for monitoring resources.",
+    "category": "Monitoring",
+    "parentCategory": "development",
+    "subcategory": "monitoring",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://uptimerobot.com/",
+    "docs": "https://uptimerobot.com/",
+    "sourceCode": "",
+    "icon": "uptimerobot",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "monitoring"
+    ],
+    "atGlance": "UptimeRobot",
+    "fullDescription": "UptimeRobot was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "UptimeRobot is tracked as a monitoring resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "11ty",
+    "name": "Getting Started - Eleventy",
+    "description": "Getting Started - Eleventy bookmarked for references resources.",
+    "category": "References",
+    "parentCategory": "development",
+    "subcategory": "references",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.11ty.dev/docs/",
+    "docs": "https://www.11ty.dev/docs/",
+    "sourceCode": "",
+    "icon": "11ty",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "references"
+    ],
+    "atGlance": "Getting Started - Eleventy",
+    "fullDescription": "Getting Started - Eleventy was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Getting Started - Eleventy is tracked as a references resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "archive",
+    "name": "github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51 : vitalysim : Free Download, Borrow, and Streaming : Internet Archive",
+    "description": "github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51 : vitalysim : Free Download, Borrow, and Streaming : Internet Archive bookmarked for references resources.",
+    "category": "References",
+    "parentCategory": "development",
+    "subcategory": "references",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://archive.org/details/github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51",
+    "docs": "https://archive.org/details/github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51",
+    "sourceCode": "",
+    "icon": "archive",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "references"
+    ],
+    "atGlance": "github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51 : vitalysim : Free Download, Borrow, and Streaming : Internet Archive",
+    "fullDescription": "github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51 : vitalysim : Free Download, Borrow, and Streaming : Internet Archive was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51 : vitalysim : Free Download, Borrow, and Streaming : Internet Archive is tracked as a references resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "code",
+    "name": "Getting started with Visual Studio Code",
+    "description": "Getting started with Visual Studio Code bookmarked for references resources.",
+    "category": "References",
+    "parentCategory": "development",
+    "subcategory": "references",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://code.visualstudio.com/docs/introvideos/basics",
+    "docs": "https://code.visualstudio.com/docs/introvideos/basics",
+    "sourceCode": "",
+    "icon": "code",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "references"
+    ],
+    "atGlance": "Getting started with Visual Studio Code",
+    "fullDescription": "Getting started with Visual Studio Code was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Getting started with Visual Studio Code is tracked as a references resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "jupyter",
+    "name": "Project Jupyter | Home",
+    "description": "Project Jupyter | Home bookmarked for references resources.",
+    "category": "References",
+    "parentCategory": "development",
+    "subcategory": "references",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://jupyter.org/",
+    "docs": "https://jupyter.org/",
+    "sourceCode": "",
+    "icon": "jupyter",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "references"
+    ],
+    "atGlance": "Project Jupyter | Home",
+    "fullDescription": "Project Jupyter | Home was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Project Jupyter - Home is tracked as a references resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "medium",
+    "name": "Hosting on Digital Ocean: docker, nginx, reverse-proxy, and let's-encrypt. | by Moise Lala | Medium",
+    "description": "Hosting on Digital Ocean: docker, nginx, reverse-proxy, and let's-encrypt. | by Moise Lala | Medium bookmarked for references resources.",
+    "category": "References",
+    "parentCategory": "development",
+    "subcategory": "references",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://medium.com/@moise.lala/hosting-on-digital-ocean-docker-nginx-reverse-proxy-and-lets-encrypt-04ffacca5dfc",
+    "docs": "https://medium.com/@moise.lala/hosting-on-digital-ocean-docker-nginx-reverse-proxy-and-lets-encrypt-04ffacca5dfc",
+    "sourceCode": "",
+    "icon": "medium",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "references"
+    ],
+    "atGlance": "Hosting on Digital Ocean: docker, nginx, reverse-proxy, and let's-encrypt. | by Moise Lala | Medium",
+    "fullDescription": "Hosting on Digital Ocean: docker, nginx, reverse-proxy, and let's-encrypt. | by Moise Lala | Medium was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Hosting on Digital Ocean: docker, nginx, reverse-proxy, and let's-encrypt. - by Moise Lala - Medium is tracked as a references resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "github",
+    "name": "free-programming-books/.github at main - EbookFoundation/free-programming-books - GitHub",
+    "description": "free-programming-books/.github at main - EbookFoundation/free-programming-books - GitHub bookmarked for repositories resources.",
+    "category": "Repositories",
+    "parentCategory": "development",
+    "subcategory": "repositories",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://github.com/EbookFoundation/free-programming-books/tree/main/.github",
+    "docs": "https://github.com/EbookFoundation/free-programming-books/tree/main/.github",
+    "sourceCode": "https://github.com/EbookFoundation/free-programming-books",
+    "icon": "github",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "repositories"
+    ],
+    "atGlance": "free-programming-books/.github at main - EbookFoundation/free-programming-books - GitHub",
+    "fullDescription": "free-programming-books/.github at main - EbookFoundation/free-programming-books - GitHub was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "free-programming-books/.github at main - EbookFoundation/free-programming-books - GitHub is tracked as a repositories resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "github-codewithmuhilan-lightswind-ui-library-animated-react-components",
+    "name": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly",
+    "description": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly bookmarked for repositories resources.",
+    "category": "Repositories",
+    "parentCategory": "development",
+    "subcategory": "repositories",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
+    "docs": "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
+    "sourceCode": "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
+    "icon": "github",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "repositories"
+    ],
+    "atGlance": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly",
+    "fullDescription": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly is tracked as a repositories resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "github-github-codecrafters-io-build-your-own-x-master-programming-by-re",
+    "name": "GitHub - codecrafters-io/build-your-own-x: Master programming by recreating your favorite technologies from scratch.",
+    "description": "GitHub - codecrafters-io/build-your-own-x: Master programming by recreating your favorite technologies from scratch. bookmarked for repositories resources.",
+    "category": "Repositories",
+    "parentCategory": "development",
+    "subcategory": "repositories",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://github.com/codecrafters-io/build-your-own-x",
+    "docs": "https://github.com/codecrafters-io/build-your-own-x",
+    "sourceCode": "https://github.com/codecrafters-io/build-your-own-x",
+    "icon": "github",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "repositories"
+    ],
+    "atGlance": "GitHub - codecrafters-io/build-your-own-x: Master programming by recreating your favorite technologies from scratch.",
+    "fullDescription": "GitHub - codecrafters-io/build-your-own-x: Master programming by recreating your favorite technologies from scratch. was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "GitHub - codecrafters-io/build-your-own-x: Master programming by recreating your favorite technologies from scratch. is tracked as a repositories resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "github-github-kamrullab-windowscleanupcommands-cmd-and-powershell-scrip",
+    "name": "GitHub - kamrullab/WindowsCleanupCommands: CMD and PowerShell scripts for cleaning temporary files, clearing registry entries, and freeing up disk space on Windows.",
+    "description": "GitHub - kamrullab/WindowsCleanupCommands: CMD and PowerShell scripts for cleaning temporary files, clearing registry entries, and freeing up disk space on Windows. bookmarked for repositories resources.",
+    "category": "Repositories",
+    "parentCategory": "development",
+    "subcategory": "repositories",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://github.com/kamrullab/WindowsCleanupCommands",
+    "docs": "https://github.com/kamrullab/WindowsCleanupCommands",
+    "sourceCode": "https://github.com/kamrullab/WindowsCleanupCommands",
+    "icon": "github",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "repositories"
+    ],
+    "atGlance": "GitHub - kamrullab/WindowsCleanupCommands: CMD and PowerShell scripts for cleaning temporary files, clearing registry entries, and freeing up disk space on Windows.",
+    "fullDescription": "GitHub - kamrullab/WindowsCleanupCommands: CMD and PowerShell scripts for cleaning temporary files, clearing registry entries, and freeing up disk space on Windows. was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "GitHub - kamrullab/WindowsCleanupCommands: CMD and PowerShell scripts for cleaning temporary files, clearing registry entries, and freeing up disk space on Windows. is tracked as a repositories resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "github-setup",
+    "name": "SETUP",
+    "description": "SETUP bookmarked for repositories resources.",
+    "category": "Repositories",
+    "parentCategory": "development",
+    "subcategory": "repositories",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://github.com/emmabostian/fem-css-foundations",
+    "docs": "https://github.com/emmabostian/fem-css-foundations",
+    "sourceCode": "https://github.com/emmabostian/fem-css-foundations",
+    "icon": "github",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "repositories"
+    ],
+    "atGlance": "SETUP",
+    "fullDescription": "SETUP was imported from the browser bookmark folder \"Bookmarks bar > CODE > GitHub\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "SETUP is tracked as a repositories resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "autoskills",
+    "name": "autoskills - Auto-install best AI skills for your project",
+    "description": "autoskills - Auto-install best AI skills for your project bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.autoskills.sh/",
+    "docs": "https://www.autoskills.sh/",
+    "sourceCode": "",
+    "icon": "autoskills",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "autoskills - Auto-install best AI skills for your project",
+    "fullDescription": "autoskills - Auto-install best AI skills for your project was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "autoskills - Auto-install best AI skills for your project is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "better-t-stack",
+    "name": "Better-T-Stack",
+    "description": "Better-T-Stack bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.better-t-stack.dev/",
+    "docs": "https://www.better-t-stack.dev/",
+    "sourceCode": "",
+    "icon": "better-t-stack",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Better-T-Stack",
+    "fullDescription": "Better-T-Stack was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Better-T-Stack is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "cdnjs",
+    "name": "cdnjs - The #1 free and open source CDN built to make life easier for developers",
+    "description": "cdnjs - The #1 free and open source CDN built to make life easier for developers bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://cdnjs.com/",
+    "docs": "https://cdnjs.com/",
+    "sourceCode": "",
+    "icon": "cdnjs",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "cdnjs - The #1 free and open source CDN built to make life easier for developers",
+    "fullDescription": "cdnjs - The #1 free and open source CDN built to make life easier for developers was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "cdnjs - The #1 free and open source CDN built to make life easier for developers is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "codex",
+    "name": "Codex | Most Accurate & Reliable Blockchain Data API",
+    "description": "Codex | Most Accurate & Reliable Blockchain Data API bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.codex.io/",
+    "docs": "https://www.codex.io/",
+    "sourceCode": "",
+    "icon": "codex",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Codex | Most Accurate & Reliable Blockchain Data API",
+    "fullDescription": "Codex | Most Accurate & Reliable Blockchain Data API was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Codex - Most Accurate & Reliable Blockchain Data API is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "eslint",
+    "name": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
+    "description": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://eslint.org/",
+    "docs": "https://eslint.org/",
+    "sourceCode": "",
+    "icon": "eslint",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
+    "fullDescription": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "orm",
+    "name": "Drizzle ORM - next gen TypeScript ORM.",
+    "description": "Drizzle ORM - next gen TypeScript ORM. bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://orm.drizzle.team/",
+    "docs": "https://orm.drizzle.team/",
+    "sourceCode": "",
+    "icon": "orm",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Drizzle ORM - next gen TypeScript ORM.",
+    "fullDescription": "Drizzle ORM - next gen TypeScript ORM. was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Drizzle ORM - next gen TypeScript ORM. is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "posthog",
+    "name": "PostHog - How developers build successful products",
+    "description": "PostHog - How developers build successful products bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://posthog.com/",
+    "docs": "https://posthog.com/",
+    "sourceCode": "",
+    "icon": "posthog",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "PostHog - How developers build successful products",
+    "fullDescription": "PostHog - How developers build successful products was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "PostHog - How developers build successful products is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "prisma",
+    "name": "Prisma",
+    "description": "Prisma bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.prisma.io/",
+    "docs": "https://www.prisma.io/",
+    "sourceCode": "",
+    "icon": "prisma",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Prisma",
+    "fullDescription": "Prisma was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Prisma is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "reflex",
+    "name": "Reflex - The platform to build and scale enterprise apps",
+    "description": "Reflex - The platform to build and scale enterprise apps bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://reflex.dev/",
+    "docs": "https://reflex.dev/",
+    "sourceCode": "",
+    "icon": "reflex",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Reflex - The platform to build and scale enterprise apps",
+    "fullDescription": "Reflex - The platform to build and scale enterprise apps was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Reflex - The platform to build and scale enterprise apps is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "replit",
+    "name": "Replit",
+    "description": "Replit bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://replit.com/",
+    "docs": "https://replit.com/",
+    "sourceCode": "",
+    "icon": "replit",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Replit",
+    "fullDescription": "Replit was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Replit is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "resend",
+    "name": "Resend - Email for developers",
+    "description": "Resend - Email for developers bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://resend.com/",
+    "docs": "https://resend.com/",
+    "sourceCode": "",
+    "icon": "resend",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Resend - Email for developers",
+    "fullDescription": "Resend - Email for developers was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Resend - Email for developers is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "serus",
+    "name": "Serus - Transforming Privacy Forever",
+    "description": "Serus - Transforming Privacy Forever bookmarked for tooling resources.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.serus.ai/",
+    "docs": "https://www.serus.ai/",
+    "sourceCode": "",
+    "icon": "serus",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling"
+    ],
+    "atGlance": "Serus - Transforming Privacy Forever",
+    "fullDescription": "Serus - Transforming Privacy Forever was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Developer Resource",
+        "description": "Serus - Transforming Privacy Forever is tracked as a tooling resource for building and shipping software.",
+        "icon": "check"
+      },
+      {
+        "name": "Workflow Reference",
+        "description": "The saved link keeps the resource close to related development material.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Sorted by Use Case",
+        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Ready",
+        "description": "Available from the catalog without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Repeatable Lookup",
+        "description": "Metadata and tags make the resource easy to find later.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "aiven",
     "name": "Create hosted PostgreSQL database for FREE",
     "description": "Create hosted PostgreSQL database for FREE bookmarked for hosting resources.",
@@ -18658,6 +22690,102 @@
     ]
   },
   {
+    "slug": "cyclic",
+    "name": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
+    "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "platforms",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.cyclic.sh/",
+    "docs": "https://www.cyclic.sh/",
+    "sourceCode": "",
+    "icon": "cyclic",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "platforms",
+      "hosting"
+    ],
+    "atGlance": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
+    "fullDescription": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Platform Service",
+        "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds is tracked as a platform resource for deployment or infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Repository Link",
+        "description": "Source code is included when the platform is open source.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "deno",
     "name": "Deno Deploy",
     "description": "Deno Deploy bookmarked for hosting resources.",
@@ -18755,8 +22883,8 @@
   },
   {
     "slug": "fly",
-    "name": "Dashboard - Fly",
-    "description": "Dashboard - Fly bookmarked for hosting resources.",
+    "name": "Fly.io",
+    "description": "Deploy app servers and full-stack applications close to users.",
     "category": "Hosting",
     "parentCategory": "platforms",
     "subcategory": null,
@@ -18776,8 +22904,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://fly.io/dashboard/qwenzy",
-    "docs": "https://fly.io/dashboard/qwenzy",
+    "website": "https://fly.io/",
+    "docs": "https://fly.io/docs/",
     "sourceCode": "",
     "icon": "fly",
     "verified": false,
@@ -18787,12 +22915,12 @@
       "platforms",
       "hosting"
     ],
-    "atGlance": "Dashboard - Fly",
-    "fullDescription": "Dashboard - Fly was imported from the browser bookmark folder \"Bookmarks bar > CODE > Hosting Service\".",
+    "atGlance": "Deploy app servers and full-stack applications close to users.",
+    "fullDescription": "Fly.io is tracked as a public hosting platform resource from the CODE bookmarks.",
     "coreFeatures": [
       {
         "name": "Platform Service",
-        "description": "Dashboard - Fly is tracked as a platform resource for deployment or infrastructure work.",
+        "description": "Fly.io is tracked as a platform resource for deployment or infrastructure work.",
         "icon": "check"
       },
       {
@@ -19235,9 +23363,9 @@
   },
   {
     "slug": "neon",
-    "name": "Neon Console",
-    "description": "Neon Console bookmarked for hosting resources.",
-    "category": "Hosting",
+    "name": "Neon",
+    "description": "Serverless Postgres platform for developer workflows.",
+    "category": "Database",
     "parentCategory": "platforms",
     "subcategory": null,
     "stars": 0,
@@ -19256,8 +23384,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://console.neon.tech/app/projects/still-violet-01007487",
-    "docs": "https://console.neon.tech/app/projects/still-violet-01007487",
+    "website": "https://neon.tech/",
+    "docs": "https://neon.tech/docs",
     "sourceCode": "",
     "icon": "neon",
     "verified": false,
@@ -19265,14 +23393,14 @@
     "tags": [
       "bookmark",
       "platforms",
-      "hosting"
+      "database"
     ],
-    "atGlance": "Neon Console",
-    "fullDescription": "Neon Console was imported from the browser bookmark folder \"Bookmarks bar > CODE > Hosting Service\".",
+    "atGlance": "Serverless Postgres platform for developer workflows.",
+    "fullDescription": "Neon is tracked as a public database platform resource from the CODE bookmarks.",
     "coreFeatures": [
       {
         "name": "Platform Service",
-        "description": "Neon Console is tracked as a platform resource for deployment or infrastructure work.",
+        "description": "Neon is tracked as a platform resource for database and infrastructure work.",
         "icon": "check"
       },
       {
@@ -19618,9 +23746,105 @@
     ]
   },
   {
+    "slug": "railway",
+    "name": "Railway",
+    "description": "Railway bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "platforms",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://railway.com/",
+    "docs": "https://railway.com/",
+    "sourceCode": "",
+    "icon": "railway",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "platforms",
+      "hosting"
+    ],
+    "atGlance": "Railway",
+    "fullDescription": "Railway was imported from the browser bookmark folder \"Bookmarks bar > CODE\".",
+    "coreFeatures": [
+      {
+        "name": "Platform Service",
+        "description": "Railway is tracked as a platform resource for deployment or infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Repository Link",
+        "description": "Source code is included when the platform is open source.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "ui-figma-shadcn-ui",
+        "name": "Figma - shadcn/ui",
+        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/docs/figma"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "render",
-    "name": "qwenzy-bot Web Service Render Dashboard",
-    "description": "qwenzy-bot Web Service Render Dashboard bookmarked for hosting resources.",
+    "name": "Render",
+    "description": "Cloud application hosting and deployment platform for web services.",
     "category": "Hosting",
     "parentCategory": "platforms",
     "subcategory": null,
@@ -19640,8 +23864,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://dashboard.render.com/web/srv-d50gvfdactks73f4nul0/deploys/dep-d50h25shg0os73esrg10",
-    "docs": "https://dashboard.render.com/web/srv-d50gvfdactks73f4nul0/deploys/dep-d50h25shg0os73esrg10",
+    "website": "https://render.com/",
+    "docs": "https://render.com/docs",
     "sourceCode": "",
     "icon": "render",
     "verified": false,
@@ -19651,12 +23875,12 @@
       "platforms",
       "hosting"
     ],
-    "atGlance": "qwenzy-bot Web Service Render Dashboard",
-    "fullDescription": "qwenzy-bot Web Service Render Dashboard was imported from the browser bookmark folder \"Bookmarks bar > CODE > Hosting Service\".",
+    "atGlance": "Cloud application hosting and deployment platform for web services.",
+    "fullDescription": "Render is tracked as a public hosting platform resource from the CODE bookmarks.",
     "coreFeatures": [
       {
         "name": "Platform Service",
-        "description": "qwenzy-bot Web Service Render Dashboard is tracked as a platform resource for deployment or infrastructure work.",
+        "description": "Render is tracked as a platform resource for deployment or infrastructure work.",
         "icon": "check"
       },
       {

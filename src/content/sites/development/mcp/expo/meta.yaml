@@ -2,8 +2,8 @@ slug: expo
 name: Using Model Context Protocol (MCP) with Expo - Expo Documentation
 description: Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp resources.
 category: MCP
-parentCategory: cli-tools
-subcategory: null
+parentCategory: development
+subcategory: mcp
 stars: 49543
 watchers: 371
 addedDaysAgo: 0
@@ -26,30 +26,30 @@ verified: true
 featured: false
 tags:
   - bookmark
-  - cli-tools
+  - development
   - mcp
 atGlance: Using Model Context Protocol (MCP) with Expo - Expo Documentation
 fullDescription: >-
   Using Model Context Protocol (MCP) with Expo - Expo Documentation was imported from the browser
   bookmark folder "Bookmarks bar > CODE > MCP".
 coreFeatures:
-  - name: Developer Tooling
+  - name: Developer Resource
     description: >-
-      Using Model Context Protocol (MCP) with Expo - Expo Documentation is tracked as a command-line
-      or developer workflow resource.
+      Using Model Context Protocol (MCP) with Expo - Expo Documentation is tracked as an MCP
+      resource for building and shipping software.
     icon: check
-  - name: Reference Access
-    description: Website and docs links are preserved for setup and usage details.
+  - name: Workflow Reference
+    description: The saved link keeps the resource close to related development material.
     icon: check
 additionalFeatures:
-  - name: Source Visibility
-    description: Public repository stats are shown when a repo is available.
+  - name: Sorted by Use Case
+    description: Grouped by learning, references, tooling, repositories, MCP, or monitoring.
     icon: check
-  - name: Workflow Utility
-    description: Useful for development, automation, or evaluation tasks.
+  - name: Browser Ready
+    description: Available from the catalog without local setup.
     icon: check
-  - name: Catalog Grouping
-    description: Grouped with other CLI and developer tools.
+  - name: Repeatable Lookup
+    description: Metadata and tags make the resource easy to find later.
     icon: check
 similarTools:
   - slug: openhands

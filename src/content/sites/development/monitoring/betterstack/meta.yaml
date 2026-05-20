@@ -1,0 +1,73 @@
+slug: betterstack
+name: Better Stack Uptime
+description: Better Stack Uptime bookmarked for monitoring resources.
+category: Monitoring
+parentCategory: development
+subcategory: monitoring
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://betterstack.com/uptime
+docs: https://betterstack.com/uptime
+sourceCode: ""
+icon: betterstack
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - monitoring
+atGlance: Better Stack Uptime
+fullDescription: >-
+  Better Stack Uptime was imported from the browser bookmark folder "Bookmarks bar > CODE >
+  uptimeMonitor".
+coreFeatures:
+  - name: Developer Resource
+    description: Better Stack Uptime is tracked as a monitoring resource for building and shipping software.
+    icon: check
+  - name: Workflow Reference
+    description: The saved link keeps the resource close to related development material.
+    icon: check
+additionalFeatures:
+  - name: Sorted by Use Case
+    description: Grouped by learning, references, tooling, repositories, MCP, or monitoring.
+    icon: check
+  - name: Browser Ready
+    description: Available from the catalog without local setup.
+    icon: check
+  - name: Repeatable Lookup
+    description: Metadata and tags make the resource easy to find later.
+    icon: check
+similarTools:
+  - slug: n8n
+    name: AI Workflow Automation Platform & Tools - n8n
+    description: AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.
+    stars: 188794
+    addedDaysAgo: 0
+    verified: true
+    website: https://n8n.io/
+  - slug: ui-figma-shadcn-ui
+    name: Figma - shadcn/ui
+    description: Figma - shadcn/ui bookmarked for design tools resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/docs/figma
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/

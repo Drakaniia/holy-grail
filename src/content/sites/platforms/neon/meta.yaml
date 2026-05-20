@@ -1,7 +1,7 @@
 slug: neon
-name: Neon Console
-description: Neon Console bookmarked for hosting resources.
-category: Hosting
+name: Neon
+description: Serverless Postgres platform for developer workflows.
+category: Database
 parentCategory: platforms
 subcategory: null
 stars: 0
@@ -18,8 +18,8 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://console.neon.tech/app/projects/still-violet-01007487
-docs: https://console.neon.tech/app/projects/still-violet-01007487
+website: https://neon.tech/
+docs: https://neon.tech/docs
 sourceCode: ""
 icon: neon
 verified: false
@@ -27,14 +27,12 @@ featured: false
 tags:
   - bookmark
   - platforms
-  - hosting
-atGlance: Neon Console
-fullDescription: >-
-  Neon Console was imported from the browser bookmark folder "Bookmarks bar > CODE > Hosting
-  Service".
+  - database
+atGlance: Serverless Postgres platform for developer workflows.
+fullDescription: Neon is tracked as a public database platform resource from the CODE bookmarks.
 coreFeatures:
   - name: Platform Service
-    description: Neon Console is tracked as a platform resource for deployment or infrastructure work.
+    description: Neon is tracked as a platform resource for database and infrastructure work.
     icon: check
   - name: Hosted Access
     description: The primary service is available through the website link.
