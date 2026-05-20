@@ -14,6 +14,7 @@ const AUTH_CONFIG_ERROR =
   'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to .env.local.'
 const EMAIL_RATE_LIMIT_ERROR =
   'Supabase email sending is rate limited for this project. Wait about an hour before trying again, or configure custom SMTP in Supabase Auth.'
+const DEV_REDIRECT_ORIGIN = import.meta.env.VITE_AUTH_REDIRECT_ORIGIN?.trim()
 
 function getProviderLabel(provider: AuthProvider) {
   return provider === 'github' ? 'GitHub' : 'Google'
@@ -56,12 +57,41 @@ function getOAuthErrorMessage(error: unknown, provider: AuthProvider): string {
   return message
 }
 
-function getRedirectUrl(path = '/account') {
+function getRedirectOrigin() {
   if (typeof window === 'undefined') {
-    return path
+    return DEV_REDIRECT_ORIGIN || ''
   }
 
-  return `${window.location.origin}${path}`
+  if (DEV_REDIRECT_ORIGIN) {
+    return DEV_REDIRECT_ORIGIN.replace(/\/$/, '')
+  }
+
+  const url = new URL(window.location.href)
+
+  if (import.meta.env.DEV && (url.hostname === '127.0.0.1' || url.hostname === '::1')) {
+    url.hostname = 'localhost'
+    return url.origin
+  }
+
+  return window.location.origin
+}
+
+function getRedirectPath(path: string) {
+  if (!path.startsWith('/') || path.startsWith('//')) {
+    return '/account'
+  }
+
+  return path
+}
+
+function getRedirectUrl(path = '/account') {
+  const redirectPath = getRedirectPath(path)
+
+  if (typeof window === 'undefined') {
+    return redirectPath
+  }
+
+  return `${getRedirectOrigin()}${redirectPath}`
 }
 
 function getMetadataValue(metadata: Record<string, unknown> | undefined, keys: string[]) {
