@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Star, Eye, ExternalLink, CheckCircle2, RefreshCw } from 'lucide-vue-next'
+import { Star, Eye, CheckCircle2, RefreshCw } from 'lucide-vue-next'
 import SiteFavicon from './SiteFavicon.vue'
 import type { Site } from '@/stores/sites'
 

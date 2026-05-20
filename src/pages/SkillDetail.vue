@@ -10,9 +10,13 @@ const store = useSkillsStore()
 
 const slug = computed(() => route.params.slug as string)
 const skill = computed(() => store.getSkillBySlug(slug.value))
-const skillContent = computed(() => store.getSkillContent(slug.value))
 const isLoading = computed(() => store.isContentLoading(slug.value))
 const error = computed(() => store.getContentError(slug.value))
+
+const backRoute = computed(() => {
+  if (!skill.value) return '/skills/skills'
+  return `/skills/${skill.value.parentCategory}`
+})
 
 const contentHtml = ref('')
 const copied = ref(false)
@@ -68,7 +72,7 @@ async function copyInstallCommand() {
     <div v-if="skill" class="max-w-4xl mx-auto px-6 py-8">
       <!-- Back Button -->
       <button
-        @click="router.push('/skills')"
+        @click="router.push(backRoute)"
         class="flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors"
       >
         <ArrowLeft class="w-4 h-4" />
@@ -178,7 +182,7 @@ async function copyInstallCommand() {
       <h2 class="text-2xl font-bold text-white mb-2">Skill not found</h2>
       <p class="text-gray-400 mb-6">The skill you're looking for doesn't exist.</p>
       <button
-        @click="router.push('/skills')"
+        @click="router.push(backRoute)"
         class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
       >
         Browse Skills

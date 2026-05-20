@@ -2,13 +2,10 @@
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
-  ArrowLeft,
   Star,
-  Eye,
   Users,
   GitCommit,
   Tag,
-  ExternalLink,
   BookOpen,
   Code2,
   Globe,
@@ -21,7 +18,6 @@ import {
   Shield,
   Heart,
   Share2,
-  ChevronDown,
   Layers,
   ImageOff,
 } from 'lucide-vue-next'
@@ -35,8 +31,15 @@ const store = useSitesStore()
 const slug = computed(() => route.params.slug as string)
 const site = computed(() => store.getSiteBySlug(slug.value))
 
+const backRoute = computed(() => {
+  if (!site.value) return '/sites/platforms'
+  if (site.value.subcategory) {
+    return `/sites/${site.value.parentCategory}/${site.value.subcategory}`
+  }
+  return `/sites/${site.value.parentCategory}`
+})
+
 const copied = ref(false)
-const composeExpanded = ref(true)
 const screenshotError = ref(false)
 
 function getScreenshotUrl(website: string): string {
@@ -98,7 +101,7 @@ async function copyCompose() {
                 <h1 class="text-2xl font-bold text-white">{{ site.name }}</h1>
                 <CheckCircle2 v-if="site.verified" class="w-5 h-5 text-green-500" />
                 <RefreshCw v-else class="w-4 h-4 text-gray-600" />
-                <span class="text-sm text-gray-400">{{ site.version }}</span>
+                <span v-if="site.version" class="text-sm text-gray-400">{{ site.version }}</span>
               </div>
 
               <!-- Meta Row -->
@@ -119,11 +122,11 @@ async function copyCompose() {
                   <Globe class="w-4 h-4" />
                   Website
                 </a>
-                <a :href="site.docs" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
+                <a v-if="site.docs" :href="site.docs" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
                   <BookOpen class="w-4 h-4" />
                   Docs
                 </a>
-                <a :href="site.sourceCode" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
+                <a v-if="site.sourceCode" :href="site.sourceCode" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
                   <Code2 class="w-4 h-4" />
                   Source code
                 </a>
@@ -392,7 +395,7 @@ async function copyCompose() {
       <h2 class="text-2xl font-bold text-white mb-2">Site not found</h2>
       <p class="text-gray-400 mb-6">The site you're looking for doesn't exist.</p>
       <button
-        @click="router.push('/sites')"
+        @click="router.push(backRoute)"
         class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
       >
         Browse Sites
