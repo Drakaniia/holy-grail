@@ -67,7 +67,7 @@ async function handleSignOut() {
           <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
             Account
           </p>
-          <h1 class="text-4xl font-bold tracking-normal text-white">Your Holy Grail session</h1>
+          <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">Your Holy Grail session</h1>
           <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-400">
             Your profile image and sign-in source come from Supabase Auth provider metadata.
           </p>
@@ -96,7 +96,7 @@ async function handleSignOut() {
 
       <div class="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
         <section class="border border-zinc-800 bg-[#060606] p-6">
-          <div class="flex items-start gap-4">
+          <div class="flex min-w-0 items-start gap-4">
             <UserAvatar
               :src="auth.avatarUrl"
               :initial="auth.avatarInitial"
@@ -104,7 +104,7 @@ async function handleSignOut() {
               size="lg"
             />
             <div class="min-w-0">
-              <p class="text-xl font-bold text-white">{{ auth.displayName }}</p>
+              <p class="break-words text-xl font-bold text-white">{{ auth.displayName }}</p>
               <p class="mt-1 truncate text-sm text-zinc-500">{{ email }}</p>
               <div class="mt-4 inline-flex items-center gap-2 border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-100">
                 <CheckCircle2 class="h-3.5 w-3.5" />

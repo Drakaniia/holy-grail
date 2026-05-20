@@ -46,19 +46,19 @@ async function removeBookmark(bookmark: UserBookmark) {
 
 <template>
   <div class="min-h-full bg-black text-white">
-    <div class="mx-auto max-w-7xl px-6 py-10">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
       <div class="mb-8 flex flex-col gap-5 border-b border-gray-800 pb-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
             Saved Library
           </p>
-          <h1 class="text-4xl font-bold tracking-normal text-white">Bookmarks</h1>
+          <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">Bookmarks</h1>
           <p class="mt-3 max-w-2xl text-sm leading-6 text-gray-400">
             Keep the sites and skills you want to revisit in one account-backed collection.
           </p>
         </div>
 
-        <div class="border border-gray-800 bg-[#060606] px-5 py-4">
+        <div class="w-full border border-gray-800 bg-[#060606] px-5 py-4 sm:w-auto">
           <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
             Saved
           </p>
@@ -144,7 +144,7 @@ async function removeBookmark(bookmark: UserBookmark) {
             </button>
           </div>
 
-          <div class="mt-5 flex items-center justify-between gap-3 border-t border-gray-800 pt-4">
+          <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-gray-800 pt-4">
             <RouterLink
               :to="item.route"
               class="text-sm font-semibold text-accent-300 transition hover:text-accent-100"

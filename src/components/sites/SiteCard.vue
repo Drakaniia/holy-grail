@@ -39,13 +39,13 @@ function formatNumber(num: number): string {
       :to="`/sites/${site.slug}`"
       class="block p-5 pr-16"
     >
-      <div class="flex items-start gap-4 mb-3">
+      <div class="flex min-w-0 items-start gap-4 mb-3">
         <!-- Icon -->
         <SiteFavicon :website="site.website" :name="site.name" size="md" />
 
         <!-- Name and Category -->
         <div class="flex-1 min-w-0">
-          <div class="flex items-center gap-2 mb-1">
+          <div class="flex min-w-0 items-center gap-2 mb-1">
             <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">
               {{ site.name }}
             </h3>
@@ -64,7 +64,7 @@ function formatNumber(num: number): string {
       </p>
 
       <!-- Stats -->
-      <div class="flex items-center gap-4 text-xs text-gray-500 mb-3">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500 mb-3">
         <div v-if="hasRepoStats && site.stars > 0" class="flex items-center gap-1">
           <Star class="w-3.5 h-3.5" />
           <span>{{ formatNumber(site.stars) }}</span>

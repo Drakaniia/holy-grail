@@ -123,7 +123,7 @@ async function copyCompose() {
 
 <template>
   <div class="bg-black text-white">
-    <div v-if="site" class="max-w-6xl mx-auto px-6 py-6">
+    <div v-if="site" class="max-w-6xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
       <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="button"
@@ -134,7 +134,7 @@ async function copyCompose() {
           Back to list
         </button>
 
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
           <BookmarkButton
             v-if="bookmarkResource"
             :resource="bookmarkResource"
@@ -162,15 +162,15 @@ async function copyCompose() {
 
       <!-- Header Section -->
       <div class="mb-8">
-        <div class="flex items-start justify-between mb-6">
-          <div class="flex items-start gap-4">
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div class="flex min-w-0 items-start gap-4">
             <!-- Icon -->
             <SiteFavicon :website="site.website" :name="site.name" size="lg" />
 
             <!-- Title and Meta -->
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <h1 class="text-2xl font-bold text-white">{{ site.name }}</h1>
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-3 mb-2">
+                <h1 class="min-w-0 break-words text-2xl font-bold text-white">{{ site.name }}</h1>
                 <CheckCircle2 v-if="site.verified" class="w-5 h-5 text-green-500" />
                 <RefreshCw v-else class="w-4 h-4 text-gray-600" />
                 <span v-if="site.version" class="text-sm text-gray-400">{{ site.version }}</span>
@@ -231,11 +231,11 @@ async function copyCompose() {
         <!-- Platform & Deployment -->
         <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
           <h3 class="text-sm font-medium text-gray-400 mb-3">Platform & Deployment</h3>
-          <div class="flex flex-wrap gap-4">
-            <div class="flex items-center gap-2">
+          <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <div class="flex flex-wrap items-center gap-2">
               <Monitor class="w-4 h-4 text-gray-500" />
               <span class="text-sm text-gray-400">Platforms</span>
-              <div class="flex gap-1.5">
+              <div class="flex flex-wrap gap-1.5">
                 <span
                   v-for="platform in site.platforms"
                   :key="platform"
@@ -245,10 +245,10 @@ async function copyCompose() {
                 </span>
               </div>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex flex-wrap items-center gap-2">
               <Package class="w-4 h-4 text-gray-500" />
               <span class="text-sm text-gray-400">Deployment</span>
-              <div class="flex gap-1.5">
+              <div class="flex flex-wrap gap-1.5">
                 <span
                   v-for="deploy in site.deployment"
                   :key="deploy"
@@ -372,13 +372,13 @@ async function copyCompose() {
 
           <!-- Compose File -->
           <div v-if="site.deployCompose" class="bg-[#161b22] border border-gray-800 rounded-lg overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 border-b border-gray-800">
+            <div class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex items-center gap-2">
                 <Code2 class="w-4 h-4 text-gray-500" />
                 <span class="text-sm text-gray-400">compose.yml</span>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="text-xs text-gray-600">Path: /manifests/{{ site.name }}/compose.yml</span>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="break-all text-xs text-gray-600">Path: /manifests/{{ site.name }}/compose.yml</span>
                 <button
                   @click="copyCompose"
                   class="flex items-center gap-1 px-2 py-1 rounded text-xs text-gray-400 hover:text-white transition-colors"

@@ -166,13 +166,13 @@ watch(totalPages, pages => {
 <template>
   <div class="bg-black text-white">
     <div class="border-b border-gray-800">
-      <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-          <div class="flex-1">
+          <div class="min-w-0 flex-1">
             <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-3">
               {{ category }}
             </p>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            <h1 class="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl mb-4">
               {{ pageTitle }}
             </h1>
             <p class="text-gray-400 text-base leading-relaxed max-w-2xl">
@@ -180,8 +180,8 @@ watch(totalPages, pages => {
             </p>
           </div>
 
-          <div class="flex-shrink-0">
-            <div class="border border-gray-800 rounded-xl px-6 py-5 min-w-[200px]" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+          <div class="w-full flex-shrink-0 sm:w-auto">
+            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
               <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
                 COLLECTION
               </p>
@@ -199,10 +199,10 @@ watch(totalPages, pages => {
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 py-6">
+    <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
       <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div class="flex-1 relative">
+          <div class="relative min-w-0 flex-1">
             <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
             <input
               v-model="store.searchQuery"
@@ -213,10 +213,10 @@ watch(totalPages, pages => {
             />
           </div>
 
-          <div class="flex items-center gap-1 border border-gray-700 rounded-lg p-1" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+          <div class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
             <button
               @click="store.setTab('trending')"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
               :class="store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <TrendingUp class="w-3.5 h-3.5" />
@@ -224,7 +224,7 @@ watch(totalPages, pages => {
             </button>
             <button
               @click="store.setTab('newest')"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
               :class="store.activeTab === 'newest' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <Clock class="w-3.5 h-3.5" />
@@ -232,7 +232,7 @@ watch(totalPages, pages => {
             </button>
             <button
               @click="store.setTab('popular')"
-              class="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
               :class="store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <Star class="w-3.5 h-3.5" />

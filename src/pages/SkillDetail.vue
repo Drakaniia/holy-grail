@@ -83,7 +83,7 @@ async function copyInstallCommand() {
 
 <template>
   <div class="bg-black text-white">
-    <div v-if="skill" class="max-w-4xl mx-auto px-6 py-8">
+    <div v-if="skill" class="max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8">
       <!-- Back Button -->
       <button
         @click="router.push(backRoute)"
@@ -96,7 +96,7 @@ async function copyInstallCommand() {
       <!-- Header -->
       <div class="mb-8">
         <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <h1 class="text-3xl md:text-4xl font-bold text-white">
+          <h1 class="min-w-0 break-words text-3xl font-bold text-white md:text-4xl">
             {{ skill.title }}
           </h1>
           <BookmarkButton
@@ -112,7 +112,7 @@ async function copyInstallCommand() {
 
       <!-- Stats Bar -->
       <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
-        <div class="flex flex-wrap items-center gap-6">
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6">
           <div class="flex items-center gap-2 text-sm text-gray-400">
             <Eye class="w-4 h-4" />
             <span>{{ formatNumber(skill.views) }} views</span>
@@ -125,9 +125,9 @@ async function copyInstallCommand() {
             <User class="w-4 h-4" />
             <span>By {{ skill.authorName }}</span>
           </div>
-          <div class="flex items-center gap-2 text-sm text-gray-400">
+          <div class="flex min-w-0 items-center gap-2 text-sm text-gray-400">
             <ExternalLink class="w-4 h-4" />
-            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="hover:text-accent-400 transition-colors">
+            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="break-all transition-colors hover:text-accent-400">
               {{ skill.repoLink }}
             </a>
           </div>
@@ -148,14 +148,14 @@ async function copyInstallCommand() {
 
       <!-- Install Command -->
       <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
-        <div class="flex items-center justify-between">
-          <div>
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="min-w-0">
             <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Install Command</p>
-            <code class="text-sm text-gray-300 font-mono">{{ getInstallCommand() }}</code>
+            <code class="block break-all font-mono text-sm text-gray-300">{{ getInstallCommand() }}</code>
           </div>
           <button
             @click="copyInstallCommand"
-            class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all bg-[#111111] border border-gray-700 text-gray-400 hover:text-white hover:border-gray-600 flex-shrink-0 ml-4"
+            class="flex w-fit flex-shrink-0 items-center gap-1.5 rounded-lg border border-gray-700 bg-[#111111] px-3 py-2 text-sm font-medium text-gray-400 transition-all hover:border-gray-600 hover:text-white"
             :class="copied ? 'text-green-400 border-green-800' : ''"
           >
             <component :is="copied ? Check : Copy" class="w-4 h-4" />
@@ -165,7 +165,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Content Area -->
-      <div class="border border-gray-800 rounded-xl p-6 md:p-8" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div class="min-w-0 overflow-hidden border border-gray-800 rounded-xl p-4 sm:p-6 md:p-8" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
         <!-- Loading State -->
         <div v-if="isLoading" class="flex items-center justify-center py-12">
           <div class="flex items-center gap-2 text-gray-500">
@@ -189,7 +189,7 @@ async function copyInstallCommand() {
         </div>
 
         <!-- Rendered Content -->
-        <div v-else-if="contentHtml" class="skill-content prose prose-invert prose-sm max-w-none" v-html="contentHtml"></div>
+        <div v-else-if="contentHtml" class="skill-content prose prose-invert prose-sm max-w-none overflow-x-auto break-words" v-html="contentHtml"></div>
 
         <!-- No Content Fallback -->
         <div v-else class="text-center py-12">

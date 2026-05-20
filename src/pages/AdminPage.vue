@@ -72,13 +72,13 @@ function statusClass(status: SubmissionStatus) {
 
 <template>
   <div class="min-h-full bg-black text-white">
-    <div class="mx-auto max-w-6xl px-6 py-10">
+    <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <!-- Header -->
       <div class="mb-8 border-b border-gray-800 pb-8">
         <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
           Admin
         </p>
-        <h1 class="text-4xl font-bold tracking-normal text-white">Submissions</h1>
+        <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">Submissions</h1>
         <p class="mt-3 text-sm leading-6 text-gray-400">
           Review, approve, or reject community-submitted tools.
         </p>
@@ -109,12 +109,12 @@ function statusClass(status: SubmissionStatus) {
         </div>
 
         <!-- Tabs -->
-        <div class="mb-6 flex items-center gap-1 border border-gray-700 p-1 w-fit">
+        <div class="mb-6 flex w-full items-center gap-1 overflow-x-auto border border-gray-700 p-1 sm:w-fit">
           <button
             v-for="tab in TABS"
             :key="tab.value"
             type="button"
-            class="px-4 py-1.5 text-xs font-semibold uppercase tracking-widest transition"
+            class="shrink-0 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest transition"
             :class="
               activeTab === tab.value
                 ? 'bg-zinc-800 text-white'
@@ -175,7 +175,7 @@ function statusClass(status: SubmissionStatus) {
                   :href="sub.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="mb-3 inline-flex items-center gap-1 text-xs text-accent-400 hover:text-accent-300"
+                class="mb-3 inline-flex max-w-full items-center gap-1 break-all text-xs text-accent-400 hover:text-accent-300"
                 >
                   {{ sub.url }}
                   <ExternalLink class="h-3 w-3" />
