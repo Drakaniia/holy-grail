@@ -1,151 +1,221 @@
-# Adding a New Site
+# Adding Sites
+
+Sites are stored as `meta.yaml` files under `src/content/sites/`. The generated
+`src/content/sites-index.json` is imported directly by the Pinia sites store, so
+metadata must be complete before committing content changes.
 
 ## Directory Structure
 
-```
+```txt
 src/content/sites/
-├── vercel/
-│   └── meta.yaml          ← Site metadata
-├── v0/
-│   └── meta.yaml
-└── your-new-site/         ← Create this directory
-    └── meta.yaml          ← Add this file
++-- platforms/
+|   +-- vercel/
+|       +-- meta.yaml
++-- ai/
+|   +-- automation/
+|       +-- n8n/
+|           +-- meta.yaml
++-- your-category/
+    +-- your-site/
+        +-- meta.yaml
 ```
 
-## Steps to Add a Site
+## Manual Add Flow
 
-1. **Create a directory** under `src/content/sites/` using the site's slug (lowercase, hyphenated)
-2. **Create `meta.yaml`** inside that directory with the fields below
-3. **Run `bun dev`** — the generation script runs automatically and rebuilds the index
+1. Create a directory using the site slug.
+2. Add `meta.yaml` using the schema below.
+3. Include `coreFeatures`, `additionalFeatures`, and `similarTools` so the detail
+   page is complete.
+4. Run `bun run scripts/generate-sites-index.js`.
+5. Run `bun run type-check`, `bun lint`, and `bun run build` before finishing.
+
+## Bookmark Import Flow
+
+Imported bookmark entries start with lightweight metadata. After importing, run
+the enrichment scripts before regenerating the index:
+
+```bash
+bun run scripts/import-bookmarks.js
+bun run scripts/enrich-site-metadata.js --apply
+bun run scripts/fill-site-detail-sections.js --apply
+bun run scripts/generate-sites-index.js
+```
+
+`enrich-site-metadata.js` looks for public GitHub repos from the site/docs pages
+and fills repo-backed fields such as stars, contributors, commits this year,
+releases, latest release, and source code. It accepts:
+
+```bash
+bun run scripts/enrich-site-metadata.js             # dry run, imported sites only
+bun run scripts/enrich-site-metadata.js --apply     # write changes
+bun run scripts/enrich-site-metadata.js --all       # include older entries
+```
+
+`fill-site-detail-sections.js` fills `coreFeatures`, `additionalFeatures`, and
+`similarTools` for imported entries. It also accepts `--apply` and `--all`.
 
 ## `meta.yaml` Schema
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `slug` | string | Yes | URL-friendly identifier (e.g. `my-tool`) |
-| `name` | string | Yes | Display name |
-| `description` | string | Yes | Short description (shown in card) |
-| `category` | string | Yes | Category label (e.g. `Deployment`, `Backend`) |
-| `stars` | number | Yes | GitHub stars count |
-| `watchers` | number | Yes | GitHub watchers count |
-| `addedDaysAgo` | number | Yes | Months since added (for "Added Xmo ago" label) |
-| `license` | string | Yes | License type (e.g. `MIT`, `Apache-2.0`) |
-| `lastCommit` | string | Yes | Human-readable date (e.g. `2 days ago`) |
-| `lastRelease` | string | Yes | Human-readable date (e.g. `1 week ago`) |
-| `version` | string | Yes | Latest version tag |
-| `contributors` | number | Yes | Number of contributors |
-| `commitsThisYear` | number | Yes | Commit count this year |
-| `releases` | number | Yes | Total release count |
-| `platforms` | string[] | Yes | Array of platforms (e.g. `[Web, API, CLI]`) |
-| `deployment` | string[] | Yes | Deployment methods (e.g. `[Cloud, Self-hosted]`) |
-| `website` | string | Yes | Full URL — **used for favicon fetching** |
-| `docs` | string | Yes | Documentation URL |
-| `sourceCode` | string | Yes | GitHub/GitLab repo URL |
-| `icon` | string | No | Legacy field, not used for display |
-| `verified` | boolean | No | Shows green checkmark badge |
-| `featured` | boolean | No | Pinned to top of list |
-| `atGlance` | string | No | One-line summary (blue highlighted box) |
-| `fullDescription` | string | No | Longer description paragraph |
-| `coreFeatures` | array | No | 2-4 key features (see format below) |
-| `additionalFeatures` | array | No | Extra features (see format below) |
-| `deployCompose` | string | No | Docker compose YAML content (code block) |
-| `similarTools` | array | No | Array of `{slug, name, description, stars, addedDaysAgo, verified, website}` |
+| Field | Type | Required | Notes |
+| --- | --- | --- | --- |
+| `slug` | string | Yes | URL-friendly id. |
+| `name` | string | Yes | Display name. |
+| `description` | string | Yes | Short card description. |
+| `category` | string | Yes | Display category. |
+| `parentCategory` | string | Yes | Top-level route/category, e.g. `ai`, `design`, `platforms`. |
+| `subcategory` | string/null | Yes | Nested route category or `null`. |
+| `stars` | number | Yes | GitHub stars if repo-backed, otherwise `0`. Hidden in UI when no source repo exists. |
+| `watchers` | number | Yes | GitHub watchers/subscribers if repo-backed, otherwise `0`. |
+| `addedDaysAgo` | number | Yes | Months since added. Imported entries use `0`. |
+| `license` | string | Yes | SPDX license when known, otherwise `Unknown` or `Proprietary`. |
+| `lastCommit` | string | Yes | Repo-backed relative date, otherwise `N/A`. |
+| `lastRelease` | string | Yes | Repo-backed relative date, otherwise `N/A` or `No releases`. |
+| `version` | string | Yes | Latest release tag if known, otherwise empty string. |
+| `contributors` | number | Yes | GitHub contributor count if repo-backed, otherwise `0`. Hidden in UI when no source repo exists. |
+| `commitsThisYear` | number | Yes | GitHub commit count for the current year if repo-backed, otherwise `0`. |
+| `releases` | number | Yes | GitHub release count if repo-backed, otherwise `0`. |
+| `platforms` | string[] | Yes | Example: `[Web, API, CLI]`. |
+| `deployment` | string[] | Yes | Example: `[Cloud]`, `[Docker Compose]`, `[Self-hosted]`. |
+| `website` | string | Yes | Primary URL. Used for favicon and screenshot fetching. |
+| `docs` | string | Yes | Documentation URL. Use `website` when no separate docs page exists. |
+| `sourceCode` | string | Yes | Public repo URL when available, otherwise empty string. |
+| `icon` | string | No | Legacy/internal icon key. |
+| `verified` | boolean | No | Shows the verified badge. Repo-backed enriched imports are marked true. |
+| `featured` | boolean | No | Pins entry above normal sort. |
+| `tags` | string[] | No | Search/filter tags. |
+| `atGlance` | string | No | One-line detail page summary. |
+| `fullDescription` | string | No | Longer detail page description. |
+| `coreFeatures` | array | Yes | Rendered in the Core Features section. |
+| `additionalFeatures` | array | Yes | Rendered in the Additional Features section. |
+| `deployCompose` | string | No | Docker Compose YAML. Only add when accurate. |
+| `similarTools` | array | Yes | Rendered in the Similar Tools section. |
 
-### Feature Object Format
+## Feature Objects
 
 ```yaml
 coreFeatures:
-  - name: Feature Name
-    description: Short description
-    icon: icon-name          # legacy, not rendered
+  - name: AI Workflow Support
+    description: Helps automate AI-assisted work from a browser-based interface.
+    icon: check
 additionalFeatures:
-  - name: Extra Feature
-    description: Short description
-    icon: icon-name
+  - name: Cloud Access
+    description: Designed to run through a hosted web experience.
+    icon: check
 ```
 
-### similarTools Object Format
+`icon` is currently a legacy metadata field. The UI renders a standard icon for
+these feature cards.
+
+## Similar Tools
 
 ```yaml
 similarTools:
-  - slug: other-tool
-    name: Other Tool
-    description: Brief description
-    stars: 5000
-    addedDaysAgo: 3
+  - slug: activepieces
+    name: Activepieces
+    description: Open-source automation platform for AI workflows.
+    stars: 22267
+    addedDaysAgo: 0
     verified: true
-    website: https://other-tool.dev
+    website: https://www.activepieces.com/
 ```
+
+Use tools from the same parent category/subcategory when possible.
+
+## Deployment Display
+
+The detail page always shows an Installation & Deployment section when the entry
+has a website, docs, source code, or `deployCompose`.
+
+- With `deployCompose`: renders a Docker Compose block with copy support.
+- Without `deployCompose`: renders cloud/web actions for Website, Docs, and
+  Source Code when those links exist.
+
+Do not add placeholder Compose YAML just to make the section appear.
+
+## Images
+
+No manual image upload is required by default.
+
+- Screenshots use `https://image.thum.io/get/width/800/crop/600/noanimate/{website}`.
+- Favicons use `https://www.google.com/s2/favicons?domain=DOMAIN&sz=64`.
+- Both fall back gracefully when loading fails.
+
+If curated images are added later, prefer optional metadata fields with fallback
+to the automatic screenshot/favicon services.
 
 ## Example
 
 ```yaml
-slug: my-tool
-name: My Tool
-description: A powerful tool for building things
-category: Development
-stars: 8500
-watchers: 320
-addedDaysAgo: 1
-license: MIT
-lastCommit: "3 days ago"
-lastRelease: "2 weeks ago"
-version: "2.1.0"
-contributors: 89
-commitsThisYear: 650
-releases: 18
+slug: n8n
+name: n8n
+description: Workflow automation platform for technical teams
+category: AI Automation
+parentCategory: ai
+subcategory: automation
+stars: 188794
+watchers: 1093
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 10 minutes ago
+lastRelease: 20 hours ago
+version: n8n@2.21.4
+contributors: 641
+commitsThisYear: 2816
+releases: 630
 platforms:
   - Web
-  - CLI
 deployment:
   - Cloud
-  - Self-hosted
-website: https://mytool.dev
-docs: https://mytool.dev/docs
-sourceCode: https://github.com/example/my-tool
+website: https://n8n.io/
+docs: https://n8n.io/
+sourceCode: https://github.com/n8n-io/n8n
+icon: n8n
 verified: true
 featured: false
-atGlance: Build faster with AI-powered workflows
-fullDescription: My Tool is a modern development platform that streamlines your workflow with intelligent automation and real-time collaboration features.
+tags:
+  - bookmark
+  - ai
+  - automation
+atGlance: Workflow automation platform for technical teams
+fullDescription: n8n is tracked as an AI automation resource.
 coreFeatures:
-  - name: AI Assistant
-    description: Built-in AI helps you write code faster
-    icon: sparkles
-  - name: Real-time Sync
-    description: Collaborate with your team in real time
-    icon: users
+  - name: AI Workflow Support
+    description: n8n is tracked as an AI automation resource for AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
 additionalFeatures:
-  - name: Dark Mode
-    description: Easy on the eyes
-    icon: moon
-deployCompose: |
-  services:
-    my-tool:
-      image: mytool:latest
-      ports:
-        - "3000:3000"
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+similarTools:
+  - slug: activepieces
+    name: Activepieces
+    description: AI-first automation platform.
+    stars: 22267
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.activepieces.com/
 ```
-
-## Screenshot Preview
-
-Site detail pages automatically fetch and display screenshots using `https://image.thum.io/get/width/800/crop/600/noanimate/{website}`. **Clicking the screenshot opens the live site in a new tab.** No manual screenshot upload needed. Falls back to a placeholder message if the image fails to load.
-
-## Favicon
-
-Favicons are fetched automatically from `https://www.google.com/s2/favicons?domain=DOMAIN&sz=64` using the `website` URL. No manual image upload needed. Falls back to first-letter placeholder if fetch fails.
 
 ## Sorting
 
 Sites are sorted by:
-1. `featured: true` items first
-2. Then by `stars` descending
+
+1. `featured: true`
+2. `stars` descending
 
 ## Regeneration
 
-The index is auto-regenerated on every `bun dev` or `bun run build`. To regenerate manually:
+`bun dev` and `bun run build` regenerate the index automatically. To regenerate
+manually:
 
 ```bash
 bun run scripts/generate-sites-index.js
 ```
 
-Output: `src/content/sites-index.json` (imported by Pinia store)
+Output: `src/content/sites-index.json`.
