@@ -2,6 +2,7 @@
 import { computed, ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ArrowLeft, Eye, Code2, User, Tag, ExternalLink, Sparkles, Copy, Check, AlertCircle } from 'lucide-vue-next'
+import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
 import { useSkillsStore } from '@/stores/skills'
 
 const route = useRoute()
@@ -10,6 +11,19 @@ const store = useSkillsStore()
 
 const slug = computed(() => route.params.slug as string)
 const skill = computed(() => store.getSkillBySlug(slug.value))
+const bookmarkResource = computed(() => {
+  if (!skill.value) {
+    return null
+  }
+
+  return {
+    type: 'skill' as const,
+    slug: skill.value.slug,
+    title: skill.value.title,
+    url: `https://github.com/${skill.value.repoLink}`,
+    category: skill.value.category,
+  }
+})
 const isLoading = computed(() => store.isContentLoading(slug.value))
 const error = computed(() => store.getContentError(slug.value))
 
@@ -81,9 +95,16 @@ async function copyInstallCommand() {
 
       <!-- Header -->
       <div class="mb-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
-          {{ skill.title }}
-        </h1>
+        <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <h1 class="text-3xl md:text-4xl font-bold text-white">
+            {{ skill.title }}
+          </h1>
+          <BookmarkButton
+            v-if="bookmarkResource"
+            :resource="bookmarkResource"
+            variant="detail"
+          />
+        </div>
         <p class="text-gray-400 text-base leading-relaxed">
           {{ skill.description }}
         </p>

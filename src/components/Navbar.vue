@@ -1,29 +1,19 @@
 <script setup lang="ts">
-import { computed, onMounted, shallowRef } from 'vue'
-import { useRouter } from 'vue-router'
-import { Github, LogOut, Moon, Search, Star, UserRound, Zap } from 'lucide-vue-next'
+import { onMounted, shallowRef } from 'vue'
+import { Github, Moon, Search, Star, UserRound, Zap } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
+import UserMenu from '@/components/auth/UserMenu.vue'
 
-const router = useRouter()
 const auth = useAuthStore()
 const searchQuery = shallowRef('')
 const starCount = shallowRef(0)
 
 const isMac = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 const shortcutKey = isMac ? 'Cmd' : 'Ctrl'
-const userLabel = computed(() => auth.displayName || auth.user?.email || 'Account')
 
 onMounted(() => {
   void auth.initialize()
 })
-
-async function handleSignOut() {
-  const result = await auth.signOut()
-
-  if (result.ok && router.currentRoute.value.meta.requiresAuth) {
-    await router.push({ name: 'login' })
-  }
-}
 </script>
 
 <template>
@@ -88,29 +78,7 @@ async function handleSignOut() {
         <Moon class="h-6 w-6" />
       </button>
 
-      <div v-if="auth.isAuthenticated" class="flex items-center gap-2">
-        <RouterLink
-          to="/account"
-          class="flex min-w-0 items-center gap-2 rounded-lg border border-gray-700 px-2.5 py-1.5 text-sm font-medium transition-colors hover:bg-gray-800"
-        >
-          <span
-            class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-accent-500/20 text-xs font-bold text-accent-200"
-          >
-            {{ auth.avatarInitial }}
-          </span>
-          <span class="hidden max-w-[120px] truncate lg:inline">{{ userLabel }}</span>
-        </RouterLink>
-
-        <button
-          type="button"
-          class="rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-800 hover:text-white disabled:opacity-50"
-          :disabled="auth.loading"
-          aria-label="Sign out"
-          @click="handleSignOut"
-        >
-          <LogOut class="h-4 w-4" />
-        </button>
-      </div>
+      <UserMenu v-if="auth.isAuthenticated" />
 
       <RouterLink
         v-else

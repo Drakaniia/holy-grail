@@ -24,6 +24,7 @@ import {
   X,
 } from 'lucide-vue-next'
 import { useSitesStore } from '@/stores/sites'
+import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
 import SiteFavicon from '@/components/sites/SiteFavicon.vue'
 import SitePreview from '@/components/sites/SitePreview.vue'
 
@@ -33,6 +34,19 @@ const store = useSitesStore()
 
 const slug = computed(() => route.params.slug as string)
 const site = computed(() => store.getSiteBySlug(slug.value))
+const bookmarkResource = computed(() => {
+  if (!site.value) {
+    return null
+  }
+
+  return {
+    type: 'site' as const,
+    slug: site.value.slug,
+    title: site.value.name,
+    url: site.value.website,
+    category: site.value.category,
+  }
+})
 const hasSourceCode = computed(() => Boolean(site.value?.sourceCode))
 const hasReleaseInfo = computed(() => hasSourceCode.value && site.value?.lastRelease !== 'N/A')
 const hasCommitInfo = computed(() => hasSourceCode.value && site.value?.lastCommit !== 'N/A')
@@ -121,6 +135,11 @@ async function copyCompose() {
         </button>
 
         <div class="flex items-center gap-2">
+          <BookmarkButton
+            v-if="bookmarkResource"
+            :resource="bookmarkResource"
+            variant="detail"
+          />
           <a
             :href="site.website"
             target="_blank"
