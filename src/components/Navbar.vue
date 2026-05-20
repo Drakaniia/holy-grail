@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const searchQuery = ref('')
 const starCount = ref(0)
@@ -8,15 +8,6 @@ const starCount = ref(0)
 const isMac = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 const shortcutKey = isMac ? '⌘' : 'Ctrl'
 
-onMounted(async () => {
-  try {
-    const res = await fetch('https://api.github.com/repos/Drakaniia/holy-grail')
-    const data = await res.json()
-    starCount.value = data.stargazers_count ?? 0
-  } catch {
-    starCount.value = 0
-  }
-})
 </script>
 
 <template>
