@@ -4,22 +4,25 @@ description: Supabase | The Postgres Development Platform. bookmarked for hostin
 category: Hosting
 parentCategory: platforms
 subcategory: null
-stars: 0
-watchers: 0
+stars: 102722
+watchers: 677
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ""
+license: Apache-2.0
+lastCommit: 4 minutes ago
+lastRelease: 12 days ago
+version: v1.26.05
+contributors: 1939
+commitsThisYear: 2336
+releases: 28
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://supabase.com/
 docs: https://supabase.com/
-sourceCode: ""
+sourceCode: https://github.com/supabase/supabase
 icon: supabase
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -29,3 +32,44 @@ atGlance: Supabase | The Postgres Development Platform.
 fullDescription: >-
   Supabase | The Postgres Development Platform. was imported from the browser bookmark folder
   "Bookmarks bar > CODE > Hosting Service".
+coreFeatures:
+  - name: Platform Service
+    description: >-
+      Supabase - The Postgres Development Platform. is tracked as a platform resource for deployment
+      or infrastructure work.
+    icon: check
+  - name: Hosted Access
+    description: The primary service is available through the website link.
+    icon: check
+additionalFeatures:
+  - name: Documentation Path
+    description: Docs are linked when available for setup details.
+    icon: check
+  - name: Deployment Context
+    description: Deployment type is recorded in the metadata.
+    icon: check
+  - name: Repository Link
+    description: Source code is included when the platform is open source.
+    icon: check
+similarTools:
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/
+  - slug: vercel
+    name: vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com

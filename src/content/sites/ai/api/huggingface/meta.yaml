@@ -7,10 +7,13 @@ subcategory: api
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,44 @@ atGlance: Hugging Face - The AI community building the future.
 fullDescription: >-
   Hugging Face - The AI community building the future. was imported from the browser bookmark folder
   "Bookmarks bar > AI > API".
+coreFeatures:
+  - name: AI Workflow Support
+    description: >-
+      Hugging Face - The AI community building the future. is tracked as a ai api resource for
+      AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: sub-agents
+    name: Sub-Agents Directory - Claude Code Sub-Agents & MCP Servers
+    description: Sub-Agents Directory - Claude Code Sub-Agents & MCP Servers bookmarked for ai api resources.
+    stars: 123
+    addedDaysAgo: 0
+    verified: true
+    website: https://sub-agents.directory/
+  - slug: groq
+    name: Home - GroqCloud
+    description: Home - GroqCloud bookmarked for ai api resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://console.groq.com/home
+  - slug: build
+    name: Try NVIDIA NIM APIs
+    description: Try NVIDIA NIM APIs bookmarked for ai api resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://build.nvidia.com/

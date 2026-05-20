@@ -4,22 +4,25 @@ description: Using Model Context Protocol (MCP) with Expo - Expo Documentation b
 category: MCP
 parentCategory: cli-tools
 subcategory: null
-stars: 0
-watchers: 0
+stars: 49543
+watchers: 371
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: MIT
+lastCommit: just now
+lastRelease: No releases
 version: ""
+contributors: 1983
+commitsThisYear: 2811
+releases: 0
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://docs.expo.dev/eas/ai/mcp/
 docs: https://docs.expo.dev/eas/ai/mcp/
-sourceCode: ""
+sourceCode: https://github.com/expo/expo
 icon: expo
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -29,3 +32,44 @@ atGlance: Using Model Context Protocol (MCP) with Expo - Expo Documentation
 fullDescription: >-
   Using Model Context Protocol (MCP) with Expo - Expo Documentation was imported from the browser
   bookmark folder "Bookmarks bar > CODE > MCP".
+coreFeatures:
+  - name: Developer Tooling
+    description: >-
+      Using Model Context Protocol (MCP) with Expo - Expo Documentation is tracked as a command-line
+      or developer workflow resource.
+    icon: check
+  - name: Reference Access
+    description: Website and docs links are preserved for setup and usage details.
+    icon: check
+additionalFeatures:
+  - name: Source Visibility
+    description: Public repository stats are shown when a repo is available.
+    icon: check
+  - name: Workflow Utility
+    description: Useful for development, automation, or evaluation tasks.
+    icon: check
+  - name: Catalog Grouping
+    description: Grouped with other CLI and developer tools.
+    icon: check
+similarTools:
+  - slug: openhands
+    name: CLI - OpenHands Docs
+    description: CLI - OpenHands Docs bookmarked for ai cli resources.
+    stars: 74203
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode
+  - slug: codebuff
+    name: Codebuff - AI Coding Assistant for Your Terminal
+    description: Codebuff - AI Coding Assistant for Your Terminal bookmarked for ai cli resources.
+    stars: 5511
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.codebuff.com/
+  - slug: tbench
+    name: Terminal-Bench
+    description: Terminal-Bench bookmarked for ai cli resources.
+    stars: 2224
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.tbench.ai/leaderboard/terminal-bench/2.0

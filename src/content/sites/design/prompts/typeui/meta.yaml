@@ -4,22 +4,25 @@ description: UI Design Prompts | TypeUI bookmarked for prompts resources.
 category: Prompts
 parentCategory: design
 subcategory: prompts
-stars: 0
-watchers: 0
+stars: 921
+watchers: 8
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ""
+license: Unknown
+lastCommit: 18 hours ago
+lastRelease: 2 days ago
+version: v0.7.1
+contributors: 1
+commitsThisYear: 71
+releases: 3
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://www.typeui.sh/prompts?ref=dailydev
 docs: https://www.typeui.sh/prompts?ref=dailydev
-sourceCode: ""
+sourceCode: https://github.com/bergside/typeui
 icon: typeui
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -29,3 +32,42 @@ atGlance: UI Design Prompts | TypeUI
 fullDescription: >-
   UI Design Prompts | TypeUI was imported from the browser bookmark folder "Bookmarks bar > Design >
   Promts".
+coreFeatures:
+  - name: Design Resource
+    description: UI Design Prompts - TypeUI is cataloged as a prompts resource for design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: neuform
+    name: AI HTML Landing Page Builder and Remix Templates | Neuform
+    description: AI HTML Landing Page Builder and Remix Templates | Neuform bookmarked for prompts resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://neuform.ai/
+  - slug: designprompts
+    name: Design Prompts - AI-Powered Design Style Explorer
+    description: Design Prompts - AI-Powered Design Style Explorer bookmarked for prompts resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.designprompts.dev/
+  - slug: motionsites
+    name: MotionSites - Premium Hero Prompts
+    description: MotionSites - Premium Hero Prompts bookmarked for prompts resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://motionsites.ai/

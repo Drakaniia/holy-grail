@@ -7,19 +7,22 @@ subcategory: icons-svg
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Apache-2.0
+lastCommit: 3 months ago
+lastRelease: No releases
 version: ""
+contributors: 1
+commitsThisYear: 7
+releases: 0
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://mgc.mingcute.com/?aff=Z2vd4
 docs: https://mgc.mingcute.com/?aff=Z2vd4
-sourceCode: ""
+sourceCode: https://github.com/mingcute-design/mingcute-docs
 icon: mgc
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -31,3 +34,48 @@ atGlance: MGC Icon System Pro - Carefully crafted icon solution for you
 fullDescription: >-
   MGC Icon System Pro - Carefully crafted icon solution for you was imported from the browser
   bookmark folder "Bookmarks bar > Design > ICONS/SVG".
+coreFeatures:
+  - name: Design Resource
+    description: >-
+      MGC Icon System Pro - Carefully crafted icon solution for you is cataloged as a icons/svg
+      resource for design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Heroicons bookmarked for icons/svg resources.
+    stars: 23538
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/solid
+  - slug: thesvg
+    name: theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers
+    description: >-
+      theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers bookmarked for icons/svg
+      resources.
+    stars: 2043
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/
+  - slug: allsvgicons
+    name: Best Free SVG Icon Packs for Product UI - 10 Reliable Picks for 2026 | All SVG Icons
+    description: >-
+      Best Free SVG Icon Packs for Product UI - 10 Reliable Picks for 2026 | All SVG Icons
+      bookmarked for icons/svg resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/

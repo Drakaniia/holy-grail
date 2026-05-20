@@ -9,10 +9,13 @@ subcategory: detector
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -31,3 +34,44 @@ atGlance: AI Detector & AI Checker for ChatGPT & More - Undetectable AI
 fullDescription: >-
   AI Detector & AI Checker for ChatGPT & More - Undetectable AI was imported from the browser
   bookmark folder "Bookmarks bar > AI > Detector".
+coreFeatures:
+  - name: AI Workflow Support
+    description: >-
+      AI Detector & AI Checker for ChatGPT & More - Undetectable AI is tracked as a ai detector
+      resource for AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: grammarly
+    name: Free AI Detector | GPT-4, GPT-3, & ChatGPT AI Checker
+    description: Free AI Detector | GPT-4, GPT-3, & ChatGPT AI Checker bookmarked for ai detector resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.grammarly.com/ai-detector
+  - slug: gptzero
+    name: GPTZero Dashboard
+    description: GPTZero Dashboard bookmarked for ai detector resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://app.gptzero.me/
+  - slug: humanize
+    name: Humanize AI | UNLIMITED Free Words | Humanize.io
+    description: Humanize AI | UNLIMITED Free Words | Humanize.io bookmarked for ai detector resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://humanize.io/

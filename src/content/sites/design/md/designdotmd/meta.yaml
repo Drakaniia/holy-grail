@@ -9,10 +9,13 @@ subcategory: md
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -31,3 +34,44 @@ atGlance: designdotmd.directory - the directory of DESIGN.md files for coding ag
 fullDescription: >-
   designdotmd.directory - the directory of DESIGN.md files for coding agents was imported from the
   browser bookmark folder "Bookmarks bar > Design > MD".
+coreFeatures:
+  - name: Design Resource
+    description: >-
+      designdotmd.directory - the directory of DESIGN.md files for coding agents is cataloged as a
+      design md resource for design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: aura-design-md-systems-for-ai-web-design-aura
+    name: DESIGN.md Systems for AI Web Design | Aura
+    description: DESIGN.md Systems for AI Web Design | Aura bookmarked for design md resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.aura.build/design-systems
+  - slug: designmd
+    name: DesignMD - Generate DESIGN.md Files with AI
+    description: DesignMD - Generate DESIGN.md Files with AI bookmarked for design md resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://designmd.me/
+  - slug: getdesign
+    name: getdesign.md - DESIGN.md Collection for AI Agents
+    description: getdesign.md - DESIGN.md Collection for AI Agents bookmarked for design md resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://getdesign.md/

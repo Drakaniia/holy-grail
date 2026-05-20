@@ -7,10 +7,13 @@ subcategory: inspiration
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,44 @@ atGlance: Godly - Astronomically good web design inspiration
 fullDescription: >-
   Godly - Astronomically good web design inspiration was imported from the browser bookmark folder
   "Bookmarks bar > Design > Insipiration".
+coreFeatures:
+  - name: Design Resource
+    description: >-
+      Godly - Astronomically good web design inspiration is cataloged as a inspiration resource for
+      design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: maxibestof
+    name: Best website design & fonts inspiration feed
+    description: Best website design & fonts inspiration feed bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://maxibestof.one/
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
+  - slug: craftwork
+    name: Curated Inspiration
+    description: Curated Inspiration bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://craftwork.design/curated/websites/

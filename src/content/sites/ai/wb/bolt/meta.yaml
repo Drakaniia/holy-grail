@@ -4,22 +4,25 @@ description: "Bolt AI builder: Websites, apps & prototypes bookmarked for websit
 category: Website Builder
 parentCategory: ai
 subcategory: wb
-stars: 0
-watchers: 0
+stars: 16379
+watchers: 164
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: MIT
+lastCommit: 1 year ago
+lastRelease: No releases
 version: ""
+contributors: 18
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://bolt.new/
 docs: https://bolt.new/
-sourceCode: ""
+sourceCode: https://github.com/stackblitz/bolt.new
 icon: bolt
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -31,3 +34,46 @@ atGlance: "Bolt AI builder: Websites, apps & prototypes"
 fullDescription: >-
   Bolt AI builder: Websites, apps & prototypes was imported from the browser bookmark folder
   "Bookmarks bar > AI > WB".
+coreFeatures:
+  - name: AI Workflow Support
+    description: >-
+      Bolt AI builder: Websites, apps & prototypes is tracked as a website builder resource for
+      AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: v0
+    name: v0
+    description: Generative UI system by Vercel that creates React components from text prompts
+    stars: 15200
+    addedDaysAgo: 1
+    verified: true
+    website: https://v0.dev
+  - slug: lovable
+    name: Lovable
+    description: AI-powered full-stack web app builder that turns ideas into production-ready applications
+    stars: 8900
+    addedDaysAgo: 3
+    verified: true
+    website: https://lovable.dev
+  - slug: youware
+    name: AI Vibe Coding Platform for Apps and Websites | YouWare
+    description: >-
+      AI Vibe Coding Platform for Apps and Websites | YouWare bookmarked for website builder
+      resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.youware.com/

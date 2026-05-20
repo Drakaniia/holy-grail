@@ -7,10 +7,13 @@ subcategory: null
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,42 @@ atGlance: Neon Console
 fullDescription: >-
   Neon Console was imported from the browser bookmark folder "Bookmarks bar > CODE > Hosting
   Service".
+coreFeatures:
+  - name: Platform Service
+    description: Neon Console is tracked as a platform resource for deployment or infrastructure work.
+    icon: check
+  - name: Hosted Access
+    description: The primary service is available through the website link.
+    icon: check
+additionalFeatures:
+  - name: Documentation Path
+    description: Docs are linked when available for setup details.
+    icon: check
+  - name: Deployment Context
+    description: Deployment type is recorded in the metadata.
+    icon: check
+  - name: Repository Link
+    description: Source code is included when the platform is open source.
+    icon: check
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase | The Postgres Development Platform. bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/

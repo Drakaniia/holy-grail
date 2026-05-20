@@ -4,22 +4,25 @@ description: Coolify bookmarked for hosting resources.
 category: Hosting
 parentCategory: platforms
 subcategory: null
-stars: 0
-watchers: 0
+stars: 55610
+watchers: 172
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ""
+license: Apache-2.0
+lastCommit: 13 hours ago
+lastRelease: 1 day ago
+version: v4.1.0
+contributors: 658
+commitsThisYear: 1248
+releases: 678
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://coolify.io/
 docs: https://coolify.io/
-sourceCode: ""
+sourceCode: https://github.com/coollabsio/coolify
 icon: coolify
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -27,3 +30,42 @@ tags:
   - hosting
 atGlance: Coolify
 fullDescription: Coolify was imported from the browser bookmark folder "Bookmarks bar > CODE > Hosting Service".
+coreFeatures:
+  - name: Platform Service
+    description: Coolify is tracked as a platform resource for deployment or infrastructure work.
+    icon: check
+  - name: Hosted Access
+    description: The primary service is available through the website link.
+    icon: check
+additionalFeatures:
+  - name: Documentation Path
+    description: Docs are linked when available for setup details.
+    icon: check
+  - name: Deployment Context
+    description: Deployment type is recorded in the metadata.
+    icon: check
+  - name: Repository Link
+    description: Source code is included when the platform is open source.
+    icon: check
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase | The Postgres Development Platform. bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
+  - slug: vercel
+    name: vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com

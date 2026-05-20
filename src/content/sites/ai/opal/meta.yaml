@@ -7,10 +7,13 @@ subcategory: null
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -26,3 +29,45 @@ tags:
   - ai
 atGlance: Opal [Experiment]
 fullDescription: Opal [Experiment] was imported from the browser bookmark folder "Bookmarks bar > AI".
+coreFeatures:
+  - name: AI Workflow Support
+    description: Opal [Experiment] is tracked as a ai resource for AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: napkin
+    name: "- Napkin AI"
+    description: "- Napkin AI bookmarked for ai resources."
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: >-
+      https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDE0N2EyMzBlLTNjOGYtNDgzZS1iMzYwLTMzMDExNzExODJiOQ?tid=onboarding_gen_ai_1&ts=Prompt
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: >-
+      AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+      bookmarked for ai resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/
+  - slug: cerebras
+    name: Cerebras Cloud
+    description: Cerebras Cloud bookmarked for ai resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://cloud.cerebras.ai/platform/org_drjncnkmm8y5kw2858w3jf26/get-started

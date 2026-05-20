@@ -4,22 +4,25 @@ description: Animated React Components & UI Kits - Lightswind UI bookmarked for 
 category: UI Library
 parentCategory: ui-libraries
 subcategory: null
-stars: 0
-watchers: 0
+stars: 598
+watchers: 6
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ""
+license: Unknown
+lastCommit: 10 days ago
+lastRelease: 10 days ago
+version: lightswindui/v3.1.28
+contributors: 3
+commitsThisYear: 5
+releases: 3
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://lightswind.com/
 docs: https://lightswind.com/
-sourceCode: ""
+sourceCode: https://github.com/codewithMUHILAN/Lightswind-UI-Library
 icon: lightswind
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -30,3 +33,46 @@ atGlance: Animated React Components & UI Kits - Lightswind UI
 fullDescription: >-
   Animated React Components & UI Kits - Lightswind UI was imported from the browser bookmark folder
   "Bookmarks bar > CMPNTS".
+coreFeatures:
+  - name: Component Resource
+    description: >-
+      Animated React Components & UI Kits - Lightswind UI is tracked as a UI component or library
+      resource.
+    icon: check
+  - name: Implementation Reference
+    description: Use the website or source link to inspect usage patterns.
+    icon: check
+additionalFeatures:
+  - name: Design System Fit
+    description: Useful for comparing component styles and interaction patterns.
+    icon: check
+  - name: Developer Friendly
+    description: Source code is linked when a public repository is available.
+    icon: check
+  - name: Catalog Tags
+    description: Grouped with similar UI libraries for discovery.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Framer | Motion for React (prev Framer Motion)
+    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/docs/framer
+  - slug: heroui
+    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
+    description: >-
+      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
+      library resources.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/

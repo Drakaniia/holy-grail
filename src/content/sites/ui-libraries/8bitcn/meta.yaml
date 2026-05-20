@@ -4,22 +4,25 @@ description: Components - 8bitcn/ui bookmarked for ui library resources.
 category: UI Library
 parentCategory: ui-libraries
 subcategory: null
-stars: 0
-watchers: 0
+stars: 1859
+watchers: 5
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: MIT
+lastCommit: 9 days ago
+lastRelease: No releases
 version: ""
+contributors: 37
+commitsThisYear: 53
+releases: 0
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://www.8bitcn.com/docs/components
 docs: https://www.8bitcn.com/docs/components
-sourceCode: ""
+sourceCode: https://github.com/TheOrcDev/8bitcn-ui
 icon: 8bitcn
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -28,3 +31,44 @@ tags:
   - library
 atGlance: Components - 8bitcn/ui
 fullDescription: Components - 8bitcn/ui was imported from the browser bookmark folder "Bookmarks bar > CMPNTS".
+coreFeatures:
+  - name: Component Resource
+    description: Components - 8bitcn/ui is tracked as a UI component or library resource.
+    icon: check
+  - name: Implementation Reference
+    description: Use the website or source link to inspect usage patterns.
+    icon: check
+additionalFeatures:
+  - name: Design System Fit
+    description: Useful for comparing component styles and interaction patterns.
+    icon: check
+  - name: Developer Friendly
+    description: Source code is linked when a public repository is available.
+    icon: check
+  - name: Catalog Tags
+    description: Grouped with similar UI libraries for discovery.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Framer | Motion for React (prev Framer Motion)
+    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/docs/framer
+  - slug: heroui
+    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
+    description: >-
+      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
+      library resources.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/

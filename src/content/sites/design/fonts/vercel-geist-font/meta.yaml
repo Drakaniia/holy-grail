@@ -4,22 +4,25 @@ description: Geist Font bookmarked for fonts resources.
 category: Fonts
 parentCategory: design
 subcategory: fonts
-stars: 0
-watchers: 0
+stars: 3428
+watchers: 17
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ""
+license: OFL-1.1
+lastCommit: 1 month ago
+lastRelease: 2 months ago
+version: 1.8.0
+contributors: 24
+commitsThisYear: 74
+releases: 16
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://vercel.com/font
 docs: https://vercel.com/font
-sourceCode: ""
+sourceCode: https://github.com/vercel/geist-font
 icon: vercel
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -27,3 +30,42 @@ tags:
   - fonts
 atGlance: Geist Font
 fullDescription: Geist Font was imported from the browser bookmark folder "Bookmarks bar > Design > Fonts".
+coreFeatures:
+  - name: Design Resource
+    description: Geist Font is cataloged as a fonts resource for design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: n8n
+    name: AI Workflow Automation Platform & Tools - n8n
+    description: AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.
+    stars: 188794
+    addedDaysAgo: 0
+    verified: true
+    website: https://n8n.io/
+  - slug: ui-figma-shadcn-ui
+    name: Figma - shadcn/ui
+    description: Figma - shadcn/ui bookmarked for design tools resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/docs/figma
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/

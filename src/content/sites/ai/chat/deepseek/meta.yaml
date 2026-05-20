@@ -7,10 +7,13 @@ subcategory: chat
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,42 @@ atGlance: DeepSeek - Into the Unknown
 fullDescription: >-
   DeepSeek - Into the Unknown was imported from the browser bookmark folder "Bookmarks bar > AI >
   CHAT".
+coreFeatures:
+  - name: Conversational Workspace
+    description: DeepSeek - Into the Unknown provides a browser-based chat interface for AI-assisted work.
+    icon: check
+  - name: Fast Web Access
+    description: Open the live service directly from the catalog without local setup.
+    icon: check
+additionalFeatures:
+  - name: Cloud Hosted
+    description: Runs as an online service from the provider.
+    icon: check
+  - name: Reference Link
+    description: Website and documentation links are kept with the entry.
+    icon: check
+  - name: Category Grouping
+    description: Grouped with other AI chat tools for quick comparison.
+    icon: check
+similarTools:
+  - slug: aidesigner
+    name: AI Designer | The Most Advanced UX/UI Designer Powered by AI
+    description: AI Designer | The Most Advanced UX/UI Designer Powered by AI bookmarked for ai chat resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.aidesigner.ai/
+  - slug: openai
+    name: ChatGPT
+    description: ChatGPT bookmarked for ai chat resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://chat.openai.com/
+  - slug: chatgpt
+    name: ChatGPT - Math Solver
+    description: ChatGPT - Math Solver bookmarked for ai chat resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://chatgpt.com/g/g-9YeZz6m6k-math-solver

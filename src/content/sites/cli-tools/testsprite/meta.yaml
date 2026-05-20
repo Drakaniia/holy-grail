@@ -7,10 +7,13 @@ subcategory: null
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,44 @@ atGlance: Overview | Dashboard | TestSprite
 fullDescription: >-
   Overview | Dashboard | TestSprite was imported from the browser bookmark folder "Bookmarks bar >
   CODE > MCP".
+coreFeatures:
+  - name: Developer Tooling
+    description: Overview - Dashboard - TestSprite is tracked as a command-line or developer workflow resource.
+    icon: check
+  - name: Reference Access
+    description: Website and docs links are preserved for setup and usage details.
+    icon: check
+additionalFeatures:
+  - name: Source Visibility
+    description: Public repository stats are shown when a repo is available.
+    icon: check
+  - name: Workflow Utility
+    description: Useful for development, automation, or evaluation tasks.
+    icon: check
+  - name: Catalog Grouping
+    description: Grouped with other CLI and developer tools.
+    icon: check
+similarTools:
+  - slug: openhands
+    name: CLI - OpenHands Docs
+    description: CLI - OpenHands Docs bookmarked for ai cli resources.
+    stars: 74203
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode
+  - slug: expo
+    name: Using Model Context Protocol (MCP) with Expo - Expo Documentation
+    description: >-
+      Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp
+      resources.
+    stars: 49543
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.expo.dev/eas/ai/mcp/
+  - slug: codebuff
+    name: Codebuff - AI Coding Assistant for Your Terminal
+    description: Codebuff - AI Coding Assistant for Your Terminal bookmarked for ai cli resources.
+    stars: 5511
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.codebuff.com/

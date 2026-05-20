@@ -9,10 +9,13 @@ subcategory: others
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -32,3 +35,39 @@ atGlance: WonsultingAI - ResumAI - The First Free AI Resume Builder & AI Resume 
 fullDescription: >-
   WonsultingAI - ResumAI - The First Free AI Resume Builder & AI Resume Writer was imported from the
   browser bookmark folder "Bookmarks bar > AI > Others".
+coreFeatures:
+  - name: AI Workflow Support
+    description: >-
+      WonsultingAI - ResumAI - The First Free AI Resume Builder & AI Resume Writer is tracked as a
+      ai tools resource for AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: gambo
+    name: Gambo - The World's First Game Vibe Coding Agent
+    description: Gambo - The World's First Game Vibe Coding Agent bookmarked for ai tools resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.gambo.ai/
+  - slug: locofy
+    name: Locofy.ai - Design to Code with AI - frontend development in a flash
+    description: >-
+      Locofy.ai - Design to Code with AI - frontend development in a flash bookmarked for ai tools
+      resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.locofy.ai/

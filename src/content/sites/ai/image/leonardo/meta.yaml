@@ -7,10 +7,13 @@ subcategory: image
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,46 @@ atGlance: AI Image Generator - Create Art, Images & Video | Leonardo AI
 fullDescription: >-
   AI Image Generator - Create Art, Images & Video | Leonardo AI was imported from the browser
   bookmark folder "Bookmarks bar > AI > Image".
+coreFeatures:
+  - name: AI Workflow Support
+    description: >-
+      AI Image Generator - Create Art, Images & Video - Leonardo AI is tracked as a ai image
+      resource for AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: logodiffusion
+    name: AI Logo Maker | Logo Maker | Logo Diffusion
+    description: AI Logo Maker | Logo Maker | Logo Diffusion bookmarked for ai image resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://logodiffusion.com/
+  - slug: aistudio
+    name: Google AI Studio
+    description: Google AI Studio bookmarked for ai image resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://aistudio.google.com/welcome
+  - slug: higgsfield
+    name: Higgsfield Soul - Ultra-Realistic Fashion AI Image Generator
+    description: >-
+      Higgsfield Soul - Ultra-Realistic Fashion AI Image Generator bookmarked for ai image
+      resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://higgsfield.ai/image/soul

@@ -4,22 +4,25 @@ description: AI Workflow Automation Platform & Tools - n8n bookmarked for ai aut
 category: AI Automation
 parentCategory: ai
 subcategory: automation
-stars: 0
-watchers: 0
+stars: 188794
+watchers: 1093
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ""
+license: Unknown
+lastCommit: 10 minutes ago
+lastRelease: 20 hours ago
+version: n8n@2.21.4
+contributors: 641
+commitsThisYear: 2816
+releases: 630
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://n8n.io/
 docs: https://n8n.io/
-sourceCode: ""
+sourceCode: https://github.com/n8n-io/n8n
 icon: n8n
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
@@ -29,3 +32,44 @@ atGlance: AI Workflow Automation Platform & Tools - n8n
 fullDescription: >-
   AI Workflow Automation Platform & Tools - n8n was imported from the browser bookmark folder
   "Bookmarks bar > AI > Automation".
+coreFeatures:
+  - name: AI Workflow Support
+    description: >-
+      AI Workflow Automation Platform & Tools - n8n is tracked as a ai automation resource for
+      AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: activepieces
+    name: AI-first automation for every team - Activepieces
+    description: AI-first automation for every team - Activepieces bookmarked for ai automation resources.
+    stars: 22267
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.activepieces.com/
+  - slug: gumloop
+    name: Gumloop | AI Automation Framework
+    description: Gumloop | AI Automation Framework bookmarked for ai automation resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.gumloop.com/
+  - slug: lindy
+    name: Lindy - Meet your first AI employee
+    description: Lindy - Meet your first AI employee bookmarked for ai automation resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.lindy.ai/

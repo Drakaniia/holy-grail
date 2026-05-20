@@ -7,10 +7,13 @@ subcategory: video
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,35 @@ atGlance: Veo 3 | Google AI Studio
 fullDescription: >-
   Veo 3 | Google AI Studio was imported from the browser bookmark folder "Bookmarks bar > AI >
   Video".
+coreFeatures:
+  - name: AI Workflow Support
+    description: Veo 3 - Google AI Studio is tracked as a ai video resource for AI-assisted workflows.
+    icon: check
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: vidu
+    name: Reference to Video | Vidu AI
+    description: Reference to Video | Vidu AI bookmarked for ai video resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.vidu.com/create/character2video
+  - slug: runwayml
+    name: Runway | AI Image and Video Generator
+    description: Runway | AI Image and Video Generator bookmarked for ai video resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://runwayml.com/

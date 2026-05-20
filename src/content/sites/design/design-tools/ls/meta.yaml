@@ -7,10 +7,13 @@ subcategory: design-tools
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -30,3 +33,46 @@ atGlance: Highest quality mockups for graphic designers
 fullDescription: >-
   Highest quality mockups for graphic designers was imported from the browser bookmark folder
   "Bookmarks bar > Design".
+coreFeatures:
+  - name: Design Resource
+    description: >-
+      Highest quality mockups for graphic designers is cataloged as a design tools resource for
+      design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: ui-figma-shadcn-ui
+    name: Figma - shadcn/ui
+    description: Figma - shadcn/ui bookmarked for design tools resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/docs/figma
+  - slug: mermaid
+    name: Mermaid | Diagramming and charting tool
+    description: Mermaid | Diagramming and charting tool bookmarked for design tools resources.
+    stars: 88166
+    addedDaysAgo: 0
+    verified: true
+    website: http://mermaid.js.org/#/
+  - slug: impeccable
+    name: "Impeccable: The missing upgrade to Anthropic's impeccable skill"
+    description: >-
+      Impeccable: The missing upgrade to Anthropic's impeccable skill bookmarked for design skills
+      resources.
+    stars: 29019
+    addedDaysAgo: 0
+    verified: true
+    website: https://impeccable.style/

@@ -7,10 +7,13 @@ subcategory: prompts
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - Web
 deployment:
@@ -29,3 +32,42 @@ atGlance: Premium Interactive Web Sections
 fullDescription: >-
   Premium Interactive Web Sections was imported from the browser bookmark folder "Bookmarks bar >
   Design > Promts".
+coreFeatures:
+  - name: Design Resource
+    description: Premium Interactive Web Sections is cataloged as a prompts resource for design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: typeui
+    name: UI Design Prompts | TypeUI
+    description: UI Design Prompts | TypeUI bookmarked for prompts resources.
+    stars: 921
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.typeui.sh/prompts?ref=dailydev
+  - slug: neuform
+    name: AI HTML Landing Page Builder and Remix Templates | Neuform
+    description: AI HTML Landing Page Builder and Remix Templates | Neuform bookmarked for prompts resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://neuform.ai/
+  - slug: designprompts
+    name: Design Prompts - AI-Powered Design Style Explorer
+    description: Design Prompts - AI-Powered Design Style Explorer bookmarked for prompts resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.designprompts.dev/
