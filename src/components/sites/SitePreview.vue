@@ -52,7 +52,7 @@ watch(
         :href="site.website"
         target="_blank"
         rel="noopener noreferrer"
-        class="relative block group cursor-pointer"
+        class="relative block group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
         :aria-label="`Visit ${site.name}`"
       >
         <picture>
@@ -70,7 +70,7 @@ watch(
           class="absolute inset-0 flex items-end justify-end bg-black/0 p-4 transition-colors group-hover:bg-black/20"
         >
           <span
-            class="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-black/80 px-3 py-2 text-xs font-semibold text-white opacity-90 shadow-lg transition-all group-hover:border-white/40 group-hover:bg-white group-hover:text-black"
+            class="site-preview-visit-button inline-flex items-center gap-2 rounded-lg border border-white/20 bg-black/80 px-3 py-2 text-xs font-semibold text-white opacity-90 shadow-lg transition-colors group-hover:border-white/40 group-hover:bg-white group-hover:text-black"
           >
             <ExternalLink class="w-3.5 h-3.5" />
             Visit site
@@ -83,14 +83,14 @@ watch(
         :href="site.website"
         target="_blank"
         rel="noopener noreferrer"
-        class="aspect-[16/10] p-12 text-center text-gray-500 grid place-items-center transition-colors hover:text-gray-300"
+        class="aspect-[16/10] p-12 text-center text-gray-500 grid place-items-center transition-colors hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
         :aria-label="`Visit ${site.name}`"
       >
         <div>
           <ImageOff class="w-12 h-12 mx-auto mb-3 text-gray-700" />
           <p class="text-sm">Preview will appear after running the screenshot generator.</p>
           <span
-            class="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-700 px-3 py-2 text-xs font-semibold text-gray-300"
+            class="site-preview-visit-button mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-700 px-3 py-2 text-xs font-semibold text-gray-300"
           >
             <ExternalLink class="w-3.5 h-3.5" />
             Visit site
@@ -100,3 +100,21 @@ watch(
     </div>
   </div>
 </template>
+
+<style scoped>
+.site-preview-visit-button {
+  color: #ffffff;
+}
+
+:global(html.light .site-preview-visit-button) {
+  border-color: rgba(255, 250, 243, 0.34) !important;
+  background-color: rgba(45, 33, 25, 0.92) !important;
+  color: #ffffff !important;
+}
+
+:global(html.light .group:hover .site-preview-visit-button) {
+  border-color: var(--mocha-border-strong) !important;
+  background-color: var(--mocha-surface) !important;
+  color: var(--mocha-text) !important;
+}
+</style>
