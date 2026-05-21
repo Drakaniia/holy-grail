@@ -1,0 +1,49 @@
+slug: repacklab
+name: Repacklab - Free Pre-Installed Games
+description: Repacklab - Free Pre-Installed Games bookmarked for torrents resources.
+category: Torrents
+parentCategory: downloads
+subcategory: torrents
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://repacklab.com/
+docs: https://repacklab.com/
+sourceCode: ""
+icon: repacklab
+verified: false
+featured: false
+tags:
+  - bookmark
+  - downloads
+  - torrents
+atGlance: Repacklab - Free Pre-Installed Games
+fullDescription: >-
+  Repacklab - Free Pre-Installed Games was imported from the browser bookmark folder "Bookmarks bar
+  > ALL > DOWNLOADS > Torrents".
+coreFeatures:
+  - name: Download Source
+    description: Repacklab - Free Pre-Installed Games is saved as a torrents bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Open the saved source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Imported Bookmark
+    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Torrents".
+    icon: check
+  - name: Grouped by Type
+    description: Sorted into the downloads collection for focused browsing.
+    icon: check
+similarTools: []

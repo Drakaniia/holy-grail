@@ -8,6 +8,25 @@
     "height": 600,
     "bytes": 41346
   },
+  "123free3dmodels": {
+    "image": "/previews/123free3dmodels.webp",
+    "small": "/previews/123free3dmodels-sm.webp",
+    "sourceUrl": "https://123free3dmodels.com/files/obj",
+    "capturedAt": "2026-05-21T09:42:21.556Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13906,
+    "fallback": true
+  },
+  "1337x": {
+    "image": "/previews/1337x.webp",
+    "small": "/previews/1337x-sm.webp",
+    "sourceUrl": "https://1337x.to/",
+    "capturedAt": "2026-05-21T09:16:27.969Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 7882
+  },
   "8bitcn": {
     "image": "/previews/8bitcn.webp",
     "small": "/previews/8bitcn-sm.webp",
@@ -25,6 +44,15 @@
     "width": 960,
     "height": 600,
     "bytes": 44632
+  },
+  "aepreset": {
+    "image": "/previews/aepreset.webp",
+    "small": "/previews/aepreset-sm.webp",
+    "sourceUrl": "https://aepreset.com/",
+    "capturedAt": "2026-05-21T09:17:26.952Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 59768
   },
   "agentskill": {
     "image": "/previews/agentskill.webp",
@@ -97,6 +125,15 @@
     "width": 960,
     "height": 600,
     "bytes": 28998
+  },
+  "appdoze": {
+    "image": "/previews/appdoze.webp",
+    "small": "/previews/appdoze-sm.webp",
+    "sourceUrl": "https://appdoze.net/",
+    "capturedAt": "2026-05-21T09:15:57.171Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 37650
   },
   "appwrite": {
     "image": "/previews/appwrite.webp",
@@ -260,6 +297,15 @@
     "height": 600,
     "bytes": 20848
   },
+  "bt4gprx": {
+    "image": "/previews/bt4gprx.webp",
+    "small": "/previews/bt4gprx-sm.webp",
+    "sourceUrl": "https://bt4gprx.com/",
+    "capturedAt": "2026-05-21T09:16:36.845Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8486
+  },
   "build": {
     "image": "/previews/build.webp",
     "small": "/previews/build-sm.webp",
@@ -286,6 +332,24 @@
     "width": 960,
     "height": 600,
     "bytes": 25992
+  },
+  "cgdownload": {
+    "image": "/previews/cgdownload.webp",
+    "small": "/previews/cgdownload-sm.webp",
+    "sourceUrl": "https://cgdownload.ru/",
+    "capturedAt": "2026-05-21T09:17:29.794Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 48814
+  },
+  "cgtrader": {
+    "image": "/previews/cgtrader.webp",
+    "small": "/previews/cgtrader-sm.webp",
+    "sourceUrl": "https://www.cgtrader.com/free-3d-models/obj",
+    "capturedAt": "2026-05-21T09:42:31.706Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 43862
   },
   "chatgpt": {
     "image": "/previews/chatgpt.webp",
@@ -422,6 +486,15 @@
     "height": 600,
     "bytes": 36362
   },
+  "crackshash": {
+    "image": "/previews/crackshash.webp",
+    "small": "/previews/crackshash-sm.webp",
+    "sourceUrl": "https://crackshash.com/",
+    "capturedAt": "2026-05-21T09:16:04.302Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 6266
+  },
   "craftwork": {
     "image": "/previews/craftwork.webp",
     "small": "/previews/craftwork-sm.webp",
@@ -448,6 +521,15 @@
     "width": 960,
     "height": 600,
     "bytes": 42452
+  },
+  "czsofts": {
+    "image": "/previews/czsofts.webp",
+    "small": "/previews/czsofts-sm.webp",
+    "sourceUrl": "https://czsofts.com/",
+    "capturedAt": "2026-05-21T09:16:02.928Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 38976
   },
   "decopy": {
     "image": "/previews/decopy.webp",
@@ -557,6 +639,33 @@
     "height": 600,
     "bytes": 25982
   },
+  "dodi-repacks": {
+    "image": "/previews/dodi-repacks.webp",
+    "small": "/previews/dodi-repacks-sm.webp",
+    "sourceUrl": "https://dodi-repacks.site/ddos-attack/",
+    "capturedAt": "2026-05-21T09:16:06.078Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 10528
+  },
+  "dodi-repacks-2": {
+    "image": "/previews/dodi-repacks-2.webp",
+    "small": "/previews/dodi-repacks-2-sm.webp",
+    "sourceUrl": "https://dodi-repacks.site/",
+    "capturedAt": "2026-05-21T09:16:35.665Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 10630
+  },
+  "downloadpirate": {
+    "image": "/previews/downloadpirate.webp",
+    "small": "/previews/downloadpirate-sm.webp",
+    "sourceUrl": "https://www.downloadpirate.com/",
+    "capturedAt": "2026-05-21T09:17:24.975Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 65070
+  },
   "drawkit": {
     "image": "/previews/drawkit.webp",
     "small": "/previews/drawkit-sm.webp",
@@ -629,6 +738,15 @@
     "height": 600,
     "bytes": 15320
   },
+  "en": {
+    "image": "/previews/en.webp",
+    "small": "/previews/en-sm.webp",
+    "sourceUrl": "https://en.taiwebs.com/?lang=PH",
+    "capturedAt": "2026-05-21T09:16:05.736Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20046
+  },
   "eslint": {
     "image": "/previews/eslint.webp",
     "small": "/previews/eslint-sm.webp",
@@ -655,6 +773,15 @@
     "width": 960,
     "height": 600,
     "bytes": 59534
+  },
+  "ext": {
+    "image": "/previews/ext.webp",
+    "small": "/previews/ext-sm.webp",
+    "sourceUrl": "https://ext.to/",
+    "capturedAt": "2026-05-21T09:16:40.570Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8650
   },
   "fab-ui": {
     "image": "/previews/fab-ui.webp",
@@ -691,6 +818,33 @@
     "width": 960,
     "height": 600,
     "bytes": 52338
+  },
+  "filecr": {
+    "image": "/previews/filecr.webp",
+    "small": "/previews/filecr-sm.webp",
+    "sourceUrl": "https://filecr.com/",
+    "capturedAt": "2026-05-21T09:16:11.729Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 31430
+  },
+  "filehippo": {
+    "image": "/previews/filehippo.webp",
+    "small": "/previews/filehippo-sm.webp",
+    "sourceUrl": "https://filehippo.com/download_hp-usb-disk-storage-format-tool/post_download/?dt=internalDownload&installerType=riseInstaller",
+    "capturedAt": "2026-05-21T09:16:13.999Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34768
+  },
+  "fitgirl-repacks": {
+    "image": "/previews/fitgirl-repacks.webp",
+    "small": "/previews/fitgirl-repacks-sm.webp",
+    "sourceUrl": "https://fitgirl-repacks.site/popular-repacks/",
+    "capturedAt": "2026-05-21T09:15:42.796Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 18520
   },
   "flowbase": {
     "image": "/previews/flowbase.webp",
@@ -746,6 +900,15 @@
     "height": 600,
     "bytes": 22300
   },
+  "free3d": {
+    "image": "/previews/free3d.webp",
+    "small": "/previews/free3d-sm.webp",
+    "sourceUrl": "https://free3d.com/",
+    "capturedAt": "2026-05-21T09:42:22.892Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 1100
+  },
   "freecodecamp": {
     "image": "/previews/freecodecamp.webp",
     "small": "/previews/freecodecamp-sm.webp",
@@ -754,6 +917,15 @@
     "width": 960,
     "height": 600,
     "bytes": 24560
+  },
+  "freevideoeffect": {
+    "image": "/previews/freevideoeffect.webp",
+    "small": "/previews/freevideoeffect-sm.webp",
+    "sourceUrl": "https://freevideoeffect.com/",
+    "capturedAt": "2026-05-21T09:17:31.244Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 42774
   },
   "frontendmasters": {
     "image": "/previews/frontendmasters.webp",
@@ -809,6 +981,15 @@
     "height": 600,
     "bytes": 40576
   },
+  "getintopc": {
+    "image": "/previews/getintopc.webp",
+    "small": "/previews/getintopc-sm.webp",
+    "sourceUrl": "https://getintopc.com/",
+    "capturedAt": "2026-05-21T09:16:10.726Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 51662
+  },
   "getliner": {
     "image": "/previews/getliner.webp",
     "small": "/previews/getliner-sm.webp",
@@ -817,6 +998,24 @@
     "width": 960,
     "height": 600,
     "bytes": 9106
+  },
+  "gfxfather": {
+    "image": "/previews/gfxfather.webp",
+    "small": "/previews/gfxfather-sm.webp",
+    "sourceUrl": "https://gfxfather.com/",
+    "capturedAt": "2026-05-21T09:17:37.032Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 48094
+  },
+  "gfxplugin": {
+    "image": "/previews/gfxplugin.webp",
+    "small": "/previews/gfxplugin-sm.webp",
+    "sourceUrl": "https://gfxplugin.com/",
+    "capturedAt": "2026-05-21T09:17:37.679Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23450
   },
   "github": {
     "image": "/previews/github.webp",
@@ -1025,6 +1224,33 @@
     "height": 600,
     "bytes": 29216
   },
+  "ig-repacks": {
+    "image": "/previews/ig-repacks.webp",
+    "small": "/previews/ig-repacks-sm.webp",
+    "sourceUrl": "https://ig-repacks.com/browse.html",
+    "capturedAt": "2026-05-21T09:15:36.803Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 5910
+  },
+  "igg-games": {
+    "image": "/previews/igg-games.webp",
+    "small": "/previews/igg-games-sm.webp",
+    "sourceUrl": "https://igg-games.com/",
+    "capturedAt": "2026-05-21T09:16:42.079Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 17166
+  },
+  "igrovuha": {
+    "image": "/previews/igrovuha.webp",
+    "small": "/previews/igrovuha-sm.webp",
+    "sourceUrl": "https://igrovuha.org/14292-minecraft-bedrock-edition.html",
+    "capturedAt": "2026-05-21T09:15:47.945Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 75448
+  },
   "impeccable": {
     "image": "/previews/impeccable.webp",
     "small": "/previews/impeccable-sm.webp",
@@ -1051,6 +1277,15 @@
     "width": 960,
     "height": 600,
     "bytes": 19810
+  },
+  "intro-hd": {
+    "image": "/previews/intro-hd.webp",
+    "small": "/previews/intro-hd-sm.webp",
+    "sourceUrl": "https://intro-hd.net/",
+    "capturedAt": "2026-05-21T09:17:38.007Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 40268
   },
   "iosicongallery": {
     "image": "/previews/iosicongallery.webp",
@@ -1160,6 +1395,15 @@
     "height": 600,
     "bytes": 30046
   },
+  "limetorrent": {
+    "image": "/previews/limetorrent.webp",
+    "small": "/previews/limetorrent-sm.webp",
+    "sourceUrl": "https://limetorrent.net/",
+    "capturedAt": "2026-05-21T09:19:45.153Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21896
+  },
   "lindy": {
     "image": "/previews/lindy.webp",
     "small": "/previews/lindy-sm.webp",
@@ -1213,6 +1457,15 @@
     "width": 960,
     "height": 600,
     "bytes": 17090
+  },
+  "lrepacks": {
+    "image": "/previews/lrepacks.webp",
+    "small": "/previews/lrepacks-sm.webp",
+    "sourceUrl": "https://lrepacks.net/",
+    "capturedAt": "2026-05-21T09:16:24.452Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 39160
   },
   "ls": {
     "image": "/previews/ls.webp",
@@ -1349,6 +1602,15 @@
     "height": 600,
     "bytes": 9038
   },
+  "moreigr": {
+    "image": "/previews/moreigr.webp",
+    "small": "/previews/moreigr-sm.webp",
+    "sourceUrl": "https://moreigr.org/",
+    "capturedAt": "2026-05-21T09:16:49.962Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 67156
+  },
   "motion": {
     "image": "/previews/motion.webp",
     "small": "/previews/motion-sm.webp",
@@ -1384,6 +1646,15 @@
     "width": 960,
     "height": 600,
     "bytes": 23892
+  },
+  "mysoftwarefree": {
+    "image": "/previews/mysoftwarefree.webp",
+    "small": "/previews/mysoftwarefree-sm.webp",
+    "sourceUrl": "https://mysoftwarefree.com/",
+    "capturedAt": "2026-05-21T09:16:17.434Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 3792
   },
   "n8n": {
     "image": "/previews/n8n.webp",
@@ -1484,6 +1755,15 @@
     "height": 600,
     "bytes": 21120
   },
+  "oceanofgames": {
+    "image": "/previews/oceanofgames.webp",
+    "small": "/previews/oceanofgames-sm.webp",
+    "sourceUrl": "https://oceanofgames.com/",
+    "capturedAt": "2026-05-21T09:15:42.234Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 68984
+  },
   "once-ui": {
     "image": "/previews/once-ui.webp",
     "small": "/previews/once-ui-sm.webp",
@@ -1574,6 +1854,15 @@
     "height": 600,
     "bytes": 11210
   },
+  "pesktop": {
+    "image": "/previews/pesktop.webp",
+    "small": "/previews/pesktop-sm.webp",
+    "sourceUrl": "https://pesktop.com/",
+    "capturedAt": "2026-05-21T09:16:18.998Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 32026
+  },
   "phase": {
     "image": "/previews/phase.webp",
     "small": "/previews/phase-sm.webp",
@@ -1582,6 +1871,15 @@
     "width": 960,
     "height": 600,
     "bytes": 8170
+  },
+  "piratebay-proxy": {
+    "image": "/previews/piratebay-proxy.webp",
+    "small": "/previews/piratebay-proxy-sm.webp",
+    "sourceUrl": "https://piratebay-proxy.co/",
+    "capturedAt": "2026-05-21T09:16:50.005Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 28790
   },
   "pixabay": {
     "image": "/previews/pixabay.webp",
@@ -1618,6 +1916,15 @@
     "width": 960,
     "height": 600,
     "bytes": 27676
+  },
+  "psdly": {
+    "image": "/previews/psdly.webp",
+    "small": "/previews/psdly-sm.webp",
+    "sourceUrl": "https://www.psdly.to/",
+    "capturedAt": "2026-05-21T09:17:44.285Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 10888
   },
   "pythonanywhere": {
     "image": "/previews/pythonanywhere.webp",
@@ -1718,6 +2025,24 @@
     "height": 600,
     "bytes": 22222
   },
+  "repack": {
+    "image": "/previews/repack.webp",
+    "small": "/previews/repack-sm.webp",
+    "sourceUrl": "https://repack.me/",
+    "capturedAt": "2026-05-21T09:16:22.138Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 4520
+  },
+  "repacklab": {
+    "image": "/previews/repacklab.webp",
+    "small": "/previews/repacklab-sm.webp",
+    "sourceUrl": "https://repacklab.com/",
+    "capturedAt": "2026-05-21T09:17:01.383Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 95768
+  },
   "replit": {
     "image": "/previews/replit.webp",
     "small": "/previews/replit-sm.webp",
@@ -1772,6 +2097,15 @@
     "height": 600,
     "bytes": 24564
   },
+  "royale-games": {
+    "image": "/previews/royale-games.webp",
+    "small": "/previews/royale-games-sm.webp",
+    "sourceUrl": "https://royale-games.com/",
+    "capturedAt": "2026-05-21T09:21:51.799Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 6624
+  },
   "runwayml": {
     "image": "/previews/runwayml.webp",
     "small": "/previews/runwayml-sm.webp",
@@ -1780,6 +2114,15 @@
     "width": 960,
     "height": 600,
     "bytes": 4830
+  },
+  "rutracker": {
+    "image": "/previews/rutracker.webp",
+    "small": "/previews/rutracker-sm.webp",
+    "sourceUrl": "https://rutracker.org/forum/index.php",
+    "capturedAt": "2026-05-21T09:17:17.342Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23956
   },
   "screenshot-studio": {
     "image": "/previews/screenshot-studio.webp",
@@ -1861,6 +2204,15 @@
     "width": 960,
     "height": 600,
     "bytes": 18802
+  },
+  "sketchfab": {
+    "image": "/previews/sketchfab.webp",
+    "small": "/previews/sketchfab-sm.webp",
+    "sourceUrl": "https://sketchfab.com/features/free-3d-models",
+    "capturedAt": "2026-05-21T09:42:31.357Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34650
   },
   "sleek": {
     "image": "/previews/sleek.webp",
@@ -1979,6 +2331,15 @@
     "height": 600,
     "bytes": 33792
   },
+  "techsoft": {
+    "image": "/previews/techsoft.webp",
+    "small": "/previews/techsoft-sm.webp",
+    "sourceUrl": "https://www.techsoft.sk/sk/",
+    "capturedAt": "2026-05-21T09:16:32.342Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 45698
+  },
   "templifica": {
     "image": "/previews/templifica.webp",
     "small": "/previews/templifica-sm.webp",
@@ -2006,6 +2367,33 @@
     "height": 600,
     "bytes": 69236
   },
+  "texturing": {
+    "image": "/previews/texturing.webp",
+    "small": "/previews/texturing-sm.webp",
+    "sourceUrl": "https://texturing.xyz/",
+    "capturedAt": "2026-05-21T09:42:32.891Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 66030
+  },
+  "thepiratesproxy": {
+    "image": "/previews/thepiratesproxy.webp",
+    "small": "/previews/thepiratesproxy-sm.webp",
+    "sourceUrl": "https://www.thepiratesproxy.org/",
+    "capturedAt": "2026-05-21T09:17:03.591Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 36864
+  },
+  "therarbg": {
+    "image": "/previews/therarbg.webp",
+    "small": "/previews/therarbg-sm.webp",
+    "sourceUrl": "https://therarbg.com/",
+    "capturedAt": "2026-05-21T09:17:10.327Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 19186
+  },
   "thesvg": {
     "image": "/previews/thesvg.webp",
     "small": "/previews/thesvg-sm.webp",
@@ -2024,6 +2412,33 @@
     "height": 600,
     "bytes": 18714
   },
+  "torrent-games": {
+    "image": "/previews/torrent-games.webp",
+    "small": "/previews/torrent-games-sm.webp",
+    "sourceUrl": "https://torrent-games.games/",
+    "capturedAt": "2026-05-21T09:15:56.956Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 56502
+  },
+  "torrent-mass": {
+    "image": "/previews/torrent-mass.webp",
+    "small": "/previews/torrent-mass-sm.webp",
+    "sourceUrl": "https://torrent-mass.ru/",
+    "capturedAt": "2026-05-21T09:17:12.143Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 69310
+  },
+  "torrentgalaxy": {
+    "image": "/previews/torrentgalaxy.webp",
+    "small": "/previews/torrentgalaxy-sm.webp",
+    "sourceUrl": "https://torrentgalaxy.one/",
+    "capturedAt": "2026-05-21T09:17:19.912Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 29386
+  },
   "tremor": {
     "image": "/previews/tremor.webp",
     "small": "/previews/tremor-sm.webp",
@@ -2032,6 +2447,24 @@
     "width": 960,
     "height": 600,
     "bytes": 26298
+  },
+  "tripo3d": {
+    "image": "/previews/tripo3d.webp",
+    "small": "/previews/tripo3d-sm.webp",
+    "sourceUrl": "https://www.tripo3d.ai/blog/introducing-tripo-studio",
+    "capturedAt": "2026-05-21T09:42:40.615Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 39076
+  },
+  "turbosquid": {
+    "image": "/previews/turbosquid.webp",
+    "small": "/previews/turbosquid-sm.webp",
+    "sourceUrl": "https://www.turbosquid.com/",
+    "capturedAt": "2026-05-21T09:42:35.637Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 12838
   },
   "tutorialspoint": {
     "image": "/previews/tutorialspoint.webp",
@@ -2141,6 +2574,24 @@
     "height": 600,
     "bytes": 22648
   },
+  "usersdrive": {
+    "image": "/previews/usersdrive.webp",
+    "small": "/previews/usersdrive-sm.webp",
+    "sourceUrl": "https://usersdrive.com/users/introhd",
+    "capturedAt": "2026-05-21T09:17:44.392Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 14186
+  },
+  "usersdrive-files-of-vfxdownload": {
+    "image": "/previews/usersdrive-files-of-vfxdownload.webp",
+    "small": "/previews/usersdrive-files-of-vfxdownload-sm.webp",
+    "sourceUrl": "https://usersdrive.com/users/VFXDownload",
+    "capturedAt": "2026-05-21T09:17:44.550Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 37346
+  },
   "v0": {
     "image": "/previews/v0.webp",
     "small": "/previews/v0-sm.webp",
@@ -2195,6 +2646,24 @@
     "height": 600,
     "bytes": 9632
   },
+  "vfxdownload": {
+    "image": "/previews/vfxdownload.webp",
+    "small": "/previews/vfxdownload-sm.webp",
+    "sourceUrl": "https://vfxdownload.net/",
+    "capturedAt": "2026-05-21T09:17:52.333Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 57732
+  },
+  "vfxmed": {
+    "image": "/previews/vfxmed.webp",
+    "small": "/previews/vfxmed-sm.webp",
+    "sourceUrl": "https://www.vfxmed.com/",
+    "capturedAt": "2026-05-21T09:17:50.142Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 36938
+  },
   "vibeui": {
     "image": "/previews/vibeui.webp",
     "small": "/previews/vibeui-sm.webp",
@@ -2230,6 +2699,15 @@
     "width": 960,
     "height": 600,
     "bytes": 22180
+  },
+  "web-tor": {
+    "image": "/previews/web-tor.webp",
+    "small": "/previews/web-tor-sm.webp",
+    "sourceUrl": "https://web-tor.net/",
+    "capturedAt": "2026-05-21T09:16:36.783Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 90138
   },
   "webflow": {
     "image": "/previews/webflow.webp",
@@ -2285,6 +2763,25 @@
     "height": 600,
     "bytes": 16350
   },
+  "yts": {
+    "image": "/previews/yts.webp",
+    "small": "/previews/yts-sm.webp",
+    "sourceUrl": "https://yts.mx/",
+    "capturedAt": "2026-05-21T09:22:03.575Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 11998,
+    "fallback": true
+  },
+  "yts-download-all-yify-movies-torrents-yts": {
+    "image": "/previews/yts-download-all-yify-movies-torrents-yts.webp",
+    "small": "/previews/yts-download-all-yify-movies-torrents-yts-sm.webp",
+    "sourceUrl": "https://yts.bz/browse-movies/0/all/all/0/downloads/0/all",
+    "capturedAt": "2026-05-21T09:15:51.178Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 7614
+  },
   "z": {
     "image": "/previews/z.webp",
     "small": "/previews/z-sm.webp",
@@ -2293,5 +2790,14 @@
     "width": 960,
     "height": 600,
     "bytes": 7520
+  },
+  "zooqle": {
+    "image": "/previews/zooqle.webp",
+    "small": "/previews/zooqle-sm.webp",
+    "sourceUrl": "https://zooqle.io/",
+    "capturedAt": "2026-05-21T09:17:20.049Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 22390
   }
 }

@@ -1,0 +1,49 @@
+slug: yts-download-all-yify-movies-torrents-yts
+name: Download all YIFY Movies Torrents - YTS
+description: Download all YIFY Movies Torrents - YTS bookmarked for movies resources.
+category: Movies
+parentCategory: downloads
+subcategory: movies
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://yts.bz/browse-movies/0/all/all/0/downloads/0/all
+docs: https://yts.bz/browse-movies/0/all/all/0/downloads/0/all
+sourceCode: ""
+icon: yts
+verified: false
+featured: false
+tags:
+  - bookmark
+  - downloads
+  - movies
+atGlance: Download all YIFY Movies Torrents - YTS
+fullDescription: >-
+  Download all YIFY Movies Torrents - YTS was imported from the browser bookmark folder "Bookmarks
+  bar > ALL > DOWNLOADS > Movies".
+coreFeatures:
+  - name: Download Source
+    description: Download all YIFY Movies Torrents - YTS is saved as a movies bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Open the saved source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Imported Bookmark
+    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Movies".
+    icon: check
+  - name: Grouped by Type
+    description: Sorted into the downloads collection for focused browsing.
+    icon: check
+similarTools: []

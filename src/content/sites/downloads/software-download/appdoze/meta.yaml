@@ -1,0 +1,53 @@
+slug: appdoze
+name: AppDoze - THE TRUSTED APPLICATION STORE
+description: AppDoze - THE TRUSTED APPLICATION STORE bookmarked for software download resources.
+category: Software Download
+parentCategory: downloads
+subcategory: software-download
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://appdoze.net/
+docs: https://appdoze.net/
+sourceCode: ""
+icon: appdoze
+verified: false
+featured: false
+tags:
+  - bookmark
+  - downloads
+  - software-download
+  - software
+  - download
+atGlance: AppDoze - THE TRUSTED APPLICATION STORE
+fullDescription: >-
+  AppDoze - THE TRUSTED APPLICATION STORE was imported from the browser bookmark folder "Bookmarks
+  bar > ALL > DOWNLOADS > Software Download".
+coreFeatures:
+  - name: Download Source
+    description: AppDoze - THE TRUSTED APPLICATION STORE is saved as a software download bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Open the saved source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Imported Bookmark
+    description: >-
+      Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Software
+      Download".
+    icon: check
+  - name: Grouped by Type
+    description: Sorted into the downloads collection for focused browsing.
+    icon: check
+similarTools: []

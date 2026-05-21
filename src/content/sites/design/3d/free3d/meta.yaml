@@ -1,0 +1,73 @@
+slug: free3d
+name: 3D Models for Free - Free3D.com
+description: 3D Models for Free - Free3D.com bookmarked for 3d resources.
+category: 3D
+parentCategory: design
+subcategory: 3d
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://free3d.com/
+docs: https://free3d.com/
+sourceCode: ""
+icon: free3d
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - 3d
+atGlance: 3D Models for Free - Free3D.com
+fullDescription: >-
+  3D Models for Free - Free3D.com was imported from the browser bookmark folder "Bookmarks bar > ALL
+  > 3D".
+coreFeatures:
+  - name: Design Resource
+    description: 3D Models for Free - Free3D.com is cataloged as a 3d resource for design work.
+    icon: check
+  - name: Visual Reference
+    description: Useful as inspiration, tooling, assets, or implementation reference.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: turbosquid
+    name: "3D Models for Professionals :: TurboSquid"
+    description: "3D Models for Professionals :: TurboSquid bookmarked for 3d resources."
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.turbosquid.com/
+  - slug: sketchfab
+    name: Download Free 3D Models - Royalty Free - Sketchfab
+    description: Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://sketchfab.com/features/free-3d-models
+  - slug: virtualthreads
+    name: Free 3D T-Shirt Mockup Generator - VirtualThreads
+    description: Free 3D T-Shirt Mockup Generator - VirtualThreads bookmarked for 3d resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.virtualthreads.io/

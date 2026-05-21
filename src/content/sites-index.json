@@ -11267,6 +11267,390 @@
     ]
   },
   {
+    "slug": "123free3dmodels",
+    "name": "Free OBJ 3D Models for Download (.Obj) - 123Free3dModels",
+    "description": "Free OBJ 3D Models for Download (.Obj) - 123Free3dModels bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://123free3dmodels.com/files/obj",
+    "docs": "https://123free3dmodels.com/files/obj",
+    "sourceCode": "",
+    "icon": "123free3dmodels",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "Free OBJ 3D Models for Download (.Obj) - 123Free3dModels",
+    "fullDescription": "Free OBJ 3D Models for Download (.Obj) - 123Free3dModels was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "Free OBJ 3D Models for Download (.Obj) - 123Free3dModels is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      }
+    ]
+  },
+  {
+    "slug": "cgtrader",
+    "name": "Free Obj 3D Models | CGTrader",
+    "description": "Free Obj 3D Models | CGTrader bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.cgtrader.com/free-3d-models/obj",
+    "docs": "https://www.cgtrader.com/free-3d-models/obj",
+    "sourceCode": "",
+    "icon": "cgtrader",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "Free Obj 3D Models | CGTrader",
+    "fullDescription": "Free Obj 3D Models | CGTrader was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "Free Obj 3D Models | CGTrader is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      }
+    ]
+  },
+  {
+    "slug": "free3d",
+    "name": "3D Models for Free - Free3D.com",
+    "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://free3d.com/",
+    "docs": "https://free3d.com/",
+    "sourceCode": "",
+    "icon": "free3d",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "3D Models for Free - Free3D.com",
+    "fullDescription": "3D Models for Free - Free3D.com was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "3D Models for Free - Free3D.com is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      },
+      {
+        "slug": "virtualthreads",
+        "name": "Free 3D T-Shirt Mockup Generator - VirtualThreads",
+        "description": "Free 3D T-Shirt Mockup Generator - VirtualThreads bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.virtualthreads.io/"
+      }
+    ]
+  },
+  {
+    "slug": "sketchfab",
+    "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+    "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://sketchfab.com/features/free-3d-models",
+    "docs": "https://sketchfab.com/features/free-3d-models",
+    "sourceCode": "",
+    "icon": "sketchfab",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "Download Free 3D Models - Royalty Free - Sketchfab",
+    "fullDescription": "Download Free 3D Models - Royalty Free - Sketchfab was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "virtualthreads",
+        "name": "Free 3D T-Shirt Mockup Generator - VirtualThreads",
+        "description": "Free 3D T-Shirt Mockup Generator - VirtualThreads bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.virtualthreads.io/"
+      }
+    ]
+  },
+  {
     "slug": "spline",
     "name": "Spline",
     "description": "Spline bookmarked for 3d resources.",
@@ -11333,6 +11717,312 @@
     ],
     "deployCompose": "",
     "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      }
+    ]
+  },
+  {
+    "slug": "texturing",
+    "name": "High-end content for Artists",
+    "description": "High-end content for Artists bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://texturing.xyz/",
+    "docs": "https://texturing.xyz/",
+    "sourceCode": "",
+    "icon": "texturing",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "High-end content for Artists",
+    "fullDescription": "High-end content for Artists was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "High-end content for Artists is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      }
+    ]
+  },
+  {
+    "slug": "tripo3d",
+    "name": "Introducing Tripo Studio: Your Next 3D Workspace with AI",
+    "description": "Introducing Tripo Studio: Your Next 3D Workspace with AI bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.tripo3d.ai/blog/introducing-tripo-studio",
+    "docs": "https://www.tripo3d.ai/blog/introducing-tripo-studio",
+    "sourceCode": "",
+    "icon": "tripo3d",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "Introducing Tripo Studio: Your Next 3D Workspace with AI",
+    "fullDescription": "Introducing Tripo Studio: Your Next 3D Workspace with AI was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "Introducing Tripo Studio: Your Next 3D Workspace with AI is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      }
+    ]
+  },
+  {
+    "slug": "turbosquid",
+    "name": "3D Models for Professionals :: TurboSquid",
+    "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+    "category": "3D",
+    "parentCategory": "design",
+    "subcategory": "3d",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.turbosquid.com/",
+    "docs": "https://www.turbosquid.com/",
+    "sourceCode": "",
+    "icon": "turbosquid",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "3d"
+    ],
+    "atGlance": "3D Models for Professionals :: TurboSquid",
+    "fullDescription": "3D Models for Professionals :: TurboSquid was imported from the browser bookmark folder \"Bookmarks bar > ALL > 3D\".",
+    "coreFeatures": [
+      {
+        "name": "Design Resource",
+        "description": "3D Models for Professionals :: TurboSquid is cataloged as a 3d resource for design work.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
+      },
       {
         "slug": "virtualthreads",
         "name": "Free 3D T-Shirt Mockup Generator - VirtualThreads",
@@ -11412,13 +12102,31 @@
     "deployCompose": "",
     "similarTools": [
       {
-        "slug": "spline",
-        "name": "Spline",
-        "description": "Spline bookmarked for 3d resources.",
+        "slug": "free3d",
+        "name": "3D Models for Free - Free3D.com",
+        "description": "3D Models for Free - Free3D.com bookmarked for 3d resources.",
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://app.spline.design/home"
+        "website": "https://free3d.com/"
+      },
+      {
+        "slug": "turbosquid",
+        "name": "3D Models for Professionals :: TurboSquid",
+        "description": "3D Models for Professionals :: TurboSquid bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.turbosquid.com/"
+      },
+      {
+        "slug": "sketchfab",
+        "name": "Download Free 3D Models - Royalty Free - Sketchfab",
+        "description": "Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sketchfab.com/features/free-3d-models"
       }
     ]
   },
@@ -22615,6 +23323,3157 @@
         "website": "https://ui.shadcn.com/"
       }
     ]
+  },
+  {
+    "slug": "fitgirl-repacks",
+    "name": "Popular Repacks - FitGirl Repacks",
+    "description": "Popular Repacks - FitGirl Repacks bookmarked for game download resources.",
+    "category": "Game Download",
+    "parentCategory": "downloads",
+    "subcategory": "game-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://fitgirl-repacks.site/popular-repacks/",
+    "docs": "https://fitgirl-repacks.site/popular-repacks/",
+    "sourceCode": "",
+    "icon": "fitgirl-repacks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "game-download",
+      "game",
+      "download"
+    ],
+    "atGlance": "Popular Repacks - FitGirl Repacks",
+    "fullDescription": "Popular Repacks - FitGirl Repacks was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Popular Repacks - FitGirl Repacks is saved as a game download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "ig-repacks",
+    "name": "IG-Repacks / Games",
+    "description": "IG-Repacks / Games bookmarked for game download resources.",
+    "category": "Game Download",
+    "parentCategory": "downloads",
+    "subcategory": "game-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://ig-repacks.com/browse.html",
+    "docs": "https://ig-repacks.com/browse.html",
+    "sourceCode": "",
+    "icon": "ig-repacks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "game-download",
+      "game",
+      "download"
+    ],
+    "atGlance": "IG-Repacks / Games",
+    "fullDescription": "IG-Repacks / Games was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "IG-Repacks / Games is saved as a game download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "igrovuha",
+    "name": "Minecraft: Bedrock Edition v1.21.101",
+    "description": "Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources.",
+    "category": "Game Download",
+    "parentCategory": "downloads",
+    "subcategory": "game-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://igrovuha.org/14292-minecraft-bedrock-edition.html",
+    "docs": "https://igrovuha.org/14292-minecraft-bedrock-edition.html",
+    "sourceCode": "",
+    "icon": "igrovuha",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "game-download",
+      "game",
+      "download"
+    ],
+    "atGlance": "Minecraft: Bedrock Edition v1.21.101",
+    "fullDescription": "Minecraft: Bedrock Edition v1.21.101 was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Minecraft: Bedrock Edition v1.21.101 is saved as a game download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "oceanofgames",
+    "name": "Ocean of Games",
+    "description": "Ocean of Games bookmarked for game download resources.",
+    "category": "Game Download",
+    "parentCategory": "downloads",
+    "subcategory": "game-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://oceanofgames.com/",
+    "docs": "https://oceanofgames.com/",
+    "sourceCode": "",
+    "icon": "oceanofgames",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "game-download",
+      "game",
+      "download"
+    ],
+    "atGlance": "Ocean of Games",
+    "fullDescription": "Ocean of Games was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Ocean of Games is saved as a game download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "royale-games",
+    "name": "Royale-Games Best adult games",
+    "description": "Royale-Games Best adult games bookmarked for game download resources.",
+    "category": "Game Download",
+    "parentCategory": "downloads",
+    "subcategory": "game-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://royale-games.com/",
+    "docs": "https://royale-games.com/",
+    "sourceCode": "",
+    "icon": "royale-games",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "game-download",
+      "game",
+      "download"
+    ],
+    "atGlance": "Royale-Games Best adult games",
+    "fullDescription": "Royale-Games Best adult games was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Royale-Games Best adult games is saved as a game download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "torrent-games",
+    "name": "torrent-games",
+    "description": "torrent-games bookmarked for game download resources.",
+    "category": "Game Download",
+    "parentCategory": "downloads",
+    "subcategory": "game-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://torrent-games.games/",
+    "docs": "https://torrent-games.games/",
+    "sourceCode": "",
+    "icon": "torrent-games",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "game-download",
+      "game",
+      "download"
+    ],
+    "atGlance": "torrent-games",
+    "fullDescription": "torrent-games was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "torrent-games is saved as a game download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Game Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "yts-download-all-yify-movies-torrents-yts",
+    "name": "Download all YIFY Movies Torrents - YTS",
+    "description": "Download all YIFY Movies Torrents - YTS bookmarked for movies resources.",
+    "category": "Movies",
+    "parentCategory": "downloads",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://yts.bz/browse-movies/0/all/all/0/downloads/0/all",
+    "docs": "https://yts.bz/browse-movies/0/all/all/0/downloads/0/all",
+    "sourceCode": "",
+    "icon": "yts",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "movies"
+    ],
+    "atGlance": "Download all YIFY Movies Torrents - YTS",
+    "fullDescription": "Download all YIFY Movies Torrents - YTS was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Movies\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Download all YIFY Movies Torrents - YTS is saved as a movies bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Movies\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "appdoze",
+    "name": "AppDoze - THE TRUSTED APPLICATION STORE",
+    "description": "AppDoze - THE TRUSTED APPLICATION STORE bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://appdoze.net/",
+    "docs": "https://appdoze.net/",
+    "sourceCode": "",
+    "icon": "appdoze",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "AppDoze - THE TRUSTED APPLICATION STORE",
+    "fullDescription": "AppDoze - THE TRUSTED APPLICATION STORE was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "AppDoze - THE TRUSTED APPLICATION STORE is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "crackshash",
+    "name": "CracksHash - Peace Out Restrictions!",
+    "description": "CracksHash - Peace Out Restrictions! bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://crackshash.com/",
+    "docs": "https://crackshash.com/",
+    "sourceCode": "",
+    "icon": "crackshash",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "CracksHash - Peace Out Restrictions!",
+    "fullDescription": "CracksHash - Peace Out Restrictions! was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "CracksHash - Peace Out Restrictions! is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "czsofts",
+    "name": "CZsofts - Download Windows and Mac Apps Torrents",
+    "description": "CZsofts - Download Windows and Mac Apps Torrents bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://czsofts.com/",
+    "docs": "https://czsofts.com/",
+    "sourceCode": "",
+    "icon": "czsofts",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "CZsofts - Download Windows and Mac Apps Torrents",
+    "fullDescription": "CZsofts - Download Windows and Mac Apps Torrents was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "CZsofts - Download Windows and Mac Apps Torrents is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "dodi-repacks",
+    "name": "Backup Site - DODI Repacks",
+    "description": "Backup Site - DODI Repacks bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://dodi-repacks.site/ddos-attack/",
+    "docs": "https://dodi-repacks.site/ddos-attack/",
+    "sourceCode": "",
+    "icon": "dodi-repacks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "Backup Site - DODI Repacks",
+    "fullDescription": "Backup Site - DODI Repacks was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Backup Site - DODI Repacks is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "en",
+    "name": "Share and Download Free Software - Updated daily",
+    "description": "Share and Download Free Software - Updated daily bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://en.taiwebs.com/?lang=PH",
+    "docs": "https://en.taiwebs.com/?lang=PH",
+    "sourceCode": "",
+    "icon": "en",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "Share and Download Free Software - Updated daily",
+    "fullDescription": "Share and Download Free Software - Updated daily was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Share and Download Free Software - Updated daily is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "filecr",
+    "name": "filecr",
+    "description": "filecr bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://filecr.com/",
+    "docs": "https://filecr.com/",
+    "sourceCode": "",
+    "icon": "filecr",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "filecr",
+    "fullDescription": "filecr was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "filecr is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "filehippo",
+    "name": "Download HP USB Disk Storage Format Tool 2.2.3 for Windows - Filehippo.com",
+    "description": "Download HP USB Disk Storage Format Tool 2.2.3 for Windows - Filehippo.com bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://filehippo.com/download_hp-usb-disk-storage-format-tool/post_download/?dt=internalDownload&installerType=riseInstaller",
+    "docs": "https://filehippo.com/download_hp-usb-disk-storage-format-tool/post_download/?dt=internalDownload&installerType=riseInstaller",
+    "sourceCode": "",
+    "icon": "filehippo",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "Download HP USB Disk Storage Format Tool 2.2.3 for Windows - Filehippo.com",
+    "fullDescription": "Download HP USB Disk Storage Format Tool 2.2.3 for Windows - Filehippo.com was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Download HP USB Disk Storage Format Tool 2.2.3 for Windows - Filehippo.com is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "getintopc",
+    "name": "Get Into PC - Download Free Your Desired App",
+    "description": "Get Into PC - Download Free Your Desired App bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://getintopc.com/",
+    "docs": "https://getintopc.com/",
+    "sourceCode": "",
+    "icon": "getintopc",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "Get Into PC - Download Free Your Desired App",
+    "fullDescription": "Get Into PC - Download Free Your Desired App was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Get Into PC - Download Free Your Desired App is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "lrepacks",
+    "name": "ELCHUPACABRA - REPACK",
+    "description": "ELCHUPACABRA - REPACK bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://lrepacks.net/",
+    "docs": "https://lrepacks.net/",
+    "sourceCode": "",
+    "icon": "lrepacks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "ELCHUPACABRA - REPACK",
+    "fullDescription": "ELCHUPACABRA - REPACK was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "ELCHUPACABRA - REPACK is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "mysoftwarefree",
+    "name": "MySoftwareFree - Download PC Software for Free",
+    "description": "MySoftwareFree - Download PC Software for Free bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://mysoftwarefree.com/",
+    "docs": "https://mysoftwarefree.com/",
+    "sourceCode": "",
+    "icon": "mysoftwarefree",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "MySoftwareFree - Download PC Software for Free",
+    "fullDescription": "MySoftwareFree - Download PC Software for Free was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "MySoftwareFree - Download PC Software for Free is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "pesktop",
+    "name": "PeskTop - Download Fully Activated Programs for Windows, Mac",
+    "description": "PeskTop - Download Fully Activated Programs for Windows, Mac bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://pesktop.com/",
+    "docs": "https://pesktop.com/",
+    "sourceCode": "",
+    "icon": "pesktop",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "PeskTop - Download Fully Activated Programs for Windows, Mac",
+    "fullDescription": "PeskTop - Download Fully Activated Programs for Windows, Mac was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "PeskTop - Download Fully Activated Programs for Windows, Mac is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "repack",
+    "name": "REPACK.ME",
+    "description": "REPACK.ME bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://repack.me/",
+    "docs": "https://repack.me/",
+    "sourceCode": "",
+    "icon": "repack",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "REPACK.ME",
+    "fullDescription": "REPACK.ME was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "REPACK.ME is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "techsoft",
+    "name": "TECHSOFT",
+    "description": "TECHSOFT bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.techsoft.sk/sk/",
+    "docs": "https://www.techsoft.sk/sk/",
+    "sourceCode": "",
+    "icon": "techsoft",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "TECHSOFT",
+    "fullDescription": "TECHSOFT was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "TECHSOFT is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "web-tor",
+    "name": "Windows",
+    "description": "Windows bookmarked for software download resources.",
+    "category": "Software Download",
+    "parentCategory": "downloads",
+    "subcategory": "software-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://web-tor.net/",
+    "docs": "https://web-tor.net/",
+    "sourceCode": "",
+    "icon": "web-tor",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "software-download",
+      "software",
+      "download"
+    ],
+    "atGlance": "Windows",
+    "fullDescription": "Windows was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Windows is saved as a software download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Software Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "1337x",
+    "name": "Torrent Search Engine | 1337x.to",
+    "description": "Torrent Search Engine | 1337x.to bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://1337x.to/",
+    "docs": "https://1337x.to/",
+    "sourceCode": "",
+    "icon": "1337x",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Torrent Search Engine | 1337x.to",
+    "fullDescription": "Torrent Search Engine | 1337x.to was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Torrent Search Engine | 1337x.to is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "bt4gprx",
+    "name": "Torrent Search Engine - BT4G",
+    "description": "Torrent Search Engine - BT4G bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://bt4gprx.com/",
+    "docs": "https://bt4gprx.com/",
+    "sourceCode": "",
+    "icon": "bt4gprx",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Torrent Search Engine - BT4G",
+    "fullDescription": "Torrent Search Engine - BT4G was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Torrent Search Engine - BT4G is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "dodi-repacks-2",
+    "name": "DODI Repacks",
+    "description": "DODI Repacks bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://dodi-repacks.site/",
+    "docs": "https://dodi-repacks.site/",
+    "sourceCode": "",
+    "icon": "dodi-repacks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "DODI Repacks",
+    "fullDescription": "DODI Repacks was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "DODI Repacks is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "ext",
+    "name": "EXT Torrents - All torrents to All",
+    "description": "EXT Torrents - All torrents to All bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://ext.to/",
+    "docs": "https://ext.to/",
+    "sourceCode": "",
+    "icon": "ext",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "EXT Torrents - All torrents to All",
+    "fullDescription": "EXT Torrents - All torrents to All was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "EXT Torrents - All torrents to All is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "igg-games",
+    "name": "IGGGAMES Free Download PC Games - Direct Links - Torrent",
+    "description": "IGGGAMES Free Download PC Games - Direct Links - Torrent bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://igg-games.com/",
+    "docs": "https://igg-games.com/",
+    "sourceCode": "",
+    "icon": "igg-games",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "IGGGAMES Free Download PC Games - Direct Links - Torrent",
+    "fullDescription": "IGGGAMES Free Download PC Games - Direct Links - Torrent was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "IGGGAMES Free Download PC Games - Direct Links - Torrent is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "limetorrent",
+    "name": "LimeTorrents - Download torrents from LimeTorrents",
+    "description": "LimeTorrents - Download torrents from LimeTorrents bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://limetorrent.net/",
+    "docs": "https://limetorrent.net/",
+    "sourceCode": "",
+    "icon": "limetorrent",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "LimeTorrents - Download torrents from LimeTorrents",
+    "fullDescription": "LimeTorrents - Download torrents from LimeTorrents was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "LimeTorrents - Download torrents from LimeTorrents is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "moreigr",
+    "name": "moreigr",
+    "description": "moreigr bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://moreigr.org/",
+    "docs": "https://moreigr.org/",
+    "sourceCode": "",
+    "icon": "moreigr",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "moreigr",
+    "fullDescription": "moreigr was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "moreigr is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "piratebay-proxy",
+    "name": "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites",
+    "description": "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://piratebay-proxy.co/",
+    "docs": "https://piratebay-proxy.co/",
+    "sourceCode": "",
+    "icon": "piratebay-proxy",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites",
+    "fullDescription": "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "repacklab",
+    "name": "Repacklab - Free Pre-Installed Games",
+    "description": "Repacklab - Free Pre-Installed Games bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://repacklab.com/",
+    "docs": "https://repacklab.com/",
+    "sourceCode": "",
+    "icon": "repacklab",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Repacklab - Free Pre-Installed Games",
+    "fullDescription": "Repacklab - Free Pre-Installed Games was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Repacklab - Free Pre-Installed Games is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "rutracker",
+    "name": "RuTracker.org",
+    "description": "RuTracker.org bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://rutracker.org/forum/index.php",
+    "docs": "https://rutracker.org/forum/index.php",
+    "sourceCode": "",
+    "icon": "rutracker",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "RuTracker.org",
+    "fullDescription": "RuTracker.org was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "RuTracker.org is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "thepiratesproxy",
+    "name": "Pirate Bay - Find only 100% Original Torrents",
+    "description": "Pirate Bay - Find only 100% Original Torrents bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.thepiratesproxy.org/",
+    "docs": "https://www.thepiratesproxy.org/",
+    "sourceCode": "",
+    "icon": "thepiratesproxy",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Pirate Bay - Find only 100% Original Torrents",
+    "fullDescription": "Pirate Bay - Find only 100% Original Torrents was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Pirate Bay - Find only 100% Original Torrents is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "therarbg",
+    "name": "Download Latest Top Torrents in Multiple Categories The RarBg",
+    "description": "Download Latest Top Torrents in Multiple Categories The RarBg bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://therarbg.com/",
+    "docs": "https://therarbg.com/",
+    "sourceCode": "",
+    "icon": "therarbg",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Download Latest Top Torrents in Multiple Categories The RarBg",
+    "fullDescription": "Download Latest Top Torrents in Multiple Categories The RarBg was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Download Latest Top Torrents in Multiple Categories The RarBg is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "torrent-mass",
+    "name": "torrent-mass",
+    "description": "torrent-mass bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://torrent-mass.ru/",
+    "docs": "https://torrent-mass.ru/",
+    "sourceCode": "",
+    "icon": "torrent-mass",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "torrent-mass",
+    "fullDescription": "torrent-mass was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "torrent-mass is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "torrentgalaxy",
+    "name": "Download Latest Top Torrents by Subcategories torrentGalaxy",
+    "description": "Download Latest Top Torrents by Subcategories torrentGalaxy bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://torrentgalaxy.one/",
+    "docs": "https://torrentgalaxy.one/",
+    "sourceCode": "",
+    "icon": "torrentgalaxy",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Download Latest Top Torrents by Subcategories torrentGalaxy",
+    "fullDescription": "Download Latest Top Torrents by Subcategories torrentGalaxy was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Download Latest Top Torrents by Subcategories torrentGalaxy is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "yts",
+    "name": "The Official Home of YIFY Movies Torrent Download - YTS",
+    "description": "The Official Home of YIFY Movies Torrent Download - YTS bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://yts.mx/",
+    "docs": "https://yts.mx/",
+    "sourceCode": "",
+    "icon": "yts",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "The Official Home of YIFY Movies Torrent Download - YTS",
+    "fullDescription": "The Official Home of YIFY Movies Torrent Download - YTS was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "The Official Home of YIFY Movies Torrent Download - YTS is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "zooqle",
+    "name": "Start | Zooqle: Verified torrents",
+    "description": "Start | Zooqle: Verified torrents bookmarked for torrents resources.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://zooqle.io/",
+    "docs": "https://zooqle.io/",
+    "sourceCode": "",
+    "icon": "zooqle",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Start | Zooqle: Verified torrents",
+    "fullDescription": "Start | Zooqle: Verified torrents was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Start | Zooqle: Verified torrents is saved as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > Torrents\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "aepreset",
+    "name": "Download Free After Effects Templates - Aepreset.com",
+    "description": "Download Free After Effects Templates - Aepreset.com bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://aepreset.com/",
+    "docs": "https://aepreset.com/",
+    "sourceCode": "",
+    "icon": "aepreset",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "Download Free After Effects Templates - Aepreset.com",
+    "fullDescription": "Download Free After Effects Templates - Aepreset.com was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Download Free After Effects Templates - Aepreset.com is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "cgdownload",
+    "name": "CGDownload",
+    "description": "CGDownload bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://cgdownload.ru/",
+    "docs": "https://cgdownload.ru/",
+    "sourceCode": "",
+    "icon": "cgdownload",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "CGDownload",
+    "fullDescription": "CGDownload was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "CGDownload is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "downloadpirate",
+    "name": "downloadpirate",
+    "description": "downloadpirate bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.downloadpirate.com/",
+    "docs": "https://www.downloadpirate.com/",
+    "sourceCode": "",
+    "icon": "downloadpirate",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "downloadpirate",
+    "fullDescription": "downloadpirate was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "downloadpirate is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "freevideoeffect",
+    "name": "MATESFX - Editing Assets for Video Creators - Freevideoeffect",
+    "description": "MATESFX - Editing Assets for Video Creators - Freevideoeffect bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://freevideoeffect.com/",
+    "docs": "https://freevideoeffect.com/",
+    "sourceCode": "",
+    "icon": "freevideoeffect",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "MATESFX - Editing Assets for Video Creators - Freevideoeffect",
+    "fullDescription": "MATESFX - Editing Assets for Video Creators - Freevideoeffect was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "MATESFX - Editing Assets for Video Creators - Freevideoeffect is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "gfxfather",
+    "name": "GFXFather - For Graphics Designers",
+    "description": "GFXFather - For Graphics Designers bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://gfxfather.com/",
+    "docs": "https://gfxfather.com/",
+    "sourceCode": "",
+    "icon": "gfxfather",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "GFXFather - For Graphics Designers",
+    "fullDescription": "GFXFather - For Graphics Designers was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "GFXFather - For Graphics Designers is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "gfxplugin",
+    "name": "GFXPlugin.com",
+    "description": "GFXPlugin.com bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://gfxplugin.com/",
+    "docs": "https://gfxplugin.com/",
+    "sourceCode": "",
+    "icon": "gfxplugin",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "GFXPlugin.com",
+    "fullDescription": "GFXPlugin.com was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "GFXPlugin.com is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "intro-hd",
+    "name": "INTRO HD - Free After Effects Templates - Premiere Pro Templates",
+    "description": "INTRO HD - Free After Effects Templates - Premiere Pro Templates bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://intro-hd.net/",
+    "docs": "https://intro-hd.net/",
+    "sourceCode": "",
+    "icon": "intro-hd",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "INTRO HD - Free After Effects Templates - Premiere Pro Templates",
+    "fullDescription": "INTRO HD - Free After Effects Templates - Premiere Pro Templates was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "INTRO HD - Free After Effects Templates - Premiere Pro Templates is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "psdly",
+    "name": "Psdly - Download Free Premium Graphics Design Elements & Web Theme",
+    "description": "Psdly - Download Free Premium Graphics Design Elements & Web Theme bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.psdly.to/",
+    "docs": "https://www.psdly.to/",
+    "sourceCode": "",
+    "icon": "psdly",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "Psdly - Download Free Premium Graphics Design Elements & Web Theme",
+    "fullDescription": "Psdly - Download Free Premium Graphics Design Elements & Web Theme was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Psdly - Download Free Premium Graphics Design Elements & Web Theme is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "usersdrive",
+    "name": "Files of introhd",
+    "description": "Files of introhd bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://usersdrive.com/users/introhd",
+    "docs": "https://usersdrive.com/users/introhd",
+    "sourceCode": "",
+    "icon": "usersdrive",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "Files of introhd",
+    "fullDescription": "Files of introhd was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Files of introhd is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "usersdrive-files-of-vfxdownload",
+    "name": "Files of VFXDownload",
+    "description": "Files of VFXDownload bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://usersdrive.com/users/VFXDownload",
+    "docs": "https://usersdrive.com/users/VFXDownload",
+    "sourceCode": "",
+    "icon": "usersdrive",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "Files of VFXDownload",
+    "fullDescription": "Files of VFXDownload was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Files of VFXDownload is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "vfxdownload",
+    "name": "VFXDownload.Net - Free After Effects & Premiere Pro Templates",
+    "description": "VFXDownload.Net - Free After Effects & Premiere Pro Templates bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://vfxdownload.net/",
+    "docs": "https://vfxdownload.net/",
+    "sourceCode": "",
+    "icon": "vfxdownload",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "VFXDownload.Net - Free After Effects & Premiere Pro Templates",
+    "fullDescription": "VFXDownload.Net - Free After Effects & Premiere Pro Templates was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "VFXDownload.Net - Free After Effects & Premiere Pro Templates is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
+  },
+  {
+    "slug": "vfxmed",
+    "name": "Vfxmed",
+    "description": "Vfxmed bookmarked for vfx download resources.",
+    "category": "VFX Download",
+    "parentCategory": "downloads",
+    "subcategory": "vfx-download",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.vfxmed.com/",
+    "docs": "https://www.vfxmed.com/",
+    "sourceCode": "",
+    "icon": "vfxmed",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "vfx-download",
+      "vfx",
+      "download"
+    ],
+    "atGlance": "Vfxmed",
+    "fullDescription": "Vfxmed was imported from the browser bookmark folder \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "Vfxmed is saved as a vfx download bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the original browser folder path \"Bookmarks bar > ALL > DOWNLOADS > VFX Download\".",
+        "icon": "check"
+      },
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted into the downloads collection for focused browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": []
   },
   {
     "slug": "aiven",

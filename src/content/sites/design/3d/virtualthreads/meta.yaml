@@ -52,10 +52,24 @@ additionalFeatures:
     description: Kept with tags and metadata for repeat use.
     icon: check
 similarTools:
-  - slug: spline
-    name: Spline
-    description: Spline bookmarked for 3d resources.
+  - slug: free3d
+    name: 3D Models for Free - Free3D.com
+    description: 3D Models for Free - Free3D.com bookmarked for 3d resources.
     stars: 0
     addedDaysAgo: 0
     verified: false
-    website: https://app.spline.design/home
+    website: https://free3d.com/
+  - slug: turbosquid
+    name: "3D Models for Professionals :: TurboSquid"
+    description: "3D Models for Professionals :: TurboSquid bookmarked for 3d resources."
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.turbosquid.com/
+  - slug: sketchfab
+    name: Download Free 3D Models - Royalty Free - Sketchfab
+    description: Download Free 3D Models - Royalty Free - Sketchfab bookmarked for 3d resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://sketchfab.com/features/free-3d-models

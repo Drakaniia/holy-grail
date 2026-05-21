@@ -9,11 +9,16 @@ import {
   ChevronRight,
   Code2,
   Component as ComponentIcon,
+  Disc3,
+  Download,
   FileText,
+  Film,
+  Gamepad2,
   Globe,
   GraduationCap,
   Github,
   Hammer,
+  HardDriveDownload,
   Image,
   Lightbulb,
   MessageSquare,
@@ -39,12 +44,13 @@ import { useAdminStore } from '@/stores/admin'
 const route = useRoute()
 const admin = useAdminStore()
 
-type SiteGroup = 'ai' | 'design' | 'development'
+type SiteGroup = 'ai' | 'design' | 'development' | 'downloads'
 
 const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   ai: true,
   design: true,
   development: true,
+  downloads: true,
 })
 
 const isSiteGroupRoute = (path: string, group: SiteGroup) => {
@@ -73,6 +79,10 @@ watch(
     if (isSiteGroupRoute(path, 'development')) {
       expandedGroups.development = true
     }
+
+    if (isSiteGroupRoute(path, 'downloads')) {
+      expandedGroups.downloads = true
+    }
   },
   { immediate: true },
 )
@@ -80,8 +90,17 @@ watch(
 const isAiExpanded = computed(() => expandedGroups.ai)
 const isDesignExpanded = computed(() => expandedGroups.design)
 const isDevelopmentExpanded = computed(() => expandedGroups.development)
+const isDownloadsExpanded = computed(() => expandedGroups.downloads)
 
 const sitesNav = [{ name: 'Platforms', icon: Server, route: '/sites/platforms' }]
+
+const downloadsSubcategories = [
+  { name: 'Game Download', icon: Gamepad2, route: '/sites/downloads/game-download' },
+  { name: 'VFX Download', icon: Video, route: '/sites/downloads/vfx-download' },
+  { name: 'Software Download', icon: HardDriveDownload, route: '/sites/downloads/software-download' },
+  { name: 'Torrents', icon: Disc3, route: '/sites/downloads/torrents' },
+  { name: 'Movies', icon: Film, route: '/sites/downloads/movies' },
+]
 
 const aiSubcategories = [
   { name: 'Image', icon: Image, route: '/sites/ai/image' },
@@ -295,6 +314,60 @@ const skillsNav = [
               >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
                   <li v-for="item in developmentSubcategories" :key="item.name">
+                    <RouterLink
+                      :to="item.route"
+                      class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
+                      :class="
+                        isActive(item.route)
+                          ? 'bg-zinc-900 text-white'
+                          : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+                      "
+                    >
+                      <div
+                        v-if="isActive(item.route)"
+                        class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
+                      ></div>
+                      <component :is="item.icon" class="w-3.5 h-3.5" />
+                      <span class="font-medium">{{ item.name }}</span>
+                    </RouterLink>
+                  </li>
+                </ul>
+              </li>
+            </Transition>
+
+            <li>
+              <button
+                type="button"
+                class="w-full flex items-center rounded-md transition-colors group text-xs"
+                :class="
+                  isActive('/sites/downloads', false)
+                    ? 'bg-zinc-900 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+                "
+                :aria-expanded="isDownloadsExpanded"
+                aria-controls="sidebar-downloads-branch"
+                aria-label="Toggle downloads sites"
+                @click="toggleGroup('downloads')"
+              >
+                <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
+                  <Download class="w-3.5 h-3.5 flex-shrink-0" />
+                  <span class="font-medium">Downloads</span>
+                </span>
+                <ChevronRight
+                  class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
+                  :class="{ 'rotate-90': isDownloadsExpanded }"
+                />
+              </button>
+            </li>
+
+            <Transition name="sidebar-group">
+              <li
+                v-if="isDownloadsExpanded"
+                id="sidebar-downloads-branch"
+                class="sidebar-group-shell"
+              >
+                <ul class="sidebar-group-inner ml-4 space-y-0.5">
+                  <li v-for="item in downloadsSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"

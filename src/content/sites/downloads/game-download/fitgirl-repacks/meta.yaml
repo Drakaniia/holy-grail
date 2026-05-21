@@ -1,0 +1,51 @@
+slug: fitgirl-repacks
+name: Popular Repacks - FitGirl Repacks
+description: Popular Repacks - FitGirl Repacks bookmarked for game download resources.
+category: Game Download
+parentCategory: downloads
+subcategory: game-download
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://fitgirl-repacks.site/popular-repacks/
+docs: https://fitgirl-repacks.site/popular-repacks/
+sourceCode: ""
+icon: fitgirl-repacks
+verified: false
+featured: false
+tags:
+  - bookmark
+  - downloads
+  - game-download
+  - game
+  - download
+atGlance: Popular Repacks - FitGirl Repacks
+fullDescription: >-
+  Popular Repacks - FitGirl Repacks was imported from the browser bookmark folder "Bookmarks bar >
+  ALL > DOWNLOADS > Game Download".
+coreFeatures:
+  - name: Download Source
+    description: Popular Repacks - FitGirl Repacks is saved as a game download bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Open the saved source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Imported Bookmark
+    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Game Download".
+    icon: check
+  - name: Grouped by Type
+    description: Sorted into the downloads collection for focused browsing.
+    icon: check
+similarTools: []

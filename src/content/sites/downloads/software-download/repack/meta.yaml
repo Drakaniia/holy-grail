@@ -1,0 +1,53 @@
+slug: repack
+name: REPACK.ME
+description: REPACK.ME bookmarked for software download resources.
+category: Software Download
+parentCategory: downloads
+subcategory: software-download
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Imported May 20, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://repack.me/
+docs: https://repack.me/
+sourceCode: ""
+icon: repack
+verified: false
+featured: false
+tags:
+  - bookmark
+  - downloads
+  - software-download
+  - software
+  - download
+atGlance: REPACK.ME
+fullDescription: >-
+  REPACK.ME was imported from the browser bookmark folder "Bookmarks bar > ALL > DOWNLOADS >
+  Software Download".
+coreFeatures:
+  - name: Download Source
+    description: REPACK.ME is saved as a software download bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Open the saved source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Imported Bookmark
+    description: >-
+      Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Software
+      Download".
+    icon: check
+  - name: Grouped by Type
+    description: Sorted into the downloads collection for focused browsing.
+    icon: check
+similarTools: []

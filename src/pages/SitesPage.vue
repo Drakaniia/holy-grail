@@ -19,6 +19,7 @@ const routeLabels: Record<string, string> = {
   ai: 'AI',
   design: 'Design',
   development: 'Development',
+  downloads: 'Downloads',
   image: 'Image',
   api: 'API',
   detector: 'Detector',
@@ -42,6 +43,11 @@ const routeLabels: Record<string, string> = {
   repositories: 'Repositories',
   mcp: 'MCP',
   monitoring: 'Monitoring',
+  'game-download': 'Game Download',
+  'vfx-download': 'VFX Download',
+  'software-download': 'Software Download',
+  torrents: 'Torrents',
+  movies: 'Movies',
 }
 
 const pageTitle = computed(() => {
@@ -59,6 +65,7 @@ const pageDescription = computed(() => {
     ai: 'AI-powered tools and services',
     design: 'Design resources, inspiration, and tools',
     development: 'Learning paths, references, repositories, and developer workflow resources',
+    downloads: 'Saved download source bookmarks grouped by media and file type',
     image: 'AI image generation and editing tools',
     api: 'AI APIs and model providers',
     detector: 'AI detection and analysis tools',
@@ -82,6 +89,11 @@ const pageDescription = computed(() => {
     repositories: 'Source repositories and curated code collections',
     mcp: 'Model Context Protocol tools, docs, servers, and integrations',
     monitoring: 'Uptime, status, analytics, and production observability tools',
+    'game-download': 'Game download source bookmarks from the imported browser folder',
+    'vfx-download': 'VFX assets, templates, and graphics download source bookmarks',
+    'software-download': 'Software download source bookmarks from the imported browser folder',
+    torrents: 'Torrent index and search bookmarks from the imported browser folder',
+    movies: 'Movie download source bookmarks from the imported browser folder',
   }
   return descriptions[subcategory.value || category.value] || 'Curated tools and resources'
 })
