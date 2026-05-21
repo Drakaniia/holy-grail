@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { computed, shallowRef } from 'vue'
 import type { Session, User } from '@supabase/supabase-js'
 import { hasSupabaseConfig, supabase } from '@/lib/supabase'
+import { getAuthRedirectOrigin } from '@/lib/publicUrl'
 import type { AuthCredentials, AuthProvider } from '@/types/auth'
 
 interface AuthActionResult {
@@ -18,6 +19,7 @@ const AUTH_CONFIG_ERROR =
   'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to .env.local.'
 const EMAIL_RATE_LIMIT_ERROR =
   'Supabase email sending is rate limited for this project. Wait about an hour before trying again, or configure custom SMTP in Supabase Auth.'
+const OAUTH_NEXT_STORAGE_KEY = 'holy-grail-oauth-next'
 
 function getProviderLabel(provider: AuthProvider) {
   return provider === 'github' ? 'GitHub' : 'Google'
@@ -63,14 +65,6 @@ function getOAuthErrorMessage(error: unknown, provider: AuthProvider): string {
   return message
 }
 
-function getRedirectOrigin() {
-  if (typeof window === 'undefined') {
-    return ''
-  }
-
-  return window.location.origin
-}
-
 function getRedirectPath(path: string) {
   if (!path.startsWith('/') || path.startsWith('//')) {
     return '/account'
@@ -81,19 +75,43 @@ function getRedirectPath(path: string) {
 
 function getRedirectUrl(path = '/account') {
   const redirectPath = getRedirectPath(path)
+  const origin = getAuthRedirectOrigin()
 
-  if (typeof window === 'undefined') {
+  if (!origin) {
     return redirectPath
   }
 
-  return `${getRedirectOrigin()}${redirectPath}`
+  return `${origin}${redirectPath}`
 }
 
-function getOAuthCallbackUrl(path = '/account') {
-  const redirectPath = getRedirectPath(path)
-  const callbackParams = new URLSearchParams({ next: redirectPath })
+function getOAuthCallbackUrl() {
+  return getRedirectUrl('/auth/callback')
+}
 
-  return getRedirectUrl(`/auth/callback?${callbackParams.toString()}`)
+function storeOAuthRedirectPath(path = '/account') {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  try {
+    window.sessionStorage.setItem(OAUTH_NEXT_STORAGE_KEY, getRedirectPath(path))
+  } catch {
+  }
+}
+
+function consumeStoredOAuthRedirectPath() {
+  if (typeof window === 'undefined') {
+    return '/account'
+  }
+
+  try {
+    const storedPath = window.sessionStorage.getItem(OAUTH_NEXT_STORAGE_KEY)
+    window.sessionStorage.removeItem(OAUTH_NEXT_STORAGE_KEY)
+
+    return storedPath ? getRedirectPath(storedPath) : '/account'
+  } catch {
+    return '/account'
+  }
 }
 
 function getMetadataValue(metadata: Record<string, unknown> | undefined, keys: string[]) {
@@ -389,10 +407,12 @@ export const useAuthStore = defineStore('auth', () => {
     actionError.value = null
 
     try {
+      storeOAuthRedirectPath(redirectPath)
+
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: getOAuthCallbackUrl(redirectPath),
+          redirectTo: getOAuthCallbackUrl(),
         },
       })
 
@@ -479,6 +499,7 @@ export const useAuthStore = defineStore('auth', () => {
     avatarUrl,
     clearError,
     completeOAuthRedirect,
+    consumeStoredOAuthRedirectPath,
     displayName,
     initialize,
     initialized,

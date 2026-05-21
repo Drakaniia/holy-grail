@@ -12,6 +12,26 @@ const SkillDetail = () => import('@/pages/SkillDetail.vue')
 const SkillsPage = () => import('@/pages/SkillsPage.vue')
 const SubmitPage = () => import('@/pages/SubmitPage.vue')
 
+function hasStringQueryValue(value: unknown) {
+  return typeof value === 'string' && value.trim().length > 0
+}
+
+function hasOAuthCallbackQuery(query: Record<string, unknown>) {
+  return (
+    hasStringQueryValue(query.code) ||
+    hasStringQueryValue(query.error) ||
+    hasStringQueryValue(query.error_description)
+  )
+}
+
+function getSafeNextPath(value: unknown) {
+  if (typeof value === 'string' && value.startsWith('/') && !value.startsWith('//')) {
+    return value
+  }
+
+  return '/account'
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -95,6 +115,17 @@ router.beforeEach(async (to) => {
 
   if (to.name === 'auth-callback') {
     return
+  }
+
+  if (hasOAuthCallbackQuery(to.query)) {
+    return {
+      name: 'auth-callback',
+      query: {
+        ...to.query,
+        next: getSafeNextPath(to.query.next),
+      },
+      replace: true,
+    }
   }
 
   await auth.initialize()

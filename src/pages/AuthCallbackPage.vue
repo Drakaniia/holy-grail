@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, shallowRef } from 'vue'
+import { onBeforeUnmount, onMounted, shallowRef } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Loader2 } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
@@ -17,15 +17,15 @@ const CALLBACK_TIMEOUT_MS = 22000
 let slowTimer: ReturnType<typeof window.setTimeout> | null = null
 let timeoutTimer: ReturnType<typeof window.setTimeout> | null = null
 
-const safeNextPath = computed(() => {
+function getSafeQueryNextPath() {
   const next = route.query.next
 
   if (typeof next === 'string' && next.startsWith('/') && !next.startsWith('//')) {
     return next
   }
 
-  return '/account'
-})
+  return null
+}
 
 type OAuthCompletion = Awaited<ReturnType<typeof auth.completeOAuthRedirect>>
 
@@ -108,7 +108,7 @@ onMounted(async () => {
     statusMessage.value = 'Opening your account...'
     statusDetail.value = 'Signed in successfully.'
     toast.success(`Welcome, ${auth.displayName}.`, `Signed in with ${auth.providerLabel}.`)
-    await router.replace(safeNextPath.value)
+    await router.replace(getSafeQueryNextPath() ?? auth.consumeStoredOAuthRedirectPath())
     return
   }
 
