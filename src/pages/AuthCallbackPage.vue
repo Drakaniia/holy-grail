@@ -121,17 +121,48 @@ onBeforeUnmount(clearTimers)
 </script>
 
 <template>
-  <div class="flex min-h-screen items-center justify-center bg-black px-4 text-white">
+  <div class="auth-callback-shell flex min-h-screen items-center justify-center bg-black px-4 text-white">
     <div
-      class="flex max-w-sm items-start gap-3 border border-zinc-800 bg-[#060606] px-5 py-4 text-sm text-zinc-300"
+      class="auth-callback-card flex max-w-sm items-start gap-3 border border-zinc-800 bg-[#060606] px-5 py-4 text-sm text-zinc-300"
     >
-      <Loader2 class="h-4 w-4 animate-spin text-accent-300" />
+      <Loader2 class="auth-callback-spinner h-4 w-4 animate-spin text-accent-300" />
       <div class="min-w-0">
-        <p class="font-semibold text-white">{{ statusMessage }}</p>
-        <p class="mt-1 leading-5 text-zinc-500" :class="isTakingLong ? 'text-accent-200' : ''">
+        <p class="auth-callback-title font-semibold text-white">{{ statusMessage }}</p>
+        <p
+          class="auth-callback-detail mt-1 leading-5 text-zinc-500"
+          :class="isTakingLong ? 'text-accent-200' : ''"
+        >
           {{ statusDetail }}
         </p>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+:global(html.light .auth-callback-shell) {
+  background:
+    radial-gradient(circle at top left, rgba(255, 140, 26, 0.13), transparent 34rem),
+    var(--mocha-bg) !important;
+  color: var(--mocha-text) !important;
+}
+
+:global(html.light .auth-callback-card) {
+  border-color: var(--mocha-border) !important;
+  background: var(--mocha-surface) !important;
+  color: var(--mocha-text-soft) !important;
+  box-shadow: 0 28px 70px rgba(86, 64, 45, 0.16) !important;
+}
+
+:global(html.light .auth-callback-title) {
+  color: var(--mocha-text) !important;
+}
+
+:global(html.light .auth-callback-detail) {
+  color: var(--mocha-muted) !important;
+}
+
+:global(html.light .auth-callback-spinner) {
+  color: #cc6100 !important;
+}
+</style>

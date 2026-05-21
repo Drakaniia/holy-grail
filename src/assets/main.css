@@ -134,6 +134,26 @@ html.light .text-zinc-600 {
   color: var(--mocha-faint) !important;
 }
 
+html.light .text-emerald-100,
+html.light .text-emerald-200,
+html.light .text-emerald-300 {
+  color: #047857 !important;
+}
+
+html.light .text-amber-100,
+html.light .text-amber-200,
+html.light .text-amber-300 {
+  color: #b45309 !important;
+}
+
+html.light .text-red-100,
+html.light .text-red-200,
+html.light .text-red-300,
+html.light .hover\:text-red-100:hover,
+html.light .hover\:text-red-200:hover {
+  color: #b91c1c !important;
+}
+
 html.light .border-gray-700,
 html.light .border-gray-800,
 html.light .border-zinc-700,
@@ -151,6 +171,14 @@ html.light .theme-toggle {
   background:
     linear-gradient(135deg, rgba(255, 140, 26, 0.14), transparent 60%),
     var(--mocha-surface);
+}
+
+html.light .theme-toggle:hover {
+  border-color: #ff8c1a !important;
+  background:
+    linear-gradient(135deg, rgba(255, 140, 26, 0.18), transparent 60%),
+    var(--mocha-surface-strong) !important;
+  color: #cc6100 !important;
 }
 
 html.light input,

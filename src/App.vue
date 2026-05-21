@@ -8,7 +8,9 @@ import Footer from './components/Footer.vue'
 
 const CommandPalette = defineAsyncComponent(() => import('./components/search/CommandPalette.vue'))
 const route = useRoute()
-const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
+const isAuthRoute = computed(
+  () => route.name === 'login' || route.name === 'signup' || route.name === 'auth-callback',
+)
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
 

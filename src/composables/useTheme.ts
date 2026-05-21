@@ -66,9 +66,7 @@ export function useTheme() {
   initializeTheme()
 
   const isLightMode = computed(() => theme.value === 'light')
-  const themeToggleLabel = computed(() =>
-    isLightMode.value ? 'Switch to dark mode' : 'Switch to light mocha mode',
-  )
+  const themeToggleLabel = computed(() => 'Toggle Theme')
 
   return {
     theme: readonly(theme),
