@@ -30,13 +30,13 @@ tags:
   - automation
 atGlance: "VectorShift: The End-to-End AI Automations Platform"
 fullDescription: >-
-  VectorShift: The End-to-End AI Automations Platform was imported from the browser bookmark folder
-  "Bookmarks bar > AI > Automation".
+  VectorShift: The End-to-End AI Automations Platform is kept as an ai automation resource for
+  AI-assisted workflows.
 coreFeatures:
   - name: AI Workflow Support
     description: >-
-      VectorShift: The End-to-End AI Automations Platform is tracked as a ai automation resource for
-      AI-assisted workflows.
+      VectorShift: The End-to-End AI Automations Platform is tracked as an ai automation resource
+      for AI-assisted workflows.
     icon: check
   - name: Direct Web Launch
     description: The live product is available from the saved website link.

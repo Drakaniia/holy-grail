@@ -32,12 +32,12 @@ tags:
   - svg
 atGlance: lucide-animated | Free Animated React Icons Library
 fullDescription: >-
-  lucide-animated | Free Animated React Icons Library was imported from the browser bookmark folder
-  "Bookmarks bar > CMPNTS > Icons".
+  lucide-animated - Free Animated React Icons Library is kept as an icons/svg resource for design
+  inspiration, assets, and reference work.
 coreFeatures:
   - name: Design Resource
     description: >-
-      lucide-animated - Free Animated React Icons Library is cataloged as a icons/svg resource for
+      lucide-animated - Free Animated React Icons Library is cataloged as an icons/svg resource for
       design work.
     icon: check
   - name: Visual Reference

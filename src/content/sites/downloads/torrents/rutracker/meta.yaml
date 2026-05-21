@@ -29,21 +29,45 @@ tags:
   - downloads
   - torrents
 atGlance: RuTracker.org
-fullDescription: >-
-  RuTracker.org was imported from the browser bookmark folder "Bookmarks bar > ALL > DOWNLOADS >
-  Torrents".
+fullDescription: RuTracker.org is kept as a torrents source in the downloads collection.
 coreFeatures:
   - name: Download Source
-    description: RuTracker.org is saved as a torrents bookmark.
+    description: RuTracker.org is cataloged as a torrents bookmark.
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
     icon: check
 additionalFeatures:
-  - name: Imported Bookmark
-    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Torrents".
-    icon: check
   - name: Grouped by Type
-    description: Sorted into the downloads collection for focused browsing.
+    description: Sorted by games, VFX, software, torrents, or movies.
     icon: check
-similarTools: []
+  - name: Imported Bookmark
+    description: Preserves the saved browser bookmark link.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged under the downloads collection for search and filtering.
+    icon: check
+similarTools:
+  - slug: dodi-repacks-2
+    name: DODI Repacks
+    description: DODI Repacks bookmarked for torrents resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dodi-repacks.site/
+  - slug: torrentgalaxy
+    name: Download Latest Top Torrents by Subcategories torrentGalaxy
+    description: Download Latest Top Torrents by Subcategories torrentGalaxy bookmarked for torrents resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://torrentgalaxy.one/
+  - slug: therarbg
+    name: Download Latest Top Torrents in Multiple Categories The RarBg
+    description: >-
+      Download Latest Top Torrents in Multiple Categories The RarBg bookmarked for torrents
+      resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://therarbg.com/

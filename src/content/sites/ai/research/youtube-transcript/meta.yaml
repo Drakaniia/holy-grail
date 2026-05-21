@@ -33,26 +33,23 @@ tags:
   - transcript
   - api
 atGlance: YouTube transcript extraction with downloads, summaries, bulk tools, and an API.
-fullDescription: YouTube Transcript turns public YouTube videos into clean transcripts that can be copied, downloaded, summarized, or sent into API and automation workflows.
+fullDescription: YouTube Transcript is kept as an ai research resource for AI-assisted workflows.
 coreFeatures:
-  - name: Transcript Extraction
-    description: Converts public YouTube videos into readable text transcripts for notes, research, and content reuse.
+  - name: AI Workflow Support
+    description: YouTube Transcript is tracked as an ai research resource for AI-assisted workflows.
     icon: check
-  - name: Copy and Download
-    description: Provides one-click transcript copying and downloads so extracted text can move into other tools quickly.
-    icon: check
-  - name: API Access
-    description: Offers an API for fetching transcripts from video IDs, playlists, and automation workflows.
+  - name: Direct Web Launch
+    description: The live product is available from the saved website link.
     icon: check
 additionalFeatures:
-  - name: AI Summaries
-    description: Summarizes long transcripts into shorter notes for faster review and repurposing.
+  - name: Cloud Access
+    description: Designed to be used through a hosted web experience.
     icon: check
-  - name: Bulk Extraction
-    description: Supports channel, playlist, and CSV-based extraction for processing more than one video.
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the tool.
     icon: check
-  - name: Browser Extension
-    description: Provides a Chrome extension path for transcript access from the browser.
+  - name: Catalog Tags
+    description: Tagged by AI category and subcategory for browsing.
     icon: check
 similarTools:
   - slug: getliner

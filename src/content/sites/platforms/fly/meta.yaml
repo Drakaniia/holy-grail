@@ -29,7 +29,7 @@ tags:
   - platforms
   - hosting
 atGlance: Deploy app servers and full-stack applications close to users.
-fullDescription: Fly.io is tracked as a public hosting platform resource from the CODE bookmarks.
+fullDescription: Fly.io is kept as a platform resource for deployment or infrastructure work.
 coreFeatures:
   - name: Platform Service
     description: Fly.io is tracked as a platform resource for deployment or infrastructure work.

@@ -31,21 +31,43 @@ tags:
   - vfx
   - download
 atGlance: Files of VFXDownload
-fullDescription: >-
-  Files of VFXDownload was imported from the browser bookmark folder "Bookmarks bar > ALL >
-  DOWNLOADS > VFX Download".
+fullDescription: Files of VFXDownload is kept as a vfx download source in the downloads collection.
 coreFeatures:
   - name: Download Source
-    description: Files of VFXDownload is saved as a vfx download bookmark.
+    description: Files of VFXDownload is cataloged as a vfx download bookmark.
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
     icon: check
 additionalFeatures:
-  - name: Imported Bookmark
-    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > VFX Download".
-    icon: check
   - name: Grouped by Type
-    description: Sorted into the downloads collection for focused browsing.
+    description: Sorted by games, VFX, software, torrents, or movies.
     icon: check
-similarTools: []
+  - name: Imported Bookmark
+    description: Preserves the saved browser bookmark link.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged under the downloads collection for search and filtering.
+    icon: check
+similarTools:
+  - slug: cgdownload
+    name: CGDownload
+    description: CGDownload bookmarked for vfx download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://cgdownload.ru/
+  - slug: aepreset
+    name: Download Free After Effects Templates - Aepreset.com
+    description: Download Free After Effects Templates - Aepreset.com bookmarked for vfx download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://aepreset.com/
+  - slug: downloadpirate
+    name: downloadpirate
+    description: downloadpirate bookmarked for vfx download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.downloadpirate.com/

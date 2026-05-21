@@ -29,9 +29,7 @@ tags:
   - ai
   - chat
 atGlance: "Microsoft Copilot: Your AI companion"
-fullDescription: >-
-  Microsoft Copilot: Your AI companion was imported from the browser bookmark folder "Bookmarks bar
-  > AI > CHAT".
+fullDescription: "Microsoft Copilot: Your AI companion is kept as an ai chat resource for AI-assisted workflows."
 coreFeatures:
   - name: Conversational Workspace
     description: >-

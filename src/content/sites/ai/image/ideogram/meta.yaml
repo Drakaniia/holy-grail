@@ -29,10 +29,10 @@ tags:
   - ai
   - image
 atGlance: Ideogram
-fullDescription: Ideogram was imported from the browser bookmark folder "Bookmarks bar > AI > Image".
+fullDescription: Ideogram is kept as an ai image resource for AI-assisted workflows.
 coreFeatures:
   - name: AI Workflow Support
-    description: Ideogram is tracked as a ai image resource for AI-assisted workflows.
+    description: Ideogram is tracked as an ai image resource for AI-assisted workflows.
     icon: check
   - name: Direct Web Launch
     description: The live product is available from the saved website link.

@@ -29,7 +29,7 @@ tags:
   - development
   - learning
 atGlance: Exercism
-fullDescription: Exercism was imported from the browser bookmark folder "Bookmarks bar > CODE".
+fullDescription: Exercism is kept as a learning resource for building and shipping software.
 coreFeatures:
   - name: Developer Resource
     description: Exercism is tracked as a learning resource for building and shipping software.

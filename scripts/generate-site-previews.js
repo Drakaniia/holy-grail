@@ -148,6 +148,11 @@ function sortManifest(manifest) {
   return Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
 }
 
+function pruneManifest(manifest, sites) {
+  const validSlugs = new Set(sites.map(site => site.slug).filter(Boolean))
+  return Object.fromEntries(Object.entries(manifest).filter(([slug]) => validSlugs.has(slug)))
+}
+
 async function preparePage(page) {
   await page.setViewport({
     width: defaults.width,
@@ -378,7 +383,7 @@ async function main() {
   }
 
   const sites = readJson(sitesIndexPath, [])
-  const manifest = readJson(srcManifestPath, {})
+  const manifest = pruneManifest(readJson(srcManifestPath, {}), sites)
   const queue = eligibleSites(sites, manifest, options)
   const failures = []
 

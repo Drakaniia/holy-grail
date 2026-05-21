@@ -30,12 +30,12 @@ tags:
   - automation
 atGlance: "Relay.app: Create AI agents that work for you"
 fullDescription: >-
-  Relay.app: Create AI agents that work for you was imported from the browser bookmark folder
-  "Bookmarks bar > AI > Automation".
+  Relay.app: Create AI agents that work for you is kept as an ai automation resource for AI-assisted
+  workflows.
 coreFeatures:
   - name: AI Workflow Support
     description: >-
-      Relay.app: Create AI agents that work for you is tracked as a ai automation resource for
+      Relay.app: Create AI agents that work for you is tracked as an ai automation resource for
       AI-assisted workflows.
     icon: check
   - name: Direct Web Launch

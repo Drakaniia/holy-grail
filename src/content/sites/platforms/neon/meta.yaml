@@ -29,10 +29,10 @@ tags:
   - platforms
   - database
 atGlance: Serverless Postgres platform for developer workflows.
-fullDescription: Neon is tracked as a public database platform resource from the CODE bookmarks.
+fullDescription: Neon is kept as a platform resource for deployment or infrastructure work.
 coreFeatures:
   - name: Platform Service
-    description: Neon is tracked as a platform resource for database and infrastructure work.
+    description: Neon is tracked as a platform resource for deployment or infrastructure work.
     icon: check
   - name: Hosted Access
     description: The primary service is available through the website link.

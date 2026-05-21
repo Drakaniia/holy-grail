@@ -29,9 +29,7 @@ tags:
   - development
   - monitoring
 atGlance: Better Stack Uptime
-fullDescription: >-
-  Better Stack Uptime was imported from the browser bookmark folder "Bookmarks bar > CODE >
-  uptimeMonitor".
+fullDescription: Better Stack Uptime is kept as a monitoring resource for building and shipping software.
 coreFeatures:
   - name: Developer Resource
     description: Better Stack Uptime is tracked as a monitoring resource for building and shipping software.

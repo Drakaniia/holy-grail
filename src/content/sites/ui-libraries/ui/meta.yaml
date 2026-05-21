@@ -30,7 +30,7 @@ tags:
   - ui
   - library
 atGlance: Aceternity UI
-fullDescription: Aceternity UI was imported from the browser bookmark folder "Bookmarks bar > CMPNTS".
+fullDescription: Aceternity UI is kept as a UI component and design system reference.
 coreFeatures:
   - name: Component Resource
     description: Aceternity UI is tracked as a UI component or library resource.

@@ -30,9 +30,7 @@ tags:
   - ui
   - library
 atGlance: Introduction - shadcn-svelte
-fullDescription: >-
-  Introduction - shadcn-svelte was imported from the browser bookmark folder "Bookmarks bar >
-  CMPNTS".
+fullDescription: Introduction - shadcn-svelte is kept as a UI component and design system reference.
 coreFeatures:
   - name: Component Resource
     description: Introduction - shadcn-svelte is tracked as a UI component or library resource.

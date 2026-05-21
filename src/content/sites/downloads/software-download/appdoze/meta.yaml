@@ -32,22 +32,44 @@ tags:
   - download
 atGlance: AppDoze - THE TRUSTED APPLICATION STORE
 fullDescription: >-
-  AppDoze - THE TRUSTED APPLICATION STORE was imported from the browser bookmark folder "Bookmarks
-  bar > ALL > DOWNLOADS > Software Download".
+  AppDoze - THE TRUSTED APPLICATION STORE is kept as a software download source in the downloads
+  collection.
 coreFeatures:
   - name: Download Source
-    description: AppDoze - THE TRUSTED APPLICATION STORE is saved as a software download bookmark.
+    description: AppDoze - THE TRUSTED APPLICATION STORE is cataloged as a software download bookmark.
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
     icon: check
 additionalFeatures:
-  - name: Imported Bookmark
-    description: >-
-      Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Software
-      Download".
-    icon: check
   - name: Grouped by Type
-    description: Sorted into the downloads collection for focused browsing.
+    description: Sorted by games, VFX, software, torrents, or movies.
     icon: check
-similarTools: []
+  - name: Imported Bookmark
+    description: Preserves the saved browser bookmark link.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged under the downloads collection for search and filtering.
+    icon: check
+similarTools:
+  - slug: dodi-repacks
+    name: Backup Site - DODI Repacks
+    description: Backup Site - DODI Repacks bookmarked for software download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dodi-repacks.site/ddos-attack/
+  - slug: crackshash
+    name: CracksHash - Peace Out Restrictions!
+    description: CracksHash - Peace Out Restrictions! bookmarked for software download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://crackshash.com/
+  - slug: czsofts
+    name: CZsofts - Download Windows and Mac Apps Torrents
+    description: CZsofts - Download Windows and Mac Apps Torrents bookmarked for software download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://czsofts.com/

@@ -38,29 +38,23 @@ tags:
   - full-stack
   - runtime
 atGlance: Production-ready server toolkit for Vite apps that can deploy across runtimes.
-fullDescription: >-
-  Nitro extends Vite applications with server routes, runtime-agnostic builds, filesystem routing,
-  caching, storage, database support, and deployment presets for platforms like Node.js, Bun, Deno,
-  Cloudflare Workers, Netlify, and Vercel.
+fullDescription: Nitro is kept as a tooling resource for building and shipping software.
 coreFeatures:
-  - name: Vite Server Layer
-    description: Adds production-ready server routes and backend capabilities to Vite applications.
+  - name: Developer Resource
+    description: Nitro is tracked as a tooling resource for building and shipping software.
     icon: check
-  - name: Runtime Agnostic Output
-    description: Builds the same codebase for Node.js, Bun, Deno, serverless, edge, and cloud providers.
-    icon: check
-  - name: Filesystem Routing
-    description: Maps files in the routes directory directly to server and API endpoints.
+  - name: Workflow Reference
+    description: The saved link keeps the resource close to related development material.
     icon: check
 additionalFeatures:
-  - name: Built-in Caching
-    description: Supports cached route handlers and server functions backed by Nitro storage.
+  - name: Sorted by Use Case
+    description: Grouped by learning, references, tooling, repositories, MCP, or monitoring.
     icon: check
-  - name: Universal Storage
-    description: Provides a key-value storage layer that can target filesystem, Redis, Cloudflare KV, and more.
+  - name: Browser Ready
+    description: Available from the catalog without local setup.
     icon: check
-  - name: Database Layer
-    description: Includes lightweight SQL database support with SQLite by default and other database drivers.
+  - name: Repeatable Lookup
+    description: Metadata and tags make the resource easy to find later.
     icon: check
 similarTools:
   - slug: vercel

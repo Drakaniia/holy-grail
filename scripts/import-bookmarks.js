@@ -150,6 +150,10 @@ const folderMap = new Map([
     'Bookmarks bar > Design > Insipiration',
     { parentCategory: 'design', subcategory: 'inspiration', category: 'Inspiration' },
   ],
+  [
+    'Bookmarks bar > Design > Inspiration',
+    { parentCategory: 'design', subcategory: 'inspiration', category: 'Inspiration' },
+  ],
   ['Bookmarks bar > Design > Fonts', { parentCategory: 'design', subcategory: 'fonts', category: 'Fonts' }],
   ['Bookmarks bar > Design > 3d', { parentCategory: 'design', subcategory: '3d', category: '3D' }],
   ['Bookmarks bar > ALL > 3D', { parentCategory: 'design', subcategory: '3d', category: '3D' }],
@@ -503,13 +507,20 @@ function displayNameFor(row, slug) {
   return name
 }
 
+function articleFor(value) {
+  return /^[aeiou]/i.test(String(value || '')) ? 'an' : 'a'
+}
+
 function detailSectionsFor(row, config, displayName) {
+  const lowerCategory = config.category.toLowerCase()
+  const article = articleFor(lowerCategory)
+
   if (config.parentCategory === 'downloads') {
     return {
       coreFeatures: [
         {
           name: 'Download Source',
-          description: `${displayName} is saved as a ${config.category.toLowerCase()} bookmark.`,
+          description: `${displayName} is saved as ${article} ${lowerCategory} bookmark.`,
           icon: 'check',
         },
         {
@@ -521,7 +532,7 @@ function detailSectionsFor(row, config, displayName) {
       additionalFeatures: [
         {
           name: 'Imported Bookmark',
-          description: `Preserves the original browser folder path "${row.folder}".`,
+          description: 'Preserves the saved browser bookmark link.',
           icon: 'check',
         },
         {
@@ -538,7 +549,7 @@ function detailSectionsFor(row, config, displayName) {
       coreFeatures: [
         {
           name: 'Design Resource',
-          description: `${displayName} is cataloged as a ${config.category.toLowerCase()} resource for design work.`,
+          description: `${displayName} is cataloged as ${article} ${lowerCategory} resource for design work.`,
           icon: 'check',
         },
         {
@@ -571,7 +582,7 @@ function detailSectionsFor(row, config, displayName) {
     coreFeatures: [
       {
         name: 'Web Resource',
-        description: `${displayName} is tracked as a ${config.category.toLowerCase()} resource.`,
+        description: `${displayName} is tracked as ${article} ${lowerCategory} resource.`,
         icon: 'check',
       },
       {
@@ -583,7 +594,7 @@ function detailSectionsFor(row, config, displayName) {
     additionalFeatures: [
       {
         name: 'Imported Bookmark',
-        description: `Preserves the original browser folder path "${row.folder}".`,
+        description: 'Preserves the saved browser bookmark link.',
         icon: 'check',
       },
       {
@@ -633,11 +644,46 @@ function metadataFor(row, config, slug) {
     featured: false,
     tags: Array.from(new Set(tagParts)),
     atGlance: displayName,
-    fullDescription: `${displayName} was imported from the browser bookmark folder "${row.folder}".`,
+    fullDescription: fullDescriptionFor(displayName, config),
     coreFeatures: detailSections.coreFeatures,
     additionalFeatures: detailSections.additionalFeatures,
     similarTools: [],
   }
+}
+
+function fullDescriptionFor(displayName, config) {
+  const lowerCategory = config.category.toLowerCase()
+  const article = articleFor(lowerCategory)
+
+  if (config.parentCategory === 'design') {
+    return `${displayName} is kept as ${article} ${lowerCategory} resource for design inspiration, assets, and reference work.`
+  }
+
+  if (config.parentCategory === 'ai') {
+    return `${displayName} is kept as ${article} ${lowerCategory} resource for AI-assisted workflows.`
+  }
+
+  if (config.parentCategory === 'development') {
+    return `${displayName} is kept as ${article} ${lowerCategory} resource for building and shipping software.`
+  }
+
+  if (config.parentCategory === 'downloads') {
+    return `${displayName} is kept as ${article} ${lowerCategory} source in the downloads collection.`
+  }
+
+  if (config.parentCategory === 'platforms') {
+    return `${displayName} is kept as a platform resource for deployment or infrastructure work.`
+  }
+
+  if (config.parentCategory === 'cli-tools') {
+    return `${displayName} is kept as a command-line and developer workflow resource.`
+  }
+
+  if (config.parentCategory === 'ui-libraries') {
+    return `${displayName} is kept as a UI component and design system reference.`
+  }
+
+  return `${displayName} is kept as a curated web resource for repeat use.`
 }
 
 function githubRepoUrl(url) {

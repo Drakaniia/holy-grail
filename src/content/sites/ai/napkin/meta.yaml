@@ -30,10 +30,10 @@ tags:
   - bookmark
   - ai
 atGlance: "- Napkin AI"
-fullDescription: "- Napkin AI was imported from the browser bookmark folder \"Bookmarks bar > AI\"."
+fullDescription: "- Napkin AI is kept as an ai resource for AI-assisted workflows."
 coreFeatures:
   - name: AI Workflow Support
-    description: "- Napkin AI is tracked as a ai resource for AI-assisted workflows."
+    description: "- Napkin AI is tracked as an ai resource for AI-assisted workflows."
     icon: check
   - name: Direct Web Launch
     description: The live product is available from the saved website link.

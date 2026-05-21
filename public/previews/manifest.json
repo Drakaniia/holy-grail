@@ -687,20 +687,11 @@
   "dribbble": {
     "image": "/previews/dribbble.webp",
     "small": "/previews/dribbble-sm.webp",
-    "sourceUrl": "https://dribbble.com/tags/web-design-inspiration",
-    "capturedAt": "2026-05-20T08:36:46.645Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 56856
-  },
-  "dribbble-dribbble-discover-the-world-s-top-designers-and-creative-profess": {
-    "image": "/previews/dribbble-dribbble-discover-the-world-s-top-designers-and-creative-profess.webp",
-    "small": "/previews/dribbble-dribbble-discover-the-world-s-top-designers-and-creative-profess-sm.webp",
     "sourceUrl": "https://dribbble.com/",
-    "capturedAt": "2026-05-20T08:36:45.113Z",
+    "capturedAt": "2026-05-21T09:54:52.496Z",
     "width": 960,
     "height": 600,
-    "bytes": 38726
+    "bytes": 42984
   },
   "efecto": {
     "image": "/previews/efecto.webp",

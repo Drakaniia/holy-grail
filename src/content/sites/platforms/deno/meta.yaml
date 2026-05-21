@@ -29,9 +29,7 @@ tags:
   - platforms
   - hosting
 atGlance: Deno Deploy
-fullDescription: >-
-  Deno Deploy was imported from the browser bookmark folder "Bookmarks bar > CODE > Hosting
-  Service".
+fullDescription: Deno Deploy is kept as a platform resource for deployment or infrastructure work.
 coreFeatures:
   - name: Platform Service
     description: Deno Deploy is tracked as a platform resource for deployment or infrastructure work.

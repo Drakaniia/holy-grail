@@ -32,11 +32,11 @@ tags:
   - svg
 atGlance: Your next-level icon library | Nucleo
 fullDescription: >-
-  Your next-level icon library | Nucleo was imported from the browser bookmark folder "Bookmarks bar
-  > CMPNTS > Icons".
+  Your next-level icon library - Nucleo is kept as an icons/svg resource for design inspiration,
+  assets, and reference work.
 coreFeatures:
   - name: Design Resource
-    description: Your next-level icon library - Nucleo is cataloged as a icons/svg resource for design work.
+    description: Your next-level icon library - Nucleo is cataloged as an icons/svg resource for design work.
     icon: check
   - name: Visual Reference
     description: Useful as inspiration, tooling, assets, or implementation reference.

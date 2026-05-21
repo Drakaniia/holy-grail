@@ -6,6 +6,8 @@ const sitesDir = path.resolve('src/content/sites')
 const applyChanges = process.argv.includes('--apply')
 const onlyNew = !process.argv.includes('--all')
 const refreshSimilar = process.argv.includes('--refresh-similar')
+const refreshDescriptions = process.argv.includes('--refresh-descriptions')
+const refreshFeatures = process.argv.includes('--refresh-features')
 
 function readOption(name) {
   const inline = process.argv.find(arg => arg.startsWith(`${name}=`))
@@ -38,10 +40,15 @@ function compactName(name) {
     .trim()
 }
 
+function articleFor(value) {
+  return /^[aeiou]/i.test(String(value || '')) ? 'an' : 'a'
+}
+
 function context(meta) {
   const name = compactName(meta.name)
   const category = meta.category || 'Web Resource'
   const lowerCategory = category.toLowerCase()
+  const article = articleFor(lowerCategory)
   const parent = meta.parentCategory || ''
   const subcategory = meta.subcategory || ''
 
@@ -62,7 +69,10 @@ function context(meta) {
   if (parent === 'ai') {
     return {
       core: [
-        ['AI Workflow Support', `${name} is tracked as a ${lowerCategory} resource for AI-assisted workflows.`],
+        [
+          'AI Workflow Support',
+          `${name} is tracked as ${article} ${lowerCategory} resource for AI-assisted workflows.`,
+        ],
         ['Direct Web Launch', 'The live product is available from the saved website link.'],
       ],
       extra: [
@@ -76,7 +86,7 @@ function context(meta) {
   if (parent === 'design') {
     return {
       core: [
-        ['Design Resource', `${name} is cataloged as a ${lowerCategory} resource for design work.`],
+        ['Design Resource', `${name} is cataloged as ${article} ${lowerCategory} resource for design work.`],
         ['Visual Reference', 'Useful as inspiration, tooling, assets, or implementation reference.'],
       ],
       extra: [
@@ -118,7 +128,10 @@ function context(meta) {
   if (parent === 'development') {
     return {
       core: [
-        ['Developer Resource', `${name} is tracked as a ${lowerCategory} resource for building and shipping software.`],
+        [
+          'Developer Resource',
+          `${name} is tracked as ${article} ${lowerCategory} resource for building and shipping software.`,
+        ],
         ['Workflow Reference', 'The saved link keeps the resource close to related development material.'],
       ],
       extra: [
@@ -132,7 +145,7 @@ function context(meta) {
   if (parent === 'downloads') {
     return {
       core: [
-        ['Download Source', `${name} is cataloged as a ${lowerCategory} bookmark.`],
+        ['Download Source', `${name} is cataloged as ${article} ${lowerCategory} bookmark.`],
         ['Direct Web Launch', 'Open the saved source directly from the catalog entry.'],
       ],
       extra: [
@@ -159,7 +172,7 @@ function context(meta) {
 
   return {
     core: [
-      ['Web Resource', `${name} is tracked as a ${lowerCategory} resource.`],
+      ['Web Resource', `${name} is tracked as ${article} ${lowerCategory} resource.`],
       ['Direct Access', 'Open the live site directly from the catalog.'],
     ],
     extra: [
@@ -233,7 +246,59 @@ function similarToolsFor(site, allSites) {
   return ordered.slice(0, 3).map(toSimilarTool)
 }
 
+function isImportDescription(value) {
+  return /imported from the browser bookmark folder|browser bookmark folder|Bookmarks bar/i.test(
+    String(value || '')
+  )
+}
+
+function hasImportFeature(features) {
+  return (features || []).some(feature => isImportDescription(feature?.description))
+}
+
+function fullDescriptionFor(meta) {
+  const name = compactName(meta.name)
+  const category = String(meta.category || 'web resource').toLowerCase()
+  const article = articleFor(category)
+
+  if (meta.parentCategory === 'design') {
+    return `${name} is kept as ${article} ${category} resource for design inspiration, assets, and reference work.`
+  }
+
+  if (meta.parentCategory === 'ai') {
+    return `${name} is kept as ${article} ${category} resource for AI-assisted workflows.`
+  }
+
+  if (meta.parentCategory === 'development') {
+    return `${name} is kept as ${article} ${category} resource for building and shipping software.`
+  }
+
+  if (meta.parentCategory === 'downloads') {
+    return `${name} is kept as ${article} ${category} source in the downloads collection.`
+  }
+
+  if (meta.parentCategory === 'platforms') {
+    return `${name} is kept as a platform resource for deployment or infrastructure work.`
+  }
+
+  if (meta.parentCategory === 'cli-tools') {
+    return `${name} is kept as a command-line and developer workflow resource.`
+  }
+
+  if (meta.parentCategory === 'ui-libraries') {
+    return `${name} is kept as a UI component and design system reference.`
+  }
+
+  return `${name} is kept as a curated web resource for repeat use.`
+}
+
 function orderedMeta(meta, details) {
+  const shouldRefreshDescription =
+    refreshDescriptions || !meta.fullDescription || isImportDescription(meta.fullDescription)
+  const shouldRefreshCoreFeatures = refreshFeatures || hasImportFeature(meta.coreFeatures)
+  const shouldRefreshAdditionalFeatures =
+    refreshFeatures || hasImportFeature(meta.additionalFeatures)
+
   return {
     slug: meta.slug || '',
     name: meta.name || '',
@@ -261,11 +326,15 @@ function orderedMeta(meta, details) {
     featured: Boolean(meta.featured),
     tags: meta.tags || [],
     atGlance: meta.atGlance || '',
-    fullDescription: meta.fullDescription || '',
-    coreFeatures: meta.coreFeatures?.length ? meta.coreFeatures : details.coreFeatures,
-    additionalFeatures: meta.additionalFeatures?.length
-      ? meta.additionalFeatures
-      : details.additionalFeatures,
+    fullDescription: shouldRefreshDescription ? fullDescriptionFor(meta) : meta.fullDescription,
+    coreFeatures:
+      !shouldRefreshCoreFeatures && meta.coreFeatures?.length
+        ? meta.coreFeatures
+        : details.coreFeatures,
+    additionalFeatures:
+      !shouldRefreshAdditionalFeatures && meta.additionalFeatures?.length
+        ? meta.additionalFeatures
+        : details.additionalFeatures,
     ...(meta.deployCompose ? { deployCompose: meta.deployCompose } : {}),
     similarTools:
       !refreshSimilar && meta.similarTools?.length ? meta.similarTools : details.similarTools,

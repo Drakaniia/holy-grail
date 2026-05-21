@@ -31,21 +31,43 @@ tags:
   - game
   - download
 atGlance: IG-Repacks / Games
-fullDescription: >-
-  IG-Repacks / Games was imported from the browser bookmark folder "Bookmarks bar > ALL > DOWNLOADS
-  > Game Download".
+fullDescription: IG-Repacks / Games is kept as a game download source in the downloads collection.
 coreFeatures:
   - name: Download Source
-    description: IG-Repacks / Games is saved as a game download bookmark.
+    description: IG-Repacks / Games is cataloged as a game download bookmark.
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
     icon: check
 additionalFeatures:
-  - name: Imported Bookmark
-    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Game Download".
-    icon: check
   - name: Grouped by Type
-    description: Sorted into the downloads collection for focused browsing.
+    description: Sorted by games, VFX, software, torrents, or movies.
     icon: check
-similarTools: []
+  - name: Imported Bookmark
+    description: Preserves the saved browser bookmark link.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged under the downloads collection for search and filtering.
+    icon: check
+similarTools:
+  - slug: igrovuha
+    name: "Minecraft: Bedrock Edition v1.21.101"
+    description: "Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources."
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://igrovuha.org/14292-minecraft-bedrock-edition.html
+  - slug: oceanofgames
+    name: Ocean of Games
+    description: Ocean of Games bookmarked for game download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://oceanofgames.com/
+  - slug: fitgirl-repacks
+    name: Popular Repacks - FitGirl Repacks
+    description: Popular Repacks - FitGirl Repacks bookmarked for game download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://fitgirl-repacks.site/popular-repacks/

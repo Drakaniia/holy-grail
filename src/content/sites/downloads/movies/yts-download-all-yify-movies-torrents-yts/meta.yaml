@@ -29,21 +29,43 @@ tags:
   - downloads
   - movies
 atGlance: Download all YIFY Movies Torrents - YTS
-fullDescription: >-
-  Download all YIFY Movies Torrents - YTS was imported from the browser bookmark folder "Bookmarks
-  bar > ALL > DOWNLOADS > Movies".
+fullDescription: Download all YIFY Movies Torrents - YTS is kept as a movies source in the downloads collection.
 coreFeatures:
   - name: Download Source
-    description: Download all YIFY Movies Torrents - YTS is saved as a movies bookmark.
+    description: Download all YIFY Movies Torrents - YTS is cataloged as a movies bookmark.
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
     icon: check
 additionalFeatures:
-  - name: Imported Bookmark
-    description: Preserves the original browser folder path "Bookmarks bar > ALL > DOWNLOADS > Movies".
-    icon: check
   - name: Grouped by Type
-    description: Sorted into the downloads collection for focused browsing.
+    description: Sorted by games, VFX, software, torrents, or movies.
     icon: check
-similarTools: []
+  - name: Imported Bookmark
+    description: Preserves the saved browser bookmark link.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged under the downloads collection for search and filtering.
+    icon: check
+similarTools:
+  - slug: appdoze
+    name: AppDoze - THE TRUSTED APPLICATION STORE
+    description: AppDoze - THE TRUSTED APPLICATION STORE bookmarked for software download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://appdoze.net/
+  - slug: dodi-repacks
+    name: Backup Site - DODI Repacks
+    description: Backup Site - DODI Repacks bookmarked for software download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dodi-repacks.site/ddos-attack/
+  - slug: cgdownload
+    name: CGDownload
+    description: CGDownload bookmarked for vfx download resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://cgdownload.ru/

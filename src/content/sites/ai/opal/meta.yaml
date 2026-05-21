@@ -28,10 +28,10 @@ tags:
   - bookmark
   - ai
 atGlance: Opal [Experiment]
-fullDescription: Opal [Experiment] was imported from the browser bookmark folder "Bookmarks bar > AI".
+fullDescription: Opal [Experiment] is kept as an ai resource for AI-assisted workflows.
 coreFeatures:
   - name: AI Workflow Support
-    description: Opal [Experiment] is tracked as a ai resource for AI-assisted workflows.
+    description: Opal [Experiment] is tracked as an ai resource for AI-assisted workflows.
     icon: check
   - name: Direct Web Launch
     description: The live product is available from the saved website link.

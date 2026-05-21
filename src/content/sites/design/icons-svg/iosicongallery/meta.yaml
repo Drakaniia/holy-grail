@@ -32,11 +32,11 @@ tags:
   - svg
 atGlance: iOS Icon Gallery
 fullDescription: >-
-  iOS Icon Gallery was imported from the browser bookmark folder "Bookmarks bar > Design >
-  ICONS/SVG".
+  iOS Icon Gallery is kept as an icons/svg resource for design inspiration, assets, and reference
+  work.
 coreFeatures:
   - name: Design Resource
-    description: iOS Icon Gallery is cataloged as a icons/svg resource for design work.
+    description: iOS Icon Gallery is cataloged as an icons/svg resource for design work.
     icon: check
   - name: Visual Reference
     description: Useful as inspiration, tooling, assets, or implementation reference.

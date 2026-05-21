@@ -29,13 +29,11 @@ tags:
   - ai
   - video
 atGlance: Runway | AI Image and Video Generator
-fullDescription: >-
-  Runway | AI Image and Video Generator was imported from the browser bookmark folder "Bookmarks bar
-  > AI > Video".
+fullDescription: Runway - AI Image and Video Generator is kept as an ai video resource for AI-assisted workflows.
 coreFeatures:
   - name: AI Workflow Support
     description: >-
-      Runway - AI Image and Video Generator is tracked as a ai video resource for AI-assisted
+      Runway - AI Image and Video Generator is tracked as an ai video resource for AI-assisted
       workflows.
     icon: check
   - name: Direct Web Launch

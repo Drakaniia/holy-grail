@@ -30,9 +30,7 @@ tags:
   - ui
   - library
 atGlance: Your shadcn search engine. | shoogle.dev
-fullDescription: >-
-  Your shadcn search engine. | shoogle.dev was imported from the browser bookmark folder "Bookmarks
-  bar > CMPNTS".
+fullDescription: Your shadcn search engine. - shoogle.dev is kept as a UI component and design system reference.
 coreFeatures:
   - name: Component Resource
     description: Your shadcn search engine. - shoogle.dev is tracked as a UI component or library resource.

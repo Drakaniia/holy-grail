@@ -30,9 +30,7 @@ tags:
   - ui
   - library
 atGlance: "UI Ball : Useful things for devs"
-fullDescription: >-
-  UI Ball : Useful things for devs was imported from the browser bookmark folder "Bookmarks bar >
-  CMPNTS".
+fullDescription: "UI Ball : Useful things for devs is kept as a UI component and design system reference."
 coreFeatures:
   - name: Component Resource
     description: "UI Ball : Useful things for devs is tracked as a UI component or library resource."

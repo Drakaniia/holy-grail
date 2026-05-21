@@ -29,9 +29,7 @@ tags:
   - platforms
   - hosting
 atGlance: Cloud Run | Google Cloud
-fullDescription: >-
-  Cloud Run | Google Cloud was imported from the browser bookmark folder "Bookmarks bar > CODE >
-  Hosting Service".
+fullDescription: Cloud Run - Google Cloud is kept as a platform resource for deployment or infrastructure work.
 coreFeatures:
   - name: Platform Service
     description: >-

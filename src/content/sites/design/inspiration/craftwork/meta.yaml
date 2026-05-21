@@ -30,11 +30,11 @@ tags:
   - inspiration
 atGlance: Curated Inspiration
 fullDescription: >-
-  Curated Inspiration was imported from the browser bookmark folder "Bookmarks bar > Design >
-  Insipiration".
+  Curated Inspiration is kept as an inspiration resource for design inspiration, assets, and
+  reference work.
 coreFeatures:
   - name: Design Resource
-    description: Curated Inspiration is cataloged as a inspiration resource for design work.
+    description: Curated Inspiration is cataloged as an inspiration resource for design work.
     icon: check
   - name: Visual Reference
     description: Useful as inspiration, tooling, assets, or implementation reference.

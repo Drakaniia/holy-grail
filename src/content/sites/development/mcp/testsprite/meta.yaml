@@ -29,10 +29,10 @@ tags:
   - development
   - mcp
 atGlance: AI testing platform with MCP-oriented workflow support.
-fullDescription: TestSprite was imported from the browser bookmark folder "Bookmarks bar > CODE > MCP".
+fullDescription: TestSprite is kept as a mcp resource for building and shipping software.
 coreFeatures:
   - name: Developer Resource
-    description: TestSprite is tracked as an MCP resource for building and shipping software.
+    description: TestSprite is tracked as a mcp resource for building and shipping software.
     icon: check
   - name: Workflow Reference
     description: The saved link keeps the resource close to related development material.

@@ -30,7 +30,7 @@ tags:
   - ui
   - library
 atGlance: Components
-fullDescription: Components was imported from the browser bookmark folder "Bookmarks bar > CMPNTS".
+fullDescription: Components is kept as a UI component and design system reference.
 coreFeatures:
   - name: Component Resource
     description: Components is tracked as a UI component or library resource.
