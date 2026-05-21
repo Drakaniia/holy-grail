@@ -1,0 +1,20 @@
+title: Sleek Design Mobile Apps
+slug: sleek-design-mobile-apps
+description: Use when the user wants to design a mobile app, create screens, build UI, or interact with their Sleek projects. Covers high-level requests ("design an app that does X") and specific ones ("list my projects", "create...
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - sleek
+  - design
+  - apps
+views: 6139
+uses: 839
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/design-mobile-apps
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

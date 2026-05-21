@@ -1,0 +1,18 @@
+title: Angular Developer
+slug: angular-developer
+description: Generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection,...
+category: Design
+tags:
+  - autoskills
+  - design
+  - angular
+views: 6189
+uses: 889
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/angular-developer
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

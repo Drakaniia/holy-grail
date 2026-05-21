@@ -1,0 +1,19 @@
+title: Rails Upgrade
+slug: rails-upgrade
+description: Analyzes Rails applications and generates comprehensive upgrade reports with breaking changes, deprecations, and step-by-step migration guides for Rails 2.3 through 8.1. Use when upgrading Rails applications,...
+category: Design
+tags:
+  - autoskills
+  - design
+  - rails
+  - upgrade
+views: 6064
+uses: 764
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/rails-upgrade
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

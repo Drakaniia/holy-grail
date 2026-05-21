@@ -1,0 +1,19 @@
+title: Generating Sorbet
+slug: generating-sorbet
+description: Generates or updates Sorbet type signatures in separate .rbi files. Triggers when creating, updating, or maintaining type signatures for Ruby source files.
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - generating
+  - sorbet
+views: 6114
+uses: 814
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/generating-sorbet
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

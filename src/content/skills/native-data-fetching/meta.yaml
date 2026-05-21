@@ -1,0 +1,20 @@
+title: Native Data Fetching
+slug: native-data-fetching
+description: Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - native
+  - data
+  - fetching
+views: 6098
+uses: 798
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/native-data-fetching
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

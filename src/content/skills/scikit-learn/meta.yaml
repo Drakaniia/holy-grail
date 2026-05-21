@@ -1,0 +1,19 @@
+title: Scikit Learn
+slug: scikit-learn
+description: Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter...
+category: AI
+tags:
+  - autoskills
+  - ai
+  - scikit
+  - learn
+views: 6048
+uses: 748
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/scikit-learn
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

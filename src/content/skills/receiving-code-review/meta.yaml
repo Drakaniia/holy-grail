@@ -1,0 +1,19 @@
+title: Receiving Code Review
+slug: receiving-code-review
+description: Evaluate review feedback rigorously before applying technically sound changes.
+category: Development
+tags:
+  - superpowers
+  - code-review
+  - verification
+  - quality
+views: 201121
+uses: 17918
+author: obra
+authorName: obra
+repoLink: obra/superpowers
+skillPath: skills/receiving-code-review
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

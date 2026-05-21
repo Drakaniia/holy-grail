@@ -1,0 +1,19 @@
+title: ASP.NET Core
+slug: aspnet-core
+description: Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, controller-based Web...
+category: Design
+tags:
+  - autoskills
+  - design
+  - aspnet
+  - core
+views: 6188
+uses: 888
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/aspnet-core
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

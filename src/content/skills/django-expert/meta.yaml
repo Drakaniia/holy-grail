@@ -1,0 +1,18 @@
+title: Django Expert
+slug: django-expert
+description: Expert Django backend development guidance. Use when creating Django models, views, serializers, or APIs; debugging ORM queries or migrations; optimizing database performance; implementing authentication; writing...
+category: Database
+tags:
+  - autoskills
+  - database
+  - django
+views: 6138
+uses: 838
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/django-expert
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

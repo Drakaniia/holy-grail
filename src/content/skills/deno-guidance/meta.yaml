@@ -1,0 +1,19 @@
+title: Deno Guidance
+slug: deno-guidance
+description: Use when starting any Deno project, choosing packages, configuring deno.json, or running CLI commands. Provides foundational knowledge for building modern Deno applications.
+category: Design
+tags:
+  - autoskills
+  - design
+  - deno
+  - guidance
+views: 6143
+uses: 843
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/deno-guidance
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

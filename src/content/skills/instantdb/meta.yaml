@@ -1,0 +1,18 @@
+title: Instantdb
+slug: instantdb
+description: Build complete, functional apps with InstantDB as the backend. Use when creating React/vanilla JS or expo applications. Triggers on requests for building apps.
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - instantdb
+views: 6109
+uses: 809
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/instantdb
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,18 @@
+title: Vue Best Practices
+slug: vue-best-practices
+description: MUST be used for Vue.js tasks. Strongly recommends Composition API with `<script setup>` and TypeScript as the standard approach. Covers Vue 3, SSR, Volar, vue-tsc. Load for any Vue, .vue files, Vue Router, Pinia, or...
+category: Design
+tags:
+  - autoskills
+  - design
+  - vue
+views: 6008
+uses: 708
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/vue-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

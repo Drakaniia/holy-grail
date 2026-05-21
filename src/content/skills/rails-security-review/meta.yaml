@@ -1,0 +1,20 @@
+title: Rails Security Review
+slug: rails-security-review
+description: Performs security audits and vulnerability assessments on Ruby on Rails application code. Use when reviewing Rails code for security risks, assessing authentication or authorization, auditing parameter handling,...
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - rails
+  - security
+  - review
+views: 6067
+uses: 767
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/rails-security-review
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

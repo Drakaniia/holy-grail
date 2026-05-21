@@ -1,0 +1,18 @@
+title: Pydantic
+slug: pydantic
+description: Python data validation using type hints and runtime type checking with Pydantic v2's Rust-powered core for high-performance validation in FastAPI, Django, and configuration management.
+category: Database
+tags:
+  - autoskills
+  - database
+  - pydantic
+views: 6077
+uses: 777
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/pydantic
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

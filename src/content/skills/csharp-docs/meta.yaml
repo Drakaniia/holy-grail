@@ -1,0 +1,19 @@
+title: Csharp Docs
+slug: csharp-docs
+description: Ensure that C# types are documented with XML comments and follow best practices for documentation.
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - csharp
+  - docs
+views: 6152
+uses: 852
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/csharp-docs
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

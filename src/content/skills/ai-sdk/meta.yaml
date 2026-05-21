@@ -1,0 +1,18 @@
+title: AI SDK
+slug: ai-sdk
+description: 'Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents,...'
+category: AI
+tags:
+  - autoskills
+  - ai
+  - sdk
+views: 6013
+uses: 713
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/use-ai-sdk
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

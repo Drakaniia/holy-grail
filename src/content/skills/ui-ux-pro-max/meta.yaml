@@ -1,0 +1,21 @@
+title: UI/UX Pro Max
+slug: ui-ux-pro-max
+description: AI-powered design intelligence for UI styles, color palettes, typography, accessibility, charts, and stack-specific interface guidance.
+category: Design
+tags:
+  - ui
+  - ux
+  - design-system
+  - accessibility
+  - typography
+  - color-palette
+views: 12000
+uses: 1600
+author: nextlevelbuilder
+authorName: NextLevelBuilder
+repoLink: nextlevelbuilder/ui-ux-pro-max-skill
+skillPath: .claude/skills/ui-ux-pro-max
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

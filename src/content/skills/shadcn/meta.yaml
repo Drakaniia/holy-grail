@@ -1,0 +1,18 @@
+title: Shadcn
+slug: shadcn
+description: Manages shadcn components and projects adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component...
+category: Design
+tags:
+  - autoskills
+  - design
+  - shadcn
+views: 6045
+uses: 745
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/shadcn
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

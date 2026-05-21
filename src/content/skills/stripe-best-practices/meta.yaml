@@ -1,0 +1,18 @@
+title: Stripe Best Practices
+slug: stripe-best-practices
+description: Guides Stripe integration decisions API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration...
+category: Design
+tags:
+  - autoskills
+  - design
+  - stripe
+views: 6042
+uses: 742
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/stripe-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

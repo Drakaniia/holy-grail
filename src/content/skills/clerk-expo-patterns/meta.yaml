@@ -1,0 +1,19 @@
+title: Clerk Expo Patterns
+slug: clerk-expo-patterns
+description: 'Expo / React Native patterns with Clerk SecureStore token cache, OAuth deep linking, useAuth in native, Expo Router protected routes, push notifications with user context. Triggers on: expo clerk, clerk react native,...'
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - clerk
+  - expo
+views: 6170
+uses: 870
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-expo-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

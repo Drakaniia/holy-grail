@@ -1,0 +1,20 @@
+title: Terraform Module Library
+slug: terraform-module-library
+description: Build reusable Terraform modules for AWS, Azure, GCP, and OCI infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or...
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - terraform
+  - module
+  - library
+views: 6031
+uses: 731
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/terraform-module-library
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

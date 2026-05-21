@@ -1,0 +1,19 @@
+title: Vercel Composition Patterns
+slug: vercel-composition-patterns
+description: React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound...
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - vercel
+  - composition
+views: 6156
+uses: 856
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/composition-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

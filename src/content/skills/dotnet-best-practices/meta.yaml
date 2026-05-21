@@ -1,0 +1,18 @@
+title: .NET Best Practices
+slug: dotnet-best-practices
+description: Ensure .NET/C# code meets best practices for the solution/project.
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - dotnet
+views: 6135
+uses: 835
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/dotnet-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

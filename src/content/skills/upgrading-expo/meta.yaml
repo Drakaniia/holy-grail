@@ -1,0 +1,19 @@
+title: Upgrading Expo
+slug: upgrading-expo
+description: Guidelines for upgrading Expo SDK versions and fixing dependency issues
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - upgrading
+  - expo
+views: 6014
+uses: 714
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/upgrading-expo
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

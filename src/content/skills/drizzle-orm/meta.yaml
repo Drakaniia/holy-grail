@@ -1,0 +1,19 @@
+title: Drizzle Orm
+slug: drizzle-orm
+description: Type-safe SQL ORM for TypeScript with zero runtime overhead
+category: Database
+tags:
+  - autoskills
+  - database
+  - drizzle
+  - orm
+views: 6132
+uses: 832
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/drizzle
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,18 @@
+title: Nestjs Best Practices
+slug: nestjs-best-practices
+description: NestJS best practices and architecture patterns for building production-ready applications. This skill should be used when writing, reviewing, or refactoring NestJS code to ensure proper patterns for modules,...
+category: Design
+tags:
+  - autoskills
+  - design
+  - nestjs
+views: 6096
+uses: 796
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/nestjs-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

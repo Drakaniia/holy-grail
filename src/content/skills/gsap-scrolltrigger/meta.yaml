@@ -1,0 +1,20 @@
+title: GSAP ScrollTrigger
+slug: gsap-scrolltrigger
+description: Official GSAP ScrollTrigger guidance for scroll-linked animation, pinning, scrubbed timelines, trigger setup, refresh, and cleanup.
+category: Development
+tags:
+  - gsap
+  - scrolltrigger
+  - scroll-animation
+  - parallax
+  - animation
+views: 34000
+uses: 3900
+author: greensock
+authorName: GreenSock
+repoLink: greensock/gsap-skills
+skillPath: skills/gsap-scrolltrigger
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

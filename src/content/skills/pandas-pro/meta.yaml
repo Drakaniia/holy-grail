@@ -1,0 +1,19 @@
+title: Pandas Pro
+slug: pandas-pro
+description: Performs pandas DataFrame operations for data analysis, manipulation, and transformation. Use when working with pandas DataFrames, data cleaning, aggregation, merging, or time series analysis. Invoke for data...
+category: AI
+tags:
+  - autoskills
+  - ai
+  - pandas
+  - pro
+views: 6085
+uses: 785
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/pandas-pro
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

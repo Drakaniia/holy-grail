@@ -1,0 +1,20 @@
+title: Reference Compiler CLI
+slug: reference-compiler-cli
+description: Explains the mental model and architecture of the code under `packages/compiler-cli`. You MUST use this skill any time you plan to work with code in `packages/compiler-cli`
+category: AI
+tags:
+  - autoskills
+  - ai
+  - reference
+  - compiler
+  - cli
+views: 6058
+uses: 758
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/reference-compiler-cli
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,20 @@
+title: Svelte Code Writer
+slug: svelte-code-writer
+description: CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used whenever creating, editing or analyzing any Svelte component (.svelte) or Svelte module (.svelte.ts/.svelte.js). If possible, this skill...
+category: Design
+tags:
+  - autoskills
+  - design
+  - svelte
+  - code
+  - writer
+views: 6040
+uses: 740
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/svelte-code-writer
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

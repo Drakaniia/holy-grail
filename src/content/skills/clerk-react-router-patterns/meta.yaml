@@ -1,0 +1,20 @@
+title: Clerk React Router Patterns
+slug: clerk-react-router-patterns
+description: 'React Router v7 patterns with Clerk rootAuthLoader, getAuth in loaders, clerkMiddleware, protected routes, SSR user data, org switching. Triggers on: react-router auth, rootAuthLoader, getAuth loader, react-router...'
+category: Design
+tags:
+  - autoskills
+  - design
+  - clerk
+  - react
+  - router
+views: 6165
+uses: 865
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-react-router-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

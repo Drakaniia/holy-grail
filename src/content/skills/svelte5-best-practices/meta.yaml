@@ -1,0 +1,18 @@
+title: Svelte5 Best Practices
+slug: svelte5-best-practices
+description: Svelte 5 runes, snippets, SvelteKit patterns, and modern best practices for TypeScript and component development. Use when writing, reviewing, or refactoring Svelte 5 components and SvelteKit applications. Triggers...
+category: Design
+tags:
+  - autoskills
+  - design
+  - svelte5
+views: 6039
+uses: 739
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/svelte5-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

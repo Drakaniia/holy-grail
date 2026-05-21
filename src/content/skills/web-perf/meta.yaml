@@ -1,0 +1,19 @@
+title: Web Perf
+slug: web-perf
+description: Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout...
+category: Development
+tags:
+  - autoskills
+  - development
+  - web
+  - perf
+views: 6005
+uses: 705
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/web-perf
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,19 @@
+title: PR Review
+slug: pr-review
+description: Guidelines and tools for reviewing pull requests in the Angular repository.
+category: Design
+tags:
+  - autoskills
+  - design
+  - pr
+  - review
+views: 6082
+uses: 782
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/pr_review
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,20 @@
+title: Typescript Advanced Types
+slug: typescript-advanced-types
+description: Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic,...
+category: Design
+tags:
+  - autoskills
+  - design
+  - typescript
+  - advanced
+  - types
+views: 6016
+uses: 716
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/typescript-advanced-types
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

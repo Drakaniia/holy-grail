@@ -1,0 +1,18 @@
+title: Clerk Testing
+slug: clerk-testing
+description: E2E testing for Clerk apps. Use with Playwright or Cypress for auth flow tests.
+category: Testing
+tags:
+  - autoskills
+  - testing
+  - clerk
+views: 6161
+uses: 861
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-testing
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

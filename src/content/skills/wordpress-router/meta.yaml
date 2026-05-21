@@ -1,0 +1,19 @@
+title: Wordpress Router
+slug: wordpress-router
+description: Use when the user asks about WordPress codebases (plugins, themes, block themes, Gutenberg blocks, WP core checkouts) and you need to quickly classify the repo and route to the correct workflow/skill (blocks,...
+category: Design
+tags:
+  - autoskills
+  - design
+  - wordpress
+  - router
+views: 6004
+uses: 704
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/wordpress-router
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

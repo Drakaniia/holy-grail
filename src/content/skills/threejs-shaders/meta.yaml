@@ -1,0 +1,19 @@
+title: Threejs Shaders
+slug: threejs-shaders
+description: Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials.
+category: Design
+tags:
+  - autoskills
+  - design
+  - threejs
+  - shaders
+views: 6020
+uses: 720
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/threejs-shaders
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

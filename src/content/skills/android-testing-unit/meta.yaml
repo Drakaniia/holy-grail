@@ -1,0 +1,20 @@
+title: Android Testing Unit
+slug: android-testing-unit
+description: Write fast, focused Android unit tests for reducers, use cases, repositories, and lifecycle-safe state holders.
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - android
+  - testing
+  - unit
+views: 6190
+uses: 890
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/android-testing-unit
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,19 @@
+title: Clerk Tanstack Patterns
+slug: clerk-tanstack-patterns
+description: 'TanStack React Start auth patterns with @clerk/tanstack-react-start - createServerFn, beforeLoad guards, loaders, Vinxi server. Triggers on: TanStack auth, createServerFn clerk, beforeLoad protection, TanStack Start...'
+category: Design
+tags:
+  - autoskills
+  - design
+  - clerk
+  - tanstack
+views: 6162
+uses: 862
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-tanstack-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

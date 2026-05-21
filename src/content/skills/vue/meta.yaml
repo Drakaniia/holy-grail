@@ -1,0 +1,18 @@
+title: Vue
+slug: vue
+description: Vue 3 Composition API, script setup macros, reactivity system, and built-in components. Use when writing Vue SFCs, defineProps/defineEmits/defineModel, watchers, or using Transition/Teleport/Suspense/KeepAlive.
+category: AI
+tags:
+  - autoskills
+  - ai
+  - vue
+views: 6009
+uses: 709
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/vue
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

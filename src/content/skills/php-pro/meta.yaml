@@ -1,0 +1,19 @@
+title: Php Pro
+slug: php-pro
+description: Use when building PHP applications with modern PHP 8.3+ features, Laravel, or Symfony frameworks. Invokes strict typing, PHPStan level 9, async patterns with Swoole, and PSR standards. Creates controllers, configures...
+category: Design
+tags:
+  - autoskills
+  - design
+  - php
+  - pro
+views: 6084
+uses: 784
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/php-pro
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

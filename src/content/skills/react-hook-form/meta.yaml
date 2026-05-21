@@ -1,0 +1,20 @@
+title: React Hook Form
+slug: react-hook-form
+description: React Hook Form performance optimization for client-side form validation using useForm, useWatch, useController, and useFieldArray. This skill should be used when building client-side controlled forms with React Hook...
+category: Design
+tags:
+  - autoskills
+  - design
+  - react
+  - hook
+  - form
+views: 6062
+uses: 762
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/react-hook-form
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

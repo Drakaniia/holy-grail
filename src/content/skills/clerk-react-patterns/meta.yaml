@@ -1,0 +1,19 @@
+title: Clerk React Patterns
+slug: clerk-react-patterns
+description: 'React SPA auth patterns with @clerk/react for Vite/CRA - ClerkProvider setup, useAuth/useUser/useClerk hooks, React Router protected routes, custom sign-in flows. Triggers on: Vite Clerk setup, React Router auth,...'
+category: Design
+tags:
+  - autoskills
+  - design
+  - clerk
+  - react
+views: 6166
+uses: 866
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-react-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

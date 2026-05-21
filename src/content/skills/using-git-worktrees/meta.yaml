@@ -1,0 +1,19 @@
+title: Using Git Worktrees
+slug: using-git-worktrees
+description: Create isolated workspaces for feature work using native tools or git worktrees.
+category: Development
+tags:
+  - superpowers
+  - git
+  - worktrees
+  - isolation
+views: 201121
+uses: 17918
+author: obra
+authorName: obra
+repoLink: obra/superpowers
+skillPath: skills/using-git-worktrees
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,19 @@
+title: Durable Objects
+slug: durable-objects
+description: Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO...
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - durable
+  - objects
+views: 6131
+uses: 831
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/durable-objects
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

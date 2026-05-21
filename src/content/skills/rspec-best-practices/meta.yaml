@@ -1,0 +1,18 @@
+title: Rspec Best Practices
+slug: rspec-best-practices
+description: Use when writing, reviewing, or cleaning up RSpec tests for Ruby and Rails codebases. Covers spec type selection, factory design, flaky test fixes, shared examples, deterministic assertions, test-driven development...
+category: Testing
+tags:
+  - autoskills
+  - testing
+  - rspec
+views: 6054
+uses: 754
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/rspec-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

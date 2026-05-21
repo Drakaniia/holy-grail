@@ -1,0 +1,20 @@
+title: Android Architecture Clean
+slug: android-architecture-clean
+description: Apply clean architecture boundaries, use cases, repositories, and lifecycle-aware presentation models in Android projects.
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - android
+  - architecture
+  - clean
+views: 6197
+uses: 897
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/android-architecture-clean
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

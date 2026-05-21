@@ -1,0 +1,19 @@
+title: Terraform Stacks
+slug: terraform-stacks
+description: Comprehensive guide for working with HashiCorp Terraform Stacks. Use when creating, modifying, or validating Terraform Stack configurations (.tfcomponent.hcl, .tfdeploy.hcl files), working with stack components and...
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - terraform
+  - stacks
+views: 6030
+uses: 730
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/terraform-stacks
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

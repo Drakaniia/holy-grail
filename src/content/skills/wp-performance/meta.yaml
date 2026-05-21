@@ -1,0 +1,19 @@
+title: Wp Performance
+slug: wp-performance
+description: 'Use when investigating or improving WordPress performance (backend-only agent): profiling and measurement (WP-CLI profile/doctor, Server-Timing, Query Monitor via REST headers), database/query optimization,...'
+category: Database
+tags:
+  - autoskills
+  - database
+  - wp
+  - performance
+views: 6000
+uses: 900
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/wp-performance
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

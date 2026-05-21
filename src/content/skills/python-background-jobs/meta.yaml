@@ -1,0 +1,20 @@
+title: Python Background Jobs
+slug: python-background-jobs
+description: Python background job patterns including task queues, workers, and event-driven architecture. Use when implementing async task processing, job queues, long-running operations, or decoupling work from request/response...
+category: Development
+tags:
+  - autoskills
+  - development
+  - python
+  - background
+  - jobs
+views: 6076
+uses: 776
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/python-background-jobs
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

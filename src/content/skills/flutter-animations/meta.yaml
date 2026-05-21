@@ -1,0 +1,19 @@
+title: Flutter Animations
+slug: flutter-animations
+description: Add, fix, refactor, debug, test, or explain Flutter animations and motion effects. Use when working with implicit animations such as AnimatedContainer, AnimatedOpacity, AnimatedSwitcher, and TweenAnimationBuilder;...
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - flutter
+  - animations
+views: 6118
+uses: 818
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/flutter-animations
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

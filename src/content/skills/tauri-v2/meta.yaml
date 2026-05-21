@@ -1,0 +1,19 @@
+title: Tauri V2
+slug: tauri-v2
+description: Tauri v2+ cross-platform app development with Rust backend. Use when configuring tauri.conf.json, implementing Rust commands (#[tauri::command]), setting up IPC patterns (invoke, emit, channels), configuring...
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - tauri
+  - v2
+views: 6032
+uses: 732
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/tauri-v2
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

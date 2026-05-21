@@ -1,0 +1,19 @@
+title: Azure Diagnostics
+slug: azure-diagnostics
+description: 'Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage. WHEN: debug production issues, troubleshoot app service, app service high CPU, app service deployment failure,...'
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - azure
+  - diagnostics
+views: 6182
+uses: 882
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/azure-diagnostics
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

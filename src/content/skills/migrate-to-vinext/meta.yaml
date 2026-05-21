@@ -1,0 +1,20 @@
+title: Migrate To Vinext
+slug: migrate-to-vinext
+description: Migrates Next.js projects to vinext (Vite-based Next.js reimplementation). Load when asked to migrate, convert, or switch from Next.js to vinext. Handles compatibility scanning, package replacement, Vite config...
+category: Tooling
+tags:
+  - autoskills
+  - tooling
+  - migrate
+  - to
+  - vinext
+views: 6100
+uses: 800
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/migrate-to-vinext
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

@@ -1,0 +1,19 @@
+title: Next Upgrade
+slug: next-upgrade
+description: Upgrade Next.js to the latest version following official migration guides and codemods
+category: Testing
+tags:
+  - autoskills
+  - testing
+  - next
+  - upgrade
+views: 6093
+uses: 793
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/next-upgrade
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

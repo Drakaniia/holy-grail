@@ -1,0 +1,19 @@
+title: Vercel React Best Practices
+slug: vercel-react-best-practices
+description: React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on...
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - vercel
+  - react
+views: 6063
+uses: 763
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/react-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

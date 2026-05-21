@@ -1,0 +1,19 @@
+title: Rails Guides
+slug: rails-guides
+description: Official Rails documentation. Use when asked about any Rails-specific topic including ActiveRecord, routing, controllers, views, mailers, jobs, Action Cable, Action Text, Active Storage, migrations, validations,...
+category: Design
+tags:
+  - autoskills
+  - design
+  - rails
+  - guides
+views: 6069
+uses: 769
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/rails-guides
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

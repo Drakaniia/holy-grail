@@ -1,0 +1,19 @@
+title: Azure AI
+slug: azure-ai
+description: 'Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. WHEN: AI Search, query search, vector search, hybrid...'
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - azure
+  - ai
+views: 6185
+uses: 885
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/azure-ai
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

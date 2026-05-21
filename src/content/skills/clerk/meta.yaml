@@ -1,0 +1,18 @@
+title: Clerk
+slug: clerk
+description: Clerk authentication router. Use when user asks about adding authentication, setting up Clerk, custom sign-in flows, Swift or native iOS auth, native Android auth, Next.js patterns, React patterns, Vue patterns, Nuxt...
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - clerk
+views: 6176
+uses: 876
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

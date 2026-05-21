@@ -1,0 +1,19 @@
+title: Threejs Loaders
+slug: threejs-loaders
+description: Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.
+category: AI
+tags:
+  - autoskills
+  - ai
+  - threejs
+  - loaders
+views: 6023
+uses: 723
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/threejs-loaders
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

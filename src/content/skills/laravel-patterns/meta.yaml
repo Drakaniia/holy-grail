@@ -1,0 +1,18 @@
+title: Laravel Patterns
+slug: laravel-patterns
+description: Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - laravel
+views: 6103
+uses: 803
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/laravel-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

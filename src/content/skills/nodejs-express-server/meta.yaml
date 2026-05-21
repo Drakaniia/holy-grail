@@ -1,0 +1,20 @@
+title: Nodejs Express Server
+slug: nodejs-express-server
+description: Build production-ready Express.js servers with middleware, authentication, routing, and database integration. Use when creating REST APIs, managing requests/responses, implementing middleware chains, and handling...
+category: Database
+tags:
+  - autoskills
+  - database
+  - nodejs
+  - express
+  - server
+views: 6090
+uses: 790
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/nodejs-express-server
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

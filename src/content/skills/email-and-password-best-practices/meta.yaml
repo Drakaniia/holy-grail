@@ -1,0 +1,20 @@
+title: Email And Password Best Practices
+slug: email-and-password-best-practices
+description: Configure email verification, implement password reset flows, set password policies, and customise hashing algorithms for Better Auth email/password authentication. Use when users need to set up login, sign-in,...
+category: Development
+tags:
+  - autoskills
+  - development
+  - email
+  - and
+  - password
+views: 6128
+uses: 828
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/emailAndPassword
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

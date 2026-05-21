@@ -1,0 +1,19 @@
+title: Tailwind CSS Patterns
+slug: tailwind-css-patterns
+description: Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling...
+category: Design
+tags:
+  - autoskills
+  - design
+  - tailwind
+  - css
+views: 6035
+uses: 735
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/tailwind-css-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

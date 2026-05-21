@@ -1,0 +1,19 @@
+title: Clerk Backend API
+slug: clerk-backend-api
+description: Clerk Backend REST API explorer and executor. Browse tags, inspect endpoint schemas, and execute authenticated requests. Use when listing users, managing organizations, or calling any Clerk API endpoint.
+category: Backend
+tags:
+  - autoskills
+  - backend
+  - clerk
+  - api
+views: 6173
+uses: 873
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-backend-api
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

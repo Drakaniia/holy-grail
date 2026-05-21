@@ -1,0 +1,19 @@
+title: Subagent-Driven Development
+slug: subagent-driven-development
+description: Execute implementation plans by assigning independent tasks to subagents with staged reviews.
+category: Development
+tags:
+  - superpowers
+  - agents
+  - implementation
+  - review
+views: 201121
+uses: 17918
+author: obra
+authorName: obra
+repoLink: obra/superpowers
+skillPath: skills/subagent-driven-development
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

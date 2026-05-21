@@ -1,0 +1,18 @@
+title: Playwright Best Practices
+slug: playwright-best-practices
+description: Use when writing Playwright tests, fixing flaky tests, debugging failures, implementing Page Object Model, configuring CI/CD, optimizing performance, mocking APIs, handling authentication or OAuth, testing...
+category: Cloud
+tags:
+  - autoskills
+  - cloud
+  - playwright
+views: 6083
+uses: 783
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/playwright-best-practices
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

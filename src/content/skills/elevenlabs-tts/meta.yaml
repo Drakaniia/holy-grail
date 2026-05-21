@@ -1,0 +1,19 @@
+title: Elevenlabs Tts
+slug: elevenlabs-tts
+description: 'ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning via inference.sh CLI. Models: eleven_multilingual_v2 (highest quality), eleven_turbo_v2_5 (low latency), eleven_flash_v2_5...'
+category: AI
+tags:
+  - autoskills
+  - ai
+  - elevenlabs
+  - tts
+views: 6129
+uses: 829
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/elevenlabs-tts
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

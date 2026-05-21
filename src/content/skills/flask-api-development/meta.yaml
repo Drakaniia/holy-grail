@@ -1,0 +1,19 @@
+title: Flask API Development
+slug: flask-api-development
+description: Develop lightweight Flask APIs with routing, blueprints, database integration, authentication, and request/response handling. Use when building RESTful APIs, microservices, or lightweight web services with Flask.
+category: Database
+tags:
+  - autoskills
+  - database
+  - flask
+  - api
+views: 6120
+uses: 820
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/flask-api-development
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

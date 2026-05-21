@@ -1,0 +1,20 @@
+title: Expo Cicd Workflows
+slug: expo-cicd-workflows
+description: Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build...
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - expo
+  - cicd
+  - workflows
+views: 6126
+uses: 826
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/expo-cicd-workflows
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

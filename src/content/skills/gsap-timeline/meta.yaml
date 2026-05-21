@@ -1,0 +1,20 @@
+title: GSAP Timeline
+slug: gsap-timeline
+description: Official GSAP timeline guidance for sequencing, position parameters, labels, nesting, playback control, and choreographed motion.
+category: Development
+tags:
+  - gsap
+  - timeline
+  - animation
+  - sequencing
+  - motion
+views: 33000
+uses: 3800
+author: greensock
+authorName: GreenSock
+repoLink: greensock/gsap-skills
+skillPath: skills/gsap-timeline
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

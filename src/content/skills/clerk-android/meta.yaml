@@ -1,0 +1,19 @@
+title: Clerk Android
+slug: clerk-android
+description: Implement Clerk authentication for native Android apps using Kotlin and Jetpack Compose with clerk-android source-guided patterns. Use for prebuilt AuthView/UserButton or custom API-driven auth flows. Do not use for...
+category: Mobile
+tags:
+  - autoskills
+  - mobile
+  - clerk
+  - android
+views: 6175
+uses: 875
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/clerk-android
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

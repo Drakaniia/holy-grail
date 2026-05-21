@@ -1,0 +1,18 @@
+title: Python Testing Patterns
+slug: python-testing-patterns
+description: Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.
+category: Testing
+tags:
+  - autoskills
+  - testing
+  - python
+views: 6073
+uses: 773
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/python-testing-patterns
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'

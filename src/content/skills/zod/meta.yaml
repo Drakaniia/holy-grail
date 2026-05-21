@@ -1,0 +1,18 @@
+title: Zod
+slug: zod
+description: Zod schema validation best practices for type safety, parsing, and error handling. This skill should be used when defining z.object schemas, using z.string validations, safeParse, or z.infer. This skill does NOT...
+category: Database
+tags:
+  - autoskills
+  - database
+  - zod
+views: 5993
+uses: 893
+author: midudev
+authorName: midudev
+repoLink: midudev/autoskills
+skillPath: packages/autoskills/skills-registry/zod
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-21'
