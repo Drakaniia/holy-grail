@@ -72,6 +72,30 @@
     "hasLocalContent": false
   },
   {
+    "slug": "git-commit",
+    "title": "Git Commit",
+    "description": "Conventional commit workflow for staging logical changes, analyzing diffs, and writing clear semantic commit messages.",
+    "category": "Development",
+    "parentCategory": "skills",
+    "tags": [
+      "git",
+      "commits",
+      "conventional-commits",
+      "workflow"
+    ],
+    "views": 33500,
+    "uses": 4100,
+    "author": "github",
+    "authorName": "GitHub",
+    "repoLink": "github/awesome-copilot",
+    "skillPath": "skills/git-commit",
+    "branch": "main",
+    "addedBy": "Qwenzy",
+    "featured": false,
+    "dateAdded": "2026-05-21",
+    "hasLocalContent": false
+  },
+  {
     "slug": "academic-paper",
     "title": "Academic Paper",
     "description": "Academic paper writing workflow for outlines, drafts, revisions, abstracts, citation checks, format conversion, and disclosure statements.",
