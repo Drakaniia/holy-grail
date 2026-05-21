@@ -1,31 +1,5 @@
 {
-  "captured": 254,
-  "failed": 5,
-  "failures": [
-    {
-      "slug": "yiyan",
-      "website": "https://yiyan.baidu.com/",
-      "error": "Navigation timeout of 12000 ms exceeded"
-    },
-    {
-      "slug": "gambo",
-      "website": "https://www.gambo.ai/",
-      "error": "net::ERR_NAME_NOT_RESOLVED at https://www.gambo.ai/"
-    },
-    {
-      "slug": "caramell",
-      "website": "https://caramell.app/",
-      "error": "net::ERR_NAME_NOT_RESOLVED at https://caramell.app/"
-    },
-    {
-      "slug": "dora",
-      "website": "https://www.dora.run/",
-      "error": "net::ERR_NAME_NOT_RESOLVED at https://www.dora.run/"
-    },
-    {
-      "slug": "cyclic",
-      "website": "https://www.cyclic.sh/",
-      "error": "net::ERR_CERT_COMMON_NAME_INVALID at https://www.cyclic.sh/"
-    }
-  ]
+  "captured": 255,
+  "failed": 0,
+  "failures": []
 }

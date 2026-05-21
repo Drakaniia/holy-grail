@@ -2267,6 +2267,15 @@
     "height": 600,
     "bytes": 10848
   },
+  "youtube-transcript": {
+    "image": "/previews/youtube-transcript.webp",
+    "small": "/previews/youtube-transcript-sm.webp",
+    "sourceUrl": "https://www.youtube-transcript.io/",
+    "capturedAt": "2026-05-21T08:48:32.798Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33500
+  },
   "youware": {
     "image": "/previews/youware.webp",
     "small": "/previews/youware-sm.webp",

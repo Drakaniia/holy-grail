@@ -8942,6 +8942,111 @@
     ]
   },
   {
+    "slug": "youtube-transcript",
+    "name": "YouTube Transcript",
+    "description": "Extract, copy, download, and summarize transcripts from public YouTube videos.",
+    "category": "AI Research",
+    "parentCategory": "ai",
+    "subcategory": "research",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.youtube-transcript.io/",
+    "docs": "https://www.youtube-transcript.io/api",
+    "sourceCode": "",
+    "icon": "youtube-transcript",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "research",
+      "youtube",
+      "transcript",
+      "api"
+    ],
+    "atGlance": "YouTube transcript extraction with downloads, summaries, bulk tools, and an API.",
+    "fullDescription": "YouTube Transcript turns public YouTube videos into clean transcripts that can be copied, downloaded, summarized, or sent into API and automation workflows.",
+    "coreFeatures": [
+      {
+        "name": "Transcript Extraction",
+        "description": "Converts public YouTube videos into readable text transcripts for notes, research, and content reuse.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy and Download",
+        "description": "Provides one-click transcript copying and downloads so extracted text can move into other tools quickly.",
+        "icon": "check"
+      },
+      {
+        "name": "API Access",
+        "description": "Offers an API for fetching transcripts from video IDs, playlists, and automation workflows.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "AI Summaries",
+        "description": "Summarizes long transcripts into shorter notes for faster review and repurposing.",
+        "icon": "check"
+      },
+      {
+        "name": "Bulk Extraction",
+        "description": "Supports channel, playlist, and CSV-based extraction for processing more than one video.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Extension",
+        "description": "Provides a Chrome extension path for transcript access from the browser.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "similarTools": [
+      {
+        "slug": "getliner",
+        "name": "Liner | AI Copilot",
+        "description": "Liner | AI Copilot bookmarked for ai research resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://getliner.com/"
+      },
+      {
+        "slug": "perplexity",
+        "name": "Perplexity",
+        "description": "Perplexity bookmarked for ai chat resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.perplexity.ai/"
+      },
+      {
+        "slug": "openai",
+        "name": "ChatGPT",
+        "description": "ChatGPT bookmarked for ai chat resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://chat.openai.com/"
+      }
+    ]
+  },
+  {
     "slug": "aistudio-veo-3-google-ai-studio",
     "name": "Veo 3 | Google AI Studio",
     "description": "Veo 3 | Google AI Studio bookmarked for ai video resources.",
