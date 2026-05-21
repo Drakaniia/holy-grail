@@ -1,0 +1,76 @@
+slug: skills-sh
+name: Skills
+description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: null
+stars: 19541
+watchers: 64
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 7 days ago
+lastRelease: 7 days ago
+version: v1.5.7
+contributors: 95
+commitsThisYear: 286
+releases: 26
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+website: https://www.skills.sh/
+docs: https://www.skills.sh/docs
+sourceCode: https://github.com/vercel-labs/skills
+icon: skills-sh
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - cli
+atGlance: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+fullDescription: >-
+  Skills is an open ecosystem directory for discovering, ranking, and installing reusable skills
+  that extend AI agents with procedural knowledge.
+coreFeatures:
+  - name: Agent Skill Discovery
+    description: Browse reusable agent skills by popularity, trends, topics, official listings, and audits.
+    icon: check
+  - name: CLI Install Flow
+    description: Documentation keeps the npx skills add workflow close to the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Agent Compatibility
+    description: Tracks skills across agents such as Claude Code, Cursor, Codex, Copilot, Gemini, and Cline.
+    icon: check
+  - name: Open Source CLI
+    description: The skills CLI and directory tooling are available from the public Vercel Labs repository.
+    icon: check
+  - name: Usage Leaderboards
+    description: Popular, trending, hot, official, and audited skills are grouped for repeatable discovery.
+    icon: check
+similarTools:
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/
+  - slug: autoskills
+    name: AutoSkills
+    description: Agent skills resource for creating and managing AI coding capabilities.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.autoskills.sh/
+  - slug: tbench
+    name: Terminal-Bench
+    description: Benchmark and leaderboard resource for terminal-based AI agent workflows.
+    stars: 2224
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.tbench.ai/leaderboard/terminal-bench/2.0
