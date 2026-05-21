@@ -84,7 +84,7 @@ async function handleSignOut() {
   <div ref="menuRoot" class="relative">
     <button
       type="button"
-      class="inline-flex h-10 items-center gap-2 rounded-lg border border-gray-700 bg-[#050505] px-2 pr-3 text-left text-sm font-medium text-white transition hover:border-gray-600 hover:bg-gray-900"
+      class="inline-flex h-10 items-center gap-2 rounded-lg border border-gray-700 bg-[#050505] px-2 pr-3 text-left text-sm font-medium text-white transition hover:border-gray-600 hover:bg-accent-500/10"
       :aria-expanded="isOpen"
       aria-haspopup="menu"
       aria-label="Open account menu"
@@ -137,7 +137,7 @@ async function handleSignOut() {
         <RouterLink
           to="/account"
           role="menuitem"
-          class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-300 transition hover:bg-gray-900 hover:text-white"
+          class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-300 transition hover:bg-accent-500/10 hover:text-white"
           @click="closeMenu"
         >
           <UserRound class="h-4 w-4 text-gray-500" />
@@ -147,7 +147,7 @@ async function handleSignOut() {
         <RouterLink
           to="/bookmarks"
           role="menuitem"
-          class="flex items-center justify-between gap-3 rounded-md px-3 py-2 text-sm text-gray-300 transition hover:bg-gray-900 hover:text-white"
+          class="flex items-center justify-between gap-3 rounded-md px-3 py-2 text-sm text-gray-300 transition hover:bg-accent-500/10 hover:text-white"
           @click="closeMenu"
         >
           <span class="flex items-center gap-3">
@@ -161,7 +161,7 @@ async function handleSignOut() {
           v-if="admin.isAdmin"
           to="/admin"
           role="menuitem"
-          class="flex items-center justify-between gap-3 rounded-md px-3 py-2 text-sm text-gray-300 transition hover:bg-gray-900 hover:text-white"
+          class="flex items-center justify-between gap-3 rounded-md px-3 py-2 text-sm text-gray-300 transition hover:bg-accent-500/10 hover:text-white"
           @click="closeMenu"
         >
           <span class="flex items-center gap-3">
@@ -178,7 +178,7 @@ async function handleSignOut() {
         <button
           type="button"
           role="menuitem"
-          class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm text-gray-300 transition hover:bg-red-950/40 hover:text-red-100 disabled:cursor-not-allowed disabled:opacity-60"
+          class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm text-gray-300 transition hover:bg-red-500/10 hover:text-red-100 disabled:cursor-not-allowed disabled:opacity-60"
           :disabled="auth.loading"
           @click="handleSignOut"
         >
