@@ -229,6 +229,14 @@ async function copyInstallCommand() {
   @apply text-base font-medium text-white mb-2 mt-4;
 }
 
+.skill-content :deep(h5) {
+  @apply text-sm font-medium text-white mb-2 mt-4;
+}
+
+.skill-content :deep(h6) {
+  @apply text-xs font-semibold uppercase text-white mb-2 mt-4;
+}
+
 .skill-content :deep(p) {
   @apply text-gray-400 mb-4 leading-relaxed;
 }
@@ -283,5 +291,44 @@ async function copyInstallCommand() {
 
 .skill-content :deep(td) {
   @apply text-sm text-gray-400 border-b border-gray-800 px-3 py-2;
+}
+
+:global(html.light .skill-content h1),
+:global(html.light .skill-content h2),
+:global(html.light .skill-content h3),
+:global(html.light .skill-content h4),
+:global(html.light .skill-content h5),
+:global(html.light .skill-content h6),
+:global(html.light .skill-content strong),
+:global(html.light .skill-content th) {
+  color: var(--mocha-text) !important;
+}
+
+:global(html.light .skill-content p),
+:global(html.light .skill-content ul),
+:global(html.light .skill-content ol),
+:global(html.light .skill-content li),
+:global(html.light .skill-content td) {
+  color: var(--mocha-text-soft) !important;
+}
+
+:global(html.light .skill-content blockquote) {
+  border-left-color: var(--mocha-border-strong) !important;
+  color: var(--mocha-muted) !important;
+}
+
+:global(html.light .skill-content hr),
+:global(html.light .skill-content th),
+:global(html.light .skill-content td) {
+  border-color: var(--mocha-border) !important;
+}
+
+:global(html.light .skill-content pre),
+:global(html.light .skill-content code) {
+  background-color: #130d08 !important;
+}
+
+:global(html.light .skill-content pre code) {
+  color: #f4e7d8 !important;
 }
 </style>
