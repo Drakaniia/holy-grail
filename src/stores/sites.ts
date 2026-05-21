@@ -49,6 +49,7 @@ export interface Site {
   coreFeatures?: SiteFeature[]
   additionalFeatures?: SiteFeature[]
   deployCompose?: string
+  installCommand?: string
   similarTools?: SimilarTool[]
 }
 

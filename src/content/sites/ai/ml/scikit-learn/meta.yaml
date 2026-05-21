@@ -1,0 +1,79 @@
+slug: scikit-learn
+name: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
+description: >-
+  scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation bookmarked for machine
+  learning resources.
+category: Machine Learning
+parentCategory: ai
+subcategory: ml
+stars: 66131
+watchers: 2120
+addedDaysAgo: 0
+license: BSD-3-Clause
+lastCommit: 6 hours ago
+lastRelease: 5 months ago
+version: 1.8.0
+contributors: 3513
+commitsThisYear: 406
+releases: 49
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://scikit-learn.org/stable/
+docs: https://scikit-learn.org/stable/
+sourceCode: https://github.com/scikit-learn/scikit-learn
+icon: scikit-learn
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - ml
+  - machine
+  - learning
+atGlance: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
+fullDescription: >-
+  scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation is kept as a machine
+  learning resource for AI-assisted workflows.
+coreFeatures:
+  - name: Machine Learning Resource
+    description: >-
+      scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation is tracked for
+      model development, data science, or machine learning reference work.
+    icon: check
+  - name: Direct Web Launch
+    description: Open the saved ML resource directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Data Science Workflow
+    description: Useful for notebooks, model training, evaluation, deployment, or ML research.
+    icon: check
+  - name: Documentation Shortcut
+    description: Keeps the primary reference URL beside the saved tool or framework.
+    icon: check
+  - name: Category Grouping
+    description: Grouped with related ML frameworks, platforms, and learning resources.
+    icon: check
+similarTools:
+  - slug: tensorflow
+    name: TensorFlow
+    description: TensorFlow bookmarked for machine learning resources.
+    stars: 195214
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.tensorflow.org/
+  - slug: pytorch
+    name: PyTorch
+    description: PyTorch bookmarked for machine learning resources.
+    stars: 100054
+    addedDaysAgo: 0
+    verified: true
+    website: https://pytorch.org/
+  - slug: xgboost
+    name: What is XGBoost? | IBM
+    description: What is XGBoost? | IBM bookmarked for machine learning resources.
+    stars: 28400
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.ibm.com/think/topics/xgboost

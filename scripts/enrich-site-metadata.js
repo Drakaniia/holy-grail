@@ -11,6 +11,17 @@ const currentYear = new Date().getUTCFullYear()
 const yearStart = `${currentYear}-01-01T00:00:00Z`
 const concurrency = Number(process.env.ENRICH_CONCURRENCY || (useSearch ? 2 : 8))
 
+function readOption(name) {
+  const inline = process.argv.find(arg => arg.startsWith(`${name}=`))
+  if (inline) return inline.slice(name.length + 1)
+
+  const index = process.argv.indexOf(name)
+  return index >= 0 ? process.argv[index + 1] : ''
+}
+
+const parentFilter = readOption('--parent')
+const subcategoryFilter = readOption('--subcategory')
+
 const ignoredOwners = new Set([
   'about',
   'apps',
@@ -379,6 +390,8 @@ async function main() {
       meta: yaml.load(fs.readFileSync(filePath, 'utf8')) || {},
     }))
     .filter(row => !onlyNew || row.meta.addedDaysAgo === 0)
+    .filter(row => !parentFilter || row.meta.parentCategory === parentFilter)
+    .filter(row => !subcategoryFilter || (row.meta.subcategory || '') === subcategoryFilter)
 
   let found = 0
   let updated = 0

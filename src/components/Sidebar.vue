@@ -108,6 +108,7 @@ const aiSubcategories = [
   { name: 'Detector', icon: ScanSearch, route: '/sites/ai/detector' },
   { name: 'Automation', icon: Workflow, route: '/sites/ai/automation' },
   { name: 'Video', icon: Video, route: '/sites/ai/video' },
+  { name: 'ML', icon: Microscope, route: '/sites/ai/ml' },
   { name: 'CHAT', icon: MessageSquare, route: '/sites/ai/chat' },
   { name: 'WB', icon: Hammer, route: '/sites/ai/wb' },
   { name: 'Research', icon: Microscope, route: '/sites/ai/research' },

@@ -69,6 +69,7 @@ function buildSitesIndex() {
       coreFeatures: meta.coreFeatures || [],
       additionalFeatures: meta.additionalFeatures || [],
       deployCompose: meta.deployCompose || '',
+      installCommand: meta.installCommand || '',
       similarTools: (meta.similarTools || []).map(t => ({
         slug: t.slug || '',
         name: t.name || '',

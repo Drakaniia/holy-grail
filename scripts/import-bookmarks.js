@@ -126,6 +126,11 @@ const folderMap = new Map([
     'Bookmarks bar > AI > Research',
     { parentCategory: 'ai', subcategory: 'research', category: 'AI Research' },
   ],
+  [
+    'Bookmarks bar > ALL > ML',
+    { parentCategory: 'ai', subcategory: 'ml', category: 'Machine Learning' },
+  ],
+  ['Bookmarks bar > ML', { parentCategory: 'ai', subcategory: 'ml', category: 'Machine Learning' }],
   ['Bookmarks bar > AI > PPT', { parentCategory: 'ai', subcategory: 'ppt', category: 'AI PPT' }],
   ['Bookmarks bar > AI > Others', { parentCategory: 'ai', subcategory: 'others', category: 'AI Tools' }],
   [
@@ -261,6 +266,28 @@ function canonicalUrl(value) {
   } catch {
     return value
   }
+}
+
+const slugOverrides = new Map([
+  ['https://developers.google.com/ml-kit', 'ml-kit'],
+  ['https://colab.research.google.com', 'colab'],
+  ['https://www.ibm.com/think/topics/xgboost', 'xgboost'],
+])
+
+const sourceCodeOverrides = new Map([
+  ['scikit-learn', 'https://github.com/scikit-learn/scikit-learn'],
+  ['tensorflow', 'https://github.com/tensorflow/tensorflow'],
+  ['pytorch', 'https://github.com/pytorch/pytorch'],
+  ['kubeflow', 'https://github.com/kubeflow/kubeflow'],
+  ['xgboost', 'https://github.com/dmlc/xgboost'],
+])
+
+function slugOverrideFor(row) {
+  return slugOverrides.get(canonicalUrl(row.url)) || ''
+}
+
+function sourceCodeFor(row, slug) {
+  return sourceCodeOverrides.get(slug) || githubRepoUrl(row.url) || ''
 }
 
 function withPublicUrl(row, url, name = row.name) {
@@ -607,7 +634,7 @@ function detailSectionsFor(row, config, displayName) {
 }
 
 function metadataFor(row, config, slug) {
-  const sourceCode = githubRepoUrl(row.url)
+  const sourceCode = sourceCodeFor(row, slug)
   const displayName = displayNameFor(row, slug)
   const detailSections = detailSectionsFor(row, config, displayName)
   const tagParts = [
@@ -728,7 +755,7 @@ for (const originalRow of bookmarks) {
     continue
   }
 
-  const slug = uniqueSlug(domainSlug(row.url), row.name, slugs)
+  const slug = uniqueSlug(slugOverrideFor(row) || domainSlug(row.url), row.name, slugs)
   const outputDir = siteDirectoryFor(config, slug)
   const outputPath = path.join(outputDir, 'meta.yaml')
 

@@ -1,27 +1,27 @@
-slug: codebuff
-name: Codebuff
-description: Codebuff CLI setup reference for AI-assisted terminal coding workflows.
+slug: cursor-cli
+name: Cursor
+description: Cursor CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: cli-tools
 subcategory: null
-stars: 5511
-watchers: 26
+stars: 0
+watchers: 0
 addedDaysAgo: 0
-license: Apache-2.0
-lastCommit: 3 hours ago
-lastRelease: No releases
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ''
-contributors: 33
-commitsThisYear: 1312
-releases: 9
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - CLI
 deployment:
   - Local CLI
-website: https://www.codebuff.com/docs/help/quick-start
-docs: https://www.codebuff.com/docs/help/quick-start
-sourceCode: https://github.com/CodebuffAI/codebuff
-icon: codebuff
+website: https://cursor.com/cli
+docs: https://cursor.com/cli
+sourceCode: ''
+icon: cursor-cli
 verified: true
 featured: false
 tags:
@@ -30,14 +30,15 @@ tags:
   - cli
   - coding-agent
   - terminal
-atGlance: Codebuff is a supported CLI provider for AI-assisted coding workflows.
+installCommand: curl https://cursor.com/install -fsS | bash
+atGlance: Cursor is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Codebuff is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
+  Cursor is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
   The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider
-    description: Codebuff is tracked as a supported AI coding CLI for terminal-based development workflows.
+    description: Cursor is tracked as a supported AI coding CLI for terminal-based development workflows.
     icon: check
   - name: Setup Command
     description: The primary install or authentication command is available directly on the detail page.
@@ -74,4 +75,3 @@ similarTools:
     addedDaysAgo: 0
     verified: true
     website: https://autohand.ai/code/
-installCommand: npm install -g codebuff

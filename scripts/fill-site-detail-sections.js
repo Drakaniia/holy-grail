@@ -66,6 +66,23 @@ function context(meta) {
     }
   }
 
+  if (parent === 'ai' && subcategory === 'ml') {
+    return {
+      core: [
+        [
+          'Machine Learning Resource',
+          `${name} is tracked for model development, data science, or machine learning reference work.`,
+        ],
+        ['Direct Web Launch', 'Open the saved ML resource directly from the catalog entry.'],
+      ],
+      extra: [
+        ['Data Science Workflow', 'Useful for notebooks, model training, evaluation, deployment, or ML research.'],
+        ['Documentation Shortcut', 'Keeps the primary reference URL beside the saved tool or framework.'],
+        ['Category Grouping', 'Grouped with related ML frameworks, platforms, and learning resources.'],
+      ],
+    }
+  }
+
   if (parent === 'ai') {
     return {
       core: [

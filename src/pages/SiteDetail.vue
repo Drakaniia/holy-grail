@@ -54,10 +54,19 @@ const hasDistinctDocs = computed(() => Boolean(site.value?.docs && site.value.do
 const hasDeploymentInfo = computed(
   () =>
     Boolean(site.value?.deployCompose) ||
+    Boolean(site.value?.installCommand) ||
     Boolean(site.value?.website) ||
     hasDistinctDocs.value ||
     hasSourceCode.value
 )
+const installCommand = computed(() => {
+  if (site.value?.parentCategory !== 'cli-tools') {
+    return ''
+  }
+
+  return site.value.installCommand || ''
+})
+const hasInstallCommand = computed(() => Boolean(installCommand.value))
 const hasRepoActivity = computed(
   () =>
     hasSourceCode.value &&
@@ -77,6 +86,7 @@ const backRoute = computed(() => {
 })
 
 const copied = ref(false)
+const copiedInstallCommand = ref(false)
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -116,6 +126,30 @@ async function copyCompose() {
     copied.value = true
     setTimeout(() => {
       copied.value = false
+    }, 2000)
+  }
+}
+
+async function copyInstallCommand() {
+  if (!installCommand.value) return
+  try {
+    await navigator.clipboard.writeText(installCommand.value)
+    copiedInstallCommand.value = true
+    setTimeout(() => {
+      copiedInstallCommand.value = false
+    }, 2000)
+  } catch {
+    const textarea = document.createElement('textarea')
+    textarea.value = installCommand.value
+    textarea.style.position = 'fixed'
+    textarea.style.opacity = '0'
+    document.body.appendChild(textarea)
+    textarea.select()
+    document.execCommand('copy')
+    document.body.removeChild(textarea)
+    copiedInstallCommand.value = true
+    setTimeout(() => {
+      copiedInstallCommand.value = false
     }, 2000)
   }
 }
@@ -366,9 +400,29 @@ async function copyCompose() {
             {{
               site.deployCompose
                 ? 'Container-based deployment with docker-compose.yml'
+                : hasInstallCommand
+                  ? 'Install the CLI locally, then authenticate through the official provider flow'
                 : 'Cloud-first access through the official website and available project links'
             }}
           </p>
+
+          <div v-if="hasInstallCommand" class="mb-4 overflow-hidden rounded-lg border border-gray-800 bg-[#161b22]">
+            <div class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
+              <div class="flex items-center gap-2">
+                <Code2 class="w-4 h-4 text-gray-500" />
+                <span class="text-sm text-gray-400">CLI setup command</span>
+              </div>
+              <button
+                type="button"
+                class="flex w-fit items-center gap-1 rounded px-2 py-1 text-xs text-gray-400 transition-colors hover:text-white"
+                @click="copyInstallCommand"
+              >
+                <component :is="copiedInstallCommand ? Check : Copy" class="h-3.5 w-3.5" />
+                {{ copiedInstallCommand ? 'Copied!' : 'Copy' }}
+              </button>
+            </div>
+            <pre class="overflow-x-auto p-4 text-xs text-gray-300"><code>{{ installCommand }}</code></pre>
+          </div>
 
           <!-- Compose File -->
           <div v-if="site.deployCompose" class="bg-[#161b22] border border-gray-800 rounded-lg overflow-hidden">

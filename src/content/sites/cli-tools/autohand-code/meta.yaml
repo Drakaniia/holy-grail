@@ -1,27 +1,27 @@
-slug: codebuff
-name: Codebuff
-description: Codebuff CLI setup reference for AI-assisted terminal coding workflows.
+slug: autohand-code
+name: Autohand Code
+description: Autohand Code CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: cli-tools
 subcategory: null
-stars: 5511
-watchers: 26
+stars: 0
+watchers: 0
 addedDaysAgo: 0
-license: Apache-2.0
-lastCommit: 3 hours ago
-lastRelease: No releases
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
 version: ''
-contributors: 33
-commitsThisYear: 1312
-releases: 9
+contributors: 0
+commitsThisYear: 0
+releases: 0
 platforms:
   - CLI
 deployment:
   - Local CLI
-website: https://www.codebuff.com/docs/help/quick-start
-docs: https://www.codebuff.com/docs/help/quick-start
-sourceCode: https://github.com/CodebuffAI/codebuff
-icon: codebuff
+website: https://autohand.ai/code/
+docs: https://autohand.ai/code/
+sourceCode: ''
+icon: autohand-code
 verified: true
 featured: false
 tags:
@@ -30,14 +30,17 @@ tags:
   - cli
   - coding-agent
   - terminal
-atGlance: Codebuff is a supported CLI provider for AI-assisted coding workflows.
+installCommand: npm install -g autohand-cli
+atGlance: Autohand Code is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Codebuff is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
-  The setup command is shown directly on this CLI tool page for quick installation or
+  Autohand Code is cataloged as a CLI tool for developers who want AI-assisted coding from the
+  terminal. The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider
-    description: Codebuff is tracked as a supported AI coding CLI for terminal-based development workflows.
+    description: >-
+      Autohand Code is tracked as a supported AI coding CLI for terminal-based development
+      workflows.
     icon: check
   - name: Setup Command
     description: The primary install or authentication command is available directly on the detail page.
@@ -67,11 +70,10 @@ similarTools:
     addedDaysAgo: 0
     verified: true
     website: https://docs.augmentcode.com/cli/overview
-  - slug: autohand-code
-    name: Autohand Code
-    description: Autohand Code is another supported AI coding CLI.
+  - slug: charm-crush
+    name: Charm Crush
+    description: Charm Crush is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://autohand.ai/code/
-installCommand: npm install -g codebuff
+    website: https://github.com/charmbracelet/crush

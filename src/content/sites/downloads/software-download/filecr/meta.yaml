@@ -1,6 +1,6 @@
 slug: filecr
-name: filecr
-description: filecr bookmarked for software download resources.
+name: FileCR
+description: FileCR bookmarked for software download resources.
 category: Software Download
 parentCategory: downloads
 subcategory: software-download
@@ -18,8 +18,8 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://filecr.com/
-docs: https://filecr.com/
+website: https://filecr.com/home/
+docs: https://filecr.com/home/
 sourceCode: ""
 icon: filecr
 verified: false
@@ -30,11 +30,11 @@ tags:
   - software-download
   - software
   - download
-atGlance: filecr
-fullDescription: filecr is kept as a software download source in the downloads collection.
+atGlance: FileCR
+fullDescription: FileCR is kept as a software download source in the downloads collection.
 coreFeatures:
   - name: Download Source
-    description: filecr is cataloged as a software download bookmark.
+    description: FileCR is cataloged as a software download bookmark.
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
