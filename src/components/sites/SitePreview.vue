@@ -70,7 +70,7 @@ watch(
           class="absolute inset-0 flex items-end justify-end bg-black/0 p-4 transition-colors group-hover:bg-black/20"
         >
           <span
-            class="site-preview-visit-button inline-flex items-center gap-2 rounded-lg border border-white/20 bg-black/80 px-3 py-2 text-xs font-semibold text-white opacity-90 shadow-lg transition-colors group-hover:border-white/40 group-hover:bg-white group-hover:text-black"
+            class="site-preview-visit-button inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-lg transition-all"
           >
             <ExternalLink class="w-3.5 h-3.5" />
             Visit site
@@ -90,7 +90,7 @@ watch(
           <ImageOff class="w-12 h-12 mx-auto mb-3 text-gray-700" />
           <p class="text-sm">Preview will appear after running the screenshot generator.</p>
           <span
-            class="site-preview-visit-button mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-700 px-3 py-2 text-xs font-semibold text-gray-300"
+            class="site-preview-visit-button mt-4 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-all"
           >
             <ExternalLink class="w-3.5 h-3.5" />
             Visit site
@@ -103,18 +103,31 @@ watch(
 
 <style scoped>
 .site-preview-visit-button {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-color: rgba(0, 0, 0, 0.82);
   color: #ffffff;
+  opacity: 0.92;
+}
+
+.group:hover .site-preview-visit-button {
+  border-color: rgba(255, 255, 255, 0.45);
+  background-color: #ffffff;
+  color: #111111;
+  opacity: 1;
 }
 
 :global(html.light .site-preview-visit-button) {
-  border-color: rgba(255, 250, 243, 0.34) !important;
-  background-color: rgba(45, 33, 25, 0.92) !important;
-  color: #ffffff !important;
+  border-color: var(--mocha-border-strong) !important;
+  background-color: rgba(255, 250, 243, 0.96) !important;
+  color: var(--mocha-text) !important;
+  opacity: 1 !important;
+  box-shadow: 0 14px 30px rgba(45, 33, 25, 0.18) !important;
 }
 
 :global(html.light .group:hover .site-preview-visit-button) {
   border-color: var(--mocha-border-strong) !important;
-  background-color: var(--mocha-surface) !important;
+  background-color: #ffffff !important;
   color: var(--mocha-text) !important;
+  transform: translateY(-1px);
 }
 </style>
