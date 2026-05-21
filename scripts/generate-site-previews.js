@@ -250,6 +250,78 @@ async function captureSite(browser, site, options) {
   }
 }
 
+function escapeSvgText(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+function hostnameFor(value) {
+  try {
+    return new URL(value).hostname.replace(/^www\./, '')
+  } catch {
+    return 'Preview unavailable'
+  }
+}
+
+async function createFallbackPreview(site, options, reason) {
+  const safeName = escapeSvgText(site.name || site.slug)
+  const safeHost = escapeSvgText(hostnameFor(site.website))
+  const safeReason = escapeSvgText(reason)
+  const svg = `
+    <svg width="${defaults.width}" height="${defaults.height}" viewBox="0 0 ${defaults.width} ${defaults.height}" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#fffaf3"/>
+          <stop offset="1" stop-color="#eadcca"/>
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#bg)"/>
+      <rect x="96" y="96" width="1248" height="708" rx="28" fill="#fff5e8" stroke="#ddcbbb" stroke-width="2"/>
+      <circle cx="160" cy="150" r="14" fill="#ef4444"/>
+      <circle cx="204" cy="150" r="14" fill="#f59e0b"/>
+      <circle cx="248" cy="150" r="14" fill="#22c55e"/>
+      <text x="160" y="372" fill="#2d2119" font-size="54" font-weight="700" font-family="Arial, sans-serif">${safeName}</text>
+      <text x="160" y="444" fill="#5f4c3e" font-size="30" font-family="Arial, sans-serif">${safeHost}</text>
+      <text x="160" y="530" fill="#7e6b5e" font-size="24" font-family="Arial, sans-serif">Screenshot fallback generated because the live page could not be captured.</text>
+      <text x="160" y="580" fill="#a08d7f" font-size="20" font-family="Arial, sans-serif">${safeReason}</text>
+    </svg>`
+  const screenshot = Buffer.from(svg)
+  const image = await sharp(screenshot)
+    .resize(defaults.outputWidth, defaults.outputHeight, {
+      fit: 'cover',
+      position: 'top',
+    })
+    .webp({ quality: defaults.quality, effort: 4 })
+    .toBuffer()
+  const small = await sharp(screenshot)
+    .resize(defaults.smallWidth, defaults.smallHeight, {
+      fit: 'cover',
+      position: 'top',
+    })
+    .webp({ quality: defaults.quality, effort: 4 })
+    .toBuffer()
+
+  if (!options.dryRun) {
+    fs.mkdirSync(publicPreviewsDir, { recursive: true })
+    fs.writeFileSync(path.join(publicPreviewsDir, `${site.slug}.webp`), image)
+    fs.writeFileSync(path.join(publicPreviewsDir, `${site.slug}-sm.webp`), small)
+  }
+
+  return {
+    image: `/previews/${site.slug}.webp`,
+    small: `/previews/${site.slug}-sm.webp`,
+    sourceUrl: normalizeUrl(site.website) || site.website,
+    capturedAt: new Date().toISOString(),
+    width: defaults.outputWidth,
+    height: defaults.outputHeight,
+    bytes: image.byteLength,
+    fallback: true,
+  }
+}
+
 function eligibleSites(sites, manifest, options) {
   const filtered = sites.filter(site => {
     if (!site.slug || !site.website) return false
@@ -277,8 +349,20 @@ async function runWorker(workerId, browser, queue, manifest, failures, options) 
       console.log(`${prefix} saved ${manifest[site.slug].bytes} bytes`)
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error)
-      failures.push({ slug: site.slug, website: site.website, error: message })
-      console.warn(`${prefix} failed: ${message}`)
+      try {
+        manifest[site.slug] = await createFallbackPreview(site, options, message)
+        console.warn(`${prefix} fallback saved after capture failure: ${message}`)
+      } catch (fallbackError) {
+        const fallbackMessage =
+          fallbackError instanceof Error ? fallbackError.message : String(fallbackError)
+        failures.push({
+          slug: site.slug,
+          website: site.website,
+          error: message,
+          fallbackError: fallbackMessage,
+        })
+        console.warn(`${prefix} failed: ${message}`)
+      }
     }
   }
 }
@@ -302,6 +386,7 @@ async function main() {
     JSON.stringify(
       {
         mode: options.dryRun ? 'dry-run' : 'apply',
+        selection: options.all ? 'all matching sites' : 'missing previews only',
         browserPath,
         candidates: queue.length,
         concurrency: options.concurrency,
@@ -313,9 +398,11 @@ async function main() {
   )
 
   if (!queue.length) {
-    writeJson(publicManifestPath, sortManifest(manifest))
-    writeJson(srcManifestPath, sortManifest(manifest))
-    writeJson(publicReportPath, { captured: 0, failed: 0, failures })
+    if (!options.dryRun) {
+      writeJson(publicManifestPath, sortManifest(manifest))
+      writeJson(srcManifestPath, sortManifest(manifest))
+      writeJson(publicReportPath, { captured: 0, failed: 0, failures })
+    }
     return
   }
 
@@ -346,12 +433,12 @@ async function main() {
   if (!options.dryRun) {
     writeJson(publicManifestPath, sortedManifest)
     writeJson(srcManifestPath, sortedManifest)
+    writeJson(publicReportPath, {
+      captured: Object.keys(sortedManifest).length,
+      failed: failures.length,
+      failures,
+    })
   }
-  writeJson(publicReportPath, {
-    captured: Object.keys(sortedManifest).length,
-    failed: failures.length,
-    failures,
-  })
 
   console.log(
     JSON.stringify(

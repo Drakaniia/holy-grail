@@ -5,6 +5,18 @@ import yaml from 'js-yaml'
 const sitesDir = path.resolve('src/content/sites')
 const applyChanges = process.argv.includes('--apply')
 const onlyNew = !process.argv.includes('--all')
+const refreshSimilar = process.argv.includes('--refresh-similar')
+
+function readOption(name) {
+  const inline = process.argv.find(arg => arg.startsWith(`${name}=`))
+  if (inline) return inline.slice(name.length + 1)
+
+  const index = process.argv.indexOf(name)
+  return index >= 0 ? process.argv[index + 1] : ''
+}
+
+const parentFilter = readOption('--parent')
+const subcategoryFilter = readOption('--subcategory')
 
 function walkMetaFiles(dir) {
   const files = []
@@ -117,6 +129,20 @@ function context(meta) {
     }
   }
 
+  if (parent === 'downloads') {
+    return {
+      core: [
+        ['Download Source', `${name} is cataloged as a ${lowerCategory} bookmark.`],
+        ['Direct Web Launch', 'Open the saved source directly from the catalog entry.'],
+      ],
+      extra: [
+        ['Grouped by Type', 'Sorted by games, VFX, software, torrents, or movies.'],
+        ['Imported Bookmark', 'Preserves the saved browser bookmark link.'],
+        ['Catalog Tags', 'Tagged under the downloads collection for search and filtering.'],
+      ],
+    }
+  }
+
   if (parent === 'cli-tools') {
     return {
       core: [
@@ -153,6 +179,22 @@ function featureObjects(rows) {
 }
 
 function similarToolsFor(site, allSites) {
+  const byStatsAndName = (a, b) => {
+    const aStars = a.meta.stars || 0
+    const bStars = b.meta.stars || 0
+    return bStars - aStars || compactName(a.meta.name).localeCompare(compactName(b.meta.name))
+  }
+
+  const toSimilarTool = candidate => ({
+    slug: candidate.meta.slug || path.basename(path.dirname(candidate.filePath)),
+    name: candidate.meta.name || '',
+    description: candidate.meta.description || '',
+    stars: candidate.meta.stars || 0,
+    addedDaysAgo: candidate.meta.addedDaysAgo || 0,
+    verified: Boolean(candidate.meta.verified),
+    website: candidate.meta.website || '',
+  })
+
   const exactGroup = allSites.filter(
     candidate =>
       candidate.meta.slug !== site.meta.slug &&
@@ -184,22 +226,11 @@ function similarToolsFor(site, allSites) {
       !parentGroup.some(parent => parent.meta.slug === candidate.meta.slug)
   )
 
-  return [...exactGroup, ...categoryGroup, ...parentGroup, ...globalGroup]
-    .sort((a, b) => {
-      const aStars = a.meta.stars || 0
-      const bStars = b.meta.stars || 0
-      return bStars - aStars || compactName(a.meta.name).localeCompare(compactName(b.meta.name))
-    })
-    .slice(0, 3)
-    .map(candidate => ({
-      slug: candidate.meta.slug || path.basename(path.dirname(candidate.filePath)),
-      name: candidate.meta.name || '',
-      description: candidate.meta.description || '',
-      stars: candidate.meta.stars || 0,
-      addedDaysAgo: candidate.meta.addedDaysAgo || 0,
-      verified: Boolean(candidate.meta.verified),
-      website: candidate.meta.website || '',
-    }))
+  const ordered = [exactGroup, categoryGroup, parentGroup, globalGroup].flatMap(group =>
+    group.sort(byStatsAndName)
+  )
+
+  return ordered.slice(0, 3).map(toSimilarTool)
 }
 
 function orderedMeta(meta, details) {
@@ -236,7 +267,8 @@ function orderedMeta(meta, details) {
       ? meta.additionalFeatures
       : details.additionalFeatures,
     ...(meta.deployCompose ? { deployCompose: meta.deployCompose } : {}),
-    similarTools: meta.similarTools?.length ? meta.similarTools : details.similarTools,
+    similarTools:
+      !refreshSimilar && meta.similarTools?.length ? meta.similarTools : details.similarTools,
   }
 }
 
@@ -250,6 +282,8 @@ let scanned = 0
 
 for (const site of sites) {
   if (onlyNew && site.meta.addedDaysAgo !== 0) continue
+  if (parentFilter && site.meta.parentCategory !== parentFilter) continue
+  if (subcategoryFilter && (site.meta.subcategory || '') !== subcategoryFilter) continue
   scanned += 1
 
   const details = context(site.meta)

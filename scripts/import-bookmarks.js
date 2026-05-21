@@ -2,8 +2,40 @@ import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
 
-const inputPath = path.resolve(process.argv[2] || 'bookmarks_5_20_26.html')
 const sitesDir = path.resolve('src/content/sites')
+
+function parseArgs(argv) {
+  const options = {
+    inputPath: 'bookmarks_5_20_26.html',
+    allowedFolders: new Set(),
+  }
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index]
+
+    if (arg === '--folder' && argv[index + 1]) {
+      options.allowedFolders.add(argv[index + 1])
+      index += 1
+      continue
+    }
+
+    if (arg.startsWith('--folder=')) {
+      options.allowedFolders.add(arg.slice('--folder='.length))
+      continue
+    }
+
+    if (!arg.startsWith('--') && options.inputPath === 'bookmarks_5_20_26.html') {
+      options.inputPath = arg
+    }
+  }
+
+  return {
+    inputPath: path.resolve(options.inputPath),
+    allowedFolders: options.allowedFolders,
+  }
+}
+
+const { inputPath, allowedFolders } = parseArgs(process.argv.slice(2))
 
 const placements = {
   developmentLearning: {
@@ -40,6 +72,31 @@ const placements = {
     parentCategory: 'platforms',
     subcategory: null,
     category: 'Hosting',
+  },
+  downloadsGames: {
+    parentCategory: 'downloads',
+    subcategory: 'game-download',
+    category: 'Game Download',
+  },
+  downloadsVfx: {
+    parentCategory: 'downloads',
+    subcategory: 'vfx-download',
+    category: 'VFX Download',
+  },
+  downloadsSoftware: {
+    parentCategory: 'downloads',
+    subcategory: 'software-download',
+    category: 'Software Download',
+  },
+  downloadsTorrents: {
+    parentCategory: 'downloads',
+    subcategory: 'torrents',
+    category: 'Torrents',
+  },
+  downloadsMovies: {
+    parentCategory: 'downloads',
+    subcategory: 'movies',
+    category: 'Movies',
   },
 }
 
@@ -95,6 +152,7 @@ const folderMap = new Map([
   ],
   ['Bookmarks bar > Design > Fonts', { parentCategory: 'design', subcategory: 'fonts', category: 'Fonts' }],
   ['Bookmarks bar > Design > 3d', { parentCategory: 'design', subcategory: '3d', category: '3D' }],
+  ['Bookmarks bar > ALL > 3D', { parentCategory: 'design', subcategory: '3d', category: '3D' }],
   [
     'Bookmarks bar > Design > Promts',
     { parentCategory: 'design', subcategory: 'prompts', category: 'Prompts' },
@@ -117,6 +175,16 @@ const folderMap = new Map([
     'Bookmarks bar > CMPNTS > SVG',
     { parentCategory: 'design', subcategory: 'icons-svg', category: 'Icons/SVG' },
   ],
+  ['Bookmarks bar > DOWNLOADS > Game Download', placements.downloadsGames],
+  ['Bookmarks bar > DOWNLOADS > VFX Download', placements.downloadsVfx],
+  ['Bookmarks bar > DOWNLOADS > Software Download', placements.downloadsSoftware],
+  ['Bookmarks bar > DOWNLOADS > Torrents', placements.downloadsTorrents],
+  ['Bookmarks bar > DOWNLOADS > Movies', placements.downloadsMovies],
+  ['Bookmarks bar > ALL > DOWNLOADS > Game Download', placements.downloadsGames],
+  ['Bookmarks bar > ALL > DOWNLOADS > VFX Download', placements.downloadsVfx],
+  ['Bookmarks bar > ALL > DOWNLOADS > Software Download', placements.downloadsSoftware],
+  ['Bookmarks bar > ALL > DOWNLOADS > Torrents', placements.downloadsTorrents],
+  ['Bookmarks bar > ALL > DOWNLOADS > Movies', placements.downloadsMovies],
 ])
 
 function decodeHtml(value) {
@@ -146,6 +214,9 @@ function cleanText(value) {
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^\x20-\x7e]/g, ' ')
+    .replace(/\(\s*\)/g, '')
+    .replace(/^[\s|/\\:;,_-]+|[\s|/\\:;,_-]+$/g, '')
+    .replace(/\s+([,.;!?])/g, '$1')
     .replace(/\s+/g, ' ')
     .trim()
 }
@@ -426,8 +497,108 @@ function uniqueSlug(baseSlug, name, usedSlugs) {
   return slug
 }
 
+function displayNameFor(row, slug) {
+  const name = row.name || ''
+  if (!name || /^[\d\s._-]+$/.test(name)) return slug
+  return name
+}
+
+function detailSectionsFor(row, config, displayName) {
+  if (config.parentCategory === 'downloads') {
+    return {
+      coreFeatures: [
+        {
+          name: 'Download Source',
+          description: `${displayName} is saved as a ${config.category.toLowerCase()} bookmark.`,
+          icon: 'check',
+        },
+        {
+          name: 'Direct Web Launch',
+          description: 'Open the saved source directly from the catalog entry.',
+          icon: 'check',
+        },
+      ],
+      additionalFeatures: [
+        {
+          name: 'Imported Bookmark',
+          description: `Preserves the original browser folder path "${row.folder}".`,
+          icon: 'check',
+        },
+        {
+          name: 'Grouped by Type',
+          description: 'Sorted into the downloads collection for focused browsing.',
+          icon: 'check',
+        },
+      ],
+    }
+  }
+
+  if (config.parentCategory === 'design') {
+    return {
+      coreFeatures: [
+        {
+          name: 'Design Resource',
+          description: `${displayName} is cataloged as a ${config.category.toLowerCase()} resource for design work.`,
+          icon: 'check',
+        },
+        {
+          name: 'Visual Reference',
+          description: 'Useful as inspiration, tooling, assets, or implementation reference.',
+          icon: 'check',
+        },
+      ],
+      additionalFeatures: [
+        {
+          name: 'Browser Workflow',
+          description: 'Works from the saved site link with no local install required.',
+          icon: 'check',
+        },
+        {
+          name: 'Sorted by Discipline',
+          description: 'Grouped under the matching design subcategory.',
+          icon: 'check',
+        },
+        {
+          name: 'Reusable Reference',
+          description: 'Kept with tags and metadata for repeat use.',
+          icon: 'check',
+        },
+      ],
+    }
+  }
+
+  return {
+    coreFeatures: [
+      {
+        name: 'Web Resource',
+        description: `${displayName} is tracked as a ${config.category.toLowerCase()} resource.`,
+        icon: 'check',
+      },
+      {
+        name: 'Direct Access',
+        description: 'Open the saved site directly from the catalog entry.',
+        icon: 'check',
+      },
+    ],
+    additionalFeatures: [
+      {
+        name: 'Imported Bookmark',
+        description: `Preserves the original browser folder path "${row.folder}".`,
+        icon: 'check',
+      },
+      {
+        name: 'Catalog Metadata',
+        description: 'Includes category, tags, and primary links for browsing.',
+        icon: 'check',
+      },
+    ],
+  }
+}
+
 function metadataFor(row, config, slug) {
   const sourceCode = githubRepoUrl(row.url)
+  const displayName = displayNameFor(row, slug)
+  const detailSections = detailSectionsFor(row, config, displayName)
   const tagParts = [
     'bookmark',
     config.parentCategory,
@@ -437,8 +608,8 @@ function metadataFor(row, config, slug) {
 
   return {
     slug,
-    name: row.name || slug,
-    description: `${row.name || slug} bookmarked for ${config.category.toLowerCase()} resources.`,
+    name: displayName,
+    description: `${displayName} bookmarked for ${config.category.toLowerCase()} resources.`,
     category: config.category,
     parentCategory: config.parentCategory,
     subcategory: config.subcategory,
@@ -461,8 +632,11 @@ function metadataFor(row, config, slug) {
     verified: false,
     featured: false,
     tags: Array.from(new Set(tagParts)),
-    atGlance: row.name || slug,
-    fullDescription: `${row.name || slug} was imported from the browser bookmark folder "${row.folder}".`,
+    atGlance: displayName,
+    fullDescription: `${displayName} was imported from the browser bookmark folder "${row.folder}".`,
+    coreFeatures: detailSections.coreFeatures,
+    additionalFeatures: detailSections.additionalFeatures,
+    similarTools: [],
   }
 }
 
@@ -490,6 +664,11 @@ let imported = 0
 let skipped = 0
 
 for (const originalRow of bookmarks) {
+  if (allowedFolders.size && !allowedFolders.has(originalRow.folder)) {
+    skipped += 1
+    continue
+  }
+
   const row = normalizeBookmarkRow(originalRow)
   if (!row) {
     skipped += 1

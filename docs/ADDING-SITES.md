@@ -137,8 +137,9 @@ Do not add placeholder Compose YAML just to make the section appear.
 Production previews are static files generated from the site index:
 
 ```bash
-bun run generate:previews       # capture missing previews only
-bun run generate:previews:all   # regenerate every public preview
+bun run generate:previews         # capture missing previews only
+bun run generate:previews:missing # explicit missing-only alias
+bun run generate:previews:all     # regenerate every public preview
 ```
 
 The generator writes:

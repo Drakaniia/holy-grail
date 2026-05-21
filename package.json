@@ -14,6 +14,7 @@
     "format": "prettier --write --experimental-cli src/",
     "generate:skills": "bun run scripts/generate-skills-index.js",
     "generate:previews": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
+    "generate:previews:missing": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
     "generate:previews:all": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js --all",
     "import:bookmarks": "bun run scripts/import-bookmarks.js"
   },
