@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
-import sitesIndex from '@/content/sites-index.json'
+import { computed, shallowRef } from 'vue'
 
 export interface SiteFeature {
   name: string
@@ -54,12 +53,44 @@ export interface Site {
 }
 
 export const useSitesStore = defineStore('sites', () => {
-  const allSites = ref<Site[]>(sitesIndex as Site[])
-  const searchQuery = ref('')
-  const activeCategory = ref('All')
-  const activeTab = ref<'trending' | 'newest' | 'popular'>('trending')
-  const currentPage = ref(1)
+  const allSites = shallowRef<Site[]>([])
+  const searchQuery = shallowRef('')
+  const activeCategory = shallowRef('All')
+  const activeTab = shallowRef<'trending' | 'newest' | 'popular'>('trending')
+  const currentPage = shallowRef(1)
+  const loading = shallowRef(false)
+  const loaded = shallowRef(false)
+  const loadError = shallowRef<string | null>(null)
   const itemsPerPage = 12
+  let loadPromise: Promise<void> | null = null
+
+  const loadSites = async (force = false): Promise<void> => {
+    if (loaded.value && !force) return
+    if (loadPromise && !force) return loadPromise
+
+    loading.value = true
+    loadError.value = null
+
+    loadPromise = (async () => {
+      try {
+        const response = await fetch('/content/sites-index.json', { cache: 'no-cache' })
+
+        if (!response.ok) {
+          throw new Error(`Failed to load sites index (${response.status})`)
+        }
+
+        allSites.value = await response.json() as Site[]
+        loaded.value = true
+      } catch (error) {
+        loadError.value = error instanceof Error ? error.message : 'Failed to load sites index'
+      } finally {
+        loading.value = false
+        loadPromise = null
+      }
+    })()
+
+    return loadPromise
+  }
 
   const categories = computed(() => {
     const cats = new Set(allSites.value.map(s => s.category))
@@ -141,6 +172,9 @@ export const useSitesStore = defineStore('sites', () => {
 
   return {
     allSites,
+    loading,
+    loaded,
+    loadError,
     searchQuery,
     activeCategory,
     activeTab,
@@ -150,6 +184,7 @@ export const useSitesStore = defineStore('sites', () => {
     filteredSites,
     paginatedSites,
     totalPages,
+    loadSites,
     getSiteBySlug,
     getSitesByParentCategory,
     getSitesBySubcategory,

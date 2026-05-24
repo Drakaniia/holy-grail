@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
-import skillsIndex from '@/content/skills-index.json'
+import { computed, ref, shallowRef } from 'vue'
 import { fetchSkillContent, type SkillContent } from '@/lib/github'
 
 export interface Skill {
@@ -58,16 +57,48 @@ function setCachedContent(slug: string, content: SkillContent): void {
 }
 
 export const useSkillsStore = defineStore('skills', () => {
-  const allSkills = ref<Skill[]>(skillsIndex as Skill[])
-  const searchQuery = ref('')
-  const activeCategory = ref('All')
-  const activeTab = ref<'popular' | 'trending' | 'recent'>('popular')
-  const currentPage = ref(1)
+  const allSkills = shallowRef<Skill[]>([])
+  const searchQuery = shallowRef('')
+  const activeCategory = shallowRef('All')
+  const activeTab = shallowRef<'popular' | 'trending' | 'recent'>('popular')
+  const currentPage = shallowRef(1)
+  const loading = shallowRef(false)
+  const loaded = shallowRef(false)
+  const loadError = shallowRef<string | null>(null)
   const itemsPerPage = 12
+  let loadPromise: Promise<void> | null = null
 
   const contentCache = ref<Record<string, SkillContent | null>>({})
   const contentLoading = ref<Record<string, boolean>>({})
   const contentError = ref<Record<string, string | null>>({})
+
+  const loadSkills = async (force = false): Promise<void> => {
+    if (loaded.value && !force) return
+    if (loadPromise && !force) return loadPromise
+
+    loading.value = true
+    loadError.value = null
+
+    loadPromise = (async () => {
+      try {
+        const response = await fetch('/content/skills-index.json', { cache: 'no-cache' })
+
+        if (!response.ok) {
+          throw new Error(`Failed to load skills index (${response.status})`)
+        }
+
+        allSkills.value = await response.json() as Skill[]
+        loaded.value = true
+      } catch (error) {
+        loadError.value = error instanceof Error ? error.message : 'Failed to load skills index'
+      } finally {
+        loading.value = false
+        loadPromise = null
+      }
+    })()
+
+    return loadPromise
+  }
 
   const categories = computed(() => {
     const cats = new Set(allSkills.value.map(s => s.category))
@@ -204,6 +235,9 @@ export const useSkillsStore = defineStore('skills', () => {
 
   return {
     allSkills,
+    loading,
+    loaded,
+    loadError,
     searchQuery,
     activeCategory,
     activeTab,
@@ -213,6 +247,7 @@ export const useSkillsStore = defineStore('skills', () => {
     filteredSkills,
     paginatedSkills,
     totalPages,
+    loadSkills,
     getSkillBySlug,
     getSkillsByParentCategory,
     getSkillContent,
