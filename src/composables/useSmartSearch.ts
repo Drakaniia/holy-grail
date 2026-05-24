@@ -96,6 +96,8 @@ const navigationItems: SearchItem[] = [
 export function useSmartSearch(query: Ref<string>) {
   const sitesStore = useSitesStore()
   const skillsStore = useSkillsStore()
+  void sitesStore.loadSites()
+  void skillsStore.loadSkills()
 
   const corpus = computed<SearchItem[]>(() => [
     ...navigationItems,
