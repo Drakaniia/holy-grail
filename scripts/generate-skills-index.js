@@ -3,7 +3,10 @@ import path from 'node:path'
 import yaml from 'js-yaml'
 
 const skillsDir = path.resolve('src/content/skills')
-const outputPath = path.resolve('src/content/skills-index.json')
+const outputPaths = [
+  path.resolve('src/content/skills-index.json'),
+  path.resolve('public/content/skills-index.json'),
+]
 
 function findMetaYamlFiles(dir, parentCategory = '') {
   const results = []
@@ -67,7 +70,11 @@ function buildSkillsIndex() {
     return b.views - a.views
   })
 
-  fs.writeFileSync(outputPath, JSON.stringify(skills, null, 2))
+  for (const outputPath of outputPaths) {
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+    fs.writeFileSync(outputPath, JSON.stringify(skills, null, 2))
+  }
+
   console.log(`Generated skills index with ${skills.length} skills`)
 }
 

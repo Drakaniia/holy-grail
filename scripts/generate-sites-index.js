@@ -3,7 +3,10 @@ import path from 'node:path'
 import yaml from 'js-yaml'
 
 const sitesDir = path.resolve('src/content/sites')
-const outputPath = path.resolve('src/content/sites-index.json')
+const outputPaths = [
+  path.resolve('src/content/sites-index.json'),
+  path.resolve('public/content/sites-index.json'),
+]
 
 function findMetaYamlFiles(dir, parentCategory = '', subcategory = '') {
   const results = []
@@ -88,7 +91,11 @@ function buildSitesIndex() {
     return b.stars - a.stars
   })
 
-  fs.writeFileSync(outputPath, JSON.stringify(sites, null, 2))
+  for (const outputPath of outputPaths) {
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+    fs.writeFileSync(outputPath, JSON.stringify(sites, null, 2))
+  }
+
   console.log(`Generated sites index with ${sites.length} sites`)
 }
 
