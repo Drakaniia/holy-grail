@@ -25,9 +25,11 @@ interface SubmissionPayload {
   description: string
   category: string
   submitter_note: string | null
-  submitted_by: string | null
-  submitted_by_email: string | null
-  status: 'pending'
+}
+
+interface SubmitToolResponse {
+  ok?: boolean
+  error?: string
 }
 
 const status = shallowRef<SubmitStatus>('idle')
@@ -72,18 +74,25 @@ function validateForm(): string | null {
   return null
 }
 
-async function notifyAdminSubmission(submission: SubmissionPayload) {
-  if (!supabase) {
-    return
+function getErrorContext(error: unknown): Response | null {
+  if (!error || typeof error !== 'object' || !('context' in error)) {
+    return null
   }
 
-  try {
-    await supabase.functions.invoke('notify-submission', {
-      body: { submission },
-    })
-  } catch {
-    // Email delivery should never make a saved submission look failed to users.
+  const context = (error as { context?: unknown }).context
+  return context instanceof Response ? context : null
+}
+
+async function getSubmissionErrorMessage(error: unknown) {
+  const context = getErrorContext(error)
+  if (context) {
+    const body = await context.clone().json().catch(() => null)
+    if (body && typeof body === 'object' && 'error' in body && typeof body.error === 'string') {
+      return body.error
+    }
   }
+
+  return getSupabaseErrorMessage(error, 'Submission failed. Please try again.')
 }
 
 async function handleSubmit() {
@@ -108,14 +117,14 @@ async function handleSubmit() {
       description: description.value.trim(),
       category: category.value,
       submitter_note: submitterNote.value.trim() || null,
-      submitted_by: auth.user?.id ?? null,
-      submitted_by_email: auth.user?.email ?? null,
-      status: 'pending',
     }
 
-    const { error } = await supabase.from('submissions').insert(submission)
+    const { data, error } = await supabase.functions.invoke<SubmitToolResponse>('submit-tool', {
+      body: { submission },
+    })
 
     if (error) throw error
+    if (!data?.ok) throw new Error(data?.error || 'Submission failed. Please try again.')
 
     status.value = 'success'
     name.value = ''
@@ -127,10 +136,9 @@ async function handleSubmit() {
       'Submission received',
       "Thanks for submitting. I'll review it and add it if approved.",
     )
-    void notifyAdminSubmission(submission)
   } catch (err) {
     status.value = 'error'
-    errorMessage.value = getSupabaseErrorMessage(err, 'Submission failed. Please try again.')
+    errorMessage.value = await getSubmissionErrorMessage(err)
   }
 }
 

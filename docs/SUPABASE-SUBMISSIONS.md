@@ -5,8 +5,17 @@ submission inbox, review status, and admin email notification.
 
 ## Database
 
-Apply `supabase/migrations/20260521000000_create_submissions.sql` to create the
-`public.submissions` table and RLS policies.
+Apply these migrations in order:
+
+```bash
+supabase db push
+```
+
+- `supabase/migrations/20260521000000_create_submissions.sql` creates the
+  `public.submissions` table and admin review RLS policies.
+- `supabase/migrations/20260524000000_harden_submissions.sql` removes direct
+  browser inserts and adds the server-side rate limit table/function used by
+  the submission Edge Function.
 
 Admin access is based on server-controlled `app_metadata`, not user-editable
 `user_metadata`:
@@ -19,14 +28,18 @@ where email = 'you@example.com';
 
 After updating app metadata, sign out and sign in again so the JWT refreshes.
 
-## Email Notification
+## Submission Function
 
-Deploy `supabase/functions/notify-submission` as a public Edge Function because anonymous
-visitors can submit tools:
+Deploy `supabase/functions/submit-tool` as the public submission endpoint:
 
 ```bash
-supabase functions deploy notify-submission --no-verify-jwt
+supabase functions deploy submit-tool --no-verify-jwt
 ```
+
+This function validates the request origin, rate-limits by hashed client IP, inserts the pending
+submission with the service role key, and sends the admin email notification after the row is saved.
+It reads Supabase's built-in service secret from `SUPABASE_SERVICE_ROLE_KEY` or the newer
+`SUPABASE_SECRET_KEYS` environment shape.
 
 Set these Supabase secrets:
 
@@ -35,15 +48,29 @@ supabase secrets set RESEND_API_KEY=re_...
 supabase secrets set ADMIN_EMAIL=you@example.com
 supabase secrets set SUBMISSION_FROM_EMAIL="Holy Grail <submissions@your-domain.com>"
 supabase secrets set PUBLIC_SITE_URL=https://holy-grail-eta.vercel.app
+supabase secrets set SUBMISSION_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
+supabase secrets set SUBMISSION_RATE_LIMIT_MAX=5
+supabase secrets set SUBMISSION_RATE_LIMIT_WINDOW_SECONDS=3600
+supabase secrets set SUBMISSION_RATE_LIMIT_SALT=use-a-long-random-string
 ```
 
 `ADMIN_REVIEW_URL` can be used instead of `PUBLIC_SITE_URL` when the admin link should point to a
 custom review URL.
 
+The older `notify-submission` function is no longer called by the app. Redeploy the checked-in
+disabled shim once, or delete the function from Supabase, so the old public email-only endpoint
+cannot be used for notification spam:
+
+```bash
+supabase functions deploy notify-submission --no-verify-jwt
+# or remove it from the hosted project:
+# supabase functions delete notify-submission
+```
+
 ## Review Flow
 
 1. Visitor submits a tool at `/submit`.
-2. The app inserts a pending row in `public.submissions`.
-3. The app invokes `notify-submission` to email the admin.
+2. The app invokes `submit-tool`.
+3. `submit-tool` validates origin, applies the rate limit, inserts a pending row, and emails the admin.
 4. Admin reviews `/admin` and marks the row approved or rejected.
 5. Approved items are still manually added as YAML and published through the normal build.
