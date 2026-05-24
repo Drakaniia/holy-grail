@@ -96,7 +96,7 @@ onMounted(() => {
       </button>
 
       <RouterLink
-        to="/sites/platforms"
+        to="/"
         class="flex min-w-0 items-center gap-2 text-sm font-bold uppercase tracking-tight text-white md:hidden"
       >
         <svg class="h-5 w-5 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">

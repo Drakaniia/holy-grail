@@ -4,7 +4,7 @@
       class="mx-auto flex min-h-16 max-w-7xl flex-col justify-center gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-0"
     >
       <div class="flex min-w-0 flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
-        <RouterLink to="/sites/platforms" class="flex min-w-0 items-center gap-2">
+        <RouterLink to="/" class="flex min-w-0 items-center gap-2">
           <svg class="h-4 w-4 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"

@@ -6,6 +6,7 @@ const AdminPage = () => import('@/pages/AdminPage.vue')
 const AuthCallbackPage = () => import('@/pages/AuthCallbackPage.vue')
 const AuthPage = () => import('@/pages/AuthPage.vue')
 const BookmarksPage = () => import('@/pages/BookmarksPage.vue')
+const HomePage = () => import('@/pages/HomePage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
 const SkillDetail = () => import('@/pages/SkillDetail.vue')
@@ -37,7 +38,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/sites/platforms',
+      name: 'home',
+      component: HomePage,
     },
     {
       path: '/sites',

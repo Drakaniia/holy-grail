@@ -19,6 +19,7 @@ import {
   Github,
   Hammer,
   HardDriveDownload,
+  Home,
   Image,
   Lightbulb,
   MessageSquare,
@@ -144,7 +145,7 @@ const skillsNav = [
 <template>
   <aside class="flex h-full w-64 select-none flex-col overflow-hidden border-r border-gray-800 bg-black">
     <div class="flex h-12 shrink-0 items-center gap-2 border-b border-gray-800 px-4">
-      <RouterLink to="/sites/platforms" class="flex items-center gap-2">
+      <RouterLink to="/" class="flex items-center gap-2">
         <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path
             d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
@@ -156,6 +157,25 @@ const skillsNav = [
 
     <nav class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
       <ul class="space-y-0.5 px-4">
+        <li class="pb-2 pt-1">
+          <RouterLink
+            to="/"
+            class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
+            :class="
+              isActive('/')
+                ? 'bg-zinc-900 text-white'
+                : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+            "
+          >
+            <div
+              v-if="isActive('/')"
+              class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
+            ></div>
+            <Home class="w-3.5 h-3.5" />
+            <span class="font-medium">Overview</span>
+          </RouterLink>
+        </li>
+
         <li>
           <div class="w-full flex items-center gap-3 text-gray-500 py-2">
             <Globe class="w-4 h-4" />
