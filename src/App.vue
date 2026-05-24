@@ -11,7 +11,10 @@ const route = useRoute()
 const isAuthRoute = computed(
   () => route.name === 'login' || route.name === 'signup' || route.name === 'auth-callback',
 )
-const isStandaloneRoute = computed(() => route.name === 'home')
+const isStandaloneRoute = computed(() => route.path === '/' || route.name === 'home')
+const shouldRenderAppShell = computed(
+  () => !isAuthRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
+)
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
 
@@ -24,7 +27,7 @@ function toggleMobileSidebar() {
 }
 
 function openCommandPalette() {
-  if (isAuthRoute.value || isStandaloneRoute.value) return
+  if (!shouldRenderAppShell.value) return
 
   isCommandPaletteOpen.value = true
 }
@@ -58,7 +61,7 @@ onUnmounted(() => {
 <template>
   <RouterView v-if="isAuthRoute || isStandaloneRoute" />
 
-  <div v-else class="flex h-[100dvh] overflow-hidden bg-black text-white">
+  <div v-else-if="shouldRenderAppShell" class="flex h-[100dvh] overflow-hidden bg-black text-white">
     <div class="hidden h-full shrink-0 md:block">
       <Sidebar />
     </div>
