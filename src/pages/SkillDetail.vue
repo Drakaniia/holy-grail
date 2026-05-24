@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ArrowLeft, Eye, Code2, User, Tag, ExternalLink, Sparkles, Copy, Check, AlertCircle } from 'lucide-vue-next'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
@@ -35,14 +35,22 @@ const backRoute = computed(() => {
 const contentHtml = ref('')
 const copied = ref(false)
 
-onMounted(async () => {
+async function loadSkillContent() {
+  const currentSlug = slug.value
+  contentHtml.value = ''
+  await store.loadSkills()
+
   if (skill.value) {
-    const content = await store.getSkillContent(slug.value)
-    if (content) {
+    const content = await store.getSkillContent(currentSlug)
+    if (content && currentSlug === slug.value) {
       contentHtml.value = content.html
     }
   }
-})
+}
+
+watch(slug, () => {
+  void loadSkillContent()
+}, { immediate: true })
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -196,6 +204,24 @@ async function copyInstallCommand() {
           <p class="text-gray-500">No content available for this skill.</p>
         </div>
       </div>
+    </div>
+
+    <div v-else-if="store.loading" class="flex items-center justify-center py-24">
+      <div class="flex items-center gap-2 text-sm text-gray-500">
+        <Sparkles class="h-5 w-5 animate-pulse text-accent-300" />
+        Loading skill...
+      </div>
+    </div>
+
+    <div v-else-if="store.loadError" class="mx-auto max-w-xl px-4 py-24 text-center">
+      <h2 class="text-2xl font-bold text-white mb-2">Could not load skills</h2>
+      <p class="text-gray-400 mb-6">{{ store.loadError }}</p>
+      <button
+        @click="router.push(backRoute)"
+        class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
+      >
+        Browse Skills
+      </button>
     </div>
 
     <!-- Not Found -->

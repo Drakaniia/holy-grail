@@ -8,6 +8,7 @@ import SkillCard from '@/components/skills/SkillCard.vue'
 
 const route = useRoute()
 const store = useSkillsStore()
+void store.loadSkills()
 
 const category = computed(() => route.params.category as string)
 
@@ -200,7 +201,21 @@ watch(totalPages, pages => {
         </div>
       </div>
 
-      <div v-if="paginatedSkills.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div v-if="store.loading && filteredSkills.length === 0" class="flex items-center justify-center py-16">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <Sparkles class="h-5 w-5 animate-pulse text-yellow-500" />
+          Loading skills...
+        </div>
+      </div>
+
+      <div
+        v-else-if="store.loadError"
+        class="border border-red-900/70 bg-red-950/30 px-4 py-4 text-sm text-red-100"
+      >
+        {{ store.loadError }}
+      </div>
+
+      <div v-else-if="paginatedSkills.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <SkillCard
           v-for="skill in paginatedSkills"
           :key="skill.slug"
