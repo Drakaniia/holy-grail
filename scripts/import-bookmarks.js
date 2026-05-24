@@ -98,6 +98,16 @@ const placements = {
     subcategory: 'movies',
     category: 'Movies',
   },
+  watchMovies: {
+    parentCategory: 'watch',
+    subcategory: 'movies',
+    category: 'Movies',
+  },
+  watchAnime: {
+    parentCategory: 'watch',
+    subcategory: 'anime',
+    category: 'Anime',
+  },
 }
 
 const folderMap = new Map([
@@ -194,6 +204,12 @@ const folderMap = new Map([
   ['Bookmarks bar > ALL > DOWNLOADS > Software Download', placements.downloadsSoftware],
   ['Bookmarks bar > ALL > DOWNLOADS > Torrents', placements.downloadsTorrents],
   ['Bookmarks bar > ALL > DOWNLOADS > Movies', placements.downloadsMovies],
+  ['Bookmarks bar > WATCH > Movies', placements.watchMovies],
+  ['Bookmarks bar > WATCH > Anime', placements.watchAnime],
+  ['Bookmarks bar > Watch > Movies', placements.watchMovies],
+  ['Bookmarks bar > Watch > Anime', placements.watchAnime],
+  ['Bookmarks bar > ALL > WATCH > Movies', placements.watchMovies],
+  ['Bookmarks bar > ALL > WATCH > Anime', placements.watchAnime],
 ])
 
 function decodeHtml(value) {

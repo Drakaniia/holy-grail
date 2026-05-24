@@ -193,6 +193,37 @@ async function settlePage(page, timeout) {
   await new Promise(resolve => setTimeout(resolve, 500))
 }
 
+async function assertVisualDetail(buffer) {
+  const { data, info } = await sharp(buffer)
+    .resize(64, 40, { fit: 'fill' })
+    .removeAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true })
+
+  const channels = info.channels
+  const pixelCount = data.length / channels
+  let sum = 0
+  let sumOfSquares = 0
+  let min = 255
+  let max = 0
+
+  for (let index = 0; index < data.length; index += channels) {
+    const luminance = data[index] * 0.2126 + data[index + 1] * 0.7152 + data[index + 2] * 0.0722
+    sum += luminance
+    sumOfSquares += luminance * luminance
+    min = Math.min(min, luminance)
+    max = Math.max(max, luminance)
+  }
+
+  const mean = sum / pixelCount
+  const variance = sumOfSquares / pixelCount - mean * mean
+  const standardDeviation = Math.sqrt(Math.max(variance, 0))
+
+  if (standardDeviation < 4 && max - min < 24) {
+    throw new Error('Captured preview appears blank')
+  }
+}
+
 async function captureSite(browser, site, options) {
   const page = await browser.newPage()
   const normalizedUrl = normalizeUrl(site.website)
@@ -215,6 +246,7 @@ async function captureSite(browser, site, options) {
       fullPage: false,
       captureBeyondViewport: false,
     })
+    await assertVisualDetail(screenshot)
 
     const image = await sharp(screenshot)
       .resize(defaults.outputWidth, defaults.outputHeight, {

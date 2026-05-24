@@ -45,12 +45,13 @@ import { useAdminStore } from '@/stores/admin'
 const route = useRoute()
 const admin = useAdminStore()
 
-type SiteGroup = 'ai' | 'design' | 'development' | 'downloads'
+type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
 
 const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   ai: true,
   design: true,
   development: true,
+  watch: true,
   downloads: true,
 })
 
@@ -81,6 +82,10 @@ watch(
       expandedGroups.development = true
     }
 
+    if (isSiteGroupRoute(path, 'watch')) {
+      expandedGroups.watch = true
+    }
+
     if (isSiteGroupRoute(path, 'downloads')) {
       expandedGroups.downloads = true
     }
@@ -91,9 +96,15 @@ watch(
 const isAiExpanded = computed(() => expandedGroups.ai)
 const isDesignExpanded = computed(() => expandedGroups.design)
 const isDevelopmentExpanded = computed(() => expandedGroups.development)
+const isWatchExpanded = computed(() => expandedGroups.watch)
 const isDownloadsExpanded = computed(() => expandedGroups.downloads)
 
 const sitesNav = [{ name: 'Platforms', icon: Server, route: '/sites/platforms' }]
+
+const watchSubcategories = [
+  { name: 'Movies', icon: Video, route: '/sites/watch/movies' },
+  { name: 'Anime', icon: Sparkles, route: '/sites/watch/anime' },
+]
 
 const downloadsSubcategories = [
   { name: 'Game Download', icon: Gamepad2, route: '/sites/downloads/game-download' },
@@ -335,6 +346,60 @@ const skillsNav = [
               >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
                   <li v-for="item in developmentSubcategories" :key="item.name">
+                    <RouterLink
+                      :to="item.route"
+                      class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
+                      :class="
+                        isActive(item.route)
+                          ? 'bg-zinc-900 text-white'
+                          : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+                      "
+                    >
+                      <div
+                        v-if="isActive(item.route)"
+                        class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
+                      ></div>
+                      <component :is="item.icon" class="w-3.5 h-3.5" />
+                      <span class="font-medium">{{ item.name }}</span>
+                    </RouterLink>
+                  </li>
+                </ul>
+              </li>
+            </Transition>
+
+            <li>
+              <button
+                type="button"
+                class="w-full flex items-center rounded-md transition-colors group text-xs"
+                :class="
+                  isActive('/sites/watch', false)
+                    ? 'bg-zinc-900 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+                "
+                :aria-expanded="isWatchExpanded"
+                aria-controls="sidebar-watch-branch"
+                aria-label="Toggle watch sites"
+                @click="toggleGroup('watch')"
+              >
+                <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
+                  <Film class="w-3.5 h-3.5 flex-shrink-0" />
+                  <span class="font-medium">Watch</span>
+                </span>
+                <ChevronRight
+                  class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
+                  :class="{ 'rotate-90': isWatchExpanded }"
+                />
+              </button>
+            </li>
+
+            <Transition name="sidebar-group">
+              <li
+                v-if="isWatchExpanded"
+                id="sidebar-watch-branch"
+                class="sidebar-group-shell"
+              >
+                <ul class="sidebar-group-inner ml-4 space-y-0.5">
+                  <li v-for="item in watchSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"

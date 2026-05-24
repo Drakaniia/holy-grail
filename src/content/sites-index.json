@@ -34487,5 +34487,509 @@
         "website": "https://www.heroui.com/"
       }
     ]
+  },
+  {
+    "slug": "animewave",
+    "name": "AnimeWave",
+    "description": "Anime watch source bookmark for quick launch.",
+    "category": "Anime",
+    "parentCategory": "watch",
+    "subcategory": "anime",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added May 24, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://animewave.to/home",
+    "docs": "https://animewave.to/home",
+    "sourceCode": "",
+    "icon": "animewave",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "anime",
+      "streaming"
+    ],
+    "atGlance": "Anime watch bookmark.",
+    "fullDescription": "AnimeWave is kept as an anime watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved anime watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, anime, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "hianime-re",
+        "name": "HiAnime RE",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.re/home"
+      },
+      {
+        "slug": "hianime-ad",
+        "name": "HiAnime AD",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.ad/home"
+      }
+    ]
+  },
+  {
+    "slug": "hianime-ad",
+    "name": "HiAnime AD",
+    "description": "Anime watch source bookmark for quick launch.",
+    "category": "Anime",
+    "parentCategory": "watch",
+    "subcategory": "anime",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added May 24, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://hianime.ad/home",
+    "docs": "https://hianime.ad/home",
+    "sourceCode": "",
+    "icon": "hianime-ad",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "anime",
+      "streaming"
+    ],
+    "atGlance": "Anime watch bookmark.",
+    "fullDescription": "HiAnime AD is kept as an anime watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved anime watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, anime, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "animewave",
+        "name": "AnimeWave",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://animewave.to/home"
+      },
+      {
+        "slug": "hianime-re",
+        "name": "HiAnime RE",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.re/home"
+      }
+    ]
+  },
+  {
+    "slug": "hianime-re",
+    "name": "HiAnime RE",
+    "description": "Anime watch source bookmark for quick launch.",
+    "category": "Anime",
+    "parentCategory": "watch",
+    "subcategory": "anime",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added May 24, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://hianime.re/home",
+    "docs": "https://hianime.re/home",
+    "sourceCode": "",
+    "icon": "hianime-re",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "anime",
+      "streaming"
+    ],
+    "atGlance": "Anime watch bookmark.",
+    "fullDescription": "HiAnime RE is kept as an anime watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved anime watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, anime, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "animewave",
+        "name": "AnimeWave",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://animewave.to/home"
+      },
+      {
+        "slug": "hianime-ad",
+        "name": "HiAnime AD",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.ad/home"
+      }
+    ]
+  },
+  {
+    "slug": "movies2watch",
+    "name": "Movies2Watch",
+    "description": "Movie watch source bookmark for quick launch.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added May 24, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://movies2watch.watch/home/",
+    "docs": "https://movies2watch.watch/home/",
+    "sourceCode": "",
+    "icon": "movies2watch",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie watch bookmark.",
+    "fullDescription": "Movies2Watch is kept as a movie watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "nextflicks",
+        "name": "NextFlicks",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nextflicks.link"
+      },
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.ac/home/"
+      }
+    ]
+  },
+  {
+    "slug": "nextflicks",
+    "name": "NextFlicks",
+    "description": "Movie watch source bookmark for quick launch.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added May 24, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://nextflicks.link",
+    "docs": "https://nextflicks.link",
+    "sourceCode": "",
+    "icon": "nextflicks",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie watch bookmark.",
+    "fullDescription": "NextFlicks is kept as a movie watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
+      },
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.ac/home/"
+      }
+    ]
+  },
+  {
+    "slug": "sflix",
+    "name": "SFlix",
+    "description": "Movie watch source bookmark for quick launch.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added May 24, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://sflix.ac/home/",
+    "docs": "https://sflix.ac/home/",
+    "sourceCode": "",
+    "icon": "sflix",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie watch bookmark.",
+    "fullDescription": "SFlix is kept as a movie watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
+      },
+      {
+        "slug": "nextflicks",
+        "name": "NextFlicks",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nextflicks.link"
+      }
+    ]
   }
 ]

@@ -117,6 +117,15 @@
     "height": 600,
     "bytes": 64660
   },
+  "animewave": {
+    "image": "/previews/animewave.webp",
+    "small": "/previews/animewave-sm.webp",
+    "sourceUrl": "https://animewave.to/home",
+    "capturedAt": "2026-05-24T15:53:28.637Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 46618
+  },
   "anything": {
     "image": "/previews/anything.webp",
     "small": "/previews/anything-sm.webp",
@@ -1161,6 +1170,25 @@
     "height": 600,
     "bytes": 33252
   },
+  "hianime-ad": {
+    "image": "/previews/hianime-ad.webp",
+    "small": "/previews/hianime-ad-sm.webp",
+    "sourceUrl": "https://hianime.ad/home",
+    "capturedAt": "2026-05-24T15:53:23.407Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 70486
+  },
+  "hianime-re": {
+    "image": "/previews/hianime-re.webp",
+    "small": "/previews/hianime-re-sm.webp",
+    "sourceUrl": "https://hianime.re/home",
+    "capturedAt": "2026-05-24T15:53:34.273Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 7716,
+    "fallback": true
+  },
   "higgsfield": {
     "image": "/previews/higgsfield.webp",
     "small": "/previews/higgsfield-sm.webp",
@@ -1647,6 +1675,15 @@
     "height": 600,
     "bytes": 23892
   },
+  "movies2watch": {
+    "image": "/previews/movies2watch.webp",
+    "small": "/previews/movies2watch-sm.webp",
+    "sourceUrl": "https://movies2watch.watch/home/",
+    "capturedAt": "2026-05-24T16:00:03.706Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 53590
+  },
   "mysoftwarefree": {
     "image": "/previews/mysoftwarefree.webp",
     "small": "/previews/mysoftwarefree-sm.webp",
@@ -1727,6 +1764,16 @@
     "width": 960,
     "height": 600,
     "bytes": 27440
+  },
+  "nextflicks": {
+    "image": "/previews/nextflicks.webp",
+    "small": "/previews/nextflicks-sm.webp",
+    "sourceUrl": "https://nextflicks.link/",
+    "capturedAt": "2026-05-24T15:53:36.348Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8836,
+    "fallback": true
   },
   "nexus-ui": {
     "image": "/previews/nexus-ui.webp",
@@ -2168,6 +2215,15 @@
     "width": 960,
     "height": 600,
     "bytes": 28496
+  },
+  "sflix": {
+    "image": "/previews/sflix.webp",
+    "small": "/previews/sflix-sm.webp",
+    "sourceUrl": "https://sflix.ac/home/",
+    "capturedAt": "2026-05-24T15:53:43.568Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 51342
   },
   "shadcn-svelte": {
     "image": "/previews/shadcn-svelte.webp",

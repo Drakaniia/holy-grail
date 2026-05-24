@@ -76,6 +76,14 @@ const navigationItems: SearchItem[] = [
     keywords: ['docs', 'code', 'learning', 'github', 'monitoring', 'mcp'],
   }),
   createNavigationItem({
+    id: 'collection-sites-watch',
+    title: 'Watch',
+    description: 'Movie and anime watch bookmarks',
+    category: 'Sites',
+    to: '/sites/watch',
+    keywords: ['movies', 'anime', 'streaming', 'watch', 'nextflicks', 'sflix', 'hianime'],
+  }),
+  createNavigationItem({
     id: 'collection-skills',
     title: 'Skills Library',
     description: 'Technical skills and workflows for AI agents',

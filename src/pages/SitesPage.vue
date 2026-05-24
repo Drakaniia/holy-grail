@@ -20,6 +20,7 @@ const routeLabels: Record<string, string> = {
   ai: 'AI',
   design: 'Design',
   development: 'Development',
+  watch: 'Watch',
   downloads: 'Downloads',
   image: 'Image',
   api: 'API',
@@ -45,6 +46,7 @@ const routeLabels: Record<string, string> = {
   repositories: 'Repositories',
   mcp: 'MCP',
   monitoring: 'Monitoring',
+  anime: 'Anime',
   'game-download': 'Game Download',
   'vfx-download': 'VFX Download',
   'software-download': 'Software Download',
@@ -67,6 +69,7 @@ const pageDescription = computed(() => {
     ai: 'AI-powered tools and services',
     design: 'Design resources, inspiration, and tools',
     development: 'Learning paths, references, repositories, and developer workflow resources',
+    watch: 'Saved streaming and watch source bookmarks for movies and anime',
     downloads: 'Saved download source bookmarks grouped by media and file type',
     image: 'AI image generation and editing tools',
     api: 'AI APIs and model providers',
@@ -92,13 +95,16 @@ const pageDescription = computed(() => {
     repositories: 'Source repositories and curated code collections',
     mcp: 'Model Context Protocol tools, docs, servers, and integrations',
     monitoring: 'Uptime, status, analytics, and production observability tools',
+    'watch/movies': 'Movie watch source bookmarks grouped for quick launch',
+    'watch/anime': 'Anime watch source bookmarks grouped for quick launch',
     'game-download': 'Game download source bookmarks from the imported browser folder',
     'vfx-download': 'VFX assets, templates, and graphics download source bookmarks',
     'software-download': 'Software download source bookmarks from the imported browser folder',
     torrents: 'Torrent index and search bookmarks from the imported browser folder',
-    movies: 'Movie download source bookmarks from the imported browser folder',
+    'downloads/movies': 'Movie download source bookmarks from the imported browser folder',
   }
-  return descriptions[subcategory.value || category.value] || 'Curated tools and resources'
+  const key = subcategory.value ? `${category.value}/${subcategory.value}` : category.value
+  return descriptions[key] || descriptions[subcategory.value || category.value] || 'Curated tools and resources'
 })
 
 const filteredSites = computed(() => {
