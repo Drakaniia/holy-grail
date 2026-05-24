@@ -10,7 +10,11 @@ const sites = useSitesStore()
 const skills = useSkillsStore()
 
 onMounted(() => {
-  void bookmarks.loadBookmarks(true)
+  void Promise.all([
+    bookmarks.loadBookmarks(true),
+    sites.loadSites(),
+    skills.loadSkills(),
+  ])
 })
 
 const savedItems = computed(() =>
