@@ -52,11 +52,108 @@ export interface Site {
   similarTools?: SimilarTool[]
 }
 
+export type SiteSortTab = 'trending' | 'newest' | 'popular'
+
+const nameCollator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' })
+
+function compareNumbers(first: number, second: number, direction: 'asc' | 'desc') {
+  if (first === second) return 0
+  return direction === 'asc' ? first - second : second - first
+}
+
+function compareBoolean(first: boolean, second: boolean) {
+  if (first === second) return 0
+  return first ? -1 : 1
+}
+
+function compareNames(first: Site, second: Site) {
+  return nameCollator.compare(first.name || first.slug, second.name || second.slug)
+}
+
+function compareNamesDescending(first: Site, second: Site) {
+  return compareNames(second, first)
+}
+
+// Imported bookmark entries often have no repo metrics, so use catalog metadata as a stable tie-breaker.
+function catalogReach(site: Site) {
+  return (
+    (site.tags?.length ?? 0) +
+    site.platforms.length +
+    site.deployment.length +
+    (site.website ? 1 : 0) +
+    (site.docs && site.docs !== site.website ? 1 : 0) +
+    (site.sourceCode ? 1 : 0)
+  )
+}
+
+function compareSiteStatusFallbacks(first: Site, second: Site) {
+  return (
+    compareBoolean(first.featured, second.featured) ||
+    compareBoolean(first.verified, second.verified) ||
+    compareNumbers(first.contributors, second.contributors, 'desc')
+  )
+}
+
+function compareSiteFallbacks(first: Site, second: Site) {
+  return (
+    compareSiteStatusFallbacks(first, second) ||
+    compareNames(first, second)
+  )
+}
+
+function compareSitePopularityFallbacks(first: Site, second: Site) {
+  return (
+    compareSiteStatusFallbacks(first, second) ||
+    compareNumbers(catalogReach(first), catalogReach(second), 'desc') ||
+    compareNumbers(first.name.length, second.name.length, 'desc') ||
+    compareNames(first, second)
+  )
+}
+
+function compareSiteActivitySignals(first: Site, second: Site) {
+  return (
+    compareNumbers(first.commitsThisYear, second.commitsThisYear, 'desc') ||
+    compareNumbers(first.releases, second.releases, 'desc') ||
+    compareSiteStatusFallbacks(first, second)
+  )
+}
+
+function compareSiteActivity(first: Site, second: Site) {
+  return (
+    compareSiteActivitySignals(first, second) ||
+    compareSiteFallbacks(first, second)
+  )
+}
+
+export function sortSitesForTab(sites: Site[], tab: SiteSortTab) {
+  return [...sites].sort((first, second) => {
+    switch (tab) {
+      case 'trending':
+        return (
+          compareNumbers(first.stars, second.stars, 'desc') ||
+          compareSiteActivity(first, second)
+        )
+      case 'newest':
+        return (
+          compareNumbers(first.addedDaysAgo, second.addedDaysAgo, 'asc') ||
+          compareSiteActivitySignals(first, second) ||
+          compareNamesDescending(first, second)
+        )
+      case 'popular':
+        return (
+          compareNumbers(first.watchers, second.watchers, 'desc') ||
+          compareNumbers(first.stars, second.stars, 'desc') ||
+          compareSitePopularityFallbacks(first, second)
+        )
+    }
+  })
+}
+
 export const useSitesStore = defineStore('sites', () => {
   const allSites = shallowRef<Site[]>([])
   const searchQuery = shallowRef('')
   const activeCategory = shallowRef('All')
-  const activeTab = shallowRef<'trending' | 'newest' | 'popular'>('trending')
+  const activeTab = shallowRef<SiteSortTab>('trending')
   const currentPage = shallowRef(1)
   const loading = shallowRef(false)
   const loaded = shallowRef(false)
@@ -125,19 +222,7 @@ export const useSitesStore = defineStore('sites', () => {
       result = result.filter(s => s.category === activeCategory.value)
     }
 
-    switch (activeTab.value) {
-      case 'trending':
-        result.sort((a, b) => b.stars - a.stars)
-        break
-      case 'newest':
-        result.sort((a, b) => a.addedDaysAgo - b.addedDaysAgo)
-        break
-      case 'popular':
-        result.sort((a, b) => b.watchers - a.watchers)
-        break
-    }
-
-    return result
+    return sortSitesForTab(result, activeTab.value)
   })
 
   const paginatedSites = computed(() => {
@@ -161,7 +246,7 @@ export const useSitesStore = defineStore('sites', () => {
     currentPage.value = 1
   }
 
-  const setTab = (tab: 'trending' | 'newest' | 'popular') => {
+  const setTab = (tab: SiteSortTab) => {
     activeTab.value = tab
     currentPage.value = 1
   }

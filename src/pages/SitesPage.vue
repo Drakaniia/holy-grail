@@ -2,7 +2,7 @@
 import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { Search, TrendingUp, Clock, Star, Sparkles } from 'lucide-vue-next'
-import { useSitesStore } from '@/stores/sites'
+import { sortSitesForTab, useSitesStore } from '@/stores/sites'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SiteCard from '@/components/sites/SiteCard.vue'
 
@@ -131,19 +131,7 @@ const displaySites = computed(() => {
     result = result.filter(site => site.category === store.activeCategory)
   }
 
-  switch (store.activeTab) {
-    case 'trending':
-      result.sort((a, b) => b.stars - a.stars)
-      break
-    case 'newest':
-      result.sort((a, b) => a.addedDaysAgo - b.addedDaysAgo)
-      break
-    case 'popular':
-      result.sort((a, b) => b.watchers - a.watchers)
-      break
-  }
-
-  return result
+  return sortSitesForTab(result, store.activeTab)
 })
 
 const paginatedSites = computed(() => {
@@ -232,7 +220,7 @@ watch(totalPages, pages => {
             <button
               @click="store.setTab('trending')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="store.activeTab === 'trending' ? 'bg-accent-600 text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <TrendingUp class="w-3.5 h-3.5" />
               TRENDING
@@ -240,7 +228,7 @@ watch(totalPages, pages => {
             <button
               @click="store.setTab('newest')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'newest' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="store.activeTab === 'newest' ? 'bg-accent-600 text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <Clock class="w-3.5 h-3.5" />
               NEWEST
@@ -248,7 +236,7 @@ watch(totalPages, pages => {
             <button
               @click="store.setTab('popular')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="store.activeTab === 'popular' ? 'bg-accent-600 text-white' : 'text-gray-500 hover:text-gray-300'"
             >
               <Star class="w-3.5 h-3.5" />
               POPULAR
