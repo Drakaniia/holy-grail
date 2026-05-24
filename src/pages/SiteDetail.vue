@@ -25,6 +25,7 @@ import {
 } from 'lucide-vue-next'
 import { useSitesStore } from '@/stores/sites'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
+import SiteIssueReport from '@/components/sites/SiteIssueReport.vue'
 import SiteFavicon from '@/components/sites/SiteFavicon.vue'
 import SitePreview from '@/components/sites/SitePreview.vue'
 
@@ -175,6 +176,7 @@ async function copyInstallCommand() {
             :resource="bookmarkResource"
             variant="detail"
           />
+          <SiteIssueReport :site="site" />
           <a
             :href="site.website"
             target="_blank"

@@ -74,3 +74,28 @@ supabase functions deploy notify-submission --no-verify-jwt
 3. `submit-tool` validates origin, applies the rate limit, inserts a pending row, and emails the admin.
 4. Admin reviews `/admin` and marks the row approved or rejected.
 5. Approved items are still manually added as YAML and published through the normal build.
+
+## Site Issue Reports
+
+Deploy `supabase/functions/report-site-issue` so catalog visitors can notify the admin when a
+published site is down, unreachable, deprecated, or pointing at the wrong URL:
+
+```bash
+supabase functions deploy report-site-issue --no-verify-jwt
+```
+
+The app calls this function from each site detail page. The function validates origin, applies the
+same server-side IP rate-limit RPC used by submissions, optionally attaches the signed-in reporter's
+email, and sends the admin a Resend email with both the live URL and `/sites/<slug>` catalog link.
+
+It reuses `RESEND_API_KEY`, `ADMIN_EMAIL`, `SUBMISSION_FROM_EMAIL`, `PUBLIC_SITE_URL`,
+`SUBMISSION_ALLOWED_ORIGINS`, and `SUBMISSION_RATE_LIMIT_SALT` by default. These optional overrides
+can be set when site issue reports need different sender, origins, or rate limits:
+
+```bash
+supabase secrets set SITE_REPORT_FROM_EMAIL="Holy Grail <reports@your-domain.com>"
+supabase secrets set SITE_REPORT_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
+supabase secrets set SITE_REPORT_RATE_LIMIT_MAX=5
+supabase secrets set SITE_REPORT_RATE_LIMIT_WINDOW_SECONDS=3600
+supabase secrets set SITE_REPORT_RATE_LIMIT_SALT=use-a-long-random-string
+```
