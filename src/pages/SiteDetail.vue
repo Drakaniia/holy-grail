@@ -31,6 +31,7 @@ import SitePreview from '@/components/sites/SitePreview.vue'
 const route = useRoute()
 const router = useRouter()
 const store = useSitesStore()
+void store.loadSites()
 
 const slug = computed(() => route.params.slug as string)
 const site = computed(() => store.getSiteBySlug(slug.value))
@@ -519,6 +520,24 @@ async function copyInstallCommand() {
           </RouterLink>
         </div>
       </div>
+    </div>
+
+    <div v-else-if="store.loading" class="flex items-center justify-center py-24">
+      <div class="flex items-center gap-2 text-sm text-gray-500">
+        <RefreshCw class="h-5 w-5 animate-spin" />
+        Loading site...
+      </div>
+    </div>
+
+    <div v-else-if="store.loadError" class="mx-auto max-w-xl px-4 py-24 text-center">
+      <h2 class="text-2xl font-bold text-white mb-2">Could not load sites</h2>
+      <p class="text-gray-400 mb-6">{{ store.loadError }}</p>
+      <button
+        @click="router.push(backRoute)"
+        class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
+      >
+        Browse Sites
+      </button>
     </div>
 
     <!-- Not Found -->
