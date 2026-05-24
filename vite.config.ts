@@ -9,6 +9,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   build: {
     chunkSizeWarningLimit: 700,
+    rolldownOptions: {
+      checks: {
+        pluginTimings: false,
+      },
+    },
   },
   plugins: [
     vue(),
