@@ -44,12 +44,12 @@ const CLOSE_MATCH_SCORE = 118
 
 const navigationItems: SearchItem[] = [
   createNavigationItem({
-    id: 'collection-sites-platforms',
-    title: 'Platforms',
-    description: 'Self-hosted platforms and backend services for developers',
+    id: 'collection-sites-development-cloud-hosting',
+    title: 'Cloud & Hosting',
+    description: 'Cloud platforms, hosting, databases, and backend services for development work',
     category: 'Sites',
-    to: '/sites/platforms',
-    keywords: ['hosting', 'deployment', 'backend', 'vercel', 'railway', 'supabase'],
+    to: '/sites/development/cloud-hosting',
+    keywords: ['platforms', 'hosting', 'cloud', 'deployment', 'backend', 'vercel', 'railway', 'supabase'],
   }),
   createNavigationItem({
     id: 'collection-sites-ai',
@@ -70,7 +70,7 @@ const navigationItems: SearchItem[] = [
   createNavigationItem({
     id: 'collection-sites-development',
     title: 'Development Resources',
-    description: 'Learning, references, repositories, tooling, MCP, and monitoring resources',
+    description: 'Cloud hosting, learning, references, repositories, tooling, MCP, and monitoring resources',
     category: 'Sites',
     to: '/sites/development',
     keywords: ['docs', 'code', 'learning', 'github', 'monitoring', 'mcp'],

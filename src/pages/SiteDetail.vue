@@ -80,7 +80,7 @@ const hasRepoActivity = computed(
 )
 
 const backRoute = computed(() => {
-  if (!site.value) return '/sites/platforms'
+  if (!site.value) return '/sites/development/cloud-hosting'
   if (site.value.subcategory) {
     return `/sites/${site.value.parentCategory}/${site.value.subcategory}`
   }
@@ -265,13 +265,13 @@ async function copyInstallCommand() {
 
         </div>
 
-        <!-- Platform & Deployment -->
+        <!-- Access & Deployment -->
         <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
-          <h3 class="text-sm font-medium text-gray-400 mb-3">Platform & Deployment</h3>
+          <h3 class="text-sm font-medium text-gray-400 mb-3">Access & Deployment</h3>
           <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <div class="flex flex-wrap items-center gap-2">
               <Monitor class="w-4 h-4 text-gray-500" />
-              <span class="text-sm text-gray-400">Platforms</span>
+              <span class="text-sm text-gray-400">Access</span>
               <div class="flex flex-wrap gap-1.5">
                 <span
                   v-for="platform in site.platforms"

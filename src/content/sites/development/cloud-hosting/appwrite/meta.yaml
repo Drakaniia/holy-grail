@@ -1,0 +1,89 @@
+slug: appwrite
+name: appwrite
+description: A backend platform providing authentication, databases, storage, and realtime APIs
+category: Backend
+parentCategory: development
+subcategory: cloud-hosting
+stars: 56000
+watchers: 412
+addedDaysAgo: 5
+license: BSD-3-Clause
+lastCommit: 1 week ago
+lastRelease: 1 month ago
+version: 1.9.0
+contributors: 367
+commitsThisYear: 3300
+releases: 7
+platforms:
+  - Web
+deployment:
+  - Docker Compose
+website: https://appwrite.io
+docs: https://appwrite.io/docs
+sourceCode: https://github.com/appwrite/appwrite
+icon: appwrite
+verified: true
+featured: true
+tags: []
+atGlance: A backend platform providing authentication, databases, storage, and realtime APIs
+fullDescription: >-
+  appwrite is kept as a backend resource for cloud hosting, deployment, or backend infrastructure
+  work.
+coreFeatures:
+  - name: Cloud Service
+    description: appwrite is tracked for cloud hosting, deployment, or backend infrastructure work.
+    icon: check
+  - name: Hosted Access
+    description: The primary service is available through the website link.
+    icon: check
+additionalFeatures:
+  - name: Documentation Path
+    description: Docs are linked when available for setup details.
+    icon: check
+  - name: Deployment Context
+    description: Deployment type is recorded in the metadata.
+    icon: check
+  - name: Developer Workflow
+    description: Grouped under Development with related cloud and hosting resources.
+    icon: check
+deployCompose: |
+  version: "3.9"
+
+  x-logging: &x-logging
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  services:
+    traefik:
+      image: traefik:2.11
+      container_name: appwrite-traefik
+      <<: *x-logging
+      restart: unless-stopped
+      command:
+        - --log.level=INFO
+        - --providers.docker=true
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase | The Postgres Development Platform. bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/
+  - slug: vercel
+    name: vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com

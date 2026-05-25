@@ -49,6 +49,12 @@ const sidebarSearch = shallowRef('')
 
 type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
 
+interface SidebarNavItem {
+  name: string
+  icon: typeof Server
+  route: string
+}
+
 const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   ai: true,
   design: true,
@@ -101,7 +107,7 @@ const isDevelopmentExpanded = computed(() => expandedGroups.development)
 const isWatchExpanded = computed(() => expandedGroups.watch)
 const isDownloadsExpanded = computed(() => expandedGroups.downloads)
 
-const sitesNav = [{ name: 'Platforms', icon: Server, route: '/sites/platforms' }]
+const sitesNav: SidebarNavItem[] = []
 
 const watchSubcategories = [
   { name: 'Movies', icon: Video, route: '/sites/watch/movies' },
@@ -141,6 +147,7 @@ const designSubcategories = [
 ]
 
 const developmentSubcategories = [
+  { name: 'Cloud & Hosting', icon: Server, route: '/sites/development/cloud-hosting' },
   { name: 'Learning', icon: GraduationCap, route: '/sites/development/learning' },
   { name: 'References', icon: BookOpen, route: '/sites/development/references' },
   { name: 'Tooling', icon: Wrench, route: '/sites/development/tooling' },

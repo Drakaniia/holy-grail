@@ -114,9 +114,9 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     index: '01',
     label: 'Sites',
     kicker: 'Tools and references',
-    description: 'Platforms, AI utilities, design sources, developer references, downloads, CLI agents, and UI libraries.',
+    description: 'Cloud hosting, AI utilities, design sources, developer references, downloads, CLI agents, and UI libraries.',
     countLabel: totalSitesLabel.value,
-    to: '/sites/platforms',
+    to: '/sites/development/cloud-hosting',
   },
   {
     index: '02',

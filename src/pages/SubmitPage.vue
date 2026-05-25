@@ -42,7 +42,7 @@ const category = shallowRef('')
 const submitterNote = shallowRef('')
 
 const CATEGORIES = [
-  'Platforms',
+  'Development - Cloud & Hosting',
   'AI - Image',
   'AI - API',
   'AI - Automation',

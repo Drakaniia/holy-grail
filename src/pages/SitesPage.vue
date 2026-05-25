@@ -15,7 +15,6 @@ const category = computed(() => route.params.category as string)
 const subcategory = computed(() => route.params.subcategory as string | undefined)
 
 const routeLabels: Record<string, string> = {
-  platforms: 'Platforms',
   'cli-tools': 'CLI Tools',
   'ui-libraries': 'UI Libraries',
   ai: 'AI',
@@ -42,6 +41,7 @@ const routeLabels: Record<string, string> = {
   md: 'MD',
   'design-tools': 'Design Tools',
   learning: 'Learning',
+  'cloud-hosting': 'Cloud & Hosting',
   references: 'References',
   tooling: 'Tooling',
   repositories: 'Repositories',
@@ -64,12 +64,11 @@ const pageTitle = computed(() => {
 
 const pageDescription = computed(() => {
   const descriptions: Record<string, string> = {
-    platforms: 'Self-hosted platforms and backend services for developers',
     'cli-tools': 'Command-line tools and utilities for development workflows',
     'ui-libraries': 'UI component libraries and design systems',
     ai: 'AI-powered tools and services',
     design: 'Design resources, inspiration, and tools',
-    development: 'Learning paths, references, repositories, and developer workflow resources',
+    development: 'Cloud hosting, learning paths, references, repositories, and developer workflow resources',
     watch: 'Saved streaming and watch source bookmarks for movies and anime',
     downloads: 'Saved download source bookmarks grouped by media and file type',
     image: 'AI image generation and editing tools',
@@ -91,6 +90,7 @@ const pageDescription = computed(() => {
     md: 'Markdown resources and tools',
     'design-tools': 'Design tools and utilities',
     learning: 'Courses, coding challenges, and structured programming practice',
+    'development/cloud-hosting': 'Cloud platforms, hosting, databases, and backend services for development work',
     references: 'Documentation, articles, and implementation references for developers',
     tooling: 'Developer tools, runtimes, package utilities, and workflow services',
     repositories: 'Source repositories and curated code collections',

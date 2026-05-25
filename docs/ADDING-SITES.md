@@ -8,9 +8,10 @@ metadata must be complete before committing content changes.
 
 ```txt
 src/content/sites/
-+-- platforms/
-|   +-- vercel/
-|       +-- meta.yaml
++-- development/
+|   +-- cloud-hosting/
+|       +-- vercel/
+|           +-- meta.yaml
 +-- ai/
 |   +-- automation/
 |       +-- n8n/
@@ -62,7 +63,7 @@ bun run scripts/enrich-site-metadata.js --all       # include older entries
 | `name` | string | Yes | Display name. |
 | `description` | string | Yes | Short card description. |
 | `category` | string | Yes | Display category. |
-| `parentCategory` | string | Yes | Top-level route/category, e.g. `ai`, `design`, `platforms`. |
+| `parentCategory` | string | Yes | Top-level route/category, e.g. `ai`, `design`, `development`. |
 | `subcategory` | string/null | Yes | Nested route category or `null`. |
 | `stars` | number | Yes | GitHub stars if repo-backed, otherwise `0`. Hidden in UI when no source repo exists. |
 | `watchers` | number | Yes | GitHub watchers/subscribers if repo-backed, otherwise `0`. |

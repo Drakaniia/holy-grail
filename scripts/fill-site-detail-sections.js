@@ -128,16 +128,16 @@ function context(meta) {
     }
   }
 
-  if (parent === 'platforms') {
+  if (parent === 'development' && subcategory === 'cloud-hosting') {
     return {
       core: [
-        ['Platform Service', `${name} is tracked as a platform resource for deployment or infrastructure work.`],
+        ['Cloud Service', `${name} is tracked for cloud hosting, deployment, or backend infrastructure work.`],
         ['Hosted Access', 'The primary service is available through the website link.'],
       ],
       extra: [
         ['Documentation Path', 'Docs are linked when available for setup details.'],
         ['Deployment Context', 'Deployment type is recorded in the metadata.'],
-        ['Repository Link', 'Source code is included when the platform is open source.'],
+        ['Developer Workflow', 'Grouped under Development with related cloud and hosting resources.'],
       ],
     }
   }
@@ -287,15 +287,15 @@ function fullDescriptionFor(meta) {
   }
 
   if (meta.parentCategory === 'development') {
+    if (meta.subcategory === 'cloud-hosting') {
+      return `${name} is kept as ${article} ${category} resource for cloud hosting, deployment, or backend infrastructure work.`
+    }
+
     return `${name} is kept as ${article} ${category} resource for building and shipping software.`
   }
 
   if (meta.parentCategory === 'downloads') {
     return `${name} is kept as ${article} ${category} source in the downloads collection.`
-  }
-
-  if (meta.parentCategory === 'platforms') {
-    return `${name} is kept as a platform resource for deployment or infrastructure work.`
   }
 
   if (meta.parentCategory === 'cli-tools') {

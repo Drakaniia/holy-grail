@@ -26,12 +26,12 @@ const heroPreviewItems = computed(() => props.previewItems.slice(0, 4))
         <p class="home-hero__eyebrow">Holy Grail Library</p>
         <h1 id="home-hero-title" class="home-hero__title">Holy Grail</h1>
         <p class="home-hero__summary">
-          A working index for build platforms, AI tools, design references, CLI agents, UI
+          A working index for cloud hosting, AI tools, design references, CLI agents, UI
           libraries, and reusable agent skills without losing the thread.
         </p>
 
         <div class="home-hero__actions" aria-label="Primary actions">
-          <RouterLink to="/sites/platforms" class="home-hero__primary-link">
+          <RouterLink to="/sites/development/cloud-hosting" class="home-hero__primary-link">
             Browse sites
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </RouterLink>

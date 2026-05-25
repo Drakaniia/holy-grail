@@ -4,8 +4,8 @@
     "name": "appwrite",
     "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
     "category": "Backend",
-    "parentCategory": "platforms",
-    "subcategory": null,
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
     "stars": 56000,
     "watchers": 412,
     "addedDaysAgo": 5,
@@ -30,34 +30,34 @@
     "featured": true,
     "tags": [],
     "atGlance": "A backend platform providing authentication, databases, storage, and realtime APIs",
-    "fullDescription": "Appwrite is a secure, open-source backend server that provides auth, file storage, databases, functions, and realtime APIs.",
+    "fullDescription": "appwrite is kept as a backend resource for cloud hosting, deployment, or backend infrastructure work.",
     "coreFeatures": [
       {
-        "name": "Backend-as-a-Service",
-        "description": "Provide backend services for applications",
+        "name": "Cloud Service",
+        "description": "appwrite is tracked for cloud hosting, deployment, or backend infrastructure work.",
         "icon": "check"
       },
       {
-        "name": "Authentication",
-        "description": "Manage users and sessions",
-        "icon": "fingerprint"
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Database",
-        "description": "Store structured application data",
-        "icon": "database"
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
       },
       {
-        "name": "File Storage",
-        "description": "Upload and manage files",
-        "icon": "hard-drive"
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
       },
       {
-        "name": "API Access",
-        "description": "Access services via SDKs and APIs",
-        "icon": "lock"
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
       }
     ],
     "deployCompose": "version: \"3.9\"\n\nx-logging: &x-logging\n  logging:\n    driver: json-file\n    options:\n      max-size: \"10m\"\n      max-file: \"5\"\n\nservices:\n  traefik:\n    image: traefik:2.11\n    container_name: appwrite-traefik\n    <<: *x-logging\n    restart: unless-stopped\n    command:\n      - --log.level=INFO\n      - --providers.docker=true\n",
@@ -65,21 +65,30 @@
     "similarTools": [
       {
         "slug": "supabase",
-        "name": "supabase",
-        "description": "An open-source backend platform with Postgres, auth, storage, and real-time APIs",
-        "stars": 102000,
-        "addedDaysAgo": 5,
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://supabase.com"
+        "website": "https://supabase.com/"
       },
       {
-        "slug": "pocketbase",
-        "name": "pocketbase",
-        "description": "A single-binary backend platform with database auth and real-time APIs",
-        "stars": 58200,
-        "addedDaysAgo": 5,
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://pocketbase.io"
+        "website": "https://coolify.io/"
+      },
+      {
+        "slug": "vercel",
+        "name": "vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network",
+        "stars": 12500,
+        "addedDaysAgo": 2,
+        "verified": true,
+        "website": "https://vercel.com"
       }
     ]
   },
@@ -154,8 +163,8 @@
     "name": "vercel",
     "description": "Develop, preview, and ship web applications with the fastest global edge network",
     "category": "Deployment",
-    "parentCategory": "platforms",
-    "subcategory": null,
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
     "stars": 12500,
     "watchers": 890,
     "addedDaysAgo": 2,
@@ -182,39 +191,67 @@
     "featured": true,
     "tags": [],
     "atGlance": "Develop, preview, and ship web applications with the fastest global edge network",
-    "fullDescription": "Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web. Deploy instantly with zero configuration.",
+    "fullDescription": "vercel is kept as a deployment resource for cloud hosting, deployment, or backend infrastructure work.",
     "coreFeatures": [
       {
-        "name": "Instant Deployments",
-        "description": "Push to git and deploy automatically",
-        "icon": "zap"
+        "name": "Cloud Service",
+        "description": "vercel is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
       },
       {
-        "name": "Edge Network",
-        "description": "Global CDN with edge functions",
-        "icon": "globe"
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Preview Deployments",
-        "description": "Every branch gets its own URL",
-        "icon": "eye"
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
       },
       {
-        "name": "Analytics",
-        "description": "Real-time performance insights",
-        "icon": "bar-chart"
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
       },
       {
-        "name": "Serverless Functions",
-        "description": "Run backend code without servers",
-        "icon": "code"
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
       }
     ],
     "deployCompose": "",
     "installCommand": "",
-    "similarTools": []
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
   },
   {
     "slug": "lovable",
@@ -678,8 +715,8 @@
     "name": "Supabase | The Postgres Development Platform.",
     "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
     "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
     "stars": 102722,
     "watchers": 677,
     "addedDaysAgo": 0,
@@ -704,15 +741,16 @@
     "featured": false,
     "tags": [
       "bookmark",
-      "platforms",
+      "development",
+      "cloud-hosting",
       "hosting"
     ],
     "atGlance": "Supabase | The Postgres Development Platform.",
-    "fullDescription": "Supabase - The Postgres Development Platform. is kept as a platform resource for deployment or infrastructure work.",
+    "fullDescription": "Supabase - The Postgres Development Platform. is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
     "coreFeatures": [
       {
-        "name": "Platform Service",
-        "description": "Supabase - The Postgres Development Platform. is tracked as a platform resource for deployment or infrastructure work.",
+        "name": "Cloud Service",
+        "description": "Supabase - The Postgres Development Platform. is tracked for cloud hosting, deployment, or backend infrastructure work.",
         "icon": "check"
       },
       {
@@ -733,8 +771,8 @@
         "icon": "check"
       },
       {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
         "icon": "check"
       }
     ],
@@ -1169,8 +1207,8 @@
     "name": "Coolify",
     "description": "Coolify bookmarked for hosting resources.",
     "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
     "stars": 55610,
     "watchers": 172,
     "addedDaysAgo": 0,
@@ -1195,15 +1233,16 @@
     "featured": false,
     "tags": [
       "bookmark",
-      "platforms",
+      "development",
+      "cloud-hosting",
       "hosting"
     ],
     "atGlance": "Coolify",
-    "fullDescription": "Coolify is kept as a platform resource for deployment or infrastructure work.",
+    "fullDescription": "Coolify is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
     "coreFeatures": [
       {
-        "name": "Platform Service",
-        "description": "Coolify is tracked as a platform resource for deployment or infrastructure work.",
+        "name": "Cloud Service",
+        "description": "Coolify is tracked for cloud hosting, deployment, or backend infrastructure work.",
         "icon": "check"
       },
       {
@@ -1224,8 +1263,8 @@
         "icon": "check"
       },
       {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
         "icon": "check"
       }
     ],
@@ -4346,8 +4385,8 @@
     "name": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit",
     "description": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit bookmarked for hosting resources.",
     "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
     "stars": 1303,
     "watchers": 3,
     "addedDaysAgo": 0,
@@ -4372,15 +4411,16 @@
     "featured": false,
     "tags": [
       "bookmark",
-      "platforms",
+      "development",
+      "cloud-hosting",
       "hosting"
     ],
     "atGlance": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit",
-    "fullDescription": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit is kept as a platform resource for deployment or infrastructure work.",
+    "fullDescription": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
     "coreFeatures": [
       {
-        "name": "Platform Service",
-        "description": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit is tracked as a platform resource for deployment or infrastructure work.",
+        "name": "Cloud Service",
+        "description": "Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit is tracked for cloud hosting, deployment, or backend infrastructure work.",
         "icon": "check"
       },
       {
@@ -4401,8 +4441,8 @@
         "icon": "check"
       },
       {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
         "icon": "check"
       }
     ],
@@ -23295,6 +23335,1574 @@
     ]
   },
   {
+    "slug": "aiven",
+    "name": "Create hosted PostgreSQL database for FREE",
+    "description": "Create hosted PostgreSQL database for FREE bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://aiven.io/free-postgresql-database",
+    "docs": "https://aiven.io/free-postgresql-database",
+    "sourceCode": "",
+    "icon": "aiven",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Create hosted PostgreSQL database for FREE",
+    "fullDescription": "Create hosted PostgreSQL database for FREE is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Create hosted PostgreSQL database for FREE is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "awardspace",
+    "name": "Home - AwardSpace.com",
+    "description": "Home - AwardSpace.com bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.awardspace.com/",
+    "docs": "https://www.awardspace.com/",
+    "sourceCode": "",
+    "icon": "awardspace",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Home - AwardSpace.com",
+    "fullDescription": "Home - AwardSpace.com is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Home - AwardSpace.com is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "aws",
+    "name": "Serverless Computing - AWS Lambda - Amazon Web Services",
+    "description": "Serverless Computing - AWS Lambda - Amazon Web Services bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://aws.amazon.com/lambda/",
+    "docs": "https://aws.amazon.com/lambda/",
+    "sourceCode": "",
+    "icon": "aws",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Serverless Computing - AWS Lambda - Amazon Web Services",
+    "fullDescription": "Serverless Computing - AWS Lambda - Amazon Web Services is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Serverless Computing - AWS Lambda - Amazon Web Services is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "cyclic",
+    "name": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
+    "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.cyclic.sh/",
+    "docs": "https://www.cyclic.sh/",
+    "sourceCode": "",
+    "icon": "cyclic",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
+    "fullDescription": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "deno",
+    "name": "Deno Deploy",
+    "description": "Deno Deploy bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://deno.com/deploy",
+    "docs": "https://deno.com/deploy",
+    "sourceCode": "",
+    "icon": "deno",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Deno Deploy",
+    "fullDescription": "Deno Deploy is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Deno Deploy is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "fly",
+    "name": "Fly.io",
+    "description": "Deploy app servers and full-stack applications close to users.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://fly.io/",
+    "docs": "https://fly.io/docs/",
+    "sourceCode": "",
+    "icon": "fly",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Deploy app servers and full-stack applications close to users.",
+    "fullDescription": "Fly.io is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Fly.io is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "google",
+    "name": "Cloud Run | Google Cloud",
+    "description": "Cloud Run | Google Cloud bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://cloud.google.com/run",
+    "docs": "https://cloud.google.com/run",
+    "sourceCode": "",
+    "icon": "google",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Cloud Run | Google Cloud",
+    "fullDescription": "Cloud Run - Google Cloud is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Cloud Run - Google Cloud is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "infinityfree",
+    "name": "Free Website Hosting - InfinityFree",
+    "description": "Free Website Hosting - InfinityFree bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.infinityfree.com/",
+    "docs": "https://www.infinityfree.com/",
+    "sourceCode": "",
+    "icon": "infinityfree",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Free Website Hosting - InfinityFree",
+    "fullDescription": "Free Website Hosting - InfinityFree is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Free Website Hosting - InfinityFree is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "mintlify",
+    "name": "Startups - Mintlify",
+    "description": "Startups - Mintlify bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.mintlify.com/startups",
+    "docs": "https://www.mintlify.com/startups",
+    "sourceCode": "",
+    "icon": "mintlify",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Startups - Mintlify",
+    "fullDescription": "Startups - Mintlify is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Startups - Mintlify is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "mongodb",
+    "name": "Atlas Database | MongoDB",
+    "description": "Atlas Database | MongoDB bookmarked for database resources.",
+    "category": "Database",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.mongodb.com/products/platform/atlas-database",
+    "docs": "https://www.mongodb.com/products/platform/atlas-database",
+    "sourceCode": "",
+    "icon": "mongodb",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "database"
+    ],
+    "atGlance": "Atlas Database | MongoDB",
+    "fullDescription": "Atlas Database - MongoDB is kept as a database resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Atlas Database - MongoDB is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "neon",
+    "name": "Neon",
+    "description": "Serverless Postgres platform for developer workflows.",
+    "category": "Database",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://neon.tech/",
+    "docs": "https://neon.tech/docs",
+    "sourceCode": "",
+    "icon": "neon",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "database"
+    ],
+    "atGlance": "Serverless Postgres platform for developer workflows.",
+    "fullDescription": "Neon is kept as a database resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Neon is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "northflank",
+    "name": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank",
+    "description": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://northflank.com/blog/vercel-backend-limitations",
+    "docs": "https://northflank.com/blog/vercel-backend-limitations",
+    "sourceCode": "",
+    "icon": "northflank",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank",
+    "fullDescription": "Can you use Vercel for backend? What works and when to use something else - Blog - Northflank is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Can you use Vercel for backend? What works and when to use something else - Blog - Northflank is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "planetscale",
+    "name": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres",
+    "description": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres bookmarked for database resources.",
+    "category": "Database",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://planetscale.com/",
+    "docs": "https://planetscale.com/",
+    "sourceCode": "",
+    "icon": "planetscale",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "database"
+    ],
+    "atGlance": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres",
+    "fullDescription": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres is kept as a database resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "pythonanywhere",
+    "name": "Host, run, and code Python in the cloud: PythonAnywhere",
+    "description": "Host, run, and code Python in the cloud: PythonAnywhere bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.pythonanywhere.com/",
+    "docs": "https://www.pythonanywhere.com/",
+    "sourceCode": "",
+    "icon": "pythonanywhere",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Host, run, and code Python in the cloud: PythonAnywhere",
+    "fullDescription": "Host, run, and code Python in the cloud: PythonAnywhere is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Host, run, and code Python in the cloud: PythonAnywhere is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "railway",
+    "name": "Railway",
+    "description": "Railway bookmarked for hosting resources.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Imported May 20, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://railway.com/",
+    "docs": "https://railway.com/",
+    "sourceCode": "",
+    "icon": "railway",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Railway",
+    "fullDescription": "Railway is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Railway is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "render",
+    "name": "Render",
+    "description": "Cloud application hosting and deployment platform for web services.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://render.com/",
+    "docs": "https://render.com/docs",
+    "sourceCode": "",
+    "icon": "render",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting"
+    ],
+    "atGlance": "Cloud application hosting and deployment platform for web services.",
+    "fullDescription": "Render is kept as a hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Render is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
     "slug": "brilliant",
     "name": "Brilliant | Learn by doing",
     "description": "Brilliant | Learn by doing bookmarked for learning resources.",
@@ -32384,1558 +33992,6 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://www.downloadpirate.com/"
-      }
-    ]
-  },
-  {
-    "slug": "aiven",
-    "name": "Create hosted PostgreSQL database for FREE",
-    "description": "Create hosted PostgreSQL database for FREE bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://aiven.io/free-postgresql-database",
-    "docs": "https://aiven.io/free-postgresql-database",
-    "sourceCode": "",
-    "icon": "aiven",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Create hosted PostgreSQL database for FREE",
-    "fullDescription": "Create hosted PostgreSQL database for FREE is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Create hosted PostgreSQL database for FREE is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "awardspace",
-    "name": "Home - AwardSpace.com",
-    "description": "Home - AwardSpace.com bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.awardspace.com/",
-    "docs": "https://www.awardspace.com/",
-    "sourceCode": "",
-    "icon": "awardspace",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Home - AwardSpace.com",
-    "fullDescription": "Home - AwardSpace.com is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Home - AwardSpace.com is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "aws",
-    "name": "Serverless Computing - AWS Lambda - Amazon Web Services",
-    "description": "Serverless Computing - AWS Lambda - Amazon Web Services bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://aws.amazon.com/lambda/",
-    "docs": "https://aws.amazon.com/lambda/",
-    "sourceCode": "",
-    "icon": "aws",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Serverless Computing - AWS Lambda - Amazon Web Services",
-    "fullDescription": "Serverless Computing - AWS Lambda - Amazon Web Services is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Serverless Computing - AWS Lambda - Amazon Web Services is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "cyclic",
-    "name": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
-    "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Bookmark",
-    "lastCommit": "Imported May 20, 2026",
-    "lastRelease": "Bookmark",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.cyclic.sh/",
-    "docs": "https://www.cyclic.sh/",
-    "sourceCode": "",
-    "icon": "cyclic",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
-    "fullDescription": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "n8n",
-        "name": "AI Workflow Automation Platform & Tools - n8n",
-        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
-        "stars": 188794,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://n8n.io/"
-      },
-      {
-        "slug": "ui-figma-shadcn-ui",
-        "name": "Figma - shadcn/ui",
-        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/docs/figma"
-      },
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      }
-    ]
-  },
-  {
-    "slug": "deno",
-    "name": "Deno Deploy",
-    "description": "Deno Deploy bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://deno.com/deploy",
-    "docs": "https://deno.com/deploy",
-    "sourceCode": "",
-    "icon": "deno",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Deno Deploy",
-    "fullDescription": "Deno Deploy is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Deno Deploy is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "fly",
-    "name": "Fly.io",
-    "description": "Deploy app servers and full-stack applications close to users.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://fly.io/",
-    "docs": "https://fly.io/docs/",
-    "sourceCode": "",
-    "icon": "fly",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Deploy app servers and full-stack applications close to users.",
-    "fullDescription": "Fly.io is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Fly.io is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "google",
-    "name": "Cloud Run | Google Cloud",
-    "description": "Cloud Run | Google Cloud bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://cloud.google.com/run",
-    "docs": "https://cloud.google.com/run",
-    "sourceCode": "",
-    "icon": "google",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Cloud Run | Google Cloud",
-    "fullDescription": "Cloud Run - Google Cloud is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Cloud Run - Google Cloud is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "infinityfree",
-    "name": "Free Website Hosting - InfinityFree",
-    "description": "Free Website Hosting - InfinityFree bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.infinityfree.com/",
-    "docs": "https://www.infinityfree.com/",
-    "sourceCode": "",
-    "icon": "infinityfree",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Free Website Hosting - InfinityFree",
-    "fullDescription": "Free Website Hosting - InfinityFree is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Free Website Hosting - InfinityFree is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "mintlify",
-    "name": "Startups - Mintlify",
-    "description": "Startups - Mintlify bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.mintlify.com/startups",
-    "docs": "https://www.mintlify.com/startups",
-    "sourceCode": "",
-    "icon": "mintlify",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Startups - Mintlify",
-    "fullDescription": "Startups - Mintlify is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Startups - Mintlify is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "mongodb",
-    "name": "Atlas Database | MongoDB",
-    "description": "Atlas Database | MongoDB bookmarked for database resources.",
-    "category": "Database",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.mongodb.com/products/platform/atlas-database",
-    "docs": "https://www.mongodb.com/products/platform/atlas-database",
-    "sourceCode": "",
-    "icon": "mongodb",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "database"
-    ],
-    "atGlance": "Atlas Database | MongoDB",
-    "fullDescription": "Atlas Database - MongoDB is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Atlas Database - MongoDB is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "neon",
-    "name": "Neon",
-    "description": "Serverless Postgres platform for developer workflows.",
-    "category": "Database",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://neon.tech/",
-    "docs": "https://neon.tech/docs",
-    "sourceCode": "",
-    "icon": "neon",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "database"
-    ],
-    "atGlance": "Serverless Postgres platform for developer workflows.",
-    "fullDescription": "Neon is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Neon is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "northflank",
-    "name": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank",
-    "description": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://northflank.com/blog/vercel-backend-limitations",
-    "docs": "https://northflank.com/blog/vercel-backend-limitations",
-    "sourceCode": "",
-    "icon": "northflank",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank",
-    "fullDescription": "Can you use Vercel for backend? What works and when to use something else - Blog - Northflank is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Can you use Vercel for backend? What works and when to use something else - Blog - Northflank is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "planetscale",
-    "name": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres",
-    "description": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres bookmarked for database resources.",
-    "category": "Database",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://planetscale.com/",
-    "docs": "https://planetscale.com/",
-    "sourceCode": "",
-    "icon": "planetscale",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "database"
-    ],
-    "atGlance": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres",
-    "fullDescription": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "PlanetScale - the world's fastest and most scalable cloud hosting for Vitess and Postgres is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "pythonanywhere",
-    "name": "Host, run, and code Python in the cloud: PythonAnywhere",
-    "description": "Host, run, and code Python in the cloud: PythonAnywhere bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.pythonanywhere.com/",
-    "docs": "https://www.pythonanywhere.com/",
-    "sourceCode": "",
-    "icon": "pythonanywhere",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Host, run, and code Python in the cloud: PythonAnywhere",
-    "fullDescription": "Host, run, and code Python in the cloud: PythonAnywhere is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Host, run, and code Python in the cloud: PythonAnywhere is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
-      }
-    ]
-  },
-  {
-    "slug": "railway",
-    "name": "Railway",
-    "description": "Railway bookmarked for hosting resources.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Bookmark",
-    "lastCommit": "Imported May 20, 2026",
-    "lastRelease": "Bookmark",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://railway.com/",
-    "docs": "https://railway.com/",
-    "sourceCode": "",
-    "icon": "railway",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Railway",
-    "fullDescription": "Railway is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Railway is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "n8n",
-        "name": "AI Workflow Automation Platform & Tools - n8n",
-        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
-        "stars": 188794,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://n8n.io/"
-      },
-      {
-        "slug": "ui-figma-shadcn-ui",
-        "name": "Figma - shadcn/ui",
-        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/docs/figma"
-      },
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      }
-    ]
-  },
-  {
-    "slug": "render",
-    "name": "Render",
-    "description": "Cloud application hosting and deployment platform for web services.",
-    "category": "Hosting",
-    "parentCategory": "platforms",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://render.com/",
-    "docs": "https://render.com/docs",
-    "sourceCode": "",
-    "icon": "render",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "platforms",
-      "hosting"
-    ],
-    "atGlance": "Cloud application hosting and deployment platform for web services.",
-    "fullDescription": "Render is kept as a platform resource for deployment or infrastructure work.",
-    "coreFeatures": [
-      {
-        "name": "Platform Service",
-        "description": "Render is tracked as a platform resource for deployment or infrastructure work.",
-        "icon": "check"
-      },
-      {
-        "name": "Hosted Access",
-        "description": "The primary service is available through the website link.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Documentation Path",
-        "description": "Docs are linked when available for setup details.",
-        "icon": "check"
-      },
-      {
-        "name": "Deployment Context",
-        "description": "Deployment type is recorded in the metadata.",
-        "icon": "check"
-      },
-      {
-        "name": "Repository Link",
-        "description": "Source code is included when the platform is open source.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "supabase",
-        "name": "Supabase | The Postgres Development Platform.",
-        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
-        "stars": 102722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://supabase.com/"
-      },
-      {
-        "slug": "appwrite",
-        "name": "appwrite",
-        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
-        "stars": 56000,
-        "addedDaysAgo": 5,
-        "verified": true,
-        "website": "https://appwrite.io"
-      },
-      {
-        "slug": "coolify",
-        "name": "Coolify",
-        "description": "Coolify bookmarked for hosting resources.",
-        "stars": 55610,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://coolify.io/"
       }
     ]
   },

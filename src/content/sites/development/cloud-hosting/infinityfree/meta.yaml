@@ -1,0 +1,76 @@
+slug: infinityfree
+name: Free Website Hosting - InfinityFree
+description: Free Website Hosting - InfinityFree bookmarked for hosting resources.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.infinityfree.com/
+docs: https://www.infinityfree.com/
+sourceCode: ""
+icon: infinityfree
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+atGlance: Free Website Hosting - InfinityFree
+fullDescription: >-
+  Free Website Hosting - InfinityFree is kept as a hosting resource for cloud hosting, deployment,
+  or backend infrastructure work.
+coreFeatures:
+  - name: Cloud Service
+    description: >-
+      Free Website Hosting - InfinityFree is tracked for cloud hosting, deployment, or backend
+      infrastructure work.
+    icon: check
+  - name: Hosted Access
+    description: The primary service is available through the website link.
+    icon: check
+additionalFeatures:
+  - name: Documentation Path
+    description: Docs are linked when available for setup details.
+    icon: check
+  - name: Deployment Context
+    description: Deployment type is recorded in the metadata.
+    icon: check
+  - name: Developer Workflow
+    description: Grouped under Development with related cloud and hosting resources.
+    icon: check
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase | The Postgres Development Platform. bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/

@@ -9,7 +9,7 @@ const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
 const isMenuOpen = shallowRef(false)
 
 const navItems = [
-  { label: 'Sites', to: '/sites/platforms' },
+  { label: 'Sites', to: '/sites/development/cloud-hosting' },
   { label: 'Skills', to: '/skills/skills' },
   { label: 'Submit', to: '/submit' },
 ]

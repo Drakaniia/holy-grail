@@ -43,10 +43,14 @@ const router = createRouter({
     },
     {
       path: '/sites',
-      redirect: '/sites/platforms',
+      redirect: '/sites/development/cloud-hosting',
     },
     {
-      path: '/sites/:category(platforms|ai|design|development|watch|downloads|cli-tools|ui-libraries)/:subcategory?',
+      path: '/sites/platforms',
+      redirect: '/sites/development/cloud-hosting',
+    },
+    {
+      path: '/sites/:category(ai|design|development|watch|downloads|cli-tools|ui-libraries)/:subcategory?',
       name: 'sites-category',
       component: SitesPage,
     },
