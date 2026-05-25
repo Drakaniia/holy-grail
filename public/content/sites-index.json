@@ -3528,6 +3528,114 @@
     ]
   },
   {
+    "slug": "evilcharts",
+    "name": "EvilCharts",
+    "description": "Open-source chart components built with shadcn/ui and Recharts.",
+    "category": "UI Library",
+    "parentCategory": "ui-libraries",
+    "subcategory": null,
+    "stars": 2508,
+    "watchers": 6,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "4 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 12,
+    "commitsThisYear": 19,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://evilcharts.com/",
+    "docs": "https://evilcharts.com/docs",
+    "sourceCode": "https://github.com/legions-developer/evilcharts",
+    "icon": "evilcharts",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "charts",
+      "data-visualization",
+      "recharts",
+      "shadcn",
+      "react"
+    ],
+    "atGlance": "Design-first chart components for React and shadcn/ui projects.",
+    "fullDescription": "EvilCharts is an open-source chart UI collection built with shadcn/ui and Recharts. It focuses on handcrafted, animated, and visually distinctive chart components that can be copied into modern React and Next.js applications.",
+    "coreFeatures": [
+      {
+        "name": "Chart Component Library",
+        "description": "Provides ready-to-use area, line, bar, composed, radar, pie, radial, and sankey chart components.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn Registry Install",
+        "description": "Chart components can be added through the shadcn CLI using the EvilCharts registry.",
+        "icon": "check"
+      },
+      {
+        "name": "Recharts Foundation",
+        "description": "Built on Recharts for the underlying chart primitives and data visualization behavior.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Motion Effects",
+        "description": "Includes animated and interactive visual treatments for more polished chart experiences.",
+        "icon": "check"
+      },
+      {
+        "name": "Chart Utilities",
+        "description": "Includes supporting chart config, tooltip, legend, and background documentation.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "Source code is available for inspecting the implementation and contributing new chart components.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "bklit-ui",
+        "name": "Backlit UI",
+        "description": "Design engineered charts and components with beautiful, animated data visualizations.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.bklit.com/"
+      },
+      {
+        "slug": "tremor",
+        "name": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards",
+        "description": "Copy-and-paste Tailwind CSS UI components for charts and dashboards.",
+        "stars": 3425,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://tremor.so/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The foundation for your design system.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "tbench",
     "name": "Terminal-Bench",
     "description": "Terminal-Bench bookmarked for ai cli resources.",
@@ -4895,6 +5003,112 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "shieldcn",
+    "name": "shieldcn",
+    "description": "Beautiful README badges styled like shadcn/ui buttons.",
+    "category": "UI Library",
+    "parentCategory": "ui-libraries",
+    "subcategory": null,
+    "stars": 145,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "3 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 3,
+    "commitsThisYear": 74,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://shieldcn.dev/",
+    "docs": "https://shieldcn.dev/docs",
+    "sourceCode": "https://github.com/jal-co/shieldcn",
+    "icon": "shieldcn",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "badges",
+      "readme",
+      "shadcn"
+    ],
+    "atGlance": "Beautiful README badges with shadcn/ui styling.",
+    "fullDescription": "shieldcn is an open-source badge service for GitHub READMEs, npm pages, and docs sites. It renders badges as SVG or PNG images styled like shadcn/ui Button components.",
+    "coreFeatures": [
+      {
+        "name": "shadcn Styled Badges",
+        "description": "Renders badge images with shadcn/ui button styling, variants, sizes, and color tokens.",
+        "icon": "check"
+      },
+      {
+        "name": "README Ready Endpoints",
+        "description": "Provides copyable image URLs for npm, GitHub, Discord, static, dynamic, and custom badges.",
+        "icon": "check"
+      },
+      {
+        "name": "Badge Builder",
+        "description": "Includes an interactive generator for customizing badge type, format, theme, icon, and output.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Shields Compatible",
+        "description": "Supports shields.io-style patterns and migration paths for existing badge URLs.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "Source code is available for inspection and self-hosting the badge engine.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Skill",
+        "description": "Provides a companion skill so coding agents can add shieldcn badges to project READMEs.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated UI components for React, built with Tailwind CSS and Framer Motion.",
+        "stars": 21037,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "8bitcn",
+        "name": "Components - 8bitcn/ui",
+        "description": "Components - 8bitcn/ui bookmarked for ui library resources.",
+        "stars": 1859,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.8bitcn.com/docs/components"
       }
     ]
   },

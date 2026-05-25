@@ -288,6 +288,16 @@
     "height": 600,
     "bytes": 21998
   },
+  "bklit-ui": {
+    "image": "/previews/bklit-ui.webp",
+    "small": "/previews/bklit-ui-sm.webp",
+    "sourceUrl": "https://ui.bklit.com/",
+    "capturedAt": "2026-05-24T07:20:18.367Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8006,
+    "fallback": true
+  },
   "blockus": {
     "image": "/previews/blockus.webp",
     "small": "/previews/blockus-sm.webp",
@@ -764,6 +774,16 @@
     "width": 960,
     "height": 600,
     "bytes": 30282
+  },
+  "evilcharts": {
+    "image": "/previews/evilcharts.webp",
+    "small": "/previews/evilcharts-sm.webp",
+    "sourceUrl": "https://evilcharts.com/",
+    "capturedAt": "2026-05-25T02:23:17.553Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8228,
+    "fallback": true
   },
   "exercism": {
     "image": "/previews/exercism.webp",
@@ -2233,6 +2253,15 @@
     "width": 960,
     "height": 600,
     "bytes": 51362
+  },
+  "shieldcn": {
+    "image": "/previews/shieldcn.webp",
+    "small": "/previews/shieldcn-sm.webp",
+    "sourceUrl": "https://shieldcn.dev/",
+    "capturedAt": "2026-05-25T02:06:47.180Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 24008
   },
   "shoogle": {
     "image": "/previews/shoogle.webp",
