@@ -15,7 +15,8 @@ add all skills
 https://animewave.to/home
 https://animewave.to/home   
 
+admin dashbard monitoring..
 
-harden security like rate limit, or block from webscraping, how
+add ai machine learning. to search for similar tools..
 
-add landing page.
+what if we separate the repo for all the meta.yml file and/or the webp images for preview in another repo. well make it cdn for our main site.. will that works?  so the main repo will not be bloated.. or what do you recommend for this approach
