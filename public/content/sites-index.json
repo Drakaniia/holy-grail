@@ -4029,17 +4029,125 @@
     ]
   },
   {
-    "slug": "8bitcn",
-    "name": "Components - 8bitcn/ui",
-    "description": "Components - 8bitcn/ui bookmarked for ui library resources.",
+    "slug": "chanhdai-components",
+    "name": "Chánh Đại Components",
+    "description": "Pixel-perfect shadcn registry with uniquely crafted React components.",
     "category": "UI Library",
     "parentCategory": "ui-libraries",
     "subcategory": null,
-    "stars": 1859,
+    "stars": 1873,
     "watchers": 5,
     "addedDaysAgo": 0,
     "license": "MIT",
-    "lastCommit": "9 days ago",
+    "lastCommit": "today",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 7,
+    "commitsThisYear": 1402,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://chanhdai.com/components",
+    "docs": "https://chanhdai.com/components",
+    "sourceCode": "https://github.com/ncdai/chanhdai.com",
+    "icon": "chanhdai",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "components",
+      "shadcn",
+      "react",
+      "tailwind",
+      "registry"
+    ],
+    "atGlance": "A shadcn registry of polished components and blocks from Chanh Dai.",
+    "fullDescription": "Chánh Đại Components is a pixel-perfect component collection and shadcn registry. The catalog includes crafted components such as Apple Hello Effect, command helpers, consent manager, sliders, text effects, testimonials, theme controls, and portfolio-oriented UI pieces.",
+    "coreFeatures": [
+      {
+        "name": "shadcn Registry",
+        "description": "Components can be added through the shadcn registry workflow with package-manager snippets.",
+        "icon": "check"
+      },
+      {
+        "name": "Crafted Components",
+        "description": "Includes distinctive interaction components, visual effects, controls, and content blocks.",
+        "icon": "check"
+      },
+      {
+        "name": "Blocks Catalog",
+        "description": "Pairs the component collection with reusable blocks for richer interface composition.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Trusted Registry",
+        "description": "Listed as a trusted registry for shadcn-compatible component installation.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "Source code is available on GitHub for implementation review.",
+        "icon": "check"
+      },
+      {
+        "name": "Design Reference",
+        "description": "Useful for studying polished Tailwind, shadcn, and Vercel-inspired UI patterns.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "The foundation for your design system.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "pixel-perfect",
+        "name": "Pixel Perfect UI",
+        "description": "Precision-crafted React components for modern web apps.",
+        "stars": 437,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.pixel-perfect.space/"
+      },
+      {
+        "slug": "8bitcn",
+        "name": "8bitcn/ui",
+        "description": "Retro-styled 8-bit components and blocks for copy-paste UI work.",
+        "stars": 1863,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.8bitcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "8bitcn",
+    "name": "8bitcn/ui",
+    "description": "Retro-styled 8-bit components and blocks for copy-paste UI work.",
+    "category": "UI Library",
+    "parentCategory": "ui-libraries",
+    "subcategory": null,
+    "stars": 1863,
+    "watchers": 5,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "15 days ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 37,
@@ -4051,7 +4159,7 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://www.8bitcn.com/docs/components",
+    "website": "https://www.8bitcn.com/",
     "docs": "https://www.8bitcn.com/docs/components",
     "sourceCode": "https://github.com/TheOrcDev/8bitcn-ui",
     "icon": "8bitcn",
@@ -4061,36 +4169,45 @@
       "bookmark",
       "ui-libraries",
       "ui",
-      "library"
+      "library",
+      "components",
+      "blocks",
+      "retro",
+      "open-source"
     ],
-    "atGlance": "Components - 8bitcn/ui",
-    "fullDescription": "Components - 8bitcn/ui is kept as a UI component and design system reference.",
+    "atGlance": "Retro 8-bit components and blocks for modern web apps.",
+    "fullDescription": "8bitcn/ui is an open-source UI library with retro-designed, accessible components and blocks. It focuses on copy-paste 8-bit interface pieces, themes, docs, and a code distribution workflow for building playful component libraries.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Components - 8bitcn/ui is tracked as a UI component or library resource.",
+        "name": "Retro Components",
+        "description": "Provides 8-bit styled components for building interfaces with a game-like visual language.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Blocks and Themes",
+        "description": "Includes reusable blocks and theme resources alongside the component documentation.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Code",
+        "description": "The GitHub repository is available for implementation reference and contribution.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Copy-Paste Workflow",
+        "description": "Designed around inspecting components, copying code, and adapting pieces into projects.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Component Docs",
+        "description": "Keeps docs, component pages, and block examples linked from the catalog entry.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Community Showcase",
+        "description": "Invites projects built with the library to be submitted and featured.",
         "icon": "check"
       }
     ],
@@ -4099,30 +4216,30 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "The foundation for your design system.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
       },
       {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
+        "slug": "pixel-perfect",
+        "name": "Pixel Perfect UI",
+        "description": "Precision-crafted React components for modern web apps.",
+        "stars": 437,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://www.pixel-perfect.space/"
       },
       {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
+        "slug": "chanhdai-components",
+        "name": "Chánh Đại Components",
+        "description": "Pixel-perfect shadcn registry with uniquely crafted React components.",
+        "stars": 1873,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://www.heroui.com/"
+        "website": "https://chanhdai.com/components"
       }
     ]
   },
@@ -4905,6 +5022,114 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "pixel-perfect",
+    "name": "Pixel Perfect UI",
+    "description": "Precision-crafted React components for modern web apps.",
+    "category": "UI Library",
+    "parentCategory": "ui-libraries",
+    "subcategory": null,
+    "stars": 437,
+    "watchers": 2,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "1 day ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 2,
+    "commitsThisYear": 111,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.pixel-perfect.space/",
+    "docs": "https://www.pixel-perfect.space/blocks",
+    "sourceCode": "https://github.com/vansh-nagar/Pixel-Perfect",
+    "icon": "pixel-perfect",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "components",
+      "react",
+      "tailwind",
+      "animation",
+      "gsap"
+    ],
+    "atGlance": "Pixel-perfect React components with animated buttons, SVG assets, and interaction effects.",
+    "fullDescription": "Pixel Perfect UI is a React component library for building polished, responsive interfaces with copy-paste components. It focuses on detailed interaction pieces such as glowing buttons, animated SVG assets, mouse-following effects, borders, gradients, bento cards, and text animations.",
+    "coreFeatures": [
+      {
+        "name": "Copy-Paste Components",
+        "description": "Provides ready-to-use React components for buttons, sidebars, bento cards, effects, and assets.",
+        "icon": "check"
+      },
+      {
+        "name": "Motion Effects",
+        "description": "Includes GSAP, Framer Motion, SVG, mouse follower, and text animation patterns.",
+        "icon": "check"
+      },
+      {
+        "name": "Modern Frontend Stack",
+        "description": "Built around React, Next.js, Tailwind CSS, Framer Motion, and GSAP.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Component Browser",
+        "description": "Groups components by interaction type so individual pieces can be inspected quickly.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Repository",
+        "description": "Source code is available for implementation reference and contribution.",
+        "icon": "check"
+      },
+      {
+        "name": "Design Inspiration",
+        "description": "Useful as a visual reference for polished component micro-interactions.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated UI components for React, built with Tailwind CSS and Framer Motion.",
+        "stars": 21037,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "chanhdai-components",
+        "name": "Chánh Đại Components",
+        "description": "Pixel-perfect shadcn registry with uniquely crafted React components.",
+        "stars": 1873,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://chanhdai.com/components"
+      },
+      {
+        "slug": "8bitcn",
+        "name": "8bitcn/ui",
+        "description": "Retro-styled 8-bit components and blocks for copy-paste UI work.",
+        "stars": 1863,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.8bitcn.com/"
       }
     ]
   },

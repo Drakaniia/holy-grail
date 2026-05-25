@@ -30,11 +30,11 @@
   "8bitcn": {
     "image": "/previews/8bitcn.webp",
     "small": "/previews/8bitcn-sm.webp",
-    "sourceUrl": "https://www.8bitcn.com/docs/components",
-    "capturedAt": "2026-05-20T08:31:26.221Z",
+    "sourceUrl": "https://www.8bitcn.com/",
+    "capturedAt": "2026-05-25T09:11:14.221Z",
     "width": 960,
     "height": 600,
-    "bytes": 31346
+    "bytes": 36710
   },
   "activepieces": {
     "image": "/previews/activepieces.webp",
@@ -378,6 +378,15 @@
     "width": 960,
     "height": 600,
     "bytes": 43862
+  },
+  "chanhdai-components": {
+    "image": "/previews/chanhdai-components.webp",
+    "small": "/previews/chanhdai-components-sm.webp",
+    "sourceUrl": "https://chanhdai.com/components",
+    "capturedAt": "2026-05-25T09:11:04.550Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 26384
   },
   "chatgpt": {
     "image": "/previews/chatgpt.webp",
@@ -1965,6 +1974,15 @@
     "width": 960,
     "height": 600,
     "bytes": 24410
+  },
+  "pixel-perfect": {
+    "image": "/previews/pixel-perfect.webp",
+    "small": "/previews/pixel-perfect-sm.webp",
+    "sourceUrl": "https://www.pixel-perfect.space/",
+    "capturedAt": "2026-05-25T09:11:21.194Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 17806
   },
   "planetscale": {
     "image": "/previews/planetscale.webp",

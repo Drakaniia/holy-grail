@@ -1,0 +1,83 @@
+slug: pixel-perfect
+name: Pixel Perfect UI
+description: Precision-crafted React components for modern web apps.
+category: UI Library
+parentCategory: ui-libraries
+subcategory: null
+stars: 437
+watchers: 2
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 1 day ago
+lastRelease: No releases
+version: ""
+contributors: 2
+commitsThisYear: 111
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.pixel-perfect.space/
+docs: https://www.pixel-perfect.space/blocks
+sourceCode: https://github.com/vansh-nagar/Pixel-Perfect
+icon: pixel-perfect
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - components
+  - react
+  - tailwind
+  - animation
+  - gsap
+atGlance: Pixel-perfect React components with animated buttons, SVG assets, and interaction effects.
+fullDescription: >-
+  Pixel Perfect UI is a React component library for building polished, responsive interfaces with
+  copy-paste components. It focuses on detailed interaction pieces such as glowing buttons, animated
+  SVG assets, mouse-following effects, borders, gradients, bento cards, and text animations.
+coreFeatures:
+  - name: Copy-Paste Components
+    description: Provides ready-to-use React components for buttons, sidebars, bento cards, effects, and assets.
+    icon: check
+  - name: Motion Effects
+    description: Includes GSAP, Framer Motion, SVG, mouse follower, and text animation patterns.
+    icon: check
+  - name: Modern Frontend Stack
+    description: Built around React, Next.js, Tailwind CSS, Framer Motion, and GSAP.
+    icon: check
+additionalFeatures:
+  - name: Component Browser
+    description: Groups components by interaction type so individual pieces can be inspected quickly.
+    icon: check
+  - name: Open Source Repository
+    description: Source code is available for implementation reference and contribution.
+    icon: check
+  - name: Design Inspiration
+    description: Useful as a visual reference for polished component micro-interactions.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated UI components for React, built with Tailwind CSS and Framer Motion.
+    stars: 21037
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: chanhdai-components
+    name: Chánh Đại Components
+    description: Pixel-perfect shadcn registry with uniquely crafted React components.
+    stars: 1873
+    addedDaysAgo: 0
+    verified: true
+    website: https://chanhdai.com/components
+  - slug: 8bitcn
+    name: 8bitcn/ui
+    description: Retro-styled 8-bit components and blocks for copy-paste UI work.
+    stars: 1863
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.8bitcn.com/
