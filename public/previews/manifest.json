@@ -1560,6 +1560,15 @@
     "height": 600,
     "bytes": 26616
   },
+  "mcpmarket": {
+    "image": "/previews/mcpmarket.webp",
+    "small": "/previews/mcpmarket-sm.webp",
+    "sourceUrl": "https://mcpmarket.com/",
+    "capturedAt": "2026-05-25T05:25:25.033Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25162
+  },
   "medium": {
     "image": "/previews/medium.webp",
     "small": "/previews/medium-sm.webp",

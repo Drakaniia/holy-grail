@@ -24816,6 +24816,111 @@
     ]
   },
   {
+    "slug": "mcpmarket",
+    "name": "MCP Market",
+    "description": "Directory for discovering MCP servers, MCP clients, agent skills, and agent tools.",
+    "category": "MCP",
+    "parentCategory": "development",
+    "subcategory": "mcp",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://mcpmarket.com/",
+    "docs": "https://mcpmarket.com/",
+    "sourceCode": "",
+    "icon": "mcpmarket",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "mcp",
+      "agents",
+      "skills",
+      "directory"
+    ],
+    "atGlance": "Directory for discovering MCP servers, MCP clients, agent skills, and agent tools.",
+    "fullDescription": "MCP Market is a hosted directory for browsing Model Context Protocol servers, MCP clients, agent skills, and related agent tools. It groups official, featured, latest, and leaderboard entries so developers can quickly find integrations for AI-assisted workflows.",
+    "coreFeatures": [
+      {
+        "name": "MCP Server Discovery",
+        "description": "Browse MCP servers by ranking, category, official status, featured status, and recency.",
+        "icon": "check"
+      },
+      {
+        "name": "MCP Client Directory",
+        "description": "Keeps MCP clients visible beside the servers and integrations they can connect to.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Skills Listings",
+        "description": "Includes agent skills and leaderboards for reusable AI agent capabilities.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Cloud Catalog",
+        "description": "Available through a hosted web interface without local setup.",
+        "icon": "check"
+      },
+      {
+        "name": "Category Browsing",
+        "description": "Groups entries across developer tools, APIs, data, monitoring, security, and more.",
+        "icon": "check"
+      },
+      {
+        "name": "Submission Path",
+        "description": "Provides marketplace entry points for submitting or promoting MCP and agent resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "expo",
+        "name": "Using Model Context Protocol (MCP) with Expo - Expo Documentation",
+        "description": "Expo documentation for using Model Context Protocol integrations.",
+        "stars": 49543,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://docs.expo.dev/eas/ai/mcp/"
+      },
+      {
+        "slug": "testsprite",
+        "name": "TestSprite",
+        "description": "AI testing platform with MCP-oriented workflow support.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.testsprite.com/"
+      },
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      }
+    ]
+  },
+  {
     "slug": "testsprite",
     "name": "TestSprite",
     "description": "AI testing platform with MCP-oriented workflow support.",
