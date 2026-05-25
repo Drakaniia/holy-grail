@@ -9,7 +9,7 @@ add all skills
 
   changelog, blog, and docs page..
 
-  email user, if site its not working or not available.
+  email user, if site its not working or not available. (or add in  admin dashbaord.) (test if this is working.)
 
 
 https://animewave.to/home
@@ -20,3 +20,16 @@ admin dashbard monitoring..
 add ai machine learning. to search for similar tools..
 
 what if we separate the repo for all the meta.yml file and/or the webp images for preview in another repo. well make it cdn for our main site.. will that works?  so the main repo will not be bloated.. or what do you recommend for this approach
+
+add recently visited
+make more filter that can see recently added.
+
+Request site..
+
+list of all IDE
+
+list of my usefull app
+
+https://soundcn.xyz
+
+add google stitch
