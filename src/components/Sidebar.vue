@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, watch } from 'vue'
+import { computed, reactive, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   Activity,
@@ -19,7 +19,6 @@ import {
   Github,
   Hammer,
   HardDriveDownload,
-  Home,
   Image,
   Lightbulb,
   MessageSquare,
@@ -29,6 +28,7 @@ import {
   Plug,
   Presentation,
   ScanSearch,
+  Search,
   Send,
   Server,
   Shapes,
@@ -39,11 +39,13 @@ import {
   Video,
   Workflow,
   Wrench,
+  X,
 } from 'lucide-vue-next'
 import { useAdminStore } from '@/stores/admin'
 
 const route = useRoute()
 const admin = useAdminStore()
+const sidebarSearch = shallowRef('')
 
 type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
 
@@ -151,6 +153,172 @@ const skillsNav = [
   { name: 'Skills', icon: Sparkles, route: '/skills/skills' },
   { name: 'Design', icon: Palette, route: '/skills/design' },
 ]
+
+const siteUtilityNav = [
+  { name: 'CLI Tools', icon: Terminal, route: '/sites/cli-tools' },
+  { name: 'UI Libraries', icon: ComponentIcon, route: '/sites/ui-libraries' },
+]
+
+const sidebarSearchTerms = computed(() =>
+  sidebarSearch.value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .split(' ')
+    .filter(Boolean),
+)
+
+const hasSidebarSearch = computed(() => sidebarSearchTerms.value.length > 0)
+
+const matchesSidebarSearch = (label: string, route = '', parent = '') => {
+  if (!hasSidebarSearch.value) return true
+
+  const haystack = `${parent} ${label} ${route}`
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+
+  return sidebarSearchTerms.value.every(term => haystack.includes(term))
+}
+
+const filterSidebarItems = <T extends { name: string; route: string }>(
+  items: T[],
+  showAll: boolean,
+  parent = '',
+) => {
+  return showAll ? items : items.filter(item => matchesSidebarSearch(item.name, item.route, parent))
+}
+
+const sitesSectionMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Sites'),
+)
+const skillsSectionMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Skills'),
+)
+const showAllSitesTabs = computed(() => !hasSidebarSearch.value || sitesSectionMatches.value)
+const showAllSkillsTabs = computed(() => !hasSidebarSearch.value || skillsSectionMatches.value)
+
+const visibleSitesNav = computed(() => filterSidebarItems(sitesNav, showAllSitesTabs.value, 'Sites'))
+const visibleSiteUtilityNav = computed(() =>
+  filterSidebarItems(siteUtilityNav, showAllSitesTabs.value, 'Sites'),
+)
+const visibleSkillsNav = computed(() =>
+  filterSidebarItems(skillsNav, showAllSkillsTabs.value, 'Skills'),
+)
+
+const aiGroupMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('AI', '/sites/ai', 'Sites'),
+)
+const designGroupMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Design', '/sites/design', 'Sites'),
+)
+const developmentGroupMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Development', '/sites/development', 'Sites'),
+)
+const watchGroupMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Watch', '/sites/watch', 'Sites'),
+)
+const downloadsGroupMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Downloads', '/sites/downloads', 'Sites'),
+)
+
+const visibleAiSubcategories = computed(() =>
+  filterSidebarItems(
+    aiSubcategories,
+    showAllSitesTabs.value || aiGroupMatches.value,
+    'Sites AI',
+  ),
+)
+const visibleDesignSubcategories = computed(() =>
+  filterSidebarItems(
+    designSubcategories,
+    showAllSitesTabs.value || designGroupMatches.value,
+    'Sites Design',
+  ),
+)
+const visibleDevelopmentSubcategories = computed(() =>
+  filterSidebarItems(
+    developmentSubcategories,
+    showAllSitesTabs.value || developmentGroupMatches.value,
+    'Sites Development',
+  ),
+)
+const visibleWatchSubcategories = computed(() =>
+  filterSidebarItems(
+    watchSubcategories,
+    showAllSitesTabs.value || watchGroupMatches.value,
+    'Sites Watch',
+  ),
+)
+const visibleDownloadsSubcategories = computed(() =>
+  filterSidebarItems(
+    downloadsSubcategories,
+    showAllSitesTabs.value || downloadsGroupMatches.value,
+    'Sites Downloads',
+  ),
+)
+
+const showAiGroup = computed(
+  () =>
+    showAllSitesTabs.value || aiGroupMatches.value || visibleAiSubcategories.value.length > 0,
+)
+const showDesignGroup = computed(
+  () =>
+    showAllSitesTabs.value ||
+    designGroupMatches.value ||
+    visibleDesignSubcategories.value.length > 0,
+)
+const showDevelopmentGroup = computed(
+  () =>
+    showAllSitesTabs.value ||
+    developmentGroupMatches.value ||
+    visibleDevelopmentSubcategories.value.length > 0,
+)
+const showWatchGroup = computed(
+  () =>
+    showAllSitesTabs.value || watchGroupMatches.value || visibleWatchSubcategories.value.length > 0,
+)
+const showDownloadsGroup = computed(
+  () =>
+    showAllSitesTabs.value ||
+    downloadsGroupMatches.value ||
+    visibleDownloadsSubcategories.value.length > 0,
+)
+
+const isAiVisibleExpanded = computed(() => showAiGroup.value && (isAiExpanded.value || hasSidebarSearch.value))
+const isDesignVisibleExpanded = computed(
+  () => showDesignGroup.value && (isDesignExpanded.value || hasSidebarSearch.value),
+)
+const isDevelopmentVisibleExpanded = computed(
+  () => showDevelopmentGroup.value && (isDevelopmentExpanded.value || hasSidebarSearch.value),
+)
+const isWatchVisibleExpanded = computed(
+  () => showWatchGroup.value && (isWatchExpanded.value || hasSidebarSearch.value),
+)
+const isDownloadsVisibleExpanded = computed(
+  () => showDownloadsGroup.value && (isDownloadsExpanded.value || hasSidebarSearch.value),
+)
+
+const showSitesSection = computed(
+  () =>
+    showAllSitesTabs.value ||
+    visibleSitesNav.value.length > 0 ||
+    visibleSiteUtilityNav.value.length > 0 ||
+    showAiGroup.value ||
+    showDesignGroup.value ||
+    showDevelopmentGroup.value ||
+    showWatchGroup.value ||
+    showDownloadsGroup.value,
+)
+
+const showSkillsSection = computed(
+  () => showAllSkillsTabs.value || visibleSkillsNav.value.length > 0,
+)
+
+const hasVisibleSidebarTabs = computed(() => showSitesSection.value || showSkillsSection.value)
+
+const clearSidebarSearch = () => {
+  sidebarSearch.value = ''
+}
 </script>
 
 <template>
@@ -166,35 +334,44 @@ const skillsNav = [
       </RouterLink>
     </div>
 
+    <div class="shrink-0 border-b border-gray-800 px-3 py-3">
+      <label class="sr-only" for="sidebar-tab-search">Search sidebar tabs</label>
+      <div class="relative">
+        <Search
+          class="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-500"
+        />
+        <input
+          id="sidebar-tab-search"
+          v-model="sidebarSearch"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search tabs"
+          class="h-8 w-full rounded-md border border-gray-800 bg-zinc-950 px-8 text-xs font-medium text-white outline-none transition-colors placeholder:text-gray-600 focus:border-gray-600 focus:bg-black"
+          @keydown.esc="clearSidebarSearch"
+        />
+        <button
+          v-if="hasSidebarSearch"
+          type="button"
+          class="absolute right-2 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded text-gray-500 transition-colors hover:bg-zinc-800 hover:text-white"
+          aria-label="Clear sidebar search"
+          @click="clearSidebarSearch"
+        >
+          <X class="h-3 w-3" />
+        </button>
+      </div>
+    </div>
+
     <nav class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
       <ul class="space-y-0.5 px-4">
-        <li class="pb-2 pt-1">
-          <RouterLink
-            to="/"
-            class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-            :class="
-              isActive('/')
-                ? 'bg-zinc-900 text-white'
-                : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-            "
-          >
-            <div
-              v-if="isActive('/')"
-              class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-            ></div>
-            <Home class="w-3.5 h-3.5" />
-            <span class="font-medium">Overview</span>
-          </RouterLink>
-        </li>
-
-        <li>
+        <li v-if="showSitesSection">
           <div class="w-full flex items-center gap-3 text-gray-500 py-2">
             <Globe class="w-4 h-4" />
             <span class="text-xs font-semibold uppercase tracking-wider">Sites</span>
           </div>
 
           <ul class="ml-4 space-y-0.5">
-            <li v-for="item in sitesNav" :key="item.name">
+            <li v-for="item in visibleSitesNav" :key="item.name">
               <RouterLink
                 :to="item.route"
                 class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -213,7 +390,7 @@ const skillsNav = [
               </RouterLink>
             </li>
 
-            <li>
+            <li v-if="showAiGroup">
               <button
                 type="button"
                 class="w-full flex items-center rounded-md transition-colors group text-xs"
@@ -222,7 +399,7 @@ const skillsNav = [
                     ? 'bg-zinc-900 text-white'
                     : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
-                :aria-expanded="isAiExpanded"
+                :aria-expanded="isAiVisibleExpanded"
                 aria-controls="sidebar-ai-branch"
                 aria-label="Toggle AI sites"
                 @click="toggleGroup('ai')"
@@ -233,15 +410,19 @@ const skillsNav = [
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                  :class="{ 'rotate-90': isAiExpanded }"
+                  :class="{ 'rotate-90': isAiVisibleExpanded }"
                 />
               </button>
             </li>
 
             <Transition name="sidebar-group">
-              <li v-if="isAiExpanded" id="sidebar-ai-branch" class="sidebar-group-shell">
+              <li
+                v-if="isAiVisibleExpanded && visibleAiSubcategories.length > 0"
+                id="sidebar-ai-branch"
+                class="sidebar-group-shell"
+              >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                  <li v-for="item in aiSubcategories" :key="item.name">
+                  <li v-for="item in visibleAiSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -263,7 +444,7 @@ const skillsNav = [
               </li>
             </Transition>
 
-            <li>
+            <li v-if="showDesignGroup">
               <button
                 type="button"
                 class="w-full flex items-center rounded-md transition-colors group text-xs"
@@ -272,7 +453,7 @@ const skillsNav = [
                     ? 'bg-zinc-900 text-white'
                     : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
-                :aria-expanded="isDesignExpanded"
+                :aria-expanded="isDesignVisibleExpanded"
                 aria-controls="sidebar-design-branch"
                 aria-label="Toggle design sites"
                 @click="toggleGroup('design')"
@@ -283,15 +464,19 @@ const skillsNav = [
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                  :class="{ 'rotate-90': isDesignExpanded }"
+                  :class="{ 'rotate-90': isDesignVisibleExpanded }"
                 />
               </button>
             </li>
 
             <Transition name="sidebar-group">
-              <li v-if="isDesignExpanded" id="sidebar-design-branch" class="sidebar-group-shell">
+              <li
+                v-if="isDesignVisibleExpanded && visibleDesignSubcategories.length > 0"
+                id="sidebar-design-branch"
+                class="sidebar-group-shell"
+              >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                  <li v-for="item in designSubcategories" :key="item.name">
+                  <li v-for="item in visibleDesignSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -313,7 +498,7 @@ const skillsNav = [
               </li>
             </Transition>
 
-            <li>
+            <li v-if="showDevelopmentGroup">
               <button
                 type="button"
                 class="w-full flex items-center rounded-md transition-colors group text-xs"
@@ -322,7 +507,7 @@ const skillsNav = [
                     ? 'bg-zinc-900 text-white'
                     : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
-                :aria-expanded="isDevelopmentExpanded"
+                :aria-expanded="isDevelopmentVisibleExpanded"
                 aria-controls="sidebar-development-branch"
                 aria-label="Toggle development sites"
                 @click="toggleGroup('development')"
@@ -333,19 +518,19 @@ const skillsNav = [
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                  :class="{ 'rotate-90': isDevelopmentExpanded }"
+                  :class="{ 'rotate-90': isDevelopmentVisibleExpanded }"
                 />
               </button>
             </li>
 
             <Transition name="sidebar-group">
               <li
-                v-if="isDevelopmentExpanded"
+                v-if="isDevelopmentVisibleExpanded && visibleDevelopmentSubcategories.length > 0"
                 id="sidebar-development-branch"
                 class="sidebar-group-shell"
               >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                  <li v-for="item in developmentSubcategories" :key="item.name">
+                  <li v-for="item in visibleDevelopmentSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -367,7 +552,7 @@ const skillsNav = [
               </li>
             </Transition>
 
-            <li>
+            <li v-if="showWatchGroup">
               <button
                 type="button"
                 class="w-full flex items-center rounded-md transition-colors group text-xs"
@@ -376,7 +561,7 @@ const skillsNav = [
                     ? 'bg-zinc-900 text-white'
                     : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
-                :aria-expanded="isWatchExpanded"
+                :aria-expanded="isWatchVisibleExpanded"
                 aria-controls="sidebar-watch-branch"
                 aria-label="Toggle watch sites"
                 @click="toggleGroup('watch')"
@@ -387,19 +572,19 @@ const skillsNav = [
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                  :class="{ 'rotate-90': isWatchExpanded }"
+                  :class="{ 'rotate-90': isWatchVisibleExpanded }"
                 />
               </button>
             </li>
 
             <Transition name="sidebar-group">
               <li
-                v-if="isWatchExpanded"
+                v-if="isWatchVisibleExpanded && visibleWatchSubcategories.length > 0"
                 id="sidebar-watch-branch"
                 class="sidebar-group-shell"
               >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                  <li v-for="item in watchSubcategories" :key="item.name">
+                  <li v-for="item in visibleWatchSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -421,7 +606,7 @@ const skillsNav = [
               </li>
             </Transition>
 
-            <li>
+            <li v-if="showDownloadsGroup">
               <button
                 type="button"
                 class="w-full flex items-center rounded-md transition-colors group text-xs"
@@ -430,7 +615,7 @@ const skillsNav = [
                     ? 'bg-zinc-900 text-white'
                     : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
-                :aria-expanded="isDownloadsExpanded"
+                :aria-expanded="isDownloadsVisibleExpanded"
                 aria-controls="sidebar-downloads-branch"
                 aria-label="Toggle downloads sites"
                 @click="toggleGroup('downloads')"
@@ -441,19 +626,19 @@ const skillsNav = [
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                  :class="{ 'rotate-90': isDownloadsExpanded }"
+                  :class="{ 'rotate-90': isDownloadsVisibleExpanded }"
                 />
               </button>
             </li>
 
             <Transition name="sidebar-group">
               <li
-                v-if="isDownloadsExpanded"
+                v-if="isDownloadsVisibleExpanded && visibleDownloadsSubcategories.length > 0"
                 id="sidebar-downloads-branch"
                 class="sidebar-group-shell"
               >
                 <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                  <li v-for="item in downloadsSubcategories" :key="item.name">
+                  <li v-for="item in visibleDownloadsSubcategories" :key="item.name">
                     <RouterLink
                       :to="item.route"
                       class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -475,54 +660,7 @@ const skillsNav = [
               </li>
             </Transition>
 
-            <li>
-              <RouterLink
-                to="/sites/cli-tools"
-                class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                :class="
-                  isActive('/sites/cli-tools')
-                    ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                "
-              >
-                <div
-                  v-if="isActive('/sites/cli-tools')"
-                  class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                ></div>
-                <Terminal class="w-3.5 h-3.5" />
-                <span class="font-medium">CLI Tools</span>
-              </RouterLink>
-            </li>
-
-            <li>
-              <RouterLink
-                to="/sites/ui-libraries"
-                class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                :class="
-                  isActive('/sites/ui-libraries')
-                    ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                "
-              >
-                <div
-                  v-if="isActive('/sites/ui-libraries')"
-                  class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                ></div>
-                <ComponentIcon class="w-3.5 h-3.5" />
-                <span class="font-medium">UI Libraries</span>
-              </RouterLink>
-            </li>
-          </ul>
-        </li>
-
-        <li class="mt-6">
-          <div class="w-full flex items-center gap-3 text-gray-500 py-2">
-            <Sparkles class="w-4 h-4" />
-            <span class="text-xs font-semibold uppercase tracking-wider">Skills</span>
-          </div>
-
-          <ul class="ml-4 space-y-0.5">
-            <li v-for="item in skillsNav" :key="item.name">
+            <li v-for="item in visibleSiteUtilityNav" :key="item.name">
               <RouterLink
                 :to="item.route"
                 class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
@@ -541,6 +679,38 @@ const skillsNav = [
               </RouterLink>
             </li>
           </ul>
+        </li>
+
+        <li v-if="showSkillsSection" class="mt-6">
+          <div class="w-full flex items-center gap-3 text-gray-500 py-2">
+            <Sparkles class="w-4 h-4" />
+            <span class="text-xs font-semibold uppercase tracking-wider">Skills</span>
+          </div>
+
+          <ul class="ml-4 space-y-0.5">
+            <li v-for="item in visibleSkillsNav" :key="item.name">
+              <RouterLink
+                :to="item.route"
+                class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
+                :class="
+                  isActive(item.route)
+                    ? 'bg-zinc-900 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+                "
+              >
+                <div
+                  v-if="isActive(item.route)"
+                  class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
+                ></div>
+                <component :is="item.icon" class="w-3.5 h-3.5" />
+                <span class="font-medium">{{ item.name }}</span>
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
+        <li v-if="!hasVisibleSidebarTabs" class="px-2 py-6 text-center">
+          <p class="text-xs font-medium text-gray-500">No tabs match "{{ sidebarSearch }}".</p>
         </li>
       </ul>
     </nav>
