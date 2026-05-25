@@ -68,9 +68,9 @@ const placements = {
     subcategory: 'monitoring',
     category: 'Monitoring',
   },
-  platformHosting: {
-    parentCategory: 'platforms',
-    subcategory: null,
+  developmentCloudHosting: {
+    parentCategory: 'development',
+    subcategory: 'cloud-hosting',
     category: 'Hosting',
   },
   downloadsGames: {
@@ -149,11 +149,11 @@ const folderMap = new Map([
   ],
   [
     'Bookmarks bar > CODE > Hosting Service',
-    placements.platformHosting,
+    placements.developmentCloudHosting,
   ],
   [
     'Bookmarks bar > CODE > Database',
-    { parentCategory: 'platforms', subcategory: null, category: 'Database' },
+    { parentCategory: 'development', subcategory: 'cloud-hosting', category: 'Database' },
   ],
   ['Bookmarks bar > CODE > MCP', placements.developmentMcp],
   ['Bookmarks bar > CODE > uptimeMonitor', placements.developmentMonitoring],
@@ -381,7 +381,7 @@ function classifyCodeRoot(row) {
   }
 
   if (includesAny(value, ['vercel.com', 'fly.io', 'railway.com', 'cyclic.sh'])) {
-    return placements.platformHosting
+    return placements.developmentCloudHosting
   }
 
   if (
@@ -621,6 +621,40 @@ function detailSectionsFor(row, config, displayName) {
     }
   }
 
+  if (config.parentCategory === 'development' && config.subcategory === 'cloud-hosting') {
+    return {
+      coreFeatures: [
+        {
+          name: 'Cloud Service',
+          description: `${displayName} is tracked as ${article} ${lowerCategory} resource for hosting, deployment, or backend infrastructure.`,
+          icon: 'check',
+        },
+        {
+          name: 'Hosted Access',
+          description: 'Open the saved service directly from the catalog entry.',
+          icon: 'check',
+        },
+      ],
+      additionalFeatures: [
+        {
+          name: 'Documentation Path',
+          description: 'Docs are linked when available for setup details.',
+          icon: 'check',
+        },
+        {
+          name: 'Deployment Context',
+          description: 'Deployment type is recorded in the metadata.',
+          icon: 'check',
+        },
+        {
+          name: 'Developer Workflow',
+          description: 'Grouped under Development with related cloud and hosting resources.',
+          icon: 'check',
+        },
+      ],
+    }
+  }
+
   return {
     coreFeatures: [
       {
@@ -707,15 +741,15 @@ function fullDescriptionFor(displayName, config) {
   }
 
   if (config.parentCategory === 'development') {
+    if (config.subcategory === 'cloud-hosting') {
+      return `${displayName} is kept as ${article} ${lowerCategory} resource for cloud hosting, deployment, or backend infrastructure work.`
+    }
+
     return `${displayName} is kept as ${article} ${lowerCategory} resource for building and shipping software.`
   }
 
   if (config.parentCategory === 'downloads') {
     return `${displayName} is kept as ${article} ${lowerCategory} source in the downloads collection.`
-  }
-
-  if (config.parentCategory === 'platforms') {
-    return `${displayName} is kept as a platform resource for deployment or infrastructure work.`
   }
 
   if (config.parentCategory === 'cli-tools') {
