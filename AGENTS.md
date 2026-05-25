@@ -8,16 +8,44 @@ Vue 3 (Composition API + `<script setup>`) · Vite 8 · TypeScript · Tailwind C
 
 ## Commands
 ```
-bun install              # install deps
-bun dev                  # dev server (auto-runs generate scripts first)
-bun run build            # production build (auto-runs generate scripts + typecheck)
-bun run preview          # preview production build
-bun run type-check       # vue-tsc --noEmit
-bun lint                 # oxlint --fix then eslint --fix --cache (sequential)
-bun run format           # prettier --write --experimental-cli src/
-bun run generate:skills  # regenerate skills-index.json only
-bun run import:bookmarks # import bookmarks via scripts/import-bookmarks.js
+bun install                      # install deps
+bun dev                          # dev server (auto-runs generate scripts first)
+bun run build                    # production build (auto-runs generate scripts + typecheck)
+bun run preview                  # preview production build
+bun run type-check               # vue-tsc --noEmit
+bun lint                         # oxlint --fix then eslint --fix --cache (sequential)
+bun run format                   # prettier --write --experimental-cli src/
+bun run generate:skills          # regenerate skills-index.json only
+bun run import:bookmarks         # import bookmarks via scripts/import-bookmarks.js
+bun run generate:previews        # capture missing site previews only
+bun run generate:previews:all    # regenerate every site preview
 ```
+
+## Site Previews — Critical
+After adding a new site, **always generate its preview** or it will show blank in the UI.
+
+Previews are static `.webp` files — they are NOT fetched at runtime. The script uses a local Chrome/Edge install via Puppeteer.
+
+```
+# Capture only the new site (fastest)
+bun run scripts/generate-site-previews.js --slug <slug>
+
+# Capture all missing previews
+bun run generate:previews
+
+# Regenerate everything
+bun run generate:previews:all
+```
+
+Output files written per site:
+- `public/previews/<slug>.webp` — full size (960×600)
+- `public/previews/<slug>-sm.webp` — thumbnail (480×300)
+- `public/previews/manifest.json` — updated automatically
+- `src/content/site-previews.json` — imported by the app, must be committed
+
+If the live site blocks Puppeteer (timeout/bot protection), the script automatically writes a **fallback SVG preview** so the entry is never blank. Commit the fallback — it's better than nothing.
+
+Chrome/Edge must be installed locally. Set `PREVIEW_BROWSER_PATH` env var to override the auto-detected executable path.
 
 ## CI Order (on push/PR to `grail` branch)
 `type-check` → `lint` → `build`
