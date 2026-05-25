@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { computed, ref, shallowRef } from 'vue'
+import { trackBookmark } from '@/lib/analytics'
 import { supabase } from '@/lib/supabase'
 import { useAuthStore } from '@/stores/auth'
 
@@ -202,6 +203,7 @@ export const useBookmarksStore = defineStore('bookmarks', () => {
 
       bookmarks.value = [data as UserBookmark, ...bookmarks.value]
       initializedForUser.value = auth.user.id
+      trackBookmark(resource.type, resource.slug)
       return { ok: true }
     } catch (error) {
       const message = getBookmarkErrorMessage(error)

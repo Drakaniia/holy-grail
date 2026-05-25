@@ -5,6 +5,7 @@ import { Search, TrendingUp, Clock, Star, Sparkles } from 'lucide-vue-next'
 import { sortSitesForTab, useSitesStore } from '@/stores/sites'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SiteCard from '@/components/sites/SiteCard.vue'
+import { trackSearchQuery } from '@/lib/analytics'
 
 const route = useRoute()
 const store = useSitesStore()
@@ -164,6 +165,13 @@ watch([category, subcategory], () => {
   store.setCategory('All')
   store.setPage(1)
 })
+
+watch(
+  () => store.searchQuery,
+  query => {
+    trackSearchQuery(query, 'sites_search')
+  },
+)
 
 watch(totalPages, pages => {
   if (store.currentPage > pages) {

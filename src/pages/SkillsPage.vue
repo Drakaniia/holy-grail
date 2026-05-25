@@ -5,6 +5,7 @@ import { Search, TrendingUp, Clock, Sparkles } from 'lucide-vue-next'
 import { useSkillsStore } from '@/stores/skills'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SkillCard from '@/components/skills/SkillCard.vue'
+import { trackSearchQuery } from '@/lib/analytics'
 
 const route = useRoute()
 const store = useSkillsStore()
@@ -94,6 +95,13 @@ watch(category, () => {
   store.setCategory('All')
   store.setPage(1)
 })
+
+watch(
+  () => store.searchQuery,
+  query => {
+    trackSearchQuery(query, 'skills_search')
+  },
+)
 
 watch(totalPages, pages => {
   if (store.currentPage > pages) {

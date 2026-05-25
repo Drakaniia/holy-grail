@@ -3,6 +3,7 @@ import { computed, shallowRef, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import AuthCredentialsForm from '@/components/auth/AuthCredentialsForm.vue'
 import AuthFeatureRail from '@/components/auth/AuthFeatureRail.vue'
+import { trackSignup } from '@/lib/analytics'
 import { useAuthStore } from '@/stores/auth'
 import { useToastStore } from '@/stores/toast'
 import type { AuthCredentials, AuthMode, AuthProvider } from '@/types/auth'
@@ -50,6 +51,10 @@ async function handleSubmit(credentials: AuthCredentials) {
   if (result.needsEmailConfirmation) {
     notice.value = result.message ?? 'Check your email to confirm your account.'
     return
+  }
+
+  if (mode.value === 'signup') {
+    trackSignup()
   }
 
   toast.success(`Welcome, ${auth.displayName}.`, 'Your Holy Grail account is ready.')

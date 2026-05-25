@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import { ArrowUpDown, Command, CornerDownLeft, Search, X } from 'lucide-vue-next'
 import SearchResultLogo from '@/components/search/SearchResultLogo.vue'
 import { useSmartSearch, type SmartSearchResult } from '@/composables/useSmartSearch'
+import { trackSearchQuery } from '@/lib/analytics'
 
 const isOpen = defineModel<boolean>('open', { default: false })
 const router = useRouter()
@@ -38,6 +39,7 @@ watch(
 
 watch(query, () => {
   activeIndex.value = 0
+  trackSearchQuery(query.value, 'command_palette')
 })
 
 watch(visibleResults, (currentResults) => {
