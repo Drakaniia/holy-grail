@@ -1,13 +1,13 @@
-slug: rovo-dev
-name: Rovo Dev
-description: Rovo Dev CLI setup reference for AI-assisted terminal coding workflows.
+slug: neovate
+name: Neovate
+description: Neovate CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: cli-tools
 subcategory: null
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Proprietary
+license: MIT
 lastCommit: N/A
 lastRelease: N/A
 version: ''
@@ -18,10 +18,10 @@ platforms:
   - CLI
 deployment:
   - Local CLI
-website: https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/
-docs: https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/
-sourceCode: ''
-icon: rovo-dev
+website: https://neovateai.dev/en/docs/overview
+docs: https://neovateai.dev/en/docs/overview
+sourceCode: https://github.com/neovateai/neovate-code
+icon: neovate
 verified: true
 featured: false
 tags:
@@ -30,17 +30,17 @@ tags:
   - cli
   - coding-agent
   - terminal
-  - acli
-  - rovodev
-installCommand: acli rovodev auth login
-atGlance: Rovo Dev is a supported CLI provider for AI-assisted coding workflows.
+  - neovate
+  - neo
+installCommand: npm i @neovate/code -g
+atGlance: Neovate is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Rovo Dev is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
+  Neovate is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
   The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider
-    description: Rovo Dev is tracked as a supported AI coding CLI for terminal-based development workflows.
+    description: Neovate is tracked as a supported AI coding CLI for terminal-based development workflows.
     icon: check
   - name: Setup Command
     description: The primary install or authentication command is available directly on the detail page.
@@ -56,24 +56,24 @@ additionalFeatures:
     description: Grouped with other AI CLI tools for quick comparison and lookup.
     icon: check
 similarTools:
-  - slug: amp
-    name: Amp
-    description: Amp is another supported AI coding CLI.
+  - slug: opencode-cli
+    name: OpenCode
+    description: OpenCode is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://ampcode.com/manual#install
-  - slug: auggie
-    name: Auggie
-    description: Auggie is another supported AI coding CLI.
+    website: https://opencode.ai/docs/cli/
+  - slug: gemini-cli
+    name: Gemini
+    description: Gemini is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://docs.augmentcode.com/cli/overview
-  - slug: autohand-code
-    name: Autohand Code
-    description: Autohand Code is another supported AI coding CLI.
-    stars: 0
+    website: https://github.com/google-gemini/gemini-cli
+  - slug: codebuff
+    name: Codebuff
+    description: Codebuff is another supported AI coding CLI.
+    stars: 5511
     addedDaysAgo: 0
     verified: true
-    website: https://autohand.ai/code/
+    website: https://www.codebuff.com/

@@ -30,6 +30,7 @@ tags:
   - cli
   - coding-agent
   - terminal
+  - crush
 installCommand: npm install -g @charmland/crush
 atGlance: Charm Crush is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-

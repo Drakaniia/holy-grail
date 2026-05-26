@@ -1,6 +1,6 @@
-slug: cursor-cli
-name: Cursor Agent
-description: Cursor Agent CLI setup reference for AI-assisted terminal coding workflows.
+slug: codebuddy
+name: CodeBuddy
+description: CodeBuddy CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: cli-tools
 subcategory: null
@@ -18,10 +18,10 @@ platforms:
   - CLI
 deployment:
   - Local CLI
-website: https://cursor.com/cli
-docs: https://cursor.com/cli
+website: https://www.codebuddy.ai/docs/cli/installation
+docs: https://www.codebuddy.ai/docs/cli/installation
 sourceCode: ''
-icon: cursor-cli
+icon: codebuddy
 verified: true
 featured: false
 tags:
@@ -30,16 +30,16 @@ tags:
   - cli
   - coding-agent
   - terminal
-  - cursor-agent
-installCommand: curl https://cursor.com/install -fsS | bash
-atGlance: Cursor Agent is a supported CLI provider for AI-assisted coding workflows.
+  - codebuddy
+installCommand: npm install -g @tencent-ai/codebuddy-code
+atGlance: CodeBuddy is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Cursor Agent is cataloged as a CLI tool for developers who want AI-assisted coding from the
+  CodeBuddy is cataloged as a CLI tool for developers who want AI-assisted coding from the
   terminal. The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider
-    description: Cursor Agent is tracked as a supported AI coding CLI for terminal-based development workflows.
+    description: CodeBuddy is tracked as a supported AI coding CLI for terminal-based development workflows.
     icon: check
   - name: Setup Command
     description: The primary install or authentication command is available directly on the detail page.
@@ -55,24 +55,24 @@ additionalFeatures:
     description: Grouped with other AI CLI tools for quick comparison and lookup.
     icon: check
 similarTools:
-  - slug: amp
-    name: Amp
-    description: Amp is another supported AI coding CLI.
+  - slug: opencode-cli
+    name: OpenCode
+    description: OpenCode is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://ampcode.com/manual#install
-  - slug: auggie
-    name: Auggie
-    description: Auggie is another supported AI coding CLI.
+    website: https://opencode.ai/docs/cli/
+  - slug: gemini-cli
+    name: Gemini
+    description: Gemini is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://docs.augmentcode.com/cli/overview
-  - slug: autohand-code
-    name: Autohand Code
-    description: Autohand Code is another supported AI coding CLI.
-    stars: 0
+    website: https://github.com/google-gemini/gemini-cli
+  - slug: codebuff
+    name: Codebuff
+    description: Codebuff is another supported AI coding CLI.
+    stars: 5511
     addedDaysAgo: 0
     verified: true
-    website: https://autohand.ai/code/
+    website: https://www.codebuff.com/

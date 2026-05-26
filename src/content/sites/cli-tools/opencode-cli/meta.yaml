@@ -30,6 +30,7 @@ tags:
   - cli
   - coding-agent
   - terminal
+  - opencode
 installCommand: npm install -g opencode-ai
 atGlance: OpenCode is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-

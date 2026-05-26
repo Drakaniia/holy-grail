@@ -1,6 +1,6 @@
-slug: rovo-dev
-name: Rovo Dev
-description: Rovo Dev CLI setup reference for AI-assisted terminal coding workflows.
+slug: qodercli
+name: Qoder CLI
+description: Qoder CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: cli-tools
 subcategory: null
@@ -18,10 +18,10 @@ platforms:
   - CLI
 deployment:
   - Local CLI
-website: https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/
-docs: https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/
+website: https://docs.qoder.com/cli/quick-start
+docs: https://docs.qoder.com/cli/quick-start
 sourceCode: ''
-icon: rovo-dev
+icon: qodercli
 verified: true
 featured: false
 tags:
@@ -30,17 +30,17 @@ tags:
   - cli
   - coding-agent
   - terminal
-  - acli
-  - rovodev
-installCommand: acli rovodev auth login
-atGlance: Rovo Dev is a supported CLI provider for AI-assisted coding workflows.
+  - qoder
+  - qodercli
+installCommand: npm install -g @qoder-ai/qodercli
+atGlance: Qoder CLI is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Rovo Dev is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
+  Qoder CLI is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
   The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider
-    description: Rovo Dev is tracked as a supported AI coding CLI for terminal-based development workflows.
+    description: Qoder CLI is tracked as a supported AI coding CLI for terminal-based development workflows.
     icon: check
   - name: Setup Command
     description: The primary install or authentication command is available directly on the detail page.
@@ -56,24 +56,24 @@ additionalFeatures:
     description: Grouped with other AI CLI tools for quick comparison and lookup.
     icon: check
 similarTools:
-  - slug: amp
-    name: Amp
-    description: Amp is another supported AI coding CLI.
+  - slug: opencode-cli
+    name: OpenCode
+    description: OpenCode is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://ampcode.com/manual#install
-  - slug: auggie
-    name: Auggie
-    description: Auggie is another supported AI coding CLI.
+    website: https://opencode.ai/docs/cli/
+  - slug: gemini-cli
+    name: Gemini
+    description: Gemini is another supported AI coding CLI.
     stars: 0
     addedDaysAgo: 0
     verified: true
-    website: https://docs.augmentcode.com/cli/overview
-  - slug: autohand-code
-    name: Autohand Code
-    description: Autohand Code is another supported AI coding CLI.
-    stars: 0
+    website: https://github.com/google-gemini/gemini-cli
+  - slug: codebuff
+    name: Codebuff
+    description: Codebuff is another supported AI coding CLI.
+    stars: 5511
     addedDaysAgo: 0
     verified: true
-    website: https://autohand.ai/code/
+    website: https://www.codebuff.com/

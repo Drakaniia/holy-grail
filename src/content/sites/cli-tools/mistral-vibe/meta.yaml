@@ -30,6 +30,8 @@ tags:
   - cli
   - coding-agent
   - terminal
+  - mistral
+  - vibe
 installCommand: curl -LsSf https://mistral.ai/vibe/install.sh | bash
 atGlance: Mistral Vibe is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-

@@ -1398,6 +1398,106 @@
     ]
   },
   {
+    "slug": "aider",
+    "name": "Aider",
+    "description": "Aider CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "cli-tools",
+    "subcategory": null,
+    "stars": 45300,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Apache-2.0",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://aider.chat/docs/install.html",
+    "docs": "https://aider.chat/docs/install.html",
+    "sourceCode": "https://github.com/Aider-AI/aider",
+    "icon": "aider",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "aider"
+    ],
+    "atGlance": "Aider is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "Aider is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "Aider is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "python -m pip install aider-install && aider-install",
+    "similarTools": [
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "gemini-cli",
+        "name": "Gemini",
+        "description": "Gemini is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "Codebuff is another supported AI coding CLI.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
     "slug": "motion",
     "name": "Framer | Motion for React (prev Framer Motion)",
     "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
@@ -3208,7 +3308,8 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "codebuff"
     ],
     "atGlance": "Codebuff is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Codebuff is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -13278,7 +13379,8 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "crush"
     ],
     "atGlance": "Charm Crush is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Charm Crush is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -13542,6 +13644,106 @@
     ]
   },
   {
+    "slug": "codebuddy",
+    "name": "CodeBuddy",
+    "description": "CodeBuddy CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "cli-tools",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://www.codebuddy.ai/docs/cli/installation",
+    "docs": "https://www.codebuddy.ai/docs/cli/installation",
+    "sourceCode": "",
+    "icon": "codebuddy",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "codebuddy"
+    ],
+    "atGlance": "CodeBuddy is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "CodeBuddy is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "CodeBuddy is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "npm install -g @tencent-ai/codebuddy-code",
+    "similarTools": [
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "gemini-cli",
+        "name": "Gemini",
+        "description": "Gemini is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "Codebuff is another supported AI coding CLI.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
     "slug": "codex-cli",
     "name": "Codex",
     "description": "Codex CLI setup reference for AI-assisted terminal coding workflows.",
@@ -13741,8 +13943,8 @@
   },
   {
     "slug": "cursor-cli",
-    "name": "Cursor",
-    "description": "Cursor CLI setup reference for AI-assisted terminal coding workflows.",
+    "name": "Cursor Agent",
+    "description": "Cursor Agent CLI setup reference for AI-assisted terminal coding workflows.",
     "category": "AI CLI",
     "parentCategory": "cli-tools",
     "subcategory": null,
@@ -13773,14 +13975,15 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "cursor-agent"
     ],
-    "atGlance": "Cursor is a supported CLI provider for AI-assisted coding workflows.",
-    "fullDescription": "Cursor is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "atGlance": "Cursor Agent is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "Cursor Agent is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
     "coreFeatures": [
       {
         "name": "Supported CLI Provider",
-        "description": "Cursor is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "description": "Cursor Agent is tracked as a supported AI coding CLI for terminal-based development workflows.",
         "icon": "check"
       },
       {
@@ -14070,7 +14273,8 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "gemini"
     ],
     "atGlance": "Gemini is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Gemini is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -14862,7 +15066,9 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "kiro",
+      "kiro-cli"
     ],
     "atGlance": "Kiro (AWS) is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Kiro (AWS) is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -14961,7 +15167,8 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "letta"
     ],
     "atGlance": "Letta is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Letta is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -15060,7 +15267,9 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "mistral",
+      "vibe"
     ],
     "atGlance": "Mistral Vibe is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Mistral Vibe is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -15126,6 +15335,107 @@
     ]
   },
   {
+    "slug": "neovate",
+    "name": "Neovate",
+    "description": "Neovate CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "cli-tools",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://neovateai.dev/en/docs/overview",
+    "docs": "https://neovateai.dev/en/docs/overview",
+    "sourceCode": "https://github.com/neovateai/neovate-code",
+    "icon": "neovate",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "neovate",
+      "neo"
+    ],
+    "atGlance": "Neovate is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "Neovate is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "Neovate is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "npm i @neovate/code -g",
+    "similarTools": [
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "gemini-cli",
+        "name": "Gemini",
+        "description": "Gemini is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "Codebuff is another supported AI coding CLI.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
     "slug": "opencode-cli",
     "name": "OpenCode",
     "description": "OpenCode CLI setup reference for AI-assisted terminal coding workflows.",
@@ -15159,7 +15469,8 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "opencode"
     ],
     "atGlance": "OpenCode is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "OpenCode is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
@@ -15324,6 +15635,207 @@
     ]
   },
   {
+    "slug": "qodercli",
+    "name": "Qoder CLI",
+    "description": "Qoder CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "cli-tools",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://docs.qoder.com/cli/quick-start",
+    "docs": "https://docs.qoder.com/cli/quick-start",
+    "sourceCode": "",
+    "icon": "qodercli",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "qoder",
+      "qodercli"
+    ],
+    "atGlance": "Qoder CLI is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "Qoder CLI is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "Qoder CLI is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "npm install -g @qoder-ai/qodercli",
+    "similarTools": [
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "gemini-cli",
+        "name": "Gemini",
+        "description": "Gemini is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "Codebuff is another supported AI coding CLI.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
+    "slug": "qodo-cli",
+    "name": "Qodo CLI",
+    "description": "Qodo CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "cli-tools",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://docs.qodo.ai/qodo-command/getting-started/setup-and-quickstart",
+    "docs": "https://docs.qodo.ai/qodo-command/getting-started/setup-and-quickstart",
+    "sourceCode": "",
+    "icon": "qodo-cli",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "qodo"
+    ],
+    "atGlance": "Qodo CLI is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "Qodo CLI is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "Qodo CLI is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "npm install -g @qodo/command",
+    "similarTools": [
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "gemini-cli",
+        "name": "Gemini",
+        "description": "Gemini is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://github.com/google-gemini/gemini-cli"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "Codebuff is another supported AI coding CLI.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
     "slug": "qwen-code",
     "name": "Qwen Code",
     "description": "Qwen Code CLI setup reference for AI-assisted terminal coding workflows.",
@@ -15456,7 +15968,9 @@
       "ai",
       "cli",
       "coding-agent",
-      "terminal"
+      "terminal",
+      "acli",
+      "rovodev"
     ],
     "atGlance": "Rovo Dev is a supported CLI provider for AI-assisted coding workflows.",
     "fullDescription": "Rovo Dev is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The setup command is shown directly on this CLI tool page for quick installation or authentication.",

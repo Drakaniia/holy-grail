@@ -30,6 +30,7 @@ tags:
   - cli
   - coding-agent
   - terminal
+  - letta
 installCommand: npm install -g @letta-ai/letta-code
 atGlance: Letta is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-

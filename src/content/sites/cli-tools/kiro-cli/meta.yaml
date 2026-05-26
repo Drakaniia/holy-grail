@@ -30,6 +30,8 @@ tags:
   - cli
   - coding-agent
   - terminal
+  - kiro
+  - kiro-cli
 installCommand: curl -fsSL https://cli.kiro.dev/install | bash
 atGlance: Kiro (AWS) is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-

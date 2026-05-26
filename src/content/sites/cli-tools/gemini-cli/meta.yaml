@@ -30,6 +30,7 @@ tags:
   - cli
   - coding-agent
   - terminal
+  - gemini
 installCommand: npm install -g @google/gemini-cli
 atGlance: Gemini is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
