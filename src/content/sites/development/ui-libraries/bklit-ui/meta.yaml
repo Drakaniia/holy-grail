@@ -1,0 +1,79 @@
+slug: bklit-ui
+name: Backlit UI
+description: Design engineered charts and components with beautiful, animated data visualizations.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Unknown
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://ui.bklit.com/
+docs: https://ui.bklit.com/docs/installation
+sourceCode: ""
+verified: true
+featured: false
+tags:
+  - ui-libraries
+  - ui
+  - charts
+  - components
+  - design-system
+  - data-visualization
+atGlance: Design engineered charts and components for modern web apps.
+fullDescription: >-
+  Backlit UI is a component library focused on design-engineered charts and UI
+  components. It provides animated, visually polished data visualizations and
+  utility components built for seamless integration into modern web projects.
+coreFeatures:
+  - name: Design Engineered Charts
+    description: Beautiful, animated chart components crafted with a strong design sensibility.
+    icon: check
+  - name: UI Components
+    description: A growing set of utility components alongside the chart library.
+    icon: check
+  - name: Studio
+    description: Built-in Studio tool for customizing and exporting chart configurations.
+    icon: check
+additionalFeatures:
+  - name: Theming Support
+    description: Flexible theming system to match your design system or brand.
+    icon: check
+  - name: Blocks
+    description: Pre-built layout blocks combining charts and components for rapid prototyping.
+    icon: check
+  - name: shadcn Compatible
+    description: Praised by shadcn and the community as a natural complement to shadcn/ui.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated UI components for React, built with Tailwind CSS and Framer Motion.
+    stars: 21037
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: tremor
+    name: Tremor
+    description: React components to build charts and dashboards.
+    stars: 0
+    addedDaysAgo: 0
+    verified: true
+    website: https://tremor.so/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: The foundation for your design system.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/

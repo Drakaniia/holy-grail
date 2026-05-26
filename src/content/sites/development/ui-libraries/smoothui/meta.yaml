@@ -1,0 +1,80 @@
+slug: smoothui
+name: SmoothUI - Animated React Components for shadcn/ui | Motion & Tailwind
+description: >-
+  SmoothUI - Animated React Components for shadcn/ui | Motion & Tailwind bookmarked for ui library
+  resources.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 797
+watchers: 1
+addedDaysAgo: 0
+license: MIT
+lastCommit: 1 day ago
+lastRelease: 27 days ago
+version: v3.4.0
+contributors: 5
+commitsThisYear: 170
+releases: 3
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://smoothui.dev/
+docs: https://smoothui.dev/
+sourceCode: https://github.com/educlopez/smoothui
+icon: smoothui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: SmoothUI - Animated React Components for shadcn/ui | Motion & Tailwind
+fullDescription: >-
+  SmoothUI - Animated React Components for shadcn/ui - Motion & Tailwind is kept as a UI component
+  and design system reference.
+coreFeatures:
+  - name: Component Resource
+    description: >-
+      SmoothUI - Animated React Components for shadcn/ui - Motion & Tailwind is tracked as a UI
+      component or library resource.
+    icon: check
+  - name: Implementation Reference
+    description: Use the website or source link to inspect usage patterns.
+    icon: check
+additionalFeatures:
+  - name: Design System Fit
+    description: Useful for comparing component styles and interaction patterns.
+    icon: check
+  - name: Developer Friendly
+    description: Source code is linked when a public repository is available.
+    icon: check
+  - name: Catalog Tags
+    description: Grouped with similar UI libraries for discovery.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Framer | Motion for React (prev Framer Motion)
+    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/docs/framer
+  - slug: heroui
+    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
+    description: >-
+      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
+      library resources.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/

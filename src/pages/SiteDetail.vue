@@ -102,8 +102,11 @@ const hasDeploymentInfo = computed(
     hasDistinctDocs.value ||
     hasSourceCode.value
 )
+const isCliToolSite = computed(() =>
+  site.value?.parentCategory === 'cli-tools' || site.value?.subcategory === 'cli-tools'
+)
 const installCommand = computed(() => {
-  if (site.value?.parentCategory !== 'cli-tools') {
+  if (!isCliToolSite.value) {
     return ''
   }
 

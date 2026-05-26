@@ -87,6 +87,8 @@ const CATEGORY_OPTIONS: Record<ResourceType, CategoryOption[]> = {
     { label: 'Development - Learning', value: 'Development - Learning' },
     { label: 'Development - References', value: 'Development - References' },
     { label: 'Development - Tooling', value: 'Development - Tooling' },
+    { label: 'Development - CLI Tools', value: 'Development - CLI Tools' },
+    { label: 'Development - UI Libraries', value: 'Development - UI Libraries' },
     { label: 'Development - Repositories', value: 'Development - Repositories' },
     { label: 'Development - MCP', value: 'Development - MCP' },
     { label: 'Development - Monitoring', value: 'Development - Monitoring' },
@@ -100,8 +102,6 @@ const CATEGORY_OPTIONS: Record<ResourceType, CategoryOption[]> = {
     { label: 'Design - Fonts', value: 'Design - Fonts' },
     { label: 'Design - Icons/SVG', value: 'Design - Icons/SVG' },
     { label: 'Design - Tools', value: 'Design - Tools' },
-    { label: 'CLI Tools', value: 'CLI Tools' },
-    { label: 'UI Libraries', value: 'UI Libraries' },
     { label: 'Other', value: 'Other' },
   ],
   skill: [

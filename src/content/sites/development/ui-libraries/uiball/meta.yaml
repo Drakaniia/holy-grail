@@ -1,0 +1,74 @@
+slug: uiball
+name: "UI Ball : Useful things for devs"
+description: "UI Ball : Useful things for devs bookmarked for ui library resources."
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 2174
+watchers: 5
+addedDaysAgo: 0
+license: MIT
+lastCommit: 6 months ago
+lastRelease: No releases
+version: ""
+contributors: 3
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://uiball.com/
+docs: https://uiball.com/
+sourceCode: https://github.com/GriffinJohnston/ldrs
+icon: uiball
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: "UI Ball : Useful things for devs"
+fullDescription: "UI Ball : Useful things for devs is kept as a UI component and design system reference."
+coreFeatures:
+  - name: Component Resource
+    description: "UI Ball : Useful things for devs is tracked as a UI component or library resource."
+    icon: check
+  - name: Implementation Reference
+    description: Use the website or source link to inspect usage patterns.
+    icon: check
+additionalFeatures:
+  - name: Design System Fit
+    description: Useful for comparing component styles and interaction patterns.
+    icon: check
+  - name: Developer Friendly
+    description: Source code is linked when a public repository is available.
+    icon: check
+  - name: Catalog Tags
+    description: Grouped with similar UI libraries for discovery.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Framer | Motion for React (prev Framer Motion)
+    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/docs/framer
+  - slug: heroui
+    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
+    description: >-
+      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
+      library resources.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/

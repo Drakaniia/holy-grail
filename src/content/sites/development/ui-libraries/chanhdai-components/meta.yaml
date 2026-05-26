@@ -1,0 +1,83 @@
+slug: chanhdai-components
+name: Chánh Đại Components
+description: Pixel-perfect shadcn registry with uniquely crafted React components.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 1873
+watchers: 5
+addedDaysAgo: 0
+license: MIT
+lastCommit: today
+lastRelease: No releases
+version: ""
+contributors: 7
+commitsThisYear: 1402
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://chanhdai.com/components
+docs: https://chanhdai.com/components
+sourceCode: https://github.com/ncdai/chanhdai.com
+icon: chanhdai
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - components
+  - shadcn
+  - react
+  - tailwind
+  - registry
+atGlance: A shadcn registry of polished components and blocks from Chanh Dai.
+fullDescription: >-
+  Chánh Đại Components is a pixel-perfect component collection and shadcn registry. The catalog
+  includes crafted components such as Apple Hello Effect, command helpers, consent manager,
+  sliders, text effects, testimonials, theme controls, and portfolio-oriented UI pieces.
+coreFeatures:
+  - name: shadcn Registry
+    description: Components can be added through the shadcn registry workflow with package-manager snippets.
+    icon: check
+  - name: Crafted Components
+    description: Includes distinctive interaction components, visual effects, controls, and content blocks.
+    icon: check
+  - name: Blocks Catalog
+    description: Pairs the component collection with reusable blocks for richer interface composition.
+    icon: check
+additionalFeatures:
+  - name: Trusted Registry
+    description: Listed as a trusted registry for shadcn-compatible component installation.
+    icon: check
+  - name: Open Source
+    description: Source code is available on GitHub for implementation review.
+    icon: check
+  - name: Design Reference
+    description: Useful for studying polished Tailwind, shadcn, and Vercel-inspired UI patterns.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: The foundation for your design system.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: pixel-perfect
+    name: Pixel Perfect UI
+    description: Precision-crafted React components for modern web apps.
+    stars: 437
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.pixel-perfect.space/
+  - slug: 8bitcn
+    name: 8bitcn/ui
+    description: Retro-styled 8-bit components and blocks for copy-paste UI work.
+    stars: 1863
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.8bitcn.com/

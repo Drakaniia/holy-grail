@@ -54,7 +54,15 @@ const router = createRouter({
       redirect: '/sites/development/cloud-hosting',
     },
     {
-      path: '/sites/:category(ai|design|development|watch|downloads|cli-tools|ui-libraries)/:subcategory?',
+      path: '/sites/cli-tools',
+      redirect: '/sites/development/cli-tools',
+    },
+    {
+      path: '/sites/ui-libraries',
+      redirect: '/sites/development/ui-libraries',
+    },
+    {
+      path: '/sites/:category(ai|design|development|watch|downloads)/:subcategory?',
       name: 'sites-category',
       component: SitesPage,
     },

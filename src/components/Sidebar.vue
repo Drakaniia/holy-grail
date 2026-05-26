@@ -155,6 +155,8 @@ const developmentSubcategories = [
   { name: 'Learning', icon: GraduationCap, route: '/sites/development/learning' },
   { name: 'References', icon: BookOpen, route: '/sites/development/references' },
   { name: 'Tooling', icon: Wrench, route: '/sites/development/tooling' },
+  { name: 'CLI Tools', icon: Terminal, route: '/sites/development/cli-tools' },
+  { name: 'UI Libraries', icon: ComponentIcon, route: '/sites/development/ui-libraries' },
   { name: 'Repositories', icon: Github, route: '/sites/development/repositories' },
   { name: 'MCP', icon: Plug, route: '/sites/development/mcp' },
   { name: 'Monitoring', icon: Activity, route: '/sites/development/monitoring' },
@@ -163,11 +165,6 @@ const developmentSubcategories = [
 const skillsNav = [
   { name: 'Skills', icon: Sparkles, route: '/skills/skills' },
   { name: 'Design', icon: Palette, route: '/skills/design' },
-]
-
-const siteUtilityNav = [
-  { name: 'CLI Tools', icon: Terminal, route: '/sites/cli-tools' },
-  { name: 'UI Libraries', icon: ComponentIcon, route: '/sites/ui-libraries' },
 ]
 
 const sidebarSearchTerms = computed(() =>
@@ -209,9 +206,6 @@ const showAllSitesTabs = computed(() => !hasSidebarSearch.value || sitesSectionM
 const showAllSkillsTabs = computed(() => !hasSidebarSearch.value || skillsSectionMatches.value)
 
 const visibleSitesNav = computed(() => filterSidebarItems(sitesNav, showAllSitesTabs.value, 'Sites'))
-const visibleSiteUtilityNav = computed(() =>
-  filterSidebarItems(siteUtilityNav, showAllSitesTabs.value, 'Sites'),
-)
 const visibleSkillsNav = computed(() =>
   filterSidebarItems(skillsNav, showAllSkillsTabs.value, 'Skills'),
 )
@@ -313,7 +307,6 @@ const showSitesSection = computed(
   () =>
     showAllSitesTabs.value ||
     visibleSitesNav.value.length > 0 ||
-    visibleSiteUtilityNav.value.length > 0 ||
     showAiGroup.value ||
     showDesignGroup.value ||
     showDevelopmentGroup.value ||
@@ -677,24 +670,6 @@ onMounted(() => {
               </li>
             </Transition>
 
-            <li v-for="item in visibleSiteUtilityNav" :key="item.name">
-              <RouterLink
-                :to="item.route"
-                class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                :class="
-                  isActive(item.route)
-                    ? 'bg-zinc-900 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                "
-              >
-                <div
-                  v-if="isActive(item.route)"
-                  class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                ></div>
-                <component :is="item.icon" class="w-3.5 h-3.5" />
-                <span class="font-medium">{{ item.name }}</span>
-              </RouterLink>
-            </li>
           </ul>
         </li>
 

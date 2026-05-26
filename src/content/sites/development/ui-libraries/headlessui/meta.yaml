@@ -1,0 +1,78 @@
+slug: headlessui
+name: Headless UI - Unstyled, fully accessible UI components
+description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 28559
+watchers: 158
+addedDaysAgo: 0
+license: MIT
+lastCommit: 1 month ago
+lastRelease: 1 month ago
+version: "@headlessui/react@v2.2.10"
+contributors: 75
+commitsThisYear: 4
+releases: 130
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://headlessui.com/
+docs: https://headlessui.com/
+sourceCode: https://github.com/tailwindlabs/headlessui
+icon: headlessui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Headless UI - Unstyled, fully accessible UI components
+fullDescription: >-
+  Headless UI - Unstyled, fully accessible UI components is kept as a UI component and design system
+  reference.
+coreFeatures:
+  - name: Component Resource
+    description: >-
+      Headless UI - Unstyled, fully accessible UI components is tracked as a UI component or library
+      resource.
+    icon: check
+  - name: Implementation Reference
+    description: Use the website or source link to inspect usage patterns.
+    icon: check
+additionalFeatures:
+  - name: Design System Fit
+    description: Useful for comparing component styles and interaction patterns.
+    icon: check
+  - name: Developer Friendly
+    description: Source code is linked when a public repository is available.
+    icon: check
+  - name: Catalog Tags
+    description: Grouped with similar UI libraries for discovery.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Framer | Motion for React (prev Framer Motion)
+    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/docs/framer
+  - slug: heroui
+    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
+    description: >-
+      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
+      library resources.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/
