@@ -19,15 +19,7 @@ const sitesStore = useSitesStore()
 const skillsStore = useSkillsStore()
 const previews = previewsIndex as Record<string, SitePreviewEntry>
 
-const preferredPreviewSlugs = [
-  'v0',
-  'supabase',
-  'tasteskill',
-  'reactbits',
-  'vercel',
-  'figma-figma-the-collaborative-interface-design-tool',
-  'codecrafters',
-]
+const randomPreviewSeed = Math.random().toString(36).slice(2)
 
 void sitesStore.loadSites()
 void skillsStore.loadSkills()
@@ -45,6 +37,26 @@ function compareFeaturedSites(first: Site, second: Site) {
   if (first.featured !== second.featured) return first.featured ? -1 : 1
   if (first.verified !== second.verified) return first.verified ? -1 : 1
   return second.stars - first.stars
+}
+
+function getSeededPreviewScore(slug: string) {
+  const input = `${randomPreviewSeed}:${slug}`
+  let hash = 2166136261
+
+  for (let index = 0; index < input.length; index += 1) {
+    hash ^= input.charCodeAt(index)
+    hash = Math.imul(hash, 16777619)
+  }
+
+  return hash >>> 0
+}
+
+function compareRandomizedSites(first: Site, second: Site) {
+  return (
+    getSeededPreviewScore(first.slug) -
+      getSeededPreviewScore(second.slug) ||
+    compareFeaturedSites(first, second)
+  )
 }
 
 function getPreviewName(site: Site) {
@@ -95,17 +107,9 @@ const totalGroupsLabel = computed(() => {
 })
 
 const previewItems = computed(() => {
-  const siteBySlug = new Map(sitesStore.allSites.map(site => [site.slug, site]))
-  const preferredSites = preferredPreviewSlugs
-    .map(slug => siteBySlug.get(slug))
-    .filter((site): site is Site => Boolean(site && previews[site.slug]))
-
-  const fallbackSites = sitesStore.allSites
-    .filter(site => previews[site.slug] && !preferredPreviewSlugs.includes(site.slug))
-    .sort(compareFeaturedSites)
-
-  return [...preferredSites, ...fallbackSites]
-    .slice(0, 7)
+  return sitesStore.allSites
+    .filter(site => Boolean(previews[site.slug]?.image))
+    .sort(compareRandomizedSites)
     .map(toPreviewItem)
     .filter((item): item is HomePreviewItem => Boolean(item))
 })

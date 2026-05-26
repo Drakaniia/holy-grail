@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { ArrowRight, Search, Sparkles } from 'lucide-vue-next'
+import { useRandomPreviewTiles } from '@/composables/useRandomPreviewTiles'
 import type { HomePreviewItem } from '@/types/home'
 
 const props = defineProps<{
@@ -11,7 +12,13 @@ const props = defineProps<{
   isLoading: boolean
 }>()
 
-const heroPreviewItems = computed(() => props.previewItems.slice(0, 4))
+const previewItems = computed(() => props.previewItems)
+const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
+  items: previewItems,
+  tileCount: 4,
+  initialDelayRange: [120, 1600],
+  rotationDelayRange: [2200, 5200],
+})
 </script>
 
 <template>
@@ -48,28 +55,50 @@ const heroPreviewItems = computed(() => props.previewItems.slice(0, 4))
         </div>
 
         <div class="home-hero__preview-grid">
-          <div
-            v-for="item in heroPreviewItems"
-            :key="item.slug"
+          <RouterLink
+            v-for="tile in heroPreviewTiles"
+            :key="tile.key"
+            :to="tile.item.to"
             class="home-hero__preview"
+            :aria-label="`Open ${tile.item.name} overview`"
           >
-            <picture>
-              <source :srcset="item.small" media="(max-width: 720px)" />
-              <img
-                :src="item.image"
-                :alt="`${item.name} site preview`"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <div class="home-hero__preview-meta">
-              <span>{{ item.rank }}</span>
-              <strong>{{ item.name }}</strong>
-            </div>
-          </div>
+            <span class="home-hero__preview-media">
+              <picture
+                v-if="tile.previousItem"
+                class="home-hero__preview-image home-hero__preview-image--previous"
+              >
+                <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
+                <img
+                  :src="tile.previousItem.image"
+                  :alt="`${tile.previousItem.name} site preview`"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+
+              <picture
+                :key="`${tile.key}-${tile.item.slug}-${tile.animationNonce}`"
+                class="home-hero__preview-image home-hero__preview-image--incoming"
+                :class="{ 'home-hero__preview-image--wipe': tile.previousItem }"
+              >
+                <source :srcset="tile.item.small" media="(max-width: 720px)" />
+                <img
+                  :src="tile.item.image"
+                  :alt="`${tile.item.name} site preview`"
+                  loading="lazy"
+                  decoding="async"
+                  @error="markImageFailed(tile.item.slug)"
+                />
+              </picture>
+            </span>
+            <span class="home-hero__preview-meta">
+              <span>{{ tile.item.rank }}</span>
+              <strong>{{ tile.item.name }}</strong>
+            </span>
+          </RouterLink>
 
           <div
-            v-if="isLoading && heroPreviewItems.length === 0"
+            v-if="isLoading && heroPreviewTiles.length === 0"
             class="home-hero__preview-skeleton"
             aria-label="Loading previews"
           ></div>
@@ -280,14 +309,53 @@ const heroPreviewItems = computed(() => props.previewItems.slice(0, 4))
 
 .home-hero__preview {
   position: relative;
+  display: block;
+  color: inherit;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
-.home-hero__preview img {
+.home-hero__preview:hover,
+.home-hero__preview:focus-visible {
+  border-color: rgba(255, 122, 0, 0.78);
+  transform: translateY(-2px);
+}
+
+.home-hero__preview:focus-visible {
+  outline: 2px solid #ff8c1a;
+  outline-offset: 3px;
+}
+
+.home-hero__preview-media,
+.home-hero__preview-image {
+  position: absolute;
+  inset: 0;
   display: block;
+  overflow: hidden;
+}
+
+.home-hero__preview-image--wipe {
+  animation: home-hero-mask-swipe 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  clip-path: inset(0 100% 0 0);
+}
+
+.home-hero__preview-image img {
   width: 100%;
+  height: 100%;
+  min-height: 9rem;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   filter: saturate(0.78) contrast(1.04);
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
+}
+
+.home-hero__preview:hover .home-hero__preview-image img,
+.home-hero__preview:focus-visible .home-hero__preview-image img {
+  filter: saturate(1) contrast(1.08);
+  transform: scale(1.025);
 }
 
 .home-hero__preview-meta {
@@ -449,6 +517,16 @@ const heroPreviewItems = computed(() => props.previewItems.slice(0, 4))
   }
 }
 
+@keyframes home-hero-mask-swipe {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 @media (max-width: 1180px) {
   .home-hero__grid {
     grid-template-columns: 1fr;
@@ -509,8 +587,12 @@ const heroPreviewItems = computed(() => props.previewItems.slice(0, 4))
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-hero__preview,
+  .home-hero__preview-image--wipe,
+  .home-hero__preview-image img,
   .home-hero__preview-skeleton {
     animation: none;
+    transition: none;
   }
 
   .home-hero__primary-link,

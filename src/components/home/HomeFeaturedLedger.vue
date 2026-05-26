@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, shallowRef } from 'vue'
+import { computed } from 'vue'
 import { ArrowRight, ImageOff } from 'lucide-vue-next'
+import { useRandomPreviewTiles } from '@/composables/useRandomPreviewTiles'
 import type { HomePreviewItem } from '@/types/home'
 
 const props = defineProps<{
@@ -9,14 +10,11 @@ const props = defineProps<{
   error: string | null
 }>()
 
-const failedImages = shallowRef(new Set<string>())
-const visibleItems = computed(() =>
-  props.items.filter(item => !failedImages.value.has(item.slug)).slice(0, 6),
-)
-
-function markImageFailed(slug: string) {
-  failedImages.value = new Set([...failedImages.value, slug])
-}
+const previewItems = computed(() => props.items)
+const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
+  items: previewItems,
+  tileCount: 6,
+})
 </script>
 
 <template>
@@ -34,30 +32,50 @@ function markImageFailed(slug: string) {
       {{ error }}
     </div>
 
-    <div v-else-if="isLoading && visibleItems.length === 0" class="home-ledger__grid">
+    <div v-else-if="isLoading && visibleTiles.length === 0" class="home-ledger__grid">
       <div v-for="index in 3" :key="index" class="home-ledger__skeleton"></div>
     </div>
 
-    <div v-else-if="visibleItems.length > 0" class="home-ledger__grid">
+    <div v-else-if="visibleTiles.length > 0" class="home-ledger__grid">
       <RouterLink
-        v-for="item in visibleItems"
-        :key="item.slug"
-        :to="item.to"
+        v-for="tile in visibleTiles"
+        :key="tile.key"
+        :to="tile.item.to"
         class="home-ledger__item"
+        :aria-label="`Open ${tile.item.name} overview`"
       >
-        <picture>
-          <source :srcset="item.small" media="(max-width: 720px)" />
-          <img
-            :src="item.image"
-            :alt="`${item.name} preview`"
-            loading="lazy"
-            decoding="async"
-            @error="markImageFailed(item.slug)"
-          />
-        </picture>
+        <span class="home-ledger__media">
+          <picture
+            v-if="tile.previousItem"
+            class="home-ledger__image home-ledger__image--previous"
+          >
+            <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
+            <img
+              :src="tile.previousItem.image"
+              :alt="`${tile.previousItem.name} preview`"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+
+          <picture
+            :key="`${tile.key}-${tile.item.slug}-${tile.animationNonce}`"
+            class="home-ledger__image home-ledger__image--incoming"
+            :class="{ 'home-ledger__image--wipe': tile.previousItem }"
+          >
+            <source :srcset="tile.item.small" media="(max-width: 720px)" />
+            <img
+              :src="tile.item.image"
+              :alt="`${tile.item.name} preview`"
+              loading="lazy"
+              decoding="async"
+              @error="markImageFailed(tile.item.slug)"
+            />
+          </picture>
+        </span>
         <span class="home-ledger__item-meta">
-          <span>{{ item.rank }} / {{ item.category }}</span>
-          <strong>{{ item.name }}</strong>
+          <span>{{ tile.item.rank }} / {{ tile.item.category }}</span>
+          <strong>{{ tile.item.name }}</strong>
         </span>
       </RouterLink>
     </div>
@@ -151,7 +169,20 @@ function markImageFailed(slug: string) {
   grid-column: span 3;
 }
 
-.home-ledger__item img {
+.home-ledger__media,
+.home-ledger__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.home-ledger__image--wipe {
+  animation: home-ledger-mask-swipe 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  clip-path: inset(0 100% 0 0);
+}
+
+.home-ledger__image img {
   width: 100%;
   height: 100%;
   min-height: 16rem;
@@ -261,6 +292,16 @@ function markImageFailed(slug: string) {
   }
 }
 
+@keyframes home-ledger-mask-swipe {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 @media (max-width: 980px) {
   .home-ledger__intro {
     grid-template-columns: 1fr;
@@ -284,6 +325,7 @@ function markImageFailed(slug: string) {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-ledger__image--wipe,
   .home-ledger__item img,
   .home-ledger__link,
   .home-ledger__skeleton {
