@@ -23,6 +23,29 @@ const TABS: { label: string; value: FilterTab }[] = [
   { label: 'All', value: 'all' },
 ]
 
+const REVIEW_FLOW = [
+  {
+    index: '01',
+    title: 'Pending queue',
+    description: 'New submissions land here after the public publish form saves them.',
+  },
+  {
+    index: '02',
+    title: 'Admin decision',
+    description: 'An admin approves or rejects the candidate after checking fit and quality.',
+  },
+  {
+    index: '03',
+    title: 'Catalog work',
+    description: 'Approved items are manually added to content YAML and preview assets.',
+  },
+  {
+    index: '04',
+    title: 'Public release',
+    description: 'The item appears publicly only after the normal build and deploy completes.',
+  },
+]
+
 const displaySubmissions = computed(() => {
   if (activeTab.value === 'all') return admin.submissions
   return admin.submissions.filter(submission => submission.status === activeTab.value)
@@ -50,6 +73,17 @@ function statusClass(status: SubmissionStatus) {
       return 'border-amber-400/30 bg-amber-400/10 text-amber-200'
   }
 }
+
+function getAdminHandoff(status: SubmissionStatus) {
+  switch (status) {
+    case 'approved':
+      return 'Approved for catalog work. Add or update the YAML entry, generate site previews when needed, then ship through the normal build.'
+    case 'rejected':
+      return 'Rejected items stay out of the public catalog unless a cleaner source is submitted later.'
+    default:
+      return 'Decision required. Check fit, duplication, source quality, safety, and the best catalog category before approving.'
+  }
+}
 </script>
 
 <template>
@@ -60,8 +94,12 @@ function statusClass(status: SubmissionStatus) {
           Submission Queue
         </p>
         <h2 id="admin-submissions-title" class="text-2xl font-bold text-white">
-          Review pipeline
+          Moderated publish pipeline
         </h2>
+        <p class="mt-2 max-w-2xl text-sm leading-6 text-gray-500">
+          Approval is a review decision, not automatic publication. Approved items still need the
+          content-file and preview-generation steps before they go live.
+        </p>
       </div>
 
       <div class="grid grid-cols-3 border border-gray-800 bg-[#050505] text-center text-xs">
@@ -77,6 +115,20 @@ function statusClass(status: SubmissionStatus) {
           <p class="font-bold text-red-200">{{ admin.rejectedCount }}</p>
           <p class="mt-1 uppercase tracking-widest text-gray-600">Rejected</p>
         </div>
+      </div>
+    </div>
+
+    <div class="mb-6 grid gap-3 lg:grid-cols-4">
+      <div
+        v-for="step in REVIEW_FLOW"
+        :key="step.index"
+        class="border border-gray-800 bg-[#060606] px-4 py-3"
+      >
+        <p class="text-[10px] font-bold uppercase tracking-widest text-accent-300">
+          {{ step.index }}
+        </p>
+        <h3 class="mt-2 text-sm font-bold text-white">{{ step.title }}</h3>
+        <p class="mt-2 text-xs leading-5 text-gray-500">{{ step.description }}</p>
       </div>
     </div>
 
@@ -163,6 +215,15 @@ function statusClass(status: SubmissionStatus) {
             <p v-if="sub.submitter_note" class="mb-3 text-xs italic text-gray-500">
               Note: {{ sub.submitter_note }}
             </p>
+
+            <div class="mb-3 border border-gray-800 bg-black/50 px-3 py-2">
+              <p class="text-[10px] font-semibold uppercase tracking-widest text-gray-600">
+                Admin handoff
+              </p>
+              <p class="mt-1 text-xs leading-5 text-gray-400">
+                {{ getAdminHandoff(sub.status) }}
+              </p>
+            </div>
 
             <div class="flex flex-wrap gap-4 text-xs text-gray-600">
               <span v-if="sub.submitted_by_email">By {{ sub.submitted_by_email }}</span>
