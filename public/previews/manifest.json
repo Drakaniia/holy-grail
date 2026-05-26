@@ -63,6 +63,15 @@
     "height": 600,
     "bytes": 55084
   },
+  "aider": {
+    "image": "/previews/aider.webp",
+    "small": "/previews/aider-sm.webp",
+    "sourceUrl": "https://aider.chat/docs/install.html",
+    "capturedAt": "2026-05-26T09:40:32.133Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27024
+  },
   "aidesigner": {
     "image": "/previews/aidesigner.webp",
     "small": "/previews/aidesigner-sm.webp",
@@ -423,6 +432,15 @@
     "width": 960,
     "height": 600,
     "bytes": 45308
+  },
+  "codebuddy": {
+    "image": "/previews/codebuddy.webp",
+    "small": "/previews/codebuddy-sm.webp",
+    "sourceUrl": "https://www.codebuddy.ai/docs/cli/installation",
+    "capturedAt": "2026-05-26T09:40:32.587Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34068
   },
   "codebuff": {
     "image": "/previews/codebuff.webp",
@@ -1776,6 +1794,16 @@
     "height": 600,
     "bytes": 33130
   },
+  "neovate": {
+    "image": "/previews/neovate.webp",
+    "small": "/previews/neovate-sm.webp",
+    "sourceUrl": "https://neovateai.dev/en/docs/overview",
+    "capturedAt": "2026-05-26T09:40:53.564Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8084,
+    "fallback": true
+  },
   "neuform": {
     "image": "/previews/neuform.webp",
     "small": "/previews/neuform-sm.webp",
@@ -2028,6 +2056,24 @@
     "width": 960,
     "height": 600,
     "bytes": 49664
+  },
+  "qodercli": {
+    "image": "/previews/qodercli.webp",
+    "small": "/previews/qodercli-sm.webp",
+    "sourceUrl": "https://docs.qoder.com/cli/quick-start",
+    "capturedAt": "2026-05-26T09:40:55.301Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 5922
+  },
+  "qodo-cli": {
+    "image": "/previews/qodo-cli.webp",
+    "small": "/previews/qodo-cli-sm.webp",
+    "sourceUrl": "https://docs.qodo.ai/qodo-command/getting-started/setup-and-quickstart",
+    "capturedAt": "2026-05-26T09:41:02.924Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34694
   },
   "quillbot": {
     "image": "/previews/quillbot.webp",
