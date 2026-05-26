@@ -44,7 +44,7 @@
     "eslint": "^10.2.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.60.0",
-    "eslint-plugin-vue": "~10.8.0",
+    "eslint-plugin-vue": "~10.9.1",
     "globals": "^17.5.0",
     "npm-run-all2": "^8.0.4",
     "oxlint": "~1.60.0",
