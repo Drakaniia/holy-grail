@@ -44,12 +44,18 @@ import {
 } from 'lucide-vue-next'
 import { useAdminStore } from '@/stores/admin'
 import { useAuthStore } from '@/stores/auth'
+import { useSitesStore } from '@/stores/sites'
+import { useSkillsStore } from '@/stores/skills'
 import SidebarAccountMenu from '@/components/auth/SidebarAccountMenu.vue'
 
 const route = useRoute()
 const admin = useAdminStore()
 const auth = useAuthStore()
+const sitesStore = useSitesStore()
+const skillsStore = useSkillsStore()
 const sidebarSearch = shallowRef('')
+void sitesStore.loadSites()
+void skillsStore.loadSkills()
 
 type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
 
@@ -166,6 +172,46 @@ const skillsNav = [
   { name: 'Skills', icon: Sparkles, route: '/skills/skills' },
   { name: 'Design', icon: Palette, route: '/skills/design' },
 ]
+
+const siteSubcategoryGroups = [
+  { parentCategory: 'ai', items: aiSubcategories },
+  { parentCategory: 'design', items: designSubcategories },
+  { parentCategory: 'development', items: developmentSubcategories },
+  { parentCategory: 'watch', items: watchSubcategories },
+  { parentCategory: 'downloads', items: downloadsSubcategories },
+] satisfies { parentCategory: SiteGroup; items: SidebarNavItem[] }[]
+
+const siteGroupCounts = computed<Record<SiteGroup, number>>(() => ({
+  ai: sitesStore.getSitesByParentCategory('ai').length,
+  design: sitesStore.getSitesByParentCategory('design').length,
+  development: sitesStore.getSitesByParentCategory('development').length,
+  watch: sitesStore.getSitesByParentCategory('watch').length,
+  downloads: sitesStore.getSitesByParentCategory('downloads').length,
+}))
+
+const siteRouteCounts = computed<Record<string, number>>(() => {
+  const counts: Record<string, number> = {}
+
+  for (const group of siteSubcategoryGroups) {
+    for (const item of group.items) {
+      const subcategory = item.route.split('/').pop()
+      counts[item.route] = subcategory
+        ? sitesStore.getSitesBySubcategory(group.parentCategory, subcategory).length
+        : 0
+    }
+  }
+
+  return counts
+})
+
+const skillRouteCounts = computed<Record<string, number>>(() => ({
+  '/skills/skills': skillsStore.getSkillsByParentCategory('skills').length,
+  '/skills/design': skillsStore.getSkillsByParentCategory('design').length,
+}))
+
+const getSiteGroupCount = (group: SiteGroup) => siteGroupCounts.value[group]
+const getSiteRouteCount = (route: string) => siteRouteCounts.value[route] ?? 0
+const getSkillRouteCount = (route: string) => skillRouteCounts.value[route] ?? 0
 
 const sidebarSearchTerms = computed(() =>
   sidebarSearch.value
@@ -396,7 +442,13 @@ onMounted(() => {
                   class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                 ></div>
                 <component :is="item.icon" class="w-3.5 h-3.5" />
-                <span class="font-medium">{{ item.name }}</span>
+                <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                <span
+                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                  :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                >
+                  {{ getSiteRouteCount(item.route) }}
+                </span>
               </RouterLink>
             </li>
 
@@ -416,7 +468,13 @@ onMounted(() => {
               >
                 <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
                   <Bot class="w-3.5 h-3.5 flex-shrink-0" />
-                  <span class="font-medium">AI</span>
+                  <span class="min-w-0 flex-1 truncate font-medium">AI</span>
+                  <span
+                    class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                    :class="isActive('/sites/ai', false) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                  >
+                    {{ getSiteGroupCount('ai') }}
+                  </span>
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
@@ -447,7 +505,13 @@ onMounted(() => {
                         class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                       ></div>
                       <component :is="item.icon" class="w-3.5 h-3.5" />
-                      <span class="font-medium">{{ item.name }}</span>
+                      <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                      <span
+                        class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                        :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                      >
+                        {{ getSiteRouteCount(item.route) }}
+                      </span>
                     </RouterLink>
                   </li>
                 </ul>
@@ -470,7 +534,13 @@ onMounted(() => {
               >
                 <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
                   <Palette class="w-3.5 h-3.5 flex-shrink-0" />
-                  <span class="font-medium">Design</span>
+                  <span class="min-w-0 flex-1 truncate font-medium">Design</span>
+                  <span
+                    class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                    :class="isActive('/sites/design', false) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                  >
+                    {{ getSiteGroupCount('design') }}
+                  </span>
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
@@ -501,7 +571,13 @@ onMounted(() => {
                         class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                       ></div>
                       <component :is="item.icon" class="w-3.5 h-3.5" />
-                      <span class="font-medium">{{ item.name }}</span>
+                      <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                      <span
+                        class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                        :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                      >
+                        {{ getSiteRouteCount(item.route) }}
+                      </span>
                     </RouterLink>
                   </li>
                 </ul>
@@ -524,7 +600,13 @@ onMounted(() => {
               >
                 <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
                   <Code2 class="w-3.5 h-3.5 flex-shrink-0" />
-                  <span class="font-medium">Development</span>
+                  <span class="min-w-0 flex-1 truncate font-medium">Development</span>
+                  <span
+                    class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                    :class="isActive('/sites/development', false) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                  >
+                    {{ getSiteGroupCount('development') }}
+                  </span>
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
@@ -555,7 +637,13 @@ onMounted(() => {
                         class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                       ></div>
                       <component :is="item.icon" class="w-3.5 h-3.5" />
-                      <span class="font-medium">{{ item.name }}</span>
+                      <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                      <span
+                        class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                        :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                      >
+                        {{ getSiteRouteCount(item.route) }}
+                      </span>
                     </RouterLink>
                   </li>
                 </ul>
@@ -578,7 +666,13 @@ onMounted(() => {
               >
                 <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
                   <Film class="w-3.5 h-3.5 flex-shrink-0" />
-                  <span class="font-medium">Watch</span>
+                  <span class="min-w-0 flex-1 truncate font-medium">Watch</span>
+                  <span
+                    class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                    :class="isActive('/sites/watch', false) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                  >
+                    {{ getSiteGroupCount('watch') }}
+                  </span>
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
@@ -609,7 +703,13 @@ onMounted(() => {
                         class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                       ></div>
                       <component :is="item.icon" class="w-3.5 h-3.5" />
-                      <span class="font-medium">{{ item.name }}</span>
+                      <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                      <span
+                        class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                        :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                      >
+                        {{ getSiteRouteCount(item.route) }}
+                      </span>
                     </RouterLink>
                   </li>
                 </ul>
@@ -632,7 +732,13 @@ onMounted(() => {
               >
                 <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
                   <Download class="w-3.5 h-3.5 flex-shrink-0" />
-                  <span class="font-medium">Downloads</span>
+                  <span class="min-w-0 flex-1 truncate font-medium">Downloads</span>
+                  <span
+                    class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                    :class="isActive('/sites/downloads', false) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                  >
+                    {{ getSiteGroupCount('downloads') }}
+                  </span>
                 </span>
                 <ChevronRight
                   class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
@@ -663,7 +769,13 @@ onMounted(() => {
                         class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                       ></div>
                       <component :is="item.icon" class="w-3.5 h-3.5" />
-                      <span class="font-medium">{{ item.name }}</span>
+                      <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                      <span
+                        class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                        :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                      >
+                        {{ getSiteRouteCount(item.route) }}
+                      </span>
                     </RouterLink>
                   </li>
                 </ul>
@@ -695,7 +807,13 @@ onMounted(() => {
                   class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
                 ></div>
                 <component :is="item.icon" class="w-3.5 h-3.5" />
-                <span class="font-medium">{{ item.name }}</span>
+                <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                <span
+                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                  :class="isActive(item.route) ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
+                >
+                  {{ getSkillRouteCount(item.route) }}
+                </span>
               </RouterLink>
             </li>
           </ul>
