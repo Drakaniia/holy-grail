@@ -3,6 +3,7 @@ import { computed, reactive, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   Activity,
+  BrainCircuit,
   Bot,
   BookOpen,
   Box,
@@ -128,9 +129,9 @@ const aiSubcategories = [
   { name: 'Detector', icon: ScanSearch, route: '/sites/ai/detector' },
   { name: 'Automation', icon: Workflow, route: '/sites/ai/automation' },
   { name: 'Video', icon: Video, route: '/sites/ai/video' },
-  { name: 'ML', icon: Microscope, route: '/sites/ai/ml' },
+  { name: 'Machine Learning', icon: BrainCircuit, route: '/sites/ai/ml' },
   { name: 'CHAT', icon: MessageSquare, route: '/sites/ai/chat' },
-  { name: 'WB', icon: Hammer, route: '/sites/ai/wb' },
+  { name: 'Website Development', icon: Hammer, route: '/sites/ai/wb' },
   { name: 'Research', icon: Microscope, route: '/sites/ai/research' },
   { name: 'PPT', icon: Presentation, route: '/sites/ai/ppt' },
   { name: 'Others', icon: Package, route: '/sites/ai/others' },

@@ -2384,7 +2384,7 @@
     "slug": "bolt",
     "name": "Bolt AI builder: Websites, apps & prototypes",
     "description": "Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 16379,
@@ -10870,7 +10870,7 @@
     "slug": "anything",
     "name": "Anything - AI app builder",
     "description": "Anything - AI app builder bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -10969,7 +10969,7 @@
     "slug": "aura",
     "name": "Create Beautiful Landing Pages with AI | Aura",
     "description": "Create Beautiful Landing Pages with AI | Aura bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11068,7 +11068,7 @@
     "slug": "base44",
     "name": "Build Apps with AI in Minutes | Base44",
     "description": "Build Apps with AI in Minutes | Base44 bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11167,7 +11167,7 @@
     "slug": "caramell",
     "name": "Caramell",
     "description": "Caramell bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11266,7 +11266,7 @@
     "slug": "creao",
     "name": "CREAO AI | Chat to create AI agents ready to work for you.",
     "description": "CREAO AI | Chat to create AI agents ready to work for you. bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11365,7 +11365,7 @@
     "slug": "designarena",
     "name": "Design Arena",
     "description": "Design Arena bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11464,7 +11464,7 @@
     "slug": "designer",
     "name": "Designer",
     "description": "Designer bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11563,7 +11563,7 @@
     "slug": "dora",
     "name": "Dora: Start with AI, ship 3D animated websites without code",
     "description": "Dora: Start with AI, ship 3D animated websites without code bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11761,7 +11761,7 @@
     "slug": "emergent",
     "name": "Emergent",
     "description": "Emergent bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -11860,7 +11860,7 @@
     "slug": "figma",
     "name": "Figma Make: Create with AI-Powered Design Tools",
     "description": "Figma Make: Create with AI-Powered Design Tools bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12058,7 +12058,7 @@
     "slug": "lovable-2",
     "name": "Lovable",
     "description": "Lovable bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12157,7 +12157,7 @@
     "slug": "manus",
     "name": "Manus",
     "description": "Manus bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12256,7 +12256,7 @@
     "slug": "readdy",
     "name": "Readdy",
     "description": "Readdy bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12355,7 +12355,7 @@
     "slug": "rocket",
     "name": "Rocket | AI App Builder & Vibe Solutioning Platform",
     "description": "Rocket | AI App Builder & Vibe Solutioning Platform bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12454,7 +12454,7 @@
     "slug": "sleek",
     "name": "Sleek: AI Mobile App Designer | Create App Mockups in Minutes",
     "description": "Sleek: AI Mobile App Designer | Create App Mockups in Minutes bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12550,10 +12550,112 @@
     ]
   },
   {
+    "slug": "stitch",
+    "name": "Stitch",
+    "description": "Google Labs AI-native design canvas for turning natural language into high-fidelity UI prototypes",
+    "category": "Website Development",
+    "parentCategory": "ai",
+    "subcategory": "wb",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://stitch.withgoogle.com/",
+    "docs": "https://stitch.withgoogle.com/",
+    "sourceCode": "",
+    "icon": "stitch",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "wb",
+      "website",
+      "builder",
+      "ui-design",
+      "design-to-code",
+      "google-labs"
+    ],
+    "atGlance": "AI-native software design canvas from Google Labs.",
+    "fullDescription": "Stitch helps teams create, iterate, and collaborate on high-fidelity UI designs from natural language. It supports an AI-native canvas, project context from images, text, or code, interactive prototypes, voice-guided iteration, and exports into developer workflows.",
+    "coreFeatures": [
+      {
+        "name": "Natural Language UI Design",
+        "description": "Turns product ideas and design direction into high-fidelity interface screens.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Interactive Prototyping",
+        "description": "Lets generated screens become clickable user journeys for quick validation.",
+        "icon": "mouse-pointer-click"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "AI-Native Canvas",
+        "description": "Uses a flexible canvas for exploring many interface directions in one project.",
+        "icon": "layout-dashboard"
+      },
+      {
+        "name": "Voice-Guided Iteration",
+        "description": "Supports spoken critiques and design changes while refining a canvas.",
+        "icon": "mic"
+      },
+      {
+        "name": "Developer Workflow Exports",
+        "description": "Connects generated design work to downstream coding and developer tools.",
+        "icon": "code-2"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "figma",
+        "name": "Figma Make: Create with AI-Powered Design Tools",
+        "description": "Figma Make: Create with AI-Powered Design Tools bookmarked for website builder resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.figma.com/make/"
+      },
+      {
+        "slug": "v0",
+        "name": "v0",
+        "description": "Generative UI system by Vercel that creates React components from text prompts",
+        "stars": 15200,
+        "addedDaysAgo": 1,
+        "verified": true,
+        "website": "https://v0.dev"
+      },
+      {
+        "slug": "bolt",
+        "name": "Bolt AI builder: Websites, apps & prototypes",
+        "description": "Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources.",
+        "stars": 16379,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://bolt.new/"
+      }
+    ]
+  },
+  {
     "slug": "v0-v0-by-vercel-build-agents-apps-and-websites-with-ai",
     "name": "v0 by Vercel - Build Agents, Apps, and Websites with AI",
     "description": "v0 by Vercel - Build Agents, Apps, and Websites with AI bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -12652,7 +12754,7 @@
     "slug": "youware",
     "name": "AI Vibe Coding Platform for Apps and Websites | YouWare",
     "description": "AI Vibe Coding Platform for Apps and Websites | YouWare bookmarked for website builder resources.",
-    "category": "Website Builder",
+    "category": "Website Development",
     "parentCategory": "ai",
     "subcategory": "wb",
     "stars": 0,
@@ -19371,104 +19473,6 @@
       {
         "name": "Design Resource",
         "description": "Stock Video Footage, Royalty-Free HD, 4K Video Clips - Shutterstock is cataloged as a design tools resource for design work.",
-        "icon": "check"
-      },
-      {
-        "name": "Visual Reference",
-        "description": "Useful as inspiration, tooling, assets, or implementation reference.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Browser Workflow",
-        "description": "Works from the saved site link with no local install required.",
-        "icon": "check"
-      },
-      {
-        "name": "Sorted by Discipline",
-        "description": "Grouped under the matching design subcategory.",
-        "icon": "check"
-      },
-      {
-        "name": "Reusable Reference",
-        "description": "Kept with tags and metadata for repeat use.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-figma-shadcn-ui",
-        "name": "Figma - shadcn/ui",
-        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/docs/figma"
-      },
-      {
-        "slug": "mermaid",
-        "name": "Mermaid | Diagramming and charting tool",
-        "description": "Mermaid | Diagramming and charting tool bookmarked for design tools resources.",
-        "stars": 88166,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "http://mermaid.js.org/#/"
-      },
-      {
-        "slug": "impeccable",
-        "name": "Impeccable: The missing upgrade to Anthropic's impeccable skill",
-        "description": "Impeccable: The missing upgrade to Anthropic's impeccable skill bookmarked for design skills resources.",
-        "stars": 29019,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://impeccable.style/"
-      }
-    ]
-  },
-  {
-    "slug": "stitch",
-    "name": "Stitch - Design with AI",
-    "description": "Stitch - Design with AI bookmarked for design tools resources.",
-    "category": "Design Tools",
-    "parentCategory": "design",
-    "subcategory": "design-tools",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://stitch.withgoogle.com/",
-    "docs": "https://stitch.withgoogle.com/",
-    "sourceCode": "",
-    "icon": "stitch",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "design",
-      "design-tools",
-      "tools"
-    ],
-    "atGlance": "Stitch - Design with AI",
-    "fullDescription": "Stitch - Design with AI is kept as a design tools resource for design inspiration, assets, and reference work.",
-    "coreFeatures": [
-      {
-        "name": "Design Resource",
-        "description": "Stitch - Design with AI is cataloged as a design tools resource for design work.",
         "icon": "check"
       },
       {

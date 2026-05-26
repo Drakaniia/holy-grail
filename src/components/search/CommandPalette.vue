@@ -105,7 +105,7 @@ function openResult(result: SmartSearchResult | undefined) {
       >
         <button
           type="button"
-          class="command-palette-backdrop fixed inset-0 bg-black/75 backdrop-blur-md"
+          class="command-palette-backdrop fixed inset-0 bg-black/70 backdrop-blur-[2px]"
           aria-label="Close search"
           @click="closeDialog"
         ></button>

@@ -1,0 +1,79 @@
+slug: stitch
+name: Stitch
+description: Google Labs AI-native design canvas for turning natural language into high-fidelity UI prototypes
+category: Website Development
+parentCategory: ai
+subcategory: wb
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://stitch.withgoogle.com/
+docs: https://stitch.withgoogle.com/
+sourceCode: ""
+icon: stitch
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - wb
+  - website
+  - builder
+  - ui-design
+  - design-to-code
+  - google-labs
+atGlance: AI-native software design canvas from Google Labs.
+fullDescription: >-
+  Stitch helps teams create, iterate, and collaborate on high-fidelity UI designs from natural
+  language. It supports an AI-native canvas, project context from images, text, or code, interactive
+  prototypes, voice-guided iteration, and exports into developer workflows.
+coreFeatures:
+  - name: Natural Language UI Design
+    description: Turns product ideas and design direction into high-fidelity interface screens.
+    icon: sparkles
+  - name: Interactive Prototyping
+    description: Lets generated screens become clickable user journeys for quick validation.
+    icon: mouse-pointer-click
+additionalFeatures:
+  - name: AI-Native Canvas
+    description: Uses a flexible canvas for exploring many interface directions in one project.
+    icon: layout-dashboard
+  - name: Voice-Guided Iteration
+    description: Supports spoken critiques and design changes while refining a canvas.
+    icon: mic
+  - name: Developer Workflow Exports
+    description: Connects generated design work to downstream coding and developer tools.
+    icon: code-2
+similarTools:
+  - slug: figma
+    name: "Figma Make: Create with AI-Powered Design Tools"
+    description: "Figma Make: Create with AI-Powered Design Tools bookmarked for website builder resources."
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.figma.com/make/
+  - slug: v0
+    name: v0
+    description: Generative UI system by Vercel that creates React components from text prompts
+    stars: 15200
+    addedDaysAgo: 1
+    verified: true
+    website: https://v0.dev
+  - slug: bolt
+    name: "Bolt AI builder: Websites, apps & prototypes"
+    description: "Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources."
+    stars: 16379
+    addedDaysAgo: 0
+    verified: true
+    website: https://bolt.new/

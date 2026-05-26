@@ -41,6 +41,44 @@ interface SearchItem {
 const MAX_RESULTS = 10
 const DIRECT_MATCH_SCORE = 205
 const CLOSE_MATCH_SCORE = 118
+const routeLabelMap: Record<string, string> = {
+  ai: 'AI',
+  design: 'Design',
+  development: 'Development',
+  watch: 'Watch',
+  downloads: 'Downloads',
+  image: 'Image',
+  api: 'API',
+  detector: 'Detector',
+  automation: 'Automation',
+  video: 'Video',
+  ml: 'Machine Learning',
+  chat: 'Chat',
+  wb: 'Website Development',
+  research: 'Research',
+  ppt: 'PPT',
+  others: 'Others',
+  inspiration: 'Inspiration',
+  fonts: 'Fonts',
+  '3d': '3D',
+  prompts: 'Prompts',
+  'icons-svg': 'Icons/SVG',
+  md: 'MD',
+  'design-tools': 'Design Tools',
+  learning: 'Learning',
+  'cloud-hosting': 'Cloud & Hosting',
+  references: 'References',
+  tooling: 'Tooling',
+  repositories: 'Repositories',
+  mcp: 'MCP',
+  monitoring: 'Monitoring',
+  anime: 'Anime',
+  movies: 'Movies',
+  'game-download': 'Game Download',
+  'vfx-download': 'VFX Download',
+  'software-download': 'Software Download',
+  torrents: 'Torrents',
+}
 
 const navigationItems: SearchItem[] = [
   createNavigationItem({
@@ -54,10 +92,26 @@ const navigationItems: SearchItem[] = [
   createNavigationItem({
     id: 'collection-sites-ai',
     title: 'AI Tools',
-    description: 'AI chat, image, automation, research, API, video, and website builder tools',
+    description: 'AI chat, image, automation, research, API, video, and website development tools',
     category: 'Sites',
     to: '/sites/ai',
     keywords: ['chatgpt', 'claude', 'gemini', 'agents', 'automation', 'models'],
+  }),
+  createNavigationItem({
+    id: 'collection-sites-ai-website-development',
+    title: 'Website Development',
+    description: 'AI website development, app builders, and design-to-code generators',
+    category: 'Sites',
+    to: '/sites/ai/wb',
+    keywords: ['wb', 'website builder', 'app builder', 'design to code', 'v0', 'lovable', 'bolt'],
+  }),
+  createNavigationItem({
+    id: 'collection-sites-ai-machine-learning',
+    title: 'Machine Learning',
+    description: 'Machine learning frameworks, notebooks, data science platforms, and references',
+    category: 'Sites',
+    to: '/sites/ai/ml',
+    keywords: ['ml', 'machine learning', 'models', 'notebooks', 'datasets', 'training'],
   }),
   createNavigationItem({
     id: 'collection-sites-design',
@@ -178,6 +232,7 @@ function createNavigationItem(options: {
 function siteToSearchItem(site: Site): SearchItem {
   const tags = site.tags ?? []
   const logoSource = site.website || site.docs || site.sourceCode
+  const categoryPath = getSiteCategoryPath(site)
 
   return {
     id: `site-${site.slug}`,
@@ -185,20 +240,44 @@ function siteToSearchItem(site: Site): SearchItem {
     title: site.name,
     description: site.description,
     category: site.category,
-    eyebrow: [site.parentCategory, site.subcategory, site.category].filter(Boolean).join(' / '),
+    eyebrow: categoryPath.join(' / '),
     to: `/sites/${site.slug}`,
     tags,
     logoUrl: getFaviconUrl(logoSource),
     fields: createSearchFields({
       title: site.name,
       description: site.description,
-      category: [site.parentCategory, site.subcategory, site.category].filter(Boolean).join(' '),
+      category: [
+        ...categoryPath,
+        site.parentCategory,
+        site.subcategory,
+        site.category,
+      ].filter(Boolean).join(' '),
       tags,
       source: [site.website, site.docs, site.sourceCode].filter(Boolean).join(' '),
     }),
     popularity: site.stars + site.watchers,
     featured: site.featured,
   }
+}
+
+function getSiteCategoryPath(site: Site): string[] {
+  const labels = [site.parentCategory, site.subcategory, site.category]
+    .filter((value): value is string => Boolean(value))
+    .map(formatRouteLabel)
+
+  const seen = new Set<string>()
+  return labels.filter(label => {
+    const key = normalizeText(label)
+    if (!key || seen.has(key)) return false
+
+    seen.add(key)
+    return true
+  })
+}
+
+function formatRouteLabel(value: string): string {
+  return routeLabelMap[value] ?? value
 }
 
 function skillToSearchItem(skill: Skill): SearchItem {
@@ -291,6 +370,7 @@ function scoreSearchItem(query: string, item: SearchItem): number {
     termScores.length > 0 ? termScores.reduce((sum, score) => sum + score, 0) / termScores.length : 0
   const coverage =
     termScores.length > 0 ? termScores.filter(score => score >= 42).length / termScores.length : 0
+  const exactTokenBoost = getExactTokenBoost(query, terms, item)
   const popularityBoost = Math.min(Math.log10(item.popularity + 10) * 2.6, 10)
   const featuredBoost = item.featured ? 5 : 0
 
@@ -298,9 +378,31 @@ function scoreSearchItem(query: string, item: SearchItem): number {
     Math.max(bestFullFieldScore, bestCompactScore) * 1.12 +
     averageTermScore * 0.76 +
     coverage * 28 +
+    exactTokenBoost +
     popularityBoost +
     featuredBoost
   )
+}
+
+function getExactTokenBoost(query: string, terms: string[], item: SearchItem): number {
+  const termSet = new Set(terms)
+  const matchedTerms = new Set<string>()
+
+  for (const field of item.fields) {
+    const tokens = tokenize(field.value)
+
+    if (tokens.includes(query)) {
+      return item.kind === 'collection' ? 240 : 180
+    }
+
+    for (const term of termSet) {
+      if (tokens.includes(term)) {
+        matchedTerms.add(term)
+      }
+    }
+  }
+
+  return termSet.size > 0 && matchedTerms.size >= termSet.size ? 48 : 0
 }
 
 function getTextSimilarity(rawNeedle: string, rawHaystack: string): number {
