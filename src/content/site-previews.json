@@ -1560,6 +1560,15 @@
     "height": 600,
     "bytes": 23236
   },
+  "magecdn-svg-loaders": {
+    "image": "/previews/magecdn-svg-loaders.webp",
+    "small": "/previews/magecdn-svg-loaders-sm.webp",
+    "sourceUrl": "https://magecdn.com/tools/svg-loaders",
+    "capturedAt": "2026-05-26T10:55:17.594Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 19202
+  },
   "magicui": {
     "image": "/previews/magicui.webp",
     "small": "/previews/magicui-sm.webp",
@@ -2039,6 +2048,15 @@
     "height": 600,
     "bytes": 27676
   },
+  "promptmetheus-archery": {
+    "image": "/previews/promptmetheus-archery.webp",
+    "small": "/previews/promptmetheus-archery-sm.webp",
+    "sourceUrl": "https://archery.promptmetheus.com/",
+    "capturedAt": "2026-05-26T10:55:38.489Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 2828
+  },
   "psdly": {
     "image": "/previews/psdly.webp",
     "small": "/previews/psdly-sm.webp",
@@ -2398,6 +2416,16 @@
     "width": 960,
     "height": 600,
     "bytes": 34356
+  },
+  "soundcn": {
+    "image": "/previews/soundcn.webp",
+    "small": "/previews/soundcn-sm.webp",
+    "sourceUrl": "https://soundcn.xyz/",
+    "capturedAt": "2026-05-26T10:55:23.214Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 7716,
+    "fallback": true
   },
   "spline": {
     "image": "/previews/spline.webp",

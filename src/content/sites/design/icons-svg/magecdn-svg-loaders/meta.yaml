@@ -1,0 +1,81 @@
+slug: magecdn-svg-loaders
+name: MageCDN SVG Loaders
+description: 100+ free open-source SVG loading icons for web interfaces.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://magecdn.com/tools/svg-loaders
+docs: https://magecdn.com/tools/svg-loaders
+sourceCode: ""
+icon: magecdn-svg-loaders
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - svg
+  - loaders
+  - spinners
+  - animation
+atGlance: 100+ open-source SVG loading icons for interface states.
+fullDescription: >-
+  MageCDN SVG Loaders is a browser catalog of more than 100 open-source SVG-based loading icons. It
+  is useful for finding copyable animated loader assets for buttons, empty states, skeleton screens,
+  and other UI wait states.
+coreFeatures:
+  - name: SVG Loader Gallery
+    description: Collects reusable SVG spinners and loading indicators in one browser catalog.
+    icon: check
+  - name: Copyable Assets
+    description: Helps designers and developers grab loader markup for interface states.
+    icon: check
+  - name: Lightweight Motion
+    description: Focuses on small animated SVG assets suited to web UI loading feedback.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Icons/SVG Grouping
+    description: Stored with icon and SVG resources for quick visual asset lookup.
+    icon: check
+  - name: MIT-Licensed Sources
+    description: The catalog references open-source SVG loader sets under permissive licensing.
+    icon: check
+similarTools:
+  - slug: lucide-animated
+    name: lucide-animated | Free Animated React Icons Library
+    description: lucide-animated | Free Animated React Icons Library bookmarked for icons/svg resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lucide-animated.com/
+  - slug: heroicons
+    name: Heroicons
+    description: Heroicons bookmarked for icons/svg resources.
+    stars: 23538
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/solid
+  - slug: thesvg
+    name: theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers
+    description: theSVG bookmarked for icons/svg resources.
+    stars: 2043
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/

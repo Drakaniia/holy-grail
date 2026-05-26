@@ -4971,6 +4971,112 @@
     ]
   },
   {
+    "slug": "soundcn",
+    "name": "soundcn",
+    "description": "700+ curated UI sound effects for modern web apps, with preview and install workflows.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 633,
+    "watchers": 1,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "15 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 5,
+    "commitsThisYear": 149,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://soundcn.xyz",
+    "docs": "https://soundcn.xyz",
+    "sourceCode": "https://github.com/kapishdima/soundcn",
+    "icon": "soundcn",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "sound-effects",
+      "audio",
+      "shadcn",
+      "react",
+      "interface"
+    ],
+    "atGlance": "700+ curated UI sound effects for modern web interfaces.",
+    "fullDescription": "soundcn is a searchable collection of more than 700 UI sound effects for web products. It pairs short interaction sounds with preview and install workflows so teams can add audio feedback to buttons, notifications, onboarding moments, and other interface states.",
+    "coreFeatures": [
+      {
+        "name": "UI Sound Library",
+        "description": "Provides short interface sounds suited to product interactions and feedback states.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Ready Usage",
+        "description": "Includes implementation snippets for adding sounds into modern frontend projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Reference",
+        "description": "The source repository is available for implementation review and contribution.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Preview",
+        "description": "Sounds can be browsed and previewed from the hosted web catalog.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn Workflow",
+        "description": "Fits teams already using shadcn-style copy and registry workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Interaction Polish",
+        "description": "Useful when designing subtle audible feedback for web app states.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "chanhdai-components",
+        "name": "Chanh Dai Components",
+        "description": "Pixel-perfect shadcn registry with uniquely crafted React components.",
+        "stars": 1873,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://chanhdai.com/components"
+      },
+      {
+        "slug": "pixel-perfect",
+        "name": "Pixel Perfect UI",
+        "description": "Precision-crafted React components for modern web apps.",
+        "stars": 437,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.pixel-perfect.space/"
+      },
+      {
+        "slug": "8bitcn",
+        "name": "8bitcn/ui",
+        "description": "Retro-styled 8-bit components and blocks for copy-paste UI work.",
+        "stars": 1863,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.8bitcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "lightswind",
     "name": "Animated React Components & UI Kits - Lightswind UI",
     "description": "Animated React Components & UI Kits - Lightswind UI bookmarked for ui library resources.",
@@ -10599,6 +10705,112 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "promptmetheus-archery",
+    "name": "Promptmetheus Archery",
+    "description": "Prompt engineering IDE for testing, optimizing, and collaborating on LLM prompts.",
+    "category": "AI Research",
+    "parentCategory": "ai",
+    "subcategory": "research",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://archery.promptmetheus.com",
+    "docs": "https://archery.promptmetheus.com",
+    "sourceCode": "",
+    "icon": "promptmetheus-archery",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "research",
+      "prompts",
+      "prompt-engineering",
+      "llm",
+      "testing"
+    ],
+    "atGlance": "Prompt IDE for composing and evaluating LLM prompts.",
+    "fullDescription": "Promptmetheus Archery is a hosted prompt engineering workspace for building, testing, comparing, and refining prompts used with large language models. It is cataloged with AI research tools because it supports experimentation, prompt quality checks, and repeatable evaluation work.",
+    "coreFeatures": [
+      {
+        "name": "Prompt Workspace",
+        "description": "Gives prompt engineers a focused place to compose and revise LLM prompts.",
+        "icon": "check"
+      },
+      {
+        "name": "Evaluation Flow",
+        "description": "Supports testing prompts against expected behavior before they are reused in projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Collaboration Ready",
+        "description": "Designed for sharing prompt work across teams and repeatable AI workflows.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Cloud Access",
+        "description": "Runs as a hosted browser tool with no local setup required.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Research Fit",
+        "description": "Useful for prompt experiments, model behavior checks, and prompt iteration.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for prompt engineering, LLM testing, and AI research lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "getliner",
+        "name": "Liner | AI Copilot",
+        "description": "Liner | AI Copilot bookmarked for ai research resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://getliner.com/"
+      },
+      {
+        "slug": "designprompts",
+        "name": "Design Prompts - AI-Powered Design Style Explorer",
+        "description": "Design Prompts - AI-Powered Design Style Explorer bookmarked for prompts resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.designprompts.dev/"
+      },
+      {
+        "slug": "typeui",
+        "name": "UI Design Prompts | TypeUI",
+        "description": "UI Design Prompts | TypeUI bookmarked for prompts resources.",
+        "stars": 921,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.typeui.sh/prompts?ref=dailydev"
       }
     ]
   },
@@ -18333,6 +18545,112 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/"
+      }
+    ]
+  },
+  {
+    "slug": "magecdn-svg-loaders",
+    "name": "MageCDN SVG Loaders",
+    "description": "100+ free open-source SVG loading icons for web interfaces.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://magecdn.com/tools/svg-loaders",
+    "docs": "https://magecdn.com/tools/svg-loaders",
+    "sourceCode": "",
+    "icon": "magecdn-svg-loaders",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "svg",
+      "loaders",
+      "spinners",
+      "animation"
+    ],
+    "atGlance": "100+ open-source SVG loading icons for interface states.",
+    "fullDescription": "MageCDN SVG Loaders is a browser catalog of more than 100 open-source SVG-based loading icons. It is useful for finding copyable animated loader assets for buttons, empty states, skeleton screens, and other UI wait states.",
+    "coreFeatures": [
+      {
+        "name": "SVG Loader Gallery",
+        "description": "Collects reusable SVG spinners and loading indicators in one browser catalog.",
+        "icon": "check"
+      },
+      {
+        "name": "Copyable Assets",
+        "description": "Helps designers and developers grab loader markup for interface states.",
+        "icon": "check"
+      },
+      {
+        "name": "Lightweight Motion",
+        "description": "Focuses on small animated SVG assets suited to web UI loading feedback.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Icons/SVG Grouping",
+        "description": "Stored with icon and SVG resources for quick visual asset lookup.",
+        "icon": "check"
+      },
+      {
+        "name": "MIT-Licensed Sources",
+        "description": "The catalog references open-source SVG loader sets under permissive licensing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "lucide-animated",
+        "name": "lucide-animated | Free Animated React Icons Library",
+        "description": "lucide-animated | Free Animated React Icons Library bookmarked for icons/svg resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lucide-animated.com/"
+      },
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Heroicons bookmarked for icons/svg resources.",
+        "stars": 23538,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/solid"
+      },
+      {
+        "slug": "thesvg",
+        "name": "theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers",
+        "description": "theSVG bookmarked for icons/svg resources.",
+        "stars": 2043,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://thesvg.org/"
       }
     ]
   },

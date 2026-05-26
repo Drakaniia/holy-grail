@@ -1,0 +1,81 @@
+slug: promptmetheus-archery
+name: Promptmetheus Archery
+description: Prompt engineering IDE for testing, optimizing, and collaborating on LLM prompts.
+category: AI Research
+parentCategory: ai
+subcategory: research
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://archery.promptmetheus.com
+docs: https://archery.promptmetheus.com
+sourceCode: ""
+icon: promptmetheus-archery
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - research
+  - prompts
+  - prompt-engineering
+  - llm
+  - testing
+atGlance: Prompt IDE for composing and evaluating LLM prompts.
+fullDescription: >-
+  Promptmetheus Archery is a hosted prompt engineering workspace for building, testing, comparing,
+  and refining prompts used with large language models. It is cataloged with AI research tools
+  because it supports experimentation, prompt quality checks, and repeatable evaluation work.
+coreFeatures:
+  - name: Prompt Workspace
+    description: Gives prompt engineers a focused place to compose and revise LLM prompts.
+    icon: check
+  - name: Evaluation Flow
+    description: Supports testing prompts against expected behavior before they are reused in projects.
+    icon: check
+  - name: Collaboration Ready
+    description: Designed for sharing prompt work across teams and repeatable AI workflows.
+    icon: check
+additionalFeatures:
+  - name: Cloud Access
+    description: Runs as a hosted browser tool with no local setup required.
+    icon: check
+  - name: AI Research Fit
+    description: Useful for prompt experiments, model behavior checks, and prompt iteration.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged for prompt engineering, LLM testing, and AI research lookup.
+    icon: check
+similarTools:
+  - slug: getliner
+    name: Liner | AI Copilot
+    description: Liner | AI Copilot bookmarked for ai research resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://getliner.com/
+  - slug: designprompts
+    name: Design Prompts - AI-Powered Design Style Explorer
+    description: Design Prompts - AI-Powered Design Style Explorer bookmarked for prompts resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.designprompts.dev/
+  - slug: typeui
+    name: UI Design Prompts | TypeUI
+    description: UI Design Prompts | TypeUI bookmarked for prompts resources.
+    stars: 921
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.typeui.sh/prompts?ref=dailydev

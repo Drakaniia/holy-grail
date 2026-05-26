@@ -1,0 +1,81 @@
+slug: soundcn
+name: soundcn
+description: 700+ curated UI sound effects for modern web apps, with preview and install workflows.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 633
+watchers: 1
+addedDaysAgo: 0
+license: MIT
+lastCommit: 15 days ago
+lastRelease: No releases
+version: ""
+contributors: 5
+commitsThisYear: 149
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://soundcn.xyz
+docs: https://soundcn.xyz
+sourceCode: https://github.com/kapishdima/soundcn
+icon: soundcn
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - sound-effects
+  - audio
+  - shadcn
+  - react
+  - interface
+atGlance: 700+ curated UI sound effects for modern web interfaces.
+fullDescription: >-
+  soundcn is a searchable collection of more than 700 UI sound effects for web products. It pairs
+  short interaction sounds with preview and install workflows so teams can add audio feedback to
+  buttons, notifications, onboarding moments, and other interface states.
+coreFeatures:
+  - name: UI Sound Library
+    description: Provides short interface sounds suited to product interactions and feedback states.
+    icon: check
+  - name: Copy-Ready Usage
+    description: Includes implementation snippets for adding sounds into modern frontend projects.
+    icon: check
+  - name: Open Source Reference
+    description: The source repository is available for implementation review and contribution.
+    icon: check
+additionalFeatures:
+  - name: Browser Preview
+    description: Sounds can be browsed and previewed from the hosted web catalog.
+    icon: check
+  - name: shadcn Workflow
+    description: Fits teams already using shadcn-style copy and registry workflows.
+    icon: check
+  - name: Interaction Polish
+    description: Useful when designing subtle audible feedback for web app states.
+    icon: check
+similarTools:
+  - slug: chanhdai-components
+    name: Chanh Dai Components
+    description: Pixel-perfect shadcn registry with uniquely crafted React components.
+    stars: 1873
+    addedDaysAgo: 0
+    verified: true
+    website: https://chanhdai.com/components
+  - slug: pixel-perfect
+    name: Pixel Perfect UI
+    description: Precision-crafted React components for modern web apps.
+    stars: 437
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.pixel-perfect.space/
+  - slug: 8bitcn
+    name: 8bitcn/ui
+    description: Retro-styled 8-bit components and blocks for copy-paste UI work.
+    stars: 1863
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.8bitcn.com/
