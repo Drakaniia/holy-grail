@@ -28,17 +28,21 @@
   - Sidebar inspiration.
 - Rename "Submit a Tool" to "Publish" and include both skills and sites.
 - Add numbers in each tab to show how many items are there.
-- Make settings a modal.
 - Research how 21st.dev handles publishing a tool:
   - Is it automatically published?
-  - What is the full process?
+  - What is the full process?  cus i want to change UI for multi process
 
 ## Features
 
 - Add recently visited items.
 - Add filters for recently added items.
 - Add site requests.
-- Add skeleton loaders.
+- instead of loading text. make it a skeleton loaders.
+- Generate Random
+
+## Addition
+
+- Make the
 
 ## Links To Review
 
