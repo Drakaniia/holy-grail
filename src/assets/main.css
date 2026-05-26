@@ -112,6 +112,13 @@ html.light [style*='linear-gradient(to right'] .text-white {
   color: var(--mocha-text) !important;
 }
 
+html.light .text-gray-100,
+html.light .text-zinc-100,
+html.light .hover\:text-gray-100:hover,
+html.light .hover\:text-zinc-100:hover {
+  color: var(--mocha-text) !important;
+}
+
 html.light .text-gray-200,
 html.light .text-gray-300,
 html.light .text-zinc-200,

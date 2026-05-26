@@ -15,6 +15,17 @@ interface OAuthRedirectResult extends AuthActionResult {
   handled: boolean
 }
 
+interface ProfileMetadataUpdates {
+  avatarUrl?: string | null
+  bio?: string | null
+  displayName?: string
+}
+
+interface DeleteAccountResponse {
+  error?: string
+  ok?: boolean
+}
+
 const AUTH_CONFIG_ERROR =
   'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to .env.local.'
 const EMAIL_RATE_LIMIT_ERROR =
@@ -158,6 +169,9 @@ export const useAuthStore = defineStore('auth', () => {
   const loading = shallowRef(false)
   const initializing = shallowRef(false)
   const initialized = shallowRef(false)
+  const accountDeleting = shallowRef(false)
+  const profileSaving = shallowRef(false)
+  const profileError = shallowRef<string | null>(null)
   const actionError = shallowRef<string | null>(null)
   let authStateSubscription: { unsubscribe: () => void } | null = null
 
@@ -166,7 +180,12 @@ export const useAuthStore = defineStore('auth', () => {
   const isConfigured = computed(() => hasSupabaseConfig)
 
   const displayName = computed(() => {
-    const metadataName = getUserMetadataValue(user.value, ['full_name', 'name', 'user_name'])
+    const metadataName = getUserMetadataValue(user.value, [
+      'display_name',
+      'full_name',
+      'name',
+      'user_name',
+    ])
     if (metadataName) {
       return metadataName
     }
@@ -177,6 +196,18 @@ export const useAuthStore = defineStore('auth', () => {
   const avatarUrl = computed(() =>
     getUserMetadataValue(user.value, ['avatar_url', 'picture', 'image', 'profile_image_url']),
   )
+  const bio = computed(() => getUserMetadataValue(user.value, ['bio']))
+  const username = computed(() => {
+    const metadataUsername = getUserMetadataValue(user.value, [
+      'preferred_username',
+      'user_name',
+      'login',
+      'nickname',
+    ])
+
+    return metadataUsername ?? user.value?.email?.split('@')[0] ?? 'member'
+  })
+  const profileHandle = computed(() => `@${username.value}`)
   const avatarInitial = computed(() => displayName.value.slice(0, 1).toUpperCase())
   const providerLabel = computed(() => {
     const providerValue = user.value?.app_metadata?.provider
@@ -489,17 +520,136 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  async function updateProfile(updates: ProfileMetadataUpdates): Promise<AuthActionResult> {
+    if (!supabase) {
+      profileError.value = AUTH_CONFIG_ERROR
+      return { ok: false, message: AUTH_CONFIG_ERROR }
+    }
+
+    if (!user.value) {
+      const message = 'Sign in to update your profile.'
+      profileError.value = message
+      return { ok: false, message }
+    }
+
+    const nextMetadata: Record<string, unknown> = { ...user.value.user_metadata }
+
+    if (updates.displayName !== undefined) {
+      const nextDisplayName = updates.displayName.trim()
+      if (!nextDisplayName) {
+        const message = 'Display name is required.'
+        profileError.value = message
+        return { ok: false, message }
+      }
+
+      nextMetadata.display_name = nextDisplayName
+      nextMetadata.full_name = nextDisplayName
+      nextMetadata.name = nextDisplayName
+    }
+
+    if (updates.avatarUrl !== undefined) {
+      nextMetadata.avatar_url = updates.avatarUrl
+    }
+
+    if (updates.bio !== undefined) {
+      const nextBio = updates.bio?.trim()
+      nextMetadata.bio = nextBio || null
+    }
+
+    profileSaving.value = true
+    profileError.value = null
+
+    try {
+      const { data, error } = await supabase.auth.updateUser({
+        data: nextMetadata,
+      })
+
+      if (error) {
+        throw error
+      }
+
+      if (data.user && session.value) {
+        session.value = {
+          ...session.value,
+          user: data.user,
+        }
+      }
+
+      return { ok: true }
+    } catch (error) {
+      const message = getAuthErrorMessage(error)
+      profileError.value = message
+      return { ok: false, message }
+    } finally {
+      profileSaving.value = false
+    }
+  }
+
+  async function deleteAccount(emailConfirmation: string): Promise<AuthActionResult> {
+    if (!supabase) {
+      actionError.value = AUTH_CONFIG_ERROR
+      return { ok: false, message: AUTH_CONFIG_ERROR }
+    }
+
+    if (!user.value) {
+      const message = 'Sign in to delete your account.'
+      actionError.value = message
+      return { ok: false, message }
+    }
+
+    const confirmedEmail = emailConfirmation.trim().toLowerCase()
+    const currentEmail = user.value.email?.trim().toLowerCase()
+    if (!currentEmail || confirmedEmail !== currentEmail) {
+      const message = 'Type your account email to confirm deletion.'
+      actionError.value = message
+      return { ok: false, message }
+    }
+
+    accountDeleting.value = true
+    actionError.value = null
+
+    try {
+      const { data, error } = await supabase.functions.invoke<DeleteAccountResponse>(
+        'delete-account',
+        {
+          body: { email: confirmedEmail },
+        },
+      )
+
+      if (error) {
+        throw error
+      }
+
+      if (!data?.ok) {
+        throw new Error(data?.error || 'Account could not be deleted.')
+      }
+
+      session.value = null
+      return { ok: true }
+    } catch (error) {
+      const message = getAuthErrorMessage(error)
+      actionError.value = message
+      return { ok: false, message }
+    } finally {
+      accountDeleting.value = false
+    }
+  }
+
   function clearError() {
     actionError.value = null
+    profileError.value = null
   }
 
   return {
+    accountDeleting,
     actionError,
     avatarInitial,
     avatarUrl,
+    bio,
     clearError,
     completeOAuthRedirect,
     consumeStoredOAuthRedirectPath,
+    deleteAccount,
     displayName,
     initialize,
     initialized,
@@ -507,6 +657,9 @@ export const useAuthStore = defineStore('auth', () => {
     isAuthenticated,
     isConfigured,
     loading,
+    profileError,
+    profileHandle,
+    profileSaving,
     providerLabel,
     sendPasswordReset,
     session,
@@ -514,6 +667,8 @@ export const useAuthStore = defineStore('auth', () => {
     signInWithOAuth,
     signOut,
     signUp,
+    updateProfile,
     user,
+    username,
   }
 })

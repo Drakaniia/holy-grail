@@ -1,197 +1,172 @@
 <script setup lang="ts">
 import { computed, onMounted, shallowRef } from 'vue'
-import { useRouter } from 'vue-router'
-import {
-  CheckCircle2,
-  ClipboardCheck,
-  Bookmark,
-  Copy,
-  Fingerprint,
-  KeyRound,
-  LogOut,
-  Mail,
-  ShieldCheck,
-  UserRound,
-} from 'lucide-vue-next'
+import { AlertCircle, Bookmark, Code2, Globe2, Loader2 } from 'lucide-vue-next'
+import ProfileBookmarkCard from '@/components/profile/ProfileBookmarkCard.vue'
+import ProfileEmptyState from '@/components/profile/ProfileEmptyState.vue'
+import ProfileHeader from '@/components/profile/ProfileHeader.vue'
+import ProfileTabs from '@/components/profile/ProfileTabs.vue'
 import { useAuthStore } from '@/stores/auth'
-import { useToastStore } from '@/stores/toast'
-import UserAvatar from '@/components/auth/UserAvatar.vue'
+import { useBookmarksStore, type UserBookmark } from '@/stores/bookmarks'
+import { useSitesStore } from '@/stores/sites'
+import { useSkillsStore } from '@/stores/skills'
+import type { ProfileBookmarkItem, ProfileTab, ProfileTabKey } from '@/types/profile'
 
-const router = useRouter()
 const auth = useAuthStore()
-const toast = useToastStore()
-const copied = shallowRef(false)
+const bookmarks = useBookmarksStore()
+const sites = useSitesStore()
+const skills = useSkillsStore()
+const activeTab = shallowRef<ProfileTabKey>('sites')
+
+const publishedSiteCount = shallowRef(0)
+const publishedSkillCount = shallowRef(0)
 
 onMounted(() => {
-  void auth.initialize()
+  void Promise.all([
+    auth.initialize(),
+    bookmarks.loadBookmarks(true),
+    sites.loadSites(),
+    skills.loadSkills(),
+  ])
 })
 
-const email = computed(() => auth.user?.email ?? 'No email')
-const userId = computed(() => auth.user?.id ?? 'Unknown')
-const confirmedAt = computed(() => {
-  if (!auth.user?.confirmed_at) {
-    return 'Pending'
-  }
+const tabs = computed<ProfileTab[]>(() => [
+  {
+    caption: 'Published sites',
+    count: publishedSiteCount.value,
+    key: 'sites',
+    label: 'Sites',
+  },
+  {
+    caption: 'Saved resources',
+    count: bookmarks.bookmarkCount,
+    key: 'bookmarks',
+    label: 'Bookmarks',
+  },
+  {
+    caption: 'Published skills',
+    count: publishedSkillCount.value,
+    key: 'skills',
+    label: 'Skills',
+  },
+])
 
-  return new Intl.DateTimeFormat('en', {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  }).format(new Date(auth.user.confirmed_at))
-})
+const bookmarkItems = computed<ProfileBookmarkItem[]>(() =>
+  bookmarks.bookmarks.map((bookmark) => {
+    if (bookmark.resource_type === 'site') {
+      const site = sites.getSiteBySlug(bookmark.resource_slug)
 
-async function copyUserId() {
-  if (!auth.user?.id || !navigator.clipboard) {
-    return
-  }
+      return {
+        category: site?.category ?? bookmark.category ?? 'Site',
+        description: site?.description ?? 'Saved site from your Holy Grail library.',
+        externalUrl: site?.website ?? bookmark.url,
+        id: bookmark.id,
+        route: `/sites/${bookmark.resource_slug}`,
+        title: site?.name ?? bookmark.title,
+        type: bookmark.resource_type,
+      }
+    }
 
-  await navigator.clipboard.writeText(auth.user.id)
-  copied.value = true
+    const skill = skills.getSkillBySlug(bookmark.resource_slug)
 
-  window.setTimeout(() => {
-    copied.value = false
-  }, 1400)
-}
+    return {
+      category: skill?.category ?? bookmark.category ?? 'Skill',
+      description: skill?.description ?? 'Saved skill from your Holy Grail library.',
+      externalUrl: skill ? `https://github.com/${skill.repoLink}` : bookmark.url,
+      id: bookmark.id,
+      route: `/skills/${bookmark.resource_slug}`,
+      title: skill?.title ?? bookmark.title,
+      type: bookmark.resource_type,
+    }
+  }),
+)
 
-async function handleSignOut() {
-  const result = await auth.signOut()
+async function removeBookmark(id: string) {
+  const bookmark = bookmarks.bookmarks.find((item: UserBookmark) => item.id === id)
+  if (!bookmark) return
 
-  if (result.ok) {
-    toast.info('Signed out', 'Your Holy Grail session has ended.')
-    await router.push({ name: 'login' })
-  }
+  await bookmarks.removeBookmark(bookmark.id)
 }
 </script>
 
 <template>
-  <div class="min-h-full bg-black text-white">
-    <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-      <div class="mb-8 flex flex-col gap-5 border-b border-zinc-800 pb-8 md:flex-row md:items-end md:justify-between">
-        <div>
-          <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
-            Account
-          </p>
-          <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">Your Holy Grail session</h1>
-          <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-400">
-            Your profile image and sign-in source come from Supabase Auth provider metadata.
-          </p>
-        </div>
+  <div class="min-h-full bg-[#050505] text-white">
+    <ProfileHeader
+      :avatar-url="auth.avatarUrl"
+      :avatar-initial="auth.avatarInitial"
+      :bio="auth.bio"
+      :bookmark-count="bookmarks.bookmarkCount"
+      :display-name="auth.displayName"
+      :handle="auth.profileHandle"
+      :site-count="publishedSiteCount"
+      :skill-count="publishedSkillCount"
+    />
 
-        <div class="flex flex-wrap items-center gap-2">
-          <RouterLink
-            to="/bookmarks"
-            class="inline-flex h-10 items-center justify-center gap-2 border border-zinc-700 px-4 text-sm font-semibold text-zinc-200 transition hover:border-accent-300 hover:text-accent-100"
-          >
-            <Bookmark class="h-4 w-4" />
-            Bookmarks
-          </RouterLink>
-
-          <button
-            type="button"
-            class="inline-flex h-10 items-center justify-center gap-2 border border-zinc-700 px-4 text-sm font-semibold text-zinc-200 transition hover:border-red-300 hover:text-red-200 disabled:cursor-not-allowed disabled:opacity-60"
-            :disabled="auth.loading"
-            @click="handleSignOut"
-          >
-            <LogOut class="h-4 w-4" />
-            Sign out
-          </button>
-        </div>
-      </div>
-
-      <div class="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
-        <section class="border border-zinc-800 bg-[#060606] p-6">
-          <div class="flex min-w-0 items-start gap-4">
-            <UserAvatar
-              :src="auth.avatarUrl"
-              :initial="auth.avatarInitial"
-              :label="auth.displayName"
-              size="lg"
-            />
-            <div class="min-w-0">
-              <p class="break-words text-xl font-bold text-white">{{ auth.displayName }}</p>
-              <p class="mt-1 truncate text-sm text-zinc-500">{{ email }}</p>
-              <div class="mt-4 inline-flex items-center gap-2 border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-100">
-                <CheckCircle2 class="h-3.5 w-3.5" />
-                Authenticated
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-8 space-y-3">
-            <div class="flex items-center gap-3 border border-zinc-800 bg-black px-4 py-3">
-              <Mail class="h-4 w-4 text-accent-300" />
-              <div class="min-w-0">
-                <p class="text-xs uppercase tracking-widest text-zinc-500">Email</p>
-                <p class="truncate text-sm text-zinc-200">{{ email }}</p>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-3 border border-zinc-800 bg-black px-4 py-3">
-              <KeyRound class="h-4 w-4 text-emerald-300" />
-              <div>
-                <p class="text-xs uppercase tracking-widest text-zinc-500">Provider</p>
-                <p class="text-sm text-zinc-200">{{ auth.providerLabel }}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="border border-zinc-800 bg-[#060606] p-6">
-          <div class="mb-5 flex items-center justify-between gap-4">
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                Session details
-              </p>
-              <h2 class="mt-2 text-2xl font-bold text-white">Supabase identity</h2>
-            </div>
-            <ShieldCheck class="h-6 w-6 text-accent-300" />
-          </div>
-
-          <div class="space-y-4">
-            <div class="border border-zinc-800 bg-black p-4">
-              <div class="mb-2 flex items-center justify-between gap-3">
-                <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                  <Fingerprint class="h-3.5 w-3.5" />
-                  User ID
-                </div>
-                <button
-                  type="button"
-                  class="inline-flex items-center gap-1 text-xs font-semibold text-zinc-400 transition hover:text-white"
-                  @click="copyUserId"
-                >
-                  <ClipboardCheck v-if="copied" class="h-3.5 w-3.5 text-emerald-300" />
-                  <Copy v-else class="h-3.5 w-3.5" />
-                  {{ copied ? 'Copied' : 'Copy' }}
-                </button>
-              </div>
-              <p class="break-all font-mono text-sm text-zinc-200">{{ userId }}</p>
-            </div>
-
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="border border-zinc-800 bg-black p-4">
-                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                  Confirmed
-                </p>
-                <p class="mt-2 text-sm text-zinc-200">{{ confirmedAt }}</p>
-              </div>
-              <div class="border border-zinc-800 bg-black p-4">
-                <p class="text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                  Session source
-                </p>
-                <p class="mt-2 text-sm text-zinc-200">Browser storage</p>
-              </div>
-            </div>
-
-            <div class="border border-zinc-800 bg-zinc-950 p-4">
-              <div class="flex gap-3">
-                <UserRound class="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-300" />
-                <p class="text-sm leading-6 text-zinc-400">
-                  Authorization must still be enforced in Supabase policies and server-side checks for private data.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <div class="border-b border-zinc-900 bg-[#050505] px-4 py-4 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
+        <ProfileTabs :tabs="tabs" :active-tab="activeTab" @select="activeTab = $event" />
       </div>
     </div>
+
+    <main class="mx-auto min-h-[60vh] max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <ProfileEmptyState
+        v-if="activeTab === 'sites'"
+        title="No published sites yet"
+        description="Approved site submissions will appear here."
+      >
+        <template #icon>
+          <Globe2 class="h-6 w-6" />
+        </template>
+      </ProfileEmptyState>
+
+      <section v-else-if="activeTab === 'bookmarks'">
+        <div
+          v-if="bookmarks.actionError"
+          class="mb-6 flex gap-3 border border-red-400/30 bg-red-400/10 px-4 py-3 text-sm text-red-100"
+        >
+          <AlertCircle class="mt-0.5 h-4 w-4 shrink-0" />
+          <span>{{ bookmarks.actionError }}</span>
+        </div>
+
+        <div
+          v-if="bookmarks.loading && bookmarkItems.length === 0"
+          class="flex min-h-[48vh] items-center justify-center"
+        >
+          <div class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-500">
+            <Loader2 class="h-4 w-4 animate-spin text-accent-300" />
+            Loading bookmarks...
+          </div>
+        </div>
+
+        <ProfileEmptyState
+          v-else-if="bookmarkItems.length === 0"
+          title="No bookmarks yet"
+          description="Saved sites and skills will appear here."
+        >
+          <template #icon>
+            <Bookmark class="h-6 w-6" />
+          </template>
+        </ProfileEmptyState>
+
+        <div v-else class="grid gap-4 lg:grid-cols-2">
+          <ProfileBookmarkCard
+            v-for="item in bookmarkItems"
+            :key="item.id"
+            :item="item"
+            :disabled="bookmarks.loading"
+            @remove="removeBookmark"
+          />
+        </div>
+      </section>
+
+      <ProfileEmptyState
+        v-else
+        title="No published skills yet"
+        description="Published skill entries will appear here."
+      >
+        <template #icon>
+          <Code2 class="h-6 w-6" />
+        </template>
+      </ProfileEmptyState>
+    </main>
   </div>
 </template>

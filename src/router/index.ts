@@ -6,9 +6,11 @@ const AdminPage = () => import('@/pages/AdminPage.vue')
 const AuthCallbackPage = () => import('@/pages/AuthCallbackPage.vue')
 const AuthPage = () => import('@/pages/AuthPage.vue')
 const BookmarksPage = () => import('@/pages/BookmarksPage.vue')
+const EditProfilePage = () => import('@/pages/EditProfilePage.vue')
 const HomePage = () => import('@/pages/HomePage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
+const SettingsPage = () => import('@/pages/SettingsPage.vue')
 const SkillDetail = () => import('@/pages/SkillDetail.vue')
 const SkillsPage = () => import('@/pages/SkillsPage.vue')
 const SubmitPage = () => import('@/pages/SubmitPage.vue')
@@ -97,9 +99,21 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
+      path: '/account/edit',
+      name: 'account-edit',
+      component: EditProfilePage,
+      meta: { requiresAuth: true },
+    },
+    {
       path: '/bookmarks',
       name: 'bookmarks',
       component: BookmarksPage,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: SettingsPage,
       meta: { requiresAuth: true },
     },
     {

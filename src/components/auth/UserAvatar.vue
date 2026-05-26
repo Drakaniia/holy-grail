@@ -6,10 +6,12 @@ const props = withDefaults(
     src?: string | null
     initial: string
     label?: string
-    size?: 'sm' | 'md' | 'lg'
+    shape?: 'circle' | 'rounded'
+    size?: 'sm' | 'md' | 'lg' | 'xl'
   }>(),
   {
     label: 'User profile',
+    shape: 'rounded',
     size: 'md',
     src: null,
   }
@@ -23,10 +25,13 @@ const sizeClass = computed(() => {
       return 'h-8 w-8 text-xs'
     case 'lg':
       return 'h-16 w-16 text-2xl'
+    case 'xl':
+      return 'h-20 w-20 text-3xl'
     default:
       return 'h-10 w-10 text-sm'
   }
 })
+const shapeClass = computed(() => props.shape === 'circle' ? 'rounded-full' : 'rounded-lg')
 
 watch(
   () => props.src,
@@ -38,8 +43,8 @@ watch(
 
 <template>
   <span
-    class="inline-flex shrink-0 items-center justify-center overflow-hidden rounded-lg border border-accent-500/30 bg-accent-500/10 font-bold text-accent-100"
-    :class="sizeClass"
+    class="inline-flex shrink-0 items-center justify-center overflow-hidden border border-accent-500/30 bg-accent-500/10 font-bold text-accent-100"
+    :class="[sizeClass, shapeClass]"
   >
     <img
       v-if="showImage"
