@@ -11,7 +11,7 @@ const isMenuOpen = shallowRef(false)
 const navItems = [
   { label: 'Sites', to: '/sites/development/cloud-hosting' },
   { label: 'Skills', to: '/skills/skills' },
-  { label: 'Submit', to: '/submit' },
+  { label: 'Publish', to: '/publish' },
 ]
 
 function closeMenu() {

@@ -11,7 +11,12 @@ const route = useRoute()
 const isAuthRoute = computed(
   () => route.name === 'login' || route.name === 'signup' || route.name === 'auth-callback',
 )
-const isStandaloneRoute = computed(() => route.path === '/' || route.name === 'home')
+const isStandaloneRoute = computed(
+  () =>
+    route.name === 'home' ||
+    route.name === 'docs' ||
+    route.name === 'changelog',
+)
 const shouldRenderAppShell = computed(
   () => !isAuthRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
 )

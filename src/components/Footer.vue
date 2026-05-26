@@ -1,54 +1,101 @@
-<template>
-  <footer class="min-h-16 shrink-0 border-t border-gray-800 bg-black text-white">
-    <div
-      class="mx-auto flex min-h-16 max-w-7xl flex-col justify-center gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-0"
-    >
-      <div class="flex min-w-0 flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
-        <RouterLink to="/" class="flex min-w-0 items-center gap-2">
-          <svg class="h-4 w-4 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-            />
-          </svg>
-          <span class="truncate text-sm font-semibold">Holy Grail</span>
-        </RouterLink>
-        <p class="text-xs text-gray-500">
-          &copy; 2026 Holy Grail. Made with
-          <span class="text-accent-500" aria-label="orange heart">🧡</span>
-          by
-          <a
-            href="https://github.com/Drakaniia"
-            target="_blank"
-            rel="noreferrer"
-            class="font-medium text-gray-400 transition-colors hover:text-white"
-          >
-            Drakaniia
-          </a>
-        </p>
-      </div>
+<script setup lang="ts">
+import { useTheme } from '@/composables/useTheme'
 
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-        <a href="#" class="text-gray-400 transition-colors hover:text-white">Docs</a>
-        <a href="#" class="text-gray-400 transition-colors hover:text-white">Changelog</a>
-        <a href="#" class="text-gray-400 transition-colors hover:text-white">Blog</a>
-        <a
-          href="https://github.com/Drakaniia/holy-grail"
-          target="_blank"
-          rel="noreferrer"
-          class="text-gray-400 transition-colors hover:text-white"
-        >
-          Drakaniia/holy-grail
+const { isLightMode } = useTheme()
+</script>
+
+<template>
+  <footer class="site-footer" :class="{ 'site-footer--light': isLightMode }">
+    <div class="site-footer__inner">
+      <p class="site-footer__credit">
+        &copy; 2026 Holy Grail. Made with
+        <span class="site-footer__heart" aria-label="orange heart">&#129505;</span>
+        by
+        <a href="https://github.com/Drakaniia" target="_blank" rel="noreferrer">Drakaniia</a>.
+      </p>
+
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/changelog">Changelog</RouterLink>
+        <RouterLink to="/docs">Docs</RouterLink>
+        <RouterLink to="/publish">Publish</RouterLink>
+        <a href="https://github.com/Drakaniia/holy-grail" target="_blank" rel="noreferrer">
+          GitHub
         </a>
-        <span class="hidden text-gray-700 sm:inline">|</span>
-        <a
-          href="https://github.com/Drakaniia"
-          target="_blank"
-          rel="noreferrer"
-          class="text-gray-400 transition-colors hover:text-white"
-        >
-          @Drakaniia
-        </a>
-      </div>
+      </nav>
     </div>
   </footer>
 </template>
+
+<style scoped>
+.site-footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--footer-border, #262626);
+  background: var(--footer-bg, #050505);
+  color: var(--footer-muted, #8d8d8d);
+}
+
+.site-footer__inner {
+  display: flex;
+  width: min(100%, 70rem);
+  min-height: 6.5rem;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.4rem 1.5rem;
+}
+
+.site-footer__credit {
+  margin: 0;
+  color: var(--footer-muted, #8d8d8d);
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+
+.site-footer__heart {
+  color: #ff8a1f;
+}
+
+.site-footer__credit a,
+.site-footer__nav a {
+  color: var(--footer-link, #f4f4f4);
+  transition:
+    color 160ms ease,
+    opacity 160ms ease;
+}
+
+.site-footer__credit a:hover,
+.site-footer__nav a:hover {
+  color: #ff8a1f;
+}
+
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.4rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+
+.site-footer--light {
+  --footer-bg: var(--mocha-bg);
+  --footer-border: var(--mocha-border);
+  --footer-muted: var(--mocha-muted);
+  --footer-link: var(--mocha-text);
+}
+
+@media (max-width: 720px) {
+  .site-footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer__nav {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+</style>

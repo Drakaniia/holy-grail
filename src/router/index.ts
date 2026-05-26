@@ -6,6 +6,8 @@ const AdminPage = () => import('@/pages/AdminPage.vue')
 const AuthCallbackPage = () => import('@/pages/AuthCallbackPage.vue')
 const AuthPage = () => import('@/pages/AuthPage.vue')
 const BookmarksPage = () => import('@/pages/BookmarksPage.vue')
+const ChangelogPage = () => import('@/pages/ChangelogPage.vue')
+const DocumentationPage = () => import('@/pages/DocumentationPage.vue')
 const EditProfilePage = () => import('@/pages/EditProfilePage.vue')
 const HomePage = () => import('@/pages/HomePage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
@@ -117,9 +119,20 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
-      path: '/submit',
-      name: 'submit',
+      path: '/publish',
+      alias: '/submit',
+      name: 'publish',
       component: SubmitPage,
+    },
+    {
+      path: '/docs',
+      name: 'docs',
+      component: DocumentationPage,
+    },
+    {
+      path: '/changelog',
+      name: 'changelog',
+      component: ChangelogPage,
     },
     {
       path: '/admin',

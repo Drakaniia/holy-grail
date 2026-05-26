@@ -69,7 +69,7 @@ supabase functions deploy notify-submission --no-verify-jwt
 
 ## Review Flow
 
-1. Visitor submits a tool at `/submit`.
+1. Visitor publishes a tool or skill at `/publish` (`/submit` remains a compatibility alias).
 2. The app invokes `submit-tool`.
 3. `submit-tool` validates origin, applies the rate limit, inserts a pending row, and emails the admin.
 4. Admin reviews `/admin` and marks the row approved or rejected.

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import Footer from '@/components/Footer.vue'
 import HomeDirectoryMap from '@/components/home/HomeDirectoryMap.vue'
 import HomeFeaturedLedger from '@/components/home/HomeFeaturedLedger.vue'
 import HomeHero from '@/components/home/HomeHero.vue'
@@ -136,11 +137,11 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
   },
   {
     index: '04',
-    label: 'Submit',
+    label: 'Publish',
     kicker: 'Catalog intake',
     description: 'Add missing resources into the review flow so the library can keep expanding without losing structure.',
     countLabel: 'Open',
-    to: '/submit',
+    to: '/publish',
   },
 ])
 </script>
@@ -164,6 +165,8 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
       :is-loading="isCatalogLoading"
       :error="catalogError"
     />
+
+    <Footer />
   </div>
 </template>
 
