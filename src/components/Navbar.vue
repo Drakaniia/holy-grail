@@ -3,7 +3,7 @@ import { computed, onMounted, shallowRef } from 'vue'
 import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
 import { useTheme } from '@/composables/useTheme'
-import UserMenu from '@/components/auth/UserMenu.vue'
+import UserProfilePill from '@/components/auth/UserProfilePill.vue'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
 
 const props = withDefaults(
@@ -192,7 +192,7 @@ onMounted(() => {
         <span class="tooltip-bubble">{{ themeToggleLabel }}</span>
       </button>
 
-      <UserMenu v-if="auth.isAuthenticated" />
+      <UserProfilePill v-if="auth.isAuthenticated" />
 
       <RouterLink
         v-else

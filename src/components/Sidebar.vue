@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, shallowRef, watch } from 'vue'
+import { computed, onMounted, reactive, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   Activity,
@@ -43,9 +43,12 @@ import {
   X,
 } from 'lucide-vue-next'
 import { useAdminStore } from '@/stores/admin'
+import { useAuthStore } from '@/stores/auth'
+import SidebarAccountMenu from '@/components/auth/SidebarAccountMenu.vue'
 
 const route = useRoute()
 const admin = useAdminStore()
+const auth = useAuthStore()
 const sidebarSearch = shallowRef('')
 
 type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
@@ -327,12 +330,18 @@ const hasVisibleSidebarTabs = computed(() => showSitesSection.value || showSkill
 const clearSidebarSearch = () => {
   sidebarSearch.value = ''
 }
+
+onMounted(() => {
+  void auth.initialize()
+})
 </script>
 
 <template>
-  <aside class="flex h-full w-64 select-none flex-col overflow-hidden border-r border-gray-800 bg-black">
-    <div class="flex h-12 shrink-0 items-center gap-2 border-b border-gray-800 px-4">
-      <RouterLink to="/" class="flex items-center gap-2">
+  <aside class="flex h-full w-64 select-none flex-col overflow-visible border-r border-gray-800 bg-black">
+    <div class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800 px-2">
+      <SidebarAccountMenu v-if="auth.isAuthenticated" />
+
+      <RouterLink v-else to="/" class="flex items-center gap-2 px-2">
         <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
           <path
             d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
