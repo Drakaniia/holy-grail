@@ -55,10 +55,65 @@ export function useRandomPreviewTiles({
   const tiles = shallowRef<RandomPreviewTile[]>([])
   const rotationTimers = new Map<string, ReturnType<typeof window.setTimeout>>()
   const previousImageResetTimers = new Map<string, ReturnType<typeof window.setTimeout>>()
+  const pendingImageLoads = new Map<string, Promise<void>>()
+  const loadedImageUrls = new Set<string>()
+  let isDisposed = false
 
   const candidateItems = computed(() =>
     items.value.filter(item => !failedSlugs.value.has(item.slug)),
   )
+
+  function getPreviewImageUrl(item: HomePreviewItem) {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 720px)').matches) {
+      return item.small || item.image
+    }
+
+    return item.image || item.small
+  }
+
+  async function preloadImageUrl(url: string) {
+    if (!url || loadedImageUrls.has(url)) return
+
+    const pendingLoad = pendingImageLoads.get(url)
+
+    if (pendingLoad) {
+      await pendingLoad
+      return
+    }
+
+    const load = new Promise<void>((resolve, reject) => {
+      const image = new Image()
+
+      image.decoding = 'async'
+      image.onload = () => {
+        const decode = image.decode
+          ? image.decode().catch(() => undefined)
+          : Promise.resolve()
+
+        void decode.finally(() => {
+          loadedImageUrls.add(url)
+          resolve()
+        })
+      }
+      image.onerror = () => reject(new Error(`Failed to load preview image: ${url}`))
+      image.src = url
+    }).finally(() => {
+      pendingImageLoads.delete(url)
+    })
+
+    pendingImageLoads.set(url, load)
+    await load
+  }
+
+  async function preloadPreviewImage(item: HomePreviewItem) {
+    try {
+      await preloadImageUrl(getPreviewImageUrl(item))
+      return true
+    } catch {
+      markImageFailed(item.slug)
+      return false
+    }
+  }
 
   function clearTileTimers(tileKey: string) {
     const rotationTimer = rotationTimers.get(tileKey)
@@ -99,7 +154,7 @@ export function useRandomPreviewTiles({
     }, previousImageResetDelay))
   }
 
-  function rotateTilePreview(tileKey: string) {
+  async function rotateTilePreview(tileKey: string) {
     const currentTile = tiles.value.find(tile => tile.key === tileKey)
 
     if (!currentTile) return
@@ -115,12 +170,20 @@ export function useRandomPreviewTiles({
 
     if (!item || item.slug === currentTile.item.slug) return
 
+    const isImageReady = await preloadPreviewImage(item)
+    const latestTile = tiles.value.find(tile => tile.key === tileKey)
+    const isVisibleElsewhere = tiles.value.some(tile =>
+      tile.key !== tileKey && tile.item.slug === item.slug,
+    )
+
+    if (!isImageReady || !latestTile || isDisposed || isVisibleElsewhere) return
+
     tiles.value = tiles.value.map(tile =>
       tile.key === tileKey
         ? {
             ...tile,
             item,
-            previousItem: tile.item,
+            previousItem: latestTile.item,
             animationNonce: tile.animationNonce + 1,
           }
         : tile,
@@ -136,8 +199,11 @@ export function useRandomPreviewTiles({
     }
 
     rotationTimers.set(tileKey, window.setTimeout(() => {
-      rotateTilePreview(tileKey)
-      scheduleTileRotation(tileKey)
+      void rotateTilePreview(tileKey).finally(() => {
+        if (!isDisposed && tiles.value.some(tile => tile.key === tileKey)) {
+          scheduleTileRotation(tileKey)
+        }
+      })
     }, getRandomDelay(isInitial ? initialDelayRange : rotationDelayRange)))
   }
 
@@ -182,7 +248,10 @@ export function useRandomPreviewTiles({
 
   watch(candidateItems, syncTiles, { immediate: true })
 
-  onUnmounted(clearAllTimers)
+  onUnmounted(() => {
+    isDisposed = true
+    clearAllTimers()
+  })
 
   return {
     markImageFailed,
