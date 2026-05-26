@@ -1,35 +1,48 @@
-rbac - admin can directly add/delete/edit list
+# TODO
 
-whats better if we put all data in supabase or not needed since its a .yml file (or whats better approach for this)
+## Admin
 
-add discord, add my resources   
+- Add RBAC so admins can directly add, delete, and edit list entries.
+- Add admin dashboard monitoring.
+- Check whether admin analytics prevents recalculating the same user.
+- Email users when a site is not working or is no longer available, or add this to the admin dashboard and test it.
 
-add all cli, 
-add all skills
+## Content And Data
 
-  changelog, blog, and docs page..
+- Decide whether all data should stay in `meta.yaml` files or move into Supabase.
+- Add Discord and my resources.
+- Add all CLI tools.
+- Add all skills.
+- Add an NPX registry.
+- Add API keys.
+- Add a list of all IDEs.
+- Add a list of useful apps.
+- Add AI machine learning search for similar tools.
 
-  email user, if site its not working or not available. (or add in  admin dashbaord.) (test if this is working.)
+## Pages And Navigation
 
+- Add changelog, blog, and docs pages.
+- Add a blog page for website component inspiration:
+  - Header inspired by Dailyfoss.
+  - Footer inspired by TasteSkill.
+  - Sidebar inspiration.
+- Rename "Submit a Tool" to "Publish" and include both skills and sites.
+- Add numbers in each tab to show how many items are there.
+- Make settings a modal.
+- Research how 21st.dev handles publishing a tool:
+  - Is it automatically published?
+  - What is the full process?
 
-https://animewave.to/home
-https://animewave.to/home   
+## Features
 
-admin dashbard monitoring..
+- Add recently visited items.
+- Add filters for recently added items.
+- Add site requests.
+- Add skeleton loaders.
 
-add ai machine learning. to search for similar tools..
+## Links To Review
 
-what if we separate the repo for all the meta.yml file and/or the webp images for preview in another repo. well make it cdn for our main site.. will that works?  so the main repo will not be bloated.. or what do you recommend for this approach
-
-add recently visited
-make more filter that can see recently added.
-
-Request site..
-
-list of all IDE
-
-list of my usefull app
-
-https://soundcn.xyz
-
-add google stitch
+- https://animewave.to/home
+- https://soundcn.xyz
+- https://archery.promptmetheus.com
+- https://magecdn.com/tools/svg-loaders
