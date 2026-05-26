@@ -44,6 +44,14 @@ function articleFor(value) {
   return /^[aeiou]/i.test(String(value || '')) ? 'an' : 'a'
 }
 
+function isCliToolsCollection(parent, subcategory) {
+  return parent === 'cli-tools' || (parent === 'development' && subcategory === 'cli-tools')
+}
+
+function isUiLibrariesCollection(parent, subcategory) {
+  return parent === 'ui-libraries' || (parent === 'development' && subcategory === 'ui-libraries')
+}
+
 function context(meta) {
   const name = compactName(meta.name)
   const category = meta.category || 'Web Resource'
@@ -114,7 +122,7 @@ function context(meta) {
     }
   }
 
-  if (parent === 'ui-libraries') {
+  if (isUiLibrariesCollection(parent, subcategory)) {
     return {
       core: [
         ['Component Resource', `${name} is tracked as a UI component or library resource.`],
@@ -138,6 +146,20 @@ function context(meta) {
         ['Documentation Path', 'Docs are linked when available for setup details.'],
         ['Deployment Context', 'Deployment type is recorded in the metadata.'],
         ['Developer Workflow', 'Grouped under Development with related cloud and hosting resources.'],
+      ],
+    }
+  }
+
+  if (isCliToolsCollection(parent, subcategory)) {
+    return {
+      core: [
+        ['Developer Tooling', `${name} is tracked as a command-line or developer workflow resource.`],
+        ['Reference Access', 'Website and docs links are preserved for setup and usage details.'],
+      ],
+      extra: [
+        ['Source Visibility', 'Public repository stats are shown when a repo is available.'],
+        ['Workflow Utility', 'Useful for development, automation, or evaluation tasks.'],
+        ['Catalog Grouping', 'Grouped with other CLI and developer tools.'],
       ],
     }
   }
@@ -169,20 +191,6 @@ function context(meta) {
         ['Grouped by Type', 'Sorted by games, VFX, software, torrents, or movies.'],
         ['Imported Bookmark', 'Preserves the saved browser bookmark link.'],
         ['Catalog Tags', 'Tagged under the downloads collection for search and filtering.'],
-      ],
-    }
-  }
-
-  if (parent === 'cli-tools') {
-    return {
-      core: [
-        ['Developer Tooling', `${name} is tracked as a command-line or developer workflow resource.`],
-        ['Reference Access', 'Website and docs links are preserved for setup and usage details.'],
-      ],
-      extra: [
-        ['Source Visibility', 'Public repository stats are shown when a repo is available.'],
-        ['Workflow Utility', 'Useful for development, automation, or evaluation tasks.'],
-        ['Catalog Grouping', 'Grouped with other CLI and developer tools.'],
       ],
     }
   }
@@ -289,6 +297,14 @@ function fullDescriptionFor(meta) {
   if (meta.parentCategory === 'development') {
     if (meta.subcategory === 'cloud-hosting') {
       return `${name} is kept as ${article} ${category} resource for cloud hosting, deployment, or backend infrastructure work.`
+    }
+
+    if (meta.subcategory === 'cli-tools') {
+      return `${name} is kept as a command-line and developer workflow resource.`
+    }
+
+    if (meta.subcategory === 'ui-libraries') {
+      return `${name} is kept as a UI component and design system reference.`
     }
 
     return `${name} is kept as ${article} ${category} resource for building and shipping software.`

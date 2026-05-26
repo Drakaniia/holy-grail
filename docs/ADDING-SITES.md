@@ -89,7 +89,7 @@ bun run scripts/enrich-site-metadata.js --all       # include older entries
 | `coreFeatures` | array | Yes | Rendered in the Core Features section. |
 | `additionalFeatures` | array | Yes | Rendered in the Additional Features section. |
 | `deployCompose` | string | No | Docker Compose YAML. Only add when accurate. |
-| `installCommand` | string | No | CLI install/setup command. Rendered only for `parentCategory: cli-tools`. |
+| `installCommand` | string | No | CLI install/setup command. Rendered for Development > CLI Tools entries. |
 | `similarTools` | array | Yes | Rendered in the Similar Tools section. |
 
 ## Feature Objects

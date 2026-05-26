@@ -145,7 +145,7 @@ const folderMap = new Map([
   ['Bookmarks bar > AI > Others', { parentCategory: 'ai', subcategory: 'others', category: 'AI Tools' }],
   [
     'Bookmarks bar > AI > CLI',
-    { parentCategory: 'cli-tools', subcategory: null, category: 'AI CLI' },
+    { parentCategory: 'development', subcategory: 'cli-tools', category: 'AI CLI' },
   ],
   [
     'Bookmarks bar > CODE > Hosting Service',
@@ -185,7 +185,7 @@ const folderMap = new Map([
     'Bookmarks bar > Design > Skills',
     { parentCategory: 'design', subcategory: 'design-tools', category: 'Design Skills' },
   ],
-  ['Bookmarks bar > CMPNTS', { parentCategory: 'ui-libraries', subcategory: null, category: 'UI Library' }],
+  ['Bookmarks bar > CMPNTS', { parentCategory: 'development', subcategory: 'ui-libraries', category: 'UI Library' }],
   [
     'Bookmarks bar > CMPNTS > Icons',
     { parentCategory: 'design', subcategory: 'icons-svg', category: 'Icons/SVG' },
@@ -743,6 +743,14 @@ function fullDescriptionFor(displayName, config) {
   if (config.parentCategory === 'development') {
     if (config.subcategory === 'cloud-hosting') {
       return `${displayName} is kept as ${article} ${lowerCategory} resource for cloud hosting, deployment, or backend infrastructure work.`
+    }
+
+    if (config.subcategory === 'cli-tools') {
+      return `${displayName} is kept as a command-line and developer workflow resource.`
+    }
+
+    if (config.subcategory === 'ui-libraries') {
+      return `${displayName} is kept as a UI component and design system reference.`
     }
 
     return `${displayName} is kept as ${article} ${lowerCategory} resource for building and shipping software.`
