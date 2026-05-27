@@ -69,6 +69,53 @@
   }
 }
 
+@layer components {
+  .hg-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: #111827;
+  }
+
+  .hg-skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+    animation: hg-skeleton-shimmer 1.45s ease-in-out infinite;
+  }
+}
+
+html.light .hg-skeleton {
+  background: var(--mocha-surface-muted) !important;
+}
+
+html.light .hg-skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.54),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hg-skeleton::after {
+    animation: none;
+  }
+}
+
+@keyframes hg-skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 html.light .bg-black,
 html.light [class*='bg-[#000000]'] {
   background-color: var(--mocha-bg) !important;
