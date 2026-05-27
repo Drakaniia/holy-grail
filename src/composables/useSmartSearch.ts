@@ -14,6 +14,7 @@ export interface SmartSearchResult {
   to: string
   tags: string[]
   logoUrl: string | null
+  domainLabel: string | null
   score: number
   matchStrength: 'Direct' | 'Close' | 'Nearest'
 }
@@ -33,6 +34,7 @@ interface SearchItem {
   to: string
   tags: string[]
   logoUrl: string | null
+  domainLabel: string | null
   fields: SearchField[]
   popularity: number
   featured: boolean
@@ -235,6 +237,7 @@ function createNavigationItem(options: {
     to: options.to,
     tags: options.keywords,
     logoUrl: null,
+    domainLabel: null,
     fields: createSearchFields({
       title: options.title,
       description: options.description,
@@ -249,7 +252,10 @@ function createNavigationItem(options: {
 
 function siteToSearchItem(site: Site): SearchItem {
   const tags = site.tags ?? []
-  const logoSource = site.website || site.docs || site.sourceCode
+  const siteSources = [site.website, site.docs, site.sourceCode].filter(Boolean)
+  const logoSource = siteSources[0] ?? ''
+  const domainLabel = getPrimaryDomainLabel(siteSources)
+  const domainSearchText = createDomainSearchText(siteSources)
   const categoryPath = getSiteCategoryPath(site)
 
   return {
@@ -262,8 +268,10 @@ function siteToSearchItem(site: Site): SearchItem {
     to: `/sites/${site.slug}`,
     tags,
     logoUrl: getFaviconUrl(logoSource),
+    domainLabel,
     fields: createSearchFields({
       title: site.name,
+      titleWithDomain: [site.name, domainLabel].filter(Boolean).join(' '),
       description: site.description,
       category: [
         ...categoryPath,
@@ -272,7 +280,8 @@ function siteToSearchItem(site: Site): SearchItem {
         site.category,
       ].filter(Boolean).join(' '),
       tags,
-      source: [site.website, site.docs, site.sourceCode].filter(Boolean).join(' '),
+      domain: domainSearchText,
+      source: [...siteSources, domainSearchText].filter(Boolean).join(' '),
     }),
     popularity: site.stars + site.watchers,
     featured: site.featured,
@@ -311,6 +320,7 @@ function skillToSearchItem(skill: Skill): SearchItem {
     to: `/skills/${skill.slug}`,
     tags: skill.tags,
     logoUrl: owner ? `https://github.com/${owner}.png?size=64` : null,
+    domainLabel: null,
     fields: createSearchFields({
       title: skill.title,
       description: skill.description,
@@ -325,18 +335,30 @@ function skillToSearchItem(skill: Skill): SearchItem {
 
 function createSearchFields(fields: {
   title: string
+  titleWithDomain?: string
   description: string
   category: string
   tags: string[]
+  domain?: string
   source: string
 }): SearchField[] {
-  return [
+  const searchFields = [
     { value: fields.title, weight: 118 },
     { value: fields.tags.join(' '), weight: 96 },
     { value: fields.category, weight: 84 },
     { value: fields.description, weight: 62 },
     { value: fields.source, weight: 38 },
   ]
+
+  if (fields.titleWithDomain) {
+    searchFields.push({ value: fields.titleWithDomain, weight: 126 })
+  }
+
+  if (fields.domain) {
+    searchFields.push({ value: fields.domain, weight: 112 })
+  }
+
+  return searchFields
 }
 
 function toResult(item: SearchItem, score: number): SmartSearchResult {
@@ -350,19 +372,66 @@ function toResult(item: SearchItem, score: number): SmartSearchResult {
     to: item.to,
     tags: item.tags.slice(0, 4),
     logoUrl: item.logoUrl,
+    domainLabel: item.domainLabel,
     score,
     matchStrength: getMatchStrength(score),
   }
 }
 
 function getFaviconUrl(source: string): string | null {
-  if (!source) return null
-
-  const domain = source.replace(/^https?:\/\//, '').replace(/\/.*$/, '')
+  const domain = getDomainLabel(source)
 
   if (!domain) return null
 
   return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
+}
+
+function getPrimaryDomainLabel(sources: string[]): string | null {
+  for (const source of sources) {
+    const domain = getDomainLabel(source)
+
+    if (domain) return domain
+  }
+
+  return null
+}
+
+function createDomainSearchText(sources: string[]): string {
+  const terms = new Set<string>()
+
+  for (const source of sources) {
+    const domain = getDomainLabel(source)
+
+    if (!domain) continue
+
+    const labels = domain.split('.').filter(Boolean)
+    terms.add(domain)
+    terms.add(domain.replaceAll('.', ' '))
+    terms.add(domain.replaceAll('.', ''))
+
+    if (labels.length > 0) {
+      terms.add(labels[0])
+    }
+
+    if (labels.length >= 2) {
+      const registrableDomain = labels.slice(-2).join('.')
+      terms.add(registrableDomain)
+      terms.add(registrableDomain.replaceAll('.', ' '))
+      terms.add(registrableDomain.replaceAll('.', ''))
+    }
+  }
+
+  return Array.from(terms).join(' ')
+}
+
+function getDomainLabel(source: string): string | null {
+  if (!source) return null
+
+  try {
+    return new URL(source).hostname.toLowerCase().replace(/^www\./, '')
+  } catch {
+    return null
+  }
 }
 
 function getMatchStrength(score: number): SmartSearchResult['matchStrength'] {

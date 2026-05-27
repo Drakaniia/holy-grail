@@ -132,7 +132,7 @@ function openResult(result: SmartSearchResult | undefined) {
               type="text"
               autocomplete="off"
               spellcheck="false"
-              placeholder="Search sites, skills, categories..."
+              placeholder="Search sites, domains, skills..."
               class="command-palette-input h-full min-w-0 flex-1 bg-transparent text-base text-white placeholder:text-gray-600 focus:outline-none"
               @keydown.down.prevent="selectNextResult"
               @keydown.up.prevent="selectPreviousResult"
@@ -211,6 +211,12 @@ function openResult(result: SmartSearchResult | undefined) {
                   {{ result.description }}
                 </span>
                 <span class="mt-2 flex min-w-0 flex-wrap items-center gap-1.5">
+                  <span
+                    v-if="result.domainLabel"
+                    class="command-palette-domain-chip rounded bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-gray-500"
+                  >
+                    {{ result.domainLabel }}
+                  </span>
                   <span
                     class="command-palette-chip rounded border border-gray-800 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-gray-500"
                   >
@@ -378,7 +384,8 @@ function openResult(result: SmartSearchResult | undefined) {
   color: var(--mocha-muted) !important;
 }
 
-:global(html.light .command-palette-tag) {
+:global(html.light .command-palette-tag),
+:global(html.light .command-palette-domain-chip) {
   background: rgba(45, 33, 25, 0.06) !important;
   color: var(--mocha-muted) !important;
 }
