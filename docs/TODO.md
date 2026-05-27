@@ -32,8 +32,7 @@
 - Add filters for recently added items.
 - Add site requests.
 - instead of loading text. make it a skeleton loaders.
-- Generate Random
-- Make the landing page dynamic (swipe right images, and images pictuer is actually clickable and navigarte to that page (not the website yet))
+- 
 
 ## Addition
 
@@ -41,4 +40,5 @@
 
 ## Links To Review
 
-- h
+- https://awesomeskill.ai
+- https://chakra-ui.com
