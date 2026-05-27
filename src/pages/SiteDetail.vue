@@ -28,6 +28,7 @@ import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
 import SiteIssueReport from '@/components/sites/SiteIssueReport.vue'
 import SiteFavicon from '@/components/sites/SiteFavicon.vue'
 import SitePreview from '@/components/sites/SitePreview.vue'
+import SiteDetailSkeleton from '@/components/sites/SiteDetailSkeleton.vue'
 
 const collectionLabels: Record<string, string> = {
   '3d': '3D',
@@ -618,12 +619,7 @@ async function copyInstallCommand() {
       </div>
     </div>
 
-    <div v-else-if="store.loading" class="flex items-center justify-center py-24">
-      <div class="flex items-center gap-2 text-sm text-gray-500">
-        <RefreshCw class="h-5 w-5 animate-spin" />
-        Loading site...
-      </div>
-    </div>
+    <SiteDetailSkeleton v-else-if="store.loading" />
 
     <div v-else-if="store.loadError" class="mx-auto max-w-xl px-4 py-24 text-center">
       <h2 class="text-2xl font-bold text-white mb-2">Could not load sites</h2>

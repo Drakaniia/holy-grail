@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, shallowRef } from 'vue'
-import { AlertCircle, Bookmark, Code2, Globe2, Loader2 } from 'lucide-vue-next'
+import { AlertCircle, Bookmark, Code2, Globe2 } from 'lucide-vue-next'
+import ProfileBookmarkCardSkeleton from '@/components/profile/ProfileBookmarkCardSkeleton.vue'
 import ProfileBookmarkCard from '@/components/profile/ProfileBookmarkCard.vue'
 import ProfileEmptyState from '@/components/profile/ProfileEmptyState.vue'
 import ProfileHeader from '@/components/profile/ProfileHeader.vue'
@@ -129,12 +130,11 @@ async function removeBookmark(id: string) {
 
         <div
           v-if="bookmarks.loading && bookmarkItems.length === 0"
-          class="flex min-h-[48vh] items-center justify-center"
+          class="grid gap-4 lg:grid-cols-2"
+          aria-busy="true"
+          aria-label="Loading bookmarks"
         >
-          <div class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-500">
-            <Loader2 class="h-4 w-4 animate-spin text-accent-300" />
-            Loading bookmarks...
-          </div>
+          <ProfileBookmarkCardSkeleton v-for="index in 4" :key="index" />
         </div>
 
         <ProfileEmptyState

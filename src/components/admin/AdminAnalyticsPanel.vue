@@ -9,10 +9,10 @@ import {
   MousePointerClick,
   RefreshCcw,
   Search,
-  Sparkles,
   UserPlus,
   Users,
 } from 'lucide-vue-next'
+import AdminAnalyticsSkeleton from '@/components/admin/AdminAnalyticsSkeleton.vue'
 import { useAdminStore, type AnalyticsRange, type AnalyticsTopItem } from '@/stores/admin'
 
 const admin = useAdminStore()
@@ -210,12 +210,10 @@ async function refreshAnalytics() {
 
     <div
       v-if="admin.loadingAnalytics && admin.analyticsEvents.length === 0"
-      class="flex items-center justify-center border border-gray-800 bg-[#060606] py-20"
+      aria-busy="true"
+      aria-label="Loading analytics"
     >
-      <div class="flex items-center gap-2 text-sm text-gray-500">
-        <Sparkles class="h-5 w-5 animate-pulse text-accent-300" />
-        Loading analytics...
-      </div>
+      <AdminAnalyticsSkeleton />
     </div>
 
     <template v-else>

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { ArrowLeft, Eye, Code2, User, Tag, ExternalLink, Sparkles, Copy, Check, AlertCircle } from 'lucide-vue-next'
+import { AlertCircle, ArrowLeft, Check, Code2, Copy, ExternalLink, Eye, Tag, User } from 'lucide-vue-next'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
+import SkillContentSkeleton from '@/components/skills/SkillContentSkeleton.vue'
+import SkillDetailSkeleton from '@/components/skills/SkillDetailSkeleton.vue'
 import { useSkillsStore } from '@/stores/skills'
 
 const route = useRoute()
@@ -173,14 +175,13 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Content Area -->
-      <div class="min-w-0 overflow-hidden border border-gray-800 rounded-xl p-4 sm:p-6 md:p-8" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div
+        class="min-w-0 overflow-hidden border border-gray-800 rounded-xl p-4 sm:p-6 md:p-8"
+        style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+        :aria-busy="isLoading"
+      >
         <!-- Loading State -->
-        <div v-if="isLoading" class="flex items-center justify-center py-12">
-          <div class="flex items-center gap-2 text-gray-500">
-            <Sparkles class="w-5 h-5 animate-pulse" />
-            <span>Loading skill content from GitHub...</span>
-          </div>
-        </div>
+        <SkillContentSkeleton v-if="isLoading" />
 
         <!-- Error State with Fallback -->
         <div v-else-if="error" class="text-center py-12">
@@ -206,12 +207,7 @@ async function copyInstallCommand() {
       </div>
     </div>
 
-    <div v-else-if="store.loading" class="flex items-center justify-center py-24">
-      <div class="flex items-center gap-2 text-sm text-gray-500">
-        <Sparkles class="h-5 w-5 animate-pulse text-accent-300" />
-        Loading skill...
-      </div>
-    </div>
+    <SkillDetailSkeleton v-else-if="store.loading" />
 
     <div v-else-if="store.loadError" class="mx-auto max-w-xl px-4 py-24 text-center">
       <h2 class="text-2xl font-bold text-white mb-2">Could not load skills</h2>

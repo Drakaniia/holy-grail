@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
-import { Bookmark, ExternalLink, Sparkles, Trash2 } from 'lucide-vue-next'
+import { Bookmark, ExternalLink, Trash2 } from 'lucide-vue-next'
+import BookmarkCardSkeleton from '@/components/bookmarks/BookmarkCardSkeleton.vue'
 import { useBookmarksStore, type UserBookmark } from '@/stores/bookmarks'
 import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
@@ -80,11 +81,13 @@ async function removeBookmark(bookmark: UserBookmark) {
         {{ bookmarks.actionError }}
       </div>
 
-      <div v-if="bookmarks.loading && savedItems.length === 0" class="flex items-center justify-center py-20">
-        <div class="flex items-center gap-2 text-sm text-gray-500">
-          <Sparkles class="h-5 w-5 animate-pulse text-accent-300" />
-          Loading bookmarks...
-        </div>
+      <div
+        v-if="bookmarks.loading && savedItems.length === 0"
+        class="grid gap-4 lg:grid-cols-2"
+        aria-busy="true"
+        aria-label="Loading bookmarks"
+      >
+        <BookmarkCardSkeleton v-for="index in 4" :key="index" />
       </div>
 
       <div

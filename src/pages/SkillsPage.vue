@@ -5,6 +5,7 @@ import { Search, TrendingUp, Clock, Sparkles } from 'lucide-vue-next'
 import { useSkillsStore } from '@/stores/skills'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SkillCard from '@/components/skills/SkillCard.vue'
+import SkillCardSkeleton from '@/components/skills/SkillCardSkeleton.vue'
 import { trackSearchQuery } from '@/lib/analytics'
 
 const route = useRoute()
@@ -209,11 +210,13 @@ watch(totalPages, pages => {
         </div>
       </div>
 
-      <div v-if="store.loading && filteredSkills.length === 0" class="flex items-center justify-center py-16">
-        <div class="flex items-center gap-2 text-sm text-gray-500">
-          <Sparkles class="h-5 w-5 animate-pulse text-yellow-500" />
-          Loading skills...
-        </div>
+      <div
+        v-if="store.loading && filteredSkills.length === 0"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        aria-busy="true"
+        aria-label="Loading skills"
+      >
+        <SkillCardSkeleton v-for="index in 8" :key="index" />
       </div>
 
       <div

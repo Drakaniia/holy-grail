@@ -5,10 +5,10 @@ import {
   Check,
   CheckCircle2,
   ExternalLink,
-  Sparkles,
   Trash2,
   X,
 } from 'lucide-vue-next'
+import AdminSubmissionSkeleton from '@/components/admin/AdminSubmissionSkeleton.vue'
 import { useAdminStore, type SubmissionStatus } from '@/stores/admin'
 
 const admin = useAdminStore()
@@ -165,12 +165,11 @@ function getAdminHandoff(status: SubmissionStatus) {
 
     <div
       v-if="admin.loading && displaySubmissions.length === 0"
-      class="flex items-center justify-center py-20"
+      class="space-y-4"
+      aria-busy="true"
+      aria-label="Loading submissions"
     >
-      <div class="flex items-center gap-2 text-sm text-gray-500">
-        <Sparkles class="h-5 w-5 animate-pulse text-accent-300" />
-        Loading submissions...
-      </div>
+      <AdminSubmissionSkeleton v-for="index in 3" :key="index" />
     </div>
 
     <div

@@ -5,6 +5,7 @@ import { Search, TrendingUp, Clock, Star, Sparkles } from 'lucide-vue-next'
 import { sortSitesForTab, useSitesStore } from '@/stores/sites'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SiteCard from '@/components/sites/SiteCard.vue'
+import SiteCardSkeleton from '@/components/sites/SiteCardSkeleton.vue'
 import { trackSearchQuery } from '@/lib/analytics'
 
 const route = useRoute()
@@ -281,11 +282,13 @@ watch(totalPages, pages => {
         </div>
       </div>
 
-      <div v-if="store.loading && filteredSites.length === 0" class="flex items-center justify-center py-16">
-        <div class="flex items-center gap-2 text-sm text-gray-500">
-          <Sparkles class="h-5 w-5 animate-pulse text-yellow-500" />
-          Loading sites...
-        </div>
+      <div
+        v-if="store.loading && filteredSites.length === 0"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+        aria-busy="true"
+        aria-label="Loading sites"
+      >
+        <SiteCardSkeleton v-for="index in 6" :key="index" />
       </div>
 
       <div
