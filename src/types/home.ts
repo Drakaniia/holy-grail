@@ -15,5 +15,6 @@ export interface HomeDirectoryRow {
   kicker: string
   description: string
   countLabel: string
+  countLoading?: boolean
   to: string
 }

@@ -25,7 +25,7 @@ void sitesStore.loadSites()
 void skillsStore.loadSkills()
 
 function formatCount(value: number, loaded: boolean) {
-  if (!loaded && value === 0) return '...'
+  if (!loaded && value === 0) return '0'
 
   return Intl.NumberFormat('en', {
     notation: value >= 1000 ? 'compact' : 'standard',
@@ -121,6 +121,7 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     kicker: 'Tools and references',
     description: 'Cloud hosting, AI utilities, design sources, developer references, downloads, CLI agents, and UI libraries.',
     countLabel: totalSitesLabel.value,
+    countLoading: isCatalogLoading.value,
     to: '/sites/development/cloud-hosting',
   },
   {
@@ -129,6 +130,7 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     kicker: 'Agent workflows',
     description: 'Reusable operating instructions for development, design, research, security, deployment, and automation.',
     countLabel: totalSkillsLabel.value,
+    countLoading: isCatalogLoading.value,
     to: '/skills/skills',
   },
   {

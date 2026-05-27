@@ -33,7 +33,20 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
     </div>
 
     <div v-else-if="isLoading && visibleTiles.length === 0" class="home-ledger__grid">
-      <div v-for="index in 3" :key="index" class="home-ledger__skeleton"></div>
+      <div
+        v-for="index in 6"
+        :key="index"
+        class="home-ledger__item home-ledger__item--skeleton"
+        aria-hidden="true"
+      >
+        <span class="home-ledger__media">
+          <span class="home-ledger__skeleton-media hg-skeleton"></span>
+        </span>
+        <span class="home-ledger__item-meta">
+          <span class="home-ledger__meta-skeleton home-ledger__meta-skeleton--small hg-skeleton"></span>
+          <strong class="home-ledger__meta-skeleton home-ledger__meta-skeleton--title hg-skeleton"></strong>
+        </span>
+      </div>
     </div>
 
     <div v-else-if="visibleTiles.length > 0" class="home-ledger__grid">
@@ -225,8 +238,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   line-height: 1;
 }
 
-.home-ledger__state,
-.home-ledger__skeleton {
+.home-ledger__state {
   min-height: 12rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: #0d0d0d;
@@ -243,13 +255,29 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   font-size: 0.95rem;
 }
 
-.home-ledger__skeleton {
-  grid-column: span 2;
-  background:
-    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent),
-    #101010;
-  background-size: 220% 100%;
-  animation: home-ledger-skeleton 1.4s ease infinite;
+.home-ledger__item--skeleton {
+  pointer-events: none;
+}
+
+.home-ledger__skeleton-media {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.home-ledger__meta-skeleton {
+  display: block;
+  border-radius: 9999px;
+}
+
+.home-ledger__meta-skeleton--small {
+  height: 0.7rem;
+  width: 8rem;
+}
+
+.home-ledger__meta-skeleton--title {
+  height: clamp(1.15rem, 2vw, 1.7rem);
+  width: min(16rem, 72%);
 }
 
 :global(html.light .home-ledger) {
@@ -267,8 +295,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
 }
 
 :global(html.light .home-ledger__grid),
-:global(html.light .home-ledger__state),
-:global(html.light .home-ledger__skeleton) {
+:global(html.light .home-ledger__state) {
   border-color: var(--mocha-border);
 }
 
@@ -276,20 +303,9 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   background: var(--mocha-border);
 }
 
-:global(html.light .home-ledger__state),
-:global(html.light .home-ledger__skeleton) {
+:global(html.light .home-ledger__state) {
   background: var(--mocha-surface);
   color: var(--mocha-text-soft);
-}
-
-@keyframes home-ledger-skeleton {
-  from {
-    background-position: 180% 0;
-  }
-
-  to {
-    background-position: -80% 0;
-  }
 }
 
 @keyframes home-ledger-mask-swipe {
@@ -312,8 +328,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .home-ledger__item:nth-child(n),
-  .home-ledger__skeleton {
+  .home-ledger__item:nth-child(n) {
     grid-column: span 1;
   }
 }
@@ -327,8 +342,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
 @media (prefers-reduced-motion: reduce) {
   .home-ledger__image--wipe,
   .home-ledger__item img,
-  .home-ledger__link,
-  .home-ledger__skeleton {
+  .home-ledger__link {
     animation: none;
     transition: none;
   }

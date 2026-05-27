@@ -51,7 +51,14 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
       <div class="home-hero__panel" aria-label="Catalog preview">
         <div class="home-hero__panel-topline">
           <span>Live catalog surface</span>
-          <span>{{ totalCategoriesLabel }} groups</span>
+          <span class="home-hero__topline-count">
+            <span
+              v-if="isLoading"
+              class="home-hero__topline-skeleton hg-skeleton"
+              aria-hidden="true"
+            ></span>
+            <span v-else>{{ totalCategoriesLabel }} groups</span>
+          </span>
         </div>
 
         <div class="home-hero__preview-grid">
@@ -98,23 +105,35 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
           </RouterLink>
 
           <div
-            v-if="isLoading && heroPreviewTiles.length === 0"
-            class="home-hero__preview-skeleton"
-            aria-label="Loading previews"
-          ></div>
+            v-for="index in isLoading && heroPreviewTiles.length === 0 ? 4 : 0"
+            :key="`preview-skeleton-${index}`"
+            class="home-hero__preview home-hero__preview--skeleton"
+            aria-hidden="true"
+          >
+            <span class="home-hero__preview-media">
+              <span class="home-hero__preview-skeleton-media hg-skeleton"></span>
+            </span>
+            <span class="home-hero__preview-meta">
+              <span class="home-hero__preview-rank-skeleton hg-skeleton"></span>
+              <strong class="home-hero__preview-title-skeleton hg-skeleton"></strong>
+            </span>
+          </div>
         </div>
 
         <div class="home-hero__metrics" aria-label="Catalog totals">
           <div>
-            <span>{{ totalSitesLabel }}</span>
+            <span v-if="isLoading" class="home-hero__metric-skeleton hg-skeleton" aria-hidden="true"></span>
+            <span v-else>{{ totalSitesLabel }}</span>
             <p>Sites</p>
           </div>
           <div>
-            <span>{{ totalSkillsLabel }}</span>
+            <span v-if="isLoading" class="home-hero__metric-skeleton hg-skeleton" aria-hidden="true"></span>
+            <span v-else>{{ totalSkillsLabel }}</span>
             <p>Skills</p>
           </div>
           <div>
-            <span>{{ totalCategoriesLabel }}</span>
+            <span v-if="isLoading" class="home-hero__metric-skeleton hg-skeleton" aria-hidden="true"></span>
+            <span v-else>{{ totalCategoriesLabel }}</span>
             <p>Groups</p>
           </div>
         </div>
@@ -299,8 +318,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   gap: 0.75rem;
 }
 
-.home-hero__preview,
-.home-hero__preview-skeleton {
+.home-hero__preview {
   min-height: 9rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -320,6 +338,11 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 .home-hero__preview:focus-visible {
   border-color: rgba(255, 122, 0, 0.78);
   transform: translateY(-2px);
+}
+
+.home-hero__preview--skeleton:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: none;
 }
 
 .home-hero__preview:focus-visible {
@@ -382,13 +405,47 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   white-space: nowrap;
 }
 
-.home-hero__preview-skeleton {
-  grid-column: 1 / -1;
-  background:
-    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent),
-    #101010;
-  background-size: 220% 100%;
-  animation: home-skeleton 1.4s ease infinite;
+.home-hero__preview-skeleton-media,
+.home-hero__preview-rank-skeleton,
+.home-hero__preview-title-skeleton,
+.home-hero__metric-skeleton,
+.home-hero__topline-skeleton {
+  display: block;
+}
+
+.home-hero__preview-skeleton-media {
+  height: 100%;
+  width: 100%;
+}
+
+.home-hero__preview-rank-skeleton {
+  height: 0.7rem;
+  width: 1.5rem;
+  border-radius: 9999px;
+}
+
+.home-hero__preview-title-skeleton {
+  height: 0.8rem;
+  width: min(7rem, 62%);
+  border-radius: 9999px;
+}
+
+.home-hero__metric-skeleton {
+  height: clamp(1.6rem, 3vw, 2.7rem);
+  width: 4.5rem;
+  border-radius: 9999px;
+}
+
+.home-hero__topline-count {
+  display: inline-flex;
+  min-width: 4.25rem;
+  justify-content: flex-end;
+}
+
+.home-hero__topline-skeleton {
+  height: 0.7rem;
+  width: 4.25rem;
+  border-radius: 9999px;
 }
 
 .home-hero__metrics {
@@ -497,7 +554,6 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 
 :global(html.light .home-hero__secondary-link),
 :global(html.light .home-hero__preview),
-:global(html.light .home-hero__preview-skeleton),
 :global(html.light .home-hero__metrics),
 :global(html.light .home-hero__metrics div) {
   border-color: var(--mocha-border);
@@ -505,16 +561,6 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 
 :global(html.light .home-hero__secondary-link:hover) {
   background: rgba(255, 122, 0, 0.1);
-}
-
-@keyframes home-skeleton {
-  from {
-    background-position: 180% 0;
-  }
-
-  to {
-    background-position: -80% 0;
-  }
 }
 
 @keyframes home-hero-mask-swipe {
@@ -562,8 +608,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
     gap: 0.5rem;
   }
 
-  .home-hero__preview,
-  .home-hero__preview-skeleton {
+  .home-hero__preview {
     min-height: 7rem;
   }
 
@@ -589,8 +634,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 @media (prefers-reduced-motion: reduce) {
   .home-hero__preview,
   .home-hero__preview-image--wipe,
-  .home-hero__preview-image img,
-  .home-hero__preview-skeleton {
+  .home-hero__preview-image img {
     animation: none;
     transition: none;
   }

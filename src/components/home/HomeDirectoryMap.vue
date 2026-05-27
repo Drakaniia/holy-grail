@@ -27,7 +27,14 @@ defineProps<{
           <small>{{ row.kicker }}</small>
         </span>
         <span class="home-directory__description">{{ row.description }}</span>
-        <span class="home-directory__count">{{ row.countLabel }}</span>
+        <span class="home-directory__count">
+          <span
+            v-if="row.countLoading"
+            class="home-directory__count-skeleton hg-skeleton"
+            aria-hidden="true"
+          ></span>
+          <span v-else>{{ row.countLabel }}</span>
+        </span>
         <ArrowUpRight class="home-directory__icon h-4 w-4" aria-hidden="true" />
       </RouterLink>
     </div>
@@ -128,6 +135,13 @@ defineProps<{
 .home-directory__count {
   color: #ffffff;
   text-align: right;
+}
+
+.home-directory__count-skeleton {
+  display: inline-block;
+  height: 0.75rem;
+  width: 3.25rem;
+  border-radius: 9999px;
 }
 
 .home-directory__icon {
