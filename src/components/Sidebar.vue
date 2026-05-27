@@ -19,6 +19,7 @@ import {
   Github,
   Hammer,
   HardDriveDownload,
+  Home,
   Image,
   Lightbulb,
   MessageSquare,
@@ -834,6 +835,18 @@ onMounted(() => {
     </nav>
 
     <div class="shrink-0 space-y-1 border-t border-gray-800 p-4">
+      <RouterLink
+        to="/"
+        class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
+        :class="isActive('/') ? 'bg-zinc-900 text-white' : ''"
+      >
+        <Home
+          class="h-4 w-4 transition-colors"
+          :class="isActive('/') ? 'text-accent-400' : 'text-gray-500 group-hover:text-accent-400'"
+        />
+        <span class="text-xs font-medium">Home</span>
+      </RouterLink>
+
       <RouterLink
         to="/publish"
         class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
