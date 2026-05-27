@@ -27,13 +27,14 @@ const GITHUB_REPO_API_URL = 'https://api.github.com/repos/Drakaniia/holy-grail'
 const starCount = shallowRef<number | null>(null)
 const isStarCountLoading = shallowRef(false)
 const formattedStarCount = computed(() => {
-  if (starCount.value === null) return isStarCountLoading.value ? '...' : 'Stars'
+  if (starCount.value === null) return 'Stars'
 
   return Intl.NumberFormat('en', {
     notation: 'compact',
     maximumFractionDigits: 1,
   }).format(starCount.value)
 })
+const showStarCountSkeleton = computed(() => starCount.value === null && isStarCountLoading.value)
 const starLinkLabel = computed(() =>
   starCount.value === null
     ? 'Open Holy Grail GitHub repository stars'
@@ -160,7 +161,12 @@ onMounted(() => {
         :aria-label="starLinkLabel"
       >
         <GitHubMark class="h-4 w-4" />
-        <span class="github-star-count">{{ formattedStarCount }}</span>
+        <span
+          v-if="showStarCountSkeleton"
+          class="github-star-count-skeleton hg-skeleton"
+          aria-hidden="true"
+        ></span>
+        <span v-else class="github-star-count">{{ formattedStarCount }}</span>
         <Star class="github-star-icon h-4 w-4 fill-yellow-500 text-yellow-500" />
       </a>
 
@@ -272,6 +278,13 @@ onMounted(() => {
 
 .github-star-count {
   animation: count-rise 480ms ease both;
+}
+
+.github-star-count-skeleton {
+  display: inline-block;
+  height: 0.875rem;
+  width: 2.5rem;
+  border-radius: 9999px;
 }
 
 .github-star-icon {
