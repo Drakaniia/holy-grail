@@ -59,12 +59,12 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: getliner
-    name: Liner | AI Copilot
-    description: Liner | AI Copilot bookmarked for ai research resources.
+    name: Liner
+    description: Liner bookmarked for ai research resources.
     stars: 0
     addedDaysAgo: 0
     verified: false
-    website: https://getliner.com/
+    website: https://liner.com/
   - slug: designprompts
     name: Design Prompts - AI-Powered Design Style Explorer
     description: Design Prompts - AI-Powered Design Style Explorer bookmarked for prompts resources.

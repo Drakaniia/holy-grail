@@ -10613,8 +10613,8 @@
   },
   {
     "slug": "getliner",
-    "name": "Liner | AI Copilot",
-    "description": "Liner | AI Copilot bookmarked for ai research resources.",
+    "name": "Liner",
+    "description": "Liner bookmarked for ai research resources.",
     "category": "AI Research",
     "parentCategory": "ai",
     "subcategory": "research",
@@ -10634,8 +10634,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://getliner.com/",
-    "docs": "https://getliner.com/",
+    "website": "https://liner.com/",
+    "docs": "https://liner.com/",
     "sourceCode": "",
     "icon": "getliner",
     "verified": false,
@@ -10645,12 +10645,12 @@
       "ai",
       "research"
     ],
-    "atGlance": "Liner | AI Copilot",
-    "fullDescription": "Liner - AI Copilot is kept as an ai research resource for AI-assisted workflows.",
+    "atGlance": "Liner",
+    "fullDescription": "Liner is kept as an ai research resource for AI-assisted workflows.",
     "coreFeatures": [
       {
         "name": "AI Workflow Support",
-        "description": "Liner - AI Copilot is tracked as an ai research resource for AI-assisted workflows.",
+        "description": "Liner is tracked as an ai research resource for AI-assisted workflows.",
         "icon": "check"
       },
       {
@@ -10787,12 +10787,12 @@
     "similarTools": [
       {
         "slug": "getliner",
-        "name": "Liner | AI Copilot",
-        "description": "Liner | AI Copilot bookmarked for ai research resources.",
+        "name": "Liner",
+        "description": "Liner bookmarked for ai research resources.",
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://getliner.com/"
+        "website": "https://liner.com/"
       },
       {
         "slug": "designprompts",
@@ -10888,12 +10888,12 @@
     "similarTools": [
       {
         "slug": "getliner",
-        "name": "Liner | AI Copilot",
-        "description": "Liner | AI Copilot bookmarked for ai research resources.",
+        "name": "Liner",
+        "description": "Liner bookmarked for ai research resources.",
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://getliner.com/"
+        "website": "https://liner.com/"
       },
       {
         "slug": "perplexity",
@@ -16580,6 +16580,110 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://impeccable.style/"
+      }
+    ]
+  },
+  {
+    "slug": "postspark",
+    "name": "PostSpark",
+    "description": "Screenshot editor for mockups, annotations, browser frames, and social visuals.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://postspark.app/",
+    "docs": "https://postspark.app/",
+    "sourceCode": "",
+    "icon": "postspark",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "screenshot",
+      "mockup"
+    ],
+    "atGlance": "Screenshot editor for polished mockups and social graphics.",
+    "fullDescription": "PostSpark is a web-based screenshot editor for turning images, websites, code snippets, and social posts into polished mockups with backgrounds, annotations, browser frames, effects, and export-ready visuals.",
+    "coreFeatures": [
+      {
+        "name": "Screenshot Editor",
+        "description": "Adds backgrounds, browser frames, effects, and layouts around screenshots and images.",
+        "icon": "check"
+      },
+      {
+        "name": "Annotation Workflow",
+        "description": "Supports visual callouts such as text, arrows, stickers, and drawing tools.",
+        "icon": "check"
+      },
+      {
+        "name": "Social Mockups",
+        "description": "Creates presentation-ready images, videos, and animations for social and marketing use.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Runs from the saved web link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Code Screenshots",
+        "description": "Includes a dedicated generator for styled code snippet images.",
+        "icon": "check"
+      },
+      {
+        "name": "Extension Support",
+        "description": "Offers companion app and extension workflows for faster screenshot capture.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "screenshot-studio",
+        "name": "Screenshot Studio - Free Screenshot Editor Online | Create Stunning Graphics",
+        "description": "Screenshot Studio - Free Screenshot Editor Online | Create Stunning Graphics bookmarked for design tools resources.",
+        "stars": 670,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.screenshot-studio.com/"
+      },
+      {
+        "slug": "rotato",
+        "name": "Mockup Generator & Animator 3D | Rotato",
+        "description": "Mockup Generator & Animator 3D | Rotato bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://rotato.app/"
+      },
+      {
+        "slug": "mockupworld",
+        "name": "Mockup World | The best free Mockups from the Web",
+        "description": "Mockup World | The best free Mockups from the Web bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.mockupworld.co/"
       }
     ]
   },

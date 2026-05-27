@@ -1,6 +1,6 @@
 slug: getliner
-name: Liner | AI Copilot
-description: Liner | AI Copilot bookmarked for ai research resources.
+name: Liner
+description: Liner bookmarked for ai research resources.
 category: AI Research
 parentCategory: ai
 subcategory: research
@@ -18,8 +18,8 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://getliner.com/
-docs: https://getliner.com/
+website: https://liner.com/
+docs: https://liner.com/
 sourceCode: ""
 icon: getliner
 verified: false
@@ -28,11 +28,11 @@ tags:
   - bookmark
   - ai
   - research
-atGlance: Liner | AI Copilot
-fullDescription: Liner - AI Copilot is kept as an ai research resource for AI-assisted workflows.
+atGlance: Liner
+fullDescription: Liner is kept as an ai research resource for AI-assisted workflows.
 coreFeatures:
   - name: AI Workflow Support
-    description: Liner - AI Copilot is tracked as an ai research resource for AI-assisted workflows.
+    description: Liner is tracked as an ai research resource for AI-assisted workflows.
     icon: check
   - name: Direct Web Launch
     description: The live product is available from the saved website link.

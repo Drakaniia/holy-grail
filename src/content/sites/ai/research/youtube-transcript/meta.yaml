@@ -53,12 +53,12 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: getliner
-    name: Liner | AI Copilot
-    description: Liner | AI Copilot bookmarked for ai research resources.
+    name: Liner
+    description: Liner bookmarked for ai research resources.
     stars: 0
     addedDaysAgo: 0
     verified: false
-    website: https://getliner.com/
+    website: https://liner.com/
   - slug: perplexity
     name: Perplexity
     description: Perplexity bookmarked for ai chat resources.
