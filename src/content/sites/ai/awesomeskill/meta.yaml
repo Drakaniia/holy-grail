@@ -1,0 +1,75 @@
+slug: awesomeskill
+name: Awesome Skills
+description: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: null
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://awesomeskill.ai/
+docs: https://awesomeskill.ai/
+sourceCode: ""
+icon: awesomeskill
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - marketplace
+atGlance: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
+fullDescription: >-
+  Awesome Skills is kept as an AI agent skills marketplace for discovering reusable SKILL.md
+  workflows, prompts, MCP tools, and agent templates.
+coreFeatures:
+  - name: Agent Skill Discovery
+    description: Browse reusable agent skills for Claude Code, OpenAI Codex, ChatGPT, and related AI workflows.
+    icon: check
+  - name: Marketplace Browsing
+    description: The catalog groups open-source skills and templates for faster tool discovery.
+    icon: check
+additionalFeatures:
+  - name: Direct Web Launch
+    description: The live marketplace is available from the saved website link.
+    icon: check
+  - name: Skill Metadata
+    description: Listings focus on reusable SKILL.md files, productivity workflows, prompts, and agent templates.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged with AI, agent, and skills labels for search and browsing.
+    icon: check
+similarTools:
+  - slug: skills-sh
+    name: Skills
+    description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+    stars: 19541
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skills.sh/
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/
+  - slug: autoskills
+    name: AutoSkills
+    description: Agent skills resource for creating and managing AI coding capabilities.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.autoskills.sh/
