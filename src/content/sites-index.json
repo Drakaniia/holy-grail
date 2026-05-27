@@ -1498,6 +1498,106 @@
     ]
   },
   {
+    "slug": "chakra-ui",
+    "name": "Chakra UI",
+    "description": "Simple, modular, and accessible UI components for React applications.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 40413,
+    "watchers": 196,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "1 day ago",
+    "lastRelease": "1 month ago",
+    "version": "@chakra-ui/charts@3.35.0",
+    "contributors": 799,
+    "commitsThisYear": 175,
+    "releases": 3592,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://chakra-ui.com/",
+    "docs": "https://chakra-ui.com/docs",
+    "sourceCode": "https://github.com/chakra-ui/chakra-ui",
+    "icon": "chakra-ui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "components"
+    ],
+    "atGlance": "Simple, modular, and accessible UI components for React applications.",
+    "fullDescription": "Chakra UI is kept as a UI component and design system reference for building accessible React interfaces with composable components and styling primitives.",
+    "coreFeatures": [
+      {
+        "name": "Component Resource",
+        "description": "Chakra UI is tracked as a React UI component and design system resource.",
+        "icon": "check"
+      },
+      {
+        "name": "Accessibility Focus",
+        "description": "Documentation and source links provide implementation patterns for accessible components.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Design System Fit",
+        "description": "Useful for comparing component styles, theming, and interaction patterns.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Friendly",
+        "description": "Source code and documentation are linked for implementation reference.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Grouped with similar UI libraries for discovery.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Framer | Motion for React (prev Framer Motion)",
+        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/docs/framer"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
+        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
     "slug": "motion",
     "name": "Framer | Motion for React (prev Framer Motion)",
     "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
@@ -6747,6 +6847,105 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://www.gumloop.com/"
+      }
+    ]
+  },
+  {
+    "slug": "awesomeskill",
+    "name": "Awesome Skills",
+    "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": null,
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://awesomeskill.ai/",
+    "docs": "https://awesomeskill.ai/",
+    "sourceCode": "",
+    "icon": "awesomeskill",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "marketplace"
+    ],
+    "atGlance": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+    "fullDescription": "Awesome Skills is kept as an AI agent skills marketplace for discovering reusable SKILL.md workflows, prompts, MCP tools, and agent templates.",
+    "coreFeatures": [
+      {
+        "name": "Agent Skill Discovery",
+        "description": "Browse reusable agent skills for Claude Code, OpenAI Codex, ChatGPT, and related AI workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Marketplace Browsing",
+        "description": "The catalog groups open-source skills and templates for faster tool discovery.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Direct Web Launch",
+        "description": "The live marketplace is available from the saved website link.",
+        "icon": "check"
+      },
+      {
+        "name": "Skill Metadata",
+        "description": "Listings focus on reusable SKILL.md files, productivity workflows, prompts, and agent templates.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged with AI, agent, and skills labels for search and browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      },
+      {
+        "slug": "autoskills",
+        "name": "AutoSkills",
+        "description": "Agent skills resource for creating and managing AI coding capabilities.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.autoskills.sh/"
       }
     ]
   },

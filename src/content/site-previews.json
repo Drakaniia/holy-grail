@@ -225,6 +225,15 @@
     "height": 600,
     "bytes": 47350
   },
+  "awesomeskill": {
+    "image": "/previews/awesomeskill.webp",
+    "small": "/previews/awesomeskill-sm.webp",
+    "sourceUrl": "https://awesomeskill.ai/",
+    "capturedAt": "2026-05-27T03:18:17.542Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 37136
+  },
   "aws": {
     "image": "/previews/aws.webp",
     "small": "/previews/aws-sm.webp",
@@ -387,6 +396,15 @@
     "width": 960,
     "height": 600,
     "bytes": 43862
+  },
+  "chakra-ui": {
+    "image": "/previews/chakra-ui.webp",
+    "small": "/previews/chakra-ui-sm.webp",
+    "sourceUrl": "https://chakra-ui.com/",
+    "capturedAt": "2026-05-27T03:18:15.153Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23534
   },
   "chanhdai-components": {
     "image": "/previews/chanhdai-components.webp",

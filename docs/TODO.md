@@ -37,8 +37,3 @@
 ## Addition
 
 - Make the
-
-## Links To Review
-
-- https://awesomeskill.ai
-- https://chakra-ui.com
