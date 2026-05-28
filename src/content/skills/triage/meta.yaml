@@ -1,0 +1,20 @@
+title: Triage
+slug: triage
+description: Triage issues through a state machine for incoming bugs, feature requests, agent-ready work, and workflow labels.
+category: Development
+tags:
+  - mattpocock
+  - issues
+  - triage
+  - workflow
+  - engineering
+views: 109000
+uses: 9600
+author: mattpocock
+authorName: Matt Pocock
+repoLink: mattpocock/skills
+skillPath: skills/engineering/triage
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-28'

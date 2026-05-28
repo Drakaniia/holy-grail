@@ -1,0 +1,21 @@
+title: shadcn/ui
+slug: shadcn-ui
+description: Official project-aware guidance for adding, searching, styling, composing, and updating shadcn/ui components with the shadcn CLI.
+category: Design
+tags:
+  - shadcn
+  - shadcn-ui
+  - components
+  - tailwind
+  - registry
+  - ui
+views: 115000
+uses: 1200
+author: shadcn-ui
+authorName: shadcn/ui
+repoLink: shadcn-ui/ui
+skillPath: skills/shadcn
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-28'

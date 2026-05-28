@@ -1,0 +1,20 @@
+title: To PRD
+slug: to-prd
+description: Turn current conversation and codebase context into a PRD and publish it to the project issue tracker.
+category: Development
+tags:
+  - mattpocock
+  - prd
+  - planning
+  - issues
+  - engineering
+views: 109000
+uses: 9600
+author: mattpocock
+authorName: Matt Pocock
+repoLink: mattpocock/skills
+skillPath: skills/engineering/to-prd
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-28'

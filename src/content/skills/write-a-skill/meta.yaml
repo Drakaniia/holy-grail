@@ -1,0 +1,20 @@
+title: Write a Skill
+slug: write-a-skill
+description: Create new agent skills with clear structure, progressive disclosure, resources, and validation guidance.
+category: Development
+tags:
+  - mattpocock
+  - productivity
+  - skills
+  - documentation
+  - agents
+views: 109000
+uses: 9600
+author: mattpocock
+authorName: Matt Pocock
+repoLink: mattpocock/skills
+skillPath: skills/productivity/write-a-skill
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-28'

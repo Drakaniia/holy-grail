@@ -1,0 +1,20 @@
+title: Zoom Out
+slug: zoom-out
+description: Ask the agent for broader context and a higher-level map of unfamiliar code using the project domain vocabulary.
+category: Development
+tags:
+  - mattpocock
+  - codebase
+  - architecture
+  - context
+  - engineering
+views: 109000
+uses: 9600
+author: mattpocock
+authorName: Matt Pocock
+repoLink: mattpocock/skills
+skillPath: skills/engineering/zoom-out
+branch: main
+addedBy: Qwenzy
+featured: false
+dateAdded: '2026-05-28'
