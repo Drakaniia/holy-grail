@@ -1,0 +1,79 @@
+slug: shark-ui
+name: Shark UI
+description: Accessible 90+ component set for building reusable design systems.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 34
+watchers: 2
+addedDaysAgo: 0
+license: MIT
+lastCommit: just now
+lastRelease: No releases
+version: ""
+contributors: 3
+commitsThisYear: 151
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://shark.vini.one/
+docs: https://shark.vini.one/docs/installation
+sourceCode: https://github.com/vinihvc/shark-ui
+icon: shark-ui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - components
+  - design-system
+atGlance: Accessible 90+ component set for reusable design systems.
+fullDescription: >-
+  Shark UI is a component library reference for teams building reusable, scalable design
+  systems with accessible components across modern web frameworks.
+coreFeatures:
+  - name: Component Catalog
+    description: Provides 90+ accessible components for application UI and design systems.
+    icon: check
+  - name: Multi-framework Reference
+    description: The catalog shows React, Solid, Vue, and Svelte support from the live docs.
+    icon: check
+  - name: Agent Context
+    description: Includes documentation and skills context for AI-assisted UI implementation.
+    icon: check
+additionalFeatures:
+  - name: Theme Tools
+    description: Includes themes, styling notes, color references, and component examples.
+    icon: check
+  - name: Developer Friendly
+    description: Source code is linked for deeper implementation review.
+    icon: check
+  - name: Catalog Tags
+    description: Grouped with similar UI libraries for discovery.
+    icon: check
+similarTools:
+  - slug: park-ui
+    name: Park UI
+    description: Multi-framework design system components built with Ark UI and Panda CSS.
+    stars: 2315
+    addedDaysAgo: 0
+    verified: true
+    website: https://park-ui.com/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: headlessui
+    name: Headless UI - Unstyled, fully accessible UI components
+    description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+    stars: 28559
+    addedDaysAgo: 0
+    verified: true
+    website: https://headlessui.com/

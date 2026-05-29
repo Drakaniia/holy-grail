@@ -85,4 +85,4 @@ Strict mode with `noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSw
 No test framework is configured. Do not introduce one without asking.
 
 ## Skills
-Available opencode skills: `bun`, `caveman`, `diagnose`, `frontend-design`, `grill-me`, `grill-with-docs`, `handoff`, `improve-codebase-architecture`, `oxlint`, `prototype`, `setup-matt-pocock-skills`, `supabase`, `supabase-postgres-best-practices`, `tdd`, `to-issues`, `to-prd`, `triage`, `typescript-advanced-types`, `vite`, `vue`, `vue-best-practices`, `vue-debug-guides`, `vue-pinia-best-practices`, `web-design-guidelines`, `write-a-skill`, `zoom-out`. Read relevant skills before implementing.
+Available opencode skills: `bun`, `caveman`, `diagnose`, `frontend-design`, `improve-codebase-architecture`, `oxlint`, `supabase`, `supabase-postgres-best-practices`, `tdd`, `to-prd`, `typescript-advanced-types`, `vite`, `vue`, `vue-best-practices`, `vue-debug-guides`, `vue-pinia-best-practices`, `web-design-guidelines`, `write-a-skill`, `zoom-out`. Read relevant skills before implementing.

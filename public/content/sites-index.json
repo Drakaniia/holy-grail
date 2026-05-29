@@ -3179,6 +3179,113 @@
     ]
   },
   {
+    "slug": "mapcn",
+    "name": "mapcn",
+    "description": "Copy-paste React map components built on MapLibre and Tailwind CSS.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 9498,
+    "watchers": 35,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "1 month ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 2,
+    "commitsThisYear": 58,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.mapcn.dev/",
+    "docs": "https://www.mapcn.dev/docs",
+    "sourceCode": "https://github.com/AnmolSaini16/mapcn",
+    "icon": "mapcn",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "maps",
+      "maplibre",
+      "tailwind",
+      "shadcn"
+    ],
+    "atGlance": "Copy-paste React map components built on MapLibre and Tailwind CSS.",
+    "fullDescription": "mapcn is a React map component library that follows the shadcn copy-paste model, using MapLibre GL and Tailwind CSS to make maps fit naturally into design systems.",
+    "coreFeatures": [
+      {
+        "name": "Map Components",
+        "description": "Provides ready-to-use map components and blocks for React projects.",
+        "icon": "check"
+      },
+      {
+        "name": "MapLibre Foundation",
+        "description": "Builds on MapLibre GL while keeping access to the underlying map instance.",
+        "icon": "check"
+      },
+      {
+        "name": "Tailwind Styling",
+        "description": "Uses Tailwind CSS patterns that fit shadcn-style application interfaces.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Zero Config Defaults",
+        "description": "Ships with free basemap defaults and no API key requirement for first use.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-paste Ownership",
+        "description": "Components can be added to an app and customized directly.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Friendly",
+        "description": "Source code and docs are linked for setup and implementation review.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "park-ui",
+        "name": "Park UI",
+        "description": "Multi-framework design system components built with Ark UI and Panda CSS.",
+        "stars": 2315,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://park-ui.com/"
+      },
+      {
+        "slug": "shark-ui",
+        "name": "Shark UI",
+        "description": "Accessible 90+ component set for building reusable design systems.",
+        "stars": 34,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://shark.vini.one/"
+      }
+    ]
+  },
+  {
     "slug": "shadcn-svelte",
     "name": "Introduction - shadcn-svelte",
     "description": "Introduction - shadcn-svelte bookmarked for ui library resources.",
@@ -3872,6 +3979,112 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "park-ui",
+    "name": "Park UI",
+    "description": "Multi-framework design system components built with Ark UI and Panda CSS.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 2315,
+    "watchers": 10,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "1 month ago",
+    "lastRelease": "1 year ago",
+    "version": "@park-ui/panda-preset@0.43.1",
+    "contributors": 31,
+    "commitsThisYear": 8,
+    "releases": 44,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://park-ui.com/",
+    "docs": "https://park-ui.com/docs",
+    "sourceCode": "https://github.com/chakra-ui/park-ui",
+    "icon": "park-ui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "ark-ui",
+      "panda-css",
+      "design-system"
+    ],
+    "atGlance": "Multi-framework design system components built with Ark UI and Panda CSS.",
+    "fullDescription": "Park UI is a UI component and design system reference with accessible components built on Ark UI and Panda CSS for React, Solid, and other JavaScript frameworks.",
+    "coreFeatures": [
+      {
+        "name": "Design System Components",
+        "description": "Provides accessible, styled components for building custom design systems.",
+        "icon": "check"
+      },
+      {
+        "name": "Framework Coverage",
+        "description": "Supports multiple JavaScript frameworks from the same component system.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Reference",
+        "description": "Source code is available for inspecting implementation and distribution patterns.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Ark UI Foundation",
+        "description": "Uses Ark UI primitives for accessibility and interaction behavior.",
+        "icon": "check"
+      },
+      {
+        "name": "Panda CSS Styling",
+        "description": "Demonstrates recipe-driven styling patterns with Panda CSS.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Grouped with similar UI libraries for discovery.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "shark-ui",
+        "name": "Shark UI",
+        "description": "Accessible 90+ component set for building reusable design systems.",
+        "stars": 34,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://shark.vini.one/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "headlessui",
+        "name": "Headless UI - Unstyled, fully accessible UI components",
+        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "stars": 28559,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://headlessui.com/"
       }
     ]
   },
@@ -5974,6 +6187,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "shark-ui",
+    "name": "Shark UI",
+    "description": "Accessible 90+ component set for building reusable design systems.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 34,
+    "watchers": 2,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "just now",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 3,
+    "commitsThisYear": 151,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://shark.vini.one/",
+    "docs": "https://shark.vini.one/docs/installation",
+    "sourceCode": "https://github.com/vinihvc/shark-ui",
+    "icon": "shark-ui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "components",
+      "design-system"
+    ],
+    "atGlance": "Accessible 90+ component set for reusable design systems.",
+    "fullDescription": "Shark UI is a component library reference for teams building reusable, scalable design systems with accessible components across modern web frameworks.",
+    "coreFeatures": [
+      {
+        "name": "Component Catalog",
+        "description": "Provides 90+ accessible components for application UI and design systems.",
+        "icon": "check"
+      },
+      {
+        "name": "Multi-framework Reference",
+        "description": "The catalog shows React, Solid, Vue, and Svelte support from the live docs.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Context",
+        "description": "Includes documentation and skills context for AI-assisted UI implementation.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Theme Tools",
+        "description": "Includes themes, styling notes, color references, and component examples.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Friendly",
+        "description": "Source code is linked for deeper implementation review.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Grouped with similar UI libraries for discovery.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "park-ui",
+        "name": "Park UI",
+        "description": "Multi-framework design system components built with Ark UI and Panda CSS.",
+        "stars": 2315,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://park-ui.com/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "headlessui",
+        "name": "Headless UI - Unstyled, fully accessible UI components",
+        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "stars": 28559,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://headlessui.com/"
       }
     ]
   },
@@ -16874,6 +17192,112 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://rotato.app/"
+      },
+      {
+        "slug": "mockupworld",
+        "name": "Mockup World | The best free Mockups from the Web",
+        "description": "Mockup World | The best free Mockups from the Web bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.mockupworld.co/"
+      }
+    ]
+  },
+  {
+    "slug": "postspark-device-mockup",
+    "name": "PostSpark Device Mockup",
+    "description": "Device mockup generator for app and website screenshots, videos, and animations.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://postspark.app/device-mockup",
+    "docs": "https://postspark.app/device-mockup",
+    "sourceCode": "",
+    "icon": "postspark-device-mockup",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "tools",
+      "screenshot",
+      "mockup",
+      "device-mockup"
+    ],
+    "atGlance": "Device mockup generator for app and website screenshots.",
+    "fullDescription": "PostSpark Device Mockup is a web-based generator for placing app and website screenshots into phone, tablet, laptop, and monitor frames with layouts, colors, videos, and animations.",
+    "coreFeatures": [
+      {
+        "name": "Device Frames",
+        "description": "Offers phone, tablet, laptop, desktop, and monitor mockups for product visuals.",
+        "icon": "check"
+      },
+      {
+        "name": "Layout Templates",
+        "description": "Includes multiple layouts for single-image and multi-image mockup compositions.",
+        "icon": "check"
+      },
+      {
+        "name": "Motion Ready",
+        "description": "Supports video and animation workflows for social and marketing exports.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Runs from the saved web link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Custom Styling",
+        "description": "Supports color and presentation controls for branded mockup output.",
+        "icon": "check"
+      },
+      {
+        "name": "Related PostSpark Tools",
+        "description": "Connects to PostSpark screenshot, code, and social post generators.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "postspark",
+        "name": "PostSpark",
+        "description": "Screenshot editor for mockups, annotations, browser frames, and social visuals.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://postspark.app/"
+      },
+      {
+        "slug": "screenshot-studio",
+        "name": "Screenshot Studio - Free Screenshot Editor Online | Create Stunning Graphics",
+        "description": "Screenshot Studio - Free Screenshot Editor Online | Create Stunning Graphics bookmarked for design tools resources.",
+        "stars": 670,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.screenshot-studio.com/"
       },
       {
         "slug": "mockupworld",

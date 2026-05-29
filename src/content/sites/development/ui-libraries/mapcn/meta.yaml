@@ -1,0 +1,81 @@
+slug: mapcn
+name: mapcn
+description: Copy-paste React map components built on MapLibre and Tailwind CSS.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 9498
+watchers: 35
+addedDaysAgo: 0
+license: MIT
+lastCommit: 1 month ago
+lastRelease: No releases
+version: ""
+contributors: 2
+commitsThisYear: 58
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.mapcn.dev/
+docs: https://www.mapcn.dev/docs
+sourceCode: https://github.com/AnmolSaini16/mapcn
+icon: mapcn
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - maps
+  - maplibre
+  - tailwind
+  - shadcn
+atGlance: Copy-paste React map components built on MapLibre and Tailwind CSS.
+fullDescription: >-
+  mapcn is a React map component library that follows the shadcn copy-paste model,
+  using MapLibre GL and Tailwind CSS to make maps fit naturally into design systems.
+coreFeatures:
+  - name: Map Components
+    description: Provides ready-to-use map components and blocks for React projects.
+    icon: check
+  - name: MapLibre Foundation
+    description: Builds on MapLibre GL while keeping access to the underlying map instance.
+    icon: check
+  - name: Tailwind Styling
+    description: Uses Tailwind CSS patterns that fit shadcn-style application interfaces.
+    icon: check
+additionalFeatures:
+  - name: Zero Config Defaults
+    description: Ships with free basemap defaults and no API key requirement for first use.
+    icon: check
+  - name: Copy-paste Ownership
+    description: Components can be added to an app and customized directly.
+    icon: check
+  - name: Developer Friendly
+    description: Source code and docs are linked for setup and implementation review.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: park-ui
+    name: Park UI
+    description: Multi-framework design system components built with Ark UI and Panda CSS.
+    stars: 2315
+    addedDaysAgo: 0
+    verified: true
+    website: https://park-ui.com/
+  - slug: shark-ui
+    name: Shark UI
+    description: Accessible 90+ component set for building reusable design systems.
+    stars: 34
+    addedDaysAgo: 0
+    verified: true
+    website: https://shark.vini.one/
