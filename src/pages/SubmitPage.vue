@@ -20,6 +20,7 @@ import { useToastStore } from '@/stores/toast'
 
 const auth = useAuthStore()
 const toast = useToastStore()
+void auth.initialize()
 
 type PublishStep = 'source' | 'details' | 'review'
 type ResourceType = 'site' | 'skill'
@@ -132,6 +133,7 @@ const selectedCategoryOptions = computed(() => CATEGORY_OPTIONS[resourceType.val
 const resourceTypeLabel = computed(() =>
   RESOURCE_TYPES.find(option => option.value === resourceType.value)?.label ?? 'Resource',
 )
+const showAnonymousSubmitNotice = computed(() => auth.initialized && !auth.isAuthenticated)
 
 const sourceError = computed(() => {
   const trimmedUrl = url.value.trim()
@@ -352,6 +354,24 @@ function resetForm() {
       </div>
 
       <template v-else>
+        <div
+          v-if="showAnonymousSubmitNotice"
+          class="anonymous-submit-notice mb-6 flex gap-3 border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm leading-6 text-amber-100"
+        >
+          <AlertCircle class="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-300" />
+          <span>
+            You are submitting while not logged in. The submission will still go to admin review,
+            but it will not be attached to your account.
+            <RouterLink
+              :to="{ name: 'login', query: { redirect: '/publish' } }"
+              class="font-semibold underline hover:text-white"
+            >
+              Sign in first
+            </RouterLink>
+            to link it to your profile.
+          </span>
+        </div>
+
         <PublishStepIndicator
           class="mb-6"
           :steps="PUBLISH_STEPS"
@@ -535,20 +555,6 @@ function resetForm() {
                   :category="category"
                   :submitter-note="submitterNote"
                 />
-
-                <div
-                  v-if="!auth.isAuthenticated"
-                  class="anonymous-submit-notice mt-5 flex gap-3 border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm leading-6 text-amber-100"
-                >
-                  <Sparkles class="mt-0.5 h-4 w-4 flex-shrink-0 text-amber-300" />
-                  <span>
-                    You're publishing anonymously.
-                    <RouterLink to="/login" class="ml-1 font-semibold underline hover:text-white">
-                      Sign in
-                    </RouterLink>
-                    to attach your account to the submission.
-                  </span>
-                </div>
               </section>
             </Transition>
 
