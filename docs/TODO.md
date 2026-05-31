@@ -31,7 +31,6 @@
   - Add recently visited items.
   - Add filters for recently added items.
   - Add site requests.
-  - instead of loading text. make it a skeleton loaders.
   -  Add noted in submit page that you submitting but not yet logged in
 
   ## Addition
