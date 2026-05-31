@@ -6,6 +6,8 @@ import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
 import { useAuthStore } from '@/stores/auth'
 
 export type SubmissionStatus = 'pending' | 'approved' | 'rejected'
+export type SiteIssueStatus = 'open' | 'resolved' | 'ignored'
+export type SiteIssueType = 'down' | 'deprecated' | 'wrong-url' | 'other'
 export type AnalyticsRange = 7 | 30 | 90 | 'all'
 export type AnalyticsEventType =
   | 'page_view'
@@ -26,6 +28,21 @@ export interface Submission {
   status: SubmissionStatus
   reviewed_by: string | null
   reviewed_at: string | null
+  created_at: string
+}
+
+export interface SiteIssueReport {
+  id: string
+  slug: string
+  name: string
+  url: string
+  category: string | null
+  issue_type: SiteIssueType
+  note: string | null
+  reporter_email: string | null
+  status: SiteIssueStatus
+  resolved_by: string | null
+  resolved_at: string | null
   created_at: string
 }
 
@@ -107,6 +124,8 @@ interface OptionalAdminCounts {
 
 const SUBMISSION_COLUMNS =
   'id,name,url,description,category,submitter_note,submitted_by,submitted_by_email,status,reviewed_by,reviewed_at,created_at'
+const SITE_ISSUE_COLUMNS =
+  'id,slug,name,url,category,issue_type,note,reporter_email,status,resolved_by,resolved_at,created_at'
 const ANALYTICS_EVENT_COLUMNS =
   'id,event_type,session_id,user_id,route_path,route_name,resource_type,resource_slug,target_url,search_query,device_type,browser_family,referrer_host,created_at'
 const ANALYTICS_SETTINGS_COLUMNS =
@@ -316,14 +335,17 @@ function buildAnalyticsSummary(events: AnalyticsEvent[], range: AnalyticsRange):
  */
 export const useAdminStore = defineStore('admin', () => {
   const submissions = ref<Submission[]>([])
+  const siteIssueReports = ref<SiteIssueReport[]>([])
   const analyticsEvents = ref<AnalyticsEvent[]>([])
   const analyticsSettings = ref<AnalyticsSettings>({ ...DEFAULT_ANALYTICS_SETTINGS })
   const optionalCounts = ref<OptionalAdminCounts>({ bookmarks: null })
   const loading = shallowRef(false)
+  const loadingSiteIssues = shallowRef(false)
   const loadingAnalytics = shallowRef(false)
   const loadingSettings = shallowRef(false)
   const purgingAnalytics = shallowRef(false)
   const actionError = shallowRef<string | null>(null)
+  const siteIssueError = shallowRef<string | null>(null)
   const analyticsError = shallowRef<string | null>(null)
   const settingsError = shallowRef<string | null>(null)
   const analyticsRange = shallowRef<AnalyticsRange>(30)
@@ -340,6 +362,21 @@ export const useAdminStore = defineStore('admin', () => {
   )
   const rejectedCount = computed(
     () => submissions.value.filter(submission => submission.status === 'rejected').length,
+  )
+  const openSiteIssueCount = computed(
+    () => siteIssueReports.value.filter(report => report.status === 'open').length,
+  )
+  const legacySiteIssueCount = computed(
+    () =>
+      siteIssueReports.value.filter(
+        report => report.status === 'open' && report.issue_type === 'deprecated',
+      ).length,
+  )
+  const resolvedSiteIssueCount = computed(
+    () => siteIssueReports.value.filter(report => report.status === 'resolved').length,
+  )
+  const ignoredSiteIssueCount = computed(
+    () => siteIssueReports.value.filter(report => report.status === 'ignored').length,
   )
   const analyticsSummary = computed(() =>
     buildAnalyticsSummary(analyticsEvents.value, analyticsRange.value),
@@ -376,6 +413,42 @@ export const useAdminStore = defineStore('admin', () => {
       return { ok: false, message }
     } finally {
       loading.value = false
+    }
+  }
+
+  async function loadSiteIssueReports(
+    statusFilter?: SiteIssueStatus,
+  ): Promise<AdminActionResult> {
+    if (!supabase) {
+      siteIssueError.value = 'Supabase is not configured.'
+      return { ok: false, message: siteIssueError.value }
+    }
+
+    loadingSiteIssues.value = true
+    siteIssueError.value = null
+
+    try {
+      let query = supabase
+        .from('site_issue_reports')
+        .select(SITE_ISSUE_COLUMNS)
+        .order('created_at', { ascending: false })
+
+      if (statusFilter) {
+        query = query.eq('status', statusFilter)
+      }
+
+      const { data, error } = await query
+
+      if (error) throw error
+
+      siteIssueReports.value = (data ?? []) as SiteIssueReport[]
+      return { ok: true }
+    } catch (err) {
+      const message = getSupabaseErrorMessage(err)
+      siteIssueError.value = message
+      return { ok: false, message }
+    } finally {
+      loadingSiteIssues.value = false
     }
   }
 
@@ -622,6 +695,80 @@ export const useAdminStore = defineStore('admin', () => {
     }
   }
 
+  async function updateSiteIssueStatus(
+    id: string,
+    status: SiteIssueStatus,
+  ): Promise<AdminActionResult> {
+    if (!supabase) {
+      siteIssueError.value = 'Supabase is not configured.'
+      return { ok: false, message: siteIssueError.value }
+    }
+
+    loadingSiteIssues.value = true
+    siteIssueError.value = null
+
+    try {
+      const resolvedBy = status === 'open' ? null : auth.user?.id ?? null
+      const resolvedAt = status === 'open' ? null : new Date().toISOString()
+      const { data, error } = await supabase
+        .from('site_issue_reports')
+        .update({
+          resolved_at: resolvedAt,
+          resolved_by: resolvedBy,
+          status,
+        })
+        .eq('id', id)
+        .select('id,status,resolved_by,resolved_at')
+        .single()
+
+      if (error) throw error
+      if (!data) throw new Error('Site issue could not be updated.')
+
+      const idx = siteIssueReports.value.findIndex(report => report.id === id)
+      if (idx !== -1) {
+        siteIssueReports.value[idx] = {
+          ...siteIssueReports.value[idx],
+          resolved_at: data.resolved_at,
+          resolved_by: data.resolved_by,
+          status: data.status as SiteIssueStatus,
+        }
+      }
+
+      return { ok: true }
+    } catch (err) {
+      const message = getSupabaseErrorMessage(err)
+      siteIssueError.value = message
+      return { ok: false, message }
+    } finally {
+      loadingSiteIssues.value = false
+    }
+  }
+
+  async function deleteSiteIssueReport(id: string): Promise<AdminActionResult> {
+    if (!supabase) {
+      siteIssueError.value = 'Supabase is not configured.'
+      return { ok: false, message: siteIssueError.value }
+    }
+
+    loadingSiteIssues.value = true
+    siteIssueError.value = null
+
+    try {
+      const { error } = await supabase.from('site_issue_reports').delete().eq('id', id)
+
+      if (error) throw error
+
+      siteIssueReports.value = siteIssueReports.value.filter(report => report.id !== id)
+      return { ok: true }
+    } catch (err) {
+      const message = getSupabaseErrorMessage(err)
+      siteIssueError.value = message
+      return { ok: false, message }
+    } finally {
+      loadingSiteIssues.value = false
+    }
+  }
+
   return {
     actionError,
     analyticsError,
@@ -630,23 +777,33 @@ export const useAdminStore = defineStore('admin', () => {
     analyticsSettings,
     analyticsSummary,
     approvedCount,
+    deleteSiteIssueReport,
     deleteSubmission,
+    ignoredSiteIssueCount,
     isAdmin,
+    legacySiteIssueCount,
     loadAnalytics,
     loadAnalyticsSettings,
     loadOptionalCounts,
+    loadSiteIssueReports,
     loadSubmissions,
     loading,
     loadingAnalytics,
     loadingSettings,
+    loadingSiteIssues,
     optionalCounts,
+    openSiteIssueCount,
     pendingCount,
     purgeOldAnalyticsEvents,
     purgingAnalytics,
     rejectedCount,
+    resolvedSiteIssueCount,
     saveAnalyticsSettings,
     settingsError,
+    siteIssueError,
+    siteIssueReports,
     submissions,
+    updateSiteIssueStatus,
     updateSubmissionStatus,
   }
 })

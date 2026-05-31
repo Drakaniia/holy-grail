@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { onMounted, shallowRef } from 'vue'
 import { useRouter } from 'vue-router'
-import { BarChart3, Inbox, Settings, ShieldAlert } from 'lucide-vue-next'
+import { AlertTriangle, BarChart3, Inbox, Settings, ShieldAlert } from 'lucide-vue-next'
 import AdminAnalyticsPanel from '@/components/admin/AdminAnalyticsPanel.vue'
 import AdminSettingsPanel from '@/components/admin/AdminSettingsPanel.vue'
+import AdminSiteIssuesPanel from '@/components/admin/AdminSiteIssuesPanel.vue'
 import AdminSubmissionsPanel from '@/components/admin/AdminSubmissionsPanel.vue'
 import { useAdminStore } from '@/stores/admin'
 import { useAuthStore } from '@/stores/auth'
@@ -12,12 +13,13 @@ const auth = useAuthStore()
 const admin = useAdminStore()
 const router = useRouter()
 
-type AdminSection = 'analytics' | 'submissions' | 'settings'
+type AdminSection = 'analytics' | 'submissions' | 'site-issues' | 'settings'
 const activeSection = shallowRef<AdminSection>('analytics')
 
 const sections = [
   { icon: BarChart3, label: 'Analytics', value: 'analytics' },
   { icon: Inbox, label: 'Submissions', value: 'submissions' },
+  { icon: AlertTriangle, label: 'Site Issues', value: 'site-issues' },
   { icon: Settings, label: 'Settings', value: 'settings' },
 ] satisfies { icon: typeof BarChart3; label: string; value: AdminSection }[]
 
@@ -35,6 +37,7 @@ onMounted(async () => {
     admin.loadAnalytics(),
     admin.loadAnalyticsSettings(),
     admin.loadOptionalCounts(),
+    admin.loadSiteIssueReports(),
     admin.loadSubmissions(),
   ])
 })
@@ -53,7 +56,8 @@ onMounted(async () => {
               Control room
             </h1>
             <p class="mt-3 max-w-2xl text-sm leading-6 text-gray-400">
-              Monitor visitors, review submissions, and tune analytics collection.
+              Monitor visitors, review submissions, triage broken sites, and tune analytics
+              collection.
             </p>
           </div>
 
@@ -82,6 +86,12 @@ onMounted(async () => {
               >
                 {{ admin.pendingCount }}
               </span>
+              <span
+                v-if="section.value === 'site-issues' && admin.openSiteIssueCount > 0"
+                class="rounded-full bg-red-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+              >
+                {{ admin.openSiteIssueCount }}
+              </span>
             </button>
           </nav>
         </div>
@@ -105,6 +115,7 @@ onMounted(async () => {
       <template v-else>
         <AdminAnalyticsPanel v-if="activeSection === 'analytics'" />
         <AdminSubmissionsPanel v-else-if="activeSection === 'submissions'" />
+        <AdminSiteIssuesPanel v-else-if="activeSection === 'site-issues'" />
         <AdminSettingsPanel v-else />
       </template>
     </div>

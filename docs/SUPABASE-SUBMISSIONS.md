@@ -1,7 +1,7 @@
 # Supabase Submissions
 
 Holy Grail keeps the published catalog in `src/content/**/meta.yaml`. Supabase only stores the
-submission inbox, review status, and admin email notification.
+submission inbox, site issue inbox, review status, and submission email notification.
 
 ## Database
 
@@ -16,6 +16,10 @@ supabase db push
 - `supabase/migrations/20260524000000_harden_submissions.sql` removes direct
   browser inserts and adds the server-side rate limit table/function used by
   the submission Edge Function.
+- `supabase/migrations/20260525000000_add_admin_analytics.sql` adds the
+  analytics settings and event tables used by the admin dashboard.
+- `supabase/migrations/20260531000000_add_site_issue_reports.sql` adds the
+  `public.site_issue_reports` table used by the broken and legacy site dashboard queue.
 
 Admin access is based on server-controlled `app_metadata`, not user-editable
 `user_metadata`:
@@ -77,8 +81,8 @@ supabase functions deploy notify-submission --no-verify-jwt
 
 ## Site Issue Reports
 
-Deploy `supabase/functions/report-site-issue` so catalog visitors can notify the admin when a
-published site is down, unreachable, deprecated, or pointing at the wrong URL:
+Deploy `supabase/functions/report-site-issue` so catalog visitors can add a dashboard report when a
+published site is down, unreachable, deprecated, legacy, or pointing at the wrong URL:
 
 ```bash
 supabase functions deploy report-site-issue --no-verify-jwt
@@ -86,14 +90,13 @@ supabase functions deploy report-site-issue --no-verify-jwt
 
 The app calls this function from each site detail page. The function validates origin, applies the
 same server-side IP rate-limit RPC used by submissions, optionally attaches the signed-in reporter's
-email, and sends the admin a Resend email with both the live URL and `/sites/<slug>` catalog link.
+email, and inserts an open `site_issue_reports` row for `/admin`.
 
-It reuses `RESEND_API_KEY`, `ADMIN_EMAIL`, `SUBMISSION_FROM_EMAIL`, `PUBLIC_SITE_URL`,
-`SUBMISSION_ALLOWED_ORIGINS`, and `SUBMISSION_RATE_LIMIT_SALT` by default. These optional overrides
-can be set when site issue reports need different sender, origins, or rate limits:
+It reuses `PUBLIC_SITE_URL`, `SUBMISSION_ALLOWED_ORIGINS`, and `SUBMISSION_RATE_LIMIT_SALT` by
+default. These optional overrides can be set when site issue reports need different origins or rate
+limits:
 
 ```bash
-supabase secrets set SITE_REPORT_FROM_EMAIL="Holy Grail <reports@your-domain.com>"
 supabase secrets set SITE_REPORT_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
 supabase secrets set SITE_REPORT_RATE_LIMIT_MAX=5
 supabase secrets set SITE_REPORT_RATE_LIMIT_WINDOW_SECONDS=3600

@@ -35,13 +35,6 @@ const DEFAULT_RATE_LIMIT_WINDOW_SECONDS = 60 * 60
 const CORS_ALLOWED_HEADERS = 'authorization, x-client-info, apikey, content-type'
 const CORS_ALLOWED_METHODS = 'POST, OPTIONS'
 
-const ISSUE_LABELS: Record<SiteIssueType, string> = {
-  deprecated: 'Deprecated or no longer maintained',
-  down: 'Website down or not accessible',
-  other: 'Other site issue',
-  'wrong-url': 'Wrong URL',
-}
-
 function readPositiveInteger(name: string, fallback: number) {
   const value = Number(Deno.env.get(name))
   return Number.isInteger(value) && value > 0 ? value : fallback
@@ -199,100 +192,6 @@ function normalizeReport(rawReport: SiteIssuePayload | null, user: User | null) 
   }
 }
 
-function escapeHtml(value: string) {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;')
-}
-
-function getPublicSiteUrl() {
-  const siteUrl = Deno.env.get('PUBLIC_SITE_URL')?.trim()
-  if (siteUrl && !siteUrl.includes('your-real-vercel-app') && !siteUrl.includes('your-vercel-domain')) {
-    return siteUrl
-  }
-
-  return DEFAULT_PUBLIC_SITE_URL
-}
-
-function getCatalogUrl(slug: string) {
-  return new URL(`/sites/${encodeURIComponent(slug)}`, getPublicSiteUrl()).toString()
-}
-
-function buildEmail(report: NormalizedSiteIssueReport) {
-  const issueLabel = ISSUE_LABELS[report.issue_type]
-  const catalogUrl = getCatalogUrl(report.slug)
-  const name = escapeHtml(report.name)
-  const url = escapeHtml(report.url)
-  const safeIssueLabel = escapeHtml(issueLabel)
-  const category = escapeHtml(report.category ?? '')
-  const note = escapeHtml(report.note ?? '')
-  const reporterEmail = escapeHtml(report.reporter_email ?? '')
-  const safeCatalogUrl = escapeHtml(catalogUrl)
-
-  const text = [
-    `Holy Grail site issue: ${report.name}`,
-    '',
-    `Issue: ${issueLabel}`,
-    `URL: ${report.url}`,
-    `Catalog: ${catalogUrl}`,
-    report.category ? `Category: ${report.category}` : null,
-    report.reporter_email ? `Reported by: ${report.reporter_email}` : null,
-    report.note ? `Note: ${report.note}` : null,
-  ].filter(Boolean).join('\n')
-
-  const html = `
-    <div style="font-family:Inter,Arial,sans-serif;color:#111827;line-height:1.5">
-      <p style="margin:0 0 12px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#dc2626">Holy Grail site issue</p>
-      <h1 style="margin:0 0 16px;font-size:22px;line-height:1.2">${name}</h1>
-      <table style="border-collapse:collapse;margin:0 0 18px;width:100%;font-size:14px">
-        <tr><td style="padding:6px 0;color:#6b7280;width:120px">Issue</td><td style="padding:6px 0">${safeIssueLabel}</td></tr>
-        <tr><td style="padding:6px 0;color:#6b7280">URL</td><td style="padding:6px 0"><a href="${url}">${url}</a></td></tr>
-        <tr><td style="padding:6px 0;color:#6b7280">Catalog</td><td style="padding:6px 0"><a href="${safeCatalogUrl}">${safeCatalogUrl}</a></td></tr>
-        ${category ? `<tr><td style="padding:6px 0;color:#6b7280">Category</td><td style="padding:6px 0">${category}</td></tr>` : ''}
-        ${reporterEmail ? `<tr><td style="padding:6px 0;color:#6b7280">Reporter</td><td style="padding:6px 0">${reporterEmail}</td></tr>` : ''}
-        ${note ? `<tr><td style="padding:6px 0;color:#6b7280">Note</td><td style="padding:6px 0">${note}</td></tr>` : ''}
-      </table>
-      <a href="${safeCatalogUrl}" style="display:inline-block;background:#111827;color:#fff;text-decoration:none;padding:10px 14px;font-weight:700">Open catalog page</a>
-    </div>
-  `
-
-  return { html, text }
-}
-
-async function notifyAdmin(report: NormalizedSiteIssueReport) {
-  const resendApiKey = Deno.env.get('RESEND_API_KEY')?.trim()
-  const adminEmail = Deno.env.get('ADMIN_EMAIL')?.trim()
-  const fromEmail =
-    Deno.env.get('SITE_REPORT_FROM_EMAIL')?.trim() ||
-    Deno.env.get('SUBMISSION_FROM_EMAIL')?.trim() ||
-    'Holy Grail <onboarding@resend.dev>'
-
-  if (!resendApiKey || !adminEmail) {
-    return false
-  }
-
-  const email = buildEmail(report)
-  const response = await fetch('https://api.resend.com/emails', {
-    body: JSON.stringify({
-      from: fromEmail,
-      html: email.html,
-      subject: `Holy Grail site issue: ${report.name}`,
-      text: email.text,
-      to: [adminEmail],
-    }),
-    headers: {
-      Authorization: `Bearer ${resendApiKey}`,
-      'Content-Type': 'application/json',
-    },
-    method: 'POST',
-  })
-
-  return response.ok
-}
-
 function getClientIp(req: Request) {
   const forwardedFor = req.headers.get('x-forwarded-for')
     ?.split(',')
@@ -368,6 +267,26 @@ async function checkRateLimit(adminClient: SupabaseClient, req: Request) {
   return data as RateLimitResult
 }
 
+async function saveSiteIssueReport(
+  adminClient: SupabaseClient,
+  report: NormalizedSiteIssueReport,
+) {
+  const { data, error } = await adminClient
+    .from('site_issue_reports')
+    .insert({
+      ...report,
+      status: 'open',
+    })
+    .select('id')
+    .single()
+
+  if (error || !data) {
+    throw error ?? new Error('Site issue report could not be saved.')
+  }
+
+  return data.id as string
+}
+
 Deno.serve(async (req) => {
   const { allowed, headers: corsHeaders } = getCorsHeaders(req.headers.get('origin'))
 
@@ -432,16 +351,16 @@ Deno.serve(async (req) => {
     })
   }
 
-  const notified = await notifyAdmin(normalized.report).catch(() => false)
-  if (!notified) {
-    return jsonResponse({ error: 'Site report email could not be sent.' }, 500, corsHeaders, {
+  const reportId = await saveSiteIssueReport(adminClient, normalized.report).catch(() => null)
+  if (!reportId) {
+    return jsonResponse({ error: 'Site report could not be saved.' }, 500, corsHeaders, {
       'X-RateLimit-Remaining': String(rateLimit.remaining),
     })
   }
 
   return jsonResponse(
     {
-      notified,
+      id: reportId,
       ok: true,
     },
     201,

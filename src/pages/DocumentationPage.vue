@@ -412,8 +412,9 @@ onUnmounted(() => {
         <section id="supabase" class="docs-section">
           <h2>Supabase</h2>
           <p>
-            Supabase stores the submission inbox, review status, rate-limit helpers, and
-            notification workflow. The published catalog remains checked into the repo.
+            Supabase stores the submission inbox, site issue inbox, review status, rate-limit
+            helpers, and submission notification workflow. The published catalog remains checked
+            into the repo.
           </p>
           <DocsCodeBlock label="Database and functions" :code="supabaseCommands" />
           <DocsCodeBlock label="Submission secrets" :code="supabaseSecretCommands" />
@@ -421,6 +422,8 @@ onUnmounted(() => {
             The <code>submit-tool</code> function validates the request origin, applies a
             server-side rate limit, inserts the pending row with service credentials, and
             emails the admin after the row is saved.
+            The <code>report-site-issue</code> function uses the same protected path to create
+            broken, legacy, wrong-URL, and other issue rows for the admin dashboard.
           </p>
         </section>
 
