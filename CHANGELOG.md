@@ -4,6 +4,44 @@ Generated from the full Git history on 2026-05-26. Current head: `77b50cd`.
 
 Totals: 149 commits, 132 direct commits, 17 merge commits.
 
+## v0.1.0 - 2026-05-31 - Site issue queue and catalog controls
+
+### Highlights
+
+- Added a Supabase-backed site issue queue for broken, legacy, wrong-URL, and other reports.
+- Added admin triage for site issue reports with open, resolved, ignored, reopen, and delete actions.
+- Refined the sites catalog controls with clearer sort modes, time-range filtering, and a publish shortcut.
+- Clarified anonymous publishing before review submission.
+- Refreshed UI-library catalog metadata, regenerated site indexes, and updated Spartan preview assets.
+- Included recent site shell polish for the home page animation and random-site routing.
+
+### Documentation
+
+- Added release documentation in `docs/RELEASE-v0.1.0.md`.
+- Updated Supabase docs for the site issue report table and dashboard flow.
+
+### Verification
+
+- `bun run type-check`
+- `bun lint`
+- `bun run build`
+- `git diff --check`
+
+### Commits
+
+- `663eaef` docs: prune completed TODO items
+- `df62873` content(sites): refresh UI library catalog
+- `b56091e` feat(submissions): clarify anonymous publishing
+- `929baa8` feat(sites): refine catalog controls
+- `f216e81` feat(admin): queue site issue reports
+- `9b048ac` fix(navbar): route random sites within app
+- `f485972` chore(docs): prune TODO item
+- `19dd6fd` chore(config): add antigravity project metadata
+- `169cecf` chore(docs): update TODO notes
+- `9412282` feat(sites): add spartan-ng catalog entry
+- `bd924d2` fix(home): smooth landing page motion
+- `2c15183` feat(home): add animated ShapeGrid hero background
+
 ## 2026-05-26 - Account polish, catalog refresh, and dependency maintenance
 
 ### Highlights
