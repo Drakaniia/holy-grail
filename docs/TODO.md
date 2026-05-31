@@ -3,8 +3,6 @@
   ## Admin
 
   - Add RBAC so admins can directly add, delete, and edit list entries.
-  - Check whether admin analytics prevents recalculating the same user.
-  - Email users when a site is not working or is no longer available, or add this to the admin dashboard and test it. (test Caramel site), intead of email put it in the dashboard.
 
   ## Content And Data
 
@@ -24,19 +22,13 @@
     - Footer inspired by https://www.tasteskill.dev.
     - Sidebar inspired by https://toolfolio.io.
     - Main Conten5t inspired by https://www.aura.build/design-systems/.
-  - Rename "Submit a Tool" to "Publish" and include both skills and sites.
 
   ## Features
 
   - Add recently visited items.
   - Add filters for recently added items.
   - Add site requests.
-  -  Add noted in submit page that you submitting but not yet logged in
 
   ## Addition
 
-    - Where does the report go?
-    - Revise Quick actions to generate random sites
-    - Generate new image
-    - I stash the SpartanUI 
-    - Use reference image, revise new tabs in sites; differencent from the skills
+    - Have Own Homepage for sites, the general one
