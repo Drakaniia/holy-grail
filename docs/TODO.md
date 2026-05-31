@@ -4,7 +4,7 @@
 
   - Add RBAC so admins can directly add, delete, and edit list entries.
   - Check whether admin analytics prevents recalculating the same user.
-  - Email users when a site is not working or is no longer available, or add this to the admin dashboard and test it. (test Caramel site)
+  - Email users when a site is not working or is no longer available, or add this to the admin dashboard and test it. (test Caramel site), intead of email put it in the dashboard.
 
   ## Content And Data
 
@@ -37,3 +37,7 @@
   ## Addition
 
     - Where does the report go?
+    - Revise Quick actions to generate random sites
+    - Generate new image
+    - I stash the SpartanUI 
+    - Use reference image, revise new tabs in sites; differencent from the skills
