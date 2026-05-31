@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { ArrowRight, Search, Sparkles } from 'lucide-vue-next'
 import { useRandomPreviewTiles } from '@/composables/useRandomPreviewTiles'
+import ShapeGrid from '@/components/home/ShapeGrid.vue'
 import type { HomePreviewItem } from '@/types/home'
 
 const props = defineProps<{
@@ -23,6 +24,18 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 
 <template>
   <section class="home-hero" aria-labelledby="home-hero-title">
+    <ShapeGrid
+      class="home-hero__shape-grid"
+      direction="diagonal"
+      :speed="0.35"
+      :square-size="54"
+      border-color="rgba(255, 140, 26, 0.26)"
+      hover-fill-color="rgba(255, 140, 26, 0.18)"
+      shape="hexagon"
+      :hover-trail-amount="5"
+      aria-hidden="true"
+    />
+
     <div class="home-hero__index">
       <span>HG-01</span>
       <span>Curated operating index</span>
@@ -159,18 +172,16 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   display: grid;
   gap: 1.5rem;
   min-height: min(680px, calc(100dvh - 9rem));
+  overflow: hidden;
   padding: clamp(2rem, 4vw, 4.5rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    #050505;
-  background-size: 5rem 5rem;
+  background: #050505;
 }
 
 .home-hero::before {
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   content: '';
   background:
@@ -178,10 +189,18 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
     linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, #050505 100%);
 }
 
+.home-hero__shape-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.78;
+}
+
 .home-hero__index,
 .home-hero__grid,
 .home-hero__utility {
   position: relative;
+  z-index: 2;
 }
 
 .home-hero__index {
@@ -509,16 +528,17 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 
 :global(html.light .home-hero) {
   border-bottom-color: var(--mocha-border);
-  background:
-    linear-gradient(90deg, rgba(45, 33, 25, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(45, 33, 25, 0.07) 1px, transparent 1px),
-    var(--mocha-bg);
+  background: var(--mocha-bg);
 }
 
 :global(html.light .home-hero::before) {
   background:
     linear-gradient(120deg, rgba(255, 122, 0, 0.18), transparent 26rem),
     linear-gradient(180deg, rgba(245, 238, 230, 0) 0%, var(--mocha-bg) 100%);
+}
+
+:global(html.light .home-hero__shape-grid) {
+  opacity: 0.42;
 }
 
 :global(html.light .home-hero__index),
