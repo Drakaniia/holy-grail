@@ -4,15 +4,15 @@ description: What is XGBoost? | IBM bookmarked for machine learning resources.
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 28400
+stars: 28431
 watchers: 885
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 1 day ago
+lastCommit: 2 days ago
 lastRelease: 3 months ago
 version: v3.2.0
 contributors: 686
-commitsThisYear: 188
+commitsThisYear: 190
 releases: 75
 platforms:
   - Web

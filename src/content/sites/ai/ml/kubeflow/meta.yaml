@@ -4,15 +4,15 @@ description: Kubeflow bookmarked for machine learning resources.
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 15651
+stars: 15690
 watchers: 361
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 14 days ago
-lastRelease: 22 days ago
+lastCommit: 6 days ago
+lastRelease: 1 month ago
 version: redirect
-contributors: 325
-commitsThisYear: 2
+contributors: 326
+commitsThisYear: 3
 releases: 94
 platforms:
   - Web

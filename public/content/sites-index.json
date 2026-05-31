@@ -325,15 +325,15 @@
     "category": "Machine Learning",
     "parentCategory": "ai",
     "subcategory": "ml",
-    "stars": 195214,
+    "stars": 195309,
     "watchers": 7385,
     "addedDaysAgo": 0,
     "license": "Apache-2.0",
-    "lastCommit": "1 minute ago",
+    "lastCommit": "9 minutes ago",
     "lastRelease": "2 months ago",
     "version": "v2.21.0",
-    "contributors": 5082,
-    "commitsThisYear": 5401,
+    "contributors": 5086,
+    "commitsThisYear": 5774,
     "releases": 222,
     "platforms": [
       "Web"
@@ -424,16 +424,16 @@
     "category": "AI Automation",
     "parentCategory": "ai",
     "subcategory": "automation",
-    "stars": 188794,
-    "watchers": 1093,
+    "stars": 190323,
+    "watchers": 1095,
     "addedDaysAgo": 0,
     "license": "Unknown",
-    "lastCommit": "10 minutes ago",
-    "lastRelease": "20 hours ago",
-    "version": "n8n@2.21.4",
-    "contributors": 641,
-    "commitsThisYear": 2816,
-    "releases": 630,
+    "lastCommit": "12 minutes ago",
+    "lastRelease": "2 days ago",
+    "version": "n8n@2.22.5",
+    "contributors": 651,
+    "commitsThisYear": 3136,
+    "releases": 648,
     "platforms": [
       "Web"
     ],
@@ -815,15 +815,15 @@
     "category": "Machine Learning",
     "parentCategory": "ai",
     "subcategory": "ml",
-    "stars": 100054,
-    "watchers": 1766,
+    "stars": 100273,
+    "watchers": 1767,
     "addedDaysAgo": 0,
     "license": "Unknown",
-    "lastCommit": "3 minutes ago",
-    "lastRelease": "7 days ago",
+    "lastCommit": "1 hour ago",
+    "lastRelease": "16 days ago",
     "version": "v2.12.0",
-    "contributors": 6561,
-    "commitsThisYear": 7071,
+    "contributors": 6583,
+    "commitsThisYear": 7513,
     "releases": 66,
     "platforms": [
       "Web"
@@ -1110,15 +1110,15 @@
     "category": "Machine Learning",
     "parentCategory": "ai",
     "subcategory": "ml",
-    "stars": 66131,
-    "watchers": 2120,
+    "stars": 66203,
+    "watchers": 2121,
     "addedDaysAgo": 0,
     "license": "BSD-3-Clause",
-    "lastCommit": "6 hours ago",
+    "lastCommit": "20 hours ago",
     "lastRelease": "5 months ago",
     "version": "1.8.0",
-    "contributors": 3513,
-    "commitsThisYear": 406,
+    "contributors": 3516,
+    "commitsThisYear": 433,
     "releases": 49,
     "platforms": [
       "Web"
@@ -1996,15 +1996,15 @@
     "category": "Machine Learning",
     "parentCategory": "ai",
     "subcategory": "ml",
-    "stars": 28400,
+    "stars": 28431,
     "watchers": 885,
     "addedDaysAgo": 0,
     "license": "Apache-2.0",
-    "lastCommit": "1 day ago",
+    "lastCommit": "2 days ago",
     "lastRelease": "3 months ago",
     "version": "v3.2.0",
     "contributors": 686,
-    "commitsThisYear": 188,
+    "commitsThisYear": 190,
     "releases": 75,
     "platforms": [
       "Web"
@@ -2194,16 +2194,16 @@
     "category": "AI Automation",
     "parentCategory": "ai",
     "subcategory": "automation",
-    "stars": 22267,
-    "watchers": 125,
+    "stars": 22476,
+    "watchers": 124,
     "addedDaysAgo": 0,
     "license": "Unknown",
-    "lastCommit": "4 hours ago",
-    "lastRelease": "13 days ago",
-    "version": "0.83.0",
-    "contributors": 454,
-    "commitsThisYear": 1493,
-    "releases": 327,
+    "lastCommit": "2 hours ago",
+    "lastRelease": "1 day ago",
+    "version": "0.84.0",
+    "contributors": 459,
+    "commitsThisYear": 1583,
+    "releases": 329,
     "platforms": [
       "Web"
     ],
@@ -2686,15 +2686,15 @@
     "category": "Machine Learning",
     "parentCategory": "ai",
     "subcategory": "ml",
-    "stars": 15651,
+    "stars": 15690,
     "watchers": 361,
     "addedDaysAgo": 0,
     "license": "Apache-2.0",
-    "lastCommit": "14 days ago",
-    "lastRelease": "22 days ago",
+    "lastCommit": "6 days ago",
+    "lastRelease": "1 month ago",
     "version": "redirect",
-    "contributors": 325,
-    "commitsThisYear": 2,
+    "contributors": 326,
+    "commitsThisYear": 3,
     "releases": 94,
     "platforms": [
       "Web"
@@ -5904,15 +5904,15 @@
     "category": "AI API",
     "parentCategory": "ai",
     "subcategory": "api",
-    "stars": 123,
+    "stars": 124,
     "watchers": 0,
     "addedDaysAgo": 0,
     "license": "MIT",
-    "lastCommit": "29 days ago",
+    "lastCommit": "5 days ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 4,
-    "commitsThisYear": 97,
+    "commitsThisYear": 98,
     "releases": 0,
     "platforms": [
       "Web"
@@ -31733,6 +31733,82 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "spartan-ng",
+    "name": "spartan",
+    "description": "Cutting-edge tools powering Angular full-stack development.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://spartan.ng/",
+    "docs": "https://spartan.ng/documentation/introduction",
+    "sourceCode": "https://github.com/spartan-ng/spartan",
+    "icon": "",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "angular",
+      "ui-library",
+      "tailwind",
+      "components"
+    ],
+    "atGlance": "Angular components inspired by shadcn/ui.",
+    "fullDescription": "spartan is a popular, modern UI library for Angular that brings the copy-paste philosophy of shadcn/ui to the Angular ecosystem.",
+    "coreFeatures": [
+      {
+        "name": "Component Resource",
+        "description": "Tracked as a UI component library for Angular applications.",
+        "icon": "check"
+      },
+      {
+        "name": "Accessible Primitives",
+        "description": "Provides unstyled, accessible UI building blocks handling complex interactions.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Customizable Styles",
+        "description": "Uses Tailwind CSS to provide beautiful styles that you can copy directly into your project.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Friendly",
+        "description": "Modern Angular compatible, built with signals and SSR ready.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "The Foundation for your Design System - shadcn/ui",
+        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
       }
     ]
   },

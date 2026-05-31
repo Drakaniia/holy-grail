@@ -4,15 +4,15 @@ description: TensorFlow bookmarked for machine learning resources.
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 195214
+stars: 195309
 watchers: 7385
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 1 minute ago
+lastCommit: 9 minutes ago
 lastRelease: 2 months ago
 version: v2.21.0
-contributors: 5082
-commitsThisYear: 5401
+contributors: 5086
+commitsThisYear: 5774
 releases: 222
 platforms:
   - Web

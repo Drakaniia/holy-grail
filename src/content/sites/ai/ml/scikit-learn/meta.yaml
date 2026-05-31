@@ -6,15 +6,15 @@ description: >-
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 66131
-watchers: 2120
+stars: 66203
+watchers: 2121
 addedDaysAgo: 0
 license: BSD-3-Clause
-lastCommit: 6 hours ago
+lastCommit: 20 hours ago
 lastRelease: 5 months ago
 version: 1.8.0
-contributors: 3513
-commitsThisYear: 406
+contributors: 3516
+commitsThisYear: 433
 releases: 49
 platforms:
   - Web

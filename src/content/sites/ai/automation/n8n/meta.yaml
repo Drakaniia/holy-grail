@@ -4,16 +4,16 @@ description: AI Workflow Automation Platform & Tools - n8n bookmarked for ai aut
 category: AI Automation
 parentCategory: ai
 subcategory: automation
-stars: 188794
-watchers: 1093
+stars: 190323
+watchers: 1095
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 10 minutes ago
-lastRelease: 20 hours ago
-version: n8n@2.21.4
-contributors: 641
-commitsThisYear: 2816
-releases: 630
+lastCommit: 12 minutes ago
+lastRelease: 2 days ago
+version: n8n@2.22.5
+contributors: 651
+commitsThisYear: 3136
+releases: 648
 platforms:
   - Web
 deployment:

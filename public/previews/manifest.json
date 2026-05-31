@@ -2490,6 +2490,15 @@
     "bytes": 7716,
     "fallback": true
   },
+  "spartan-ng": {
+    "image": "/previews/spartan-ng.webp",
+    "small": "/previews/spartan-ng-sm.webp",
+    "sourceUrl": "https://spartan.ng/",
+    "capturedAt": "2026-05-30T12:51:41.137Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 18338
+  },
   "spline": {
     "image": "/previews/spline.webp",
     "small": "/previews/spline-sm.webp",

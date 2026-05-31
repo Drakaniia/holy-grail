@@ -4,15 +4,15 @@ description: PyTorch bookmarked for machine learning resources.
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 100054
-watchers: 1766
+stars: 100273
+watchers: 1767
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 3 minutes ago
-lastRelease: 7 days ago
+lastCommit: 1 hour ago
+lastRelease: 16 days ago
 version: v2.12.0
-contributors: 6561
-commitsThisYear: 7071
+contributors: 6583
+commitsThisYear: 7513
 releases: 66
 platforms:
   - Web

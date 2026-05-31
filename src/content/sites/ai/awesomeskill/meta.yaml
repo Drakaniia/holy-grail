@@ -46,7 +46,9 @@ additionalFeatures:
     description: The live marketplace is available from the saved website link.
     icon: check
   - name: Skill Metadata
-    description: Listings focus on reusable SKILL.md files, productivity workflows, prompts, and agent templates.
+    description: >-
+      Listings focus on reusable SKILL.md files, productivity workflows, prompts, and agent
+      templates.
     icon: check
   - name: Catalog Tags
     description: Tagged with AI, agent, and skills labels for search and browsing.

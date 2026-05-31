@@ -1,0 +1,55 @@
+slug: spartan-ng
+name: spartan
+description: Cutting-edge tools powering Angular full-stack development.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Unknown
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://spartan.ng/
+docs: https://spartan.ng/documentation/introduction
+sourceCode: https://github.com/spartan-ng/spartan
+verified: true
+featured: false
+tags:
+  - bookmark
+  - angular
+  - ui-library
+  - tailwind
+  - components
+atGlance: Angular components inspired by shadcn/ui.
+fullDescription: spartan is a popular, modern UI library for Angular that brings the copy-paste philosophy of shadcn/ui to the Angular ecosystem.
+coreFeatures:
+  - name: Component Resource
+    description: Tracked as a UI component library for Angular applications.
+    icon: check
+  - name: Accessible Primitives
+    description: Provides unstyled, accessible UI building blocks handling complex interactions.
+    icon: check
+additionalFeatures:
+  - name: Customizable Styles
+    description: Uses Tailwind CSS to provide beautiful styles that you can copy directly into your project.
+    icon: check
+  - name: Developer Friendly
+    description: Modern Angular compatible, built with signals and SSR ready.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: The Foundation for your Design System - shadcn/ui
+    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
