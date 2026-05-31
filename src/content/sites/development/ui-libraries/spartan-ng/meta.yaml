@@ -1,18 +1,20 @@
 slug: spartan-ng
-name: spartan
-description: Cutting-edge tools powering Angular full-stack development.
+name: spartan/ui
+description: >-
+  Accessible Angular UI primitives with signals, SSR support, zoneless readiness, and copy-paste
+  Tailwind styles.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 0
-watchers: 0
+stars: 2604
+watchers: 34
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
+license: MIT
+lastCommit: 1 day ago
+lastRelease: No releases
 version: ""
-contributors: 0
-commitsThisYear: 0
+contributors: 124
+commitsThisYear: 451
 releases: 0
 platforms:
   - Web
@@ -21,35 +23,67 @@ deployment:
 website: https://spartan.ng/
 docs: https://spartan.ng/documentation/introduction
 sourceCode: https://github.com/spartan-ng/spartan
+icon: spartan-ng
 verified: true
 featured: false
 tags:
   - bookmark
+  - ui-libraries
+  - ui
+  - library
   - angular
-  - ui-library
   - tailwind
   - components
-atGlance: Angular components inspired by shadcn/ui.
-fullDescription: spartan is a popular, modern UI library for Angular that brings the copy-paste philosophy of shadcn/ui to the Angular ecosystem.
+  - accessibility
+  - signals
+  - ssr
+atGlance: Accessible UI primitives and copy-paste styles for modern Angular apps.
+fullDescription: >-
+  spartan/ui is the Angular UI library in the spartan mono-repo. It pairs accessible behavior
+  primitives with copy-paste Tailwind styles so Angular teams can install behavior, own component
+  code, and customize a shadcn-inspired design system without waiting on a black-box component
+  package.
 coreFeatures:
-  - name: Component Resource
-    description: Tracked as a UI component library for Angular applications.
+  - name: Accessible UI Primitives
+    description: Provides Angular-first behavior primitives for complex interface interactions.
     icon: check
-  - name: Accessible Primitives
-    description: Provides unstyled, accessible UI building blocks handling complex interactions.
+  - name: Copy-Paste Styles
+    description: >-
+      Separates behavior from Tailwind CSS styling so components can be copied, owned, and
+      customized.
+    icon: check
+  - name: shadcn-Inspired Workflow
+    description: Brings the component-ownership model popularized by shadcn/ui into Angular projects.
     icon: check
 additionalFeatures:
-  - name: Customizable Styles
-    description: Uses Tailwind CSS to provide beautiful styles that you can copy directly into your project.
+  - name: Modern Angular Ready
+    description: Built around signals, SSR compatibility, and zoneless-ready Angular application patterns.
     icon: check
-  - name: Developer Friendly
-    description: Modern Angular compatible, built with signals and SSR ready.
+  - name: Blocks and Examples
+    description: Includes docs, components, blocks, and example screens for faster interface assembly.
+    icon: check
+  - name: Open Source Monorepo
+    description: Links to the public spartan repository for implementation reference and contribution.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
+  - slug: park-ui
+    name: Park UI
+    description: Multi-framework design system components built with Ark UI and Panda CSS.
+    stars: 2315
+    addedDaysAgo: 0
+    verified: true
+    website: https://park-ui.com/
+  - slug: headlessui
+    name: Headless UI
+    description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
+    stars: 28559
+    addedDaysAgo: 0
+    verified: true
+    website: https://headlessui.com/

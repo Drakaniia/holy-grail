@@ -34,8 +34,8 @@ tags:
   - design-system
 atGlance: Multi-framework design system components built with Ark UI and Panda CSS.
 fullDescription: >-
-  Park UI is a UI component and design system reference with accessible components built on
-  Ark UI and Panda CSS for React, Solid, and other JavaScript frameworks.
+  Park UI is a UI component and design system reference with accessible components built on Ark UI
+  and Panda CSS for React, Solid, and other JavaScript frameworks.
 coreFeatures:
   - name: Design System Components
     description: Provides accessible, styled components for building custom design systems.
@@ -65,15 +65,15 @@ similarTools:
     verified: true
     website: https://shark.vini.one/
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: headlessui
-    name: Headless UI - Unstyled, fully accessible UI components
-    description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+    name: Headless UI
+    description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
     stars: 28559
     addedDaysAgo: 0
     verified: true

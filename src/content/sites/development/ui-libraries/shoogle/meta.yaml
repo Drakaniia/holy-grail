@@ -1,18 +1,18 @@
 slug: shoogle
-name: Your shadcn search engine. | shoogle.dev
-description: Your shadcn search engine. | shoogle.dev bookmarked for ui library resources.
+name: shoogle
+description: Search engine for finding shadcn/ui components, blocks, and registry resources.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 0
+stars: 4
 watchers: 0
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
+license: No license file
+lastCommit: 7 days ago
+lastRelease: No releases
 version: ""
-contributors: 0
-commitsThisYear: 0
+contributors: 1
+commitsThisYear: 8
 releases: 0
 platforms:
   - Web
@@ -20,54 +20,58 @@ deployment:
   - Cloud
 website: https://shoogle.dev/
 docs: https://shoogle.dev/
-sourceCode: ""
+sourceCode: https://github.com/Ali-Hussein-dev/shoogle
 icon: shoogle
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
   - ui-libraries
   - ui
   - library
-atGlance: Your shadcn search engine. | shoogle.dev
-fullDescription: Your shadcn search engine. - shoogle.dev is kept as a UI component and design system reference.
+atGlance: Search across shadcn-style components and UI resources.
+fullDescription: >-
+  shoogle is a search experience for discovering shadcn/ui components and related registry
+  resources. It is useful when comparing available component implementations, locating examples, and
+  quickly finding UI patterns across the shadcn ecosystem.
 coreFeatures:
-  - name: Component Resource
-    description: Your shadcn search engine. - shoogle.dev is tracked as a UI component or library resource.
+  - name: shadcn Search
+    description: Focuses on finding shadcn-style components and related UI resources.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Component Discovery
+    description: Helps developers locate blocks and examples faster than browsing individual sites.
+    icon: check
+  - name: Web Search Interface
+    description: Runs as a browser-based search tool for UI catalog work.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Public Repo Found
+    description: The catalog now links the matching public repository for source stats.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Ecosystem Navigation
+    description: Useful for moving between shadcn registries and community resources.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Lightweight Utility
+    description: Small focused tool rather than a full component framework.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

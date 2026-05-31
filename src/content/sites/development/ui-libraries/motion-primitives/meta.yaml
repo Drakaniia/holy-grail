@@ -1,6 +1,6 @@
 slug: motion-primitives
-name: Glow Effect - Motion-Primitives
-description: Glow Effect - Motion-Primitives bookmarked for ui library resources.
+name: Motion Primitives
+description: Composable animated React primitives for building motion-rich product interfaces.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
@@ -18,8 +18,8 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://motion-primitives.com/docs/glow-effect
-docs: https://motion-primitives.com/docs/glow-effect
+website: https://motion-primitives.com/
+docs: https://motion-primitives.com/docs
 sourceCode: https://github.com/ibelick/motion-primitives
 icon: motion-primitives
 verified: true
@@ -29,45 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: Glow Effect - Motion-Primitives
-fullDescription: Glow Effect - Motion-Primitives is kept as a UI component and design system reference.
+atGlance: Animated React primitives built around Motion and Tailwind-friendly composition.
+fullDescription: >-
+  Motion Primitives is a collection of composable animated React building blocks. It helps teams add
+  polished transitions, text effects, layout effects, and interaction patterns while keeping the
+  implementation easy to copy and customize.
 coreFeatures:
-  - name: Component Resource
-    description: Glow Effect - Motion-Primitives is tracked as a UI component or library resource.
+  - name: Animated Primitives
+    description: Provides reusable motion patterns for common interface effects.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: React Composition
+    description: Designed as composable React components rather than a monolithic UI kit.
+    icon: check
+  - name: Copy-Friendly Examples
+    description: Docs expose implementation patterns that can be adapted inside product code.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Text and Layout Effects
+    description: Includes primitives for text reveal, glow, transitions, and layout motion.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Motion Ecosystem Fit
+    description: Works naturally alongside Motion and Tailwind-heavy interfaces.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Open Source Reference
+    description: GitHub source shows implementation and contribution activity.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

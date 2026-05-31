@@ -35,8 +35,8 @@ tags:
   - shadcn
 atGlance: Copy-paste React map components built on MapLibre and Tailwind CSS.
 fullDescription: >-
-  mapcn is a React map component library that follows the shadcn copy-paste model,
-  using MapLibre GL and Tailwind CSS to make maps fit naturally into design systems.
+  mapcn is a React map component library that follows the shadcn copy-paste model, using MapLibre GL
+  and Tailwind CSS to make maps fit naturally into design systems.
 coreFeatures:
   - name: Map Components
     description: Provides ready-to-use map components and blocks for React projects.
@@ -59,8 +59,8 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true

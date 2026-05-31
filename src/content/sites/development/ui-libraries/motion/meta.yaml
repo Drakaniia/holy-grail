@@ -1,6 +1,6 @@
 slug: motion
-name: Framer | Motion for React (prev Framer Motion)
-description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+name: Motion
+description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
@@ -18,8 +18,8 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://motion.dev/docs/framer
-docs: https://motion.dev/docs/framer
+website: https://motion.dev/
+docs: https://motion.dev/docs
 sourceCode: https://github.com/motiondivision/motion
 icon: motion
 verified: true
@@ -29,49 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: Framer | Motion for React (prev Framer Motion)
+atGlance: Animation primitives for production-grade web interfaces.
 fullDescription: >-
-  Framer - Motion for React (prev Framer Motion) is kept as a UI component and design system
-  reference.
+  Motion is the successor to Framer Motion and provides animation primitives for React, JavaScript,
+  and Vue projects. It is useful when UI libraries need gesture handling, layout animations, scroll
+  effects, and refined motion behavior.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      Framer - Motion for React (prev Framer Motion) is tracked as a UI component or library
-      resource.
+  - name: Declarative Animation
+    description: Provides expressive APIs for animating component state, gestures, and layout changes.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Framework Coverage
+    description: Supports React plus JavaScript and Vue animation workflows.
+    icon: check
+  - name: Production Motion
+    description: Designed for real app interfaces, not only isolated demos.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Layout Animation
+    description: Handles shared layout and transition patterns used in polished product UI.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Gesture Support
+    description: Includes drag, hover, tap, and scroll interaction primitives.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Open Source Repository
+    description: The public repo tracks releases, contributors, and ongoing development.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true
     website: https://www.heroui.com/
   - slug: headlessui
-    name: Headless UI - Unstyled, fully accessible UI components
-    description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+    name: Headless UI
+    description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
     stars: 28559
     addedDaysAgo: 0
     verified: true

@@ -1,14 +1,16 @@
 slug: badtz-ui
-name: UI library for React developers. - BadtzUI
-description: UI library for React developers. - BadtzUI bookmarked for ui library resources.
+name: BadtzUI
+description: >-
+  React component library with Tailwind CSS, Radix primitives, and shadcn-style copy-paste
+  components.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 249
+stars: 253
 watchers: 4
 addedDaysAgo: 0
-license: Unknown
-lastCommit: 2 months ago
+license: Other
+lastCommit: 3 months ago
 lastRelease: No releases
 version: ""
 contributors: 2
@@ -29,45 +31,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: UI library for React developers. - BadtzUI
-fullDescription: UI library for React developers. - BadtzUI is kept as a UI component and design system reference.
+atGlance: Copy-paste React components built on Tailwind CSS and Radix UI.
+fullDescription: >-
+  BadtzUI is a React UI library for teams that want shadcn-style component ownership with ready-made
+  Tailwind styling. It combines accessible Radix primitives, reusable component examples, and
+  implementation-focused docs for building product interfaces quickly.
 coreFeatures:
-  - name: Component Resource
-    description: UI library for React developers. - BadtzUI is tracked as a UI component or library resource.
+  - name: React Component Library
+    description: Provides reusable React components that can be copied into application code.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Tailwind Styling
+    description: Uses Tailwind CSS utility classes so teams can adapt components to their own visual system.
+    icon: check
+  - name: Radix Foundation
+    description: Leans on Radix primitives for accessible behavior in interactive components.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Copy-Paste Workflow
+    description: Designed for teams that want to own and customize component source code.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Practical Examples
+    description: Includes component examples and usage patterns for common interface needs.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Open Source Reference
+    description: The public repository provides implementation details and contribution history.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

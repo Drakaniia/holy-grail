@@ -1,6 +1,6 @@
 slug: shadcn-svelte
-name: Introduction - shadcn-svelte
-description: Introduction - shadcn-svelte bookmarked for ui library resources.
+name: shadcn-svelte
+description: Svelte port of the shadcn/ui component workflow with Tailwind CSS and Bits UI.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
@@ -18,7 +18,7 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://www.shadcn-svelte.com/docs
+website: https://www.shadcn-svelte.com/
 docs: https://www.shadcn-svelte.com/docs
 sourceCode: https://github.com/huntabyte/shadcn-svelte
 icon: shadcn-svelte
@@ -29,45 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: Introduction - shadcn-svelte
-fullDescription: Introduction - shadcn-svelte is kept as a UI component and design system reference.
+atGlance: shadcn-style copy-paste components for Svelte applications.
+fullDescription: >-
+  shadcn-svelte brings the shadcn/ui component ownership model to Svelte. It combines Tailwind CSS
+  styling, Bits UI primitives, and copy-paste component source so Svelte teams can build and
+  customize their own design systems.
 coreFeatures:
-  - name: Component Resource
-    description: Introduction - shadcn-svelte is tracked as a UI component or library resource.
+  - name: Svelte Components
+    description: Provides component source designed for Svelte applications.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: shadcn Workflow
+    description: Uses the copy-paste and customize model popularized by shadcn/ui.
+    icon: check
+  - name: Tailwind Styling
+    description: Components are styled with Tailwind CSS for direct customization.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Bits UI Foundation
+    description: Builds on Svelte-first primitives for accessible behavior.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: CLI and Registry
+    description: Supports adding components through a registry-driven workflow.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Open Source Community
+    description: GitHub stats reflect an active Svelte ecosystem project.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

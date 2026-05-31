@@ -4,15 +4,15 @@ description: Precision-crafted React components for modern web apps.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 437
+stars: 440
 watchers: 2
 addedDaysAgo: 0
-license: Unknown
-lastCommit: 1 day ago
+license: No license file
+lastCommit: 15 hours ago
 lastRelease: No releases
 version: ""
 contributors: 2
-commitsThisYear: 111
+commitsThisYear: 117
 releases: 0
 platforms:
   - Web
@@ -41,7 +41,9 @@ fullDescription: >-
   SVG assets, mouse-following effects, borders, gradients, bento cards, and text animations.
 coreFeatures:
   - name: Copy-Paste Components
-    description: Provides ready-to-use React components for buttons, sidebars, bento cards, effects, and assets.
+    description: >-
+      Provides ready-to-use React components for buttons, sidebars, bento cards, effects, and
+      assets.
     icon: check
   - name: Motion Effects
     description: Includes GSAP, Framer Motion, SVG, mouse follower, and text animation patterns.
@@ -62,7 +64,7 @@ additionalFeatures:
 similarTools:
   - slug: magicui
     name: Magic UI
-    description: Animated UI components for React, built with Tailwind CSS and Framer Motion.
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
     stars: 21037
     addedDaysAgo: 0
     verified: true

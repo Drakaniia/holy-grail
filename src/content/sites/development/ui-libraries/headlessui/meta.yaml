@@ -1,6 +1,6 @@
 slug: headlessui
-name: Headless UI - Unstyled, fully accessible UI components
-description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+name: Headless UI
+description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
@@ -29,49 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: Headless UI - Unstyled, fully accessible UI components
+atGlance: Accessible unstyled components for React and Vue.
 fullDescription: >-
-  Headless UI - Unstyled, fully accessible UI components is kept as a UI component and design system
-  reference.
+  Headless UI is Tailwind Labs’ unstyled component library for teams that need accessible behavior
+  while owning every visual detail. It provides primitives such as dialogs, menus, listboxes, and
+  transitions for React and Vue applications.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      Headless UI - Unstyled, fully accessible UI components is tracked as a UI component or library
-      resource.
+  - name: Accessible Behavior
+    description: Implements keyboard and ARIA patterns for common interactive components.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Unstyled by Default
+    description: Leaves visual styling to the application and works naturally with Tailwind CSS.
+    icon: check
+  - name: React and Vue Support
+    description: Supports the two primary frameworks used by Tailwind Labs’ ecosystem.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Tailwind Labs Maintained
+    description: Maintained by the team behind Tailwind CSS.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Transition Helpers
+    description: Includes transition utilities and examples for animated state changes.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Open Source Repo
+    description: Repository history, contributors, and license data are available from GitHub.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

@@ -37,8 +37,8 @@ tags:
 atGlance: A shadcn registry of polished components and blocks from Chanh Dai.
 fullDescription: >-
   Chánh Đại Components is a pixel-perfect component collection and shadcn registry. The catalog
-  includes crafted components such as Apple Hello Effect, command helpers, consent manager,
-  sliders, text effects, testimonials, theme controls, and portfolio-oriented UI pieces.
+  includes crafted components such as Apple Hello Effect, command helpers, consent manager, sliders,
+  text effects, testimonials, theme controls, and portfolio-oriented UI pieces.
 coreFeatures:
   - name: shadcn Registry
     description: Components can be added through the shadcn registry workflow with package-manager snippets.
@@ -62,7 +62,7 @@ additionalFeatures:
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
     name: shadcn/ui
-    description: The foundation for your design system.
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
@@ -70,7 +70,7 @@ similarTools:
   - slug: pixel-perfect
     name: Pixel Perfect UI
     description: Precision-crafted React components for modern web apps.
-    stars: 437
+    stars: 440
     addedDaysAgo: 0
     verified: true
     website: https://www.pixel-perfect.space/

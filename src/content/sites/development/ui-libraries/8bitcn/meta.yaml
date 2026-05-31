@@ -61,7 +61,7 @@ additionalFeatures:
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
     name: shadcn/ui
-    description: The foundation for your design system.
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
@@ -69,7 +69,7 @@ similarTools:
   - slug: pixel-perfect
     name: Pixel Perfect UI
     description: Precision-crafted React components for modern web apps.
-    stars: 437
+    stars: 440
     addedDaysAgo: 0
     verified: true
     website: https://www.pixel-perfect.space/

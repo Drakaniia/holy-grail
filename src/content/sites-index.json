@@ -614,8 +614,8 @@
   },
   {
     "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-    "name": "The Foundation for your Design System - shadcn/ui",
-    "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+    "name": "shadcn/ui",
+    "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -636,7 +636,7 @@
       "Cloud"
     ],
     "website": "https://ui.shadcn.com/",
-    "docs": "https://ui.shadcn.com/",
+    "docs": "https://ui.shadcn.com/docs",
     "sourceCode": "https://github.com/shadcn-ui/ui",
     "icon": "ui",
     "verified": true,
@@ -647,34 +647,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "The Foundation for your Design System - shadcn/ui",
-    "fullDescription": "The Foundation for your Design System - shadcn/ui is kept as a UI component and design system reference.",
+    "atGlance": "The copy-paste component foundation for Tailwind and Radix design systems.",
+    "fullDescription": "shadcn/ui is a component registry and workflow for building owned design systems with React, Radix UI, and Tailwind CSS. Instead of shipping a black-box component package, it gives teams source code they can copy, customize, and maintain inside their own applications.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "The Foundation for your Design System - shadcn/ui is tracked as a UI component or library resource.",
+        "name": "Component Ownership",
+        "description": "Installs component source into the application instead of hiding it in a package.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Radix and Tailwind",
+        "description": "Combines accessible Radix primitives with Tailwind CSS styling.",
+        "icon": "check"
+      },
+      {
+        "name": "Registry Workflow",
+        "description": "Components are added through a registry-driven CLI and customized locally.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Design-System Foundation",
+        "description": "Widely used as a starting point for custom product component systems.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Large Ecosystem",
+        "description": "Supports themes, blocks, charts, examples, and community registries.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Active Open Source",
+        "description": "GitHub stats reflect a large and actively maintained public repository.",
         "icon": "check"
       }
     ],
@@ -683,17 +688,17 @@
     "similarTools": [
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -701,8 +706,8 @@
       },
       {
         "slug": "headlessui",
-        "name": "Headless UI - Unstyled, fully accessible UI components",
-        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "name": "Headless UI",
+        "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
         "stars": 28559,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1535,33 +1540,38 @@
       "components"
     ],
     "atGlance": "Simple, modular, and accessible UI components for React applications.",
-    "fullDescription": "Chakra UI is kept as a UI component and design system reference for building accessible React interfaces with composable components and styling primitives.",
+    "fullDescription": "Chakra UI is a React component library for building accessible application interfaces with composable components, styling props, recipes, and theme tokens. It is useful for teams that want a packaged design-system foundation with strong accessibility defaults.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Chakra UI is tracked as a React UI component and design system resource.",
+        "name": "Accessible Components",
+        "description": "Provides React components with accessibility patterns built into common controls.",
         "icon": "check"
       },
       {
-        "name": "Accessibility Focus",
-        "description": "Documentation and source links provide implementation patterns for accessible components.",
+        "name": "Theme System",
+        "description": "Uses tokens, recipes, and styling props to adapt components to product design systems.",
+        "icon": "check"
+      },
+      {
+        "name": "React Application Fit",
+        "description": "Covers form controls, overlays, navigation, layout, feedback, and data display components.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles, theming, and interaction patterns.",
+        "name": "Packaged Library",
+        "description": "Installed as a managed React component dependency rather than a copy-paste registry.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code and documentation are linked for implementation reference.",
+        "name": "Documentation Depth",
+        "description": "Includes guides for theming, styling, accessibility, and framework integration.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Mature Open Source",
+        "description": "GitHub stats reflect a long-running, high-contribution React UI project.",
         "icon": "check"
       }
     ],
@@ -1570,8 +1580,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1579,17 +1589,120 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "reactbits",
+    "name": "React Bits",
+    "description": "Animated, interactive React components for building memorable landing pages and websites.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 40230,
+    "watchers": 121,
+    "addedDaysAgo": 0,
+    "license": "Other",
+    "lastCommit": "2 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 104,
+    "commitsThisYear": 190,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://reactbits.dev/",
+    "docs": "https://reactbits.dev/",
+    "sourceCode": "https://github.com/DavidHDev/react-bits",
+    "icon": "reactbits",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Animated React components for high-impact web experiences.",
+    "fullDescription": "React Bits is an open-source collection of animated, interactive, and customizable React components. It focuses on expressive visual effects, hero interactions, text animations, and creative UI pieces for memorable product and portfolio sites.",
+    "coreFeatures": [
+      {
+        "name": "Animated Components",
+        "description": "Includes interactive effects and motion-heavy components for React projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Customizable Source",
+        "description": "Components can be copied and adapted to match a product’s visual direction.",
+        "icon": "check"
+      },
+      {
+        "name": "Creative UI Patterns",
+        "description": "Focuses on memorable visuals rather than standard enterprise controls only.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Large Open Source Repo",
+        "description": "The linked repository provides source, contributor, and activity stats.",
+        "icon": "check"
+      },
+      {
+        "name": "Landing Page Fit",
+        "description": "Useful for hero sections, portfolios, launch pages, and rich marketing surfaces.",
+        "icon": "check"
+      },
+      {
+        "name": "React Ecosystem",
+        "description": "Built specifically around React implementation patterns.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1599,8 +1712,8 @@
   },
   {
     "slug": "motion",
-    "name": "Framer | Motion for React (prev Framer Motion)",
-    "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+    "name": "Motion",
+    "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -1620,8 +1733,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://motion.dev/docs/framer",
-    "docs": "https://motion.dev/docs/framer",
+    "website": "https://motion.dev/",
+    "docs": "https://motion.dev/docs",
     "sourceCode": "https://github.com/motiondivision/motion",
     "icon": "motion",
     "verified": true,
@@ -1632,34 +1745,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Framer | Motion for React (prev Framer Motion)",
-    "fullDescription": "Framer - Motion for React (prev Framer Motion) is kept as a UI component and design system reference.",
+    "atGlance": "Animation primitives for production-grade web interfaces.",
+    "fullDescription": "Motion is the successor to Framer Motion and provides animation primitives for React, JavaScript, and Vue projects. It is useful when UI libraries need gesture handling, layout animations, scroll effects, and refined motion behavior.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Framer - Motion for React (prev Framer Motion) is tracked as a UI component or library resource.",
+        "name": "Declarative Animation",
+        "description": "Provides expressive APIs for animating component state, gestures, and layout changes.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Framework Coverage",
+        "description": "Supports React plus JavaScript and Vue animation workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Production Motion",
+        "description": "Designed for real app interfaces, not only isolated demos.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Layout Animation",
+        "description": "Handles shared layout and transition patterns used in polished product UI.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Gesture Support",
+        "description": "Includes drag, hover, tap, and scroll interaction primitives.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Repository",
+        "description": "The public repo tracks releases, contributors, and ongoing development.",
         "icon": "check"
       }
     ],
@@ -1668,8 +1786,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1677,8 +1795,8 @@
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1686,8 +1804,8 @@
       },
       {
         "slug": "headlessui",
-        "name": "Headless UI - Unstyled, fully accessible UI components",
-        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "name": "Headless UI",
+        "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
         "stars": 28559,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1697,8 +1815,8 @@
   },
   {
     "slug": "heroui",
-    "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-    "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+    "name": "HeroUI",
+    "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -1719,7 +1837,7 @@
       "Cloud"
     ],
     "website": "https://www.heroui.com/",
-    "docs": "https://www.heroui.com/",
+    "docs": "https://www.heroui.com/docs/guide/introduction",
     "sourceCode": "https://github.com/heroui-inc/heroui",
     "icon": "heroui",
     "verified": true,
@@ -1730,34 +1848,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-    "fullDescription": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library is kept as a UI component and design system reference.",
+    "atGlance": "Accessible themed React components with polished defaults.",
+    "fullDescription": "HeroUI, formerly NextUI, is a React component library with accessible components, modern styling, and theme customization. It gives teams a packaged design-system layer for building applications without composing every primitive from scratch.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library is tracked as a UI component or library resource.",
+        "name": "React Component System",
+        "description": "Provides a broad set of ready-to-use components for application interfaces.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Accessible Foundations",
+        "description": "Builds on accessible interaction patterns for complex controls.",
+        "icon": "check"
+      },
+      {
+        "name": "Theme Customization",
+        "description": "Supports theme tokens and visual customization for product design systems.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Polished Defaults",
+        "description": "Components ship with modern visual treatment out of the box.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Documentation and Examples",
+        "description": "Docs cover installation, usage, customization, and component APIs.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Active Open Source",
+        "description": "The GitHub repository exposes high-volume activity and community contribution.",
         "icon": "check"
       }
     ],
@@ -1766,8 +1889,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1775,17 +1898,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "headlessui",
-        "name": "Headless UI - Unstyled, fully accessible UI components",
-        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "name": "Headless UI",
+        "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
         "stars": 28559,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1893,8 +2016,8 @@
   },
   {
     "slug": "headlessui",
-    "name": "Headless UI - Unstyled, fully accessible UI components",
-    "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+    "name": "Headless UI",
+    "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -1926,34 +2049,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Headless UI - Unstyled, fully accessible UI components",
-    "fullDescription": "Headless UI - Unstyled, fully accessible UI components is kept as a UI component and design system reference.",
+    "atGlance": "Accessible unstyled components for React and Vue.",
+    "fullDescription": "Headless UI is Tailwind Labs’ unstyled component library for teams that need accessible behavior while owning every visual detail. It provides primitives such as dialogs, menus, listboxes, and transitions for React and Vue applications.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Headless UI - Unstyled, fully accessible UI components is tracked as a UI component or library resource.",
+        "name": "Accessible Behavior",
+        "description": "Implements keyboard and ARIA patterns for common interactive components.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Unstyled by Default",
+        "description": "Leaves visual styling to the application and works naturally with Tailwind CSS.",
+        "icon": "check"
+      },
+      {
+        "name": "React and Vue Support",
+        "description": "Supports the two primary frameworks used by Tailwind Labs’ ecosystem.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Tailwind Labs Maintained",
+        "description": "Maintained by the team behind Tailwind CSS.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Transition Helpers",
+        "description": "Includes transition utilities and examples for animated state changes.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Repo",
+        "description": "Repository history, contributors, and license data are available from GitHub.",
         "icon": "check"
       }
     ],
@@ -1962,8 +2090,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -1971,17 +2099,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -2287,7 +2415,7 @@
   {
     "slug": "magicui",
     "name": "Magic UI",
-    "description": "Magic UI bookmarked for ui library resources.",
+    "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -2308,7 +2436,7 @@
       "Cloud"
     ],
     "website": "https://magicui.design/",
-    "docs": "https://magicui.design/",
+    "docs": "https://magicui.design/docs",
     "sourceCode": "https://github.com/magicuidesign/magicui",
     "icon": "magicui",
     "verified": true,
@@ -2319,34 +2447,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Magic UI",
-    "fullDescription": "Magic UI is kept as a UI component and design system reference.",
+    "atGlance": "Animated copy-paste components for React and Tailwind projects.",
+    "fullDescription": "Magic UI is a collection of animated React components built with Tailwind CSS and Framer Motion. It is useful for teams that want visually memorable landing pages, SaaS screens, and product details while still owning the copied component source.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Magic UI is tracked as a UI component or library resource.",
+        "name": "Animated Components",
+        "description": "Provides motion-rich UI components for modern marketing and application screens.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React and Tailwind",
+        "description": "Built for React projects using Tailwind CSS utility styling.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Workflow",
+        "description": "Components are intended to be copied into a project and customized directly.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Framer Motion Effects",
+        "description": "Uses animation patterns suitable for polished landing-page interactions.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Blocks and Templates",
+        "description": "Includes larger sections and examples beyond isolated controls.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Activity",
+        "description": "GitHub stats reflect the public repository behind the component catalog.",
         "icon": "check"
       }
     ],
@@ -2355,8 +2488,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -2364,17 +2497,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -2984,20 +3117,20 @@
   },
   {
     "slug": "coss",
-    "name": "Introduction - coss ui",
-    "description": "Introduction - coss ui bookmarked for ui library resources.",
+    "name": "Coss UI",
+    "description": "Open-source Tailwind and React component system for copy-paste application interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 9728,
-    "watchers": 35,
+    "stars": 9811,
+    "watchers": 34,
     "addedDaysAgo": 0,
     "license": "AGPL-3.0",
-    "lastCommit": "6 days ago",
+    "lastCommit": "1 day ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 50,
-    "commitsThisYear": 119,
+    "commitsThisYear": 127,
     "releases": 0,
     "platforms": [
       "Web"
@@ -3017,34 +3150,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Introduction - coss ui",
-    "fullDescription": "Introduction - coss ui is kept as a UI component and design system reference.",
+    "atGlance": "Copy-paste React components and blocks powered by Tailwind CSS.",
+    "fullDescription": "Coss UI is an open-source component system for React teams that want practical, copy-paste UI building blocks. It focuses on Tailwind-based components, examples, and documentation for assembling application screens without adopting a closed component package.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Introduction - coss ui is tracked as a UI component or library resource.",
+        "name": "Copy-Paste Components",
+        "description": "Provides source-owned React components that can be adapted inside application code.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Tailwind CSS Styling",
+        "description": "Uses Tailwind utilities for direct customization and design-token alignment.",
+        "icon": "check"
+      },
+      {
+        "name": "Application Blocks",
+        "description": "Includes patterns for composing real product UI beyond isolated controls.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Repository",
+        "description": "The public Coss repository exposes implementation and project activity.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Docs-Oriented Workflow",
+        "description": "Documentation keeps install and usage guidance close to component examples.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Modern React Stack",
+        "description": "Built for contemporary React and Tailwind application workflows.",
         "icon": "check"
       }
     ],
@@ -3053,8 +3191,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3062,17 +3200,120 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "originui",
+    "name": "Origin UI",
+    "description": "Copy-paste Tailwind and React components now surfaced through the Coss UI ecosystem.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 9811,
+    "watchers": 34,
+    "addedDaysAgo": 0,
+    "license": "AGPL-3.0",
+    "lastCommit": "1 day ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 50,
+    "commitsThisYear": 127,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://originui.com/",
+    "docs": "https://originui.com/",
+    "sourceCode": "https://github.com/cosscom/coss",
+    "icon": "originui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Tailwind and React components for copy-paste application UI.",
+    "fullDescription": "Origin UI is a collection of copy-paste components for building application interfaces with Tailwind CSS and React. The current public site points into the Coss UI ecosystem, so the catalog tracks the active Coss repository for source and repo stats.",
+    "coreFeatures": [
+      {
+        "name": "Copy-Paste Components",
+        "description": "Offers ready-made components that can be moved directly into app code.",
+        "icon": "check"
+      },
+      {
+        "name": "Tailwind and React",
+        "description": "Targets React projects styled with Tailwind CSS.",
+        "icon": "check"
+      },
+      {
+        "name": "Application UI Patterns",
+        "description": "Focuses on practical interface pieces for common app screens.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Coss Source Link",
+        "description": "The live site links the active source path through the Coss repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Fast Assembly",
+        "description": "Useful when building product screens from proven component patterns.",
+        "icon": "check"
+      },
+      {
+        "name": "Design-System Reference",
+        "description": "Helpful for comparing Tailwind component composition approaches.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3082,8 +3323,8 @@
   },
   {
     "slug": "base-ui",
-    "name": "Accordion - Base UI",
-    "description": "Accordion - Base UI bookmarked for ui library resources.",
+    "name": "Base UI",
+    "description": "Unstyled accessible React primitives from MUI for building custom design systems.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -3103,8 +3344,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://base-ui.com/react/components/accordion",
-    "docs": "https://base-ui.com/react/components/accordion",
+    "website": "https://base-ui.com/",
+    "docs": "https://base-ui.com/react/overview/quick-start",
     "sourceCode": "https://github.com/mui/base-ui",
     "icon": "base-ui",
     "verified": true,
@@ -3115,34 +3356,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Accordion - Base UI",
-    "fullDescription": "Accordion - Base UI is kept as a UI component and design system reference.",
+    "atGlance": "Accessible unstyled React primitives for custom component systems.",
+    "fullDescription": "Base UI is MUI’s unstyled React component foundation for teams that want accessible behavior without inherited visual styling. It supplies low-level primitives for building custom design systems while leaving layout, tokens, and styling under application control.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Accordion - Base UI is tracked as a UI component or library resource.",
+        "name": "Accessible Primitives",
+        "description": "Provides behavior and ARIA patterns for complex components without visual opinions.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React First",
+        "description": "Designed for React applications that need custom styling and predictable composition.",
+        "icon": "check"
+      },
+      {
+        "name": "Design-System Ready",
+        "description": "Separates behavior from presentation so teams can map primitives to their own tokens.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "MUI Maintained",
+        "description": "Backed by the MUI team and built as a lower-level foundation for component authors.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Composability",
+        "description": "Components expose parts and hooks that support custom markup and styling strategies.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Documentation Coverage",
+        "description": "Includes detailed component docs, examples, and accessibility guidance.",
         "icon": "check"
       }
     ],
@@ -3151,8 +3397,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3160,17 +3406,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3258,8 +3504,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3287,8 +3533,8 @@
   },
   {
     "slug": "shadcn-svelte",
-    "name": "Introduction - shadcn-svelte",
-    "description": "Introduction - shadcn-svelte bookmarked for ui library resources.",
+    "name": "shadcn-svelte",
+    "description": "Svelte port of the shadcn/ui component workflow with Tailwind CSS and Bits UI.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -3308,7 +3554,7 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://www.shadcn-svelte.com/docs",
+    "website": "https://www.shadcn-svelte.com/",
     "docs": "https://www.shadcn-svelte.com/docs",
     "sourceCode": "https://github.com/huntabyte/shadcn-svelte",
     "icon": "shadcn-svelte",
@@ -3320,34 +3566,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Introduction - shadcn-svelte",
-    "fullDescription": "Introduction - shadcn-svelte is kept as a UI component and design system reference.",
+    "atGlance": "shadcn-style copy-paste components for Svelte applications.",
+    "fullDescription": "shadcn-svelte brings the shadcn/ui component ownership model to Svelte. It combines Tailwind CSS styling, Bits UI primitives, and copy-paste component source so Svelte teams can build and customize their own design systems.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Introduction - shadcn-svelte is tracked as a UI component or library resource.",
+        "name": "Svelte Components",
+        "description": "Provides component source designed for Svelte applications.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "shadcn Workflow",
+        "description": "Uses the copy-paste and customize model popularized by shadcn/ui.",
+        "icon": "check"
+      },
+      {
+        "name": "Tailwind Styling",
+        "description": "Components are styled with Tailwind CSS for direct customization.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Bits UI Foundation",
+        "description": "Builds on Svelte-first primitives for accessible behavior.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "CLI and Registry",
+        "description": "Supports adding components through a registry-driven workflow.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Community",
+        "description": "GitHub stats reflect an active Svelte ecosystem project.",
         "icon": "check"
       }
     ],
@@ -3356,8 +3607,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3365,17 +3616,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3385,8 +3636,8 @@
   },
   {
     "slug": "motion-primitives",
-    "name": "Glow Effect - Motion-Primitives",
-    "description": "Glow Effect - Motion-Primitives bookmarked for ui library resources.",
+    "name": "Motion Primitives",
+    "description": "Composable animated React primitives for building motion-rich product interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -3406,8 +3657,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://motion-primitives.com/docs/glow-effect",
-    "docs": "https://motion-primitives.com/docs/glow-effect",
+    "website": "https://motion-primitives.com/",
+    "docs": "https://motion-primitives.com/docs",
     "sourceCode": "https://github.com/ibelick/motion-primitives",
     "icon": "motion-primitives",
     "verified": true,
@@ -3418,34 +3669,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Glow Effect - Motion-Primitives",
-    "fullDescription": "Glow Effect - Motion-Primitives is kept as a UI component and design system reference.",
+    "atGlance": "Animated React primitives built around Motion and Tailwind-friendly composition.",
+    "fullDescription": "Motion Primitives is a collection of composable animated React building blocks. It helps teams add polished transitions, text effects, layout effects, and interaction patterns while keeping the implementation easy to copy and customize.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Glow Effect - Motion-Primitives is tracked as a UI component or library resource.",
+        "name": "Animated Primitives",
+        "description": "Provides reusable motion patterns for common interface effects.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React Composition",
+        "description": "Designed as composable React components rather than a monolithic UI kit.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Friendly Examples",
+        "description": "Docs expose implementation patterns that can be adapted inside product code.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Text and Layout Effects",
+        "description": "Includes primitives for text reveal, glow, transitions, and layout motion.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Motion Ecosystem Fit",
+        "description": "Works naturally alongside Motion and Tailwind-heavy interfaces.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Reference",
+        "description": "GitHub source shows implementation and contribution activity.",
         "icon": "check"
       }
     ],
@@ -3454,8 +3710,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3463,17 +3719,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3680,8 +3936,8 @@
   },
   {
     "slug": "tremor",
-    "name": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards",
-    "description": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards bookmarked for ui library resources.",
+    "name": "Tremor",
+    "description": "React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -3702,7 +3958,7 @@
       "Cloud"
     ],
     "website": "https://tremor.so/",
-    "docs": "https://tremor.so/",
+    "docs": "https://tremor.so/docs/getting-started/installation",
     "sourceCode": "https://github.com/tremorlabs/tremor",
     "icon": "tremor",
     "verified": true,
@@ -3713,34 +3969,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards",
-    "fullDescription": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards is kept as a UI component and design system reference.",
+    "atGlance": "React components for dashboards, charts, and metrics UI.",
+    "fullDescription": "Tremor is a React and Tailwind component library for building dashboards and data-heavy interfaces. It focuses on charts, metric cards, tables, and layouts that help teams ship analytics screens quickly.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards is tracked as a UI component or library resource.",
+        "name": "Dashboard Components",
+        "description": "Provides cards, charts, tables, and layouts for analytics products.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React and Tailwind",
+        "description": "Built for React applications using Tailwind CSS styling.",
+        "icon": "check"
+      },
+      {
+        "name": "Data UI Patterns",
+        "description": "Focuses on metrics, reporting, and operational interfaces.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Chart-Focused Catalog",
+        "description": "Useful when building data visualization and KPI surfaces.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Open Source Repo",
+        "description": "GitHub source and activity stats are linked from the catalog.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Production Layouts",
+        "description": "Components are intended for real dashboard screens, not only demos.",
         "icon": "check"
       }
     ],
@@ -3749,8 +4010,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3758,17 +4019,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3875,6 +4136,115 @@
     ]
   },
   {
+    "slug": "spartan-ng",
+    "name": "spartan/ui",
+    "description": "Accessible Angular UI primitives with signals, SSR support, zoneless readiness, and copy-paste Tailwind styles.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 2604,
+    "watchers": 34,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "1 day ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 124,
+    "commitsThisYear": 451,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://spartan.ng/",
+    "docs": "https://spartan.ng/documentation/introduction",
+    "sourceCode": "https://github.com/spartan-ng/spartan",
+    "icon": "spartan-ng",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "angular",
+      "tailwind",
+      "components",
+      "accessibility",
+      "signals",
+      "ssr"
+    ],
+    "atGlance": "Accessible UI primitives and copy-paste styles for modern Angular apps.",
+    "fullDescription": "spartan/ui is the Angular UI library in the spartan mono-repo. It pairs accessible behavior primitives with copy-paste Tailwind styles so Angular teams can install behavior, own component code, and customize a shadcn-inspired design system without waiting on a black-box component package.",
+    "coreFeatures": [
+      {
+        "name": "Accessible UI Primitives",
+        "description": "Provides Angular-first behavior primitives for complex interface interactions.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Styles",
+        "description": "Separates behavior from Tailwind CSS styling so components can be copied, owned, and customized.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn-Inspired Workflow",
+        "description": "Brings the component-ownership model popularized by shadcn/ui into Angular projects.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Modern Angular Ready",
+        "description": "Built around signals, SSR compatibility, and zoneless-ready Angular application patterns.",
+        "icon": "check"
+      },
+      {
+        "name": "Blocks and Examples",
+        "description": "Includes docs, components, blocks, and example screens for faster interface assembly.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Monorepo",
+        "description": "Links to the public spartan repository for implementation reference and contribution.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "park-ui",
+        "name": "Park UI",
+        "description": "Multi-framework design system components built with Ark UI and Panda CSS.",
+        "stars": 2315,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://park-ui.com/"
+      },
+      {
+        "slug": "headlessui",
+        "name": "Headless UI",
+        "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
+        "stars": 28559,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://headlessui.com/"
+      }
+    ]
+  },
+  {
     "slug": "evilcharts",
     "name": "EvilCharts",
     "description": "Open-source chart components built with shadcn/ui and Recharts.",
@@ -3957,15 +4327,15 @@
         "slug": "bklit-ui",
         "name": "Backlit UI",
         "description": "Design engineered charts and components with beautiful, animated data visualizations.",
-        "stars": 0,
+        "stars": 800,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.bklit.com/"
       },
       {
         "slug": "tremor",
-        "name": "Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards",
-        "description": "Copy-and-paste Tailwind CSS UI components for charts and dashboards.",
+        "name": "Tremor",
+        "description": "React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.",
         "stars": 3425,
         "addedDaysAgo": 0,
         "verified": true,
@@ -3973,8 +4343,8 @@
       },
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The foundation for your design system.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4070,8 +4440,8 @@
       },
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4079,8 +4449,8 @@
       },
       {
         "slug": "headlessui",
-        "name": "Headless UI - Unstyled, fully accessible UI components",
-        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "name": "Headless UI",
+        "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
         "stars": 28559,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4188,8 +4558,8 @@
   },
   {
     "slug": "uiball",
-    "name": "UI Ball : Useful things for devs",
-    "description": "UI Ball : Useful things for devs bookmarked for ui library resources.",
+    "name": "UI Ball",
+    "description": "Loader and animation components for lightweight web loading states.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -4221,34 +4591,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "UI Ball : Useful things for devs",
-    "fullDescription": "UI Ball : Useful things for devs is kept as a UI component and design system reference.",
+    "atGlance": "Small animated loaders for web interfaces and loading states.",
+    "fullDescription": "UI Ball is a loader-focused UI resource for adding lightweight animated loading indicators to web interfaces. The catalog tracks the ldrs repository that powers the current loader implementation and package activity.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "UI Ball : Useful things for devs is tracked as a UI component or library resource.",
+        "name": "Loader Components",
+        "description": "Provides animated indicators for loading, waiting, and async interface states.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Lightweight Usage",
+        "description": "Designed as small UI pieces rather than a broad component framework.",
+        "icon": "check"
+      },
+      {
+        "name": "Web Component Direction",
+        "description": "The active ldrs source focuses on reusable loader elements for modern web apps.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Source",
+        "description": "GitHub stats come from the linked ldrs implementation repository.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Drop-In UI",
+        "description": "Useful for quickly adding polished loading states to product interfaces.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Animation Reference",
+        "description": "Helpful for comparing loader motion and visual treatment.",
         "icon": "check"
       }
     ],
@@ -4257,8 +4632,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4266,17 +4641,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4286,8 +4661,8 @@
   },
   {
     "slug": "flowbite-react",
-    "name": "Flowbite React - UI Component Library",
-    "description": "Flowbite React - UI Component Library bookmarked for ui library resources.",
+    "name": "Flowbite React",
+    "description": "Tailwind CSS React component library with themed controls, layouts, and examples.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -4308,7 +4683,7 @@
       "Cloud"
     ],
     "website": "https://flowbite-react.com/",
-    "docs": "https://flowbite-react.com/",
+    "docs": "https://flowbite-react.com/docs/getting-started/introduction",
     "sourceCode": "https://github.com/themesberg/flowbite-react",
     "icon": "flowbite-react",
     "verified": true,
@@ -4319,34 +4694,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Flowbite React - UI Component Library",
-    "fullDescription": "Flowbite React - UI Component Library is kept as a UI component and design system reference.",
+    "atGlance": "React components built on Flowbite and Tailwind CSS.",
+    "fullDescription": "Flowbite React brings the Flowbite component system to React with Tailwind CSS styling, typed components, examples, and theming support. It is useful for teams that want a packaged component library rather than a copy-paste component registry.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Flowbite React - UI Component Library is tracked as a UI component or library resource.",
+        "name": "React Components",
+        "description": "Provides prebuilt React components for common application controls and layouts.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Tailwind CSS Base",
+        "description": "Uses Tailwind styling and Flowbite conventions for customization.",
+        "icon": "check"
+      },
+      {
+        "name": "Theme Support",
+        "description": "Includes theme configuration for adapting components to product requirements.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Packaged Library",
+        "description": "Installed as a dependency for teams that prefer managed components.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Documentation Examples",
+        "description": "Component docs include examples, props, and usage guidance.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Project",
+        "description": "The GitHub repository exposes releases, contributors, and source implementation.",
         "icon": "check"
       }
     ],
@@ -4355,8 +4735,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4364,17 +4744,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4563,7 +4943,7 @@
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
         "name": "shadcn/ui",
-        "description": "The foundation for your design system.",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4573,7 +4953,7 @@
         "slug": "pixel-perfect",
         "name": "Pixel Perfect UI",
         "description": "Precision-crafted React components for modern web apps.",
-        "stars": 437,
+        "stars": 440,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.pixel-perfect.space/"
@@ -4670,7 +5050,7 @@
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
         "name": "shadcn/ui",
-        "description": "The foundation for your design system.",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4680,7 +5060,7 @@
         "slug": "pixel-perfect",
         "name": "Pixel Perfect UI",
         "description": "Precision-crafted React components for modern web apps.",
-        "stars": 437,
+        "stars": 440,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.pixel-perfect.space/"
@@ -4698,8 +5078,8 @@
   },
   {
     "slug": "tailgrids",
-    "name": "Dashboard React Templates | TailGrids",
-    "description": "Dashboard React Templates | TailGrids bookmarked for ui library resources.",
+    "name": "TailGrids",
+    "description": "Tailwind CSS component and template library for dashboards, landing pages, and app UI.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -4719,8 +5099,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://tailgrids.com/templates/tag/dashboard/react",
-    "docs": "https://tailgrids.com/templates/tag/dashboard/react",
+    "website": "https://tailgrids.com/",
+    "docs": "https://tailgrids.com/components",
     "sourceCode": "https://github.com/TailGrids/tailgrids",
     "icon": "tailgrids",
     "verified": true,
@@ -4731,34 +5111,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Dashboard React Templates | TailGrids",
-    "fullDescription": "Dashboard React Templates - TailGrids is kept as a UI component and design system reference.",
+    "atGlance": "Tailwind components and templates for product pages and dashboards.",
+    "fullDescription": "TailGrids is a Tailwind CSS component and template library covering dashboards, landing pages, forms, and common application sections. It gives teams a broad catalog of UI patterns for rapid page assembly.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Dashboard React Templates - TailGrids is tracked as a UI component or library resource.",
+        "name": "Tailwind Components",
+        "description": "Provides component patterns built around Tailwind CSS.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Dashboard Templates",
+        "description": "Includes dashboard and application templates in addition to standalone UI pieces.",
+        "icon": "check"
+      },
+      {
+        "name": "Page Sections",
+        "description": "Covers product pages, forms, navigation, pricing, and other common sections.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Package",
+        "description": "The linked GitHub repository provides source and activity stats.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Commercial Catalog",
+        "description": "Useful for teams comparing free and paid Tailwind UI resources.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Rapid Layout Work",
+        "description": "Helps assemble complete pages from a known component catalog.",
         "icon": "check"
       }
     ],
@@ -4767,8 +5152,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4776,17 +5161,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -4991,8 +5376,8 @@
   },
   {
     "slug": "wigggle-ui",
-    "name": "WigggleUI - Open Source Widgets for the Web.",
-    "description": "WigggleUI - Open Source Widgets for the Web. bookmarked for ui library resources.",
+    "name": "WigggleUI",
+    "description": "Open-source web widgets and playful UI components for modern frontend projects.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -5024,34 +5409,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "WigggleUI - Open Source Widgets for the Web.",
-    "fullDescription": "WigggleUI - Open Source Widgets for the Web. is kept as a UI component and design system reference.",
+    "atGlance": "Open-source widgets and playful UI components for web apps.",
+    "fullDescription": "WigggleUI is an open-source collection of widgets and UI components for modern web projects. It is useful as a source reference for playful, ready-made interface pieces that can be adapted into product experiences.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "WigggleUI - Open Source Widgets for the Web. is tracked as a UI component or library resource.",
+        "name": "Widget Catalog",
+        "description": "Provides reusable web widgets and interface components.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Open Source UI",
+        "description": "The public repository exposes component implementation details.",
+        "icon": "check"
+      },
+      {
+        "name": "Modern Frontend Fit",
+        "description": "Targets contemporary web projects that need quick UI pieces.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Playful Interaction",
+        "description": "Useful when a product needs lighter, more expressive component treatment.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Source Visibility",
+        "description": "GitHub stats, contributors, and license details are tracked from the repo.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Component Discovery",
+        "description": "Grouped with UI libraries for comparison against larger component systems.",
         "icon": "check"
       }
     ],
@@ -5060,8 +5450,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5069,17 +5459,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5088,9 +5478,114 @@
     ]
   },
   {
+    "slug": "bklit-ui",
+    "name": "Backlit UI",
+    "description": "Design engineered charts and components with beautiful, animated data visualizations.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 800,
+    "watchers": 8,
+    "addedDaysAgo": 0,
+    "license": "No license file",
+    "lastCommit": "18 hours ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 10,
+    "commitsThisYear": 287,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://ui.bklit.com/",
+    "docs": "https://ui.bklit.com/docs/installation",
+    "sourceCode": "https://github.com/bklit/bklit-ui",
+    "icon": "",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "ui-libraries",
+      "ui",
+      "charts",
+      "components",
+      "design-system",
+      "data-visualization"
+    ],
+    "atGlance": "Design engineered charts and components for modern web apps.",
+    "fullDescription": "Backlit UI is a component library focused on design-engineered charts and UI components. It provides animated, visually polished data visualizations and utility components built for seamless integration into modern web projects.",
+    "coreFeatures": [
+      {
+        "name": "Design Engineered Charts",
+        "description": "Beautiful, animated chart components crafted with a strong design sensibility.",
+        "icon": "check"
+      },
+      {
+        "name": "UI Components",
+        "description": "A growing set of utility components alongside the chart library.",
+        "icon": "check"
+      },
+      {
+        "name": "Studio",
+        "description": "Built-in Studio tool for customizing and exporting chart configurations.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Theming Support",
+        "description": "Flexible theming system to match your design system or brand.",
+        "icon": "check"
+      },
+      {
+        "name": "Blocks",
+        "description": "Pre-built layout blocks combining charts and components for rapid prototyping.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn Compatible",
+        "description": "Praised by shadcn and the community as a natural complement to shadcn/ui.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21037,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "tremor",
+        "name": "Tremor",
+        "description": "React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.",
+        "stars": 3425,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://tremor.so/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "smoothui",
-    "name": "SmoothUI - Animated React Components for shadcn/ui | Motion & Tailwind",
-    "description": "SmoothUI - Animated React Components for shadcn/ui | Motion & Tailwind bookmarked for ui library resources.",
+    "name": "SmoothUI",
+    "description": "Animated React components for shadcn/ui, Motion, and Tailwind CSS interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -5111,7 +5606,7 @@
       "Cloud"
     ],
     "website": "https://smoothui.dev/",
-    "docs": "https://smoothui.dev/",
+    "docs": "https://smoothui.dev/docs",
     "sourceCode": "https://github.com/educlopez/smoothui",
     "icon": "smoothui",
     "verified": true,
@@ -5122,34 +5617,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "SmoothUI - Animated React Components for shadcn/ui | Motion & Tailwind",
-    "fullDescription": "SmoothUI - Animated React Components for shadcn/ui - Motion & Tailwind is kept as a UI component and design system reference.",
+    "atGlance": "Animated shadcn-style React components powered by Motion and Tailwind.",
+    "fullDescription": "SmoothUI provides animated React components for teams using shadcn/ui, Tailwind CSS, and Motion. It is useful for adding polished transitions, interactive sections, and expressive product UI without building every animation from scratch.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "SmoothUI - Animated React Components for shadcn/ui - Motion & Tailwind is tracked as a UI component or library resource.",
+        "name": "Animated Components",
+        "description": "Offers motion-driven React components and visual effects.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "shadcn/ui Fit",
+        "description": "Designed to complement shadcn-style component ownership.",
+        "icon": "check"
+      },
+      {
+        "name": "Tailwind Styling",
+        "description": "Uses Tailwind CSS so styling can be adapted directly in app code.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Motion Integration",
+        "description": "Built around modern animation patterns for refined interactions.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Copy-Paste Usage",
+        "description": "Components can be moved into application code and customized.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Open Source Repo",
+        "description": "GitHub stats and implementation are available from the linked source.",
         "icon": "check"
       }
     ],
@@ -5158,8 +5658,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5167,17 +5667,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5362,7 +5862,7 @@
     "similarTools": [
       {
         "slug": "chanhdai-components",
-        "name": "Chanh Dai Components",
+        "name": "Chánh Đại Components",
         "description": "Pixel-perfect shadcn registry with uniquely crafted React components.",
         "stars": 1873,
         "addedDaysAgo": 0,
@@ -5373,7 +5873,7 @@
         "slug": "pixel-perfect",
         "name": "Pixel Perfect UI",
         "description": "Precision-crafted React components for modern web apps.",
-        "stars": 437,
+        "stars": 440,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.pixel-perfect.space/"
@@ -5391,20 +5891,20 @@
   },
   {
     "slug": "lightswind",
-    "name": "Animated React Components & UI Kits - Lightswind UI",
-    "description": "Animated React Components & UI Kits - Lightswind UI bookmarked for ui library resources.",
+    "name": "Lightswind UI",
+    "description": "Animated React and Tailwind UI library with components, templates, and motion effects.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 598,
+    "stars": 630,
     "watchers": 6,
     "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "10 days ago",
-    "lastRelease": "10 days ago",
+    "license": "Other",
+    "lastCommit": "6 days ago",
+    "lastRelease": "20 days ago",
     "version": "lightswindui/v3.1.28",
     "contributors": 3,
-    "commitsThisYear": 5,
+    "commitsThisYear": 6,
     "releases": 3,
     "platforms": [
       "Web"
@@ -5424,34 +5924,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Animated React Components & UI Kits - Lightswind UI",
-    "fullDescription": "Animated React Components & UI Kits - Lightswind UI is kept as a UI component and design system reference.",
+    "atGlance": "Animated React components and templates for Tailwind projects.",
+    "fullDescription": "Lightswind UI provides animated React components, templates, and UI kits for teams building visually expressive Tailwind interfaces. It is useful for adding motion-heavy sections and prebuilt interface patterns without designing every effect manually.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Animated React Components & UI Kits - Lightswind UI is tracked as a UI component or library resource.",
+        "name": "Animated Components",
+        "description": "Includes motion-focused React components for modern web interfaces.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Tailwind CSS Styling",
+        "description": "Uses Tailwind utilities so components can be customized in application code.",
+        "icon": "check"
+      },
+      {
+        "name": "Templates and Kits",
+        "description": "Offers larger UI kits and page patterns in addition to individual components.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Repo",
+        "description": "The linked repository provides implementation and release history.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Visual Effects",
+        "description": "Useful for hero sections, marketing pages, and expressive product surfaces.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Installable Package",
+        "description": "Release tags track published library versions.",
         "icon": "check"
       }
     ],
@@ -5460,8 +5965,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5469,17 +5974,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5489,16 +5994,16 @@
   },
   {
     "slug": "billingsdk",
-    "name": "Billing SDK - Modern Billing & Monetization Components",
-    "description": "Billing SDK - Modern Billing & Monetization Components bookmarked for ui library resources.",
+    "name": "Billing SDK",
+    "description": "Billing and monetization components for pricing, checkout, subscriptions, and usage UI.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 462,
+    "stars": 470,
     "watchers": 0,
     "addedDaysAgo": 0,
     "license": "GPL-3.0",
-    "lastCommit": "2 months ago",
+    "lastCommit": "3 months ago",
     "lastRelease": "3 months ago",
     "version": "v1.4.0",
     "contributors": 64,
@@ -5522,34 +6027,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Billing SDK - Modern Billing & Monetization Components",
-    "fullDescription": "Billing SDK - Modern Billing & Monetization Components is kept as a UI component and design system reference.",
+    "atGlance": "Ready-made billing UI components for subscription and monetization flows.",
+    "fullDescription": "Billing SDK provides billing and monetization interface components for SaaS products. It focuses on pricing tables, checkout surfaces, subscription management, usage-based billing, and payment UI patterns that can be embedded into modern product flows.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Billing SDK - Modern Billing & Monetization Components is tracked as a UI component or library resource.",
+        "name": "Billing Components",
+        "description": "Provides UI pieces for pricing, checkout, subscriptions, and customer billing flows.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Monetization Patterns",
+        "description": "Covers SaaS revenue surfaces such as plans, usage, invoices, and customer portals.",
+        "icon": "check"
+      },
+      {
+        "name": "Product Integration",
+        "description": "Designed for teams adding billing UX to existing product dashboards.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Repo",
+        "description": "The public repository exposes implementation details, releases, and contributors.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Payment UX Reference",
+        "description": "Useful for reviewing how billing state is represented in product interfaces.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Modern App UI",
+        "description": "Built for contemporary web apps that need polished billing and subscription screens.",
         "icon": "check"
       }
     ],
@@ -5558,8 +6068,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5567,17 +6077,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5592,15 +6102,15 @@
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 437,
+    "stars": 440,
     "watchers": 2,
     "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "1 day ago",
+    "license": "No license file",
+    "lastCommit": "15 hours ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 2,
-    "commitsThisYear": 111,
+    "commitsThisYear": 117,
     "releases": 0,
     "platforms": [
       "Web"
@@ -5667,7 +6177,7 @@
       {
         "slug": "magicui",
         "name": "Magic UI",
-        "description": "Animated UI components for React, built with Tailwind CSS and Framer Motion.",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
         "stars": 21037,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5694,119 +6204,21 @@
     ]
   },
   {
-    "slug": "badtz-ui",
-    "name": "UI library for React developers. - BadtzUI",
-    "description": "UI library for React developers. - BadtzUI bookmarked for ui library resources.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 249,
-    "watchers": 4,
-    "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "2 months ago",
-    "lastRelease": "No releases",
-    "version": "",
-    "contributors": 2,
-    "commitsThisYear": 8,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://www.badtz-ui.com/",
-    "docs": "https://www.badtz-ui.com/",
-    "sourceCode": "https://github.com/badtzx0/badtz-ui",
-    "icon": "badtz-ui",
-    "verified": true,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "UI library for React developers. - BadtzUI",
-    "fullDescription": "UI library for React developers. - BadtzUI is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "UI library for React developers. - BadtzUI is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
     "slug": "shieldcn",
     "name": "shieldcn",
     "description": "Beautiful README badges styled like shadcn/ui buttons.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 145,
+    "stars": 309,
     "watchers": 0,
     "addedDaysAgo": 0,
     "license": "MIT",
-    "lastCommit": "3 days ago",
+    "lastCommit": "53 minutes ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 3,
-    "commitsThisYear": 74,
+    "commitsThisYear": 83,
     "releases": 0,
     "platforms": [
       "Web"
@@ -5870,8 +6282,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5880,7 +6292,7 @@
       {
         "slug": "magicui",
         "name": "Magic UI",
-        "description": "Animated UI components for React, built with Tailwind CSS and Framer Motion.",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
         "stars": 21037,
         "addedDaysAgo": 0,
         "verified": true,
@@ -5888,12 +6300,321 @@
       },
       {
         "slug": "8bitcn",
-        "name": "Components - 8bitcn/ui",
-        "description": "Components - 8bitcn/ui bookmarked for ui library resources.",
-        "stars": 1859,
+        "name": "8bitcn/ui",
+        "description": "Retro-styled 8-bit components and blocks for copy-paste UI work.",
+        "stars": 1863,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://www.8bitcn.com/docs/components"
+        "website": "https://www.8bitcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "badtz-ui",
+    "name": "BadtzUI",
+    "description": "React component library with Tailwind CSS, Radix primitives, and shadcn-style copy-paste components.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 253,
+    "watchers": 4,
+    "addedDaysAgo": 0,
+    "license": "Other",
+    "lastCommit": "3 months ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 2,
+    "commitsThisYear": 8,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.badtz-ui.com/",
+    "docs": "https://www.badtz-ui.com/",
+    "sourceCode": "https://github.com/badtzx0/badtz-ui",
+    "icon": "badtz-ui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Copy-paste React components built on Tailwind CSS and Radix UI.",
+    "fullDescription": "BadtzUI is a React UI library for teams that want shadcn-style component ownership with ready-made Tailwind styling. It combines accessible Radix primitives, reusable component examples, and implementation-focused docs for building product interfaces quickly.",
+    "coreFeatures": [
+      {
+        "name": "React Component Library",
+        "description": "Provides reusable React components that can be copied into application code.",
+        "icon": "check"
+      },
+      {
+        "name": "Tailwind Styling",
+        "description": "Uses Tailwind CSS utility classes so teams can adapt components to their own visual system.",
+        "icon": "check"
+      },
+      {
+        "name": "Radix Foundation",
+        "description": "Leans on Radix primitives for accessible behavior in interactive components.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Copy-Paste Workflow",
+        "description": "Designed for teams that want to own and customize component source code.",
+        "icon": "check"
+      },
+      {
+        "name": "Practical Examples",
+        "description": "Includes component examples and usage patterns for common interface needs.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Reference",
+        "description": "The public repository provides implementation details and contribution history.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "once-ui",
+    "name": "Once UI",
+    "description": "Open-source design system and component foundation for polished Next.js projects.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 224,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "8 days ago",
+    "lastRelease": "24 days ago",
+    "version": "v1.7.0",
+    "contributors": 12,
+    "commitsThisYear": 170,
+    "releases": 4,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://once-ui.com/",
+    "docs": "https://once-ui.com/",
+    "sourceCode": "https://github.com/once-ui-system/core",
+    "icon": "once-ui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Design-system components and tokens for indie Next.js products.",
+    "fullDescription": "Once UI is an open-source design system for creators building polished Next.js products. The core repository provides the reusable component and style foundation behind Once UI templates and portfolio experiences.",
+    "coreFeatures": [
+      {
+        "name": "Design System Core",
+        "description": "Provides the component and styling foundation for Once UI projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Next.js Friendly",
+        "description": "Targets modern Next.js applications and creator-focused product sites.",
+        "icon": "check"
+      },
+      {
+        "name": "Token-Driven UI",
+        "description": "Uses reusable design decisions for spacing, typography, color, and layout.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Starter Ecosystem",
+        "description": "Works with Once UI starter templates and portfolio resources.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Core",
+        "description": "GitHub stats come from the public Once UI core repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Creator Focus",
+        "description": "Optimized for polished indie products, portfolios, and personal sites.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "efferd",
+    "name": "Efferd",
+    "description": "shadcn/ui blocks and components for landing pages, dashboards, and modern web apps.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 136,
+    "watchers": 1,
+    "addedDaysAgo": 0,
+    "license": "Other",
+    "lastCommit": "5 months ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 2,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://efferd.com/blocks",
+    "docs": "https://efferd.com/blocks",
+    "sourceCode": "https://github.com/shabanhr/efferd-ui",
+    "icon": "efferd",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Ready-made shadcn/ui blocks for polished product pages.",
+    "fullDescription": "Efferd provides shadcn/ui blocks and components aimed at fast product-page assembly. It is useful when a team wants Tailwind and React sections for marketing pages, dashboards, and common application layouts without starting every section from scratch.",
+    "coreFeatures": [
+      {
+        "name": "shadcn Blocks",
+        "description": "Offers prebuilt blocks that fit the shadcn/ui and Tailwind workflow.",
+        "icon": "check"
+      },
+      {
+        "name": "Landing Page Sections",
+        "description": "Includes polished sections for common product and marketing layouts.",
+        "icon": "check"
+      },
+      {
+        "name": "React Implementation",
+        "description": "The public repo shows the implementation for review and adaptation.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Fast Prototyping",
+        "description": "Helps assemble complete pages from ready-made sections.",
+        "icon": "check"
+      },
+      {
+        "name": "Visual Polish",
+        "description": "Focuses on modern layouts, spacing, and component composition.",
+        "icon": "check"
+      },
+      {
+        "name": "Legacy Source Available",
+        "description": "The linked repository preserves source reference for the published block catalog.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
       }
     ]
   },
@@ -5996,8 +6717,8 @@
   },
   {
     "slug": "nexus-ui",
-    "name": "Nexus UI - Build Better AI Interfaces",
-    "description": "Nexus UI - Build Better AI Interfaces bookmarked for ui library resources.",
+    "name": "Nexus UI",
+    "description": "React UI components for building AI product interfaces and chat-driven application screens.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -6029,34 +6750,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Nexus UI - Build Better AI Interfaces",
-    "fullDescription": "Nexus UI - Build Better AI Interfaces is kept as a UI component and design system reference.",
+    "atGlance": "Interface components for AI apps and chat-oriented product UI.",
+    "fullDescription": "Nexus UI is a component resource focused on AI interface patterns, including chat, prompt, and generated-output surfaces. It is useful for teams building AI products that need reusable interface pieces beyond generic application controls.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Nexus UI - Build Better AI Interfaces is tracked as a UI component or library resource.",
+        "name": "AI Interface Patterns",
+        "description": "Targets UI surfaces common in AI products, assistants, and generation workflows.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React Components",
+        "description": "Provides implementation reference for React application interfaces.",
+        "icon": "check"
+      },
+      {
+        "name": "Product UI Focus",
+        "description": "Designed around practical screens rather than abstract design tokens alone.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Repo",
+        "description": "The public repository exposes source and project activity.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Fast Prototyping",
+        "description": "Useful when assembling AI app experiences quickly.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Catalog Grouping",
+        "description": "Kept beside UI libraries and component resources for discovery.",
         "icon": "check"
       }
     ],
@@ -6065,8 +6791,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6074,17 +6800,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6094,16 +6820,16 @@
   },
   {
     "slug": "fab-ui",
-    "name": "fab ui",
-    "description": "fab ui bookmarked for ui library resources.",
+    "name": "fab UI",
+    "description": "Copy-paste React components and blocks for Tailwind CSS application interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 51,
+    "stars": 50,
     "watchers": 0,
     "addedDaysAgo": 0,
     "license": "MIT",
-    "lastCommit": "12 hours ago",
+    "lastCommit": "11 hours ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 3,
@@ -6127,34 +6853,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "fab ui",
-    "fullDescription": "fab ui is kept as a UI component and design system reference.",
+    "atGlance": "React and Tailwind components for quickly building app screens.",
+    "fullDescription": "fab UI is a small open-source component collection for React projects that use Tailwind CSS. It provides ready-made UI pieces and blocks intended for quick composition, customization, and direct source ownership.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "fab ui is tracked as a UI component or library resource.",
+        "name": "React Components",
+        "description": "Provides reusable React components for application UI work.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Tailwind Workflow",
+        "description": "Styles components with Tailwind utilities for direct customization.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Source",
+        "description": "Designed for teams that want component code in their own project.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Repo",
+        "description": "GitHub stats and source history are available from the linked repository.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Small Surface Area",
+        "description": "Focused collection that is easy to inspect and adapt.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "App UI Patterns",
+        "description": "Useful for assembling interface sections without a full design-system dependency.",
         "icon": "check"
       }
     ],
@@ -6163,8 +6894,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6172,17 +6903,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6277,8 +7008,8 @@
       },
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6286,8 +7017,8 @@
       },
       {
         "slug": "headlessui",
-        "name": "Headless UI - Unstyled, fully accessible UI components",
-        "description": "Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.",
+        "name": "Headless UI",
+        "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
         "stars": 28559,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6297,20 +7028,20 @@
   },
   {
     "slug": "reactvibe",
-    "name": "React Vibe - Animated, Motion-First UI Components for React",
-    "description": "React Vibe - Animated, Motion-First UI Components for React bookmarked for ui library resources.",
+    "name": "React Vibe",
+    "description": "Motion-first React component library for animated product interfaces and landing pages.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
-    "stars": 21,
+    "stars": 22,
     "watchers": 0,
     "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "19 days ago",
+    "license": "No license file",
+    "lastCommit": "4 days ago",
     "lastRelease": "No releases",
     "version": "",
     "contributors": 3,
-    "commitsThisYear": 34,
+    "commitsThisYear": 37,
     "releases": 0,
     "platforms": [
       "Web"
@@ -6330,34 +7061,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "React Vibe - Animated, Motion-First UI Components for React",
-    "fullDescription": "React Vibe - Animated, Motion-First UI Components for React is kept as a UI component and design system reference.",
+    "atGlance": "Animated React components with a motion-first design direction.",
+    "fullDescription": "React Vibe is a motion-first React UI component resource for teams building animated interfaces. It provides source reference for expressive components, interactions, and landing-page patterns that can be adapted in React applications.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "React Vibe - Animated, Motion-First UI Components for React is tracked as a UI component or library resource.",
+        "name": "Motion-First Components",
+        "description": "Focuses on animated UI patterns rather than static controls alone.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React Implementation",
+        "description": "Built for React projects and inspectable through the public repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Landing Page Patterns",
+        "description": "Useful for expressive sections, effects, and product marketing pages.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Open Source Reference",
+        "description": "GitHub stats and source code are linked for review.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Tailwind-Friendly Usage",
+        "description": "Pairs well with modern utility-styled frontend projects.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Creative UI Inspiration",
+        "description": "Useful for comparing animation treatment and interaction polish.",
         "icon": "check"
       }
     ],
@@ -6366,8 +7102,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -6375,17 +7111,120 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "shoogle",
+    "name": "shoogle",
+    "description": "Search engine for finding shadcn/ui components, blocks, and registry resources.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 4,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "No license file",
+    "lastCommit": "7 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 1,
+    "commitsThisYear": 8,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://shoogle.dev/",
+    "docs": "https://shoogle.dev/",
+    "sourceCode": "https://github.com/Ali-Hussein-dev/shoogle",
+    "icon": "shoogle",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Search across shadcn-style components and UI resources.",
+    "fullDescription": "shoogle is a search experience for discovering shadcn/ui components and related registry resources. It is useful when comparing available component implementations, locating examples, and quickly finding UI patterns across the shadcn ecosystem.",
+    "coreFeatures": [
+      {
+        "name": "shadcn Search",
+        "description": "Focuses on finding shadcn-style components and related UI resources.",
+        "icon": "check"
+      },
+      {
+        "name": "Component Discovery",
+        "description": "Helps developers locate blocks and examples faster than browsing individual sites.",
+        "icon": "check"
+      },
+      {
+        "name": "Web Search Interface",
+        "description": "Runs as a browser-based search tool for UI catalog work.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Public Repo Found",
+        "description": "The catalog now links the matching public repository for source stats.",
+        "icon": "check"
+      },
+      {
+        "name": "Ecosystem Navigation",
+        "description": "Useful for moving between shadcn registries and community resources.",
+        "icon": "check"
+      },
+      {
+        "name": "Lightweight Utility",
+        "description": "Small focused tool rather than a full component framework.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -30742,111 +31581,6 @@
     ]
   },
   {
-    "slug": "bklit-ui",
-    "name": "Backlit UI",
-    "description": "Design engineered charts and components with beautiful, animated data visualizations.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://ui.bklit.com/",
-    "docs": "https://ui.bklit.com/docs/installation",
-    "sourceCode": "",
-    "icon": "",
-    "verified": true,
-    "featured": false,
-    "tags": [
-      "ui-libraries",
-      "ui",
-      "charts",
-      "components",
-      "design-system",
-      "data-visualization"
-    ],
-    "atGlance": "Design engineered charts and components for modern web apps.",
-    "fullDescription": "Backlit UI is a component library focused on design-engineered charts and UI components. It provides animated, visually polished data visualizations and utility components built for seamless integration into modern web projects.",
-    "coreFeatures": [
-      {
-        "name": "Design Engineered Charts",
-        "description": "Beautiful, animated chart components crafted with a strong design sensibility.",
-        "icon": "check"
-      },
-      {
-        "name": "UI Components",
-        "description": "A growing set of utility components alongside the chart library.",
-        "icon": "check"
-      },
-      {
-        "name": "Studio",
-        "description": "Built-in Studio tool for customizing and exporting chart configurations.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Theming Support",
-        "description": "Flexible theming system to match your design system or brand.",
-        "icon": "check"
-      },
-      {
-        "name": "Blocks",
-        "description": "Pre-built layout blocks combining charts and components for rapid prototyping.",
-        "icon": "check"
-      },
-      {
-        "name": "shadcn Compatible",
-        "description": "Praised by shadcn and the community as a natural complement to shadcn/ui.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "magicui",
-        "name": "Magic UI",
-        "description": "Animated UI components for React, built with Tailwind CSS and Framer Motion.",
-        "stars": 21037,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://magicui.design/"
-      },
-      {
-        "slug": "tremor",
-        "name": "Tremor",
-        "description": "React components to build charts and dashboards.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://tremor.so/"
-      },
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "shadcn/ui",
-        "description": "The foundation for your design system.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      }
-    ]
-  },
-  {
     "slug": "blockus",
     "name": "blockus",
     "description": "Production-ready React blocks for shadcn/ui.",
@@ -30926,7 +31660,7 @@
       {
         "slug": "magicui",
         "name": "Magic UI",
-        "description": "Animated UI components for React, built with Tailwind CSS and Framer Motion.",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
         "stars": 21037,
         "addedDaysAgo": 0,
         "verified": true,
@@ -30935,16 +31669,16 @@
       {
         "slug": "originui",
         "name": "Origin UI",
-        "description": "Beautiful UI components built with Tailwind CSS and React.",
-        "stars": 0,
+        "description": "Copy-paste Tailwind and React components now surfaced through the Coss UI ecosystem.",
+        "stars": 9811,
         "addedDaysAgo": 0,
-        "verified": false,
+        "verified": true,
         "website": "https://originui.com/"
       },
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
         "name": "shadcn/ui",
-        "description": "The foundation for your design system.",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -30954,8 +31688,8 @@
   },
   {
     "slug": "designsystem",
-    "name": "Components",
-    "description": "Components bookmarked for ui library resources.",
+    "name": "LINE Design System",
+    "description": "Official LINE design system component reference for product UI patterns and standards.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -30987,34 +31721,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Components",
-    "fullDescription": "Components is kept as a UI component and design system reference.",
+    "atGlance": "LINE’s component reference for product UI consistency and interaction standards.",
+    "fullDescription": "LINE Design System documents the component patterns, interaction standards, and visual rules used across LINE product experiences. It is useful as a mature product design-system reference even though the public component source is not published as a repo-backed package.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Components is tracked as a UI component or library resource.",
+        "name": "Component Guidelines",
+        "description": "Documents production component patterns for LINE product interfaces.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Interaction Standards",
+        "description": "Captures usage guidance, behavior expectations, and interface consistency rules.",
+        "icon": "check"
+      },
+      {
+        "name": "Design-System Reference",
+        "description": "Useful for comparing how a large product organization structures component documentation.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Visual Standards",
+        "description": "Shows color, spacing, typography, and layout decisions in a system context.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Browser Reference",
+        "description": "Available as a public web reference with no local setup.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "No Public Repo",
+        "description": "The catalog entry records proprietary status because no official GitHub source repo is exposed.",
         "icon": "check"
       }
     ],
@@ -31023,8 +31762,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -31032,115 +31771,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
-    "slug": "efferd",
-    "name": "Beautiful Shadcn Blocks - Efferd",
-    "description": "Beautiful Shadcn Blocks - Efferd bookmarked for ui library resources.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://efferd.com/blocks",
-    "docs": "https://efferd.com/blocks",
-    "sourceCode": "",
-    "icon": "efferd",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "Beautiful Shadcn Blocks - Efferd",
-    "fullDescription": "Beautiful Shadcn Blocks - Efferd is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "Beautiful Shadcn Blocks - Efferd is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -31151,7 +31792,7 @@
   {
     "slug": "goodcomponents",
     "name": "Very Good Components",
-    "description": "Very Good Components bookmarked for ui library resources.",
+    "description": "Curated premium UI component collection for high-polish product interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -31183,34 +31824,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Very Good Components",
-    "fullDescription": "Very Good Components is kept as a UI component and design system reference.",
+    "atGlance": "High-polish component inspiration and ready-made UI sections.",
+    "fullDescription": "Very Good Components is a curated component resource focused on polished interface patterns. It is useful as a design and implementation reference for teams looking for modern UI sections, even though no official public GitHub source repository is exposed.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Very Good Components is tracked as a UI component or library resource.",
+        "name": "Polished Components",
+        "description": "Highlights visually refined component patterns for modern products.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "Interface Inspiration",
+        "description": "Useful for comparing layouts, density, interaction treatment, and visual hierarchy.",
+        "icon": "check"
+      },
+      {
+        "name": "Web-Based Catalog",
+        "description": "Available directly from the browser as a component reference.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Premium Positioning",
+        "description": "Tracked as a proprietary resource because the public catalog does not expose source stats.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Design Review Aid",
+        "description": "Useful when evaluating component composition and product UI polish.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "Catalog Context",
+        "description": "Grouped with UI libraries so it can be compared against open-source alternatives.",
         "icon": "check"
       }
     ],
@@ -31219,8 +31865,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -31228,17 +31874,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,
@@ -31248,21 +31894,21 @@
   },
   {
     "slug": "needmcp",
-    "name": "NeedMCP - AI-powered UI components via MCP",
-    "description": "NeedMCP - AI-powered UI components via MCP bookmarked for ui library resources.",
+    "name": "NeedMCP",
+    "description": "MCP-powered UI component access for AI coding assistants and generated interfaces.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
     "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
+    "license": "ISC",
+    "lastCommit": "11 days ago",
+    "lastRelease": "11 days ago",
+    "version": "v1.2.0",
+    "contributors": 1,
+    "commitsThisYear": 20,
+    "releases": 4,
     "platforms": [
       "Web"
     ],
@@ -31271,530 +31917,49 @@
     ],
     "website": "https://needmcp.com/",
     "docs": "https://needmcp.com/",
-    "sourceCode": "",
+    "sourceCode": "https://github.com/kulaspace/needmcp",
     "icon": "needmcp",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "NeedMCP - AI-powered UI components via MCP",
-    "fullDescription": "NeedMCP - AI-powered UI components via MCP is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "NeedMCP - AI-powered UI components via MCP is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
-    "slug": "once-ui",
-    "name": "Once UI: The open-source design system for indie creators",
-    "description": "Once UI: The open-source design system for indie creators bookmarked for ui library resources.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://once-ui.com/",
-    "docs": "https://once-ui.com/",
-    "sourceCode": "",
-    "icon": "once-ui",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "Once UI: The open-source design system for indie creators",
-    "fullDescription": "Once UI: The open-source design system for indie creators is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "Once UI: The open-source design system for indie creators is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
-    "slug": "originui",
-    "name": "Origin UI - Beautiful UI components built with Tailwind CSS and React",
-    "description": "Origin UI - Beautiful UI components built with Tailwind CSS and React bookmarked for ui library resources.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://originui.com/",
-    "docs": "https://originui.com/",
-    "sourceCode": "",
-    "icon": "originui",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "Origin UI - Beautiful UI components built with Tailwind CSS and React",
-    "fullDescription": "Origin UI - Beautiful UI components built with Tailwind CSS and React is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "Origin UI - Beautiful UI components built with Tailwind CSS and React is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
-    "slug": "reactbits",
-    "name": "React Bits - Animated UI Components For React",
-    "description": "React Bits - Animated UI Components For React bookmarked for ui library resources.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://reactbits.dev/",
-    "docs": "https://reactbits.dev/",
-    "sourceCode": "",
-    "icon": "reactbits",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "React Bits - Animated UI Components For React",
-    "fullDescription": "React Bits - Animated UI Components For React is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "React Bits - Animated UI Components For React is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
-    "slug": "shoogle",
-    "name": "Your shadcn search engine. | shoogle.dev",
-    "description": "Your shadcn search engine. | shoogle.dev bookmarked for ui library resources.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://shoogle.dev/",
-    "docs": "https://shoogle.dev/",
-    "sourceCode": "",
-    "icon": "shoogle",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ui-libraries",
-      "ui",
-      "library"
-    ],
-    "atGlance": "Your shadcn search engine. | shoogle.dev",
-    "fullDescription": "Your shadcn search engine. - shoogle.dev is kept as a UI component and design system reference.",
-    "coreFeatures": [
-      {
-        "name": "Component Resource",
-        "description": "Your shadcn search engine. - shoogle.dev is tracked as a UI component or library resource.",
-        "icon": "check"
-      },
-      {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
-        "icon": "check"
-      },
-      {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      },
-      {
-        "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
-        "stars": 32012,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://motion.dev/docs/framer"
-      },
-      {
-        "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
-        "stars": 29324,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.heroui.com/"
-      }
-    ]
-  },
-  {
-    "slug": "spartan-ng",
-    "name": "spartan",
-    "description": "Cutting-edge tools powering Angular full-stack development.",
-    "category": "UI Library",
-    "parentCategory": "development",
-    "subcategory": "ui-libraries",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://spartan.ng/",
-    "docs": "https://spartan.ng/documentation/introduction",
-    "sourceCode": "https://github.com/spartan-ng/spartan",
-    "icon": "",
     "verified": true,
     "featured": false,
     "tags": [
       "bookmark",
-      "angular",
-      "ui-library",
-      "tailwind",
-      "components"
+      "ui-libraries",
+      "ui",
+      "library"
     ],
-    "atGlance": "Angular components inspired by shadcn/ui.",
-    "fullDescription": "spartan is a popular, modern UI library for Angular that brings the copy-paste philosophy of shadcn/ui to the Angular ecosystem.",
+    "atGlance": "AI-assisted access to UI components through an MCP server.",
+    "fullDescription": "NeedMCP connects AI coding assistants to UI component resources through MCP. It is tracked as a UI library-adjacent developer tool because it helps agents discover and apply component patterns while building frontend interfaces.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Tracked as a UI component library for Angular applications.",
+        "name": "MCP Integration",
+        "description": "Provides an MCP server path for AI coding assistants.",
         "icon": "check"
       },
       {
-        "name": "Accessible Primitives",
-        "description": "Provides unstyled, accessible UI building blocks handling complex interactions.",
+        "name": "UI Component Access",
+        "description": "Focuses on helping agents locate and use component resources during implementation.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Coding Workflow",
+        "description": "Designed for prompt-driven frontend development and component discovery.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Customizable Styles",
-        "description": "Uses Tailwind CSS to provide beautiful styles that you can copy directly into your project.",
+        "name": "Public Package Repo",
+        "description": "The linked repository includes release tags and implementation details.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Modern Angular compatible, built with signals and SSR ready.",
+        "name": "Assistant-Friendly Setup",
+        "description": "Targets AI development environments rather than a traditional browser-only catalog.",
+        "icon": "check"
+      },
+      {
+        "name": "Versioned Releases",
+        "description": "GitHub releases track installable NeedMCP versions.",
         "icon": "check"
       }
     ],
@@ -31803,19 +31968,37 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
       }
     ]
   },
   {
     "slug": "ui",
     "name": "Aceternity UI",
-    "description": "Aceternity UI bookmarked for ui library resources.",
+    "description": "Animated Tailwind and React component catalog for high-impact landing pages.",
     "category": "UI Library",
     "parentCategory": "development",
     "subcategory": "ui-libraries",
@@ -31847,34 +32030,39 @@
       "ui",
       "library"
     ],
-    "atGlance": "Aceternity UI",
-    "fullDescription": "Aceternity UI is kept as a UI component and design system reference.",
+    "atGlance": "Animated React and Tailwind components for expressive marketing pages.",
+    "fullDescription": "Aceternity UI is a component catalog focused on animated, high-polish React and Tailwind effects. It is useful for product sites, portfolios, and marketing pages where distinctive motion and visual detail matter more than a packaged component API.",
     "coreFeatures": [
       {
-        "name": "Component Resource",
-        "description": "Aceternity UI is tracked as a UI component or library resource.",
+        "name": "Animated UI Effects",
+        "description": "Offers visually rich components for hero sections, backgrounds, cards, and interactions.",
         "icon": "check"
       },
       {
-        "name": "Implementation Reference",
-        "description": "Use the website or source link to inspect usage patterns.",
+        "name": "React and Tailwind",
+        "description": "Targets React projects styled with Tailwind CSS.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Catalog",
+        "description": "Components are presented as implementation snippets for direct use.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Design System Fit",
-        "description": "Useful for comparing component styles and interaction patterns.",
+        "name": "Marketing Page Fit",
+        "description": "Strong fit for landing pages, launch pages, and portfolio-style sites.",
         "icon": "check"
       },
       {
-        "name": "Developer Friendly",
-        "description": "Source code is linked when a public repository is available.",
+        "name": "Premium Templates",
+        "description": "The ecosystem includes paid templates and examples around the component catalog.",
         "icon": "check"
       },
       {
-        "name": "Catalog Tags",
-        "description": "Grouped with similar UI libraries for discovery.",
+        "name": "No Public Core Repo",
+        "description": "The catalog records proprietary status because no official component repository is exposed.",
         "icon": "check"
       }
     ],
@@ -31883,8 +32071,8 @@
     "similarTools": [
       {
         "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
         "stars": 114722,
         "addedDaysAgo": 0,
         "verified": true,
@@ -31892,17 +32080,17 @@
       },
       {
         "slug": "motion",
-        "name": "Framer | Motion for React (prev Framer Motion)",
-        "description": "Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
         "stars": 32012,
         "addedDaysAgo": 0,
         "verified": true,
-        "website": "https://motion.dev/docs/framer"
+        "website": "https://motion.dev/"
       },
       {
         "slug": "heroui",
-        "name": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library",
-        "description": "HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library resources.",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
         "stars": 29324,
         "addedDaysAgo": 0,
         "verified": true,

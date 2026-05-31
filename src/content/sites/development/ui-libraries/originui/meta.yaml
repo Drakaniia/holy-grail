@@ -1,20 +1,18 @@
 slug: originui
-name: Origin UI - Beautiful UI components built with Tailwind CSS and React
-description: >-
-  Origin UI - Beautiful UI components built with Tailwind CSS and React bookmarked for ui library
-  resources.
+name: Origin UI
+description: Copy-paste Tailwind and React components now surfaced through the Coss UI ecosystem.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 0
-watchers: 0
+stars: 9811
+watchers: 34
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
+license: AGPL-3.0
+lastCommit: 1 day ago
+lastRelease: No releases
 version: ""
-contributors: 0
-commitsThisYear: 0
+contributors: 50
+commitsThisYear: 127
 releases: 0
 platforms:
   - Web
@@ -22,58 +20,58 @@ deployment:
   - Cloud
 website: https://originui.com/
 docs: https://originui.com/
-sourceCode: ""
+sourceCode: https://github.com/cosscom/coss
 icon: originui
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
   - ui-libraries
   - ui
   - library
-atGlance: Origin UI - Beautiful UI components built with Tailwind CSS and React
+atGlance: Tailwind and React components for copy-paste application UI.
 fullDescription: >-
-  Origin UI - Beautiful UI components built with Tailwind CSS and React is kept as a UI component
-  and design system reference.
+  Origin UI is a collection of copy-paste components for building application interfaces with
+  Tailwind CSS and React. The current public site points into the Coss UI ecosystem, so the catalog
+  tracks the active Coss repository for source and repo stats.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      Origin UI - Beautiful UI components built with Tailwind CSS and React is tracked as a UI
-      component or library resource.
+  - name: Copy-Paste Components
+    description: Offers ready-made components that can be moved directly into app code.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Tailwind and React
+    description: Targets React projects styled with Tailwind CSS.
+    icon: check
+  - name: Application UI Patterns
+    description: Focuses on practical interface pieces for common app screens.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Coss Source Link
+    description: The live site links the active source path through the Coss repository.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Fast Assembly
+    description: Useful when building product screens from proven component patterns.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Design-System Reference
+    description: Helpful for comparing Tailwind component composition approaches.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

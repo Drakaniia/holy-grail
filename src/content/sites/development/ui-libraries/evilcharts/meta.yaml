@@ -36,12 +36,14 @@ tags:
   - react
 atGlance: Design-first chart components for React and shadcn/ui projects.
 fullDescription: >-
-  EvilCharts is an open-source chart UI collection built with shadcn/ui and
-  Recharts. It focuses on handcrafted, animated, and visually distinctive chart
-  components that can be copied into modern React and Next.js applications.
+  EvilCharts is an open-source chart UI collection built with shadcn/ui and Recharts. It focuses on
+  handcrafted, animated, and visually distinctive chart components that can be copied into modern
+  React and Next.js applications.
 coreFeatures:
   - name: Chart Component Library
-    description: Provides ready-to-use area, line, bar, composed, radar, pie, radial, and sankey chart components.
+    description: >-
+      Provides ready-to-use area, line, bar, composed, radar, pie, radial, and sankey chart
+      components.
     icon: check
   - name: shadcn Registry Install
     description: Chart components can be added through the shadcn CLI using the EvilCharts registry.
@@ -57,26 +59,28 @@ additionalFeatures:
     description: Includes supporting chart config, tooltip, legend, and background documentation.
     icon: check
   - name: Open Source
-    description: Source code is available for inspecting the implementation and contributing new chart components.
+    description: >-
+      Source code is available for inspecting the implementation and contributing new chart
+      components.
     icon: check
 similarTools:
   - slug: bklit-ui
     name: Backlit UI
     description: Design engineered charts and components with beautiful, animated data visualizations.
-    stars: 0
+    stars: 800
     addedDaysAgo: 0
     verified: true
     website: https://ui.bklit.com/
   - slug: tremor
-    name: Tremor - Copy-and-Paste Tailwind CSS UI Components for Charts and Dashboards
-    description: Copy-and-paste Tailwind CSS UI components for charts and dashboards.
+    name: Tremor
+    description: React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.
     stars: 3425
     addedDaysAgo: 0
     verified: true
     website: https://tremor.so/
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The foundation for your design system.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true

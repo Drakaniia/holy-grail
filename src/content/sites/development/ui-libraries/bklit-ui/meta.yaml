@@ -4,15 +4,15 @@ description: Design engineered charts and components with beautiful, animated da
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 0
-watchers: 0
+stars: 800
+watchers: 8
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
+license: No license file
+lastCommit: 18 hours ago
+lastRelease: No releases
 version: ""
-contributors: 0
-commitsThisYear: 0
+contributors: 10
+commitsThisYear: 287
 releases: 0
 platforms:
   - Web
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://ui.bklit.com/
 docs: https://ui.bklit.com/docs/installation
-sourceCode: ""
+sourceCode: https://github.com/bklit/bklit-ui
 verified: true
 featured: false
 tags:
@@ -32,9 +32,9 @@ tags:
   - data-visualization
 atGlance: Design engineered charts and components for modern web apps.
 fullDescription: >-
-  Backlit UI is a component library focused on design-engineered charts and UI
-  components. It provides animated, visually polished data visualizations and
-  utility components built for seamless integration into modern web projects.
+  Backlit UI is a component library focused on design-engineered charts and UI components. It
+  provides animated, visually polished data visualizations and utility components built for seamless
+  integration into modern web projects.
 coreFeatures:
   - name: Design Engineered Charts
     description: Beautiful, animated chart components crafted with a strong design sensibility.
@@ -58,21 +58,21 @@ additionalFeatures:
 similarTools:
   - slug: magicui
     name: Magic UI
-    description: Animated UI components for React, built with Tailwind CSS and Framer Motion.
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
     stars: 21037
     addedDaysAgo: 0
     verified: true
     website: https://magicui.design/
   - slug: tremor
     name: Tremor
-    description: React components to build charts and dashboards.
-    stars: 0
+    description: React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.
+    stars: 3425
     addedDaysAgo: 0
     verified: true
     website: https://tremor.so/
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
     name: shadcn/ui
-    description: The foundation for your design system.
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true

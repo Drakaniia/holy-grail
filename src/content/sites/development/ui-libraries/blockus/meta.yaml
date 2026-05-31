@@ -34,9 +34,9 @@ tags:
   - tailwind
 atGlance: Production-ready React blocks for shadcn/ui.
 fullDescription: >-
-  blockus is a catalog of handcrafted React sections and landing-page blocks built for
-  shadcn/ui projects. It focuses on drop-in sections for common product pages, including
-  hero, contact, pricing, FAQ, header, footer, stats, and testimonial layouts.
+  blockus is a catalog of handcrafted React sections and landing-page blocks built for shadcn/ui
+  projects. It focuses on drop-in sections for common product pages, including hero, contact,
+  pricing, FAQ, header, footer, stats, and testimonial layouts.
 coreFeatures:
   - name: React Blocks
     description: Pre-built page sections designed for modern React projects.
@@ -60,21 +60,21 @@ additionalFeatures:
 similarTools:
   - slug: magicui
     name: Magic UI
-    description: Animated UI components for React, built with Tailwind CSS and Framer Motion.
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
     stars: 21037
     addedDaysAgo: 0
     verified: true
     website: https://magicui.design/
   - slug: originui
     name: Origin UI
-    description: Beautiful UI components built with Tailwind CSS and React.
-    stars: 0
+    description: Copy-paste Tailwind and React components now surfaced through the Coss UI ecosystem.
+    stars: 9811
     addedDaysAgo: 0
-    verified: false
+    verified: true
     website: https://originui.com/
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
     name: shadcn/ui
-    description: The foundation for your design system.
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true

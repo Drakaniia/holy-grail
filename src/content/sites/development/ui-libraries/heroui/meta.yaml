@@ -1,8 +1,6 @@
 slug: heroui
-name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-description: >-
-  HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui library
-  resources.
+name: HeroUI
+description: Modern React component library with accessible primitives, themes, and polished defaults.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
@@ -21,7 +19,7 @@ platforms:
 deployment:
   - Cloud
 website: https://www.heroui.com/
-docs: https://www.heroui.com/
+docs: https://www.heroui.com/docs/guide/introduction
 sourceCode: https://github.com/heroui-inc/heroui
 icon: heroui
 verified: true
@@ -31,47 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
+atGlance: Accessible themed React components with polished defaults.
 fullDescription: >-
-  HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library is kept as a UI component
-  and design system reference.
+  HeroUI, formerly NextUI, is a React component library with accessible components, modern styling,
+  and theme customization. It gives teams a packaged design-system layer for building applications
+  without composing every primitive from scratch.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library is tracked as a UI
-      component or library resource.
+  - name: React Component System
+    description: Provides a broad set of ready-to-use components for application interfaces.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Accessible Foundations
+    description: Builds on accessible interaction patterns for complex controls.
+    icon: check
+  - name: Theme Customization
+    description: Supports theme tokens and visual customization for product design systems.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Polished Defaults
+    description: Components ship with modern visual treatment out of the box.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Documentation and Examples
+    description: Docs cover installation, usage, customization, and component APIs.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Active Open Source
+    description: The GitHub repository exposes high-volume activity and community contribution.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: headlessui
-    name: Headless UI - Unstyled, fully accessible UI components
-    description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+    name: Headless UI
+    description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
     stars: 28559
     addedDaysAgo: 0
     verified: true

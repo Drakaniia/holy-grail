@@ -59,7 +59,7 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: chanhdai-components
-    name: Chanh Dai Components
+    name: Chánh Đại Components
     description: Pixel-perfect shadcn registry with uniquely crafted React components.
     stars: 1873
     addedDaysAgo: 0
@@ -68,7 +68,7 @@ similarTools:
   - slug: pixel-perfect
     name: Pixel Perfect UI
     description: Precision-crafted React components for modern web apps.
-    stars: 437
+    stars: 440
     addedDaysAgo: 0
     verified: true
     website: https://www.pixel-perfect.space/

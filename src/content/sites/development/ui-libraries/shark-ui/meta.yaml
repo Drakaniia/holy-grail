@@ -33,8 +33,8 @@ tags:
   - design-system
 atGlance: Accessible 90+ component set for reusable design systems.
 fullDescription: >-
-  Shark UI is a component library reference for teams building reusable, scalable design
-  systems with accessible components across modern web frameworks.
+  Shark UI is a component library reference for teams building reusable, scalable design systems
+  with accessible components across modern web frameworks.
 coreFeatures:
   - name: Component Catalog
     description: Provides 90+ accessible components for application UI and design systems.
@@ -64,15 +64,15 @@ similarTools:
     verified: true
     website: https://park-ui.com/
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: headlessui
-    name: Headless UI - Unstyled, fully accessible UI components
-    description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+    name: Headless UI
+    description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
     stars: 28559
     addedDaysAgo: 0
     verified: true

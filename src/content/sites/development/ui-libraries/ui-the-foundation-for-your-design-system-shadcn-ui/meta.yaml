@@ -1,6 +1,6 @@
 slug: ui-the-foundation-for-your-design-system-shadcn-ui
-name: The Foundation for your Design System - shadcn/ui
-description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+name: shadcn/ui
+description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
@@ -19,7 +19,7 @@ platforms:
 deployment:
   - Cloud
 website: https://ui.shadcn.com/
-docs: https://ui.shadcn.com/
+docs: https://ui.shadcn.com/docs
 sourceCode: https://github.com/shadcn-ui/ui
 icon: ui
 verified: true
@@ -29,49 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: The Foundation for your Design System - shadcn/ui
+atGlance: The copy-paste component foundation for Tailwind and Radix design systems.
 fullDescription: >-
-  The Foundation for your Design System - shadcn/ui is kept as a UI component and design system
-  reference.
+  shadcn/ui is a component registry and workflow for building owned design systems with React, Radix
+  UI, and Tailwind CSS. Instead of shipping a black-box component package, it gives teams source
+  code they can copy, customize, and maintain inside their own applications.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      The Foundation for your Design System - shadcn/ui is tracked as a UI component or library
-      resource.
+  - name: Component Ownership
+    description: Installs component source into the application instead of hiding it in a package.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Radix and Tailwind
+    description: Combines accessible Radix primitives with Tailwind CSS styling.
+    icon: check
+  - name: Registry Workflow
+    description: Components are added through a registry-driven CLI and customized locally.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Design-System Foundation
+    description: Widely used as a starting point for custom product component systems.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Large Ecosystem
+    description: Supports themes, blocks, charts, examples, and community registries.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Active Open Source
+    description: GitHub stats reflect a large and actively maintained public repository.
     icon: check
 similarTools:
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true
     website: https://www.heroui.com/
   - slug: headlessui
-    name: Headless UI - Unstyled, fully accessible UI components
-    description: Headless UI - Unstyled, fully accessible UI components bookmarked for ui library resources.
+    name: Headless UI
+    description: Unstyled accessible components from Tailwind Labs for React and Vue interfaces.
     stars: 28559
     addedDaysAgo: 0
     verified: true

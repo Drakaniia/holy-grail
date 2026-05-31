@@ -4,15 +4,15 @@ description: Beautiful README badges styled like shadcn/ui buttons.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 145
+stars: 309
 watchers: 0
 addedDaysAgo: 0
 license: MIT
-lastCommit: 3 days ago
+lastCommit: 53 minutes ago
 lastRelease: No releases
 version: ""
 contributors: 3
-commitsThisYear: 74
+commitsThisYear: 83
 releases: 0
 platforms:
   - Web
@@ -34,8 +34,8 @@ tags:
   - shadcn
 atGlance: Beautiful README badges with shadcn/ui styling.
 fullDescription: >-
-  shieldcn is an open-source badge service for GitHub READMEs, npm pages, and docs sites. It
-  renders badges as SVG or PNG images styled like shadcn/ui Button components.
+  shieldcn is an open-source badge service for GitHub READMEs, npm pages, and docs sites. It renders
+  badges as SVG or PNG images styled like shadcn/ui Button components.
 coreFeatures:
   - name: shadcn Styled Badges
     description: Renders badge images with shadcn/ui button styling, variants, sizes, and color tokens.
@@ -58,23 +58,23 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: magicui
     name: Magic UI
-    description: Animated UI components for React, built with Tailwind CSS and Framer Motion.
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
     stars: 21037
     addedDaysAgo: 0
     verified: true
     website: https://magicui.design/
   - slug: 8bitcn
-    name: Components - 8bitcn/ui
-    description: Components - 8bitcn/ui bookmarked for ui library resources.
-    stars: 1859
+    name: 8bitcn/ui
+    description: Retro-styled 8-bit components and blocks for copy-paste UI work.
+    stars: 1863
     addedDaysAgo: 0
     verified: true
-    website: https://www.8bitcn.com/docs/components
+    website: https://www.8bitcn.com/

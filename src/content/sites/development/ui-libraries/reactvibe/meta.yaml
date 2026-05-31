@@ -1,18 +1,18 @@
 slug: reactvibe
-name: React Vibe - Animated, Motion-First UI Components for React
-description: React Vibe - Animated, Motion-First UI Components for React bookmarked for ui library resources.
+name: React Vibe
+description: Motion-first React component library for animated product interfaces and landing pages.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 21
+stars: 22
 watchers: 0
 addedDaysAgo: 0
-license: Unknown
-lastCommit: 19 days ago
+license: No license file
+lastCommit: 4 days ago
 lastRelease: No releases
 version: ""
 contributors: 3
-commitsThisYear: 34
+commitsThisYear: 37
 releases: 0
 platforms:
   - Web
@@ -29,49 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: React Vibe - Animated, Motion-First UI Components for React
+atGlance: Animated React components with a motion-first design direction.
 fullDescription: >-
-  React Vibe - Animated, Motion-First UI Components for React is kept as a UI component and design
-  system reference.
+  React Vibe is a motion-first React UI component resource for teams building animated interfaces.
+  It provides source reference for expressive components, interactions, and landing-page patterns
+  that can be adapted in React applications.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      React Vibe - Animated, Motion-First UI Components for React is tracked as a UI component or
-      library resource.
+  - name: Motion-First Components
+    description: Focuses on animated UI patterns rather than static controls alone.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: React Implementation
+    description: Built for React projects and inspectable through the public repository.
+    icon: check
+  - name: Landing Page Patterns
+    description: Useful for expressive sections, effects, and product marketing pages.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Open Source Reference
+    description: GitHub stats and source code are linked for review.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Tailwind-Friendly Usage
+    description: Pairs well with modern utility-styled frontend projects.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Creative UI Inspiration
+    description: Useful for comparing animation treatment and interaction polish.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true

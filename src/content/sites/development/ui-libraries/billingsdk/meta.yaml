@@ -1,14 +1,14 @@
 slug: billingsdk
-name: Billing SDK - Modern Billing & Monetization Components
-description: Billing SDK - Modern Billing & Monetization Components bookmarked for ui library resources.
+name: Billing SDK
+description: Billing and monetization components for pricing, checkout, subscriptions, and usage UI.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 462
+stars: 470
 watchers: 0
 addedDaysAgo: 0
 license: GPL-3.0
-lastCommit: 2 months ago
+lastCommit: 3 months ago
 lastRelease: 3 months ago
 version: v1.4.0
 contributors: 64
@@ -29,49 +29,49 @@ tags:
   - ui-libraries
   - ui
   - library
-atGlance: Billing SDK - Modern Billing & Monetization Components
+atGlance: Ready-made billing UI components for subscription and monetization flows.
 fullDescription: >-
-  Billing SDK - Modern Billing & Monetization Components is kept as a UI component and design system
-  reference.
+  Billing SDK provides billing and monetization interface components for SaaS products. It focuses
+  on pricing tables, checkout surfaces, subscription management, usage-based billing, and payment
+  UI patterns that can be embedded into modern product flows.
 coreFeatures:
-  - name: Component Resource
-    description: >-
-      Billing SDK - Modern Billing & Monetization Components is tracked as a UI component or library
-      resource.
+  - name: Billing Components
+    description: Provides UI pieces for pricing, checkout, subscriptions, and customer billing flows.
     icon: check
-  - name: Implementation Reference
-    description: Use the website or source link to inspect usage patterns.
+  - name: Monetization Patterns
+    description: Covers SaaS revenue surfaces such as plans, usage, invoices, and customer portals.
+    icon: check
+  - name: Product Integration
+    description: Designed for teams adding billing UX to existing product dashboards.
     icon: check
 additionalFeatures:
-  - name: Design System Fit
-    description: Useful for comparing component styles and interaction patterns.
+  - name: Open Source Repo
+    description: The public repository exposes implementation details, releases, and contributors.
     icon: check
-  - name: Developer Friendly
-    description: Source code is linked when a public repository is available.
+  - name: Payment UX Reference
+    description: Useful for reviewing how billing state is represented in product interfaces.
     icon: check
-  - name: Catalog Tags
-    description: Grouped with similar UI libraries for discovery.
+  - name: Modern App UI
+    description: Built for contemporary web apps that need polished billing and subscription screens.
     icon: check
 similarTools:
   - slug: ui-the-foundation-for-your-design-system-shadcn-ui
-    name: The Foundation for your Design System - shadcn/ui
-    description: The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
     stars: 114722
     addedDaysAgo: 0
     verified: true
     website: https://ui.shadcn.com/
   - slug: motion
-    name: Framer | Motion for React (prev Framer Motion)
-    description: Framer | Motion for React (prev Framer Motion) bookmarked for ui library resources.
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
     stars: 32012
     addedDaysAgo: 0
     verified: true
-    website: https://motion.dev/docs/framer
+    website: https://motion.dev/
   - slug: heroui
-    name: HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library
-    description: >-
-      HeroUI (Previously NextUI) - Beautiful, fast and modern React UI Library bookmarked for ui
-      library resources.
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
     stars: 29324
     addedDaysAgo: 0
     verified: true
