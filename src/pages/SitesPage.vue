@@ -1,16 +1,36 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
+import { computed, onMounted, onUnmounted, shallowRef, useTemplateRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { Search, TrendingUp, Clock, Star, Sparkles } from 'lucide-vue-next'
-import { sortSitesForTab, useSitesStore } from '@/stores/sites'
+import { Calendar, ChevronDown, List, Search, Send, Shuffle, Sparkles } from 'lucide-vue-next'
+import { sortSitesForTab, useSitesStore, type SiteSortTab } from '@/stores/sites'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SiteCard from '@/components/sites/SiteCard.vue'
 import SiteCardSkeleton from '@/components/sites/SiteCardSkeleton.vue'
 import { trackSearchQuery } from '@/lib/analytics'
 
+type SiteTimeRange = 'all' | 'trending' | 'week' | 'month' | 'year'
+
+const timeRangeOptions: { label: string; value: SiteTimeRange }[] = [
+  { label: 'All Time', value: 'all' },
+  { label: 'Trending', value: 'trending' },
+  { label: 'This Week', value: 'week' },
+  { label: 'This Month', value: 'month' },
+  { label: 'This Year', value: 'year' },
+]
+
+const timeRangeDays: Partial<Record<SiteTimeRange, number>> = {
+  week: 7,
+  month: 30,
+  year: 365,
+}
+
 const route = useRoute()
 const store = useSitesStore()
 void store.loadSites()
+
+const activeTimeRange = shallowRef<SiteTimeRange>('all')
+const isTimeRangeMenuOpen = shallowRef(false)
+const timeRangeMenu = useTemplateRef<HTMLDivElement>('timeRangeMenu')
 
 const category = computed(() => route.params.category as string)
 const subcategory = computed(() => route.params.subcategory as string | undefined)
@@ -118,13 +138,27 @@ const filteredSites = computed(() => {
   return store.getSitesByParentCategory(category.value)
 })
 
+const timeFilteredSites = computed(() => {
+  const rangeDays = timeRangeDays[activeTimeRange.value]
+
+  if (!rangeDays) {
+    return filteredSites.value
+  }
+
+  return filteredSites.value.filter(site => site.addedDaysAgo <= rangeDays)
+})
+
 const categoryFilters = computed(() => {
   const categories = new Set(filteredSites.value.map(site => site.category))
   return ['All', ...Array.from(categories).sort()]
 })
 
+const activeTimeRangeLabel = computed(() => {
+  return timeRangeOptions.find(option => option.value === activeTimeRange.value)?.label ?? 'All Time'
+})
+
 const displaySites = computed(() => {
-  let result = [...filteredSites.value]
+  let result = [...timeFilteredSites.value]
 
   if (store.searchQuery) {
     const query = store.searchQuery.toLowerCase()
@@ -151,22 +185,66 @@ const paginatedSites = computed(() => {
 
 const totalPages = computed(() => Math.ceil(displaySites.value.length / store.itemsPerPage))
 
-const pageRangeStart = computed(() => {
-  if (displaySites.value.length === 0) return 0
-  return (store.currentPage - 1) * store.itemsPerPage + 1
-})
-
-const pageRangeEnd = computed(() =>
-  Math.min(store.currentPage * store.itemsPerPage, displaySites.value.length)
-)
-
 function setPage(page: number) {
   store.setPage(Math.min(Math.max(page, 1), Math.max(totalPages.value, 1)))
 }
 
+function getSortButtonClass(tab: SiteSortTab) {
+  return store.activeTab === tab
+    ? 'border-zinc-600 bg-zinc-800 text-white shadow-sm shadow-black/40'
+    : 'border-gray-800 bg-black text-gray-400 hover:border-gray-700 hover:bg-zinc-900 hover:text-white'
+}
+
+function toggleTimeRangeMenu() {
+  isTimeRangeMenuOpen.value = !isTimeRangeMenuOpen.value
+}
+
+function selectTimeRange(range: SiteTimeRange) {
+  activeTimeRange.value = range
+  isTimeRangeMenuOpen.value = false
+
+  if (range === 'trending') {
+    store.setTab('trending')
+    return
+  }
+
+  store.setPage(1)
+}
+
+function closeTimeRangeMenu() {
+  isTimeRangeMenuOpen.value = false
+}
+
+function handleDocumentPointerDown(event: PointerEvent) {
+  const target = event.target
+
+  if (!(target instanceof Node) || timeRangeMenu.value?.contains(target)) {
+    return
+  }
+
+  closeTimeRangeMenu()
+}
+
+function handleDocumentKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape') {
+    closeTimeRangeMenu()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('pointerdown', handleDocumentPointerDown)
+  document.addEventListener('keydown', handleDocumentKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('pointerdown', handleDocumentPointerDown)
+  document.removeEventListener('keydown', handleDocumentKeydown)
+})
+
 watch([category, subcategory], () => {
   store.setCategory('All')
   store.setPage(1)
+  activeTimeRange.value = 'all'
 })
 
 watch(
@@ -233,38 +311,77 @@ watch(totalPages, pages => {
             />
           </div>
 
-          <div class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+          <div class="flex w-full flex-wrap items-center gap-2 md:w-auto md:flex-nowrap">
             <button
-              @click="store.setTab('trending')"
-              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'trending' ? 'bg-accent-600 text-white' : 'text-gray-500 hover:text-gray-300'"
-            >
-              <TrendingUp class="w-3.5 h-3.5" />
-              TRENDING
-            </button>
-            <button
-              @click="store.setTab('newest')"
-              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'newest' ? 'bg-accent-600 text-white' : 'text-gray-500 hover:text-gray-300'"
-            >
-              <Clock class="w-3.5 h-3.5" />
-              NEWEST
-            </button>
-            <button
+              type="button"
               @click="store.setTab('popular')"
-              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'popular' ? 'bg-accent-600 text-white' : 'text-gray-500 hover:text-gray-300'"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              :class="getSortButtonClass('popular')"
             >
-              <Star class="w-3.5 h-3.5" />
-              POPULAR
+              <List class="h-3.5 w-3.5" />
+              Popular
             </button>
+
+            <div ref="timeRangeMenu" class="relative shrink-0">
+              <button
+                type="button"
+                class="flex items-center gap-2 rounded-md border border-gray-800 bg-black px-3 py-2 text-xs font-medium text-gray-300 transition-all hover:border-gray-700 hover:bg-zinc-900 hover:text-white"
+                :aria-expanded="isTimeRangeMenuOpen"
+                aria-haspopup="menu"
+                @click="toggleTimeRangeMenu"
+              >
+                {{ activeTimeRangeLabel }}
+                <ChevronDown class="h-3.5 w-3.5 text-gray-500 transition-transform" :class="isTimeRangeMenuOpen ? 'rotate-180' : ''" />
+              </button>
+
+              <div
+                v-if="isTimeRangeMenuOpen"
+                class="absolute left-0 top-full z-20 mt-1 w-36 overflow-hidden rounded-md border border-gray-700 bg-zinc-900 py-1 shadow-xl shadow-black/50"
+                role="menu"
+              >
+                <button
+                  v-for="option in timeRangeOptions"
+                  :key="option.value"
+                  type="button"
+                  class="block w-full px-3 py-2 text-left text-xs font-medium transition-colors"
+                  :class="activeTimeRange === option.value ? 'bg-zinc-800 text-white' : 'text-gray-300 hover:bg-zinc-800 hover:text-white'"
+                  role="menuitem"
+                  @click="selectTimeRange(option.value)"
+                >
+                  {{ option.label }}
+                </button>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              @click="store.setTab('trending')"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              :class="getSortButtonClass('trending')"
+            >
+              <Shuffle class="h-3.5 w-3.5" />
+              Explore
+            </button>
+
+            <button
+              type="button"
+              @click="store.setTab('newest')"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              :class="getSortButtonClass('newest')"
+            >
+              <Calendar class="h-3.5 w-3.5" />
+              Recent
+            </button>
+
+            <RouterLink
+              to="/publish"
+              class="flex shrink-0 items-center gap-1.5 rounded-md bg-accent-600 px-3 py-2 text-xs font-semibold text-white transition-all hover:bg-accent-500"
+            >
+              <Send class="h-3.5 w-3.5" />
+              Publish
+            </RouterLink>
           </div>
 
-          <div class="flex items-center gap-3">
-            <span class="text-xs text-gray-500">
-              Showing {{ pageRangeStart }}-{{ pageRangeEnd }} of {{ displaySites.length }} sites
-            </span>
-          </div>
         </div>
 
         <div class="flex flex-wrap gap-2 mt-4">

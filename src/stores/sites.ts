@@ -153,7 +153,7 @@ export const useSitesStore = defineStore('sites', () => {
   const allSites = shallowRef<Site[]>([])
   const searchQuery = shallowRef('')
   const activeCategory = shallowRef('All')
-  const activeTab = shallowRef<SiteSortTab>('trending')
+  const activeTab = shallowRef<SiteSortTab>('popular')
   const currentPage = shallowRef(1)
   const loading = shallowRef(false)
   const loaded = shallowRef(false)
