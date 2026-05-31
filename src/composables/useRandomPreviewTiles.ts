@@ -49,7 +49,7 @@ export function useRandomPreviewTiles({
   tileCount,
   initialDelayRange = [80, 1400],
   rotationDelayRange = [1800, 5400],
-  previousImageResetDelay = 920,
+  previousImageResetDelay = 860,
 }: UseRandomPreviewTilesOptions) {
   const failedSlugs = shallowRef(new Set<string>())
   const tiles = shallowRef<RandomPreviewTile[]>([])

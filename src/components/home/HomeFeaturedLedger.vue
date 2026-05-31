@@ -58,33 +58,36 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
         :aria-label="`Open ${tile.item.name} overview`"
       >
         <span class="home-ledger__media">
-          <picture
-            v-if="tile.previousItem"
-            class="home-ledger__image home-ledger__image--previous"
-          >
-            <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
-            <img
-              :src="tile.previousItem.image"
-              :alt="`${tile.previousItem.name} preview`"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <span class="home-ledger__stage">
+            <picture
+              v-if="tile.previousItem"
+              class="home-ledger__image home-ledger__image--previous"
+              aria-hidden="true"
+            >
+              <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
+              <img
+                :src="tile.previousItem.image"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
 
-          <picture
-            :key="`${tile.key}-${tile.item.slug}-${tile.animationNonce}`"
-            class="home-ledger__image home-ledger__image--incoming"
-            :class="{ 'home-ledger__image--wipe': tile.previousItem }"
-          >
-            <source :srcset="tile.item.small" media="(max-width: 720px)" />
-            <img
-              :src="tile.item.image"
-              :alt="`${tile.item.name} preview`"
-              loading="lazy"
-              decoding="async"
-              @error="markImageFailed(tile.item.slug)"
-            />
-          </picture>
+            <picture
+              :key="`${tile.key}-${tile.item.slug}-${tile.animationNonce}`"
+              class="home-ledger__image home-ledger__image--current"
+              :class="{ 'home-ledger__image--incoming': tile.previousItem }"
+            >
+              <source :srcset="tile.item.small" media="(max-width: 720px)" />
+              <img
+                :src="tile.item.image"
+                :alt="`${tile.item.name} preview`"
+                loading="lazy"
+                decoding="async"
+                @error="markImageFailed(tile.item.slug)"
+              />
+            </picture>
+          </span>
         </span>
         <span class="home-ledger__item-meta">
           <span>{{ tile.item.rank }} / {{ tile.item.category }}</span>
@@ -182,7 +185,14 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   grid-column: span 3;
 }
 
-.home-ledger__media,
+.home-ledger__media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.home-ledger__stage,
 .home-ledger__image {
   position: absolute;
   inset: 0;
@@ -190,9 +200,23 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   overflow: hidden;
 }
 
-.home-ledger__image--wipe {
-  animation: home-ledger-mask-swipe 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  clip-path: inset(0 100% 0 0);
+.home-ledger__image {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.home-ledger__image--previous {
+  z-index: 1;
+  animation: home-ledger-preview-slide-away 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-ledger__image--current {
+  z-index: 2;
+}
+
+.home-ledger__image--incoming {
+  animation: home-ledger-preview-slide-in 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform;
 }
 
 .home-ledger__image img {
@@ -308,13 +332,23 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   color: var(--mocha-text-soft);
 }
 
-@keyframes home-ledger-mask-swipe {
+@keyframes home-ledger-preview-slide-in {
   from {
-    clip-path: inset(0 100% 0 0);
+    transform: translate3d(104%, 0, 0);
   }
 
   to {
-    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes home-ledger-preview-slide-away {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-14%, 0, 0);
   }
 }
 
@@ -340,7 +374,8 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-ledger__image--wipe,
+  .home-ledger__image--incoming,
+  .home-ledger__image--previous,
   .home-ledger__item img,
   .home-ledger__link {
     animation: none;

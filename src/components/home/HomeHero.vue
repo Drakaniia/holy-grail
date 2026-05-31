@@ -26,7 +26,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   <section class="home-hero" aria-labelledby="home-hero-title">
     <ShapeGrid
       class="home-hero__shape-grid"
-      direction="diagonal"
+      direction="right"
       :speed="0.35"
       :square-size="54"
       border-color="rgba(255, 140, 26, 0.26)"
@@ -83,33 +83,36 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
             :aria-label="`Open ${tile.item.name} overview`"
           >
             <span class="home-hero__preview-media">
-              <picture
-                v-if="tile.previousItem"
-                class="home-hero__preview-image home-hero__preview-image--previous"
-              >
-                <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
-                <img
-                  :src="tile.previousItem.image"
-                  :alt="`${tile.previousItem.name} site preview`"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
+              <span class="home-hero__preview-stage">
+                <picture
+                  v-if="tile.previousItem"
+                  class="home-hero__preview-image home-hero__preview-image--previous"
+                  aria-hidden="true"
+                >
+                  <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
+                  <img
+                    :src="tile.previousItem.image"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
 
-              <picture
-                :key="`${tile.key}-${tile.item.slug}-${tile.animationNonce}`"
-                class="home-hero__preview-image home-hero__preview-image--incoming"
-                :class="{ 'home-hero__preview-image--wipe': tile.previousItem }"
-              >
-                <source :srcset="tile.item.small" media="(max-width: 720px)" />
-                <img
-                  :src="tile.item.image"
-                  :alt="`${tile.item.name} site preview`"
-                  loading="lazy"
-                  decoding="async"
-                  @error="markImageFailed(tile.item.slug)"
-                />
-              </picture>
+                <picture
+                  :key="`${tile.key}-${tile.item.slug}-${tile.animationNonce}`"
+                  class="home-hero__preview-image home-hero__preview-image--current"
+                  :class="{ 'home-hero__preview-image--incoming': tile.previousItem }"
+                >
+                  <source :srcset="tile.item.small" media="(max-width: 720px)" />
+                  <img
+                    :src="tile.item.image"
+                    :alt="`${tile.item.name} site preview`"
+                    loading="lazy"
+                    decoding="async"
+                    @error="markImageFailed(tile.item.slug)"
+                  />
+                </picture>
+              </span>
             </span>
             <span class="home-hero__preview-meta">
               <span>{{ tile.item.rank }}</span>
@@ -369,7 +372,14 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   outline-offset: 3px;
 }
 
-.home-hero__preview-media,
+.home-hero__preview-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.home-hero__preview-stage,
 .home-hero__preview-image {
   position: absolute;
   inset: 0;
@@ -377,9 +387,23 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   overflow: hidden;
 }
 
-.home-hero__preview-image--wipe {
-  animation: home-hero-mask-swipe 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  clip-path: inset(0 100% 0 0);
+.home-hero__preview-image {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.home-hero__preview-image--previous {
+  z-index: 1;
+  animation: home-hero-preview-slide-away 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-hero__preview-image--current {
+  z-index: 2;
+}
+
+.home-hero__preview-image--incoming {
+  animation: home-hero-preview-slide-in 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform;
 }
 
 .home-hero__preview-image img {
@@ -583,13 +607,23 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   background: rgba(255, 122, 0, 0.1);
 }
 
-@keyframes home-hero-mask-swipe {
+@keyframes home-hero-preview-slide-in {
   from {
-    clip-path: inset(0 100% 0 0);
+    transform: translate3d(104%, 0, 0);
   }
 
   to {
-    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes home-hero-preview-slide-away {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-14%, 0, 0);
   }
 }
 
@@ -653,7 +687,8 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 
 @media (prefers-reduced-motion: reduce) {
   .home-hero__preview,
-  .home-hero__preview-image--wipe,
+  .home-hero__preview-image--incoming,
+  .home-hero__preview-image--previous,
   .home-hero__preview-image img {
     animation: none;
     transition: none;
