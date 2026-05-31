@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, shallowRef } from 'vue'
-import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
+import { useRoute, useRouter } from 'vue-router'
+import { Menu, Moon, Search, Shuffle, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
+import { useSitesStore, type Site } from '@/stores/sites'
 import { useTheme } from '@/composables/useTheme'
 import UserProfilePill from '@/components/auth/UserProfilePill.vue'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
@@ -21,6 +23,9 @@ const emit = defineEmits<{
 }>()
 
 const auth = useAuthStore()
+const sites = useSitesStore()
+const route = useRoute()
+const router = useRouter()
 const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
 const GITHUB_REPO_URL = 'https://github.com/Drakaniia/holy-grail'
 const GITHUB_REPO_API_URL = 'https://api.github.com/repos/Drakaniia/holy-grail'
@@ -46,6 +51,38 @@ const shortcutKey = isMac ? 'Cmd' : 'Ctrl'
 
 interface GitHubRepositoryResponse {
   stargazers_count?: number
+}
+
+function getRandomIndex(length: number) {
+  return Math.floor(Math.random() * length)
+}
+
+function getRandomSite(candidates: Site[]) {
+  if (candidates.length === 0) return null
+  return candidates[getRandomIndex(candidates.length)]
+}
+
+function getRandomSiteCandidates() {
+  const currentSlug = typeof route.params.slug === 'string' ? route.params.slug : ''
+  const otherSites = sites.allSites.filter(site => site.slug !== currentSlug)
+
+  if (otherSites.length > 0) {
+    return otherSites
+  }
+
+  return sites.allSites
+}
+
+async function openRandomSite() {
+  if (!sites.loaded) {
+    await sites.loadSites()
+  }
+
+  const randomSite = getRandomSite(getRandomSiteCandidates())
+
+  if (!randomSite) return
+
+  await router.push({ name: 'site-detail', params: { slug: randomSite.slug } })
 }
 
 async function loadStarCount() {
@@ -122,7 +159,7 @@ onMounted(() => {
           />
         </span>
         <span class="min-w-0 truncate text-gray-500 transition-colors group-hover:text-gray-300">
-          Search scripts...
+          Search sites...
         </span>
         <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
           <span
@@ -147,10 +184,11 @@ onMounted(() => {
       <button
         type="button"
         class="nav-icon-button nav-icon-button--light-white tooltip-shell hidden sm:inline-flex"
-        aria-label="Quick actions"
+        aria-label="Open random sites"
+        @click="openRandomSite"
       >
-        <Sparkles class="h-4 w-4" />
-        <span class="tooltip-bubble">Quick actions</span>
+        <Shuffle class="h-4 w-4" />
+        <span class="tooltip-bubble">Open random sites</span>
       </button>
 
       <a
