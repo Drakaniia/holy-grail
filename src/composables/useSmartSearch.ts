@@ -86,6 +86,14 @@ const routeLabelMap: Record<string, string> = {
 
 const navigationItems: SearchItem[] = [
   createNavigationItem({
+    id: 'collection-sites',
+    title: 'Sites Homepage',
+    description: 'Visual front door for AI, design, development, watch, and download collections',
+    category: 'Sites',
+    to: '/sites',
+    keywords: ['sites', 'catalog', 'homepage', 'browse', 'collections', 'resources'],
+  }),
+  createNavigationItem({
     id: 'collection-sites-development-cloud-hosting',
     title: 'Cloud & Hosting',
     description: 'Cloud platforms, hosting, databases, and backend services for development work',

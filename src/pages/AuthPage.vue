@@ -87,7 +87,7 @@ async function handleOAuth(provider: AuthProvider) {
       class="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8"
     >
       <RouterLink
-        to="/sites/development/cloud-hosting"
+        to="/sites"
         class="auth-brand inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-normal text-white"
       >
         <span

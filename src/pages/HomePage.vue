@@ -122,7 +122,7 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     description: 'Cloud hosting, AI utilities, design sources, developer references, downloads, CLI agents, and UI libraries.',
     countLabel: totalSitesLabel.value,
     countLoading: isCatalogLoading.value,
-    to: '/sites/development/cloud-hosting',
+    to: '/sites',
   },
   {
     index: '02',

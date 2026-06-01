@@ -125,7 +125,7 @@ const hasRepoActivity = computed(
 )
 
 const backRoute = computed(() => {
-  if (!site.value) return '/sites/development/cloud-hosting'
+  if (!site.value) return '/sites'
   if (site.value.subcategory) {
     return `/sites/${site.value.parentCategory}/${site.value.subcategory}`
   }

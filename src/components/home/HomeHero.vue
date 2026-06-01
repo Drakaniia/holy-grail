@@ -51,7 +51,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
         </p>
 
         <div class="home-hero__actions" aria-label="Primary actions">
-          <RouterLink to="/sites/development/cloud-hosting" class="home-hero__primary-link">
+          <RouterLink to="/sites" class="home-hero__primary-link">
             Browse sites
             <ArrowRight class="h-4 w-4" aria-hidden="true" />
           </RouterLink>

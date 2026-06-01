@@ -101,7 +101,7 @@ async function removeBookmark(bookmark: UserBookmark) {
         </p>
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           <RouterLink
-            to="/sites/development/cloud-hosting"
+            to="/sites"
             class="inline-flex h-10 items-center justify-center border border-gray-700 px-4 text-sm font-semibold text-gray-200 transition hover:border-accent-400 hover:text-accent-100"
           >
             Browse sites
