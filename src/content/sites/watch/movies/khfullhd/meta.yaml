@@ -1,0 +1,62 @@
+slug: khfullhd
+name: KHFullHD
+description: Movie watch source bookmark for quick launch.
+category: Movies
+parentCategory: watch
+subcategory: movies
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Bookmark
+lastCommit: Added Jun 1, 2026
+lastRelease: Bookmark
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://khfullhd.co
+docs: https://khfullhd.co
+sourceCode: ""
+icon: khfullhd
+verified: false
+featured: false
+tags:
+  - bookmark
+  - watch
+  - movies
+  - streaming
+atGlance: Movie watch bookmark.
+fullDescription: KHFullHD is kept as a movie watch source in the Watch collection.
+coreFeatures:
+  - name: Watch Source
+    description: Cataloged as a saved movie watch bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Opens the saved watch source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Watch Collection
+    description: Grouped under Watch for movie and anime sources.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged for watch, movie, and streaming search.
+    icon: check
+similarTools:
+  - slug: kisskh
+    name: KissKH
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://kisskh.org
+  - slug: movies2watch
+    name: Movies2Watch
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://movies2watch.watch/home/
