@@ -14,7 +14,7 @@ import {
 import PublishReviewSummary from '@/components/publish/PublishReviewSummary.vue'
 import PublishStepIndicator from '@/components/publish/PublishStepIndicator.vue'
 import { supabase } from '@/lib/supabase'
-import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
+import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
 import { useAuthStore } from '@/stores/auth'
 import { useToastStore } from '@/stores/toast'
 
@@ -236,27 +236,6 @@ function getReviewerNote() {
   return note ? `${typeNote}\n\n${note}` : typeNote
 }
 
-function getErrorContext(error: unknown): Response | null {
-  if (!error || typeof error !== 'object' || !('context' in error)) {
-    return null
-  }
-
-  const context = (error as { context?: unknown }).context
-  return context instanceof Response ? context : null
-}
-
-async function getSubmissionErrorMessage(error: unknown) {
-  const context = getErrorContext(error)
-  if (context) {
-    const body = await context.clone().json().catch(() => null)
-    if (body && typeof body === 'object' && 'error' in body && typeof body.error === 'string') {
-      return body.error
-    }
-  }
-
-  return getSupabaseErrorMessage(error, 'Submission failed. Please try again.')
-}
-
 async function handleSubmit() {
   const validationError = formErrors.value[0] ?? null
   if (validationError) {
@@ -295,7 +274,10 @@ async function handleSubmit() {
     )
   } catch (err) {
     status.value = 'error'
-    errorMessage.value = await getSubmissionErrorMessage(err)
+    errorMessage.value = await getSupabaseFunctionErrorMessage(
+      err,
+      'Submission failed. Please try again.',
+    )
   }
 }
 

@@ -3,6 +3,7 @@ import { computed, shallowRef } from 'vue'
 import type { Session, User } from '@supabase/supabase-js'
 import { hasSupabaseConfig, supabase } from '@/lib/supabase'
 import { getAuthRedirectOrigin } from '@/lib/publicUrl'
+import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
 import type { AuthCredentials, AuthProvider } from '@/types/auth'
 
 interface AuthActionResult {
@@ -627,7 +628,10 @@ export const useAuthStore = defineStore('auth', () => {
       session.value = null
       return { ok: true }
     } catch (error) {
-      const message = getAuthErrorMessage(error)
+      const message = await getSupabaseFunctionErrorMessage(
+        error,
+        'Account could not be deleted.',
+      )
       actionError.value = message
       return { ok: false, message }
     } finally {

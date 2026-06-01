@@ -38,6 +38,7 @@ Deploy `supabase/functions/submit-tool` as the public submission endpoint:
 
 ```bash
 supabase functions deploy submit-tool --no-verify-jwt
+supabase functions deploy delete-account --no-verify-jwt
 ```
 
 This function validates the request origin, rate-limits by hashed client IP, inserts the pending
@@ -53,6 +54,7 @@ supabase secrets set ADMIN_EMAIL=you@example.com
 supabase secrets set SUBMISSION_FROM_EMAIL="Holy Grail <submissions@your-domain.com>"
 supabase secrets set PUBLIC_SITE_URL=https://holy-grail-eta.vercel.app
 supabase secrets set SUBMISSION_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
+supabase secrets set ACCOUNT_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
 supabase secrets set SUBMISSION_RATE_LIMIT_MAX=5
 supabase secrets set SUBMISSION_RATE_LIMIT_WINDOW_SECONDS=3600
 supabase secrets set SUBMISSION_RATE_LIMIT_SALT=use-a-long-random-string
@@ -69,6 +71,14 @@ cannot be used for notification spam:
 supabase functions deploy notify-submission --no-verify-jwt
 # or remove it from the hosted project:
 # supabase functions delete notify-submission
+```
+
+For local browser testing, include the Vite origin in the relevant origin secrets:
+
+```bash
+supabase secrets set SUBMISSION_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app,http://localhost:5173
+supabase secrets set SITE_REPORT_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app,http://localhost:5173
+supabase secrets set ACCOUNT_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app,http://localhost:5173
 ```
 
 ## Review Flow

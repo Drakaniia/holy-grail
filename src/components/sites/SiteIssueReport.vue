@@ -2,7 +2,7 @@
 import { shallowRef } from 'vue'
 import { AlertTriangle, CheckCircle2, Loader2 } from 'lucide-vue-next'
 import { supabase } from '@/lib/supabase'
-import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
+import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
 import { useToastStore } from '@/stores/toast'
 import type { Site } from '@/stores/sites'
 
@@ -32,27 +32,6 @@ const selectedIssueType = shallowRef<SiteIssueType>('down')
 
 function getSelectedIssueOption() {
   return ISSUE_OPTIONS.find(option => option.value === selectedIssueType.value) ?? ISSUE_OPTIONS[0]
-}
-
-function getErrorContext(error: unknown): Response | null {
-  if (!error || typeof error !== 'object' || !('context' in error)) {
-    return null
-  }
-
-  const context = (error as { context?: unknown }).context
-  return context instanceof Response ? context : null
-}
-
-async function getReportErrorMessage(error: unknown) {
-  const context = getErrorContext(error)
-  if (context) {
-    const body = await context.clone().json().catch(() => null)
-    if (body && typeof body === 'object' && 'error' in body && typeof body.error === 'string') {
-      return body.error
-    }
-  }
-
-  return getSupabaseErrorMessage(error, 'Site issue report failed. Please try again.')
 }
 
 async function reportSiteIssue() {
@@ -88,7 +67,10 @@ async function reportSiteIssue() {
     toast.success('Admin review queued', `${props.site.name} was ${getSelectedIssueOption().success}`)
   } catch (err) {
     status.value = 'idle'
-    toast.error('Report failed', await getReportErrorMessage(err))
+    toast.error(
+      'Report failed',
+      await getSupabaseFunctionErrorMessage(err, 'Site issue report failed. Please try again.'),
+    )
   }
 }
 </script>

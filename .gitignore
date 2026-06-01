@@ -42,3 +42,6 @@ __screenshots__/
 *.timestamp-*-*.mjs
 
 .vercel
+
+# Supabase local CLI state
+supabase/.temp/

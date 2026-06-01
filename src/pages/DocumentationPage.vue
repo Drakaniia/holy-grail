@@ -112,6 +112,10 @@ const troubleshootingRows = [
     symptom: 'Skill detail content does not refresh.',
     fix: 'Remote SKILL.md content is cached in localStorage for 24 hours; clear the cache or wait for the TTL.',
   },
+  {
+    symptom: 'A form shows “Failed to send a request to the Edge Function.”',
+    fix: 'Confirm the called function is deployed to the Supabase project in VITE_SUPABASE_URL, then check that the current browser origin is listed in the matching allowed-origins secret.',
+  },
 ]
 
 const setupCommands = `
@@ -169,6 +173,7 @@ const supabaseCommands = `
 supabase db push
 supabase functions deploy submit-tool --no-verify-jwt
 supabase functions deploy report-site-issue --no-verify-jwt
+supabase functions deploy delete-account --no-verify-jwt
 `
 
 const supabaseSecretCommands = `
@@ -177,6 +182,7 @@ supabase secrets set ADMIN_EMAIL=you@example.com
 supabase secrets set SUBMISSION_FROM_EMAIL="Holy Grail <submissions@your-domain.com>"
 supabase secrets set PUBLIC_SITE_URL=https://holy-grail-eta.vercel.app
 supabase secrets set SUBMISSION_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
+supabase secrets set ACCOUNT_ALLOWED_ORIGINS=https://holy-grail-eta.vercel.app
 supabase secrets set SUBMISSION_RATE_LIMIT_MAX=5
 supabase secrets set SUBMISSION_RATE_LIMIT_WINDOW_SECONDS=3600
 supabase secrets set SUBMISSION_RATE_LIMIT_SALT=use-a-long-random-string
@@ -424,6 +430,8 @@ onUnmounted(() => {
             emails the admin after the row is saved.
             The <code>report-site-issue</code> function uses the same protected path to create
             broken, legacy, wrong-URL, and other issue rows for the admin dashboard.
+            The <code>delete-account</code> function performs signed-in account deletion with
+            server-side confirmation.
           </p>
         </section>
 
