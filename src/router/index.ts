@@ -11,6 +11,7 @@ const DocumentationPage = () => import('@/pages/DocumentationPage.vue')
 const EditProfilePage = () => import('@/pages/EditProfilePage.vue')
 const HomePage = () => import('@/pages/HomePage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
+const SitesHomePage = () => import('@/pages/SitesHomePage.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
 const SettingsPage = () => import('@/pages/SettingsPage.vue')
 const SkillDetail = () => import('@/pages/SkillDetail.vue')
@@ -47,11 +48,12 @@ const router = createRouter({
     },
     {
       path: '/sites',
-      redirect: '/sites/development/cloud-hosting',
+      name: 'sites-home',
+      component: SitesHomePage,
     },
     {
       path: '/sites/platforms',
-      redirect: '/sites/development/cloud-hosting',
+      redirect: '/sites',
     },
     {
       path: '/sites/cli-tools',
