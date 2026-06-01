@@ -31,4 +31,4 @@
 
   ## Addition
 
-    - Have Own Homepage for sites, the general one
+    - Failed to rest report request
