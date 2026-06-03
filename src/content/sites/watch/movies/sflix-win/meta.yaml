@@ -1,5 +1,5 @@
-slug: vivaflix
-name: VivaFlix
+slug: sflix-win
+name: SFlix Win
 description: Movie watch source bookmark for quick launch.
 category: Movies
 parentCategory: watch
@@ -8,7 +8,7 @@ stars: 0
 watchers: 0
 addedDaysAgo: 0
 license: Bookmark
-lastCommit: Added Jun 1, 2026
+lastCommit: Added Jun 3, 2026
 lastRelease: Bookmark
 version: ""
 contributors: 0
@@ -18,10 +18,10 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://vivaflix.io/home
-docs: https://vivaflix.io/home
+website: https://sflix.win/home/
+docs: https://sflix.win/home/
 sourceCode: ""
-icon: vivaflix
+icon: sflix
 verified: false
 featured: false
 tags:
@@ -30,7 +30,7 @@ tags:
   - movies
   - streaming
 atGlance: Movie watch bookmark.
-fullDescription: VivaFlix is kept as a movie watch source in the Watch collection.
+fullDescription: SFlix Win is kept as a movie watch source in the Watch collection.
 coreFeatures:
   - name: Watch Source
     description: Cataloged as a saved movie watch bookmark.
@@ -53,10 +53,10 @@ similarTools:
     addedDaysAgo: 0
     verified: false
     website: https://sflix.app/home
-  - slug: nextflicks
-    name: NextFlicks
+  - slug: movies2watch
+    name: Movies2Watch
     description: Movie watch source bookmark for quick launch.
     stars: 0
     addedDaysAgo: 0
     verified: false
-    website: https://nextflicks.link
+    website: https://movies2watch.watch/home/

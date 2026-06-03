@@ -37633,7 +37633,7 @@
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://sflix.ac/home/"
+        "website": "https://sflix.app/home"
       }
     ]
   },
@@ -37801,7 +37801,7 @@
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://sflix.ac/home/"
+        "website": "https://sflix.app/home"
       }
     ]
   },
@@ -37885,7 +37885,7 @@
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://sflix.ac/home/"
+        "website": "https://sflix.app/home"
       }
     ]
   },
@@ -37900,7 +37900,7 @@
     "watchers": 0,
     "addedDaysAgo": 0,
     "license": "Bookmark",
-    "lastCommit": "Added May 24, 2026",
+    "lastCommit": "Updated Jun 3, 2026",
     "lastRelease": "Bookmark",
     "version": "",
     "contributors": 0,
@@ -37912,8 +37912,8 @@
     "deployment": [
       "Cloud"
     ],
-    "website": "https://sflix.ac/home/",
-    "docs": "https://sflix.ac/home/",
+    "website": "https://sflix.app/home",
+    "docs": "https://sflix.app/home",
     "sourceCode": "",
     "icon": "sflix",
     "verified": false,
@@ -37954,6 +37954,15 @@
     "installCommand": "",
     "similarTools": [
       {
+        "slug": "sflix-win",
+        "name": "SFlix Win",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.win/home/"
+      },
+      {
         "slug": "movies2watch",
         "name": "Movies2Watch",
         "description": "Movie watch source bookmark for quick launch.",
@@ -37970,6 +37979,90 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://nextflicks.link"
+      }
+    ]
+  },
+  {
+    "slug": "sflix-win",
+    "name": "SFlix Win",
+    "description": "Movie watch source bookmark for quick launch.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Bookmark",
+    "lastCommit": "Added Jun 3, 2026",
+    "lastRelease": "Bookmark",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://sflix.win/home/",
+    "docs": "https://sflix.win/home/",
+    "sourceCode": "",
+    "icon": "sflix",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie watch bookmark.",
+    "fullDescription": "SFlix Win is kept as a movie watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
       }
     ]
   },
@@ -38044,7 +38137,7 @@
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://sflix.ac/home/"
+        "website": "https://sflix.app/home"
       },
       {
         "slug": "nextflicks",

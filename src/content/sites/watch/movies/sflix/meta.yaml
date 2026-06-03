@@ -8,7 +8,7 @@ stars: 0
 watchers: 0
 addedDaysAgo: 0
 license: Bookmark
-lastCommit: Added May 24, 2026
+lastCommit: Updated Jun 3, 2026
 lastRelease: Bookmark
 version: ""
 contributors: 0
@@ -18,8 +18,8 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://sflix.ac/home/
-docs: https://sflix.ac/home/
+website: https://sflix.app/home
+docs: https://sflix.app/home
 sourceCode: ""
 icon: sflix
 verified: false
@@ -46,6 +46,13 @@ additionalFeatures:
     description: Tagged for watch, movie, and streaming search.
     icon: check
 similarTools:
+  - slug: sflix-win
+    name: SFlix Win
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://sflix.win/home/
   - slug: movies2watch
     name: Movies2Watch
     description: Movie watch source bookmark for quick launch.

@@ -2420,11 +2420,20 @@
   "sflix": {
     "image": "/previews/sflix.webp",
     "small": "/previews/sflix-sm.webp",
-    "sourceUrl": "https://sflix.ac/home/",
-    "capturedAt": "2026-05-24T15:53:43.568Z",
+    "sourceUrl": "https://sflix.app/home",
+    "capturedAt": "2026-06-03T12:43:06.697Z",
     "width": 960,
     "height": 600,
-    "bytes": 51342
+    "bytes": 49580
+  },
+  "sflix-win": {
+    "image": "/previews/sflix-win.webp",
+    "small": "/previews/sflix-win-sm.webp",
+    "sourceUrl": "https://sflix.win/home/",
+    "capturedAt": "2026-06-03T12:43:06.868Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 38846
   },
   "shadcn-svelte": {
     "image": "/previews/shadcn-svelte.webp",
