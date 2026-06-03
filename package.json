@@ -50,7 +50,7 @@
     "oxlint": "~1.68.0",
     "postcss": "^8.5.15",
     "prettier": "3.8.3",
-    "puppeteer-core": "^25.0.4",
+    "puppeteer-core": "^25.1.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.0",
     "typescript": "^6.0.3",
