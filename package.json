@@ -47,7 +47,7 @@
     "eslint-plugin-vue": "~10.9.1",
     "globals": "^17.6.0",
     "npm-run-all2": "^9.0.1",
-    "oxlint": "~1.66.0",
+    "oxlint": "~1.68.0",
     "postcss": "^8.5.15",
     "prettier": "3.8.3",
     "puppeteer-core": "^25.0.4",
