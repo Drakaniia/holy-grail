@@ -2489,6 +2489,15 @@
     "height": 600,
     "bytes": 34650
   },
+  "skillfish": {
+    "image": "/previews/skillfish.webp",
+    "small": "/previews/skillfish-sm.webp",
+    "sourceUrl": "https://www.skill.fish/",
+    "capturedAt": "2026-06-03T01:37:50.218Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 4620
+  },
   "sleek": {
     "image": "/previews/sleek.webp",
     "small": "/previews/sleek-sm.webp",
@@ -2561,6 +2570,15 @@
     "width": 960,
     "height": 600,
     "bytes": 38198
+  },
+  "streamable": {
+    "image": "/previews/streamable.webp",
+    "small": "/previews/streamable-sm.webp",
+    "sourceUrl": "https://streamable.com/",
+    "capturedAt": "2026-06-03T01:37:58.952Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33480
   },
   "styles": {
     "image": "/previews/styles.webp",

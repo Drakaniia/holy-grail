@@ -2521,7 +2521,7 @@
     "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
     "category": "AI Agent Skills",
     "parentCategory": "ai",
-    "subcategory": null,
+    "subcategory": "agent-skills",
     "stars": 19541,
     "watchers": 64,
     "addedDaysAgo": 0,
@@ -2550,7 +2550,8 @@
       "ai",
       "agents",
       "skills",
-      "cli"
+      "cli",
+      "agent-skills"
     ],
     "atGlance": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
     "fullDescription": "Skills is an open ecosystem directory for discovering, ranking, and installing reusable skills that extend AI agents with procedural knowledge.",
@@ -2587,6 +2588,15 @@
     "installCommand": "",
     "similarTools": [
       {
+        "slug": "skillfish",
+        "name": "Skill.Fish",
+        "description": "Skill manager and discovery catalog for AI coding agent skills.",
+        "stars": 262,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skill.fish/"
+      },
+      {
         "slug": "agentskill",
         "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
         "description": "Agent skill directory and marketplace for AI coding assistants.",
@@ -2596,22 +2606,13 @@
         "website": "https://agentskill.sh/"
       },
       {
-        "slug": "autoskills",
-        "name": "AutoSkills",
-        "description": "Agent skills resource for creating and managing AI coding capabilities.",
+        "slug": "awesomeskill",
+        "name": "Awesome Skills",
+        "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://www.autoskills.sh/"
-      },
-      {
-        "slug": "tbench",
-        "name": "Terminal-Bench",
-        "description": "Benchmark and leaderboard resource for terminal-based AI agent workflows.",
-        "stars": 2224,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
+        "website": "https://awesomeskill.ai/"
       }
     ]
   },
@@ -6310,6 +6311,112 @@
     ]
   },
   {
+    "slug": "skillfish",
+    "name": "Skill.Fish",
+    "description": "Skill manager and discovery catalog for AI coding agent skills.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 262,
+    "watchers": 3,
+    "addedDaysAgo": 0,
+    "license": "AGPL-3.0",
+    "lastCommit": "1 month ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 1,
+    "commitsThisYear": 84,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.skill.fish/",
+    "docs": "https://www.skill.fish/",
+    "sourceCode": "https://github.com/knoxgraeme/skillfish",
+    "icon": "skillfish",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "cli",
+      "agent-skills"
+    ],
+    "atGlance": "Skill manager and discovery catalog for AI coding agent skills.",
+    "fullDescription": "Skill.Fish helps users discover, install, update, share, and sync reusable agent skills across AI coding tools from a web catalog and the skillfish CLI.",
+    "coreFeatures": [
+      {
+        "name": "Skill Discovery",
+        "description": "Browse and search community agent skills from the saved Skill.Fish catalog.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Install Flow",
+        "description": "Provides npx skillfish commands for installing skills from GitHub repositories.",
+        "icon": "check"
+      },
+      {
+        "name": "Multi-Agent Support",
+        "description": "Supports skill locations for coding agents including Claude Code, Cursor, Codex, and Copilot.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Team Sync",
+        "description": "The CLI can bundle and install skill manifests for shared team setups.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Tooling",
+        "description": "The skillfish CLI and catalog tooling are available from the public GitHub repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "The live catalog is available from the saved website link.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "awesomeskill",
+        "name": "Awesome Skills",
+        "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://awesomeskill.ai/"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      }
+    ]
+  },
+  {
     "slug": "badtz-ui",
     "name": "BadtzUI",
     "description": "React component library with Tailwind CSS, Radix primitives, and shadcn-style copy-paste components.",
@@ -7235,10 +7342,10 @@
   {
     "slug": "agentskill",
     "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
-    "description": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More bookmarked for ai resources.",
-    "category": "AI",
+    "description": "Agent skill directory and marketplace for AI coding assistants.",
+    "category": "AI Agent Skills",
     "parentCategory": "ai",
-    "subcategory": null,
+    "subcategory": "agent-skills",
     "stars": 0,
     "watchers": 0,
     "addedDaysAgo": 0,
@@ -7263,26 +7370,30 @@
     "featured": false,
     "tags": [
       "bookmark",
-      "ai"
+      "ai",
+      "agents",
+      "skills",
+      "marketplace",
+      "agent-skills"
     ],
-    "atGlance": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
-    "fullDescription": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More is kept as an ai resource for AI-assisted workflows.",
+    "atGlance": "Agent skill directory and marketplace for AI coding assistants.",
+    "fullDescription": "AgentSkill is kept as an AI agent skills marketplace for discovering reusable skills for Claude, Cursor, Copilot, and related coding assistants.",
     "coreFeatures": [
       {
-        "name": "AI Workflow Support",
-        "description": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More is tracked as an ai resource for AI-assisted workflows.",
+        "name": "Agent Skill Discovery",
+        "description": "Browse reusable skills for AI coding assistants and agent workflows.",
         "icon": "check"
       },
       {
         "name": "Direct Web Launch",
-        "description": "The live product is available from the saved website link.",
+        "description": "The live marketplace is available from the saved website link.",
         "icon": "check"
       }
     ],
     "additionalFeatures": [
       {
-        "name": "Cloud Access",
-        "description": "Designed to be used through a hosted web experience.",
+        "name": "Marketplace Browsing",
+        "description": "Groups agent skills and templates for repeatable discovery.",
         "icon": "check"
       },
       {
@@ -7292,7 +7403,7 @@
       },
       {
         "name": "Catalog Tags",
-        "description": "Tagged by AI category and subcategory for browsing.",
+        "description": "Tagged with AI, agent, skills, and marketplace labels for search and browsing.",
         "icon": "check"
       }
     ],
@@ -7300,31 +7411,131 @@
     "installCommand": "",
     "similarTools": [
       {
-        "slug": "napkin",
-        "name": "- Napkin AI",
-        "description": "- Napkin AI bookmarked for ai resources.",
-        "stars": 0,
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
         "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDE0N2EyMzBlLTNjOGYtNDgzZS1iMzYwLTMzMDExNzExODJiOQ?tid=onboarding_gen_ai_1&ts=Prompt"
+        "verified": true,
+        "website": "https://www.skills.sh/"
       },
       {
-        "slug": "cerebras",
-        "name": "Cerebras Cloud",
-        "description": "Cerebras Cloud bookmarked for ai resources.",
-        "stars": 0,
+        "slug": "skillfish",
+        "name": "Skill.Fish",
+        "description": "Skill manager and discovery catalog for AI coding agent skills.",
+        "stars": 262,
         "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://cloud.cerebras.ai/platform/org_drjncnkmm8y5kw2858w3jf26/get-started"
+        "verified": true,
+        "website": "https://www.skill.fish/"
       },
       {
-        "slug": "opal",
-        "name": "Opal [Experiment]",
-        "description": "Opal [Experiment] bookmarked for ai resources.",
+        "slug": "awesomeskill",
+        "name": "Awesome Skills",
+        "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
         "stars": 0,
         "addedDaysAgo": 0,
         "verified": false,
-        "website": "https://opal.google/landing/"
+        "website": "https://awesomeskill.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "awesomeskill",
+    "name": "Awesome Skills",
+    "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://awesomeskill.ai/",
+    "docs": "https://awesomeskill.ai/",
+    "sourceCode": "",
+    "icon": "awesomeskill",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "marketplace",
+      "agent-skills"
+    ],
+    "atGlance": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+    "fullDescription": "Awesome Skills is kept as an AI agent skills marketplace for discovering reusable SKILL.md workflows, prompts, MCP tools, and agent templates.",
+    "coreFeatures": [
+      {
+        "name": "Agent Skill Discovery",
+        "description": "Browse reusable agent skills for Claude Code, OpenAI Codex, ChatGPT, and related AI workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Marketplace Browsing",
+        "description": "The catalog groups open-source skills and templates for faster tool discovery.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Direct Web Launch",
+        "description": "The live marketplace is available from the saved website link.",
+        "icon": "check"
+      },
+      {
+        "name": "Skill Metadata",
+        "description": "Listings focus on reusable SKILL.md files, productivity workflows, prompts, and agent templates.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged with AI, agent, and skills labels for search and browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "skillfish",
+        "name": "Skill.Fish",
+        "description": "Skill manager and discovery catalog for AI coding agent skills.",
+        "stars": 262,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skill.fish/"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
       }
     ]
   },
@@ -8004,105 +8215,6 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://www.gumloop.com/"
-      }
-    ]
-  },
-  {
-    "slug": "awesomeskill",
-    "name": "Awesome Skills",
-    "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
-    "category": "AI Agent Skills",
-    "parentCategory": "ai",
-    "subcategory": null,
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://awesomeskill.ai/",
-    "docs": "https://awesomeskill.ai/",
-    "sourceCode": "",
-    "icon": "awesomeskill",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "ai",
-      "agents",
-      "skills",
-      "marketplace"
-    ],
-    "atGlance": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
-    "fullDescription": "Awesome Skills is kept as an AI agent skills marketplace for discovering reusable SKILL.md workflows, prompts, MCP tools, and agent templates.",
-    "coreFeatures": [
-      {
-        "name": "Agent Skill Discovery",
-        "description": "Browse reusable agent skills for Claude Code, OpenAI Codex, ChatGPT, and related AI workflows.",
-        "icon": "check"
-      },
-      {
-        "name": "Marketplace Browsing",
-        "description": "The catalog groups open-source skills and templates for faster tool discovery.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Direct Web Launch",
-        "description": "The live marketplace is available from the saved website link.",
-        "icon": "check"
-      },
-      {
-        "name": "Skill Metadata",
-        "description": "Listings focus on reusable SKILL.md files, productivity workflows, prompts, and agent templates.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Tagged with AI, agent, and skills labels for search and browsing.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "skills-sh",
-        "name": "Skills",
-        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
-        "stars": 19541,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://www.skills.sh/"
-      },
-      {
-        "slug": "agentskill",
-        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
-        "description": "Agent skill directory and marketplace for AI coding assistants.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://agentskill.sh/"
-      },
-      {
-        "slug": "autoskills",
-        "name": "AutoSkills",
-        "description": "Agent skills resource for creating and managing AI coding capabilities.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://www.autoskills.sh/"
       }
     ]
   },
@@ -27301,6 +27413,112 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "streamable",
+    "name": "Streamable",
+    "description": "Video hosting and sharing platform for uploading, editing, embedding, and sharing clips.",
+    "category": "Video Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://streamable.com/",
+    "docs": "https://streamable.com/",
+    "sourceCode": "",
+    "icon": "streamable",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "video",
+      "hosting",
+      "upload",
+      "sharing"
+    ],
+    "atGlance": "Video hosting and sharing platform for fast browser-based clip uploads.",
+    "fullDescription": "Streamable is a hosted video utility for uploading clips, sharing links, embedding videos, and using browser-based video tools such as trimming, cropping, muting, rotating, and compression.",
+    "coreFeatures": [
+      {
+        "name": "Video Uploads",
+        "description": "Upload video files or import from a URL through the hosted web interface.",
+        "icon": "check"
+      },
+      {
+        "name": "Shareable Links",
+        "description": "Generates direct links and embeds for quickly sharing hosted clips.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Editing",
+        "description": "Includes web tools for trimming, cropping, rotating, muting, and compressing videos.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Cloud Hosting",
+        "description": "Runs as a hosted web service with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Creator Workflow",
+        "description": "Useful for demos, social clips, support videos, and quick visual handoffs.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosting Grouping",
+        "description": "Stored with cloud and hosting resources in the development catalog.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "vercel",
+        "name": "vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 12500,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "render",
+        "name": "Render",
+        "description": "Cloud application hosting and deployment platform for web services.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://render.com/"
+      },
+      {
+        "slug": "infinityfree",
+        "name": "InfinityFree",
+        "description": "Free web hosting bookmark for cloud-hosting resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.infinityfree.com/"
       }
     ]
   },
