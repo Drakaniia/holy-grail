@@ -10,6 +10,7 @@ const ChangelogPage = () => import('@/pages/ChangelogPage.vue')
 const DocumentationPage = () => import('@/pages/DocumentationPage.vue')
 const EditProfilePage = () => import('@/pages/EditProfilePage.vue')
 const HomePage = () => import('@/pages/HomePage.vue')
+const NotFoundPage = () => import('@/pages/NotFoundPage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
 const SitesHomePage = () => import('@/pages/SitesHomePage.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
@@ -149,6 +150,11 @@ const router = createRouter({
       name: 'admin',
       component: AdminPage,
       meta: { requiresAuth: true },
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFoundPage,
     },
   ],
 })

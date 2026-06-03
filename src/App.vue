@@ -15,7 +15,8 @@ const isStandaloneRoute = computed(
   () =>
     route.name === 'home' ||
     route.name === 'docs' ||
-    route.name === 'changelog',
+    route.name === 'changelog' ||
+    route.name === 'not-found',
 )
 const shouldRenderAppShell = computed(
   () => !isAuthRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
