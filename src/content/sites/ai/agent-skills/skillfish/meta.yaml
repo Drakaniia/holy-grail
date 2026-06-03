@@ -1,0 +1,80 @@
+slug: skillfish
+name: Skill.Fish
+description: Skill manager and discovery catalog for AI coding agent skills.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: agent-skills
+stars: 262
+watchers: 3
+addedDaysAgo: 0
+license: AGPL-3.0
+lastCommit: 1 month ago
+lastRelease: No releases
+version: ""
+contributors: 1
+commitsThisYear: 84
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+website: https://www.skill.fish/
+docs: https://www.skill.fish/
+sourceCode: https://github.com/knoxgraeme/skillfish
+icon: skillfish
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - cli
+  - agent-skills
+atGlance: Skill manager and discovery catalog for AI coding agent skills.
+fullDescription: >-
+  Skill.Fish helps users discover, install, update, share, and sync reusable agent skills across
+  AI coding tools from a web catalog and the skillfish CLI.
+coreFeatures:
+  - name: Skill Discovery
+    description: Browse and search community agent skills from the saved Skill.Fish catalog.
+    icon: check
+  - name: CLI Install Flow
+    description: Provides npx skillfish commands for installing skills from GitHub repositories.
+    icon: check
+  - name: Multi-Agent Support
+    description: Supports skill locations for coding agents including Claude Code, Cursor, Codex, and Copilot.
+    icon: check
+additionalFeatures:
+  - name: Team Sync
+    description: The CLI can bundle and install skill manifests for shared team setups.
+    icon: check
+  - name: Open Source Tooling
+    description: The skillfish CLI and catalog tooling are available from the public GitHub repository.
+    icon: check
+  - name: Direct Web Launch
+    description: The live catalog is available from the saved website link.
+    icon: check
+similarTools:
+  - slug: skills-sh
+    name: Skills
+    description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+    stars: 19541
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skills.sh/
+  - slug: awesomeskill
+    name: Awesome Skills
+    description: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://awesomeskill.ai/
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/

@@ -55,6 +55,7 @@ const routeLabelMap: Record<string, string> = {
   api: 'API',
   detector: 'Detector',
   automation: 'Automation',
+  'agent-skills': 'Agent Skills',
   video: 'Video',
   ml: 'Machine Learning',
   chat: 'Chat',
@@ -104,10 +105,18 @@ const navigationItems: SearchItem[] = [
   createNavigationItem({
     id: 'collection-sites-ai',
     title: 'AI Tools',
-    description: 'AI chat, image, automation, research, API, video, and website development tools',
+    description: 'AI chat, image, automation, agent skills, research, API, video, and website development tools',
     category: 'Sites',
     to: '/sites/ai',
     keywords: ['chatgpt', 'claude', 'gemini', 'agents', 'automation', 'models'],
+  }),
+  createNavigationItem({
+    id: 'collection-sites-ai-agent-skills',
+    title: 'Agent Skills',
+    description: 'AI agent skill directories, marketplaces, and installable skill catalogs',
+    category: 'Sites',
+    to: '/sites/ai/agent-skills',
+    keywords: ['agent skills', 'skills', 'skillfish', 'skills.sh', 'claude skills', 'codex skills'],
   }),
   createNavigationItem({
     id: 'collection-sites-ai-website-development',

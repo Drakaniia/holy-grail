@@ -1,0 +1,80 @@
+slug: streamable
+name: Streamable
+description: Video hosting and sharing platform for uploading, editing, embedding, and sharing clips.
+category: Video Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://streamable.com/
+docs: https://streamable.com/
+sourceCode: ""
+icon: streamable
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - video
+  - hosting
+  - upload
+  - sharing
+atGlance: Video hosting and sharing platform for fast browser-based clip uploads.
+fullDescription: >-
+  Streamable is a hosted video utility for uploading clips, sharing links, embedding videos, and
+  using browser-based video tools such as trimming, cropping, muting, rotating, and compression.
+coreFeatures:
+  - name: Video Uploads
+    description: Upload video files or import from a URL through the hosted web interface.
+    icon: check
+  - name: Shareable Links
+    description: Generates direct links and embeds for quickly sharing hosted clips.
+    icon: check
+  - name: Browser Editing
+    description: Includes web tools for trimming, cropping, rotating, muting, and compressing videos.
+    icon: check
+additionalFeatures:
+  - name: Cloud Hosting
+    description: Runs as a hosted web service with no local install required.
+    icon: check
+  - name: Creator Workflow
+    description: Useful for demos, social clips, support videos, and quick visual handoffs.
+    icon: check
+  - name: Hosting Grouping
+    description: Stored with cloud and hosting resources in the development catalog.
+    icon: check
+similarTools:
+  - slug: vercel
+    name: vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 12500
+    addedDaysAgo: 0
+    verified: true
+    website: https://vercel.com
+  - slug: render
+    name: Render
+    description: Cloud application hosting and deployment platform for web services.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://render.com/
+  - slug: infinityfree
+    name: InfinityFree
+    description: Free web hosting bookmark for cloud-hosting resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.infinityfree.com/

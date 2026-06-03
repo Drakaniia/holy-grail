@@ -139,6 +139,7 @@ const aiSubcategories = [
   { name: 'API', icon: Plug, route: '/sites/ai/api' },
   { name: 'Detector', icon: ScanSearch, route: '/sites/ai/detector' },
   { name: 'Automation', icon: Workflow, route: '/sites/ai/automation' },
+  { name: 'Agent Skills', icon: Bot, route: '/sites/ai/agent-skills' },
   { name: 'Video', icon: Video, route: '/sites/ai/video' },
   { name: 'Machine Learning', icon: BrainCircuit, route: '/sites/ai/ml' },
   { name: 'CHAT', icon: MessageSquare, route: '/sites/ai/chat' },

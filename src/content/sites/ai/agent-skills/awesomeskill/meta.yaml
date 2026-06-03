@@ -3,7 +3,7 @@ name: Awesome Skills
 description: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
 category: AI Agent Skills
 parentCategory: ai
-subcategory: null
+subcategory: agent-skills
 stars: 0
 watchers: 0
 addedDaysAgo: 0
@@ -30,6 +30,7 @@ tags:
   - agents
   - skills
   - marketplace
+  - agent-skills
 atGlance: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
 fullDescription: >-
   Awesome Skills is kept as an AI agent skills marketplace for discovering reusable SKILL.md
@@ -61,6 +62,13 @@ similarTools:
     addedDaysAgo: 0
     verified: true
     website: https://www.skills.sh/
+  - slug: skillfish
+    name: Skill.Fish
+    description: Skill manager and discovery catalog for AI coding agent skills.
+    stars: 262
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skill.fish/
   - slug: agentskill
     name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
     description: Agent skill directory and marketplace for AI coding assistants.
@@ -68,10 +76,3 @@ similarTools:
     addedDaysAgo: 0
     verified: false
     website: https://agentskill.sh/
-  - slug: autoskills
-    name: AutoSkills
-    description: Agent skills resource for creating and managing AI coding capabilities.
-    stars: 0
-    addedDaysAgo: 0
-    verified: false
-    website: https://www.autoskills.sh/
