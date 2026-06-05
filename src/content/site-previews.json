@@ -1976,6 +1976,15 @@
     "height": 600,
     "bytes": 34164
   },
+  "onlyflix": {
+    "image": "/previews/onlyflix.webp",
+    "small": "/previews/onlyflix-sm.webp",
+    "sourceUrl": "https://onlyflix.to/",
+    "capturedAt": "2026-06-05T14:55:55.077Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 15908
+  },
   "opal": {
     "image": "/previews/opal.webp",
     "small": "/previews/opal-sm.webp",
