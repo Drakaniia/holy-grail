@@ -67,6 +67,13 @@ similarTools:
     addedDaysAgo: 0
     verified: true
     website: https://www.skill.fish/
+  - slug: lobehub-skills
+    name: LobeHub Skills Marketplace
+    description: Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.
+    stars: 78234
+    addedDaysAgo: 0
+    verified: true
+    website: https://lobehub.com/skills
   - slug: awesomeskill
     name: Awesome Skills
     description: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.

@@ -27,6 +27,15 @@
     "height": 600,
     "bytes": 7882
   },
+  "60fps": {
+    "image": "/previews/60fps.webp",
+    "small": "/previews/60fps-sm.webp",
+    "sourceUrl": "https://60fps.design/",
+    "capturedAt": "2026-06-05T14:33:05.671Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 17784
+  },
   "8bitcn": {
     "image": "/previews/8bitcn.webp",
     "small": "/previews/8bitcn-sm.webp",
@@ -1532,6 +1541,15 @@
     "width": 960,
     "height": 600,
     "bytes": 29884
+  },
+  "lobehub-skills": {
+    "image": "/previews/lobehub-skills.webp",
+    "small": "/previews/lobehub-skills-sm.webp",
+    "sourceUrl": "https://lobehub.com/skills",
+    "capturedAt": "2026-06-05T14:33:07.469Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34438
   },
   "locofy": {
     "image": "/previews/locofy.webp",

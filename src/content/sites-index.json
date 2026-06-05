@@ -1011,6 +1011,121 @@
     ]
   },
   {
+    "slug": "lobehub-skills",
+    "name": "LobeHub Skills Marketplace",
+    "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 78234,
+    "watchers": 291,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "1 minute ago",
+    "lastRelease": "1 day ago",
+    "version": "v2.2.2",
+    "contributors": 329,
+    "commitsThisYear": 3155,
+    "releases": 2754,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://lobehub.com/skills",
+    "docs": "https://lobehub.com/skills/skill.md",
+    "sourceCode": "https://github.com/lobehub/lobehub",
+    "icon": "lobehub-skills",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "marketplace",
+      "agent-skills",
+      "lobehub"
+    ],
+    "atGlance": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+    "fullDescription": "LobeHub Skills Marketplace is kept as an AI agent skills directory for discovering reusable SKILL.md bundles, publishing skill releases, and helping agents find installable capabilities.",
+    "coreFeatures": [
+      {
+        "name": "Agent Skill Discovery",
+        "description": "Browse reusable skills across categories for agent workflows, coding assistants, automation, and research.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Setup Prompt",
+        "description": "Provides a direct setup prompt that points agents at the LobeHub Skills Marketplace skill instructions.",
+        "icon": "check"
+      },
+      {
+        "name": "Publishing Workflow",
+        "description": "Supports publishing SKILL.md bundles and versioned releases for marketplace discovery.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multi-Agent Support",
+        "description": "Lists compatibility paths for tools such as LobeHub, OpenClaw, Claude Code, Codex, Cursor, opencode, Antigravity, and NousResearch.",
+        "icon": "check"
+      },
+      {
+        "name": "Category Browsing",
+        "description": "Groups skills by domains such as coding agents, frontend development, DevOps, research, browser automation, and AI tools.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Platform",
+        "description": "The related LobeHub application source is available from the public GitHub repository.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "skillfish",
+        "name": "Skill.Fish",
+        "description": "Skill manager and discovery catalog for AI coding agent skills.",
+        "stars": 262,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skill.fish/"
+      },
+      {
+        "slug": "awesomeskill",
+        "name": "Awesome Skills",
+        "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://awesomeskill.ai/"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      }
+    ]
+  },
+  {
     "slug": "openhands",
     "name": "CLI - OpenHands Docs",
     "description": "CLI - OpenHands Docs bookmarked for ai cli resources.",
@@ -2595,6 +2710,15 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.skill.fish/"
+      },
+      {
+        "slug": "lobehub-skills",
+        "name": "LobeHub Skills Marketplace",
+        "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+        "stars": 78234,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lobehub.com/skills"
       },
       {
         "slug": "agentskill",
@@ -6406,6 +6530,15 @@
         "website": "https://awesomeskill.ai/"
       },
       {
+        "slug": "lobehub-skills",
+        "name": "LobeHub Skills Marketplace",
+        "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+        "stars": 78234,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lobehub.com/skills"
+      },
+      {
         "slug": "agentskill",
         "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
         "description": "Agent skill directory and marketplace for AI coding assistants.",
@@ -7429,6 +7562,15 @@
         "website": "https://www.skill.fish/"
       },
       {
+        "slug": "lobehub-skills",
+        "name": "LobeHub Skills Marketplace",
+        "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+        "stars": 78234,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lobehub.com/skills"
+      },
+      {
         "slug": "awesomeskill",
         "name": "Awesome Skills",
         "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
@@ -7527,6 +7669,15 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.skill.fish/"
+      },
+      {
+        "slug": "lobehub-skills",
+        "name": "LobeHub Skills Marketplace",
+        "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+        "stars": 78234,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lobehub.com/skills"
       },
       {
         "slug": "agentskill",
@@ -20626,6 +20777,106 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/"
+      }
+    ]
+  },
+  {
+    "slug": "60fps",
+    "name": "60fps",
+    "description": "UI/UX animation inspiration for mobile and web app interaction details.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://60fps.design/",
+    "docs": "https://60fps.design/",
+    "sourceCode": "",
+    "icon": "60fps",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "animation",
+      "ui",
+      "ux"
+    ],
+    "atGlance": "UI/UX animation inspiration for mobile and web app interaction details.",
+    "fullDescription": "60fps is kept as a design inspiration reference for studying polished interaction details, animation patterns, mobile app moments, and web product motion examples.",
+    "coreFeatures": [
+      {
+        "name": "Motion Inspiration",
+        "description": "Browse app interaction examples focused on animation, transitions, and interface details.",
+        "icon": "check"
+      },
+      {
+        "name": "Filtered References",
+        "description": "The catalog groups examples by interaction patterns such as buttons, cards, loading, scroll, tabs, and gestures.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "App Examples",
+        "description": "Includes mobile and web app references from recognizable product interfaces.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with design, inspiration, animation, UI, and UX tags for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "mobbin",
+        "name": "Mobbin - UI & UX design inspiration for mobile & web apps",
+        "description": "Mobbin - UI & UX design inspiration for mobile & web apps bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mobbin.com/"
+      },
+      {
+        "slug": "designspells",
+        "name": "Design Spells - Design details that feel like magic",
+        "description": "Design Spells - Design details that feel like magic bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.designspells.com/"
+      },
+      {
+        "slug": "siteinspire",
+        "name": "Best Website Design Inspiration | Siteinspire",
+        "description": "Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.siteinspire.com/"
       }
     ]
   },

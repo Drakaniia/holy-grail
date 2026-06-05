@@ -1,0 +1,87 @@
+slug: lobehub-skills
+name: LobeHub Skills Marketplace
+description: Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: agent-skills
+stars: 78234
+watchers: 291
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 1 minute ago
+lastRelease: 1 day ago
+version: v2.2.2
+contributors: 329
+commitsThisYear: 3155
+releases: 2754
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://lobehub.com/skills
+docs: https://lobehub.com/skills/skill.md
+sourceCode: https://github.com/lobehub/lobehub
+icon: lobehub-skills
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - marketplace
+  - agent-skills
+  - lobehub
+atGlance: Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.
+fullDescription: >-
+  LobeHub Skills Marketplace is kept as an AI agent skills directory for discovering reusable
+  SKILL.md bundles, publishing skill releases, and helping agents find installable capabilities.
+coreFeatures:
+  - name: Agent Skill Discovery
+    description: Browse reusable skills across categories for agent workflows, coding assistants, automation, and research.
+    icon: check
+  - name: Agent Setup Prompt
+    description: Provides a direct setup prompt that points agents at the LobeHub Skills Marketplace skill instructions.
+    icon: check
+  - name: Publishing Workflow
+    description: Supports publishing SKILL.md bundles and versioned releases for marketplace discovery.
+    icon: check
+additionalFeatures:
+  - name: Multi-Agent Support
+    description: Lists compatibility paths for tools such as LobeHub, OpenClaw, Claude Code, Codex, Cursor, opencode, Antigravity, and NousResearch.
+    icon: check
+  - name: Category Browsing
+    description: Groups skills by domains such as coding agents, frontend development, DevOps, research, browser automation, and AI tools.
+    icon: check
+  - name: Open Source Platform
+    description: The related LobeHub application source is available from the public GitHub repository.
+    icon: check
+similarTools:
+  - slug: skills-sh
+    name: Skills
+    description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+    stars: 19541
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skills.sh/
+  - slug: skillfish
+    name: Skill.Fish
+    description: Skill manager and discovery catalog for AI coding agent skills.
+    stars: 262
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skill.fish/
+  - slug: awesomeskill
+    name: Awesome Skills
+    description: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://awesomeskill.ai/
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/

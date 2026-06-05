@@ -1,0 +1,76 @@
+slug: 60fps
+name: 60fps
+description: UI/UX animation inspiration for mobile and web app interaction details.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://60fps.design/
+docs: https://60fps.design/
+sourceCode: ""
+icon: 60fps
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - animation
+  - ui
+  - ux
+atGlance: UI/UX animation inspiration for mobile and web app interaction details.
+fullDescription: >-
+  60fps is kept as a design inspiration reference for studying polished interaction details,
+  animation patterns, mobile app moments, and web product motion examples.
+coreFeatures:
+  - name: Motion Inspiration
+    description: Browse app interaction examples focused on animation, transitions, and interface details.
+    icon: check
+  - name: Filtered References
+    description: The catalog groups examples by interaction patterns such as buttons, cards, loading, scroll, tabs, and gestures.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: App Examples
+    description: Includes mobile and web app references from recognizable product interfaces.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with design, inspiration, animation, UI, and UX tags for repeat use.
+    icon: check
+similarTools:
+  - slug: mobbin
+    name: Mobbin - UI & UX design inspiration for mobile & web apps
+    description: Mobbin - UI & UX design inspiration for mobile & web apps bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://mobbin.com/
+  - slug: designspells
+    name: Design Spells - Design details that feel like magic
+    description: Design Spells - Design details that feel like magic bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.designspells.com/
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
