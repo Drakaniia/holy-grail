@@ -27,7 +27,7 @@ function formatNumber(num: number): string {
 <template>
   <article
     class="group relative overflow-hidden rounded-xl border border-gray-800 transition-all hover:border-gray-700"
-    style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+    style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
   >
     <div class="absolute right-4 top-4 z-10">
       <BookmarkButton :resource="bookmarkResource" />

@@ -50,7 +50,7 @@ async function removeBookmark(bookmark: UserBookmark) {
 </script>
 
 <template>
-  <div class="min-h-full bg-black text-white">
+  <div class="min-h-full bg-[#1f1f1f] text-white">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
       <div class="mb-8 flex flex-col gap-5 border-b border-gray-800 pb-8 md:flex-row md:items-end md:justify-between">
         <div>
@@ -63,7 +63,7 @@ async function removeBookmark(bookmark: UserBookmark) {
           </p>
         </div>
 
-        <div class="w-full border border-gray-800 bg-[#060606] px-5 py-4 sm:w-auto">
+        <div class="w-full border border-gray-800 bg-[#1f1f1f] px-5 py-4 sm:w-auto">
           <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
             Saved
           </p>
@@ -92,7 +92,7 @@ async function removeBookmark(bookmark: UserBookmark) {
 
       <div
         v-else-if="savedItems.length === 0"
-        class="border border-gray-800 bg-[#060606] px-6 py-16 text-center"
+        class="border border-gray-800 bg-[#1f1f1f] px-6 py-16 text-center"
       >
         <Bookmark class="mx-auto h-10 w-10 text-gray-600" />
         <h2 class="mt-5 text-2xl font-bold text-white">No bookmarks yet</h2>
@@ -119,12 +119,12 @@ async function removeBookmark(bookmark: UserBookmark) {
         <article
           v-for="item in savedItems"
           :key="item.bookmark.id"
-          class="border border-gray-800 bg-[#060606] p-5 transition hover:border-gray-700"
+          class="border border-gray-800 bg-[#1f1f1f] p-5 transition hover:border-gray-700"
         >
           <div class="flex items-start justify-between gap-4">
             <div class="min-w-0">
               <div class="mb-3 flex flex-wrap items-center gap-2">
-                <span class="border border-gray-700 bg-black px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-gray-400">
+                <span class="border border-gray-700 bg-[#1f1f1f] px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-gray-400">
                   {{ item.bookmark.resource_type }}
                 </span>
                 <span class="text-xs text-gray-500">{{ item.category }}</span>

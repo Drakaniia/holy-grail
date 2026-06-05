@@ -22,7 +22,7 @@ import SkillContentSkeleton from './SkillContentSkeleton.vue'
 
     <div
       class="mb-6 rounded-xl border border-gray-800 p-4"
-      style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+      style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
     >
       <div class="flex flex-wrap items-center gap-4 sm:gap-6">
         <div class="hg-skeleton h-4 w-24 rounded"></div>
@@ -40,7 +40,7 @@ import SkillContentSkeleton from './SkillContentSkeleton.vue'
 
     <div
       class="mb-6 rounded-xl border border-gray-800 p-4"
-      style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+      style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
     >
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div class="min-w-0 flex-1">
@@ -53,7 +53,7 @@ import SkillContentSkeleton from './SkillContentSkeleton.vue'
 
     <div
       class="min-w-0 overflow-hidden rounded-xl border border-gray-800 p-4 sm:p-6 md:p-8"
-      style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+      style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
     >
       <SkillContentSkeleton />
     </div>

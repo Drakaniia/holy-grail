@@ -84,7 +84,7 @@ const emit = defineEmits<{
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 0.5rem;
-  background: #0d0d0d;
+  background: #1f1f1f;
   color: #ffffff;
   isolation: isolate;
   transition:

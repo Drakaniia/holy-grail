@@ -193,8 +193,8 @@ function setPage(page: number) {
 
 function getSortButtonClass(tab: SiteSortTab) {
   return store.activeTab === tab
-    ? 'border-zinc-600 bg-zinc-800 text-white shadow-sm shadow-black/40'
-    : 'border-gray-800 bg-black text-gray-400 hover:border-gray-700 hover:bg-zinc-900 hover:text-white'
+    ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
+    : 'border-gray-800 bg-[#1f1f1f] text-gray-400 hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white'
 }
 
 function toggleTimeRangeMenu() {
@@ -264,7 +264,7 @@ watch(totalPages, pages => {
 </script>
 
 <template>
-  <div class="bg-black text-white">
+  <div class="bg-[#1f1f1f] text-white">
     <div class="border-b border-gray-800">
       <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
@@ -281,7 +281,7 @@ watch(totalPages, pages => {
           </div>
 
           <div class="w-full flex-shrink-0 sm:w-auto">
-            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
               <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
                 COLLECTION
               </p>
@@ -300,7 +300,7 @@ watch(totalPages, pages => {
     </div>
 
     <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div class="relative min-w-0 flex-1">
             <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -309,7 +309,7 @@ watch(totalPages, pages => {
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
               placeholder="Search sites by name or category"
-              class="w-full bg-black border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
+              class="w-full bg-[#1f1f1f] border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
             />
           </div>
 
@@ -327,7 +327,7 @@ watch(totalPages, pages => {
             <div ref="timeRangeMenu" class="relative shrink-0">
               <button
                 type="button"
-                class="flex items-center gap-2 rounded-md border border-gray-800 bg-black px-3 py-2 text-xs font-medium text-gray-300 transition-all hover:border-gray-700 hover:bg-zinc-900 hover:text-white"
+                class="flex items-center gap-2 rounded-md border border-gray-800 bg-[#1f1f1f] px-3 py-2 text-xs font-medium text-gray-300 transition-all hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white"
                 :aria-expanded="isTimeRangeMenuOpen"
                 aria-haspopup="menu"
                 @click="toggleTimeRangeMenu"
@@ -338,7 +338,7 @@ watch(totalPages, pages => {
 
               <div
                 v-if="isTimeRangeMenuOpen"
-                class="absolute left-0 top-full z-20 mt-1 w-36 overflow-hidden rounded-md border border-gray-700 bg-zinc-900 py-1 shadow-xl shadow-black/50"
+                class="absolute left-0 top-full z-20 mt-1 w-36 overflow-hidden rounded-md border border-gray-700 bg-[#1f1f1f] py-1 shadow-xl shadow-[#1f1f1f]/50"
                 role="menu"
               >
                 <button
@@ -346,7 +346,7 @@ watch(totalPages, pages => {
                   :key="option.value"
                   type="button"
                   class="block w-full px-3 py-2 text-left text-xs font-medium transition-colors"
-                  :class="activeTimeRange === option.value ? 'bg-zinc-800 text-white' : 'text-gray-300 hover:bg-zinc-800 hover:text-white'"
+                  :class="activeTimeRange === option.value ? 'bg-[#1f1f1f] text-white' : 'text-gray-300 hover:bg-[#1f1f1f] hover:text-white'"
                   role="menuitem"
                   @click="selectTimeRange(option.value)"
                 >

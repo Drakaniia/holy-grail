@@ -98,7 +98,7 @@ function getCategoryIcon(key: SitesHomeGroupKey): Component {
   gap: 1.25rem;
   padding: 3rem clamp(1rem, 4%, 3rem);
   background:
-    linear-gradient(180deg, #050505 0%, #090909 100%);
+    linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 100%);
   color: #ffffff;
 }
 
@@ -145,7 +145,7 @@ function getCategoryIcon(key: SitesHomeGroupKey): Component {
   border-radius: 0.5rem;
   background:
     linear-gradient(145deg, color-mix(in srgb, var(--category-accent) 18%, transparent), transparent 48%),
-    #0d0d0d;
+    #1f1f1f;
 }
 
 .sites-home-category-deck__card::before {

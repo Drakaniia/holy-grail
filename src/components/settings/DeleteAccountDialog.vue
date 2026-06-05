@@ -34,12 +34,12 @@ watch(
 <template>
   <div
     v-if="open"
-    class="fixed inset-0 z-[90] flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+    class="fixed inset-0 z-[90] flex items-center justify-center bg-[#1f1f1f]/60 p-4 backdrop-blur-sm"
     role="dialog"
     aria-modal="true"
     aria-labelledby="delete-account-title"
   >
-    <section class="w-full max-w-sm rounded-xl border border-zinc-900 bg-[#080808] p-5 text-white shadow-2xl shadow-black/80">
+    <section class="w-full max-w-sm rounded-xl border border-zinc-900 bg-[#1f1f1f] p-5 text-white shadow-2xl shadow-[#1f1f1f]/80">
       <h2 id="delete-account-title" class="text-lg font-bold text-white">Delete Account</h2>
       <p class="mt-2 text-sm leading-6 text-zinc-400">
         This action cannot be undone. This will permanently delete your account and associated data.
@@ -48,14 +48,14 @@ watch(
       <label class="mt-7 block">
         <span class="block text-sm leading-6 text-zinc-400">
           To confirm, type your email
-          <strong class="rounded bg-zinc-800 px-1.5 py-0.5 font-mono text-zinc-100">{{ email }}</strong>
+          <strong class="rounded bg-[#1f1f1f] px-1.5 py-0.5 font-mono text-zinc-100">{{ email }}</strong>
           below:
         </span>
         <input
           v-model="typedEmail"
           type="email"
           autocomplete="off"
-          class="mt-3 h-10 w-full rounded-md border border-zinc-800 bg-black px-3 text-sm font-semibold text-white outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30"
+          class="mt-3 h-10 w-full rounded-md border border-zinc-800 bg-[#1f1f1f] px-3 text-sm font-semibold text-white outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30"
           placeholder="Enter your email"
         />
       </label>

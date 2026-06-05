@@ -33,7 +33,7 @@ const checkpoints = [
 
 <template>
   <section
-    class="auth-feature-rail relative hidden min-h-[620px] overflow-hidden border border-zinc-800 bg-[#050505] p-8 text-white lg:flex lg:flex-col lg:justify-between"
+    class="auth-feature-rail relative hidden min-h-[620px] overflow-hidden border border-zinc-800 bg-[#1f1f1f] p-8 text-white lg:flex lg:flex-col lg:justify-between"
   >
     <div
       class="auth-grid-overlay pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:44px_44px]"
@@ -61,7 +61,7 @@ const checkpoints = [
         <div
           v-for="item in checkpoints"
           :key="item.label"
-          class="auth-feature-card border border-zinc-800 bg-black/70 p-4"
+          class="auth-feature-card border border-zinc-800 bg-[#1f1f1f]/70 p-4"
         >
           <component :is="item.icon" class="mb-4 h-5 w-5 text-accent-300" />
           <p class="auth-feature-card-title text-sm font-semibold text-white">{{ item.label }}</p>
@@ -71,7 +71,7 @@ const checkpoints = [
         </div>
       </div>
 
-      <div class="auth-session-card border border-zinc-800 bg-zinc-950/80 p-5">
+      <div class="auth-session-card border border-zinc-800 bg-[#1f1f1f]/80 p-5">
         <div class="flex items-start gap-4">
           <div class="flex h-10 w-10 items-center justify-center border border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
             <Braces class="h-5 w-5" />

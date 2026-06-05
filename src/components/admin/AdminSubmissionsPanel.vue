@@ -102,7 +102,7 @@ function getAdminHandoff(status: SubmissionStatus) {
         </p>
       </div>
 
-      <div class="grid grid-cols-3 border border-gray-800 bg-[#050505] text-center text-xs">
+      <div class="grid grid-cols-3 border border-gray-800 bg-[#1f1f1f] text-center text-xs">
         <div class="border-r border-gray-800 px-4 py-3">
           <p class="font-bold text-amber-200">{{ admin.pendingCount }}</p>
           <p class="mt-1 uppercase tracking-widest text-gray-600">Pending</p>
@@ -122,7 +122,7 @@ function getAdminHandoff(status: SubmissionStatus) {
       <div
         v-for="step in REVIEW_FLOW"
         :key="step.index"
-        class="border border-gray-800 bg-[#060606] px-4 py-3"
+        class="border border-gray-800 bg-[#1f1f1f] px-4 py-3"
       >
         <p class="text-[10px] font-bold uppercase tracking-widest text-accent-300">
           {{ step.index }}
@@ -149,14 +149,14 @@ function getAdminHandoff(status: SubmissionStatus) {
         type="button"
         class="shrink-0 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest transition"
         :class="
-          activeTab === tab.value ? 'bg-zinc-800 text-white' : 'text-gray-500 hover:text-gray-300'
+          activeTab === tab.value ? 'bg-[#1f1f1f] text-white' : 'text-gray-500 hover:text-gray-300'
         "
         @click="activeTab = tab.value"
       >
         {{ tab.label }}
         <span
           v-if="tab.value === 'pending' && admin.pendingCount > 0"
-          class="ml-1.5 rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+          class="ml-1.5 rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
         >
           {{ admin.pendingCount }}
         </span>
@@ -174,7 +174,7 @@ function getAdminHandoff(status: SubmissionStatus) {
 
     <div
       v-else-if="displaySubmissions.length === 0"
-      class="border border-gray-800 bg-[#060606] px-6 py-16 text-center"
+      class="border border-gray-800 bg-[#1f1f1f] px-6 py-16 text-center"
     >
       <CheckCircle2 class="mx-auto mb-4 h-10 w-10 text-gray-600" />
       <p class="text-gray-500">No submissions in this category.</p>
@@ -184,7 +184,7 @@ function getAdminHandoff(status: SubmissionStatus) {
       <article
         v-for="sub in displaySubmissions"
         :key="sub.id"
-        class="border border-gray-800 bg-[#060606] p-5"
+        class="border border-gray-800 bg-[#1f1f1f] p-5"
       >
         <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div class="min-w-0 flex-1">
@@ -215,7 +215,7 @@ function getAdminHandoff(status: SubmissionStatus) {
               Note: {{ sub.submitter_note }}
             </p>
 
-            <div class="mb-3 border border-gray-800 bg-black/50 px-3 py-2">
+            <div class="mb-3 border border-gray-800 bg-[#1f1f1f]/50 px-3 py-2">
               <p class="text-[10px] font-semibold uppercase tracking-widest text-gray-600">
                 Admin handoff
               </p>

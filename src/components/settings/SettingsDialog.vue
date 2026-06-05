@@ -63,17 +63,17 @@ function selectTheme(nextTheme: ThemeMode) {
 
 <template>
   <div
-    class="settings-backdrop fixed inset-0 z-[80] overflow-y-auto bg-black/70 p-4 backdrop-blur-sm sm:p-6"
+    class="settings-backdrop fixed inset-0 z-[80] overflow-y-auto bg-[#1f1f1f]/70 p-4 backdrop-blur-sm sm:p-6"
   >
     <div class="flex min-h-full items-center justify-center">
       <div
-        class="settings-dialog grid h-[min(760px,calc(100vh-2rem))] w-full max-w-5xl grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-xl border border-zinc-800 bg-[#101010] text-white shadow-2xl shadow-black/70 sm:h-[min(760px,calc(100vh-3rem))] md:grid-cols-[205px_minmax(0,1fr)] md:grid-rows-none"
+        class="settings-dialog grid h-[min(760px,calc(100vh-2rem))] w-full max-w-5xl grid-rows-[auto_minmax(0,1fr)] overflow-hidden rounded-xl border border-zinc-800 bg-[#1f1f1f] text-white shadow-2xl shadow-[#1f1f1f]/70 sm:h-[min(760px,calc(100vh-3rem))] md:grid-cols-[205px_minmax(0,1fr)] md:grid-rows-none"
         role="dialog"
         aria-modal="true"
         aria-labelledby="settings-title"
       >
         <aside
-          class="settings-aside border-b border-zinc-800 bg-[#080808] p-4 md:border-b-0 md:border-r"
+          class="settings-aside border-b border-zinc-800 bg-[#1f1f1f] p-4 md:border-b-0 md:border-r"
         >
           <h1 id="settings-title" class="text-lg font-bold tracking-normal text-white">Settings</h1>
 
@@ -86,8 +86,8 @@ function selectTheme(nextTheme: ThemeMode) {
                   class="flex h-9 w-full items-center gap-2 rounded-md px-3 text-left text-sm transition"
                   :class="
                     activeSection === 'profile'
-                      ? 'bg-zinc-800 font-bold text-white'
-                      : 'font-semibold text-zinc-500 hover:bg-zinc-900 hover:text-zinc-200'
+                      ? 'bg-[#1f1f1f] font-bold text-white'
+                      : 'font-semibold text-zinc-500 hover:bg-[#1f1f1f] hover:text-zinc-200'
                   "
                   :aria-current="activeSection === 'profile' ? 'page' : undefined"
                   @click="selectSection('profile')"
@@ -100,8 +100,8 @@ function selectTheme(nextTheme: ThemeMode) {
                   class="flex h-9 w-full items-center gap-2 rounded-md px-3 text-left text-sm transition"
                   :class="
                     activeSection === 'appearance'
-                      ? 'bg-zinc-800 font-bold text-white'
-                      : 'font-semibold text-zinc-500 hover:bg-zinc-900 hover:text-zinc-200'
+                      ? 'bg-[#1f1f1f] font-bold text-white'
+                      : 'font-semibold text-zinc-500 hover:bg-[#1f1f1f] hover:text-zinc-200'
                   "
                   :aria-current="activeSection === 'appearance' ? 'page' : undefined"
                   @click="selectSection('appearance')"
@@ -114,10 +114,10 @@ function selectTheme(nextTheme: ThemeMode) {
           </nav>
         </aside>
 
-        <section class="settings-panel relative min-w-0 overflow-y-auto bg-[#101010]">
+        <section class="settings-panel relative min-w-0 overflow-y-auto bg-[#1f1f1f]">
           <button
             type="button"
-            class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-zinc-800 text-zinc-400 transition hover:bg-zinc-700 hover:text-white"
+            class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#1f1f1f] text-zinc-400 transition hover:bg-[#1f1f1f] hover:text-white"
             aria-label="Close settings"
             @click="emit('close')"
           >
@@ -130,7 +130,7 @@ function selectTheme(nextTheme: ThemeMode) {
 
           <div v-if="activeSection === 'profile'" class="space-y-0">
             <section class="border-b border-zinc-800 px-6 pb-6">
-              <div class="settings-card rounded-lg border border-zinc-800 bg-[#0b0b0b] p-4">
+              <div class="settings-card rounded-lg border border-zinc-800 bg-[#1f1f1f] p-4">
                 <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <div class="flex min-w-0 items-center gap-4">
                     <UserAvatar
@@ -148,7 +148,7 @@ function selectTheme(nextTheme: ThemeMode) {
 
                   <button
                     type="button"
-                    class="inline-flex h-9 items-center justify-center gap-2 rounded-md border border-zinc-700 bg-[#080808] px-4 text-sm font-bold text-zinc-100 transition hover:border-zinc-500 disabled:cursor-not-allowed disabled:opacity-60"
+                    class="inline-flex h-9 items-center justify-center gap-2 rounded-md border border-zinc-700 bg-[#1f1f1f] px-4 text-sm font-bold text-zinc-100 transition hover:border-zinc-500 disabled:cursor-not-allowed disabled:opacity-60"
                     :disabled="avatarProcessing || saveStatus === 'saving'"
                     @click="openAvatarPicker"
                   >
@@ -174,7 +174,7 @@ function selectTheme(nextTheme: ThemeMode) {
                   type="text"
                   maxlength="80"
                   autocomplete="name"
-                  class="settings-input h-10 w-full rounded-md border border-zinc-800 bg-[#070707] px-4 text-sm font-semibold text-white outline-none transition focus:border-accent-400"
+                  class="settings-input h-10 w-full rounded-md border border-zinc-800 bg-[#1f1f1f] px-4 text-sm font-semibold text-white outline-none transition focus:border-accent-400"
                   :class="displayNameIsValid ? '' : 'border-red-400/70'"
                 />
               </label>
@@ -229,7 +229,7 @@ function selectTheme(nextTheme: ThemeMode) {
           </div>
 
           <div v-else class="px-6 pb-6">
-            <section class="settings-card rounded-lg border border-zinc-800 bg-[#0b0b0b] p-4">
+            <section class="settings-card rounded-lg border border-zinc-800 bg-[#1f1f1f] p-4">
               <div>
                 <h3 class="text-sm font-bold text-white">Theme</h3>
                 <p class="mt-1 text-sm leading-6 text-zinc-500">
@@ -244,20 +244,20 @@ function selectTheme(nextTheme: ThemeMode) {
                   :class="
                     theme === 'dark'
                       ? 'border-accent-400 bg-accent-500/10 text-white'
-                      : 'border-zinc-800 bg-[#080808] text-zinc-300 hover:border-zinc-600 hover:text-white'
+                      : 'border-zinc-800 bg-[#1f1f1f] text-zinc-300 hover:border-zinc-600 hover:text-white'
                   "
                   :aria-pressed="theme === 'dark'"
                   @click="selectTheme('dark')"
                 >
                   <span>
                     <span
-                      class="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 bg-black"
+                      class="flex h-9 w-9 items-center justify-center rounded-md border border-zinc-700 bg-[#1f1f1f]"
                     >
                       <Moon class="h-4 w-4" />
                     </span>
                     <span class="mt-4 block text-sm font-bold">Dark</span>
                     <span class="mt-1 block text-xs leading-5 text-zinc-500"
-                      >Low-glare black interface.</span
+                      >Low-glare dark interface.</span
                     >
                   </span>
                   <Check v-if="theme === 'dark'" class="h-4 w-4 text-accent-300" />
@@ -269,7 +269,7 @@ function selectTheme(nextTheme: ThemeMode) {
                   :class="
                     theme === 'light'
                       ? 'border-accent-400 bg-accent-500/10 text-white'
-                      : 'border-zinc-800 bg-[#080808] text-zinc-300 hover:border-zinc-600 hover:text-white'
+                      : 'border-zinc-800 bg-[#1f1f1f] text-zinc-300 hover:border-zinc-600 hover:text-white'
                   "
                   :aria-pressed="theme === 'light'"
                   @click="selectTheme('light')"

@@ -132,7 +132,7 @@ async function handleSignOut() {
       @click="toggleMenu"
     >
       <span
-        class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-gray-800 bg-[#080808] text-white"
+        class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-gray-800 bg-[#1f1f1f] text-white"
       >
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
@@ -154,7 +154,7 @@ async function handleSignOut() {
     <div
       v-if="isOpen"
       role="menu"
-      class="absolute left-1 top-12 z-[95] w-[15.25rem] overflow-visible rounded-lg border border-gray-800 bg-[#050505] py-2 shadow-2xl shadow-black/60"
+      class="absolute left-1 top-12 z-[95] w-[15.25rem] overflow-visible rounded-lg border border-gray-800 bg-[#1f1f1f] py-2 shadow-2xl shadow-[#1f1f1f]/60"
     >
       <div class="border-b border-gray-800 px-3 pb-3">
         <div class="flex min-w-0 items-center gap-3">
@@ -208,7 +208,7 @@ async function handleSignOut() {
           </button>
 
           <div
-            class="account-help-submenu absolute left-[calc(100%-0.125rem)] top-0 z-[100] w-56 rounded-lg border border-gray-800 bg-[#050505] p-2 shadow-2xl shadow-black/60"
+            class="account-help-submenu absolute left-[calc(100%-0.125rem)] top-0 z-[100] w-56 rounded-lg border border-gray-800 bg-[#1f1f1f] p-2 shadow-2xl shadow-[#1f1f1f]/60"
             role="menu"
             aria-label="Help"
           >
@@ -250,7 +250,7 @@ async function handleSignOut() {
           <span>Admin</span>
           <span
             v-if="admin.pendingCount > 0"
-            class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+            class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
           >
             {{ admin.pendingCount }}
           </span>

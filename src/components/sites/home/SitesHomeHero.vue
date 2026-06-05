@@ -140,7 +140,7 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   background:
     linear-gradient(135deg, rgba(255, 140, 26, 0.18), transparent 24rem),
-    linear-gradient(180deg, #050505 0%, #090909 62%, #050505 100%);
+    linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 62%, #1f1f1f 100%);
   color: #ffffff;
 }
 
@@ -151,7 +151,7 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
   pointer-events: none;
   content: '';
   background:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.42) 58%, rgba(5, 5, 5, 0.9)),
+    linear-gradient(90deg, rgba(31, 31, 31, 0.92), rgba(31, 31, 31, 0.42) 58%, rgba(31, 31, 31, 0.9)),
     radial-gradient(circle at 82% 20%, rgba(57, 255, 180, 0.12), transparent 20rem);
 }
 
@@ -263,7 +263,7 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
 .sites-home-hero__primary-action {
   border-color: #ff8c1a;
   background: #ff8c1a;
-  color: #060606;
+  color: #1f1f1f;
 }
 
 .sites-home-hero__secondary-action {
@@ -299,7 +299,7 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
 .sites-home-hero__metric {
   display: grid;
   gap: 0.38rem;
-  background: rgba(5, 5, 5, 0.88);
+  background: rgba(31, 31, 31, 0.88);
   padding: 0.88rem;
 }
 

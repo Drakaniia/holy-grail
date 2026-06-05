@@ -90,7 +90,7 @@ async function removeBookmark(id: string) {
 </script>
 
 <template>
-  <div class="min-h-full bg-[#050505] text-white">
+  <div class="min-h-full bg-[#1f1f1f] text-white">
     <ProfileHeader
       :avatar-url="auth.avatarUrl"
       :avatar-initial="auth.avatarInitial"
@@ -102,7 +102,7 @@ async function removeBookmark(id: string) {
       :skill-count="publishedSkillCount"
     />
 
-    <div class="border-b border-zinc-900 bg-[#050505] px-4 py-4 sm:px-6 lg:px-8">
+    <div class="border-b border-zinc-900 bg-[#1f1f1f] px-4 py-4 sm:px-6 lg:px-8">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4">
         <ProfileTabs :tabs="tabs" :active-tab="activeTab" @select="activeTab = $event" />
       </div>

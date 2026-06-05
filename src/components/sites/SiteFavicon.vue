@@ -30,7 +30,7 @@ const sizeClasses = computed(() => {
 </script>
 
 <template>
-  <div :class="['rounded-lg bg-[#161b22] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden', sizeClasses.container]">
+  <div :class="['rounded-lg bg-[#1f1f1f] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden', sizeClasses.container]">
     <img
       v-if="faviconUrl && !imageError"
       :src="faviconUrl"

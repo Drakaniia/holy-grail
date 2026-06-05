@@ -47,7 +47,7 @@ defineProps<{
   gap: 2rem;
   padding: clamp(2.5rem, 5vw, 5.5rem) clamp(1.25rem, 4vw, 4.5rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: #090909;
+  background: #1f1f1f;
 }
 
 .home-directory__heading {

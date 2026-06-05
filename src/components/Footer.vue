@@ -30,8 +30,8 @@ const { isLightMode } = useTheme()
 <style scoped>
 .site-footer {
   flex-shrink: 0;
-  border-top: 1px solid var(--footer-border, #262626);
-  background: var(--footer-bg, #050505);
+  border-top: 1px solid var(--footer-border, #1f1f1f);
+  background: var(--footer-bg, #1f1f1f);
   color: var(--footer-muted, #8d8d8d);
 }
 

@@ -230,7 +230,7 @@ async function copyInstallCommand() {
 </script>
 
 <template>
-  <div class="bg-black text-white">
+  <div class="bg-[#1f1f1f] text-white">
     <div v-if="site" class="max-w-6xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
       <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div class="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
@@ -276,14 +276,14 @@ async function copyInstallCommand() {
             :href="site.website"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-black transition-colors hover:bg-gray-200"
+            class="inline-flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm font-semibold text-[#1f1f1f] transition-colors hover:bg-gray-200"
           >
             <ExternalLink class="w-4 h-4" />
             Visit Site
           </a>
           <button
             type="button"
-            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-gray-800 bg-[#080808] text-gray-400 transition-colors hover:border-gray-700 hover:text-white"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-gray-800 bg-[#1f1f1f] text-gray-400 transition-colors hover:border-gray-700 hover:text-white"
             aria-label="Close site detail"
             @click="router.push(backRoute)"
           >
@@ -361,7 +361,7 @@ async function copyInstallCommand() {
         </div>
 
         <!-- Access & Deployment -->
-        <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+        <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
           <h3 class="text-sm font-medium text-gray-400 mb-3">Access & Deployment</h3>
           <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <div class="flex flex-wrap items-center gap-2">
@@ -371,7 +371,7 @@ async function copyInstallCommand() {
                 <span
                   v-for="platform in site.platforms"
                   :key="platform"
-                  class="px-2 py-0.5 bg-[#161b22] border border-gray-700 rounded text-xs text-gray-300"
+                  class="px-2 py-0.5 bg-[#1f1f1f] border border-gray-700 rounded text-xs text-gray-300"
                 >
                   {{ platform }}
                 </span>
@@ -384,7 +384,7 @@ async function copyInstallCommand() {
                 <span
                   v-for="deploy in site.deployment"
                   :key="deploy"
-                  class="px-2 py-0.5 bg-[#161b22] border border-gray-700 rounded text-xs text-gray-300"
+                  class="px-2 py-0.5 bg-[#1f1f1f] border border-gray-700 rounded text-xs text-gray-300"
                 >
                   {{ deploy }}
                 </span>
@@ -397,7 +397,7 @@ async function copyInstallCommand() {
       <SitePreview :site="site" />
 
       <!-- At a Glance -->
-      <div v-if="site.atGlance" class="border border-accent-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div v-if="site.atGlance" class="border border-accent-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <h3 class="text-sm font-medium text-accent-400 mb-1">At a Glance</h3>
         <p class="text-sm text-accent-300 italic">{{ site.atGlance }}</p>
       </div>
@@ -416,10 +416,10 @@ async function copyInstallCommand() {
             v-for="feature in site.coreFeatures"
             :key="feature.name"
             class="border border-gray-800 rounded-lg p-4"
-            style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+            style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#161b22] border border-gray-700 flex items-center justify-center flex-shrink-0">
+              <div class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0">
                 <CheckCircle2 class="w-4 h-4 text-gray-400" />
               </div>
               <div>
@@ -439,10 +439,10 @@ async function copyInstallCommand() {
             v-for="feature in site.additionalFeatures"
             :key="feature.name"
             class="border border-gray-800 rounded-lg p-4"
-            style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+            style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#161b22] border border-gray-700 flex items-center justify-center flex-shrink-0">
+              <div class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0">
                 <Layers class="w-4 h-4 text-gray-500" />
               </div>
               <div>
@@ -455,7 +455,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Community Feedback -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <div class="flex items-center gap-2 mb-4">
           <Heart class="w-4 h-4 text-gray-500" />
           <span class="text-sm text-gray-400">
@@ -465,10 +465,10 @@ async function copyInstallCommand() {
         <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
           <span class="text-xs text-gray-500">Share:</span>
           <div class="flex gap-2">
-            <button class="w-8 h-8 rounded bg-[#161b22] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+            <button class="w-8 h-8 rounded bg-[#1f1f1f] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors">
               <Share2 class="w-4 h-4" />
             </button>
-            <button class="w-8 h-8 rounded bg-[#161b22] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+            <button class="w-8 h-8 rounded bg-[#1f1f1f] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors">
               <Globe class="w-4 h-4" />
             </button>
           </div>
@@ -476,7 +476,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Installation & Deployment -->
-      <div v-if="hasDeploymentInfo" class="border border-gray-800 rounded-xl mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div v-if="hasDeploymentInfo" class="border border-gray-800 rounded-xl mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <div class="p-4 border-b border-gray-800">
           <h3 class="text-base font-semibold text-white mb-1">Installation & Deployment</h3>
           <p class="text-sm text-gray-500">Choose a deployment method based on your environment and preferences</p>
@@ -487,7 +487,7 @@ async function copyInstallCommand() {
             <span
               v-for="deploy in site.deployment"
               :key="deploy"
-              class="flex items-center gap-2 px-3 py-2 bg-[#161b22] border border-gray-700 rounded-lg text-sm text-white"
+              class="flex items-center gap-2 px-3 py-2 bg-[#1f1f1f] border border-gray-700 rounded-lg text-sm text-white"
             >
               <Package class="w-4 h-4" />
               {{ deploy }}
@@ -504,7 +504,7 @@ async function copyInstallCommand() {
             }}
           </p>
 
-          <div v-if="hasInstallCommand" class="mb-4 overflow-hidden rounded-lg border border-gray-800 bg-[#161b22]">
+          <div v-if="hasInstallCommand" class="mb-4 overflow-hidden rounded-lg border border-gray-800 bg-[#1f1f1f]">
             <div class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex items-center gap-2">
                 <Code2 class="w-4 h-4 text-gray-500" />
@@ -523,7 +523,7 @@ async function copyInstallCommand() {
           </div>
 
           <!-- Compose File -->
-          <div v-if="site.deployCompose" class="bg-[#161b22] border border-gray-800 rounded-lg overflow-hidden">
+          <div v-if="site.deployCompose" class="bg-[#1f1f1f] border border-gray-800 rounded-lg overflow-hidden">
             <div class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
               <div class="flex items-center gap-2">
                 <Code2 class="w-4 h-4 text-gray-500" />
@@ -550,7 +550,7 @@ async function copyInstallCommand() {
               :href="site.website"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#161b22] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
+              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#1f1f1f] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
             >
               <Globe class="w-4 h-4 text-gray-500" />
               Open Website
@@ -560,7 +560,7 @@ async function copyInstallCommand() {
               :href="site.docs"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#161b22] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
+              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#1f1f1f] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
             >
               <BookOpen class="w-4 h-4 text-gray-500" />
               Read Docs
@@ -570,7 +570,7 @@ async function copyInstallCommand() {
               :href="site.sourceCode"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#161b22] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
+              class="flex items-center gap-3 rounded-lg border border-gray-800 bg-[#1f1f1f] p-4 text-sm text-gray-300 hover:border-gray-700 hover:text-white transition-colors"
             >
               <Code2 class="w-4 h-4 text-gray-500" />
               Source Code
@@ -593,10 +593,10 @@ async function copyInstallCommand() {
             :key="tool.slug"
             :to="`/sites/${tool.slug}`"
             class="border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all group block"
-            style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+            style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3 mb-3">
-              <div class="w-10 h-10 rounded-lg bg-[#161b22] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div class="w-10 h-10 rounded-lg bg-[#1f1f1f] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <SiteFavicon :website="tool.website" :name="tool.name" size="sm" />
               </div>
               <div class="flex-1 min-w-0">

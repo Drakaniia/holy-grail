@@ -23,7 +23,7 @@
       <div class="hg-skeleton h-4 w-2/3 rounded"></div>
     </div>
 
-    <div class="rounded-lg border border-gray-800 bg-[#111111] p-4">
+    <div class="rounded-lg border border-gray-800 bg-[#1f1f1f] p-4">
       <div class="space-y-2">
         <div class="hg-skeleton h-4 w-2/5 rounded"></div>
         <div class="hg-skeleton h-4 w-4/5 rounded"></div>

@@ -112,7 +112,7 @@ watch(totalPages, pages => {
 </script>
 
 <template>
-  <div class="bg-black text-white">
+  <div class="bg-[#1f1f1f] text-white">
     <div class="border-b border-gray-800">
       <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
@@ -129,7 +129,7 @@ watch(totalPages, pages => {
           </div>
 
           <div class="w-full flex-shrink-0 sm:w-auto">
-            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
               <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
                 LIBRARY PULSE
               </p>
@@ -148,7 +148,7 @@ watch(totalPages, pages => {
     </div>
 
     <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-8">
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div class="relative min-w-0 flex-1">
             <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -157,11 +157,11 @@ watch(totalPages, pages => {
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
               placeholder="Search skills by name or intent"
-              class="w-full bg-black border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
+              class="w-full bg-[#1f1f1f] border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
             />
           </div>
 
-          <div class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+          <div class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
             <button
               @click="store.setTab('popular')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"

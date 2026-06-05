@@ -121,9 +121,9 @@ onBeforeUnmount(clearTimers)
 </script>
 
 <template>
-  <div class="auth-callback-shell flex min-h-screen items-center justify-center bg-black px-4 text-white">
+  <div class="auth-callback-shell flex min-h-screen items-center justify-center bg-[#1f1f1f] px-4 text-white">
     <div
-      class="auth-callback-card flex max-w-sm items-start gap-3 border border-zinc-800 bg-[#060606] px-5 py-4 text-sm text-zinc-300"
+      class="auth-callback-card flex max-w-sm items-start gap-3 border border-zinc-800 bg-[#1f1f1f] px-5 py-4 text-sm text-zinc-300"
     >
       <Loader2 class="auth-callback-spinner h-4 w-4 animate-spin text-accent-300" />
       <div class="min-w-0">

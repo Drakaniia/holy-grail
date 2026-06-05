@@ -67,7 +67,7 @@ onUnmounted(() => {
 <template>
   <RouterView v-if="isAuthRoute || isStandaloneRoute" />
 
-  <div v-else-if="shouldRenderAppShell" class="flex h-[100dvh] overflow-hidden bg-black text-white">
+  <div v-else-if="shouldRenderAppShell" class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white">
     <div class="hidden h-full shrink-0 md:block">
       <Sidebar />
     </div>
@@ -82,13 +82,13 @@ onUnmounted(() => {
       >
         <button
           type="button"
-          class="absolute inset-0 bg-black/70 backdrop-blur-sm"
+          class="absolute inset-0 bg-[#1f1f1f]/70 backdrop-blur-sm"
           aria-label="Close navigation"
           @click="closeMobileSidebar"
         ></button>
         <div
           id="mobile-sidebar"
-          class="relative h-full w-64 max-w-[calc(100vw-3rem)] shadow-2xl shadow-black/60"
+          class="relative h-full w-64 max-w-[calc(100vw-3rem)] shadow-2xl shadow-[#1f1f1f]/60"
         >
           <Sidebar />
         </div>

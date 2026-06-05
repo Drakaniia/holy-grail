@@ -113,7 +113,7 @@ onMounted(() => {
   align-items: center;
   min-height: 4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(5, 5, 5, 0.94);
+  background: rgba(31, 31, 31, 0.94);
   padding: 0 1rem;
   color: #ffffff;
 }
@@ -152,7 +152,7 @@ onMounted(() => {
 
 .home-navbar__link {
   min-width: 8rem;
-  background: #050505;
+  background: #1f1f1f;
   padding: 1.45rem 1.1rem;
   color: #a8a8a8;
   text-align: center;
@@ -181,7 +181,7 @@ onMounted(() => {
   width: 2.4rem;
   height: 2.4rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: #050505;
+  background: #1f1f1f;
   color: #d6d6d6;
   transition:
     border-color 160ms ease,

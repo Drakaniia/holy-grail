@@ -64,7 +64,7 @@ async function handleClick() {
       variant === 'detail' ? 'h-9 gap-2 px-3' : 'h-9 w-9',
       isSaved
         ? 'border-accent-500/40 bg-accent-500/15 text-accent-100 hover:border-accent-400'
-        : 'border-gray-800 bg-[#080808] text-gray-400 hover:border-gray-700 hover:text-white',
+        : 'border-gray-800 bg-[#1f1f1f] text-gray-400 hover:border-gray-700 hover:text-white',
     ]"
     :aria-label="buttonLabel"
     :title="buttonLabel"

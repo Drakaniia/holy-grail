@@ -29,7 +29,7 @@ function formatNumber(num: number): string {
 <template>
   <article
     class="group relative overflow-hidden rounded-xl border border-gray-800 transition-all hover:border-gray-700"
-    style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+    style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
   >
     <div class="absolute right-4 top-4 z-10">
       <BookmarkButton :resource="bookmarkResource" />
@@ -52,7 +52,7 @@ function formatNumber(num: number): string {
             <CheckCircle2 v-if="site.verified" class="w-4 h-4 text-green-500 flex-shrink-0" />
             <RefreshCw v-else class="w-3.5 h-3.5 text-gray-600 flex-shrink-0" />
           </div>
-          <span class="inline-block px-2 py-0.5 bg-[#161b22] border border-gray-700 rounded-full text-[10px] text-gray-400">
+          <span class="inline-block px-2 py-0.5 bg-[#1f1f1f] border border-gray-700 rounded-full text-[10px] text-gray-400">
             {{ site.category }}
           </span>
         </div>
@@ -81,7 +81,7 @@ function formatNumber(num: number): string {
         <span
           v-for="tag in site.tags"
           :key="tag"
-          class="px-2 py-0.5 bg-[#161b22] border border-gray-700 rounded text-[10px] text-gray-400"
+          class="px-2 py-0.5 bg-[#1f1f1f] border border-gray-700 rounded text-[10px] text-gray-400"
         >
           {{ tag }}
         </span>

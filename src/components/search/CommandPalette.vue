@@ -105,7 +105,7 @@ function openResult(result: SmartSearchResult | undefined) {
       >
         <button
           type="button"
-          class="command-palette-backdrop fixed inset-0 bg-black/70 backdrop-blur-[2px]"
+          class="command-palette-backdrop fixed inset-0 bg-[#1f1f1f]/70 backdrop-blur-[2px]"
           aria-label="Close search"
           @click="closeDialog"
         ></button>
@@ -262,7 +262,7 @@ function openResult(result: SmartSearchResult | undefined) {
   max-height: min(660px, calc(100dvh - 2rem));
   background:
     linear-gradient(180deg, rgba(255, 122, 0, 0.08), transparent 42%),
-    linear-gradient(135deg, rgba(20, 184, 166, 0.06), transparent 34%), #050505;
+    linear-gradient(135deg, rgba(20, 184, 166, 0.06), transparent 34%), #1f1f1f;
 }
 
 .command-palette-grid {

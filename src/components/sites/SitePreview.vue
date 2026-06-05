@@ -35,9 +35,9 @@ watch(
 <template>
   <div
     class="border border-gray-800 rounded-xl p-4 mb-6"
-    style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+    style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
   >
-    <div class="bg-[#161b22] rounded-lg overflow-hidden">
+    <div class="bg-[#1f1f1f] rounded-lg overflow-hidden">
       <div class="flex items-center gap-2 px-4 py-2 border-b border-gray-800">
         <div class="flex gap-1.5">
           <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -52,7 +52,7 @@ watch(
         :href="site.website"
         target="_blank"
         rel="noopener noreferrer"
-        class="relative block group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+        class="relative block group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1f1f1f]"
         :aria-label="`Visit ${site.name}`"
       >
         <picture>
@@ -67,7 +67,7 @@ watch(
           />
         </picture>
         <div
-          class="absolute inset-0 flex items-end justify-end bg-black/0 p-4 transition-colors group-hover:bg-black/20"
+          class="absolute inset-0 flex items-end justify-end bg-[#1f1f1f]/0 p-4 transition-colors group-hover:bg-[#1f1f1f]/20"
         >
           <span
             class="site-preview-visit-button inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-lg transition-all"
@@ -83,7 +83,7 @@ watch(
         :href="site.website"
         target="_blank"
         rel="noopener noreferrer"
-        class="aspect-[16/10] p-12 text-center text-gray-500 grid place-items-center transition-colors hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+        class="aspect-[16/10] p-12 text-center text-gray-500 grid place-items-center transition-colors hover:text-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1f1f1f]"
         :aria-label="`Visit ${site.name}`"
       >
         <div>
@@ -112,7 +112,7 @@ watch(
 .group:hover .site-preview-visit-button {
   border-color: rgba(255, 255, 255, 0.45);
   background-color: #ffffff;
-  color: #111111;
+  color: #1f1f1f;
   opacity: 1;
 }
 

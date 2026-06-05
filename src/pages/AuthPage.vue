@@ -82,7 +82,7 @@ async function handleOAuth(provider: AuthProvider) {
 </script>
 
 <template>
-  <div class="auth-page-shell min-h-full bg-black text-white">
+  <div class="auth-page-shell min-h-full bg-[#1f1f1f] text-white">
     <div
       class="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-8"
     >
@@ -91,7 +91,7 @@ async function handleOAuth(provider: AuthProvider) {
         class="auth-brand inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-normal text-white"
       >
         <span
-          class="auth-brand-mark flex h-7 w-7 items-center justify-center border border-zinc-700 bg-zinc-950 text-accent-300"
+          class="auth-brand-mark flex h-7 w-7 items-center justify-center border border-zinc-700 bg-[#1f1f1f] text-accent-300"
         >
           HG
         </span>

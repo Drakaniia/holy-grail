@@ -9,7 +9,7 @@
 
 @layer base {
   :root {
-    --scrollbar-thumb: #1f2937;
+    --scrollbar-thumb: #1f1f1f;
     --scrollbar-thumb-hover: #374151;
     --mocha-bg: #f5eee6;
     --mocha-surface: #fffaf3;
@@ -57,7 +57,7 @@
   }
 
   body {
-    background: #000;
+    background: #1f1f1f;
     font-family: 'Geist Sans', sans-serif;
   }
 
@@ -73,7 +73,7 @@
   .hg-skeleton {
     position: relative;
     overflow: hidden;
-    background: #111827;
+    background: #1f1f1f;
   }
 
   .hg-skeleton::after {
@@ -116,37 +116,17 @@ html.light .hg-skeleton::after {
   }
 }
 
-html.light .bg-black,
-html.light [class*='bg-[#000000]'] {
-  background-color: var(--mocha-bg) !important;
-}
-
-html.light [style*='#000000'],
-html.light [style*='rgb(0, 0, 0)'],
+html.light [style*='#1f1f1f'],
 html.light [style*='linear-gradient(to right'] {
   background: linear-gradient(135deg, var(--mocha-surface) 0%, var(--mocha-bg) 100%) !important;
   color: var(--mocha-text) !important;
 }
 
-html.light [class*='bg-[#050505]'],
-html.light [class*='bg-[#060606]'],
-html.light [class*='bg-[#080808]'],
-html.light [class*='bg-[#111111]'],
-html.light .bg-zinc-950,
-html.light .bg-zinc-900,
-html.light .bg-gray-900 {
+html.light [class*='bg-[#1f1f1f]'] {
   background-color: var(--mocha-surface) !important;
 }
 
-html.light [class*='bg-[#0f172a]'],
-html.light [class*='bg-[#161b22]'],
-html.light [class*='bg-[#1e293b]'],
-html.light .bg-gray-800,
-html.light .bg-zinc-800 {
-  background-color: var(--mocha-surface-strong) !important;
-}
-
-html.light [class*='bg-black/70'] {
+html.light [class*='bg-[#1f1f1f]/70'] {
   background-color: rgba(60, 45, 34, 0.42) !important;
 }
 
@@ -154,7 +134,7 @@ html.light .text-white,
 html.light .hover\:text-white:hover,
 html.light .group:hover .group-hover\:text-white,
 html.light article .text-white,
-html.light [style*='rgb(0, 0, 0)'] .text-white,
+html.light [style*='#1f1f1f'] .text-white,
 html.light [style*='linear-gradient(to right'] .text-white {
   color: var(--mocha-text) !important;
 }
@@ -269,13 +249,13 @@ html.light .anonymous-submit-notice svg {
 }
 
 html.light .nav-icon-button--light-white {
-  border-color: #111827 !important;
-  background: #080808 !important;
+  border-color: #1f1f1f !important;
+  background: #1f1f1f !important;
   color: #ffffff !important;
 }
 
 html.light .nav-icon-button--light-white:hover {
   border-color: #ff8c1a !important;
-  background: #111111 !important;
+  background: #1f1f1f !important;
   color: #ffffff !important;
 }

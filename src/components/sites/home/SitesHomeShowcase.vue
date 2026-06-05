@@ -55,7 +55,7 @@ defineProps<{
   gap: 1.25rem;
   padding: 0 clamp(1rem, 4%, 3rem) 3.5rem;
   background:
-    linear-gradient(180deg, #090909 0%, #050505 100%);
+    linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 100%);
   color: #ffffff;
 }
 

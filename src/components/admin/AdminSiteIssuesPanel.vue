@@ -129,7 +129,7 @@ function formatDate(value: string | null) {
         </p>
       </div>
 
-      <div class="grid grid-cols-3 border border-gray-800 bg-[#050505] text-center text-xs">
+      <div class="grid grid-cols-3 border border-gray-800 bg-[#1f1f1f] text-center text-xs">
         <div class="border-r border-gray-800 px-4 py-3">
           <p class="font-bold text-amber-200">{{ admin.openSiteIssueCount }}</p>
           <p class="mt-1 uppercase tracking-widest text-gray-600">Open</p>
@@ -162,14 +162,14 @@ function formatDate(value: string | null) {
         type="button"
         class="shrink-0 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest transition"
         :class="
-          activeTab === tab.value ? 'bg-zinc-800 text-white' : 'text-gray-500 hover:text-gray-300'
+          activeTab === tab.value ? 'bg-[#1f1f1f] text-white' : 'text-gray-500 hover:text-gray-300'
         "
         @click="activeTab = tab.value"
       >
         {{ tab.label }}
         <span
           v-if="getTabCount(tab.value) > 0"
-          class="ml-1.5 rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+          class="ml-1.5 rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
         >
           {{ getTabCount(tab.value) }}
         </span>
@@ -185,13 +185,13 @@ function formatDate(value: string | null) {
       <div
         v-for="index in 3"
         :key="index"
-        class="h-44 animate-pulse border border-gray-800 bg-[#060606]"
+        class="h-44 animate-pulse border border-gray-800 bg-[#1f1f1f]"
       />
     </div>
 
     <div
       v-else-if="displayReports.length === 0"
-      class="border border-gray-800 bg-[#060606] px-6 py-16 text-center"
+      class="border border-gray-800 bg-[#1f1f1f] px-6 py-16 text-center"
     >
       <CheckCircle2 class="mx-auto mb-4 h-10 w-10 text-gray-600" />
       <p class="text-gray-500">No site issues in this category.</p>
@@ -201,7 +201,7 @@ function formatDate(value: string | null) {
       <article
         v-for="report in displayReports"
         :key="report.id"
-        class="border border-gray-800 bg-[#060606] p-5"
+        class="border border-gray-800 bg-[#1f1f1f] p-5"
       >
         <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div class="min-w-0 flex-1">
@@ -247,7 +247,7 @@ function formatDate(value: string | null) {
               Note: {{ report.note }}
             </p>
 
-            <div class="mb-3 border border-gray-800 bg-black/50 px-3 py-2">
+            <div class="mb-3 border border-gray-800 bg-[#1f1f1f]/50 px-3 py-2">
               <p class="text-[10px] font-semibold uppercase tracking-widest text-gray-600">
                 Admin handoff
               </p>
@@ -282,7 +282,7 @@ function formatDate(value: string | null) {
               v-if="report.status !== 'ignored'"
               type="button"
               :disabled="admin.loadingSiteIssues"
-              class="inline-flex h-9 items-center gap-1.5 border border-zinc-600 bg-zinc-900 px-3 text-xs font-semibold text-zinc-300 transition hover:border-zinc-500 hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+              class="inline-flex h-9 items-center gap-1.5 border border-zinc-600 bg-[#1f1f1f] px-3 text-xs font-semibold text-zinc-300 transition hover:border-zinc-500 hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
               @click="ignore(report.id)"
             >
               <X class="h-3.5 w-3.5" />

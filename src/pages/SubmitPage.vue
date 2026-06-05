@@ -296,7 +296,7 @@ function resetForm() {
 </script>
 
 <template>
-  <div class="min-h-full bg-black text-white">
+  <div class="min-h-full bg-[#1f1f1f] text-white">
     <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-10">
       <div class="mb-8 border-b border-gray-800 pb-8">
         <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
@@ -362,7 +362,7 @@ function resetForm() {
         />
 
         <form
-          class="overflow-hidden border border-gray-800 bg-[#050505] p-5 sm:p-6"
+          class="overflow-hidden border border-gray-800 bg-[#1f1f1f] p-5 sm:p-6"
           @submit.prevent="activeStep === 'review' ? handleSubmit() : goNext()"
         >
           <div
@@ -399,7 +399,7 @@ function resetForm() {
                     :class="
                       resourceType === option.value
                         ? 'border-accent-400/70 bg-accent-500/10'
-                        : 'border-gray-800 bg-black hover:border-gray-700'
+                        : 'border-gray-800 bg-[#1f1f1f] hover:border-gray-700'
                     "
                     @click="resourceType = option.value"
                   >
@@ -433,12 +433,12 @@ function resetForm() {
                       type="url"
                       placeholder="https://example.com"
                       :disabled="status === 'loading'"
-                      class="h-12 w-full border border-zinc-700 bg-black pl-10 pr-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                      class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
                     />
                   </span>
                 </label>
 
-                <div class="mt-4 flex gap-3 border border-gray-800 bg-black/60 px-4 py-3 text-sm leading-6 text-gray-400">
+                <div class="mt-4 flex gap-3 border border-gray-800 bg-[#1f1f1f]/60 px-4 py-3 text-sm leading-6 text-gray-400">
                   <FileCode2 class="mt-0.5 h-4 w-4 shrink-0 text-accent-300" />
                   <span>
                     This step validates the source format only. Admins still inspect quality, fit,
@@ -473,7 +473,7 @@ function resetForm() {
                       type="text"
                       placeholder="e.g. Coolify"
                       :disabled="status === 'loading'"
-                      class="h-12 w-full border border-zinc-700 bg-black px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                      class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
                     />
                   </label>
 
@@ -484,7 +484,7 @@ function resetForm() {
                     <select
                       v-model="category"
                       :disabled="status === 'loading'"
-                      class="h-12 w-full border border-zinc-700 bg-black px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                      class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       <option value="" disabled>Select a category...</option>
                       <option
@@ -506,7 +506,7 @@ function resetForm() {
                       rows="3"
                       placeholder="What does it do? Why is it useful?"
                       :disabled="status === 'loading'"
-                      class="w-full resize-none border border-zinc-700 bg-black px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                      class="w-full resize-none border border-zinc-700 bg-[#1f1f1f] px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
                     ></textarea>
                   </label>
 
@@ -522,7 +522,7 @@ function resetForm() {
                       rows="3"
                       placeholder="Anything the reviewer should know..."
                       :disabled="status === 'loading'"
-                      class="w-full resize-none border border-zinc-700 bg-black px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                      class="w-full resize-none border border-zinc-700 bg-[#1f1f1f] px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
                     ></textarea>
                   </label>
                 </div>
@@ -555,7 +555,7 @@ function resetForm() {
               v-if="activeStep !== 'review'"
               type="button"
               :disabled="status === 'loading'"
-              class="inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-black transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
+              class="inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
               @click="goNext"
             >
               <span>{{ nextButtonLabel }}</span>
@@ -566,7 +566,7 @@ function resetForm() {
               v-else
               type="submit"
               :disabled="status === 'loading' || !canContinue"
-              class="inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-black transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
+              class="inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
             >
               <Loader2 v-if="status === 'loading'" class="h-4 w-4 animate-spin" />
               <Send v-else class="h-4 w-4" />

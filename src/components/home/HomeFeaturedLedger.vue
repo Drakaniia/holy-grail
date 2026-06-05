@@ -108,7 +108,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   display: grid;
   gap: 2rem;
   padding: clamp(2.5rem, 5vw, 5.5rem) clamp(1.25rem, 4vw, 4.5rem);
-  background: #050505;
+  background: #1f1f1f;
 }
 
 .home-ledger__intro {
@@ -170,7 +170,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
   position: relative;
   min-height: 16rem;
   overflow: hidden;
-  background: #111111;
+  background: #1f1f1f;
 }
 
 .home-ledger__item:nth-child(1),
@@ -265,7 +265,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
 .home-ledger__state {
   min-height: 12rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  background: #0d0d0d;
+  background: #1f1f1f;
 }
 
 .home-ledger__state {

@@ -16,11 +16,11 @@ const typeLabel = computed(() => props.item.type === 'site' ? 'Site' : 'Skill')
 </script>
 
 <template>
-  <article class="group border border-zinc-900 bg-[#060606] p-5 transition hover:border-zinc-700">
+  <article class="group border border-zinc-900 bg-[#1f1f1f] p-5 transition hover:border-zinc-700">
     <div class="flex items-start justify-between gap-4">
       <div class="min-w-0">
         <div class="mb-3 flex flex-wrap items-center gap-2">
-          <span class="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-black px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-zinc-400">
+          <span class="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#1f1f1f] px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-zinc-400">
             <Globe2 v-if="item.type === 'site'" class="h-3 w-3" />
             <Code2 v-else class="h-3 w-3" />
             {{ typeLabel }}

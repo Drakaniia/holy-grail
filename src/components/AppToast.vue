@@ -6,7 +6,7 @@ const toast = useToastStore()
 
 function panelClasses(tone: ToastTone) {
   return [
-    'pointer-events-auto flex w-full items-start gap-3 border bg-[#050505]/95 p-3 text-white shadow-2xl shadow-black/35 backdrop-blur-xl',
+    'pointer-events-auto flex w-full items-start gap-3 border bg-[#1f1f1f]/95 p-3 text-white shadow-2xl shadow-[#1f1f1f]/35 backdrop-blur-xl',
     tone === 'success' ? 'border-emerald-400/35' : '',
     tone === 'info' ? 'border-accent-400/35' : '',
     tone === 'error' ? 'border-red-400/40' : '',

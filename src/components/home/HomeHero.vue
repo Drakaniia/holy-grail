@@ -178,7 +178,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   overflow: hidden;
   padding: clamp(2rem, 4vw, 4.5rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: #050505;
+  background: #1f1f1f;
 }
 
 .home-hero::before {
@@ -189,7 +189,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   content: '';
   background:
     linear-gradient(120deg, rgba(255, 122, 0, 0.18), transparent 26rem),
-    linear-gradient(180deg, rgba(5, 5, 5, 0) 0%, #050505 100%);
+    linear-gradient(180deg, rgba(31, 31, 31, 0) 0%, #1f1f1f 100%);
 }
 
 .home-hero__shape-grid {
@@ -292,7 +292,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 .home-hero__primary-link {
   border-color: #ff7a00;
   background: #ff7a00;
-  color: #070707;
+  color: #1f1f1f;
 }
 
 .home-hero__secondary-link {
@@ -314,7 +314,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   display: grid;
   gap: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(5, 5, 5, 0.82);
+  background: rgba(31, 31, 31, 0.82);
   padding: clamp(1rem, 2vw, 1.4rem);
 }
 
@@ -344,7 +344,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   min-height: 9rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: #101010;
+  background: #1f1f1f;
 }
 
 .home-hero__preview {
@@ -538,7 +538,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  background: rgba(5, 5, 5, 0.9);
+  background: rgba(31, 31, 31, 0.9);
   padding: 0.85rem 1rem;
   color: #a8a8a8;
   font-size: 0.82rem;

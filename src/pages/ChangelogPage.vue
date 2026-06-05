@@ -223,16 +223,16 @@ function goBack() {
 
 <style scoped>
 .changelog-page {
-  --changelog-bg: #050505;
-  --changelog-bg-glass: rgba(5, 5, 5, 0.92);
-  --changelog-surface: #10100f;
-  --changelog-surface-strong: #171512;
+  --changelog-bg: #1f1f1f;
+  --changelog-bg-glass: rgba(31, 31, 31, 0.92);
+  --changelog-surface: #1f1f1f;
+  --changelog-surface-strong: #1f1f1f;
   --changelog-border: #2d2925;
   --changelog-heading: #ffffff;
   --changelog-text: #f7f2ec;
   --changelog-body: #c9c0b7;
   --changelog-muted: #91877c;
-  --changelog-code-bg: #1a1714;
+  --changelog-code-bg: #1f1f1f;
   --changelog-code-text: #f5eee6;
   --changelog-accent: #ff8a1f;
   --changelog-accent-soft: rgba(255, 138, 31, 0.13);
@@ -255,8 +255,8 @@ function goBack() {
   --changelog-surface: #ffffff;
   --changelog-surface-strong: #f1eee9;
   --changelog-border: #e4ded7;
-  --changelog-heading: #000000;
-  --changelog-text: #111111;
+  --changelog-heading: #1f1f1f;
+  --changelog-text: #1f1f1f;
   --changelog-body: #504a43;
   --changelog-muted: #6f6b64;
   --changelog-code-bg: #efebe5;

@@ -38,7 +38,7 @@ watch(
 
 <template>
   <span
-    class="result-logo mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-md border border-gray-800 bg-black text-gray-400 transition-colors group-hover:border-gray-700 group-hover:text-accent-300"
+    class="result-logo mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-md border border-gray-800 bg-[#1f1f1f] text-gray-400 transition-colors group-hover:border-gray-700 group-hover:text-accent-300"
     :class="active ? 'result-logo--active border-accent-600/70 text-accent-300' : ''"
   >
     <img

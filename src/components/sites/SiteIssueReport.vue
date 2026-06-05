@@ -93,7 +93,7 @@ async function reportSiteIssue() {
         v-for="option in ISSUE_OPTIONS"
         :key="option.value"
         :value="option.value"
-        class="bg-zinc-950 text-red-100"
+        class="bg-[#1f1f1f] text-red-100"
       >
         {{ option.label }}
       </option>

@@ -41,7 +41,7 @@ async function handleAvatarChange(event: Event) {
 </script>
 
 <template>
-  <div class="min-h-full bg-[#050505] text-white">
+  <div class="min-h-full bg-[#1f1f1f] text-white">
     <div class="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:py-10">
       <RouterLink
         to="/account"
@@ -68,7 +68,7 @@ async function handleAvatarChange(event: Event) {
       </div>
 
       <div class="space-y-8">
-        <section class="rounded-lg border border-zinc-800 bg-black p-5">
+        <section class="rounded-lg border border-zinc-800 bg-[#1f1f1f] p-5">
           <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div class="flex min-w-0 items-center gap-4">
               <UserAvatar
@@ -86,7 +86,7 @@ async function handleAvatarChange(event: Event) {
 
             <button
               type="button"
-              class="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-zinc-700 bg-[#050505] px-4 text-sm font-semibold text-zinc-100 transition hover:border-zinc-500 disabled:cursor-not-allowed disabled:opacity-60"
+              class="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-zinc-700 bg-[#1f1f1f] px-4 text-sm font-semibold text-zinc-100 transition hover:border-zinc-500 disabled:cursor-not-allowed disabled:opacity-60"
               :disabled="avatarProcessing || saveStatus === 'saving'"
               @click="openAvatarPicker"
             >
@@ -111,7 +111,7 @@ async function handleAvatarChange(event: Event) {
             v-model="displayName"
             type="text"
             maxlength="80"
-            class="h-12 w-full rounded-md border border-zinc-800 bg-black px-4 text-sm font-semibold text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+            class="h-12 w-full rounded-md border border-zinc-800 bg-[#1f1f1f] px-4 text-sm font-semibold text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
             :class="displayNameIsValid ? '' : 'border-red-400/70'"
             autocomplete="name"
           />
@@ -126,7 +126,7 @@ async function handleAvatarChange(event: Event) {
             v-model="bio"
             maxlength="180"
             rows="4"
-            class="w-full resize-none rounded-md border border-zinc-800 bg-black px-4 py-3 text-sm font-semibold leading-6 text-white outline-none transition focus:border-accent-400"
+            class="w-full resize-none rounded-md border border-zinc-800 bg-[#1f1f1f] px-4 py-3 text-sm font-semibold leading-6 text-white outline-none transition focus:border-accent-400"
           ></textarea>
           <span class="mt-2 block text-xs text-zinc-600">
             {{ bioCharactersRemaining }} characters remaining

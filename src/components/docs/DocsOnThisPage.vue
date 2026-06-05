@@ -33,7 +33,7 @@ defineProps<{
   position: sticky;
   top: 1.5rem;
   align-self: start;
-  color: var(--docs-text, #111111);
+  color: var(--docs-text, #1f1f1f);
 }
 
 .docs-on-this-page__eyebrow {
@@ -72,7 +72,7 @@ defineProps<{
 
 .docs-on-this-page__link--active {
   border-left-color: var(--docs-accent, #ff7a00);
-  color: var(--docs-heading, #000000);
+  color: var(--docs-heading, #1f1f1f);
   transform: translateX(0.15rem);
 }
 

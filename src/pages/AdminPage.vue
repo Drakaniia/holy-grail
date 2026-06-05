@@ -44,7 +44,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="min-h-full bg-black text-white">
+  <div class="min-h-full bg-[#1f1f1f] text-white">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
       <div class="mb-8 border-b border-gray-800 pb-8">
         <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
@@ -63,7 +63,7 @@ onMounted(async () => {
 
           <nav
             v-if="admin.isAdmin"
-            class="flex w-full items-center gap-1 overflow-x-auto border border-gray-800 bg-[#050505] p-1 lg:w-auto"
+            class="flex w-full items-center gap-1 overflow-x-auto border border-gray-800 bg-[#1f1f1f] p-1 lg:w-auto"
             aria-label="Admin sections"
           >
             <button
@@ -73,7 +73,7 @@ onMounted(async () => {
               class="inline-flex h-10 shrink-0 items-center gap-2 px-3 text-xs font-semibold uppercase tracking-widest transition"
               :class="
                 activeSection === section.value
-                  ? 'bg-zinc-800 text-white'
+                  ? 'bg-[#1f1f1f] text-white'
                   : 'text-gray-500 hover:text-gray-300'
               "
               @click="activeSection = section.value"
@@ -82,13 +82,13 @@ onMounted(async () => {
               {{ section.label }}
               <span
                 v-if="section.value === 'submissions' && admin.pendingCount > 0"
-                class="rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+                class="rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
               >
                 {{ admin.pendingCount }}
               </span>
               <span
                 v-if="section.value === 'site-issues' && admin.openSiteIssueCount > 0"
-                class="rounded-full bg-red-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+                class="rounded-full bg-red-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
               >
                 {{ admin.openSiteIssueCount }}
               </span>
@@ -105,7 +105,7 @@ onMounted(async () => {
         <h2 class="mb-2 text-2xl font-bold text-white">Access denied</h2>
         <p class="max-w-xl text-sm text-gray-400">
           This page is restricted to admins. Your account does not have the
-          <code class="mx-1 rounded bg-zinc-900 px-1.5 py-0.5 text-xs text-accent-300">
+          <code class="mx-1 rounded bg-[#1f1f1f] px-1.5 py-0.5 text-xs text-accent-300">
             admin
           </code>
           role.

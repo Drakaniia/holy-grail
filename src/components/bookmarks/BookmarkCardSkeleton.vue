@@ -1,5 +1,5 @@
 <template>
-  <article class="border border-gray-800 bg-[#060606] p-5" aria-hidden="true">
+  <article class="border border-gray-800 bg-[#1f1f1f] p-5" aria-hidden="true">
     <div class="flex items-start justify-between gap-4">
       <div class="min-w-0 flex-1">
         <div class="mb-3 flex flex-wrap items-center gap-2">

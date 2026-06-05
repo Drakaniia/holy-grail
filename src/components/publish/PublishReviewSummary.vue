@@ -12,7 +12,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section class="border border-gray-800 bg-[#060606] p-5" aria-labelledby="publish-summary-title">
+  <section class="border border-gray-800 bg-[#1f1f1f] p-5" aria-labelledby="publish-summary-title">
     <p class="text-xs font-semibold uppercase tracking-widest text-accent-300">
       Final check
     </p>

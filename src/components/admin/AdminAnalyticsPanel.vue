@@ -171,7 +171,7 @@ async function refreshAnalytics() {
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
-        <div class="flex items-center gap-1 border border-gray-800 bg-[#050505] p-1">
+        <div class="flex items-center gap-1 border border-gray-800 bg-[#1f1f1f] p-1">
           <button
             v-for="range in rangeOptions"
             :key="range.label"
@@ -221,7 +221,7 @@ async function refreshAnalytics() {
         <article
           v-for="metric in metrics"
           :key="metric.label"
-          class="border border-gray-800 bg-[#060606] p-4"
+          class="border border-gray-800 bg-[#1f1f1f] p-4"
         >
           <div class="mb-5 flex items-center justify-between gap-3">
             <p class="min-w-0 truncate text-xs font-semibold uppercase tracking-widest text-gray-500">
@@ -234,7 +234,7 @@ async function refreshAnalytics() {
       </div>
 
       <div class="mb-6 grid gap-6 xl:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
-        <section class="border border-gray-800 bg-[#060606] p-5" aria-labelledby="activity-title">
+        <section class="border border-gray-800 bg-[#1f1f1f] p-5" aria-labelledby="activity-title">
           <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
             <div>
               <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
@@ -260,7 +260,7 @@ async function refreshAnalytics() {
             </div>
           </div>
 
-          <div class="flex h-52 items-end gap-1 border border-gray-900 bg-black/60 px-3 py-4">
+          <div class="flex h-52 items-end gap-1 border border-gray-900 bg-[#1f1f1f]/60 px-3 py-4">
             <div
               v-for="(point, index) in summary.daily"
               :key="point.date"
@@ -283,7 +283,7 @@ async function refreshAnalytics() {
           </div>
         </section>
 
-        <section class="border border-gray-800 bg-[#060606] p-5" aria-labelledby="visitor-title">
+        <section class="border border-gray-800 bg-[#1f1f1f] p-5" aria-labelledby="visitor-title">
           <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
             Visitor split
           </p>
@@ -297,7 +297,7 @@ async function refreshAnalytics() {
                 <span>Anonymous</span>
                 <span>{{ formatNumber(summary.anonymousVisitors) }}</span>
               </div>
-              <div class="h-2 bg-zinc-900">
+              <div class="h-2 bg-[#1f1f1f]">
                 <div
                   class="h-full bg-cyan-400"
                   :style="{
@@ -315,7 +315,7 @@ async function refreshAnalytics() {
                 <span>Signed-in</span>
                 <span>{{ formatNumber(summary.signedInVisitors) }}</span>
               </div>
-              <div class="h-2 bg-zinc-900">
+              <div class="h-2 bg-[#1f1f1f]">
                 <div
                   class="h-full bg-accent-500"
                   :style="{
@@ -330,11 +330,11 @@ async function refreshAnalytics() {
           </div>
 
           <div class="mt-6 grid grid-cols-2 gap-3 text-xs">
-            <div class="border border-gray-800 bg-black px-3 py-3">
+            <div class="border border-gray-800 bg-[#1f1f1f] px-3 py-3">
               <p class="font-bold text-white">{{ formatNumber(summary.siteViews) }}</p>
               <p class="mt-1 uppercase tracking-widest text-gray-600">Site views</p>
             </div>
-            <div class="border border-gray-800 bg-black px-3 py-3">
+            <div class="border border-gray-800 bg-[#1f1f1f] px-3 py-3">
               <p class="font-bold text-white">{{ formatNumber(summary.skillViews) }}</p>
               <p class="mt-1 uppercase tracking-widest text-gray-600">Skill views</p>
             </div>
@@ -346,7 +346,7 @@ async function refreshAnalytics() {
         <section
           v-for="section in topSections"
           :key="section.title"
-          class="border border-gray-800 bg-[#060606] p-5"
+          class="border border-gray-800 bg-[#1f1f1f] p-5"
         >
           <h3 class="mb-4 text-sm font-bold uppercase tracking-widest text-white">
             {{ section.title }}

@@ -119,12 +119,12 @@ onMounted(() => {
 
 <template>
   <nav
-    class="sticky top-0 z-50 flex h-14 items-center justify-between border-b border-gray-800 bg-black px-3 text-white sm:px-4 md:h-12"
+    class="sticky top-0 z-50 flex h-14 items-center justify-between border-b border-gray-800 bg-[#1f1f1f] px-3 text-white sm:px-4 md:h-12"
   >
     <div class="flex min-w-0 items-center gap-2">
       <button
         type="button"
-        class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-gray-800 bg-[#080808] text-gray-300 transition-colors hover:border-gray-700 hover:text-white md:hidden"
+        class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-gray-800 bg-[#1f1f1f] text-gray-300 transition-colors hover:border-gray-700 hover:text-white md:hidden"
         :aria-expanded="props.mobileMenuOpen"
         aria-controls="mobile-sidebar"
         :aria-label="props.mobileMenuOpen ? 'Close navigation' : 'Open navigation'"
@@ -149,7 +149,7 @@ onMounted(() => {
     <div class="flex min-w-0 items-center gap-1.5 sm:gap-3 md:gap-4">
       <button
         type="button"
-        class="group relative hidden h-8 w-60 items-center rounded-lg border border-gray-700 bg-[#0f172a] py-1 pl-9 pr-14 text-left text-sm transition-all hover:border-gray-600 hover:bg-[#161b22] focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 md:flex"
+        class="group relative hidden h-8 w-60 items-center rounded-lg border border-gray-700 bg-[#1f1f1f] py-1 pl-9 pr-14 text-left text-sm transition-all hover:border-gray-600 hover:bg-[#1f1f1f] focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 md:flex"
         aria-label="Open smart search"
         @click="emit('openSearch')"
       >
@@ -163,7 +163,7 @@ onMounted(() => {
         </span>
         <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
           <span
-            class="flex items-center rounded border border-gray-700 bg-[#1e293b] px-1 font-mono text-[10px] text-gray-500"
+            class="flex items-center rounded border border-gray-700 bg-[#1f1f1f] px-1 font-mono text-[10px] text-gray-500"
           >
             <span class="mr-0.5">{{ shortcutKey }}</span>
             K
@@ -195,7 +195,7 @@ onMounted(() => {
         :href="GITHUB_REPO_URL"
         target="_blank"
         rel="noreferrer"
-        class="github-stars hidden h-8 items-center gap-2 rounded-md bg-white px-3 text-sm font-medium text-black transition-colors hover:bg-gray-100 sm:flex"
+        class="github-stars hidden h-8 items-center gap-2 rounded-md bg-white px-3 text-sm font-medium text-[#1f1f1f] transition-colors hover:bg-gray-100 sm:flex"
         :aria-label="starLinkLabel"
       >
         <GitHubMark class="h-4 w-4" />
@@ -241,7 +241,7 @@ onMounted(() => {
       <RouterLink
         v-else
         to="/login"
-        class="inline-flex h-8 items-center gap-2 rounded-lg border border-gray-700 px-2 text-sm font-semibold transition-colors hover:bg-gray-800 sm:px-3"
+        class="inline-flex h-8 items-center gap-2 rounded-lg border border-gray-700 px-2 text-sm font-semibold transition-colors hover:bg-[#1f1f1f] sm:px-3"
       >
         <UserRound class="h-4 w-4 text-gray-400" />
         <span class="hidden sm:inline">Sign In</span>
@@ -259,8 +259,8 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  border: 1px solid #1f2937;
-  background: #080808;
+  border: 1px solid #1f1f1f;
+  background: #1f1f1f;
   color: #9ca3af;
   transition:
     border-color 160ms ease,
@@ -271,7 +271,7 @@ onMounted(() => {
 
 .nav-icon-button:hover {
   border-color: #374151;
-  background: #111827;
+  background: #1f1f1f;
   color: #ffffff;
 }
 
@@ -291,7 +291,7 @@ onMounted(() => {
   white-space: nowrap;
   border-radius: 0.375rem;
   border: 1px solid #374151;
-  background: #0b0f17;
+  background: #1f1f1f;
   padding: 0.35rem 0.5rem;
   color: #e5e7eb;
   font-size: 0.75rem;

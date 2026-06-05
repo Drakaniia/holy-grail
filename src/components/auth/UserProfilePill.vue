@@ -9,7 +9,7 @@ const email = computed(() => auth.user?.email ?? auth.profileHandle)
 
 <template>
   <div
-    class="inline-flex h-10 max-w-[12rem] items-center gap-2 rounded-lg border border-gray-700 bg-[#050505] px-2 text-left text-white"
+    class="inline-flex h-10 max-w-[12rem] items-center gap-2 rounded-lg border border-gray-700 bg-[#1f1f1f] px-2 text-left text-white"
     aria-label="Current profile"
   >
     <UserAvatar

@@ -36,7 +36,7 @@ function getStepState(step: PublishStepItem, index: number) {
         :class="[
           getStepState(step, index) === 'current'
             ? 'border-accent-400/70 bg-accent-500/10 text-white'
-            : 'border-gray-800 bg-[#060606] text-gray-500',
+            : 'border-gray-800 bg-[#1f1f1f] text-gray-500',
           getStepState(step, index) === 'complete' ? 'border-emerald-400/30 text-gray-300' : '',
         ]"
       >

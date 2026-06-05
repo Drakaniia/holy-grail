@@ -52,7 +52,7 @@ const passwordInputType = computed(() => (showPassword.value ? 'text' : 'passwor
 const passwordAutocomplete = computed(() => (isSignup.value ? 'new-password' : 'current-password'))
 
 const passwordStrength = computed(() => {
-  if (!password.value) return { label: 'No password', width: '0%', className: 'bg-zinc-800' }
+  if (!password.value) return { label: 'No password', width: '0%', className: 'bg-[#1f1f1f]' }
   if (password.value.length >= 12) {
     return { label: 'Strong', width: '100%', className: 'bg-emerald-400' }
   }
@@ -130,7 +130,7 @@ function requestPasswordReset() {
 
 <template>
   <section
-    class="auth-card border border-zinc-800 bg-[#060606] p-6 text-white shadow-2xl shadow-black/30 sm:p-8"
+    class="auth-card border border-zinc-800 bg-[#1f1f1f] p-6 text-white shadow-2xl shadow-[#1f1f1f]/30 sm:p-8"
   >
     <div class="mb-8 flex items-start justify-between gap-6">
       <div>
@@ -143,7 +143,7 @@ function requestPasswordReset() {
         </p>
       </div>
       <div
-        class="auth-icon-panel flex h-12 w-12 flex-shrink-0 items-center justify-center border border-zinc-700 bg-zinc-950"
+        class="auth-icon-panel flex h-12 w-12 flex-shrink-0 items-center justify-center border border-zinc-700 bg-[#1f1f1f]"
       >
         <UserRound class="h-5 w-5 text-accent-300" />
       </div>
@@ -176,7 +176,7 @@ function requestPasswordReset() {
     <div class="mb-6 grid gap-3 sm:grid-cols-2">
       <button
         type="button"
-        class="auth-social-button flex h-12 items-center justify-center gap-2 border border-zinc-700 bg-zinc-950 px-4 text-sm font-semibold text-zinc-100 transition hover:border-sky-300/50 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+        class="auth-social-button flex h-12 items-center justify-center gap-2 border border-zinc-700 bg-[#1f1f1f] px-4 text-sm font-semibold text-zinc-100 transition hover:border-sky-300/50 hover:bg-[#1f1f1f] disabled:cursor-not-allowed disabled:opacity-60"
         :disabled="isFormDisabled"
         @click="emit('oauth', 'google')"
       >
@@ -203,7 +203,7 @@ function requestPasswordReset() {
 
       <button
         type="button"
-        class="auth-social-button flex h-12 items-center justify-center gap-2 border border-zinc-700 bg-zinc-950 px-4 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-60"
+        class="auth-social-button flex h-12 items-center justify-center gap-2 border border-zinc-700 bg-[#1f1f1f] px-4 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:bg-[#1f1f1f] disabled:cursor-not-allowed disabled:opacity-60"
         :disabled="isFormDisabled"
         @click="emit('oauth', 'github')"
       >
@@ -217,11 +217,11 @@ function requestPasswordReset() {
     </div>
 
     <div class="mb-6 flex items-center gap-3">
-      <span class="auth-divider-line h-px flex-1 bg-zinc-800"></span>
+      <span class="auth-divider-line h-px flex-1 bg-[#1f1f1f]"></span>
       <span class="auth-divider-label text-xs font-semibold uppercase tracking-widest text-zinc-600">
         or use email
       </span>
-      <span class="auth-divider-line h-px flex-1 bg-zinc-800"></span>
+      <span class="auth-divider-line h-px flex-1 bg-[#1f1f1f]"></span>
     </div>
 
     <form class="space-y-5" @submit.prevent="handleSubmit">
@@ -237,7 +237,7 @@ function requestPasswordReset() {
             v-model="fullName"
             :disabled="isFormDisabled"
             autocomplete="name"
-            class="auth-input h-12 w-full border border-zinc-700 bg-black pl-10 pr-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+            class="auth-input h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
             placeholder="Your name"
             type="text"
           />
@@ -256,7 +256,7 @@ function requestPasswordReset() {
             v-model="email"
             :disabled="isFormDisabled"
             autocomplete="email"
-            class="auth-input h-12 w-full border border-zinc-700 bg-black pl-10 pr-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+            class="auth-input h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
             placeholder="you@example.com"
             type="email"
           />
@@ -276,7 +276,7 @@ function requestPasswordReset() {
             :disabled="isFormDisabled"
             :type="passwordInputType"
             :autocomplete="passwordAutocomplete"
-            class="auth-input h-12 w-full border border-zinc-700 bg-black pl-10 pr-12 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+            class="auth-input h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-12 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
             placeholder="Minimum 8 characters"
           />
           <button
@@ -299,7 +299,7 @@ function requestPasswordReset() {
             <span>Password strength</span>
             <span>{{ passwordStrength.label }}</span>
           </div>
-          <div class="auth-meter-track h-1.5 bg-zinc-900">
+          <div class="auth-meter-track h-1.5 bg-[#1f1f1f]">
             <div
               class="h-full transition-all duration-300"
               :class="passwordStrength.className"
@@ -321,7 +321,7 @@ function requestPasswordReset() {
               :disabled="isFormDisabled"
               :type="passwordInputType"
               autocomplete="new-password"
-              class="auth-input h-12 w-full border border-zinc-700 bg-black pl-10 pr-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+              class="auth-input h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
               placeholder="Repeat password"
             />
           </span>
@@ -341,7 +341,7 @@ function requestPasswordReset() {
 
       <button
         type="submit"
-        class="auth-submit flex h-12 w-full items-center justify-center gap-2 bg-white px-4 text-sm font-bold text-black transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
+        class="auth-submit flex h-12 w-full items-center justify-center gap-2 bg-white px-4 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
         :disabled="isFormDisabled"
       >
         <Loader2 v-if="loading" class="h-4 w-4 animate-spin" />
@@ -431,7 +431,7 @@ function requestPasswordReset() {
 :global(html.light .auth-submit) {
   border: 1px solid var(--mocha-border) !important;
   background: #ffffff !important;
-  color: #0f0b08 !important;
+  color: #1f1f1f !important;
 }
 
 :global(html.light .auth-submit:hover) {

@@ -481,18 +481,18 @@ onUnmounted(() => {
 
 <style scoped>
 .docs-page {
-  --docs-bg: #050505;
-  --docs-bg-glass: rgba(5, 5, 5, 0.92);
-  --docs-surface: #10100f;
-  --docs-surface-strong: #171512;
-  --docs-surface-soft: #1c1916;
+  --docs-bg: #1f1f1f;
+  --docs-bg-glass: rgba(31, 31, 31, 0.92);
+  --docs-surface: #1f1f1f;
+  --docs-surface-strong: #1f1f1f;
+  --docs-surface-soft: #1f1f1f;
   --docs-border: #2d2925;
   --docs-border-strong: #3a342e;
   --docs-heading: #ffffff;
   --docs-text: #f7f2ec;
   --docs-body: #c9c0b7;
   --docs-muted: #91877c;
-  --docs-code-bg: #1a1714;
+  --docs-code-bg: #1f1f1f;
   --docs-code-text: #f5eee6;
   --docs-accent: #ff8a1f;
   --docs-accent-strong: #ff9b3d;
@@ -516,8 +516,8 @@ onUnmounted(() => {
   --docs-surface-soft: #efebe5;
   --docs-border: #e4ded7;
   --docs-border-strong: #d7d0c8;
-  --docs-heading: #000000;
-  --docs-text: #111111;
+  --docs-heading: #1f1f1f;
+  --docs-text: #1f1f1f;
   --docs-body: #504a43;
   --docs-muted: #6f6b64;
   --docs-code-bg: #ffffff;
@@ -833,7 +833,7 @@ onUnmounted(() => {
 
 .docs-finish a:hover {
   background: var(--docs-accent);
-  color: #111111;
+  color: #1f1f1f;
 }
 
 @media (max-width: 1180px) {

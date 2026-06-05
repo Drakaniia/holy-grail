@@ -374,7 +374,7 @@ onMounted(() => {
 
 <template>
   <aside
-    class="flex h-full w-64 select-none flex-col overflow-visible border-r border-gray-800 bg-black"
+    class="flex h-full w-64 select-none flex-col overflow-visible border-r border-gray-800 bg-[#1f1f1f]"
   >
     <div class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800 px-2">
       <SidebarAccountMenu v-if="auth.isAuthenticated" />
@@ -402,13 +402,13 @@ onMounted(() => {
           autocomplete="off"
           spellcheck="false"
           placeholder="Search tabs"
-          class="h-8 w-full rounded-md border border-gray-800 bg-zinc-950 px-8 text-xs font-medium text-white outline-none transition-colors placeholder:text-gray-600 focus:border-gray-600 focus:bg-black"
+          class="h-8 w-full rounded-md border border-gray-800 bg-[#1f1f1f] px-8 text-xs font-medium text-white outline-none transition-colors placeholder:text-gray-600 focus:border-gray-600 focus:bg-[#1f1f1f]"
           @keydown.esc="clearSidebarSearch"
         />
         <button
           v-if="hasSidebarSearch"
           type="button"
-          class="absolute right-2 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded text-gray-500 transition-colors hover:bg-zinc-800 hover:text-white"
+          class="absolute right-2 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded text-gray-500 transition-colors hover:bg-[#1f1f1f] hover:text-white"
           aria-label="Clear sidebar search"
           @click="clearSidebarSearch"
         >
@@ -426,7 +426,7 @@ onMounted(() => {
               class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
               :class="
                 isActive('/sites/ai', false)
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#1f1f1f] text-white'
                   : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
               "
               :aria-expanded="isAiVisibleExpanded"
@@ -468,7 +468,7 @@ onMounted(() => {
                     class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
                     :class="
                       isActive(item.route)
-                        ? 'bg-zinc-900 text-white'
+                        ? 'bg-[#1f1f1f] text-white'
                         : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                     "
                   >
@@ -500,7 +500,7 @@ onMounted(() => {
               class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
               :class="
                 isActive('/sites/design', false)
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#1f1f1f] text-white'
                   : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
               "
               :aria-expanded="isDesignVisibleExpanded"
@@ -542,7 +542,7 @@ onMounted(() => {
                     class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
                     :class="
                       isActive(item.route)
-                        ? 'bg-zinc-900 text-white'
+                        ? 'bg-[#1f1f1f] text-white'
                         : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                     "
                   >
@@ -574,7 +574,7 @@ onMounted(() => {
               class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
               :class="
                 isActive('/sites/development', false)
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#1f1f1f] text-white'
                   : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
               "
               :aria-expanded="isDevelopmentVisibleExpanded"
@@ -616,7 +616,7 @@ onMounted(() => {
                     class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
                     :class="
                       isActive(item.route)
-                        ? 'bg-zinc-900 text-white'
+                        ? 'bg-[#1f1f1f] text-white'
                         : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                     "
                   >
@@ -648,7 +648,7 @@ onMounted(() => {
               class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
               :class="
                 isActive('/sites/watch', false)
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#1f1f1f] text-white'
                   : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
               "
               :aria-expanded="isWatchVisibleExpanded"
@@ -690,7 +690,7 @@ onMounted(() => {
                     class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
                     :class="
                       isActive(item.route)
-                        ? 'bg-zinc-900 text-white'
+                        ? 'bg-[#1f1f1f] text-white'
                         : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                     "
                   >
@@ -722,7 +722,7 @@ onMounted(() => {
               class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
               :class="
                 isActive('/sites/downloads', false)
-                  ? 'bg-zinc-900 text-white'
+                  ? 'bg-[#1f1f1f] text-white'
                   : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
               "
               :aria-expanded="isDownloadsVisibleExpanded"
@@ -764,7 +764,7 @@ onMounted(() => {
                     class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
                     :class="
                       isActive(item.route)
-                        ? 'bg-zinc-900 text-white'
+                        ? 'bg-[#1f1f1f] text-white'
                         : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                     "
                   >
@@ -804,7 +804,7 @@ onMounted(() => {
                 class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
                 :class="
                   isActive(item.route)
-                    ? 'bg-zinc-900 text-white'
+                    ? 'bg-[#1f1f1f] text-white'
                     : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
                 "
               >
@@ -839,7 +839,7 @@ onMounted(() => {
       <RouterLink
         to="/"
         class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
-        :class="isActive('/') ? 'bg-zinc-900 text-white' : ''"
+        :class="isActive('/') ? 'bg-[#1f1f1f] text-white' : ''"
       >
         <Home
           class="h-4 w-4 transition-colors"
@@ -851,7 +851,7 @@ onMounted(() => {
       <RouterLink
         to="/publish"
         class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
-        :class="isActive('/publish') || isActive('/submit') ? 'bg-zinc-900 text-white' : ''"
+        :class="isActive('/publish') || isActive('/submit') ? 'bg-[#1f1f1f] text-white' : ''"
       >
         <Send
           class="h-4 w-4 transition-colors"
@@ -868,13 +868,13 @@ onMounted(() => {
         v-if="admin.isAdmin"
         to="/admin"
         class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-accent-500/10"
-        :class="isActive('/admin') ? 'bg-zinc-900 text-white' : ''"
+        :class="isActive('/admin') ? 'bg-[#1f1f1f] text-white' : ''"
       >
         <ShieldCheck class="w-4 h-4" />
         <span class="font-medium text-xs">Admin</span>
         <span
           v-if="admin.pendingCount > 0"
-          class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-black"
+          class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
         >
           {{ admin.pendingCount }}
         </span>
@@ -893,7 +893,7 @@ onMounted(() => {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #1f2937;
+  background: #1f1f1f;
   border-radius: 10px;
 }
 

@@ -92,7 +92,7 @@ async function copyInstallCommand() {
 </script>
 
 <template>
-  <div class="bg-black text-white">
+  <div class="bg-[#1f1f1f] text-white">
     <div v-if="skill" class="max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8">
       <!-- Back Button -->
       <button
@@ -121,7 +121,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Stats Bar -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <div class="flex flex-wrap items-center gap-4 sm:gap-6">
           <div class="flex items-center gap-2 text-sm text-gray-400">
             <Eye class="w-4 h-4" />
@@ -148,7 +148,7 @@ async function copyInstallCommand() {
           <span
             v-for="tag in skill.tags"
             :key="tag"
-            class="flex items-center gap-1 px-2 py-1 bg-[#111111] border border-gray-700 rounded-md text-xs text-gray-400"
+            class="flex items-center gap-1 px-2 py-1 bg-[#1f1f1f] border border-gray-700 rounded-md text-xs text-gray-400"
           >
             <Tag class="w-3 h-3" />
             {{ tag }}
@@ -157,7 +157,7 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Install Command -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #000000 0%, #000000 100%)">
+      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div class="min-w-0">
             <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Install Command</p>
@@ -165,7 +165,7 @@ async function copyInstallCommand() {
           </div>
           <button
             @click="copyInstallCommand"
-            class="flex w-fit flex-shrink-0 items-center gap-1.5 rounded-lg border border-gray-700 bg-[#111111] px-3 py-2 text-sm font-medium text-gray-400 transition-all hover:border-gray-600 hover:text-white"
+            class="flex w-fit flex-shrink-0 items-center gap-1.5 rounded-lg border border-gray-700 bg-[#1f1f1f] px-3 py-2 text-sm font-medium text-gray-400 transition-all hover:border-gray-600 hover:text-white"
             :class="copied ? 'text-green-400 border-green-800' : ''"
           >
             <component :is="copied ? Check : Copy" class="w-4 h-4" />
@@ -177,7 +177,7 @@ async function copyInstallCommand() {
       <!-- Content Area -->
       <div
         class="min-w-0 overflow-hidden border border-gray-800 rounded-xl p-4 sm:p-6 md:p-8"
-        style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
         :aria-busy="isLoading"
       >
         <!-- Loading State -->
@@ -276,11 +276,11 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(code) {
-  @apply bg-[#111111] text-accent-400 px-1.5 py-0.5 rounded text-sm;
+  @apply bg-[#1f1f1f] text-accent-400 px-1.5 py-0.5 rounded text-sm;
 }
 
 .skill-content :deep(pre) {
-  @apply bg-[#111111] border border-gray-800 rounded-lg p-4 overflow-x-auto mb-4;
+  @apply bg-[#1f1f1f] border border-gray-800 rounded-lg p-4 overflow-x-auto mb-4;
 }
 
 .skill-content :deep(pre code) {
@@ -347,7 +347,7 @@ async function copyInstallCommand() {
 
 :global(html.light .skill-content pre),
 :global(html.light .skill-content code) {
-  background-color: #130d08 !important;
+  background-color: #1f1f1f !important;
 }
 
 :global(html.light .skill-content pre code) {

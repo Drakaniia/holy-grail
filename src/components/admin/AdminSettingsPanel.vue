@@ -91,7 +91,7 @@ async function purgeOldEvents() {
         </h2>
       </div>
 
-      <div class="flex items-center gap-2 border border-gray-800 bg-[#050505] px-3 py-2 text-xs text-gray-500">
+      <div class="flex items-center gap-2 border border-gray-800 bg-[#1f1f1f] px-3 py-2 text-xs text-gray-500">
         <SlidersHorizontal class="h-4 w-4 text-accent-300" />
         Updated {{ updatedLabel }}
       </div>
@@ -114,7 +114,7 @@ async function purgeOldEvents() {
     </div>
 
     <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
-      <section class="border border-gray-800 bg-[#060606]" aria-labelledby="tracking-title">
+      <section class="border border-gray-800 bg-[#1f1f1f]" aria-labelledby="tracking-title">
         <div class="border-b border-gray-800 px-5 py-4">
           <h3 id="tracking-title" class="text-sm font-bold uppercase tracking-widest text-white">
             Tracking
@@ -138,7 +138,7 @@ async function purgeOldEvents() {
               :class="
                 admin.analyticsSettings[row.key]
                   ? 'border-accent-500 bg-accent-500/20'
-                  : 'border-gray-700 bg-black'
+                  : 'border-gray-700 bg-[#1f1f1f]'
               "
               :aria-pressed="admin.analyticsSettings[row.key]"
               :disabled="admin.loadingSettings"
@@ -155,7 +155,7 @@ async function purgeOldEvents() {
       </section>
 
       <aside class="space-y-6">
-        <section class="border border-gray-800 bg-[#060606]" aria-labelledby="retention-title">
+        <section class="border border-gray-800 bg-[#1f1f1f]" aria-labelledby="retention-title">
           <div class="border-b border-gray-800 px-5 py-4">
             <h3 id="retention-title" class="text-sm font-bold uppercase tracking-widest text-white">
               Retention
@@ -182,14 +182,14 @@ async function purgeOldEvents() {
                 :class="
                   admin.analyticsSettings.retention_days === option.value
                     ? 'bg-accent-400'
-                    : 'bg-gray-800'
+                    : 'bg-[#1f1f1f]'
                 "
               ></span>
             </button>
           </div>
         </section>
 
-        <section class="border border-gray-800 bg-[#060606] p-5" aria-labelledby="cleanup-title">
+        <section class="border border-gray-800 bg-[#1f1f1f] p-5" aria-labelledby="cleanup-title">
           <div class="mb-5 flex items-start gap-3">
             <DatabaseZap class="mt-1 h-5 w-5 text-emerald-300" />
             <div>

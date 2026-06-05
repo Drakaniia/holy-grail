@@ -59,7 +59,7 @@ function goBack() {
   overflow: hidden;
   background:
     radial-gradient(circle at 50% 24%, rgba(44, 98, 255, 0.1), transparent 21rem),
-    #050505;
+    #1f1f1f;
   color: #ffffff;
   color-scheme: dark;
   padding: 2rem 1rem;
@@ -143,7 +143,7 @@ function goBack() {
 .not-found-page__button--primary {
   border: 1px solid #f1f1f1;
   background: #f1f1f1;
-  color: #171717;
+  color: #1f1f1f;
 }
 
 .not-found-page__button--primary:hover {
@@ -153,13 +153,13 @@ function goBack() {
 
 .not-found-page__button--secondary {
   border: 1px solid #303030;
-  background: #0b0b0b;
+  background: #1f1f1f;
   color: #f3f3f3;
 }
 
 .not-found-page__button--secondary:hover {
   border-color: #515151;
-  background: #151515;
+  background: #1f1f1f;
 }
 
 .not-found-page__button-icon {

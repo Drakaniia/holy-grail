@@ -1,10 +1,10 @@
 <template>
   <article
     class="relative overflow-hidden rounded-xl border border-gray-800"
-    style="background: linear-gradient(to right, #000000 0%, #000000 100%)"
+    style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
     aria-hidden="true"
   >
-    <div class="absolute right-4 top-4 z-10 h-9 w-9 rounded-lg border border-gray-800 bg-[#080808] p-2">
+    <div class="absolute right-4 top-4 z-10 h-9 w-9 rounded-lg border border-gray-800 bg-[#1f1f1f] p-2">
       <div class="hg-skeleton h-full w-full rounded-sm"></div>
     </div>
 

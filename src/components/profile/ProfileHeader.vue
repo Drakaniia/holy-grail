@@ -15,7 +15,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="border-b border-zinc-900 bg-[#050505] px-4 py-7 text-white sm:px-6 lg:px-8">
+  <section class="border-b border-zinc-900 bg-[#1f1f1f] px-4 py-7 text-white sm:px-6 lg:px-8">
     <div class="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-start md:justify-between">
       <div class="flex min-w-0 items-start gap-4 sm:gap-5">
         <UserAvatar
@@ -34,7 +34,7 @@ defineProps<{
 
             <RouterLink
               to="/account/edit"
-              class="inline-flex h-8 items-center justify-center gap-2 rounded-md border border-zinc-800 bg-black px-3 text-xs font-semibold text-zinc-100 transition hover:border-zinc-600 hover:bg-zinc-950"
+              class="inline-flex h-8 items-center justify-center gap-2 rounded-md border border-zinc-800 bg-[#1f1f1f] px-3 text-xs font-semibold text-zinc-100 transition hover:border-zinc-600 hover:bg-[#1f1f1f]"
             >
               <Pencil class="h-3.5 w-3.5" />
               Edit Profile

@@ -179,7 +179,7 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
 <style scoped>
 .home-page {
   min-height: 100%;
-  background: #050505;
+  background: #1f1f1f;
   color: #ffffff;
 }
 
