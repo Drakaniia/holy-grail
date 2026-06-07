@@ -32,3 +32,12 @@
   ## Addition
 
     - Failed to rest report request
+    - Add Filter by user in Skills
+    - Add Fullscreen
+    - Add Collapse sidebar
+    - Rename Open random site, to Open random Grail
+    - For Loged in user, dont diplay name and email .should only diplay the profile image.
+    - Add filter by creator in skills
+    - List and Boxes feature.
+    - pythons scripts that review all site images if there is something of or broken image - not real site image
+    - Auto update site image every 15 days- auto push
