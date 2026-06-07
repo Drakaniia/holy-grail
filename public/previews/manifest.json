@@ -126,6 +126,15 @@
     "height": 600,
     "bytes": 41400
   },
+  "amp": {
+    "image": "/previews/amp.webp",
+    "small": "/previews/amp-sm.webp",
+    "sourceUrl": "https://ampcode.com/manual",
+    "capturedAt": "2026-06-07T15:06:33.523Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 38414
+  },
   "animagraffs": {
     "image": "/previews/animagraffs.webp",
     "small": "/previews/animagraffs-sm.webp",
@@ -189,6 +198,15 @@
     "height": 600,
     "bytes": 35074
   },
+  "auggie": {
+    "image": "/previews/auggie.webp",
+    "small": "/previews/auggie-sm.webp",
+    "sourceUrl": "https://docs.augmentcode.com/cli/overview",
+    "capturedAt": "2026-06-07T15:06:43.838Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33842
+  },
   "augmentcode": {
     "image": "/previews/augmentcode.webp",
     "small": "/previews/augmentcode-sm.webp",
@@ -215,6 +233,15 @@
     "width": 960,
     "height": 600,
     "bytes": 25694
+  },
+  "autohand-code": {
+    "image": "/previews/autohand-code.webp",
+    "small": "/previews/autohand-code-sm.webp",
+    "sourceUrl": "https://autohand.ai/code/",
+    "capturedAt": "2026-06-07T15:06:43.963Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21404
   },
   "autoskills": {
     "image": "/previews/autoskills.webp",
@@ -370,6 +397,16 @@
     "height": 600,
     "bytes": 29530
   },
+  "caramell": {
+    "image": "/previews/caramell.webp",
+    "small": "/previews/caramell-sm.webp",
+    "sourceUrl": "https://caramell.app/",
+    "capturedAt": "2026-06-07T15:06:25.110Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8392,
+    "fallback": true
+  },
   "cdnjs": {
     "image": "/previews/cdnjs.webp",
     "small": "/previews/cdnjs-sm.webp",
@@ -424,6 +461,15 @@
     "height": 600,
     "bytes": 26384
   },
+  "charm-crush": {
+    "image": "/previews/charm-crush.webp",
+    "small": "/previews/charm-crush-sm.webp",
+    "sourceUrl": "https://github.com/charmbracelet/crush",
+    "capturedAt": "2026-06-07T15:06:56.738Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 40268
+  },
   "chatgpt": {
     "image": "/previews/chatgpt.webp",
     "small": "/previews/chatgpt-sm.webp",
@@ -450,6 +496,24 @@
     "width": 960,
     "height": 600,
     "bytes": 9942
+  },
+  "claude-code": {
+    "image": "/previews/claude-code.webp",
+    "small": "/previews/claude-code-sm.webp",
+    "sourceUrl": "https://docs.anthropic.com/claude/docs/claude-code",
+    "capturedAt": "2026-06-07T15:06:59.473Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 39036
+  },
+  "cline-cli": {
+    "image": "/previews/cline-cli.webp",
+    "small": "/previews/cline-cli-sm.webp",
+    "sourceUrl": "https://docs.cline.bot/cline-cli/overview",
+    "capturedAt": "2026-06-07T15:06:55.029Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27132
   },
   "code": {
     "image": "/previews/code.webp",
@@ -523,6 +587,15 @@
     "height": 600,
     "bytes": 6032
   },
+  "codex-cli": {
+    "image": "/previews/codex-cli.webp",
+    "small": "/previews/codex-cli-sm.webp",
+    "sourceUrl": "https://github.com/openai/codex",
+    "capturedAt": "2026-06-07T15:07:03.075Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 39898
+  },
   "codia": {
     "image": "/previews/codia.webp",
     "small": "/previews/codia-sm.webp",
@@ -540,6 +613,24 @@
     "width": 960,
     "height": 600,
     "bytes": 30542
+  },
+  "colab": {
+    "image": "/previews/colab.webp",
+    "small": "/previews/colab-sm.webp",
+    "sourceUrl": "https://colab.research.google.com/",
+    "capturedAt": "2026-06-07T15:06:13.356Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 47962
+  },
+  "continue-cli": {
+    "image": "/previews/continue-cli.webp",
+    "small": "/previews/continue-cli-sm.webp",
+    "sourceUrl": "https://docs.continue.dev/guides/cli",
+    "capturedAt": "2026-06-07T15:07:05.254Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 26796
   },
   "coolify": {
     "image": "/previews/coolify.webp",
@@ -603,6 +694,25 @@
     "width": 960,
     "height": 600,
     "bytes": 42452
+  },
+  "cursor-cli": {
+    "image": "/previews/cursor-cli.webp",
+    "small": "/previews/cursor-cli-sm.webp",
+    "sourceUrl": "https://cursor.com/cli",
+    "capturedAt": "2026-06-07T15:07:09.847Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21420
+  },
+  "cyclic": {
+    "image": "/previews/cyclic.webp",
+    "small": "/previews/cyclic-sm.webp",
+    "sourceUrl": "https://www.cyclic.sh/",
+    "capturedAt": "2026-06-07T15:07:47.152Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13088,
+    "fallback": true
   },
   "czsofts": {
     "image": "/previews/czsofts.webp",
@@ -721,6 +831,15 @@
     "height": 600,
     "bytes": 25982
   },
+  "devin-cli": {
+    "image": "/previews/devin-cli.webp",
+    "small": "/previews/devin-cli-sm.webp",
+    "sourceUrl": "https://cli.devin.ai/docs",
+    "capturedAt": "2026-06-07T15:07:18.331Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25672
+  },
   "dodi-repacks": {
     "image": "/previews/dodi-repacks.webp",
     "small": "/previews/dodi-repacks-sm.webp",
@@ -738,6 +857,16 @@
     "width": 960,
     "height": 600,
     "bytes": 10630
+  },
+  "dora": {
+    "image": "/previews/dora.webp",
+    "small": "/previews/dora-sm.webp",
+    "sourceUrl": "https://www.dora.run/",
+    "capturedAt": "2026-06-07T15:06:27.240Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13196,
+    "fallback": true
   },
   "downloadpirate": {
     "image": "/previews/downloadpirate.webp",
@@ -774,6 +903,15 @@
     "width": 960,
     "height": 600,
     "bytes": 42984
+  },
+  "droid-cli": {
+    "image": "/previews/droid-cli.webp",
+    "small": "/previews/droid-cli-sm.webp",
+    "sourceUrl": "https://docs.factory.ai/cli/getting-started/quickstart",
+    "capturedAt": "2026-06-07T15:07:14.103Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 35612
   },
   "efecto": {
     "image": "/previews/efecto.webp",
@@ -1028,6 +1166,16 @@
     "height": 600,
     "bytes": 30802
   },
+  "gambo": {
+    "image": "/previews/gambo.webp",
+    "small": "/previews/gambo-sm.webp",
+    "sourceUrl": "https://www.gambo.ai/",
+    "capturedAt": "2026-06-07T15:06:25.122Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13216,
+    "fallback": true
+  },
   "gamma": {
     "image": "/previews/gamma.webp",
     "small": "/previews/gamma-sm.webp",
@@ -1054,6 +1202,15 @@
     "width": 960,
     "height": 600,
     "bytes": 10600
+  },
+  "gemini-cli": {
+    "image": "/previews/gemini-cli.webp",
+    "small": "/previews/gemini-cli-sm.webp",
+    "sourceUrl": "https://github.com/google-gemini/gemini-cli",
+    "capturedAt": "2026-06-07T15:07:17.365Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 43380
   },
   "getdesign": {
     "image": "/previews/getdesign.webp",
@@ -1118,6 +1275,15 @@
     "height": 600,
     "bytes": 45224
   },
+  "github-copilot-cli": {
+    "image": "/previews/github-copilot-cli.webp",
+    "small": "/previews/github-copilot-cli-sm.webp",
+    "sourceUrl": "https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli",
+    "capturedAt": "2026-06-07T15:07:17.836Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 47988
+  },
   "github-github-codecrafters-io-build-your-own-x-master-programming-by-re": {
     "image": "/previews/github-github-codecrafters-io-build-your-own-x-master-programming-by-re.webp",
     "small": "/previews/github-github-codecrafters-io-build-your-own-x-master-programming-by-re-sm.webp",
@@ -1181,6 +1347,15 @@
     "height": 600,
     "bytes": 39676
   },
+  "goose-cli": {
+    "image": "/previews/goose-cli.webp",
+    "small": "/previews/goose-cli-sm.webp",
+    "sourceUrl": "https://block.github.io/goose/docs/category/getting-started/",
+    "capturedAt": "2026-06-07T15:07:24.983Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25032
+  },
   "gptzero": {
     "image": "/previews/gptzero.webp",
     "small": "/previews/gptzero-sm.webp",
@@ -1226,6 +1401,15 @@
     "height": 600,
     "bytes": 24490
   },
+  "hermes-agent": {
+    "image": "/previews/hermes-agent.webp",
+    "small": "/previews/hermes-agent-sm.webp",
+    "sourceUrl": "https://hermes-agent.nousresearch.com/docs/",
+    "capturedAt": "2026-06-07T15:07:22.052Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 37280
+  },
   "heroicons": {
     "image": "/previews/heroicons.webp",
     "small": "/previews/heroicons-sm.webp",
@@ -1243,6 +1427,15 @@
     "width": 960,
     "height": 600,
     "bytes": 33252
+  },
+  "hex": {
+    "image": "/previews/hex.webp",
+    "small": "/previews/hex-sm.webp",
+    "sourceUrl": "https://hex.tech/",
+    "capturedAt": "2026-06-07T15:06:08.838Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 76596
   },
   "hianime-ad": {
     "image": "/previews/hianime-ad.webp",
@@ -1407,6 +1600,24 @@
     "height": 600,
     "bytes": 3638
   },
+  "jules-cli": {
+    "image": "/previews/jules-cli.webp",
+    "small": "/previews/jules-cli-sm.webp",
+    "sourceUrl": "https://jules.google/docs/cli/reference/",
+    "capturedAt": "2026-06-07T15:07:21.774Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34320
+  },
+  "junie-cli": {
+    "image": "/previews/junie-cli.webp",
+    "small": "/previews/junie-cli-sm.webp",
+    "sourceUrl": "https://junie.jetbrains.com/docs/junie-cli.html",
+    "capturedAt": "2026-06-07T15:07:31.754Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34614
+  },
   "jupyter": {
     "image": "/previews/jupyter.webp",
     "small": "/previews/jupyter-sm.webp",
@@ -1415,6 +1626,15 @@
     "width": 960,
     "height": 600,
     "bytes": 31912
+  },
+  "kaggle": {
+    "image": "/previews/kaggle.webp",
+    "small": "/previews/kaggle-sm.webp",
+    "sourceUrl": "https://www.kaggle.com/",
+    "capturedAt": "2026-06-07T15:06:16.073Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 19124
   },
   "khfullhd": {
     "image": "/previews/khfullhd.webp",
@@ -1425,6 +1645,15 @@
     "height": 600,
     "bytes": 9688
   },
+  "kilocode-cli": {
+    "image": "/previews/kilocode-cli.webp",
+    "small": "/previews/kilocode-cli-sm.webp",
+    "sourceUrl": "https://kilo.ai/docs/code-with-ai/platforms/cli",
+    "capturedAt": "2026-06-07T15:07:26.353Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 45300
+  },
   "kimi": {
     "image": "/previews/kimi.webp",
     "small": "/previews/kimi-sm.webp",
@@ -1433,6 +1662,24 @@
     "width": 960,
     "height": 600,
     "bytes": 10652
+  },
+  "kimi-cli": {
+    "image": "/previews/kimi-cli.webp",
+    "small": "/previews/kimi-cli-sm.webp",
+    "sourceUrl": "https://moonshotai.github.io/kimi-cli/en/guides/getting-started.html",
+    "capturedAt": "2026-06-07T15:07:29.696Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 44532
+  },
+  "kiro-cli": {
+    "image": "/previews/kiro-cli.webp",
+    "small": "/previews/kiro-cli-sm.webp",
+    "sourceUrl": "https://kiro.dev/docs/cli/",
+    "capturedAt": "2026-06-07T15:07:33.051Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20948
   },
   "kissasian": {
     "image": "/previews/kissasian.webp",
@@ -1469,6 +1716,15 @@
     "width": 960,
     "height": 600,
     "bytes": 6498
+  },
+  "kubeflow": {
+    "image": "/previews/kubeflow.webp",
+    "small": "/previews/kubeflow-sm.webp",
+    "sourceUrl": "https://www.kubeflow.org/",
+    "capturedAt": "2026-06-07T15:05:54.478Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21210
   },
   "labs": {
     "image": "/previews/labs.webp",
@@ -1514,6 +1770,15 @@
     "width": 960,
     "height": 600,
     "bytes": 21348
+  },
+  "letta-code": {
+    "image": "/previews/letta-code.webp",
+    "small": "/previews/letta-code-sm.webp",
+    "sourceUrl": "https://docs.letta.com/letta-code/cli",
+    "capturedAt": "2026-06-07T15:07:42.048Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25966
   },
   "lightswind": {
     "image": "/previews/lightswind.webp",
@@ -1740,6 +2005,24 @@
     "height": 600,
     "bytes": 32020
   },
+  "mistral-vibe": {
+    "image": "/previews/mistral-vibe.webp",
+    "small": "/previews/mistral-vibe-sm.webp",
+    "sourceUrl": "https://github.com/mistralai/mistral-vibe",
+    "capturedAt": "2026-06-07T15:07:40.534Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33206
+  },
+  "ml-kit": {
+    "image": "/previews/ml-kit.webp",
+    "small": "/previews/ml-kit-sm.webp",
+    "sourceUrl": "https://developers.google.com/ml-kit",
+    "capturedAt": "2026-06-07T15:06:18.704Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 44578
+  },
   "mobbin": {
     "image": "/previews/mobbin.webp",
     "small": "/previews/mobbin-sm.webp",
@@ -1931,6 +2214,15 @@
     "height": 600,
     "bytes": 21186
   },
+  "nitro": {
+    "image": "/previews/nitro.webp",
+    "small": "/previews/nitro-sm.webp",
+    "sourceUrl": "https://nitro.build/",
+    "capturedAt": "2026-06-07T15:05:55.453Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23170
+  },
   "northflank": {
     "image": "/previews/northflank.webp",
     "small": "/previews/northflank-sm.webp",
@@ -2002,6 +2294,15 @@
     "width": 960,
     "height": 600,
     "bytes": 11092
+  },
+  "opencode-cli": {
+    "image": "/previews/opencode-cli.webp",
+    "small": "/previews/opencode-cli-sm.webp",
+    "sourceUrl": "https://opencode.ai/docs/cli/",
+    "capturedAt": "2026-06-07T15:07:37.300Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20308
   },
   "openhands": {
     "image": "/previews/openhands.webp",
@@ -2092,6 +2393,15 @@
     "width": 960,
     "height": 600,
     "bytes": 8170
+  },
+  "pi-coding-agent": {
+    "image": "/previews/pi-coding-agent.webp",
+    "small": "/previews/pi-coding-agent-sm.webp",
+    "sourceUrl": "https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent",
+    "capturedAt": "2026-06-07T15:07:44.468Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 36258
   },
   "piratebay-proxy": {
     "image": "/previews/piratebay-proxy.webp",
@@ -2192,6 +2502,15 @@
     "height": 600,
     "bytes": 49664
   },
+  "pytorch": {
+    "image": "/previews/pytorch.webp",
+    "small": "/previews/pytorch-sm.webp",
+    "sourceUrl": "https://pytorch.org/",
+    "capturedAt": "2026-06-07T15:05:42.347Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 56594
+  },
   "qodercli": {
     "image": "/previews/qodercli.webp",
     "small": "/previews/qodercli-sm.webp",
@@ -2218,6 +2537,15 @@
     "width": 960,
     "height": 600,
     "bytes": 32890
+  },
+  "qwen-code": {
+    "image": "/previews/qwen-code.webp",
+    "small": "/previews/qwen-code-sm.webp",
+    "sourceUrl": "https://github.com/QwenLM/qwen-code",
+    "capturedAt": "2026-06-07T15:07:47.999Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 41094
   },
   "railway": {
     "image": "/previews/railway.webp",
@@ -2372,6 +2700,15 @@
     "height": 600,
     "bytes": 24564
   },
+  "rovo-dev": {
+    "image": "/previews/rovo-dev.webp",
+    "small": "/previews/rovo-dev-sm.webp",
+    "sourceUrl": "https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/",
+    "capturedAt": "2026-06-07T15:08:02.723Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 40982
+  },
   "royale-games": {
     "image": "/previews/royale-games.webp",
     "small": "/previews/royale-games-sm.webp",
@@ -2398,6 +2735,15 @@
     "width": 960,
     "height": 600,
     "bytes": 23956
+  },
+  "scikit-learn": {
+    "image": "/previews/scikit-learn.webp",
+    "small": "/previews/scikit-learn-sm.webp",
+    "sourceUrl": "https://scikit-learn.org/stable/",
+    "capturedAt": "2026-06-07T15:05:36.202Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 70340
   },
   "screenshot-studio": {
     "image": "/previews/screenshot-studio.webp",
@@ -2533,6 +2879,15 @@
     "width": 960,
     "height": 600,
     "bytes": 4620
+  },
+  "skills-sh": {
+    "image": "/previews/skills-sh.webp",
+    "small": "/previews/skills-sh-sm.webp",
+    "sourceUrl": "https://www.skills.sh/",
+    "capturedAt": "2026-06-07T15:05:46.745Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25924
   },
   "sleek": {
     "image": "/previews/sleek.webp",
@@ -2696,6 +3051,15 @@
     "width": 960,
     "height": 600,
     "bytes": 6374
+  },
+  "tensorflow": {
+    "image": "/previews/tensorflow.webp",
+    "small": "/previews/tensorflow-sm.webp",
+    "sourceUrl": "https://www.tensorflow.org/",
+    "capturedAt": "2026-06-07T15:05:43.421Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 32540
   },
   "testsprite": {
     "image": "/previews/testsprite.webp",
@@ -3101,6 +3465,24 @@
     "width": 960,
     "height": 600,
     "bytes": 10848
+  },
+  "xgboost": {
+    "image": "/previews/xgboost.webp",
+    "small": "/previews/xgboost-sm.webp",
+    "sourceUrl": "https://www.ibm.com/think/topics/xgboost",
+    "capturedAt": "2026-06-07T15:05:58.371Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 56544
+  },
+  "yiyan": {
+    "image": "/previews/yiyan.webp",
+    "small": "/previews/yiyan-sm.webp",
+    "sourceUrl": "https://yiyan.baidu.com/",
+    "capturedAt": "2026-06-07T15:06:45.906Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13086
   },
   "youtube-transcript": {
     "image": "/previews/youtube-transcript.webp",

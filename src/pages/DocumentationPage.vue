@@ -167,6 +167,7 @@ const previewCommands = `
 bun run scripts/generate-site-previews.js --slug <slug>
 bun run generate:previews
 bun run generate:previews:all
+bun run review:previews
 `
 
 const supabaseCommands = `
@@ -412,6 +413,10 @@ onUnmounted(() => {
           <p>
             If a live site blocks Puppeteer, the generator writes a fallback preview so the
             catalog entry is never blank.
+          </p>
+          <p>
+            Run the preview review when images look broken, stale, or like generated fallback
+            artwork instead of real site screenshots.
           </p>
         </section>
 

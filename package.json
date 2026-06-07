@@ -16,6 +16,7 @@
     "generate:previews": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
     "generate:previews:missing": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
     "generate:previews:all": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js --all",
+    "review:previews": "python scripts/review-site-previews.py",
     "import:bookmarks": "bun run scripts/import-bookmarks.js"
   },
   "dependencies": {

@@ -142,6 +142,7 @@ Production previews are static files generated from the site index:
 bun run generate:previews         # capture missing previews only
 bun run generate:previews:missing # explicit missing-only alias
 bun run generate:previews:all     # regenerate every public preview
+bun run review:previews           # audit missing, broken, stale, or fallback previews
 ```
 
 The generator writes:
@@ -163,6 +164,11 @@ back gracefully when loading fails.
 
 If curated images are added later, prefer optional metadata fields with fallback
 to generated previews and favicons.
+
+Run the preview review when images look wrong in the UI or before a cleanup
+pass. Use `bun run review:previews -- --report public/previews/review-report.json`
+to save the full JSON report, or `bun run review:previews -- --fail-on error`
+when a strict check is needed.
 
 ## Example
 
