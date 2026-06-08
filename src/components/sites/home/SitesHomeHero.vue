@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
 import { ArrowRight, Boxes, Hammer, Palette, Sparkles } from 'lucide-vue-next'
-import ShapeGrid from '@/components/home/ShapeGrid.vue'
-import SitesHomePreviewCard from '@/components/sites/home/SitesHomePreviewCard.vue'
-import { useRandomPreviewTiles } from '@/composables/useRandomPreviewTiles'
+import { scheduleIdleTask } from '@/lib/idle'
 import type { HomePreviewItem } from '@/types/home'
 import type { SitesHomeMetric } from '@/types/sitesHome'
+
+const SitesHomePreviewField = defineAsyncComponent(
+  () => import('@/components/sites/home/SitesHomePreviewField.vue'),
+)
 
 const props = defineProps<{
   metrics: SitesHomeMetric[]
@@ -13,31 +15,35 @@ const props = defineProps<{
   isLoading: boolean
 }>()
 
-const previewItems = computed(() => props.previewItems)
-const { markImageFailed, tiles } = useRandomPreviewTiles({
-  items: previewItems,
-  tileCount: 7,
-  initialDelayRange: [180, 1400],
-  rotationDelayRange: [2600, 6200],
+const isDesktopViewport = typeof window !== 'undefined' &&
+  window.matchMedia('(min-width: 768px)').matches
+const showPreviewField = shallowRef(isDesktopViewport)
+let cancelPreviewFieldRender: (() => void) | undefined
+
+const previewCountLabel = computed(() => props.previewItems.length)
+
+function handleImageError() {
+}
+
+onMounted(() => {
+  if (showPreviewField.value) return
+
+  cancelPreviewFieldRender = scheduleIdleTask(() => {
+    showPreviewField.value = true
+  }, {
+    delay: 6000,
+    timeout: 9000,
+  })
 })
 
-const heroTile = computed(() => tiles.value[0])
-const supportingTiles = computed(() => tiles.value.slice(1, 7))
+onUnmounted(() => {
+  cancelPreviewFieldRender?.()
+})
 </script>
 
 <template>
   <section class="sites-home-hero" aria-labelledby="sites-home-title">
-    <ShapeGrid
-      class="sites-home-hero__grid"
-      direction="diagonal"
-      :speed="0.28"
-      :square-size="62"
-      border-color="rgba(255, 255, 255, 0.12)"
-      hover-fill-color="rgba(255, 140, 26, 0.16)"
-      shape="triangle"
-      :hover-trail-amount="4"
-      aria-hidden="true"
-    />
+    <div class="sites-home-hero__grid" aria-hidden="true"></div>
 
     <div class="sites-home-hero__index">
       <span>Sites Atlas</span>
@@ -90,40 +96,22 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
       <div class="sites-home-hero__stage" aria-label="Featured site previews">
         <div class="sites-home-hero__stage-header">
           <span>Live preview field</span>
-          <span>{{ props.previewItems.length }} captures</span>
+          <span>{{ previewCountLabel }} captures</span>
         </div>
 
-        <div class="sites-home-hero__preview-field">
-          <SitesHomePreviewCard
-            v-if="heroTile"
-            class="sites-home-hero__main-preview"
-            :item="heroTile.item"
-            :previous-item="heroTile.previousItem"
-            :animation-nonce="heroTile.animationNonce"
-            variant="hero-large"
-            @image-error="markImageFailed"
-          />
-          <div
-            v-else-if="props.isLoading"
-            class="sites-home-hero__main-preview sites-home-hero__preview-skeleton hg-skeleton"
-            aria-hidden="true"
-          ></div>
-
+        <SitesHomePreviewField
+          v-if="showPreviewField && props.previewItems.length > 0"
+          :preview-items="props.previewItems"
+          :is-loading="props.isLoading"
+          @image-error="handleImageError"
+        />
+        <div v-else class="sites-home-hero__preview-field" aria-hidden="true">
+          <div class="sites-home-hero__main-preview sites-home-hero__preview-skeleton"></div>
           <div class="sites-home-hero__supporting-grid">
-            <SitesHomePreviewCard
-              v-for="tile in supportingTiles"
-              :key="tile.key"
-              :item="tile.item"
-              :previous-item="tile.previousItem"
-              :animation-nonce="tile.animationNonce"
-              variant="hero-small"
-              @image-error="markImageFailed"
-            />
             <div
-              v-for="index in props.isLoading && supportingTiles.length === 0 ? 4 : 0"
-              :key="`sites-home-skeleton-${index}`"
-              class="sites-home-hero__preview-skeleton hg-skeleton"
-              aria-hidden="true"
+              v-for="index in 4"
+              :key="`sites-home-preview-placeholder-${index}`"
+              class="sites-home-hero__preview-skeleton"
             ></div>
           </div>
         </div>
@@ -160,6 +148,14 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
   inset: 0;
   z-index: 0;
   opacity: 0.62;
+  background:
+    linear-gradient(30deg, transparent 0 48%, rgba(255, 255, 255, 0.16) 49% 51%, transparent 52%),
+    linear-gradient(150deg, transparent 0 48%, rgba(255, 255, 255, 0.1) 49% 51%, transparent 52%);
+  background-position:
+    0 0,
+    31px 0;
+  background-size: 62px 62px;
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.88) 42%, transparent 100%);
 }
 
 .sites-home-hero__index,
@@ -335,25 +331,32 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
   text-transform: uppercase;
 }
 
-.sites-home-hero__preview-field {
+.sites-home-hero__preview-field,
+:deep(.sites-home-hero__preview-field) {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(17rem, 0.88fr);
   gap: 0.82rem;
   align-items: stretch;
 }
 
-.sites-home-hero__supporting-grid {
+.sites-home-hero__supporting-grid,
+:deep(.sites-home-hero__supporting-grid) {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.82rem;
 }
 
-.sites-home-hero__preview-skeleton {
+.sites-home-hero__preview-skeleton,
+:deep(.sites-home-hero__preview-skeleton) {
   min-height: 9rem;
   border-radius: 0.5rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 62%),
+    rgba(255, 255, 255, 0.04);
 }
 
-.sites-home-hero__main-preview.sites-home-hero__preview-skeleton {
+.sites-home-hero__main-preview.sites-home-hero__preview-skeleton,
+:deep(.sites-home-hero__main-preview.sites-home-hero__preview-skeleton) {
   min-height: 20rem;
 }
 
@@ -437,7 +440,8 @@ const supportingTiles = computed(() => tiles.value.slice(1, 7))
     grid-template-columns: 1fr;
   }
 
-  .sites-home-hero__supporting-grid :deep(.sites-home-preview-card:nth-child(n + 4)) {
+  .sites-home-hero__supporting-grid :deep(.sites-home-preview-card:nth-child(n + 4)),
+  :deep(.sites-home-hero__supporting-grid .sites-home-preview-card:nth-child(n + 4)) {
     display: none;
   }
 }

@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import SitesHomeCategoryDeck from '@/components/sites/home/SitesHomeCategoryDeck.vue'
+import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
 import SitesHomeHero from '@/components/sites/home/SitesHomeHero.vue'
-import SitesHomeShowcase from '@/components/sites/home/SitesHomeShowcase.vue'
-import previewsIndex from '@/content/site-previews.json'
+import { scheduleIdleTask } from '@/lib/idle'
 import { sortSitesForTab, useSitesStore, type Site } from '@/stores/sites'
 import type {
   SitesHomeCategorySummary,
@@ -11,6 +9,13 @@ import type {
   SitesHomeMetric,
   SitesHomePreviewItem,
 } from '@/types/sitesHome'
+
+const SitesHomeCategoryDeck = defineAsyncComponent(
+  () => import('@/components/sites/home/SitesHomeCategoryDeck.vue'),
+)
+const SitesHomeShowcase = defineAsyncComponent(
+  () => import('@/components/sites/home/SitesHomeShowcase.vue'),
+)
 
 interface SitePreviewEntry {
   image: string
@@ -33,9 +38,53 @@ interface SiteGroupDefinition {
 }
 
 const store = useSitesStore()
-const previews = previewsIndex as Record<string, SitePreviewEntry>
+const previews = shallowRef<Record<string, SitePreviewEntry>>({})
+const hasQueuedCatalogLoad = shallowRef(true)
+const hasLoadedPreviewIndex = shallowRef(false)
+const isDesktopViewport = typeof window !== 'undefined' &&
+  window.matchMedia('(min-width: 768px)').matches
+const showBelowFoldSections = shallowRef(isDesktopViewport)
+let cancelCatalogLoad: (() => void) | undefined
+let cancelPreviewLoad: (() => void) | undefined
+let cancelBelowFoldRender: (() => void) | undefined
 
-void store.loadSites()
+async function loadPreviewIndex() {
+  const module = await import('@/content/site-previews.json')
+  previews.value = module.default as Record<string, SitePreviewEntry>
+  hasLoadedPreviewIndex.value = true
+}
+
+onMounted(() => {
+  if (!showBelowFoldSections.value) {
+    cancelBelowFoldRender = scheduleIdleTask(() => {
+      showBelowFoldSections.value = true
+    }, {
+      delay: 6000,
+      timeout: 9000,
+    })
+  }
+
+  cancelCatalogLoad = scheduleIdleTask(() => {
+    hasQueuedCatalogLoad.value = false
+    void store.loadSites()
+  }, {
+    delay: 3200,
+    timeout: 7000,
+  })
+
+  cancelPreviewLoad = scheduleIdleTask(() => {
+    void loadPreviewIndex()
+  }, {
+    delay: 3600,
+    timeout: 8000,
+  })
+})
+
+onUnmounted(() => {
+  cancelBelowFoldRender?.()
+  cancelCatalogLoad?.()
+  cancelPreviewLoad?.()
+})
 
 const routeLabels: Record<string, string> = {
   ai: 'AI',
@@ -175,11 +224,11 @@ function getRouteLabel(slug: string | null) {
 }
 
 function hasPreview(site: Site) {
-  return Boolean(previews[site.slug]?.image)
+  return Boolean(previews.value[site.slug]?.image)
 }
 
 function toPreviewItem(site: Site, index: number): SitesHomePreviewItem | null {
-  const preview = previews[site.slug]
+  const preview = previews.value[site.slug]
   if (!preview) return null
 
   return {
@@ -199,7 +248,8 @@ function getPopularSites(sites: Site[]) {
   return sortSitesForTab(sites, 'popular')
 }
 
-const isLoading = computed(() => store.loading && !store.loaded)
+const isLoading = computed(() => hasQueuedCatalogLoad.value || (store.loading && !store.loaded))
+const canRenderShowcase = computed(() => hasLoadedPreviewIndex.value && showcaseItems.value.length > 0)
 
 const previewItems = computed(() =>
   getPopularSites(store.allSites.filter(hasPreview))
@@ -285,11 +335,17 @@ const showcaseItems = computed(() => {
       :preview-items="previewItems"
       :is-loading="isLoading"
     />
-    <SitesHomeCategoryDeck :summaries="categorySummaries" />
-    <SitesHomeShowcase
-      :items="showcaseItems"
-      :is-loading="isLoading"
-    />
+    <div class="sites-home-page__below-fold">
+      <SitesHomeCategoryDeck
+        v-if="showBelowFoldSections"
+        :summaries="categorySummaries"
+      />
+      <SitesHomeShowcase
+        v-if="showBelowFoldSections && canRenderShowcase"
+        :items="showcaseItems"
+        :is-loading="isLoading"
+      />
+    </div>
   </div>
 </template>
 
@@ -300,8 +356,18 @@ const showcaseItems = computed(() => {
   color: #ffffff;
 }
 
+.sites-home-page__below-fold {
+  min-height: 52rem;
+}
+
 :global(html.light) .sites-home-page {
   background: var(--mocha-bg);
   color: var(--mocha-text);
+}
+
+@media (max-width: 760px) {
+  .sites-home-page__below-fold {
+    min-height: 68rem;
+  }
 }
 </style>
