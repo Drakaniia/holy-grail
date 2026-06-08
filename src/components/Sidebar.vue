@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, reactive, shallowRef, watch } from 'vue'
+import { computed, defineAsyncComponent, onMounted, onUnmounted, reactive, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   Activity,
@@ -42,20 +42,27 @@ import {
   Wrench,
   X,
 } from 'lucide-vue-next'
-import { useAdminStore } from '@/stores/admin'
-import { useAuthStore } from '@/stores/auth'
+import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
+import { scheduleIdleTask } from '@/lib/idle'
 import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
-import SidebarAccountMenu from '@/components/auth/SidebarAccountMenu.vue'
+import type { useAdminStore } from '@/stores/admin'
+
+type AdminStore = ReturnType<typeof useAdminStore>
+
+const SidebarAccountMenu = defineAsyncComponent(
+  () => import('@/components/auth/SidebarAccountMenu.vue'),
+)
 
 const route = useRoute()
-const admin = useAdminStore()
-const auth = useAuthStore()
+const { isAuthenticated } = useDeferredAuthStatus()
+const admin = shallowRef<AdminStore | null>(null)
 const sitesStore = useSitesStore()
 const skillsStore = useSkillsStore()
 const sidebarSearch = shallowRef('')
 void sitesStore.loadSites()
-void skillsStore.loadSkills()
+let cancelSkillsLoad: (() => void) | undefined
+let cancelAdminLoad: (() => void) | undefined
 
 type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
 
@@ -211,6 +218,8 @@ const skillRouteCounts = computed<Record<string, number>>(() => ({
   '/skills/skills': skillsStore.getSkillsByParentCategory('skills').length,
   '/skills/design': skillsStore.getSkillsByParentCategory('design').length,
 }))
+const isAdmin = computed(() => admin.value?.isAdmin ?? false)
+const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
 
 const getSiteGroupCount = (group: SiteGroup) => siteGroupCounts.value[group]
 const getSiteRouteCount = (route: string) => siteRouteCounts.value[route] ?? 0
@@ -367,8 +376,63 @@ const clearSidebarSearch = () => {
   sidebarSearch.value = ''
 }
 
+function loadSkillsCounts() {
+  void skillsStore.loadSkills()
+}
+
+async function loadAdminStore() {
+  if (!isAuthenticated.value || admin.value) return
+
+  const { useAdminStore } = await import('@/stores/admin')
+  const adminStore = useAdminStore()
+  admin.value = adminStore
+
+  if (adminStore.isAdmin) {
+    void adminStore.loadSubmissions('pending')
+  }
+}
+
+watch(
+  () => route.path,
+  (path) => {
+    if (!path.startsWith('/skills')) return
+
+    cancelSkillsLoad?.()
+    loadSkillsCounts()
+  },
+)
+
+watch(isAuthenticated, (authenticated) => {
+  cancelAdminLoad?.()
+
+  if (!authenticated) {
+    admin.value = null
+    return
+  }
+
+  cancelAdminLoad = scheduleIdleTask(() => {
+    void loadAdminStore()
+  }, {
+    delay: 1500,
+    timeout: 5000,
+  })
+})
+
 onMounted(() => {
-  void auth.initialize()
+  if (route.path.startsWith('/skills')) {
+    loadSkillsCounts()
+    return
+  }
+
+  cancelSkillsLoad = scheduleIdleTask(loadSkillsCounts, {
+    delay: 5000,
+    timeout: 9000,
+  })
+})
+
+onUnmounted(() => {
+  cancelAdminLoad?.()
+  cancelSkillsLoad?.()
 })
 </script>
 
@@ -377,7 +441,7 @@ onMounted(() => {
     class="flex h-full w-64 select-none flex-col overflow-visible border-r border-gray-800 bg-[#1f1f1f]"
   >
     <div class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800 px-2">
-      <SidebarAccountMenu v-if="auth.isAuthenticated" />
+      <SidebarAccountMenu v-if="isAuthenticated" />
 
       <RouterLink v-else to="/" class="flex items-center gap-2 px-2">
         <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -865,7 +929,7 @@ onMounted(() => {
       </RouterLink>
 
       <RouterLink
-        v-if="admin.isAdmin"
+        v-if="isAdmin"
         to="/admin"
         class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-accent-500/10"
         :class="isActive('/admin') ? 'bg-[#1f1f1f] text-white' : ''"
@@ -873,10 +937,10 @@ onMounted(() => {
         <ShieldCheck class="w-4 h-4" />
         <span class="font-medium text-xs">Admin</span>
         <span
-          v-if="admin.pendingCount > 0"
+          v-if="pendingAdminCount > 0"
           class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
         >
-          {{ admin.pendingCount }}
+          {{ pendingAdminCount }}
         </span>
       </RouterLink>
     </div>

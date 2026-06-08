@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, shallowRef } from 'vue'
+import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Menu, Moon, Search, Shuffle, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
-import { useAuthStore } from '@/stores/auth'
 import { useSitesStore, type Site } from '@/stores/sites'
 import { useTheme } from '@/composables/useTheme'
-import UserProfilePill from '@/components/auth/UserProfilePill.vue'
+import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
+import { scheduleIdleTask } from '@/lib/idle'
 
 const props = withDefaults(
   defineProps<{
@@ -22,7 +22,8 @@ const emit = defineEmits<{
   openSearch: []
 }>()
 
-const auth = useAuthStore()
+const UserProfilePill = defineAsyncComponent(() => import('@/components/auth/UserProfilePill.vue'))
+const { isAuthenticated } = useDeferredAuthStatus()
 const sites = useSitesStore()
 const route = useRoute()
 const router = useRouter()
@@ -48,6 +49,7 @@ const starLinkLabel = computed(() =>
 
 const isMac = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 const shortcutKey = isMac ? 'Cmd' : 'Ctrl'
+let cancelStarCountLoad: (() => void) | undefined
 
 interface GitHubRepositoryResponse {
   stargazers_count?: number
@@ -112,8 +114,16 @@ async function loadStarCount() {
 }
 
 onMounted(() => {
-  void auth.initialize()
-  void loadStarCount()
+  cancelStarCountLoad = scheduleIdleTask(() => {
+    void loadStarCount()
+  }, {
+    delay: 4500,
+    timeout: 9000,
+  })
+})
+
+onUnmounted(() => {
+  cancelStarCountLoad?.()
 })
 </script>
 
@@ -236,7 +246,7 @@ onMounted(() => {
         <span class="tooltip-bubble">{{ themeToggleLabel }}</span>
       </button>
 
-      <UserProfilePill v-if="auth.isAuthenticated" />
+      <UserProfilePill v-if="isAuthenticated" />
 
       <RouterLink
         v-else

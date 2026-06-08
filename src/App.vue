@@ -3,10 +3,10 @@ import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef, wat
 import { RouterView, useRoute } from 'vue-router'
 import AppToast from './components/AppToast.vue'
 import Navbar from './components/Navbar.vue'
-import Sidebar from './components/Sidebar.vue'
 import Footer from './components/Footer.vue'
 
 const CommandPalette = defineAsyncComponent(() => import('./components/search/CommandPalette.vue'))
+const Sidebar = defineAsyncComponent(() => import('./components/Sidebar.vue'))
 const route = useRoute()
 const isAuthRoute = computed(
   () => route.name === 'login' || route.name === 'signup' || route.name === 'auth-callback',
@@ -23,6 +23,10 @@ const shouldRenderAppShell = computed(
 )
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
+const isDesktopShell = shallowRef(
+  typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches,
+)
+let removeDesktopShellListener: (() => void) | undefined
 
 function closeMobileSidebar() {
   isMobileSidebarOpen.value = false
@@ -57,10 +61,22 @@ watch(
 
 onMounted(() => {
   window.addEventListener('keydown', handleGlobalShortcut)
+
+  const desktopShellQuery = window.matchMedia('(min-width: 768px)')
+  const updateDesktopShell = (event: MediaQueryListEvent) => {
+    isDesktopShell.value = event.matches
+  }
+
+  isDesktopShell.value = desktopShellQuery.matches
+  desktopShellQuery.addEventListener('change', updateDesktopShell)
+  removeDesktopShellListener = () => {
+    desktopShellQuery.removeEventListener('change', updateDesktopShell)
+  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleGlobalShortcut)
+  removeDesktopShellListener?.()
 })
 </script>
 
@@ -68,7 +84,7 @@ onUnmounted(() => {
   <RouterView v-if="isAuthRoute || isStandaloneRoute" />
 
   <div v-else-if="shouldRenderAppShell" class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white">
-    <div class="hidden h-full shrink-0 md:block">
+    <div v-if="isDesktopShell" class="hidden h-full w-64 shrink-0 md:block">
       <Sidebar />
     </div>
 

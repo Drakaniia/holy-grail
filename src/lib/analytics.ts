@@ -1,6 +1,5 @@
 import type { RouteLocationNormalizedLoaded, Router } from 'vue-router'
-import { supabase } from '@/lib/supabase'
-import { useAuthStore } from '@/stores/auth'
+import { scheduleIdleTask } from '@/lib/idle'
 
 export type AnalyticsEventType =
   | 'page_view'
@@ -29,6 +28,7 @@ interface AnalyticsPayload {
 const ANALYTICS_SESSION_KEY = 'holy-grail-analytics-session'
 const SETTINGS_CACHE_MS = 5 * 60 * 1000
 const SEARCH_DEBOUNCE_MS = 700
+const PAGE_VIEW_DELAY_MS = 5000
 
 const DEFAULT_SETTINGS: AnalyticsSettings = {
   tracking_enabled: true,
@@ -46,6 +46,12 @@ const DISABLED_SETTINGS: AnalyticsSettings = {
 let settingsCache: { value: AnalyticsSettings; expiresAt: number } | null = null
 const searchTimers = new Map<string, number>()
 const lastTrackedSearch = new Map<string, string>()
+
+async function getSupabaseClient() {
+  const { supabase } = await import('@/lib/supabase')
+
+  return supabase
+}
 
 function getSessionId() {
   if (typeof window === 'undefined') {
@@ -152,6 +158,8 @@ function normalizeSearchQuery(query: string) {
 }
 
 async function loadAnalyticsSettings(): Promise<AnalyticsSettings> {
+  const supabase = await getSupabaseClient()
+
   if (!supabase) return DISABLED_SETTINGS
 
   const now = Date.now()
@@ -186,6 +194,7 @@ async function getTrackedUserId(settings: AnalyticsSettings) {
   if (!settings.track_authenticated_users) return null
 
   try {
+    const { useAuthStore } = await import('@/stores/auth')
     const auth = useAuthStore()
     await auth.initialize()
     return auth.user?.id ?? null
@@ -195,7 +204,10 @@ async function getTrackedUserId(settings: AnalyticsSettings) {
 }
 
 async function insertAnalyticsEvent(payload: AnalyticsPayload) {
-  if (!supabase || typeof window === 'undefined') return
+  if (typeof window === 'undefined') return
+
+  const supabase = await getSupabaseClient()
+  if (!supabase) return
 
   const settings = await loadAnalyticsSettings()
   if (!settings.tracking_enabled) return
@@ -225,6 +237,17 @@ async function insertAnalyticsEvent(payload: AnalyticsPayload) {
     if (error) throw error
   } catch {
   }
+}
+
+function schedulePageView(payload: AnalyticsPayload) {
+  if (typeof window === 'undefined') return
+
+  scheduleIdleTask(() => {
+    void insertAnalyticsEvent(payload)
+  }, {
+    delay: PAGE_VIEW_DELAY_MS,
+    timeout: PAGE_VIEW_DELAY_MS,
+  })
 }
 
 export function trackSearchQuery(query: string, source: string) {
@@ -279,7 +302,7 @@ function trackPageView(to: RouteLocationNormalizedLoaded) {
   if (isAdminPath(to.path)) return
 
   const resource = getRouteResource(to)
-  void insertAnalyticsEvent({
+  schedulePageView({
     event_type: 'page_view',
     route_name: typeof to.name === 'string' ? to.name : null,
     route_path: to.path.slice(0, 400),

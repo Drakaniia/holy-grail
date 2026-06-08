@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useAuthStore } from '@/stores/auth'
+import SitesHomePage from '@/pages/SitesHomePage.vue'
 
 const AccountPage = () => import('@/pages/AccountPage.vue')
 const AdminPage = () => import('@/pages/AdminPage.vue')
@@ -12,7 +12,6 @@ const EditProfilePage = () => import('@/pages/EditProfilePage.vue')
 const HomePage = () => import('@/pages/HomePage.vue')
 const NotFoundPage = () => import('@/pages/NotFoundPage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
-const SitesHomePage = () => import('@/pages/SitesHomePage.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
 const SettingsPage = () => import('@/pages/SettingsPage.vue')
 const SkillDetail = () => import('@/pages/SkillDetail.vue')
@@ -160,8 +159,6 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-  const auth = useAuthStore()
-
   if (to.name === 'auth-callback') {
     return
   }
@@ -176,6 +173,13 @@ router.beforeEach(async (to) => {
       replace: true,
     }
   }
+
+  if (!to.meta.requiresAuth && !to.meta.guestOnly) {
+    return
+  }
+
+  const { useAuthStore } = await import('@/stores/auth')
+  const auth = useAuthStore()
 
   await auth.initialize()
 
