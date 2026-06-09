@@ -1,0 +1,79 @@
+slug: iconly
+name: Iconly Pro
+description: Flat, 3D, and animated icon library for product teams.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Figma
+deployment:
+  - Cloud
+website: https://iconly.pro/
+docs: https://iconly.pro/
+sourceCode: ""
+icon: iconly
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - figma
+  - animated-icons
+  - 3d-icons
+atGlance: Flat, 3D, and animated icon library for product teams.
+fullDescription: >-
+  Iconly Pro is kept as an icons/svg resource for browsing, searching, and downloading flat,
+  animated, and 3D icons for product design and implementation work.
+coreFeatures:
+  - name: Icon Library
+    description: Cataloged for reusable flat, animated, and 3D icon assets.
+    icon: check
+  - name: Web and Figma Access
+    description: Supports browser-based icon search plus a Figma plugin workflow.
+    icon: check
+additionalFeatures:
+  - name: Multiple Export Formats
+    description: Tracks a resource that supports formats such as SVG, PNG, JSX, and TSX.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Heroicons bookmarked for icons/svg resources.
+    stars: 23538
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/solid
+  - slug: thesvg
+    name: theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers
+    description: theSVG bookmarked for icons/svg resources.
+    stars: 2043
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/
+  - slug: svglogo
+    name: Free SVG Brand Logos - Download 4,100+ Vector Logos | SVGLogo
+    description: SVGLogo bookmarked for icons/svg resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://svglogo.co/
