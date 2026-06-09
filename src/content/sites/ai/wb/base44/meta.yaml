@@ -18,7 +18,7 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://base44.com/
+website: https://app.base44.com/
 docs: https://base44.com/
 sourceCode: ""
 icon: base44
