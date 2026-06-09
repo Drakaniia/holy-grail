@@ -4584,6 +4584,107 @@
     ]
   },
   {
+    "slug": "ui-skills",
+    "name": "UI Skills",
+    "description": "Curated agent skill directory for design engineers.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 2236,
+    "watchers": 6,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "12 days ago",
+    "lastRelease": "4 months ago",
+    "version": "v0.1.5",
+    "contributors": 1,
+    "commitsThisYear": 108,
+    "releases": 6,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.ui-skills.com/",
+    "docs": "https://www.ui-skills.com/",
+    "sourceCode": "https://github.com/ibelick/ui-skills",
+    "icon": "ui-skills",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "agent-skills",
+      "design-engineering",
+      "ui"
+    ],
+    "atGlance": "Curated agent skill directory for design engineers.",
+    "fullDescription": "UI Skills is a catalog of reusable AI agent skills focused on frontend design, accessibility, motion performance, UI polish, and design-engineering workflows.",
+    "coreFeatures": [
+      {
+        "name": "Agent Skill Discovery",
+        "description": "Browse reusable skills for design-engineering and UI implementation work.",
+        "icon": "check"
+      },
+      {
+        "name": "Design Engineering Focus",
+        "description": "Includes skills for accessibility, motion, typography, components, and interface craft.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Open Source Directory",
+        "description": "The directory source is available from the public GitHub repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged by AI category and agent-skills subcategory for browsing.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "skillfish",
+        "name": "Skill.Fish",
+        "description": "Skill manager and discovery catalog for AI coding agent skills.",
+        "stars": 262,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skill.fish/"
+      },
+      {
+        "slug": "awesomeskill",
+        "name": "Awesome Skills",
+        "description": "Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://awesomeskill.ai/"
+      }
+    ]
+  },
+  {
     "slug": "tbench",
     "name": "Terminal-Bench",
     "description": "Terminal-Bench bookmarked for ai cli resources.",
@@ -7263,6 +7364,107 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://headlessui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "logos-lndev",
+    "name": "Logos by lndev",
+    "description": "Free SVG logo gallery for apps, dev tools, and tech brands.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 24,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "1 day ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 1,
+    "commitsThisYear": 44,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://logos.lndev.me/",
+    "docs": "https://logos.lndev.me/",
+    "sourceCode": "https://github.com/ln-dev7/logos-apps",
+    "icon": "logos-lndev",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "logos",
+      "svg",
+      "icons",
+      "brand-assets"
+    ],
+    "atGlance": "Free SVG logo gallery for apps, dev tools, and tech brands.",
+    "fullDescription": "Logos by lndev is kept as a design tools resource for searching, filtering, copying, and downloading clean SVG logos for apps, developer tools, and technology brands.",
+    "coreFeatures": [
+      {
+        "name": "SVG Logo Gallery",
+        "description": "Browse a large catalog of app, dev tool, and tech brand logos.",
+        "icon": "check"
+      },
+      {
+        "name": "One-Click Asset Access",
+        "description": "Supports quick copy and download workflows from the web gallery.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Open Source Collection",
+        "description": "The logo collection is available from the public GitHub repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "svglogo",
+        "name": "Free SVG Brand Logos - Download 4,100+ Vector Logos | SVGLogo",
+        "description": "SVGLogo bookmarked for icons/svg resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://svglogo.co/"
+      },
+      {
+        "slug": "thesvg",
+        "name": "theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers",
+        "description": "theSVG bookmarked for icons/svg resources.",
+        "stars": 2043,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://thesvg.org/"
+      },
+      {
+        "slug": "allsvgicons",
+        "name": "Best Free SVG Icon Packs for Product UI - 10 Reliable Picks for 2026 | All SVG Icons",
+        "description": "All SVG Icons bookmarked for icons/svg resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/"
       }
     ]
   },
@@ -16047,6 +16249,106 @@
     ]
   },
   {
+    "slug": "designengineer-tools",
+    "name": "Design Engineer Tools",
+    "description": "Curated directory of useful tools for web-focused design engineers.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://designengineer.tools/",
+    "docs": "https://designengineer.tools/",
+    "sourceCode": "",
+    "icon": "designengineer-tools",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "tools",
+      "design-engineering",
+      "directory"
+    ],
+    "atGlance": "Curated directory of useful tools for web-focused design engineers.",
+    "fullDescription": "Design Engineer Tools is kept as a broad design-engineering reference for inspiration, components, web utilities, interface tools, motion tools, 3D tools, and adjacent resources.",
+    "coreFeatures": [
+      {
+        "name": "Design Engineering Directory",
+        "description": "Collects tools across inspiration, components, utilities, interface design, motion, and 3D.",
+        "icon": "check"
+      },
+      {
+        "name": "Fast Reference",
+        "description": "Useful for scanning tool categories during product UI and frontend design work.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "toolfolio",
+        "name": "Toolfolio",
+        "description": "Toolfolio bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://toolfolio.io/"
+      },
+      {
+        "slug": "selected",
+        "name": "Selected",
+        "description": "Selected bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://selected.design/"
+      },
+      {
+        "slug": "tasteskill",
+        "name": "TasteSkill",
+        "description": "TasteSkill bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://tasteskill.com/"
+      }
+    ]
+  },
+  {
     "slug": "designrigs",
     "name": "DesignRigs - Web Design Tools & Resources",
     "description": "DesignRigs - Web Design Tools & Resources bookmarked for design tools resources.",
@@ -17121,6 +17423,107 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://impeccable.style/"
+      }
+    ]
+  },
+  {
+    "slug": "javii-tools",
+    "name": "javiitools",
+    "description": "Tiny visual tools for mockups, stamps, overlays, tags, and export-ready content.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://javii.tools/",
+    "docs": "https://javii.tools/",
+    "sourceCode": "",
+    "icon": "javii-tools",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "tools",
+      "mockups",
+      "social-content",
+      "svg"
+    ],
+    "atGlance": "Tiny visual tools for mockups, stamps, overlays, tags, and export-ready content.",
+    "fullDescription": "javiitools is kept as a design tools resource for quick content overlays, messaging mockups, stamps, tags, pixel effects, and transparent export workflows.",
+    "coreFeatures": [
+      {
+        "name": "Visual Utility Suite",
+        "description": "Groups small web tools for mockups, tags, overlays, stamps, and content effects.",
+        "icon": "check"
+      },
+      {
+        "name": "Export-Ready Assets",
+        "description": "Supports fast generation of transparent images and video-friendly visual overlays.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "postspark",
+        "name": "PostSpark",
+        "description": "PostSpark bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://postspark.app/"
+      },
+      {
+        "slug": "screenshot-studio",
+        "name": "Screenshot Studio",
+        "description": "Screenshot Studio bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://screenshot.studio/"
+      },
+      {
+        "slug": "rotato",
+        "name": "Rotato",
+        "description": "Rotato bookmarked for design tools resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://rotato.app/"
       }
     ]
   },
@@ -20077,6 +20480,109 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/"
+      }
+    ]
+  },
+  {
+    "slug": "iconly",
+    "name": "Iconly Pro",
+    "description": "Flat, 3D, and animated icon library for product teams.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Figma"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://iconly.pro/",
+    "docs": "https://iconly.pro/",
+    "sourceCode": "",
+    "icon": "iconly",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "figma",
+      "animated-icons",
+      "3d-icons"
+    ],
+    "atGlance": "Flat, 3D, and animated icon library for product teams.",
+    "fullDescription": "Iconly Pro is kept as an icons/svg resource for browsing, searching, and downloading flat, animated, and 3D icons for product design and implementation work.",
+    "coreFeatures": [
+      {
+        "name": "Icon Library",
+        "description": "Cataloged for reusable flat, animated, and 3D icon assets.",
+        "icon": "check"
+      },
+      {
+        "name": "Web and Figma Access",
+        "description": "Supports browser-based icon search plus a Figma plugin workflow.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multiple Export Formats",
+        "description": "Tracks a resource that supports formats such as SVG, PNG, JSX, and TSX.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Heroicons bookmarked for icons/svg resources.",
+        "stars": 23538,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/solid"
+      },
+      {
+        "slug": "thesvg",
+        "name": "theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers",
+        "description": "theSVG bookmarked for icons/svg resources.",
+        "stars": 2043,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://thesvg.org/"
+      },
+      {
+        "slug": "svglogo",
+        "name": "Free SVG Brand Logos - Download 4,100+ Vector Logos | SVGLogo",
+        "description": "SVGLogo bookmarked for icons/svg resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://svglogo.co/"
       }
     ]
   },
@@ -26390,6 +26896,109 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "buildship",
+    "name": "BuildShip",
+    "description": "AI-powered visual backend builder for APIs, workflows, and cloud functions.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://app.buildship.com/",
+    "docs": "https://docs.buildship.com/",
+    "sourceCode": "",
+    "icon": "buildship",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "ai",
+      "automation",
+      "backend",
+      "api"
+    ],
+    "atGlance": "AI-powered visual backend builder for APIs, workflows, and cloud functions.",
+    "fullDescription": "BuildShip is tracked as a cloud-hosted backend and AI workflow builder for creating scalable APIs, scheduled tasks, backend cloud functions, and integrations from a visual workflow editor.",
+    "coreFeatures": [
+      {
+        "name": "Visual Backend Builder",
+        "description": "Build APIs, scheduled jobs, cloud functions, and workflow logic from a browser workspace.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Workflow Support",
+        "description": "Uses AI-assisted flow and node generation for backend automation work.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Hosted Access",
+        "description": "The requested app entry point is saved as the primary website link.",
+        "icon": "check"
+      },
+      {
+        "name": "Documentation Path",
+        "description": "Official docs are linked for workflow, node, trigger, and deployment details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Tagged for both AI automation discovery and cloud hosting workflows.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs.",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI workflow automation platform for connecting apps and services.",
+        "stars": 190323,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
       }
     ]
   },

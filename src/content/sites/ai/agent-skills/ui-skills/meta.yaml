@@ -1,0 +1,77 @@
+slug: ui-skills
+name: UI Skills
+description: Curated agent skill directory for design engineers.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: agent-skills
+stars: 2236
+watchers: 6
+addedDaysAgo: 0
+license: MIT
+lastCommit: 12 days ago
+lastRelease: 4 months ago
+version: v0.1.5
+contributors: 1
+commitsThisYear: 108
+releases: 6
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.ui-skills.com/
+docs: https://www.ui-skills.com/
+sourceCode: https://github.com/ibelick/ui-skills
+icon: ui-skills
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - agent-skills
+  - design-engineering
+  - ui
+atGlance: Curated agent skill directory for design engineers.
+fullDescription: >-
+  UI Skills is a catalog of reusable AI agent skills focused on frontend design, accessibility,
+  motion performance, UI polish, and design-engineering workflows.
+coreFeatures:
+  - name: Agent Skill Discovery
+    description: Browse reusable skills for design-engineering and UI implementation work.
+    icon: check
+  - name: Design Engineering Focus
+    description: Includes skills for accessibility, motion, typography, components, and interface craft.
+    icon: check
+additionalFeatures:
+  - name: Open Source Directory
+    description: The directory source is available from the public GitHub repository.
+    icon: check
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged by AI category and agent-skills subcategory for browsing.
+    icon: check
+similarTools:
+  - slug: skills-sh
+    name: Skills
+    description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+    stars: 19541
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skills.sh/
+  - slug: skillfish
+    name: Skill.Fish
+    description: Skill manager and discovery catalog for AI coding agent skills.
+    stars: 262
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skill.fish/
+  - slug: awesomeskill
+    name: Awesome Skills
+    description: Agent skills marketplace for Claude Code, OpenAI Codex, and ChatGPT.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://awesomeskill.ai/

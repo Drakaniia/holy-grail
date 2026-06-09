@@ -1,0 +1,79 @@
+slug: buildship
+name: BuildShip
+description: AI-powered visual backend builder for APIs, workflows, and cloud functions.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+website: https://app.buildship.com/
+docs: https://docs.buildship.com/
+sourceCode: ""
+icon: buildship
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - ai
+  - automation
+  - backend
+  - api
+atGlance: AI-powered visual backend builder for APIs, workflows, and cloud functions.
+fullDescription: >-
+  BuildShip is tracked as a cloud-hosted backend and AI workflow builder for creating scalable
+  APIs, scheduled tasks, backend cloud functions, and integrations from a visual workflow editor.
+coreFeatures:
+  - name: Visual Backend Builder
+    description: Build APIs, scheduled jobs, cloud functions, and workflow logic from a browser workspace.
+    icon: check
+  - name: AI Workflow Support
+    description: Uses AI-assisted flow and node generation for backend automation work.
+    icon: check
+additionalFeatures:
+  - name: Hosted Access
+    description: The requested app entry point is saved as the primary website link.
+    icon: check
+  - name: Documentation Path
+    description: Official docs are linked for workflow, node, trigger, and deployment details.
+    icon: check
+  - name: Deployment Context
+    description: Tagged for both AI automation discovery and cloud hosting workflows.
+    icon: check
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs.
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
+  - slug: n8n
+    name: AI Workflow Automation Platform & Tools - n8n
+    description: AI workflow automation platform for connecting apps and services.
+    stars: 190323
+    addedDaysAgo: 0
+    verified: true
+    website: https://n8n.io/

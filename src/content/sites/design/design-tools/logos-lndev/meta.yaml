@@ -1,0 +1,77 @@
+slug: logos-lndev
+name: Logos by lndev
+description: Free SVG logo gallery for apps, dev tools, and tech brands.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 24
+watchers: 0
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 1 day ago
+lastRelease: No releases
+version: ""
+contributors: 1
+commitsThisYear: 44
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://logos.lndev.me/
+docs: https://logos.lndev.me/
+sourceCode: https://github.com/ln-dev7/logos-apps
+icon: logos-lndev
+verified: true
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - logos
+  - svg
+  - icons
+  - brand-assets
+atGlance: Free SVG logo gallery for apps, dev tools, and tech brands.
+fullDescription: >-
+  Logos by lndev is kept as a design tools resource for searching, filtering, copying, and
+  downloading clean SVG logos for apps, developer tools, and technology brands.
+coreFeatures:
+  - name: SVG Logo Gallery
+    description: Browse a large catalog of app, dev tool, and tech brand logos.
+    icon: check
+  - name: One-Click Asset Access
+    description: Supports quick copy and download workflows from the web gallery.
+    icon: check
+additionalFeatures:
+  - name: Open Source Collection
+    description: The logo collection is available from the public GitHub repository.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: svglogo
+    name: Free SVG Brand Logos - Download 4,100+ Vector Logos | SVGLogo
+    description: SVGLogo bookmarked for icons/svg resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://svglogo.co/
+  - slug: thesvg
+    name: theSVG - 5,652+ Free Brand SVG Icons for Developers and Designers
+    description: theSVG bookmarked for icons/svg resources.
+    stars: 2043
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/
+  - slug: allsvgicons
+    name: Best Free SVG Icon Packs for Product UI - 10 Reliable Picks for 2026 | All SVG Icons
+    description: All SVG Icons bookmarked for icons/svg resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/
