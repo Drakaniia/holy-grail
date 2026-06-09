@@ -67,7 +67,7 @@ watch(
           />
         </picture>
         <div
-          class="absolute inset-0 flex items-end justify-end bg-[#1f1f1f]/0 p-4 transition-colors group-hover:bg-[#1f1f1f]/20"
+          class="site-preview-overlay absolute inset-0 flex items-end justify-end p-4 transition-colors"
         >
           <span
             class="site-preview-visit-button inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-lg transition-all"
@@ -102,6 +102,14 @@ watch(
 </template>
 
 <style scoped>
+.site-preview-overlay {
+  background-color: transparent;
+}
+
+.group:hover .site-preview-overlay {
+  background-color: rgba(31, 31, 31, 0.2);
+}
+
 .site-preview-visit-button {
   border: 1px solid rgba(255, 255, 255, 0.22);
   background-color: rgba(0, 0, 0, 0.82);
@@ -122,6 +130,14 @@ watch(
   color: var(--mocha-text) !important;
   opacity: 1 !important;
   box-shadow: 0 14px 30px rgba(45, 33, 25, 0.18) !important;
+}
+
+:global(html.light .site-preview-overlay) {
+  background-color: transparent !important;
+}
+
+:global(html.light .group:hover .site-preview-overlay) {
+  background-color: rgba(45, 33, 25, 0.08) !important;
 }
 
 :global(html.light .group:hover .site-preview-visit-button) {

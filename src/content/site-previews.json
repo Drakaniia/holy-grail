@@ -300,11 +300,11 @@
   "base44": {
     "image": "/previews/base44.webp",
     "small": "/previews/base44-sm.webp",
-    "sourceUrl": "https://base44.com/",
-    "capturedAt": "2026-05-20T08:33:59.290Z",
+    "sourceUrl": "https://app.base44.com/",
+    "capturedAt": "2026-06-08T06:23:33.463Z",
     "width": 960,
     "height": 600,
-    "bytes": 20598
+    "bytes": 11184
   },
   "behance": {
     "image": "/previews/behance.webp",
