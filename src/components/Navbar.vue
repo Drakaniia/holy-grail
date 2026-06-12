@@ -46,6 +46,71 @@ const starLinkLabel = computed(() =>
     ? 'Open Holy Grail GitHub repository stars'
     : `Open Holy Grail GitHub repository with ${starCount.value.toLocaleString()} stars`,
 )
+const collectionLabels: Record<string, string> = {
+  '3d': '3D',
+  ai: 'AI',
+  anime: 'Anime',
+  api: 'API',
+  automation: 'Automation',
+  chat: 'Chat',
+  'cli-tools': 'CLI Tools',
+  'cloud-hosting': 'Cloud & Hosting',
+  design: 'Design',
+  'design-tools': 'Design Tools',
+  detector: 'Detector',
+  development: 'Development',
+  downloads: 'Downloads',
+  fonts: 'Fonts',
+  'game-download': 'Game Download',
+  icons: 'Icons',
+  'icons-svg': 'Icons/SVG',
+  image: 'Images',
+  inspiration: 'Inspiration',
+  learning: 'Learning',
+  mcp: 'MCP',
+  md: 'MD',
+  ml: 'Machine Learning',
+  monitoring: 'Monitoring',
+  movies: 'Movies',
+  others: 'Others',
+  ppt: 'PPT',
+  prompts: 'Prompts',
+  references: 'References',
+  repositories: 'Repositories',
+  'software-download': 'Software Download',
+  tooling: 'Tooling',
+  torrents: 'Torrents',
+  'ui-libraries': 'UI Libraries',
+  video: 'Videos',
+  'vfx-download': 'VFX Download',
+  watch: 'Watch',
+  wb: 'Website Development',
+}
+const currentSite = computed(() => {
+  if (route.name !== 'site-detail' || typeof route.params.slug !== 'string') {
+    return null
+  }
+
+  return sites.getSiteBySlug(route.params.slug) ?? null
+})
+const currentSiteCollectionTrail = computed(() => {
+  if (!currentSite.value) return []
+
+  const segments = currentSite.value.subcategory
+    ? [currentSite.value.parentCategory, currentSite.value.subcategory]
+    : [currentSite.value.parentCategory || currentSite.value.category]
+  const seenLabels = new Set<string>()
+
+  return segments
+    .map(formatCollectionLabel)
+    .filter(label => {
+      const key = label.toLowerCase()
+      if (!key || seenLabels.has(key)) return false
+
+      seenLabels.add(key)
+      return true
+    })
+})
 
 const isMac = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 const shortcutKey = isMac ? 'Cmd' : 'Ctrl'
@@ -73,6 +138,14 @@ function getRandomSiteCandidates() {
   }
 
   return sites.allSites
+}
+
+function formatCollectionLabel(value: string): string {
+  return collectionLabels[value] ?? value
+    .split(/[-_]/)
+    .filter(Boolean)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
 }
 
 async function openRandomSite() {
@@ -131,7 +204,7 @@ onUnmounted(() => {
   <nav
     class="sticky top-0 z-50 flex h-14 items-center justify-between border-b border-gray-800 bg-[#1f1f1f] px-3 text-white sm:px-4 md:h-12"
   >
-    <div class="flex min-w-0 items-center gap-2">
+    <div class="flex min-w-0 flex-1 items-center gap-2">
       <button
         type="button"
         class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-gray-800 bg-[#1f1f1f] text-gray-300 transition-colors hover:border-gray-700 hover:text-white md:hidden"
@@ -154,9 +227,33 @@ onUnmounted(() => {
         </svg>
         <span class="truncate">Holy Grail</span>
       </RouterLink>
+
+      <nav
+        v-if="currentSiteCollectionTrail.length"
+        class="hidden min-w-0 max-w-[18rem] items-center gap-1.5 rounded-md bg-[#1f1f1f] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-widest text-gray-500 sm:flex lg:max-w-none"
+        aria-label="Current site collection"
+      >
+        <template
+          v-for="(label, index) in currentSiteCollectionTrail"
+          :key="`${label}-${index}`"
+        >
+          <span
+            class="min-w-0 truncate"
+            :class="index === currentSiteCollectionTrail.length - 1 ? 'text-gray-300' : 'text-gray-500'"
+          >
+            {{ label }}
+          </span>
+          <span
+            v-if="index < currentSiteCollectionTrail.length - 1"
+            class="shrink-0 text-gray-700"
+          >
+            /
+          </span>
+        </template>
+      </nav>
     </div>
 
-    <div class="flex min-w-0 items-center gap-1.5 sm:gap-3 md:gap-4">
+    <div class="flex shrink-0 items-center gap-1.5 sm:gap-3 md:gap-4">
       <button
         type="button"
         class="group relative hidden h-8 w-60 items-center rounded-lg border border-gray-700 bg-[#1f1f1f] py-1 pl-9 pr-14 text-left text-sm transition-all hover:border-gray-600 hover:bg-[#1f1f1f] focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 md:flex"
