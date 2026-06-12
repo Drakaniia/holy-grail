@@ -7,6 +7,7 @@ import Footer from './components/Footer.vue'
 
 const CommandPalette = defineAsyncComponent(() => import('./components/search/CommandPalette.vue'))
 const Sidebar = defineAsyncComponent(() => import('./components/Sidebar.vue'))
+const SIDEBAR_COLLAPSED_STORAGE_KEY = 'holy-grail-sidebar-collapsed'
 const route = useRoute()
 const isAuthRoute = computed(
   () => route.name === 'login' || route.name === 'signup' || route.name === 'auth-callback',
@@ -21,12 +22,40 @@ const isStandaloneRoute = computed(
 const shouldRenderAppShell = computed(
   () => !isAuthRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
 )
+const isSidebarCollapsed = shallowRef(getStoredSidebarCollapsed())
+const shouldReserveCollapsedRail = shallowRef(false)
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
 const isDesktopShell = shallowRef(
   typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches,
 )
+const COLLAPSED_RAIL_WIDTH_PX = 72
+const COLLAPSED_RAIL_COLLISION_BUFFER_PX = 4
 let removeDesktopShellListener: (() => void) | undefined
+let collapsedRailReservationFrame: number | undefined
+
+function getStoredSidebarCollapsed() {
+  if (typeof window === 'undefined') {
+    return false
+  }
+
+  try {
+    return window.localStorage.getItem(SIDEBAR_COLLAPSED_STORAGE_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
+function persistSidebarCollapsed(collapsed: boolean) {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  try {
+    window.localStorage.setItem(SIDEBAR_COLLAPSED_STORAGE_KEY, String(collapsed))
+  } catch {
+  }
+}
 
 function closeMobileSidebar() {
   isMobileSidebarOpen.value = false
@@ -42,6 +71,50 @@ function openCommandPalette() {
   isCommandPaletteOpen.value = true
 }
 
+function getFirstVisibleSiteCard() {
+  if (typeof document === 'undefined') {
+    return null
+  }
+
+  return (
+    Array.from(document.querySelectorAll<HTMLElement>('.site-card')).find((card) => {
+      const rect = card.getBoundingClientRect()
+
+      return rect.width > 0 && rect.height > 0
+    }) ?? null
+  )
+}
+
+function updateCollapsedRailReservation() {
+  if (typeof window === 'undefined' || !isDesktopShell.value || !isSidebarCollapsed.value) {
+    shouldReserveCollapsedRail.value = false
+    return
+  }
+
+  if (collapsedRailReservationFrame !== undefined) {
+    window.cancelAnimationFrame(collapsedRailReservationFrame)
+  }
+
+  collapsedRailReservationFrame = window.requestAnimationFrame(() => {
+    collapsedRailReservationFrame = undefined
+    const firstVisibleCard = getFirstVisibleSiteCard()
+
+    shouldReserveCollapsedRail.value = firstVisibleCard
+      ? firstVisibleCard.getBoundingClientRect().left <
+        COLLAPSED_RAIL_WIDTH_PX + COLLAPSED_RAIL_COLLISION_BUFFER_PX
+      : false
+  })
+}
+
+function clearCollapsedRailReservation() {
+  if (typeof window !== 'undefined' && collapsedRailReservationFrame !== undefined) {
+    window.cancelAnimationFrame(collapsedRailReservationFrame)
+    collapsedRailReservationFrame = undefined
+  }
+
+  shouldReserveCollapsedRail.value = false
+}
+
 function handleGlobalShortcut(event: KeyboardEvent) {
   const key = event.key.toLowerCase()
 
@@ -51,10 +124,13 @@ function handleGlobalShortcut(event: KeyboardEvent) {
   }
 }
 
+watch(isSidebarCollapsed, persistSidebarCollapsed)
+
 watch(
   () => route.fullPath,
   () => {
     closeMobileSidebar()
+    clearCollapsedRailReservation()
     isCommandPaletteOpen.value = false
   },
 )
@@ -76,6 +152,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleGlobalShortcut)
+  clearCollapsedRailReservation()
   removeDesktopShellListener?.()
 })
 </script>
@@ -84,8 +161,35 @@ onUnmounted(() => {
   <RouterView v-if="isAuthRoute || isStandaloneRoute" />
 
   <div v-else-if="shouldRenderAppShell" class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white">
-    <div v-if="isDesktopShell" class="hidden h-full w-64 shrink-0 md:block">
-      <Sidebar />
+    <div
+      v-if="isDesktopShell && !isSidebarCollapsed"
+      class="hidden h-full w-64 min-w-0 shrink-0 md:block"
+    >
+      <Sidebar
+        @toggle-collapsed="isSidebarCollapsed = true"
+      />
+    </div>
+
+    <div
+      v-else-if="isDesktopShell"
+      class="sidebar-edge-shell group relative z-[70] hidden h-full shrink-0 md:block"
+      :class="{ 'sidebar-edge-shell--reserve': shouldReserveCollapsedRail }"
+      aria-label="Collapsed navigation hover zone"
+      @pointerenter="updateCollapsedRailReservation"
+      @pointerleave="clearCollapsedRailReservation"
+      @focusin="updateCollapsedRailReservation"
+      @focusout="clearCollapsedRailReservation"
+    >
+      <div class="sidebar-edge-hitbox absolute inset-y-0 left-0 z-[72] w-3"></div>
+      <div
+        class="sidebar-hover-rail relative z-[80] h-full w-[4.5rem] -translate-x-full opacity-0 transition duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100"
+      >
+        <Sidebar
+          collapsed
+          @toggle-collapsed="isSidebarCollapsed = false"
+          @open-search="openCommandPalette"
+        />
+      </div>
     </div>
 
     <Transition name="mobile-sidebar">
@@ -152,5 +256,32 @@ onUnmounted(() => {
 .mobile-sidebar-enter-from > div,
 .mobile-sidebar-leave-to > div {
   transform: translateX(-100%);
+}
+
+.sidebar-edge-shell {
+  width: 0.75rem;
+  overflow: visible;
+  transition: width 200ms ease;
+}
+
+.sidebar-edge-shell--reserve:hover,
+.sidebar-edge-shell--reserve:has(:focus-visible) {
+  width: 4.5rem;
+}
+
+.sidebar-edge-shell:has(:focus-visible) .sidebar-hover-rail {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar-edge-hitbox {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-edge-shell,
+  .sidebar-hover-rail {
+    transition: none;
+  }
 }
 </style>

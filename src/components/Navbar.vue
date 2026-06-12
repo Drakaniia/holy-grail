@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Menu, Moon, Search, Shuffle, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
+import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useSitesStore, type Site } from '@/stores/sites'
 import { useTheme } from '@/composables/useTheme'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
@@ -112,8 +112,8 @@ const currentSiteCollectionTrail = computed(() => {
     })
 })
 
-const isMac = typeof window !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform)
-const shortcutKey = isMac ? 'Cmd' : 'Ctrl'
+const shortcutKey = '⌘'
+const shortcutAriaKey = 'Control+K Meta+K'
 let cancelStarCountLoad: (() => void) | undefined
 
 interface GitHubRepositoryResponse {
@@ -254,29 +254,24 @@ onUnmounted(() => {
     </div>
 
     <div class="flex shrink-0 items-center gap-1.5 sm:gap-3 md:gap-4">
-      <button
-        type="button"
-        class="group relative hidden h-8 w-60 items-center rounded-lg border border-gray-700 bg-[#1f1f1f] py-1 pl-9 pr-14 text-left text-sm transition-all hover:border-gray-600 hover:bg-[#1f1f1f] focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 md:flex"
-        aria-label="Open smart search"
-        @click="emit('openSearch')"
-      >
-        <span class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
-          <Search
-            class="h-3.5 w-3.5 text-gray-500 transition-colors group-focus-within:text-accent-400"
-          />
+      <div class="navbar-search hidden md:flex" role="search">
+        <Search class="navbar-search__icon" />
+        <input
+          type="search"
+          readonly
+          class="navbar-search__input"
+          placeholder="Search sites, skills, docs..."
+          aria-label="Open smart search"
+          :aria-keyshortcuts="shortcutAriaKey"
+          @click="emit('openSearch')"
+          @focus="emit('openSearch')"
+          @keydown.enter.prevent="emit('openSearch')"
+        />
+        <span class="navbar-search__shortcut" aria-hidden="true">
+          <kbd>{{ shortcutKey }}</kbd>
+          <kbd>K</kbd>
         </span>
-        <span class="min-w-0 truncate text-gray-500 transition-colors group-hover:text-gray-300">
-          Search sites...
-        </span>
-        <span class="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-          <span
-            class="flex items-center rounded border border-gray-700 bg-[#1f1f1f] px-1 font-mono text-[10px] text-gray-500"
-          >
-            <span class="mr-0.5">{{ shortcutKey }}</span>
-            K
-          </span>
-        </span>
-      </button>
+      </div>
 
       <button
         type="button"
@@ -291,11 +286,11 @@ onUnmounted(() => {
       <button
         type="button"
         class="nav-icon-button nav-icon-button--light-white tooltip-shell hidden sm:inline-flex"
-        aria-label="Open random sites"
+        aria-label="Open random Grail"
         @click="openRandomSite"
       >
-        <Shuffle class="h-4 w-4" />
-        <span class="tooltip-bubble">Open random sites</span>
+        <Sparkles class="h-4 w-4" />
+        <span class="tooltip-bubble">Open random Grail</span>
       </button>
 
       <a
@@ -366,9 +361,9 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  border: 1px solid #1f1f1f;
-  background: #1f1f1f;
-  color: #9ca3af;
+  border: 1px solid #3a3a3a;
+  background: #272727;
+  color: #b7bcc4;
   transition:
     border-color 160ms ease,
     background-color 160ms ease,
@@ -377,9 +372,115 @@ onUnmounted(() => {
 }
 
 .nav-icon-button:hover {
-  border-color: #374151;
-  background: #1f1f1f;
+  border-color: #4b5563;
+  background: #303030;
   color: #ffffff;
+}
+
+.navbar-search {
+  position: relative;
+  height: 2.25rem;
+  width: min(22rem, 34vw);
+  align-items: center;
+}
+
+.navbar-search__icon {
+  pointer-events: none;
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  height: 0.875rem;
+  width: 0.875rem;
+  transform: translateY(-50%);
+  color: #8b929d;
+  transition: color 160ms ease;
+}
+
+.navbar-search__input {
+  height: 100%;
+  width: 100%;
+  cursor: text;
+  border-radius: 0.5rem;
+  border: 1px solid #3a3a3a;
+  background: #272727;
+  padding: 0 4.7rem 0 2.35rem;
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.navbar-search__input::placeholder {
+  color: #8b929d;
+}
+
+.navbar-search:hover .navbar-search__input,
+.navbar-search__input:focus-visible {
+  border-color: #4b5563;
+  background: #303030;
+}
+
+.navbar-search:hover .navbar-search__icon,
+.navbar-search:focus-within .navbar-search__icon {
+  color: #ff8c1a;
+}
+
+.navbar-search__shortcut {
+  pointer-events: none;
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+  display: flex;
+  height: 1.25rem;
+  align-items: center;
+  gap: 0.2rem;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.navbar-search__shortcut kbd {
+  display: grid;
+  box-sizing: border-box;
+  height: 1.25rem;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  place-items: center;
+  border-radius: 0.375rem;
+  border: 0;
+  background: #303030;
+  padding: 0;
+  text-align: center;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.navbar-search__shortcut kbd:first-child {
+  font-family:
+    'Segoe UI Symbol',
+    'Apple Symbols',
+    'Noto Sans Symbols',
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transform: translateY(0.03125rem);
+}
+
+.navbar-search__shortcut kbd:last-child {
+  font-size: 0.625rem;
 }
 
 .tooltip-shell {
@@ -397,8 +498,8 @@ onUnmounted(() => {
   transform: translate(-50%, -0.25rem);
   white-space: nowrap;
   border-radius: 0.375rem;
-  border: 1px solid #374151;
-  background: #1f1f1f;
+  border: 1px solid #3f3f46;
+  background: #27272a;
   padding: 0.35rem 0.5rem;
   color: #e5e7eb;
   font-size: 0.75rem;
@@ -412,7 +513,7 @@ onUnmounted(() => {
 }
 
 .tooltip-shell:hover .tooltip-bubble,
-.tooltip-shell:focus-within .tooltip-bubble {
+.tooltip-shell:has(:focus-visible) .tooltip-bubble {
   opacity: 1;
   transform: translate(-50%, 0);
 }
@@ -452,12 +553,10 @@ onUnmounted(() => {
 @keyframes star-breathe {
   0%,
   100% {
-    filter: drop-shadow(0 0 0 rgba(234, 179, 8, 0));
     transform: scale(1) rotate(0deg);
   }
 
   50% {
-    filter: drop-shadow(0 0 7px rgba(234, 179, 8, 0.55));
     transform: scale(1.12) rotate(8deg);
   }
 }
