@@ -22,7 +22,9 @@ const isStandaloneRoute = computed(
 const shouldRenderAppShell = computed(
   () => !isAuthRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
 )
-const isSidebarCollapsed = shallowRef(getStoredSidebarCollapsed())
+const storedSidebarCollapsed = getStoredSidebarCollapsed()
+const isSidebarCollapsed = shallowRef(storedSidebarCollapsed)
+const isSidebarContentCollapsed = shallowRef(storedSidebarCollapsed)
 const shouldReserveCollapsedRail = shallowRef(false)
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
@@ -31,8 +33,10 @@ const isDesktopShell = shallowRef(
 )
 const COLLAPSED_RAIL_WIDTH_PX = 72
 const COLLAPSED_RAIL_COLLISION_BUFFER_PX = 4
+const SIDEBAR_WIPE_DURATION_MS = 220
 let removeDesktopShellListener: (() => void) | undefined
 let collapsedRailReservationFrame: number | undefined
+let sidebarContentCollapseTimer: number | undefined
 
 function getStoredSidebarCollapsed() {
   if (typeof window === 'undefined') {
@@ -53,8 +57,7 @@ function persistSidebarCollapsed(collapsed: boolean) {
 
   try {
     window.localStorage.setItem(SIDEBAR_COLLAPSED_STORAGE_KEY, String(collapsed))
-  } catch {
-  }
+  } catch {}
 }
 
 function closeMobileSidebar() {
@@ -115,6 +118,40 @@ function clearCollapsedRailReservation() {
   shouldReserveCollapsedRail.value = false
 }
 
+function clearSidebarContentCollapseTimer() {
+  if (typeof window !== 'undefined' && sidebarContentCollapseTimer !== undefined) {
+    window.clearTimeout(sidebarContentCollapseTimer)
+    sidebarContentCollapseTimer = undefined
+  }
+}
+
+function setSidebarCollapsed(collapsed: boolean) {
+  clearSidebarContentCollapseTimer()
+
+  if (collapsed) {
+    isSidebarCollapsed.value = true
+
+    if (typeof window === 'undefined') {
+      isSidebarContentCollapsed.value = true
+      return
+    }
+
+    sidebarContentCollapseTimer = window.setTimeout(() => {
+      isSidebarContentCollapsed.value = true
+      sidebarContentCollapseTimer = undefined
+    }, SIDEBAR_WIPE_DURATION_MS)
+    return
+  }
+
+  isSidebarContentCollapsed.value = false
+  isSidebarCollapsed.value = false
+  clearCollapsedRailReservation()
+}
+
+function toggleSidebarCollapsed() {
+  setSidebarCollapsed(!isSidebarCollapsed.value)
+}
+
 function handleGlobalShortcut(event: KeyboardEvent) {
   const key = event.key.toLowerCase()
 
@@ -153,6 +190,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('keydown', handleGlobalShortcut)
   clearCollapsedRailReservation()
+  clearSidebarContentCollapseTimer()
   removeDesktopShellListener?.()
 })
 </script>
@@ -160,33 +198,35 @@ onUnmounted(() => {
 <template>
   <RouterView v-if="isAuthRoute || isStandaloneRoute" />
 
-  <div v-else-if="shouldRenderAppShell" class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white">
+  <div
+    v-else-if="shouldRenderAppShell"
+    class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white"
+  >
     <div
-      v-if="isDesktopShell && !isSidebarCollapsed"
-      class="hidden h-full w-64 min-w-0 shrink-0 md:block"
-    >
-      <Sidebar
-        @toggle-collapsed="isSidebarCollapsed = true"
-      />
-    </div>
-
-    <div
-      v-else-if="isDesktopShell"
-      class="sidebar-edge-shell group relative z-[70] hidden h-full shrink-0 md:block"
-      :class="{ 'sidebar-edge-shell--reserve': shouldReserveCollapsedRail }"
-      aria-label="Collapsed navigation hover zone"
+      v-if="isDesktopShell"
+      class="desktop-sidebar-shell group relative z-[70] hidden h-full min-w-0 shrink-0 md:block"
+      :class="{
+        'desktop-sidebar-shell--collapsed': isSidebarCollapsed,
+        'desktop-sidebar-shell--rail-ready': isSidebarContentCollapsed,
+        'desktop-sidebar-shell--reserve': shouldReserveCollapsedRail,
+      }"
+      aria-label="Main navigation"
       @pointerenter="updateCollapsedRailReservation"
       @pointerleave="clearCollapsedRailReservation"
       @focusin="updateCollapsedRailReservation"
       @focusout="clearCollapsedRailReservation"
     >
-      <div class="sidebar-edge-hitbox absolute inset-y-0 left-0 z-[72] w-3"></div>
       <div
-        class="sidebar-hover-rail relative z-[80] h-full w-[4.5rem] -translate-x-full opacity-0 transition duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100"
+        v-if="isSidebarCollapsed"
+        class="sidebar-edge-hitbox absolute inset-y-0 left-0 z-[72] w-3"
+      ></div>
+      <div
+        class="desktop-sidebar-panel relative z-[80] h-full"
+        :class="{ 'desktop-sidebar-panel--rail': isSidebarContentCollapsed }"
       >
         <Sidebar
-          collapsed
-          @toggle-collapsed="isSidebarCollapsed = false"
+          :collapsed="isSidebarContentCollapsed"
+          @toggle-collapsed="toggleSidebarCollapsed"
           @open-search="openCommandPalette"
         />
       </div>
@@ -258,29 +298,71 @@ onUnmounted(() => {
   transform: translateX(-100%);
 }
 
-.sidebar-edge-shell {
+.desktop-sidebar-shell {
+  width: 16rem;
+  overflow: hidden;
+  transition: width 220ms ease;
+}
+
+.desktop-sidebar-shell--collapsed {
   width: 0.75rem;
-  overflow: visible;
-  transition: width 200ms ease;
 }
 
-.sidebar-edge-shell--reserve:hover,
-.sidebar-edge-shell--reserve:has(:focus-visible) {
+.desktop-sidebar-panel {
+  width: 16rem;
+  max-width: 16rem;
+}
+
+.desktop-sidebar-panel--rail {
   width: 4.5rem;
+  max-width: 4.5rem;
 }
 
-.sidebar-edge-shell:has(:focus-visible) .sidebar-hover-rail {
-  opacity: 1;
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready .desktop-sidebar-panel {
+  pointer-events: none;
+  transform: translateX(calc(-100% + 0.75rem));
+  transition: transform 180ms ease;
+  will-change: transform;
+}
+
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:hover,
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:has(:focus-visible) {
+  overflow: visible;
+}
+
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:hover .desktop-sidebar-panel,
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:has(:focus-visible)
+  .desktop-sidebar-panel {
+  animation: sidebar-rail-wipe-in 180ms ease both;
+  pointer-events: auto;
   transform: translateX(0);
+}
+
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready.desktop-sidebar-shell--reserve:hover,
+.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready.desktop-sidebar-shell--reserve:has(
+    :focus-visible
+  ) {
+  width: 4.5rem;
 }
 
 .sidebar-edge-hitbox {
   background: transparent;
 }
 
+@keyframes sidebar-rail-wipe-in {
+  from {
+    transform: translateX(calc(-100% + 0.75rem));
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .sidebar-edge-shell,
-  .sidebar-hover-rail {
+  .desktop-sidebar-shell,
+  .desktop-sidebar-panel {
+    animation: none;
     transition: none;
   }
 }
