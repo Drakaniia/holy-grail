@@ -40,3 +40,4 @@
     - Add filter by creator in skills
     - List and Boxes feature.
     - Auto update site image every 15 days- auto push
+    - Add Recoomended browser extention
