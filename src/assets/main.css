@@ -203,6 +203,55 @@ html.light .border-transparent.theme-toggle {
   border-color: var(--mocha-border) !important;
 }
 
+html.light .app-sidebar,
+html.light .app-sidebar [class*='border-gray-'],
+html.light .app-sidebar [class*='border-zinc-'] {
+  border-color: transparent !important;
+}
+
+html.light .app-sidebar {
+  border-right-color: var(--mocha-border) !important;
+}
+
+html.light .app-sidebar,
+html.light .app-sidebar .sidebar-rail-flyout,
+html.light .app-sidebar .sidebar-rail-tooltip {
+  background: var(--mocha-surface) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light .app-sidebar .sidebar-rail-flyout,
+html.light .app-sidebar .sidebar-rail-tooltip {
+  border-color: transparent !important;
+  box-shadow: 0 18px 48px rgba(83, 55, 33, 0.16) !important;
+}
+
+html.light .app-sidebar .sidebar-collapse-button {
+  border-color: transparent !important;
+  background: transparent !important;
+  color: var(--mocha-muted) !important;
+}
+
+html.light .app-sidebar .sidebar-collapse-button:hover,
+html.light .app-sidebar .sidebar-collapse-button:focus-visible,
+html.light .app-sidebar .sidebar-rail-group:hover > .sidebar-rail-button,
+html.light .app-sidebar .sidebar-rail-group:has(:focus-visible) > .sidebar-rail-button,
+html.light .app-sidebar .sidebar-rail-button:hover,
+html.light .app-sidebar .sidebar-rail-button:focus-visible {
+  background: rgba(255, 140, 26, 0.12) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light .app-sidebar .sidebar-flyout-link:hover,
+html.light .app-sidebar .sidebar-flyout-link:focus-visible {
+  background: rgba(255, 140, 26, 0.12) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light .app-sidebar .bg-white {
+  background-color: var(--mocha-text) !important;
+}
+
 html.light .theme-toggle {
   background:
     linear-gradient(135deg, rgba(255, 140, 26, 0.14), transparent 60%),
@@ -250,14 +299,60 @@ html.light .anonymous-submit-notice svg {
   color: #cc6100 !important;
 }
 
+html.light .nav-icon-button,
 html.light .nav-icon-button--light-white {
-  border-color: #1f1f1f !important;
-  background: #1f1f1f !important;
-  color: #ffffff !important;
+  border-color: var(--mocha-border) !important;
+  background: var(--mocha-surface) !important;
+  color: var(--mocha-muted) !important;
 }
 
+html.light .nav-icon-button:hover,
+html.light .nav-icon-button:focus-visible,
 html.light .nav-icon-button--light-white:hover {
-  border-color: #ff8c1a !important;
-  background: #1f1f1f !important;
-  color: #ffffff !important;
+  border-color: var(--mocha-border-strong) !important;
+  background: var(--mocha-surface-strong) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light .github-stars {
+  border: 1px solid var(--mocha-border) !important;
+  background: var(--mocha-surface) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light .github-stars:hover {
+  border-color: var(--mocha-border-strong) !important;
+  background: var(--mocha-surface-strong) !important;
+}
+
+html.light .navbar-search__input {
+  border-color: var(--mocha-border) !important;
+  background: var(--mocha-surface) !important;
+  color: var(--mocha-text) !important;
+}
+
+html.light .navbar-search__input::placeholder {
+  color: var(--mocha-muted) !important;
+}
+
+html.light .navbar-search:hover .navbar-search__input,
+html.light .navbar-search__input:focus-visible {
+  border-color: var(--mocha-border-strong) !important;
+  background: var(--mocha-surface-strong) !important;
+}
+
+html.light .navbar-search__icon,
+html.light .navbar-search__shortcut {
+  color: var(--mocha-muted) !important;
+}
+
+html.light .navbar-search:hover .navbar-search__icon,
+html.light .navbar-search:focus-within .navbar-search__icon {
+  color: var(--mocha-text) !important;
+}
+
+html.light .navbar-search__shortcut kbd {
+  border: 0 !important;
+  background: rgba(255, 255, 255, 0.55) !important;
+  color: var(--mocha-text) !important;
 }

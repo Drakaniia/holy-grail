@@ -34,6 +34,8 @@ import {
   Server,
   Shapes,
   ShieldCheck,
+  SquareChevronLeft,
+  SquareChevronRight,
   Sparkles,
   Terminal,
   Type,
@@ -55,6 +57,18 @@ const SidebarAccountMenu = defineAsyncComponent(
 )
 
 const route = useRoute()
+const props = withDefaults(
+  defineProps<{
+    collapsed?: boolean
+  }>(),
+  {
+    collapsed: false,
+  },
+)
+const emit = defineEmits<{
+  toggleCollapsed: []
+  openSearch: []
+}>()
 const { isAuthenticated } = useDeferredAuthStatus()
 const admin = shallowRef<AdminStore | null>(null)
 const sitesStore = useSitesStore()
@@ -71,6 +85,19 @@ interface SidebarNavItem {
   icon: typeof Server
   route: string
 }
+
+interface SidebarNavGroup {
+  name: string
+  icon: typeof Server
+  route: string
+  group: SiteGroup
+  items: SidebarNavItem[]
+}
+
+const isCollapsed = computed(() => props.collapsed)
+const sidebarToggleLabel = computed(() =>
+  isCollapsed.value ? 'Expand sidebar' : 'Collapse sidebar',
+)
 
 const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   ai: true,
@@ -190,6 +217,32 @@ const siteSubcategoryGroups = [
   { parentCategory: 'watch', items: watchSubcategories },
   { parentCategory: 'downloads', items: downloadsSubcategories },
 ] satisfies { parentCategory: SiteGroup; items: SidebarNavItem[] }[]
+
+const siteGroupNav = [
+  { name: 'AI', icon: Bot, route: '/sites/ai', group: 'ai', items: aiSubcategories },
+  {
+    name: 'Design',
+    icon: Palette,
+    route: '/sites/design',
+    group: 'design',
+    items: designSubcategories,
+  },
+  {
+    name: 'Development',
+    icon: Code2,
+    route: '/sites/development',
+    group: 'development',
+    items: developmentSubcategories,
+  },
+  { name: 'Watch', icon: Film, route: '/sites/watch', group: 'watch', items: watchSubcategories },
+  {
+    name: 'Downloads',
+    icon: Download,
+    route: '/sites/downloads',
+    group: 'downloads',
+    items: downloadsSubcategories,
+  },
+] satisfies SidebarNavGroup[]
 
 const siteGroupCounts = computed<Record<SiteGroup, number>>(() => ({
   ai: sitesStore.getSitesByParentCategory('ai').length,
@@ -370,11 +423,42 @@ const showSkillsSection = computed(
   () => showAllSkillsTabs.value || visibleSkillsNav.value.length > 0,
 )
 
+const visibleCompactSiteGroups = computed(() =>
+  siteGroupNav.filter((group) => {
+    if (group.group === 'ai') return showAiGroup.value
+    if (group.group === 'design') return showDesignGroup.value
+    if (group.group === 'development') return showDevelopmentGroup.value
+    if (group.group === 'watch') return showWatchGroup.value
+    return showDownloadsGroup.value
+  }),
+)
+
+const totalSkillCount = computed(() =>
+  visibleSkillsNav.value.reduce((total, item) => total + getSkillRouteCount(item.route), 0),
+)
+
 const hasVisibleSidebarTabs = computed(() => showSitesSection.value || showSkillsSection.value)
 
-const clearSidebarSearch = () => {
+function clearSidebarSearch() {
   sidebarSearch.value = ''
 }
+
+function toggleSidebarCollapsed() {
+  emit('toggleCollapsed')
+}
+
+function openSearchFromRail() {
+  emit('openSearch')
+}
+
+watch(
+  () => props.collapsed,
+  (collapsed) => {
+    if (collapsed) {
+      clearSidebarSearch()
+    }
+  },
+)
 
 function loadSkillsCounts() {
   void skillsStore.loadSkills()
@@ -438,22 +522,46 @@ onUnmounted(() => {
 
 <template>
   <aside
-    class="flex h-full w-64 select-none flex-col overflow-visible border-r border-gray-800 bg-[#1f1f1f]"
+    class="app-sidebar flex h-full w-full select-none flex-col overflow-visible border-r border-gray-800 bg-[#1f1f1f]"
+    :class="{ 'app-sidebar--collapsed': isCollapsed }"
   >
-    <div class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800 px-2">
-      <SidebarAccountMenu v-if="isAuthenticated" />
+    <div
+      class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800"
+      :class="isCollapsed ? 'justify-center px-2' : 'gap-1 px-2'"
+    >
+      <template v-if="!isCollapsed">
+        <SidebarAccountMenu v-if="isAuthenticated" />
 
-      <RouterLink v-else to="/" class="flex items-center gap-2 px-2">
-        <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-          />
-        </svg>
-        <span class="font-bold text-sm tracking-tight text-white uppercase">Holy Grail</span>
-      </RouterLink>
+        <RouterLink
+          v-else
+          to="/"
+          class="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 text-white transition-colors hover:bg-accent-500/10"
+          aria-label="Holy Grail home"
+        >
+          <svg class="h-5 w-5 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
+            />
+          </svg>
+          <span class="truncate text-sm font-bold tracking-tight uppercase">
+            Holy Grail
+          </span>
+        </RouterLink>
+      </template>
+
+      <button
+        type="button"
+        class="sidebar-collapse-button"
+        :aria-label="sidebarToggleLabel"
+        :title="sidebarToggleLabel"
+        @click="toggleSidebarCollapsed"
+      >
+        <SquareChevronRight v-if="isCollapsed" class="h-4 w-4" />
+        <SquareChevronLeft v-else class="h-4 w-4" />
+      </button>
     </div>
 
-    <div class="shrink-0 border-b border-gray-800 px-3 py-3">
+    <div v-if="!isCollapsed" class="shrink-0 border-b border-gray-800 px-3 py-3">
       <label class="sr-only" for="sidebar-tab-search">Search sidebar tabs</label>
       <div class="relative">
         <Search
@@ -481,7 +589,141 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <nav class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
+    <nav
+      v-if="isCollapsed"
+      class="min-h-0 flex-1 overflow-visible px-2 py-3"
+      aria-label="Collapsed navigation"
+    >
+      <ul class="space-y-1">
+        <li>
+          <button
+            type="button"
+            class="sidebar-rail-button sidebar-rail-button--plain"
+            aria-label="Search tabs"
+            @click="openSearchFromRail"
+          >
+            <Search class="h-4 w-4" />
+            <span class="sidebar-rail-tooltip">Search tabs</span>
+          </button>
+        </li>
+
+        <li
+          v-for="group in visibleCompactSiteGroups"
+          :key="group.group"
+          class="sidebar-rail-group"
+        >
+          <RouterLink
+            :to="group.route"
+            class="sidebar-rail-button"
+            :class="
+              isActive(group.route, false)
+                ? 'text-white'
+                : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+            "
+            :aria-label="`${group.name} sites`"
+          >
+            <span
+              v-if="isActive(group.route, false)"
+              class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
+            ></span>
+            <component :is="group.icon" class="h-4 w-4" />
+          </RouterLink>
+
+          <div class="sidebar-rail-flyout">
+            <div class="border-b border-gray-800 px-3 py-2">
+              <div class="flex items-center gap-2">
+                <component :is="group.icon" class="h-4 w-4 text-gray-400" />
+                <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
+                  {{ group.name }}
+                </span>
+                <span class="rounded px-1.5 text-[10px] font-semibold text-gray-500">
+                  {{ getSiteGroupCount(group.group) }}
+                </span>
+              </div>
+            </div>
+
+            <div class="custom-scrollbar max-h-[min(30rem,calc(100vh-7rem))] overflow-y-auto p-2">
+              <RouterLink
+                v-for="item in group.items"
+                :key="item.name"
+                :to="item.route"
+                class="sidebar-flyout-link"
+                :class="
+                  isActive(item.route)
+                    ? 'bg-[#1f1f1f] text-white'
+                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+                "
+              >
+                <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
+                <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
+                <span
+                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
+                >
+                  {{ getSiteRouteCount(item.route) }}
+                </span>
+              </RouterLink>
+            </div>
+          </div>
+        </li>
+
+        <li v-if="showSkillsSection" class="sidebar-rail-group pt-3">
+          <RouterLink
+            to="/skills/skills"
+            class="sidebar-rail-button"
+            :class="
+              isActive('/skills', false)
+                ? 'text-white'
+                : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+            "
+            aria-label="Skills"
+          >
+            <span
+              v-if="isActive('/skills', false)"
+              class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
+            ></span>
+            <Sparkles class="h-4 w-4" />
+          </RouterLink>
+
+          <div class="sidebar-rail-flyout">
+            <div class="border-b border-gray-800 px-3 py-2">
+              <div class="flex items-center gap-2">
+                <Sparkles class="h-4 w-4 text-gray-400" />
+                <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
+                  Skills
+                </span>
+                <span class="rounded px-1.5 text-[10px] font-semibold text-gray-500">
+                  {{ totalSkillCount }}
+                </span>
+              </div>
+            </div>
+
+            <div class="p-2">
+              <RouterLink
+                v-for="item in visibleSkillsNav"
+                :key="item.name"
+                :to="item.route"
+                class="sidebar-flyout-link"
+                :class="
+                  isActive(item.route)
+                    ? 'bg-[#1f1f1f] text-white'
+                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+                "
+              >
+                <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
+                <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
+                <span
+                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
+                >
+                  {{ getSkillRouteCount(item.route) }}
+                </span>
+              </RouterLink>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <nav v-else class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
       <ul class="space-y-0.5 px-4">
         <template v-if="showSitesSection">
           <li v-if="showAiGroup">
@@ -899,7 +1141,70 @@ onUnmounted(() => {
       </ul>
     </nav>
 
-    <div class="shrink-0 space-y-1 border-t border-gray-800 p-4">
+    <div v-if="isCollapsed" class="shrink-0 space-y-1 border-t border-gray-800 p-2">
+      <RouterLink
+        to="/"
+        class="sidebar-rail-button"
+        :class="
+          isActive('/')
+            ? 'text-white'
+            : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+        "
+        aria-label="Home"
+      >
+        <span
+          v-if="isActive('/')"
+          class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
+        ></span>
+        <Home class="h-4 w-4" />
+        <span class="sidebar-rail-tooltip">Home</span>
+      </RouterLink>
+
+      <RouterLink
+        to="/publish"
+        class="sidebar-rail-button"
+        :class="
+          isActive('/publish') || isActive('/submit')
+            ? 'text-white'
+            : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+        "
+        aria-label="Publish"
+      >
+        <span
+          v-if="isActive('/publish') || isActive('/submit')"
+          class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
+        ></span>
+        <Send class="h-4 w-4" />
+        <span class="sidebar-rail-tooltip">Publish</span>
+      </RouterLink>
+
+      <RouterLink
+        v-if="isAdmin"
+        to="/admin"
+        class="sidebar-rail-button"
+        :class="
+          isActive('/admin')
+            ? 'text-white'
+            : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+        "
+        aria-label="Admin"
+      >
+        <span
+          v-if="isActive('/admin')"
+          class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
+        ></span>
+        <ShieldCheck class="h-4 w-4" />
+        <span
+          v-if="pendingAdminCount > 0"
+          class="absolute -right-0.5 -top-0.5 h-4 min-w-[1rem] rounded-full bg-amber-500 px-1 text-center text-[9px] font-bold leading-4 text-[#1f1f1f]"
+        >
+          {{ pendingAdminCount }}
+        </span>
+        <span class="sidebar-rail-tooltip">Admin</span>
+      </RouterLink>
+    </div>
+
+    <div v-else class="shrink-0 space-y-1 border-t border-gray-800 p-4">
       <RouterLink
         to="/"
         class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
@@ -965,6 +1270,142 @@ onUnmounted(() => {
   background: #374151;
 }
 
+.sidebar-collapse-button {
+  display: inline-flex;
+  height: 2rem;
+  width: 2rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid #1f1f1f;
+  color: #6b7280;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.sidebar-collapse-button:hover,
+.sidebar-collapse-button:focus-visible {
+  border-color: #374151;
+  background: rgba(255, 140, 26, 0.1);
+  color: #ffffff;
+  outline: none;
+}
+
+.sidebar-rail-button {
+  position: relative;
+  display: flex;
+  height: 2.25rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.sidebar-rail-button:focus-visible {
+  outline: 1px solid #ff8c1a;
+  outline-offset: 2px;
+}
+
+.sidebar-rail-button--plain {
+  color: #6b7280;
+}
+
+.sidebar-rail-group {
+  position: relative;
+}
+
+.sidebar-rail-group:hover > .sidebar-rail-button,
+.sidebar-rail-group:has(:focus-visible) > .sidebar-rail-button {
+  background: rgba(255, 140, 26, 0.1);
+  color: #ffffff;
+}
+
+.sidebar-rail-tooltip {
+  pointer-events: none;
+  position: absolute;
+  left: calc(100% + 0.5rem);
+  top: 50%;
+  z-index: 105;
+  transform: translate(-0.25rem, -50%);
+  visibility: hidden;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  border: 1px solid #374151;
+  background: #1f1f1f;
+  padding: 0.35rem 0.5rem;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  opacity: 0;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
+  transition:
+    opacity 140ms ease,
+    transform 140ms ease,
+    visibility 140ms ease;
+}
+
+.sidebar-rail-button:hover .sidebar-rail-tooltip,
+.sidebar-rail-button:focus-visible .sidebar-rail-tooltip {
+  transform: translate(0, -50%);
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar-rail-flyout {
+  pointer-events: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 100;
+  width: 16rem;
+  transform: translateX(-0.25rem);
+  visibility: hidden;
+  overflow: hidden;
+  border: 1px solid #1f1f1f;
+  border-radius: 0.5rem;
+  background: #1f1f1f;
+  opacity: 0;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.46);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease,
+    visibility 160ms ease;
+}
+
+.sidebar-rail-group:hover .sidebar-rail-flyout,
+.sidebar-rail-group:has(:focus-visible) .sidebar-rail-flyout {
+  pointer-events: auto;
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar-flyout-link {
+  display: flex;
+  min-height: 2rem;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+.sidebar-flyout-link:focus-visible {
+  outline: 1px solid #ff8c1a;
+  outline-offset: 2px;
+}
+
 .sidebar-group-shell {
   display: grid;
   grid-template-rows: 1fr;
@@ -996,5 +1437,17 @@ onUnmounted(() => {
   grid-template-rows: 1fr;
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-collapse-button,
+  .sidebar-rail-button,
+  .sidebar-rail-tooltip,
+  .sidebar-rail-flyout,
+  .sidebar-flyout-link,
+  .sidebar-group-enter-active,
+  .sidebar-group-leave-active {
+    transition: none;
+  }
 }
 </style>
