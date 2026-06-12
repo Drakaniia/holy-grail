@@ -30,47 +30,6 @@ import SiteFavicon from '@/components/sites/SiteFavicon.vue'
 import SitePreview from '@/components/sites/SitePreview.vue'
 import SiteDetailSkeleton from '@/components/sites/SiteDetailSkeleton.vue'
 
-const collectionLabels: Record<string, string> = {
-  '3d': '3D',
-  ai: 'AI',
-  anime: 'Anime',
-  api: 'API',
-  automation: 'Automation',
-  chat: 'Chat',
-  'cli-tools': 'CLI Tools',
-  'cloud-hosting': 'Cloud & Hosting',
-  design: 'Design',
-  'design-tools': 'Design Tools',
-  detector: 'Detector',
-  development: 'Development',
-  downloads: 'Downloads',
-  fonts: 'Fonts',
-  'game-download': 'Game Download',
-  icons: 'Icons',
-  'icons-svg': 'Icons/SVG',
-  image: 'Images',
-  inspiration: 'Inspiration',
-  learning: 'Learning',
-  mcp: 'MCP',
-  md: 'MD',
-  ml: 'Machine Learning',
-  monitoring: 'Monitoring',
-  movies: 'Movies',
-  others: 'Others',
-  ppt: 'PPT',
-  prompts: 'Prompts',
-  references: 'References',
-  repositories: 'Repositories',
-  'software-download': 'Software Download',
-  tooling: 'Tooling',
-  torrents: 'Torrents',
-  'ui-libraries': 'UI Libraries',
-  video: 'Videos',
-  'vfx-download': 'VFX Download',
-  watch: 'Watch',
-  wb: 'Website Development',
-}
-
 const route = useRoute()
 const router = useRouter()
 const store = useSitesStore()
@@ -132,35 +91,8 @@ const backRoute = computed(() => {
   return `/sites/${site.value.parentCategory}`
 })
 
-const collectionTrail = computed(() => {
-  if (!site.value) return []
-
-  const segments = site.value.subcategory
-    ? [site.value.parentCategory, site.value.subcategory]
-    : [site.value.parentCategory || site.value.category]
-  const seenLabels = new Set<string>()
-
-  return segments
-    .map(formatCollectionLabel)
-    .filter(label => {
-      const key = label.toLowerCase()
-      if (!key || seenLabels.has(key)) return false
-
-      seenLabels.add(key)
-      return true
-    })
-})
-
 const copied = ref(false)
 const copiedInstallCommand = ref(false)
-
-function formatCollectionLabel(value: string): string {
-  return collectionLabels[value] ?? value
-    .split(/[-_]/)
-    .filter(Boolean)
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-}
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -233,7 +165,7 @@ async function copyInstallCommand() {
   <div class="bg-[#1f1f1f] text-white">
     <div v-if="site" class="max-w-6xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
       <div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div class="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
+        <div class="flex min-w-0 items-center">
           <button
             type="button"
             class="inline-flex w-fit items-center gap-2 text-gray-400 transition-colors hover:text-white"
@@ -242,27 +174,6 @@ async function copyInstallCommand() {
             <ArrowLeft class="w-4 h-4" />
             <span class="text-sm">Back to list</span>
           </button>
-
-          <nav
-            v-if="collectionTrail.length"
-            class="flex min-w-0 flex-wrap items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-gray-600"
-            aria-label="Site collection"
-          >
-            <template
-              v-for="(label, index) in collectionTrail"
-              :key="`${label}-${index}`"
-            >
-              <span :class="index === collectionTrail.length - 1 ? 'text-gray-300' : 'text-gray-500'">
-                {{ label }}
-              </span>
-              <span
-                v-if="index < collectionTrail.length - 1"
-                class="text-gray-700"
-              >
-                /
-              </span>
-            </template>
-          </nav>
         </div>
 
         <div class="flex flex-wrap items-center gap-2">
