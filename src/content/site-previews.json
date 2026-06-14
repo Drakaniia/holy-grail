@@ -1608,6 +1608,15 @@
     "height": 600,
     "bytes": 19124
   },
+  "khanime": {
+    "image": "/previews/khanime.webp",
+    "small": "/previews/khanime-sm.webp",
+    "sourceUrl": "https://khanime.co/series/",
+    "capturedAt": "2026-06-14T23:46:39.097Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 7968
+  },
   "khfullhd": {
     "image": "/previews/khfullhd.webp",
     "small": "/previews/khfullhd-sm.webp",
