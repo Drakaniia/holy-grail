@@ -60,15 +60,6 @@ similarTools:
     addedDaysAgo: 0
     verified: true
     website: https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode
-  - slug: expo
-    name: Using Model Context Protocol (MCP) with Expo - Expo Documentation
-    description: >-
-      Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp
-      resources.
-    stars: 49543
-    addedDaysAgo: 0
-    verified: true
-    website: https://docs.expo.dev/eas/ai/mcp/
   - slug: codebuff
     name: Codebuff - AI Coding Assistant for Your Terminal
     description: Codebuff - AI Coding Assistant for Your Terminal bookmarked for ai cli resources.
