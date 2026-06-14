@@ -57,13 +57,6 @@ additionalFeatures:
     description: Provides marketplace entry points for submitting or promoting MCP and agent resources.
     icon: check
 similarTools:
-  - slug: expo
-    name: Using Model Context Protocol (MCP) with Expo - Expo Documentation
-    description: Expo documentation for using Model Context Protocol integrations.
-    stars: 49543
-    addedDaysAgo: 0
-    verified: true
-    website: https://docs.expo.dev/eas/ai/mcp/
   - slug: testsprite
     name: TestSprite
     description: AI testing platform with MCP-oriented workflow support.
