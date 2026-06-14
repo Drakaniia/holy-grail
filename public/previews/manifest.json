@@ -180,15 +180,6 @@
     "height": 600,
     "bytes": 23294
   },
-  "archive": {
-    "image": "/previews/archive.webp",
-    "small": "/previews/archive-sm.webp",
-    "sourceUrl": "https://archive.org/details/github.com-vitalysim-Awesome-Hacking-Resources_-_2017-11-10_20-23-51",
-    "capturedAt": "2026-05-20T08:38:16.996Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 27072
-  },
   "artlist": {
     "image": "/previews/artlist.webp",
     "small": "/previews/artlist-sm.webp",
@@ -578,15 +569,6 @@
     "height": 600,
     "bytes": 62916
   },
-  "codeproject": {
-    "image": "/previews/codeproject.webp",
-    "small": "/previews/codeproject-sm.webp",
-    "sourceUrl": "https://www.codeproject.com/Articles/5341253/C-Cplusplus-Headers-and-Source-Files-How-Do-They-W",
-    "capturedAt": "2026-05-20T08:37:43.287Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 33450
-  },
   "codex": {
     "image": "/previews/codex.webp",
     "small": "/previews/codex-sm.webp",
@@ -967,15 +949,6 @@
     "height": 600,
     "bytes": 15320
   },
-  "en": {
-    "image": "/previews/en.webp",
-    "small": "/previews/en-sm.webp",
-    "sourceUrl": "https://en.taiwebs.com/?lang=PH",
-    "capturedAt": "2026-05-21T09:16:05.736Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 20046
-  },
   "eslint": {
     "image": "/previews/eslint.webp",
     "small": "/previews/eslint-sm.webp",
@@ -1003,15 +976,6 @@
     "width": 960,
     "height": 600,
     "bytes": 44884
-  },
-  "expo": {
-    "image": "/previews/expo.webp",
-    "small": "/previews/expo-sm.webp",
-    "sourceUrl": "https://docs.expo.dev/eas/ai/mcp/",
-    "capturedAt": "2026-05-20T08:30:48.821Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 59534
   },
   "ext": {
     "image": "/previews/ext.webp",
@@ -1166,15 +1130,6 @@
     "height": 600,
     "bytes": 42774
   },
-  "frontendmasters": {
-    "image": "/previews/frontendmasters.webp",
-    "small": "/previews/frontendmasters-sm.webp",
-    "sourceUrl": "https://frontendmasters.com/courses/css-foundations/project-setup/",
-    "capturedAt": "2026-05-20T08:37:48.358Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 35934
-  },
   "fullstackopen": {
     "image": "/previews/fullstackopen.webp",
     "small": "/previews/fullstackopen-sm.webp",
@@ -1183,16 +1138,6 @@
     "width": 960,
     "height": 600,
     "bytes": 30802
-  },
-  "gambo": {
-    "image": "/previews/gambo.webp",
-    "small": "/previews/gambo-sm.webp",
-    "sourceUrl": "https://www.gambo.ai/",
-    "capturedAt": "2026-06-07T15:06:25.122Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 13216,
-    "fallback": true
   },
   "gamma": {
     "image": "/previews/gamma.webp",
@@ -1310,15 +1255,6 @@
     "width": 960,
     "height": 600,
     "bytes": 38140
-  },
-  "github-github-kamrullab-windowscleanupcommands-cmd-and-powershell-scrip": {
-    "image": "/previews/github-github-kamrullab-windowscleanupcommands-cmd-and-powershell-scrip.webp",
-    "small": "/previews/github-github-kamrullab-windowscleanupcommands-cmd-and-powershell-scrip-sm.webp",
-    "sourceUrl": "https://github.com/kamrullab/WindowsCleanupCommands",
-    "capturedAt": "2026-05-20T08:38:31.300Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 36452
   },
   "github-setup": {
     "image": "/previews/github-setup.webp",
@@ -3222,15 +3158,6 @@
     "width": 960,
     "height": 600,
     "bytes": 12838
-  },
-  "tutorialspoint": {
-    "image": "/previews/tutorialspoint.webp",
-    "small": "/previews/tutorialspoint-sm.webp",
-    "sourceUrl": "https://www.tutorialspoint.com/cprogramming/index.htm",
-    "capturedAt": "2026-05-20T08:38:06.224Z",
-    "width": 960,
-    "height": 600,
-    "bytes": 34962
   },
   "tweakcn": {
     "image": "/previews/tweakcn.webp",
