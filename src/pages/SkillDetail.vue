@@ -235,6 +235,8 @@ async function copyInstallCommand() {
 </template>
 
 <style scoped>
+@reference "tailwindcss";
+
 .skill-content :deep(h1) {
   @apply text-2xl font-bold text-white mb-4 mt-0;
 }
@@ -276,7 +278,12 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(code) {
-  @apply bg-[#1f1f1f] text-accent-400 px-1.5 py-0.5 rounded text-sm;
+  background: #1f1f1f;
+  color: #ffa54d;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .skill-content :deep(pre) {
@@ -292,7 +299,11 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(a) {
-  @apply text-accent-400 hover:text-accent-300;
+  color: #ffa54d;
+}
+
+.skill-content :deep(a:hover) {
+  color: #ffc080;
 }
 
 .skill-content :deep(blockquote) {
