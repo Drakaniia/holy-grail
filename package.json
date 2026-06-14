@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && vite",
-    "build": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && vue-tsc && vite build",
+    "dev": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && bun run scripts/generate-extensions-index.js && vite",
+    "build": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && bun run scripts/generate-extensions-index.js && vue-tsc && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "bun run lint:oxlint && bun run lint:eslint",
@@ -13,6 +13,7 @@
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
     "generate:skills": "bun run scripts/generate-skills-index.js",
+    "generate:extensions": "bun run scripts/generate-extensions-index.js",
     "generate:previews": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
     "generate:previews:missing": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
     "generate:previews:all": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js --all",
