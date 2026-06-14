@@ -224,9 +224,7 @@ const extensionCategories = [
   { name: 'Productivity', icon: Workflow, route: '/extensions/productivity' },
   { name: 'Developer Tools', icon: Code2, route: '/extensions/developer-tools' },
   { name: 'Privacy', icon: ShieldCheck, route: '/extensions/privacy' },
-  { name: 'Research', icon: Microscope, route: '/extensions/research' },
   { name: 'Design', icon: Palette, route: '/extensions/design' },
-  { name: 'Automation', icon: Bot, route: '/extensions/automation' },
 ]
 
 const siteSubcategoryGroups = [
