@@ -94,7 +94,7 @@ const router = createRouter({
       redirect: '/extensions/writing',
     },
     {
-      path: '/extensions/:category(writing|productivity|developer-tools|privacy|research|design|automation)/:subcategory?',
+      path: '/extensions/:category(writing|productivity|developer-tools|privacy|design)/:subcategory?',
       name: 'extensions-category',
       component: ExtensionsPage,
     },

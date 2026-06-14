@@ -20,9 +20,7 @@ const pageTitle = computed(() => {
     productivity: 'Productivity',
     'developer-tools': 'Developer Tools',
     privacy: 'Privacy',
-    research: 'Research',
     design: 'Design',
-    automation: 'Automation',
   }
   return labels[parentCategory.value] || parentCategory.value
 })
@@ -33,9 +31,7 @@ const pageDescription = computed(() => {
     productivity: 'Chrome extensions for everyday productivity and browser-based task management',
     'developer-tools': 'Chrome extensions for developer workflows, debugging, and web inspection',
     privacy: 'Chrome extensions for privacy, security, and safer browsing habits',
-    research: 'Chrome extensions for research discovery, note capture, and source management',
     design: 'Chrome extensions for design inspiration, color, typography, and visual workflows',
-    automation: 'Chrome extensions for automating repetitive browser tasks and workflows',
   }
   return descriptions[parentCategory.value] || 'Curated Chrome extensions'
 })
