@@ -1,5 +1,78 @@
 [
   {
+    "slug": "ublock-origin",
+    "name": "uBlock Origin",
+    "description": "Finally, an efficient blocker. Easy on CPU and memory.",
+    "category": "Chrome Extensions",
+    "parentCategory": "privacy",
+    "subcategory": "privacy",
+    "version": "1.71.0",
+    "addedDaysAgo": 0,
+    "license": "GPL-3.0",
+    "website": "https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
+    "docs": "https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
+    "sourceCode": "https://github.com/gorhill/uBlock",
+    "icon": "ublock-origin",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "ad-blocker",
+      "privacy",
+      "security"
+    ],
+    "atGlance": "An efficient content blocker that is easy on CPU and memory.",
+    "fullDescription": "uBlock Origin is an efficient, wide-spectrum content blocker for Chromium and Firefox. It blocks ads, trackers, coin miners, popups, and malware domains. Unlike other blockers, uBlock Origin is optimized to use less CPU and memory while being just as effective at blocking content.",
+    "coreFeatures": [
+      {
+        "name": "Ad Blocking",
+        "description": "Blocks advertisements on all websites for a cleaner browsing experience.",
+        "icon": "check"
+      },
+      {
+        "name": "Tracker Protection",
+        "description": "Prevents trackers from monitoring your browsing activity.",
+        "icon": "check"
+      },
+      {
+        "name": "CPU and Memory Efficient",
+        "description": "Optimized to use significantly less CPU and memory than other blockers.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Element Picker",
+        "description": "Manually select and hide any element on a page with the element picker tool.",
+        "icon": "check"
+      },
+      {
+        "name": "Dynamic Filtering",
+        "description": "Fine-grained control over which scripts and frames are allowed per site.",
+        "icon": "check"
+      },
+      {
+        "name": "Malware Domain Filtering",
+        "description": "Protects against known malware and phishing domains.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "cjpalhdlnbpafiamejdnhcphjbkeiagm",
+    "chromeWebStoreRating": 4.7,
+    "userCount": 40000000,
+    "permissions": [
+      "storage",
+      "webRequest",
+      "webRequestBlocking",
+      "scripting",
+      "tabs",
+      "unlimitedStorage"
+    ],
+    "manifestVersion": 2,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
     "slug": "scribbr-citation-generator",
     "name": "Scribbr Citation Generator",
     "description": "Instantly get accurate citations for any webpage in APA, MLA, Chicago, Harvard and any other style.",
@@ -70,6 +143,521 @@
       "activeTab",
       "scripting",
       "storage"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "eye-dropper",
+    "name": "Eye Dropper",
+    "description": "Pick colors from any website.",
+    "category": "Chrome Extensions",
+    "parentCategory": "design",
+    "subcategory": "design",
+    "version": "4.10.3.15",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka",
+    "docs": "https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka",
+    "sourceCode": "",
+    "icon": "eye-dropper",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "color-picker",
+      "design",
+      "eyedropper"
+    ],
+    "atGlance": "Pick colors from any website with a precise eyedropper tool.",
+    "fullDescription": "Eye Dropper is a Chrome extension that lets you pick colors from any webpage using a precise eyedropper tool. It captures the exact color value and provides the hex code, RGB values, and other color formats. It includes a color history and a palette manager for collecting colors during design work.",
+    "coreFeatures": [
+      {
+        "name": "Precision Eyedropper",
+        "description": "Pick any color on screen with pixel-level precision.",
+        "icon": "check"
+      },
+      {
+        "name": "Color Format Support",
+        "description": "View and copy colors in HEX, RGB, HSL, and other formats.",
+        "icon": "check"
+      },
+      {
+        "name": "Color History",
+        "description": "Automatically saves a history of all picked colors for reference.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Palette Collection",
+        "description": "Organize picked colors into named palettes for projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Zoom Loupe",
+        "description": "Magnified view around the cursor for accurate color selection.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "hmdcmlfkchdmnmnmheododdhjedfccka",
+    "chromeWebStoreRating": 4.6,
+    "userCount": 1000000,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "ublock-origin-lite",
+    "name": "uBlock Origin Lite",
+    "description": "An efficient content blocker. Blocks ads, trackers, miners, and more immediately upon installation.",
+    "category": "Chrome Extensions",
+    "parentCategory": "privacy",
+    "subcategory": "privacy",
+    "version": "2026.607.1724",
+    "addedDaysAgo": 0,
+    "license": "GPL-3.0",
+    "website": "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh",
+    "docs": "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh",
+    "sourceCode": "https://github.com/uBlockOrigin/uBO-Lite",
+    "icon": "ublock-origin-lite",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "ad-blocker",
+      "privacy",
+      "security"
+    ],
+    "atGlance": "A lightweight Manifest V3 content blocker that blocks ads, trackers, and miners.",
+    "fullDescription": "uBlock Origin Lite is a Manifest V3-compatible version of uBlock Origin. It blocks ads, trackers, cryptominers, and other unwanted content across the web. Built from the ground up for Manifest V3, it provides the same blocking power as uBlock Origin with a focus on the new extension platform.",
+    "coreFeatures": [
+      {
+        "name": "Ad and Tracker Blocking",
+        "description": "Blocks ads, trackers, and cryptominers immediately upon installation.",
+        "icon": "check"
+      },
+      {
+        "name": "Manifest V3 Native",
+        "description": "Built specifically for Manifest V3 with declarative net request rules.",
+        "icon": "check"
+      },
+      {
+        "name": "Minimal Permissions",
+        "description": "Requires minimal permissions compared to other ad blockers.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Dynamic Filter Lists",
+        "description": "Uses declarative filter lists that update automatically.",
+        "icon": "check"
+      },
+      {
+        "name": "Privacy First",
+        "description": "No user data is collected or transmitted by the extension.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "ddkjiahejlhfcafbddmgiahcphecmpfh",
+    "chromeWebStoreRating": 4.6,
+    "userCount": 5000000,
+    "permissions": [
+      "declarativeNetRequest",
+      "storage",
+      "scripting"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "gofullpage",
+    "name": "GoFullPage - Full Page Screen Capture",
+    "description": "Capture a screenshot of your current page in entirety and reliably—without requesting any extra permissions!",
+    "category": "Chrome Extensions",
+    "parentCategory": "productivity",
+    "subcategory": "productivity",
+    "version": "8.6",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
+    "docs": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
+    "sourceCode": "",
+    "icon": "gofullpage",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "screenshot",
+      "screen-capture",
+      "productivity"
+    ],
+    "atGlance": "Capture full-page screenshots of any website reliably and without extra permissions.",
+    "fullDescription": "GoFullPage captures a screenshot of your entire current page in one click, from top to bottom. It stitches the full page together seamlessly without requesting any extra permissions beyond what is needed to run. The captured screenshot can be downloaded as a PNG or PDF.",
+    "coreFeatures": [
+      {
+        "name": "One-Click Full Page Capture",
+        "description": "Capture an entire webpage from top to bottom with a single click.",
+        "icon": "check"
+      },
+      {
+        "name": "No Extra Permissions",
+        "description": "Works without requesting any additional permissions beyond basic functionality.",
+        "icon": "check"
+      },
+      {
+        "name": "Download as PNG or PDF",
+        "description": "Save the captured full-page screenshot as PNG image or PDF document.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Visible Viewport Capture",
+        "description": "Also supports capturing only the visible portion of the page.",
+        "icon": "check"
+      },
+      {
+        "name": "Screenshot History",
+        "description": "Access your recently captured screenshots from the extension popup.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "fdpohaocaechififmbbbbbknoalclacl",
+    "chromeWebStoreRating": 4.6,
+    "userCount": 5000000,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "whatfont",
+    "name": "WhatFont",
+    "description": "The easiest way to identify fonts on web pages.",
+    "category": "Chrome Extensions",
+    "parentCategory": "design",
+    "subcategory": "design",
+    "version": "3.2.0",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm",
+    "docs": "https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm",
+    "sourceCode": "",
+    "icon": "whatfont",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "fonts",
+      "typography",
+      "design"
+    ],
+    "atGlance": "Identify fonts used on any web page with a single click.",
+    "fullDescription": "WhatFont is the easiest way to identify fonts on web pages. Hover over any text element to see the font name, size, weight, color, and line height. It supports Google Fonts, Typekit, and custom web fonts, making it an essential tool for designers and developers.",
+    "coreFeatures": [
+      {
+        "name": "Font Identification",
+        "description": "Hover over any text to instantly identify the font family being used.",
+        "icon": "check"
+      },
+      {
+        "name": "Font Details",
+        "description": "View font size, weight, color, line height, and other CSS properties.",
+        "icon": "check"
+      },
+      {
+        "name": "Type Service Detection",
+        "description": "Detects if the font is from Google Fonts, Typekit, or other services.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Copy to Clipboard",
+        "description": "Copy font name and details to clipboard for design documentation.",
+        "icon": "check"
+      },
+      {
+        "name": "WhatFont Toolbar",
+        "description": "Toggle the tool on and off from a convenient toolbar button.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "jabopobgcpjmedljpbcaablpmlmfcogm",
+    "chromeWebStoreRating": 4.5,
+    "userCount": 1000000,
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "clear-cache",
+    "name": "Clear Cache",
+    "description": "Powerful, user-friendly browser data management, right from your toolbar.",
+    "category": "Chrome Extensions",
+    "parentCategory": "developer-tools",
+    "subcategory": "developer-tools",
+    "version": "2.4.2-build.0",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn",
+    "docs": "https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn",
+    "sourceCode": "",
+    "icon": "clear-cache",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "cache",
+      "developer-tools",
+      "browser"
+    ],
+    "atGlance": "Clear your browser cache, storage, and cookies with one click from the toolbar.",
+    "fullDescription": "Clear Cache provides powerful and user-friendly browser data management right from your toolbar. With a single click, you can clear various types of browser data including cache, cookies, local storage, session storage, and more. It offers granular control over what gets cleared and supports keyboard shortcuts for power users.",
+    "coreFeatures": [
+      {
+        "name": "One-Click Clearing",
+        "description": "Clear browser data with a single click from the toolbar icon.",
+        "icon": "check"
+      },
+      {
+        "name": "Granular Control",
+        "description": "Select exactly which data types to clear — cache, cookies, storage, and more.",
+        "icon": "check"
+      },
+      {
+        "name": "Keyboard Shortcuts",
+        "description": "Assign and use keyboard shortcuts for instant cache clearing.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Clear on Page Load",
+        "description": "Optionally clear selected data automatically when pages load.",
+        "icon": "check"
+      },
+      {
+        "name": "Notifications",
+        "description": "Get a confirmation notification after data has been cleared.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "cppjkneekbjaeellbfkmgnhonkkjfpdn",
+    "chromeWebStoreRating": 4.5,
+    "userCount": 1000000,
+    "permissions": [
+      "storage",
+      "browsingData",
+      "notifications"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "imageye-image-downloader",
+    "name": "Imageye - Image Downloader",
+    "description": "Find and download all images on a web page with Image downloader.",
+    "category": "Chrome Extensions",
+    "parentCategory": "productivity",
+    "subcategory": "productivity",
+    "version": "5.30.1",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm",
+    "docs": "https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm",
+    "sourceCode": "",
+    "icon": "imageye-image-downloader",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "images",
+      "download",
+      "productivity"
+    ],
+    "atGlance": "Find and download all images on any web page with one click.",
+    "fullDescription": "Imageye is a powerful image downloader browser extension that lets you find, browse, and download all images displayed on any web page. It scans the page for all image elements and presents them in a clean gallery view, allowing you to select and download the images you want.",
+    "coreFeatures": [
+      {
+        "name": "Bulk Image Detection",
+        "description": "Automatically detects and lists all images on the current web page.",
+        "icon": "check"
+      },
+      {
+        "name": "Gallery Preview",
+        "description": "Displays images in a gallery view for easy browsing and selection.",
+        "icon": "check"
+      },
+      {
+        "name": "Batch Download",
+        "description": "Select multiple images and download them all at once.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Filter by Size",
+        "description": "Filter images by minimum width and height to find the best quality.",
+        "icon": "check"
+      },
+      {
+        "name": "Image Format Info",
+        "description": "Shows image format, dimensions, and file size for each image.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "agionbommeaifngbhincahgmoflcikhm",
+    "chromeWebStoreRating": 4.5,
+    "userCount": 2000000,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "download"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "video-downloader-professional",
+    "name": "Video Downloader Professional",
+    "description": "Download videos from web sites or just collect them in your video list without downloading them.",
+    "category": "Chrome Extensions",
+    "parentCategory": "productivity",
+    "subcategory": "productivity",
+    "version": "2.1.7",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil",
+    "docs": "https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil",
+    "sourceCode": "",
+    "icon": "video-downloader-professional",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "video",
+      "download",
+      "productivity"
+    ],
+    "atGlance": "Download videos from any website or collect them in a watchlist.",
+    "fullDescription": "Video Downloader Professional lets you detect and download videos playing on web pages. You can download videos directly or add them to a personal video list to watch later without downloading immediately. It supports a wide range of video formats and streaming sources.",
+    "coreFeatures": [
+      {
+        "name": "Video Detection",
+        "description": "Automatically detects video content on any web page you visit.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Download",
+        "description": "Download detected videos in various formats and qualities.",
+        "icon": "check"
+      },
+      {
+        "name": "Video Watchlist",
+        "description": "Collect videos in a list for later viewing without downloading them.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Format Selection",
+        "description": "Choose from available video formats and quality levels before downloading.",
+        "icon": "check"
+      },
+      {
+        "name": "Download Management",
+        "description": "Monitor and manage active and completed downloads from the extension popup.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "elicpjhcidhpjomhibiffojpinpmmpil",
+    "chromeWebStoreRating": 4.4,
+    "userCount": 5000000,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "download",
+      "webRequest"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  },
+  {
+    "slug": "3d-mview-extractor",
+    "name": "3D Mview Extractor",
+    "description": "Detects and extract 3D Mview files.",
+    "category": "Chrome Extensions",
+    "parentCategory": "developer-tools",
+    "subcategory": "developer-tools",
+    "version": "1.0",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh",
+    "docs": "https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh",
+    "sourceCode": "",
+    "icon": "3d-mview-extractor",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "3d",
+      "mview",
+      "developer-tools"
+    ],
+    "atGlance": "Detect and extract 3D Mview files from web pages.",
+    "fullDescription": "3D Mview Extractor is a specialized browser extension that detects and extracts 3D Mview files embedded in web pages. It enables users to download 3D model files for offline use and further processing.",
+    "coreFeatures": [
+      {
+        "name": "3D File Detection",
+        "description": "Automatically detects 3D Mview files embedded in the current page.",
+        "icon": "check"
+      },
+      {
+        "name": "File Extraction",
+        "description": "Extracts detected 3D files and makes them available for download.",
+        "icon": "check"
+      },
+      {
+        "name": "Format Support",
+        "description": "Supports common 3D Mview file formats used on the web.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Simple Interface",
+        "description": "Clean popup interface showing all detected 3D files at a glance.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "lmmcjebneeokfgaobecnijjhgjokmbeh",
+    "chromeWebStoreRating": 4,
+    "userCount": 100000,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "download"
     ],
     "manifestVersion": 3,
     "installButtonBehavior": "redirect-to-chrome-web-store"
