@@ -1,0 +1,62 @@
+slug: video-downloader-professional
+name: Video Downloader Professional
+description: Download videos from web sites or just collect them in your video list without downloading them.
+category: Chrome Extensions
+parentCategory: productivity
+subcategory: productivity
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "2.1.7"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil
+docs: https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil
+sourceCode: ""
+icon: video-downloader-professional
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - video
+  - download
+  - productivity
+atGlance: Download videos from any website or collect them in a watchlist.
+fullDescription: Video Downloader Professional lets you detect and download videos playing on web pages. You can download videos directly or add them to a personal video list to watch later without downloading immediately. It supports a wide range of video formats and streaming sources.
+coreFeatures:
+  - name: Video Detection
+    description: Automatically detects video content on any web page you visit.
+    icon: check
+  - name: Direct Download
+    description: Download detected videos in various formats and qualities.
+    icon: check
+  - name: Video Watchlist
+    description: Collect videos in a list for later viewing without downloading them.
+    icon: check
+additionalFeatures:
+  - name: Format Selection
+    description: Choose from available video formats and quality levels before downloading.
+    icon: check
+  - name: Download Management
+    description: Monitor and manage active and completed downloads from the extension popup.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: elicpjhcidhpjomhibiffojpinpmmpil
+  chromeWebStoreRating: 4.4
+  userCount: 5000000
+  permissions:
+    - activeTab
+    - scripting
+    - download
+    - webRequest
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

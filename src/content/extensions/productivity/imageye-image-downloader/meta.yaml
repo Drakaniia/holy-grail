@@ -1,0 +1,61 @@
+slug: imageye-image-downloader
+name: Imageye - Image Downloader
+description: Find and download all images on a web page with Image downloader.
+category: Chrome Extensions
+parentCategory: productivity
+subcategory: productivity
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "5.30.1"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm
+docs: https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm
+sourceCode: ""
+icon: imageye-image-downloader
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - images
+  - download
+  - productivity
+atGlance: Find and download all images on any web page with one click.
+fullDescription: Imageye is a powerful image downloader browser extension that lets you find, browse, and download all images displayed on any web page. It scans the page for all image elements and presents them in a clean gallery view, allowing you to select and download the images you want.
+coreFeatures:
+  - name: Bulk Image Detection
+    description: Automatically detects and lists all images on the current web page.
+    icon: check
+  - name: Gallery Preview
+    description: Displays images in a gallery view for easy browsing and selection.
+    icon: check
+  - name: Batch Download
+    description: Select multiple images and download them all at once.
+    icon: check
+additionalFeatures:
+  - name: Filter by Size
+    description: Filter images by minimum width and height to find the best quality.
+    icon: check
+  - name: Image Format Info
+    description: Shows image format, dimensions, and file size for each image.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: agionbommeaifngbhincahgmoflcikhm
+  chromeWebStoreRating: 4.5
+  userCount: 2000000
+  permissions:
+    - activeTab
+    - scripting
+    - download
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

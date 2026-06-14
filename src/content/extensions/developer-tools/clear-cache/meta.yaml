@@ -1,0 +1,61 @@
+slug: clear-cache
+name: Clear Cache
+description: Powerful, user-friendly browser data management, right from your toolbar.
+category: Chrome Extensions
+parentCategory: developer-tools
+subcategory: developer-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "2.4.2-build.0"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn
+docs: https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn
+sourceCode: ""
+icon: clear-cache
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - cache
+  - developer-tools
+  - browser
+atGlance: Clear your browser cache, storage, and cookies with one click from the toolbar.
+fullDescription: Clear Cache provides powerful and user-friendly browser data management right from your toolbar. With a single click, you can clear various types of browser data including cache, cookies, local storage, session storage, and more. It offers granular control over what gets cleared and supports keyboard shortcuts for power users.
+coreFeatures:
+  - name: One-Click Clearing
+    description: Clear browser data with a single click from the toolbar icon.
+    icon: check
+  - name: Granular Control
+    description: Select exactly which data types to clear — cache, cookies, storage, and more.
+    icon: check
+  - name: Keyboard Shortcuts
+    description: Assign and use keyboard shortcuts for instant cache clearing.
+    icon: check
+additionalFeatures:
+  - name: Clear on Page Load
+    description: Optionally clear selected data automatically when pages load.
+    icon: check
+  - name: Notifications
+    description: Get a confirmation notification after data has been cleared.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: cppjkneekbjaeellbfkmgnhonkkjfpdn
+  chromeWebStoreRating: 4.5
+  userCount: 1000000
+  permissions:
+    - storage
+    - browsingData
+    - notifications
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

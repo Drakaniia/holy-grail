@@ -1,0 +1,67 @@
+slug: ublock-origin
+name: uBlock Origin
+description: Finally, an efficient blocker. Easy on CPU and memory.
+category: Chrome Extensions
+parentCategory: privacy
+subcategory: privacy
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: GPL-3.0
+lastCommit: N/A
+lastRelease: N/A
+version: "1.71.0"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+docs: https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+sourceCode: https://github.com/gorhill/uBlock
+icon: ublock-origin
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - ad-blocker
+  - privacy
+  - security
+atGlance: An efficient content blocker that is easy on CPU and memory.
+fullDescription: uBlock Origin is an efficient, wide-spectrum content blocker for Chromium and Firefox. It blocks ads, trackers, coin miners, popups, and malware domains. Unlike other blockers, uBlock Origin is optimized to use less CPU and memory while being just as effective at blocking content.
+coreFeatures:
+  - name: Ad Blocking
+    description: Blocks advertisements on all websites for a cleaner browsing experience.
+    icon: check
+  - name: Tracker Protection
+    description: Prevents trackers from monitoring your browsing activity.
+    icon: check
+  - name: CPU and Memory Efficient
+    description: Optimized to use significantly less CPU and memory than other blockers.
+    icon: check
+additionalFeatures:
+  - name: Element Picker
+    description: Manually select and hide any element on a page with the element picker tool.
+    icon: check
+  - name: Dynamic Filtering
+    description: Fine-grained control over which scripts and frames are allowed per site.
+    icon: check
+  - name: Malware Domain Filtering
+    description: Protects against known malware and phishing domains.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: cjpalhdlnbpafiamejdnhcphjbkeiagm
+  chromeWebStoreRating: 4.7
+  userCount: 40000000
+  permissions:
+    - storage
+    - webRequest
+    - webRequestBlocking
+    - scripting
+    - tabs
+    - unlimitedStorage
+  manifestVersion: 2
+  installButtonBehavior: redirect-to-chrome-web-store

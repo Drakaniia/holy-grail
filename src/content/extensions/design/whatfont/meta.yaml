@@ -1,0 +1,60 @@
+slug: whatfont
+name: WhatFont
+description: The easiest way to identify fonts on web pages.
+category: Chrome Extensions
+parentCategory: design
+subcategory: design
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "3.2.0"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm
+docs: https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm
+sourceCode: ""
+icon: whatfont
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - fonts
+  - typography
+  - design
+atGlance: Identify fonts used on any web page with a single click.
+fullDescription: WhatFont is the easiest way to identify fonts on web pages. Hover over any text element to see the font name, size, weight, color, and line height. It supports Google Fonts, Typekit, and custom web fonts, making it an essential tool for designers and developers.
+coreFeatures:
+  - name: Font Identification
+    description: Hover over any text to instantly identify the font family being used.
+    icon: check
+  - name: Font Details
+    description: View font size, weight, color, line height, and other CSS properties.
+    icon: check
+  - name: Type Service Detection
+    description: Detects if the font is from Google Fonts, Typekit, or other services.
+    icon: check
+additionalFeatures:
+  - name: Copy to Clipboard
+    description: Copy font name and details to clipboard for design documentation.
+    icon: check
+  - name: WhatFont Toolbar
+    description: Toggle the tool on and off from a convenient toolbar button.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: jabopobgcpjmedljpbcaablpmlmfcogm
+  chromeWebStoreRating: 4.5
+  userCount: 1000000
+  permissions:
+    - activeTab
+    - scripting
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

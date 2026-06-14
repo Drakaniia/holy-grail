@@ -1,0 +1,61 @@
+slug: gofullpage
+name: GoFullPage - Full Page Screen Capture
+description: Capture a screenshot of your current page in entirety and reliably—without requesting any extra permissions!
+category: Chrome Extensions
+parentCategory: productivity
+subcategory: productivity
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "8.6"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl
+docs: https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl
+sourceCode: ""
+icon: gofullpage
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - screenshot
+  - screen-capture
+  - productivity
+atGlance: Capture full-page screenshots of any website reliably and without extra permissions.
+fullDescription: GoFullPage captures a screenshot of your entire current page in one click, from top to bottom. It stitches the full page together seamlessly without requesting any extra permissions beyond what is needed to run. The captured screenshot can be downloaded as a PNG or PDF.
+coreFeatures:
+  - name: One-Click Full Page Capture
+    description: Capture an entire webpage from top to bottom with a single click.
+    icon: check
+  - name: No Extra Permissions
+    description: Works without requesting any additional permissions beyond basic functionality.
+    icon: check
+  - name: Download as PNG or PDF
+    description: Save the captured full-page screenshot as PNG image or PDF document.
+    icon: check
+additionalFeatures:
+  - name: Visible Viewport Capture
+    description: Also supports capturing only the visible portion of the page.
+    icon: check
+  - name: Screenshot History
+    description: Access your recently captured screenshots from the extension popup.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: fdpohaocaechififmbbbbbknoalclacl
+  chromeWebStoreRating: 4.6
+  userCount: 5000000
+  permissions:
+    - activeTab
+    - scripting
+    - storage
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

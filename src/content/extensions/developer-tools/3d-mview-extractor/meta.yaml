@@ -1,0 +1,58 @@
+slug: 3d-mview-extractor
+name: 3D Mview Extractor
+description: Detects and extract 3D Mview files.
+category: Chrome Extensions
+parentCategory: developer-tools
+subcategory: developer-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "1.0"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh
+docs: https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh
+sourceCode: ""
+icon: 3d-mview-extractor
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - 3d
+  - mview
+  - developer-tools
+atGlance: Detect and extract 3D Mview files from web pages.
+fullDescription: 3D Mview Extractor is a specialized browser extension that detects and extracts 3D Mview files embedded in web pages. It enables users to download 3D model files for offline use and further processing.
+coreFeatures:
+  - name: 3D File Detection
+    description: Automatically detects 3D Mview files embedded in the current page.
+    icon: check
+  - name: File Extraction
+    description: Extracts detected 3D files and makes them available for download.
+    icon: check
+  - name: Format Support
+    description: Supports common 3D Mview file formats used on the web.
+    icon: check
+additionalFeatures:
+  - name: Simple Interface
+    description: Clean popup interface showing all detected 3D files at a glance.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: lmmcjebneeokfgaobecnijjhgjokmbeh
+  chromeWebStoreRating: 4.0
+  userCount: 100000
+  permissions:
+    - activeTab
+    - scripting
+    - download
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

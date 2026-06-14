@@ -1,0 +1,61 @@
+slug: ublock-origin-lite
+name: uBlock Origin Lite
+description: An efficient content blocker. Blocks ads, trackers, miners, and more immediately upon installation.
+category: Chrome Extensions
+parentCategory: privacy
+subcategory: privacy
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: GPL-3.0
+lastCommit: N/A
+lastRelease: N/A
+version: "2026.607.1724"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh
+docs: https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh
+sourceCode: https://github.com/uBlockOrigin/uBO-Lite
+icon: ublock-origin-lite
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - ad-blocker
+  - privacy
+  - security
+atGlance: A lightweight Manifest V3 content blocker that blocks ads, trackers, and miners.
+fullDescription: uBlock Origin Lite is a Manifest V3-compatible version of uBlock Origin. It blocks ads, trackers, cryptominers, and other unwanted content across the web. Built from the ground up for Manifest V3, it provides the same blocking power as uBlock Origin with a focus on the new extension platform.
+coreFeatures:
+  - name: Ad and Tracker Blocking
+    description: Blocks ads, trackers, and cryptominers immediately upon installation.
+    icon: check
+  - name: Manifest V3 Native
+    description: Built specifically for Manifest V3 with declarative net request rules.
+    icon: check
+  - name: Minimal Permissions
+    description: Requires minimal permissions compared to other ad blockers.
+    icon: check
+additionalFeatures:
+  - name: Dynamic Filter Lists
+    description: Uses declarative filter lists that update automatically.
+    icon: check
+  - name: Privacy First
+    description: No user data is collected or transmitted by the extension.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: ddkjiahejlhfcafbddmgiahcphecmpfh
+  chromeWebStoreRating: 4.6
+  userCount: 5000000
+  permissions:
+    - declarativeNetRequest
+    - storage
+    - scripting
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store
