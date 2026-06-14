@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shallowRef } from 'vue'
+import { shallowRef, watch } from 'vue'
 import { AlertTriangle, CheckCircle2, Loader2 } from 'lucide-vue-next'
 import { supabase } from '@/lib/supabase'
 import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
@@ -30,8 +30,15 @@ const toast = useToastStore()
 const status = shallowRef<ReportStatus>('idle')
 const selectedIssueType = shallowRef<SiteIssueType>('down')
 
+watch(
+  () => props.site,
+  () => {
+    status.value = 'idle'
+  },
+)
+
 function getSelectedIssueOption() {
-  return ISSUE_OPTIONS.find(option => option.value === selectedIssueType.value) ?? ISSUE_OPTIONS[0]
+  return ISSUE_OPTIONS.find((option) => option.value === selectedIssueType.value) ?? ISSUE_OPTIONS[0]
 }
 
 async function reportSiteIssue() {
@@ -76,12 +83,8 @@ async function reportSiteIssue() {
 </script>
 
 <template>
-  <div
-    class="inline-flex h-9 max-w-full items-center overflow-hidden rounded-lg border border-red-400/30 bg-red-400/10 text-red-100"
-  >
-    <label :for="`site-issue-type-${site.slug}`" class="sr-only">
-      Site issue type
-    </label>
+  <div class="inline-flex h-9 max-w-full items-center overflow-hidden rounded-lg border border-red-400/30 bg-red-400/10 text-red-100">
+    <label :for="`site-issue-type-${site.slug}`" class="sr-only"> Site issue type </label>
     <select
       :id="`site-issue-type-${site.slug}`"
       v-model="selectedIssueType"
