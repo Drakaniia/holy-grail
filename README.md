@@ -1,44 +1,111 @@
 # Holy Grail
 
-This template should help get you started developing with Vue 3 in Vite.
+A curated directory of development tools, AI platforms, and developer resources — built with Vue 3 and Tailwind.
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3 (Composition API + `<script setup>`)
+- Vite 8
+- TypeScript
+- Tailwind CSS 3
+- Pinia (state management)
+- Vue Router 5
+- Supabase (auth & submissions)
+- MDX (markdown components)
 
-## Recommended Browser Setup
+## Prerequisites
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- [Bun](https://bun.sh/) (package manager)
+- Node.js 24.x
+- Chrome or Edge (for site preview generation)
 
-## Customize configuration
+## Getting Started
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 bun install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
 bun dev
 ```
 
-### Compile and Minify for Production
+The dev server runs index generation scripts automatically before starting.
 
-```sh
-bun run build
+## Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `bun dev` | Start dev server |
+| `bun run build` | Production build (includes type-check) |
+| `bun run preview` | Preview production build |
+| `bun run type-check` | Run vue-tsc --noEmit |
+| `bun lint` | Run oxlint then eslint |
+| `bun run format` | Format with prettier |
+| `bun run generate:skills` | Regenerate skills index |
+| `bun run generate:previews` | Capture missing site previews |
+| `bun run generate:previews:all` | Regenerate all previews |
+| `bun run import:bookmarks` | Import bookmarks |
+
+## Adding Sites
+
+Sites are defined as `meta.yaml` files under `src/content/sites/`. After adding a new site:
+
+```bash
+bun run scripts/generate-sites-index.js
+bun run scripts/generate-site-previews.js --slug <your-slug>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+See [docs/ADDING-SITES.md](docs/ADDING-SITES.md) for full details.
 
-```sh
-bun lint
+## Adding Skills
+
+Skills are defined in `src/content/skills/`. After adding or editing:
+
+```bash
+bun run generate:skills
 ```
+
+See [docs/ADDING-SKILLS.md](docs/ADDING-SKILLS.md) for full details.
+
+## Site Previews
+
+Previews are static WebP files generated with Puppeteer. Output goes to:
+
+- `public/previews/<slug>.webp` — full size (960×600)
+- `public/previews/<slug>-sm.webp` — thumbnail (480×300)
+- `src/content/site-previews.json` — must be committed
+
+Set `PREVIEW_BROWSER_PATH` to override the auto-detected Chrome/Edge path.
+
+## Architecture
+
+```
+src/
+├── components/       # Vue components
+├── composables/      # Composition functions
+├── content/
+│   ├── sites/        # Site meta.yaml files
+│   └── skills/       # Skill meta.yaml files
+├── pages/            # Route components
+├── stores/           # Pinia stores
+│   ├── sites.ts
+│   ├── skills.ts
+│   ├── auth.ts       # Supabase auth
+│   └── admin.ts      # Admin functionality
+├── types/            # TypeScript interfaces
+└── main.ts           # App entry
+```
+
+## Design
+
+Inspired by Vercel's design language — stark black-and-ink on near-white canvas with multi-color mesh gradients. See [DESIGN.md](DESIGN.md) for full design system.
+
+## Deployment
+
+Deployed to Vercel as a SPA. All routes rewrite to `index.html`.
+
+## CI/CD
+
+CI runs on push/PR to the `grail` branch:
+
+1. `type-check` — vue-tsc --noEmit
+2. `lint` — oxlint then eslint
+3. `build` — production build
