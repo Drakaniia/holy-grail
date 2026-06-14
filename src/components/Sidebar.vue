@@ -28,6 +28,7 @@ import {
   Palette,
   Plug,
   Presentation,
+  Puzzle,
   ScanSearch,
   Search,
   Send,
@@ -48,6 +49,7 @@ import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import { scheduleIdleTask } from '@/lib/idle'
 import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
+import { useExtensionsStore } from '@/stores/extensions'
 import type { useAdminStore } from '@/stores/admin'
 
 type AdminStore = ReturnType<typeof useAdminStore>
@@ -73,6 +75,7 @@ const { isAuthenticated } = useDeferredAuthStatus()
 const admin = shallowRef<AdminStore | null>(null)
 const sitesStore = useSitesStore()
 const skillsStore = useSkillsStore()
+const extensionsStore = useExtensionsStore()
 const sidebarSearch = shallowRef('')
 void sitesStore.loadSites()
 let cancelSkillsLoad: (() => void) | undefined
@@ -107,12 +110,18 @@ const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   downloads: true,
 })
 
+const isExtensionsExpanded = shallowRef(true)
+
 const isSiteGroupRoute = (path: string, group: SiteGroup) => {
   return path === `/sites/${group}` || path.startsWith(`/sites/${group}/`)
 }
 
 const toggleGroup = (group: SiteGroup) => {
   expandedGroups[group] = !expandedGroups[group]
+}
+
+function toggleExtensions() {
+  isExtensionsExpanded.value = !isExtensionsExpanded.value
 }
 
 const isActive = (path: string, exact = true) => {
@@ -210,6 +219,16 @@ const skillsNav = [
   { name: 'Design', icon: Palette, route: '/skills/design' },
 ]
 
+const extensionCategories = [
+  { name: 'Writing', icon: FileText, route: '/extensions/writing' },
+  { name: 'Productivity', icon: Workflow, route: '/extensions/productivity' },
+  { name: 'Developer Tools', icon: Code2, route: '/extensions/developer-tools' },
+  { name: 'Privacy', icon: ShieldCheck, route: '/extensions/privacy' },
+  { name: 'Research', icon: Microscope, route: '/extensions/research' },
+  { name: 'Design', icon: Palette, route: '/extensions/design' },
+  { name: 'Automation', icon: Bot, route: '/extensions/automation' },
+]
+
 const siteSubcategoryGroups = [
   { parentCategory: 'ai', items: aiSubcategories },
   { parentCategory: 'design', items: designSubcategories },
@@ -271,12 +290,22 @@ const skillRouteCounts = computed<Record<string, number>>(() => ({
   '/skills/skills': skillsStore.getSkillsByParentCategory('skills').length,
   '/skills/design': skillsStore.getSkillsByParentCategory('design').length,
 }))
+
+const extensionRouteCounts = computed<Record<string, number>>(() => {
+  const counts: Record<string, number> = {}
+  for (const cat of extensionCategories) {
+    const key = cat.route.split('/').pop() || ''
+    counts[cat.route] = extensionsStore.getExtensionsByParentCategory(key).length
+  }
+  return counts
+})
 const isAdmin = computed(() => admin.value?.isAdmin ?? false)
 const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
 
 const getSiteGroupCount = (group: SiteGroup) => siteGroupCounts.value[group]
 const getSiteRouteCount = (route: string) => siteRouteCounts.value[route] ?? 0
 const getSkillRouteCount = (route: string) => skillRouteCounts.value[route] ?? 0
+const getExtensionRouteCount = (route: string) => extensionRouteCounts.value[route] ?? 0
 
 const sidebarSearchTerms = computed(() =>
   sidebarSearch.value
@@ -313,9 +342,20 @@ const skillsSectionMatches = computed(
 )
 const showAllSitesTabs = computed(() => !hasSidebarSearch.value || sitesSectionMatches.value)
 const showAllSkillsTabs = computed(() => !hasSidebarSearch.value || skillsSectionMatches.value)
+const extensionsSectionMatches = computed(
+  () => hasSidebarSearch.value && matchesSidebarSearch('Extensions'),
+)
 
 const visibleSkillsNav = computed(() =>
   filterSidebarItems(skillsNav, showAllSkillsTabs.value, 'Skills'),
+)
+
+const showAllExtensionsTabs = computed(
+  () => !hasSidebarSearch.value || extensionsSectionMatches.value,
+)
+
+const visibleExtensionCategories = computed(() =>
+  filterSidebarItems(extensionCategories, showAllExtensionsTabs.value, 'Extensions'),
 )
 
 const aiGroupMatches = computed(
@@ -423,6 +463,10 @@ const showSkillsSection = computed(
   () => showAllSkillsTabs.value || visibleSkillsNav.value.length > 0,
 )
 
+const showExtensionsSection = computed(
+  () => showAllExtensionsTabs.value || visibleExtensionCategories.value.length > 0,
+)
+
 const visibleCompactSiteGroups = computed(() =>
   siteGroupNav.filter((group) => {
     if (group.group === 'ai') return showAiGroup.value
@@ -437,7 +481,9 @@ const totalSkillCount = computed(() =>
   visibleSkillsNav.value.reduce((total, item) => total + getSkillRouteCount(item.route), 0),
 )
 
-const hasVisibleSidebarTabs = computed(() => showSitesSection.value || showSkillsSection.value)
+const hasVisibleSidebarTabs = computed(
+  () => showSitesSection.value || showExtensionsSection.value || showSkillsSection.value,
+)
 
 function clearSidebarSearch() {
   sidebarSearch.value = ''
@@ -505,13 +551,21 @@ watch(isAuthenticated, (authenticated) => {
 onMounted(() => {
   if (route.path.startsWith('/skills')) {
     loadSkillsCounts()
-    return
+  } else {
+    cancelSkillsLoad = scheduleIdleTask(loadSkillsCounts, {
+      delay: 5000,
+      timeout: 9000,
+    })
   }
 
-  cancelSkillsLoad = scheduleIdleTask(loadSkillsCounts, {
-    delay: 5000,
-    timeout: 9000,
-  })
+  if (route.path.startsWith('/extensions')) {
+    void extensionsStore.loadExtensions()
+  } else {
+    void scheduleIdleTask(() => extensionsStore.loadExtensions(), {
+      delay: 6000,
+      timeout: 10000,
+    })
+  }
 })
 
 onUnmounted(() => {
@@ -660,6 +714,58 @@ onUnmounted(() => {
                   class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
                 >
                   {{ getSiteRouteCount(item.route) }}
+                </span>
+              </RouterLink>
+            </div>
+          </div>
+        </li>
+
+        <li v-if="showExtensionsSection" class="sidebar-rail-group pt-3">
+          <RouterLink
+            to="/extensions/writing"
+            class="sidebar-rail-button"
+            :class="
+              isActive('/extensions', false)
+                ? 'text-white'
+                : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+            "
+            aria-label="Extensions"
+          >
+            <span
+              v-if="isActive('/extensions', false)"
+              class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
+            ></span>
+            <Puzzle class="h-4 w-4" />
+          </RouterLink>
+
+          <div class="sidebar-rail-flyout">
+            <div class="border-b border-gray-800 px-3 py-2">
+              <div class="flex items-center gap-2">
+                <Puzzle class="h-4 w-4 text-gray-400" />
+                <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
+                  Extensions
+                </span>
+              </div>
+            </div>
+
+            <div class="p-2">
+              <RouterLink
+                v-for="item in visibleExtensionCategories"
+                :key="item.name"
+                :to="item.route"
+                class="sidebar-flyout-link"
+                :class="
+                  isActive(item.route)
+                    ? 'bg-[#1f1f1f] text-white'
+                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+                "
+              >
+                <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
+                <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
+                <span
+                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
+                >
+                  {{ getExtensionRouteCount(item.route) }}
                 </span>
               </RouterLink>
             </div>
@@ -1097,7 +1203,71 @@ onUnmounted(() => {
           </Transition>
         </template>
 
-        <li v-if="showSkillsSection" :class="{ 'mt-6': showSitesSection }">
+        <li v-if="showExtensionsSection" :class="{ 'mt-6': showSitesSection }">
+          <button
+            type="button"
+            class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
+            :class="
+              isActive('/extensions', false)
+                ? 'bg-[#1f1f1f] text-white'
+                : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+            "
+            :aria-expanded="isExtensionsExpanded"
+            aria-controls="sidebar-extensions-branch"
+            aria-label="Toggle extensions"
+            @click="toggleExtensions"
+          >
+            <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
+              <Puzzle class="w-3.5 h-3.5 flex-shrink-0" />
+              <span class="min-w-0 flex-1 truncate font-semibold uppercase tracking-wider">Extensions</span>
+            </span>
+            <ChevronRight
+              class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
+              :class="{ 'rotate-90': isExtensionsExpanded }"
+            />
+          </button>
+
+          <Transition name="sidebar-group">
+            <li
+              v-if="isExtensionsExpanded && visibleExtensionCategories.length > 0"
+              id="sidebar-extensions-branch"
+              class="sidebar-group-shell"
+            >
+              <ul class="sidebar-group-inner ml-4 space-y-0.5">
+                <li v-for="item in visibleExtensionCategories" :key="item.name">
+                  <RouterLink
+                    :to="item.route"
+                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
+                    :class="
+                      isActive(item.route)
+                        ? 'bg-[#1f1f1f] text-white'
+                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
+                    "
+                  >
+                    <div
+                      v-if="isActive(item.route)"
+                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
+                    ></div>
+                    <component :is="item.icon" class="w-3.5 h-3.5" />
+                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                    <span
+                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                      :class="
+                        isActive(item.route)
+                          ? 'text-zinc-300'
+                          : 'text-gray-600 group-hover:text-gray-300'
+                      "
+                    >
+                      {{ getExtensionRouteCount(item.route) }}
+                    </span>
+                  </RouterLink>
+                </li>
+              </ul>
+            </li>
+          </Transition>
+        </li>
+
+        <li v-if="showSkillsSection" :class="{ 'mt-6': showSitesSection || showExtensionsSection }">
           <div class="w-full flex items-center gap-3 text-gray-500 py-2">
             <Sparkles class="w-4 h-4" />
             <span class="text-xs font-semibold uppercase tracking-wider">Skills</span>
