@@ -1,0 +1,61 @@
+slug: eye-dropper
+name: Eye Dropper
+description: Pick colors from any website.
+category: Chrome Extensions
+parentCategory: design
+subcategory: design
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: "4.10.3.15"
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka
+docs: https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka
+sourceCode: ""
+icon: eye-dropper
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - color-picker
+  - design
+  - eyedropper
+atGlance: Pick colors from any website with a precise eyedropper tool.
+fullDescription: Eye Dropper is a Chrome extension that lets you pick colors from any webpage using a precise eyedropper tool. It captures the exact color value and provides the hex code, RGB values, and other color formats. It includes a color history and a palette manager for collecting colors during design work.
+coreFeatures:
+  - name: Precision Eyedropper
+    description: Pick any color on screen with pixel-level precision.
+    icon: check
+  - name: Color Format Support
+    description: View and copy colors in HEX, RGB, HSL, and other formats.
+    icon: check
+  - name: Color History
+    description: Automatically saves a history of all picked colors for reference.
+    icon: check
+additionalFeatures:
+  - name: Palette Collection
+    description: Organize picked colors into named palettes for projects.
+    icon: check
+  - name: Zoom Loupe
+    description: Magnified view around the cursor for accurate color selection.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: hmdcmlfkchdmnmnmheododdhjedfccka
+  chromeWebStoreRating: 4.6
+  userCount: 1000000
+  permissions:
+    - activeTab
+    - scripting
+    - storage
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store
