@@ -49,15 +49,6 @@ additionalFeatures:
     description: Grouped with other CLI and developer tools.
     icon: check
 similarTools:
-  - slug: expo
-    name: Using Model Context Protocol (MCP) with Expo - Expo Documentation
-    description: >-
-      Using Model Context Protocol (MCP) with Expo - Expo Documentation bookmarked for mcp
-      resources.
-    stars: 49543
-    addedDaysAgo: 0
-    verified: true
-    website: https://docs.expo.dev/eas/ai/mcp/
   - slug: codebuff
     name: Codebuff - AI Coding Assistant for Your Terminal
     description: Codebuff - AI Coding Assistant for Your Terminal bookmarked for ai cli resources.
