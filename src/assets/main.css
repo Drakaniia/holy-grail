@@ -213,6 +213,10 @@ html.light .app-sidebar {
   border-right-color: var(--mocha-border) !important;
 }
 
+html.light .app-sidebar #sidebar-tab-search {
+  border-color: var(--mocha-border) !important;
+}
+
 html.light .app-sidebar,
 html.light .app-sidebar .sidebar-rail-flyout,
 html.light .app-sidebar .sidebar-rail-tooltip {
