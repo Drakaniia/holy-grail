@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "scribbr-citation-generator",
+    "name": "Scribbr Citation Generator",
+    "description": "Instantly get accurate citations for any webpage in APA, MLA, Chicago, Harvard and any other style.",
+    "category": "Chrome Extensions",
+    "parentCategory": "writing",
+    "subcategory": "writing",
+    "version": "43.22",
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "website": "https://chromewebstore.google.com/detail/scribbr-citation-generato/epbobagokhieoonfplomdklollconnkl",
+    "docs": "https://chromewebstore.google.com/detail/scribbr-citation-generato/epbobagokhieoonfplomdklollconnkl",
+    "sourceCode": "",
+    "icon": "scribbr-citation-generator",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "chrome-extension",
+      "citation",
+      "writing",
+      "education"
+    ],
+    "atGlance": "Generate accurate citations for webpages directly from Chrome.",
+    "fullDescription": "Scribbr Citation Generator is a Chrome extension for students, teachers, and researchers that creates reference list entries and in-text citations for online sources. It supports APA, MLA, Chicago, Harvard, and other styles, extracts key sentences with citations, and can generate page summaries for quick review.",
+    "coreFeatures": [
+      {
+        "name": "Multi-Style Citations",
+        "description": "Generates accurate citations for webpages in APA, MLA, Chicago, Harvard, and other styles.",
+        "icon": "check"
+      },
+      {
+        "name": "In-Page Research Workflow",
+        "description": "Creates reference list entries and in-text citations while browsing online sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Key Sentence Extraction",
+        "description": "Extracts important sentences from a page with proper citation support.",
+        "icon": "check"
+      },
+      {
+        "name": "Page Summaries",
+        "description": "Generates concise summaries of webpages to speed up research review.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Chrome Web Store Installation",
+        "description": "Installed directly from the Chrome Web Store as a browser extension.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy to Clipboard",
+        "description": "Copies generated citations quickly into papers, notes, or documents.",
+        "icon": "check"
+      },
+      {
+        "name": "No Ads",
+        "description": "Designed as a free citation workflow without ads in the extension experience.",
+        "icon": "check"
+      }
+    ],
+    "similarTools": [],
+    "chromeWebStoreId": "epbobagokhieoonfplomdklollconnkl",
+    "chromeWebStoreRating": 4.7,
+    "userCount": 500000,
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "manifestVersion": 3,
+    "installButtonBehavior": "redirect-to-chrome-web-store"
+  }
+]
