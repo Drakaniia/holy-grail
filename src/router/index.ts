@@ -13,6 +13,8 @@ const HomePage = () => import('@/pages/HomePage.vue')
 const NotFoundPage = () => import('@/pages/NotFoundPage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
+const ExtensionDetail = () => import('@/pages/ExtensionDetail.vue')
+const ExtensionsPage = () => import('@/pages/ExtensionsPage.vue')
 const SettingsPage = () => import('@/pages/SettingsPage.vue')
 const SkillDetail = () => import('@/pages/SkillDetail.vue')
 const SkillsPage = () => import('@/pages/SkillsPage.vue')
@@ -86,6 +88,20 @@ const router = createRouter({
       path: '/skills/:slug',
       name: 'skill-detail',
       component: SkillDetail,
+    },
+    {
+      path: '/extensions',
+      redirect: '/extensions/writing',
+    },
+    {
+      path: '/extensions/:category(writing|productivity|developer-tools|privacy|research|design|automation)/:subcategory?',
+      name: 'extensions-category',
+      component: ExtensionsPage,
+    },
+    {
+      path: '/extensions/:slug',
+      name: 'extension-detail',
+      component: ExtensionDetail,
     },
     {
       path: '/login',
