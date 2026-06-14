@@ -78,8 +78,7 @@ function formatNumber(num: number): string {
             v-for="cat in categorySummaries"
             :key="cat.key"
             :to="`/extensions/${cat.key}`"
-            class="group relative overflow-hidden rounded-xl border border-gray-800 p-5 transition-all hover:border-gray-700"
-            style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f"
+            class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
           >
             <div class="flex items-start justify-between mb-3">
               <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors">
@@ -92,8 +91,8 @@ function formatNumber(num: number): string {
         </div>
       </section>
 
-      <div v-if="store.loading" class="grid grid-cols-1 gap-6">
-        <div v-for="index in 3" :key="index" class="border border-gray-800 rounded-xl h-32 animate-pulse bg-[#1f1f1f]" />
+        <div v-if="store.loading" class="grid grid-cols-1 gap-6">
+          <div v-for="index in 3" :key="index" class="ext-card-skeleton border rounded-xl h-32 animate-pulse" />
       </div>
 
       <div v-else-if="store.loadError" class="border border-red-900/70 bg-red-950/30 px-4 py-4 text-sm text-red-100">
@@ -111,8 +110,7 @@ function formatNumber(num: number): string {
               v-for="extension in featuredExtensions"
               :key="extension.slug"
               :to="`/extensions/${extension.slug}`"
-              class="group relative overflow-hidden rounded-xl border border-gray-800 p-5 transition-all hover:border-gray-700"
-              style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f"
+              class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
             >
               <div class="flex min-w-0 items-start gap-3">
                 <div class="flex-1 min-w-0">
@@ -148,8 +146,7 @@ function formatNumber(num: number): string {
               v-for="extension in extensions"
               :key="extension.slug"
               :to="`/extensions/${extension.slug}`"
-              class="group relative overflow-hidden rounded-xl border border-gray-800 p-5 transition-all hover:border-gray-700"
-              style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f"
+              class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
             >
               <div class="flex min-w-0 items-start gap-3">
                 <div class="flex-1 min-w-0">
@@ -180,6 +177,42 @@ function formatNumber(num: number): string {
 </template>
 
 <style scoped>
+.ext-card {
+  border-color: #1f2937;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%),
+    #1f1f1f;
+}
+
+.ext-card:hover {
+  border-color: #374151;
+}
+
+.ext-card-skeleton {
+  border-color: #1f2937;
+  background: #1f1f1f;
+}
+
+:global(html.light .ext-card) {
+  border-color: var(--mocha-border);
+  background:
+    linear-gradient(135deg, rgba(255, 140, 26, 0.09), rgba(255, 140, 26, 0) 58%),
+    var(--mocha-surface);
+  box-shadow: 0 1px 0 rgba(45, 33, 25, 0.04);
+}
+
+:global(html.light .ext-card:hover) {
+  border-color: var(--mocha-border-strong);
+  background:
+    linear-gradient(135deg, rgba(255, 140, 26, 0.13), rgba(255, 140, 26, 0) 60%),
+    var(--mocha-surface-strong);
+}
+
+:global(html.light .ext-card-skeleton) {
+  border-color: var(--mocha-border);
+  background: var(--mocha-surface-muted);
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
