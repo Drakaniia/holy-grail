@@ -16,6 +16,7 @@ bun run type-check               # vue-tsc --noEmit
 bun lint                         # oxlint --fix then eslint --fix --cache (sequential)
 bun run format                   # prettier --write --experimental-cli src/
 bun run generate:skills          # regenerate skills-index.json only
+bun run generate:extensions      # regenerate extensions-index.json only
 bun run import:bookmarks         # import bookmarks via scripts/import-bookmarks.js
 bun run generate:previews        # capture missing site previews only
 bun run generate:previews:all    # regenerate every site preview
@@ -51,26 +52,28 @@ Chrome/Edge must be installed locally. Set `PREVIEW_BROWSER_PATH` env var to ove
 `type-check` → `lint` → `build`
 
 ## Build Prerequisites — Critical
-Both `dev` and `build` run two generation scripts **before** Vite starts:
+Both `dev` and `build` run three generation scripts **before** Vite starts:
 - `scripts/generate-skills-index.js` — reads `src/content/skills/*/meta.yaml` → writes `src/content/skills-index.json`
 - `scripts/generate-sites-index.js` — reads `src/content/sites/*/meta.yaml` → writes `src/content/sites-index.json`
+- `scripts/generate-extensions-index.js` — reads `src/content/extensions/*/meta.yaml` → writes `src/content/extensions-index.json` and `public/content/extensions-index.json`
 
-These JSON files are imported directly by Pinia stores. If you add/edit a skill or site, the corresponding `meta.yaml` must exist and the index will be regenerated on next `dev`/`build`.
+These JSON files are imported directly by Pinia stores. If you add/edit a skill, site, or extension, the corresponding `meta.yaml` must exist and the index will be regenerated on next `dev`/`build`.
 
 ## Architecture
 - **Entry**: `src/main.ts`
-- **Routes**: `/` → `/sites/platforms` (redirect), `/sites/:category/:subcategory?`, `/sites/:slug`, `/skills` → `/skills/skills` (redirect), `/skills/:category`, `/skills/:slug`
-- **Stores**: `src/stores/sites.ts` and `src/stores/skills.ts` — both load from generated JSON indexes (not API calls)
+- **Routes**: `/` → `/sites/platforms` (redirect), `/sites/:category/:subcategory?`, `/sites/:slug`, `/skills` → `/skills/skills` (redirect), `/skills/:category`, `/skills/:slug`, `/extensions` → `/extensions/writing` (redirect), `/extensions/:category/:subcategory?`, `/extensions/:slug`
+- **Stores**: `src/stores/sites.ts`, `src/stores/skills.ts`, and `src/stores/extensions.ts` — all load from generated JSON indexes (not API calls)
 - **Skills store** fetches remote `SKILL.md` content from GitHub repos at runtime with localStorage cache (24h TTL)
 - **`src/stores/counter.ts`** is boilerplate — unused, safe to ignore
 - **Path alias**: `@/` → `./src/`
 - **Deploy**: Vercel SPA, all routes rewrite to `index.html`
 
 ## Content Model
-Skills and sites are defined as directories under `src/content/skills/` and `src/content/sites/`, each containing a `meta.yaml`.
+Skills, sites, and extensions are defined as directories under `src/content/skills/`, `src/content/sites/`, and `src/content/extensions/`, each containing a `meta.yaml`.
 
 - **Adding sites**: see `docs/ADDING-SITES.md`
 - **Adding skills**: see `docs/ADDING-SKILLS.md`
+- **Adding extensions**: see `docs/ADDING-EXTENSIONS.md`
 
 ## Linting
 - **oxlint** runs first (correctness category = error), then **eslint** (Vue essential rules)
