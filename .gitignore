@@ -46,3 +46,4 @@ __screenshots__/
 # Supabase local CLI state
 supabase/.temp/
 .opencode/plugins/emdash-notifications.js
+.gemini/settings.json
