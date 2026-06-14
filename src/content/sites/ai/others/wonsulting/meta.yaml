@@ -55,13 +55,6 @@ additionalFeatures:
     description: Tagged by AI category and subcategory for browsing.
     icon: check
 similarTools:
-  - slug: gambo
-    name: Gambo - The World's First Game Vibe Coding Agent
-    description: Gambo - The World's First Game Vibe Coding Agent bookmarked for ai tools resources.
-    stars: 0
-    addedDaysAgo: 0
-    verified: false
-    website: https://www.gambo.ai/
   - slug: locofy
     name: Locofy.ai - Design to Code with AI - frontend development in a flash
     description: >-
