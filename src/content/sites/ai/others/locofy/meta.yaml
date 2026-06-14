@@ -55,13 +55,6 @@ additionalFeatures:
     description: Tagged by AI category and subcategory for browsing.
     icon: check
 similarTools:
-  - slug: gambo
-    name: Gambo - The World's First Game Vibe Coding Agent
-    description: Gambo - The World's First Game Vibe Coding Agent bookmarked for ai tools resources.
-    stars: 0
-    addedDaysAgo: 0
-    verified: false
-    website: https://www.gambo.ai/
   - slug: wonsulting
     name: WonsultingAI - ResumAI - The First Free AI Resume Builder & AI Resume Writer
     description: >-
