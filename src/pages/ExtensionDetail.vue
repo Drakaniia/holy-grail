@@ -258,7 +258,7 @@ function renderStars(rating: number): string {
             v-for="tool in extension.similarTools"
             :key="tool.slug"
             :to="`/extensions/${tool.slug}`"
-            class="border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all group block"
+            class="ext-detail-card border rounded-xl p-4 hover:border-gray-700 transition-all group block"
           >
             <div class="flex items-start gap-3 mb-3">
               <div class="flex-1 min-w-0">
@@ -282,7 +282,7 @@ function renderStars(rating: number): string {
     </div>
 
     <div v-else-if="store.loading" class="max-w-6xl mx-auto px-4 py-24">
-      <div class="border border-gray-800 rounded-xl h-96 animate-pulse bg-[#1f1f1f]" />
+      <div class="ext-detail-skeleton border rounded-xl h-96 animate-pulse" />
     </div>
 
     <div v-else-if="store.loadError" class="mx-auto max-w-xl px-4 py-24 text-center">
@@ -310,6 +310,42 @@ function renderStars(rating: number): string {
 </template>
 
 <style scoped>
+.ext-detail-card {
+  border-color: #1f2937;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%),
+    #1f1f1f;
+}
+
+.ext-detail-card:hover {
+  border-color: #374151;
+}
+
+.ext-detail-skeleton {
+  border-color: #1f2937;
+  background: #1f1f1f;
+}
+
+:global(html.light .ext-detail-card) {
+  border-color: var(--mocha-border);
+  background:
+    linear-gradient(135deg, rgba(255, 140, 26, 0.09), rgba(255, 140, 26, 0) 58%),
+    var(--mocha-surface);
+  box-shadow: 0 1px 0 rgba(45, 33, 25, 0.04);
+}
+
+:global(html.light .ext-detail-card:hover) {
+  border-color: var(--mocha-border-strong);
+  background:
+    linear-gradient(135deg, rgba(255, 140, 26, 0.13), rgba(255, 140, 26, 0) 60%),
+    var(--mocha-surface-strong);
+}
+
+:global(html.light .ext-detail-skeleton) {
+  border-color: var(--mocha-border);
+  background: var(--mocha-surface-muted);
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
