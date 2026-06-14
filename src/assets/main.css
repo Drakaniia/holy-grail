@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist Sans", "sans-serif";
+
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffeed5;
+  --color-accent-200: #ffd9b3;
+  --color-accent-300: #ffc080;
+  --color-accent-400: #ffa54d;
+  --color-accent-500: #ff8c1a;
+  --color-accent-600: #ff7a00;
+  --color-accent-700: #cc6100;
+  --color-accent-800: #994900;
+  --color-accent-900: #663100;
+}
 
 @layer base {
   :root {

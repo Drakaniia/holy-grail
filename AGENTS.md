@@ -1,7 +1,7 @@
 HOLY GRAIL — Agent Guidelines
 
 ## Stack
-Vue 3 (Composition API + `<script setup>`) · Vite 8 · TypeScript · Tailwind CSS 3 · Pinia · Vue Router 5
+Vue 3 (Composition API + `<script setup>`) · Vite 8 · TypeScript · Tailwind CSS 4 · Pinia · Vue Router 5
 
 ## Package Manager
 **Bun only.** Never use npm/yarn/pnpm.

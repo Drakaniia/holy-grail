@@ -7,7 +7,7 @@ A curated directory of development tools, AI platforms, and developer resources 
 - Vue 3 (Composition API + `<script setup>`)
 - Vite 8
 - TypeScript
-- Tailwind CSS 3
+- Tailwind CSS 4
 - Pinia (state management)
 - Vue Router 5
 - Supabase (auth & submissions)
