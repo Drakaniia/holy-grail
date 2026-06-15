@@ -59,8 +59,8 @@ function readServiceRoleKey() {
 
     if (parsed && typeof parsed === 'object') {
       const values = Object.values(parsed as Record<string, unknown>)
-      const secretKey = values.find((value): value is string =>
-        typeof value === 'string' && value.trim().length > 0
+      const secretKey = values.find(
+        (value): value is string => typeof value === 'string' && value.trim().length > 0,
       )
 
       return secretKey?.trim() ?? ''
@@ -82,15 +82,14 @@ function normalizeOrigin(value: string) {
 
 function getAllowedOrigins() {
   const configuredOrigins = (
-    Deno.env.get('SITE_REPORT_ALLOWED_ORIGINS') ||
-    Deno.env.get('SUBMISSION_ALLOWED_ORIGINS')
+    Deno.env.get('SITE_REPORT_ALLOWED_ORIGINS') || Deno.env.get('SUBMISSION_ALLOWED_ORIGINS')
   )?.trim()
   const fallbackOrigin = Deno.env.get('PUBLIC_SITE_URL')?.trim() || DEFAULT_PUBLIC_SITE_URL
   const origins = configuredOrigins ? configuredOrigins.split(',') : [fallbackOrigin]
 
   return new Set(
     origins
-      .map(origin => origin.trim())
+      .map((origin) => origin.trim())
       .filter(Boolean)
       .map(normalizeOrigin),
   )
@@ -108,7 +107,7 @@ function getCorsHeaders(origin: string | null) {
       'Access-Control-Allow-Headers': CORS_ALLOWED_HEADERS,
       'Access-Control-Allow-Methods': CORS_ALLOWED_METHODS,
       'Access-Control-Max-Age': '86400',
-      'Vary': 'Origin',
+      Vary: 'Origin',
     },
   }
 }
@@ -156,12 +155,7 @@ function normalizeUrl(value: string) {
 }
 
 function normalizeIssueType(value: unknown): SiteIssueType {
-  if (
-    value === 'down' ||
-    value === 'deprecated' ||
-    value === 'wrong-url' ||
-    value === 'other'
-  ) {
+  if (value === 'down' || value === 'deprecated' || value === 'wrong-url' || value === 'other') {
     return value
   }
 
@@ -193,9 +187,10 @@ function normalizeReport(rawReport: SiteIssuePayload | null, user: User | null) 
 }
 
 function getClientIp(req: Request) {
-  const forwardedFor = req.headers.get('x-forwarded-for')
+  const forwardedFor = req.headers
+    .get('x-forwarded-for')
     ?.split(',')
-    .map(value => value.trim())
+    .map((value) => value.trim())
     .filter(Boolean)
 
   return (
@@ -209,7 +204,7 @@ function getClientIp(req: Request) {
 async function sha256Hex(value: string) {
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value))
   return Array.from(new Uint8Array(digest))
-    .map(byte => byte.toString(16).padStart(2, '0'))
+    .map((byte) => byte.toString(16).padStart(2, '0'))
     .join('')
 }
 
@@ -267,10 +262,7 @@ async function checkRateLimit(adminClient: SupabaseClient, req: Request) {
   return data as RateLimitResult
 }
 
-async function saveSiteIssueReport(
-  adminClient: SupabaseClient,
-  report: NormalizedSiteIssueReport,
-) {
+async function saveSiteIssueReport(adminClient: SupabaseClient, report: NormalizedSiteIssueReport) {
   const { data, error } = await adminClient
     .from('site_issue_reports')
     .insert({
@@ -303,7 +295,7 @@ Deno.serve(async (req) => {
 
   if (req.method !== 'POST') {
     return jsonResponse({ error: 'Method not allowed.' }, 405, corsHeaders, {
-      'Allow': 'POST, OPTIONS',
+      Allow: 'POST, OPTIONS',
     })
   }
 
@@ -327,21 +319,17 @@ Deno.serve(async (req) => {
 
   const rateLimit = await checkRateLimit(adminClient, req)
   if (!rateLimit.allowed) {
-    return jsonResponse(
-      { error: 'Too many site reports. Try again later.' },
-      429,
-      corsHeaders,
-      {
-        'Retry-After': String(rateLimit.retry_after_seconds),
-        'X-RateLimit-Remaining': '0',
-      },
-    )
+    return jsonResponse({ error: 'Too many site reports. Try again later.' }, 429, corsHeaders, {
+      'Retry-After': String(rateLimit.retry_after_seconds),
+      'X-RateLimit-Remaining': '0',
+    })
   }
 
   const body = await req.json().catch(() => null)
-  const rawReport = body && typeof body === 'object'
-    ? (body as { report?: SiteIssuePayload }).report ?? null
-    : null
+  const rawReport =
+    body && typeof body === 'object'
+      ? ((body as { report?: SiteIssuePayload }).report ?? null)
+      : null
   const user = await getUserFromRequest(adminClient, req)
   const normalized = normalizeReport(rawReport, user)
 
