@@ -130,8 +130,8 @@ const category = shallowRef('')
 const submitterNote = shallowRef('')
 
 const selectedCategoryOptions = computed(() => CATEGORY_OPTIONS[resourceType.value])
-const resourceTypeLabel = computed(() =>
-  RESOURCE_TYPES.find(option => option.value === resourceType.value)?.label ?? 'Resource',
+const resourceTypeLabel = computed(
+  () => RESOURCE_TYPES.find((option) => option.value === resourceType.value)?.label ?? 'Resource',
 )
 const showAnonymousSubmitNotice = computed(() => auth.initialized && !auth.isAuthenticated)
 
@@ -184,7 +184,9 @@ const fullProcessLabel = computed(
 )
 
 watch(resourceType, () => {
-  const categoryStillApplies = selectedCategoryOptions.value.some(option => option.value === category.value)
+  const categoryStillApplies = selectedCategoryOptions.value.some(
+    (option) => option.value === category.value,
+  )
   if (!categoryStillApplies) {
     category.value = ''
   }
@@ -268,10 +270,7 @@ async function handleSubmit() {
     if (!data?.ok) throw new Error(data?.error || 'Submission failed. Please try again.')
 
     status.value = 'success'
-    toast.success(
-      'Submission queued',
-      'An admin will review it before it is added to the catalog.',
-    )
+    toast.success('Submission queued', 'An admin will review it before it is added to the catalog.')
   } catch (err) {
     status.value = 'error'
     errorMessage.value = await getSupabaseFunctionErrorMessage(
@@ -379,168 +378,178 @@ function resetForm() {
               key="source"
               aria-labelledby="publish-source-title"
             >
-                <p class="text-xs font-semibold uppercase tracking-widest text-accent-300">
-                  Step 1
-                </p>
-                <h2 id="publish-source-title" class="mt-2 text-2xl font-bold text-white">
-                  Source input
-                </h2>
-                <p class="mt-2 text-sm leading-6 text-gray-500">
-                  Start with the canonical URL. For skills, use the repo or page that contains the
-                  skill instructions.
-                </p>
+              <p class="text-xs font-semibold uppercase tracking-widest text-accent-300">Step 1</p>
+              <h2 id="publish-source-title" class="mt-2 text-2xl font-bold text-white">
+                Source input
+              </h2>
+              <p class="mt-2 text-sm leading-6 text-gray-500">
+                Start with the canonical URL. For skills, use the repo or page that contains the
+                skill instructions.
+              </p>
 
-                <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  <button
-                    v-for="option in RESOURCE_TYPES"
-                    :key="option.value"
-                    type="button"
-                    class="flex min-h-32 gap-3 border p-4 text-left transition"
+              <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                <button
+                  v-for="option in RESOURCE_TYPES"
+                  :key="option.value"
+                  type="button"
+                  class="flex min-h-32 gap-3 border p-4 text-left transition"
+                  :class="
+                    resourceType === option.value
+                      ? 'border-accent-400/70 bg-accent-500/10'
+                      : 'border-gray-800 bg-[#1f1f1f] hover:border-gray-700'
+                  "
+                  @click="resourceType = option.value"
+                >
+                  <span
+                    class="flex h-9 w-9 shrink-0 items-center justify-center border"
                     :class="
                       resourceType === option.value
-                        ? 'border-accent-400/70 bg-accent-500/10'
-                        : 'border-gray-800 bg-[#1f1f1f] hover:border-gray-700'
+                        ? 'border-accent-300/50 text-accent-100'
+                        : 'border-gray-800 text-gray-500'
                     "
-                    @click="resourceType = option.value"
                   >
-                    <span
-                      class="flex h-9 w-9 shrink-0 items-center justify-center border"
-                      :class="
-                        resourceType === option.value
-                          ? 'border-accent-300/50 text-accent-100'
-                          : 'border-gray-800 text-gray-500'
-                      "
-                    >
-                      <component :is="option.icon" class="h-4 w-4" />
+                    <component :is="option.icon" class="h-4 w-4" />
+                  </span>
+                  <span>
+                    <span class="block text-sm font-bold text-white">{{ option.label }}</span>
+                    <span class="mt-2 block text-xs leading-5 text-gray-500">
+                      {{ option.description }}
                     </span>
-                    <span>
-                      <span class="block text-sm font-bold text-white">{{ option.label }}</span>
-                      <span class="mt-2 block text-xs leading-5 text-gray-500">
-                        {{ option.description }}
-                      </span>
-                    </span>
-                  </button>
-                </div>
+                  </span>
+                </button>
+              </div>
 
-                <label class="mt-6 block">
-                  <span class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                    Source URL <span class="text-red-400">*</span>
+              <label class="mt-6 block">
+                <span
+                  class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500"
+                >
+                  Source URL <span class="text-red-400">*</span>
+                </span>
+                <span class="relative block">
+                  <Globe class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+                  <input
+                    v-model="url"
+                    type="url"
+                    placeholder="https://example.com"
+                    :disabled="status === 'loading'"
+                    class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  />
+                </span>
+              </label>
+
+              <div
+                class="mt-4 flex gap-3 border border-gray-800 bg-[#1f1f1f]/60 px-4 py-3 text-sm leading-6 text-gray-400"
+              >
+                <FileCode2 class="mt-0.5 h-4 w-4 shrink-0 text-accent-300" />
+                <span>
+                  This step validates the source format only. Admins still inspect quality, fit,
+                  safety, duplication, and whether the item belongs in sites or skills.
+                </span>
+              </div>
+            </section>
+
+            <section
+              v-else-if="activeStep === 'details'"
+              key="details"
+              aria-labelledby="publish-details-title"
+            >
+              <p class="text-xs font-semibold uppercase tracking-widest text-accent-300">Step 2</p>
+              <h2 id="publish-details-title" class="mt-2 text-2xl font-bold text-white">
+                Draft catalog metadata
+              </h2>
+              <p class="mt-2 text-sm leading-6 text-gray-500">
+                These fields help the admin place the item without guessing. They can still adjust
+                taxonomy and final copy before publishing.
+              </p>
+
+              <div class="mt-6 grid gap-5">
+                <label class="block">
+                  <span
+                    class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500"
+                  >
+                    Name <span class="text-red-400">*</span>
                   </span>
-                  <span class="relative block">
-                    <Globe class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
-                    <input
-                      v-model="url"
-                      type="url"
-                      placeholder="https://example.com"
-                      :disabled="status === 'loading'"
-                      class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] pl-10 pr-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
-                    />
-                  </span>
+                  <input
+                    v-model="name"
+                    type="text"
+                    placeholder="e.g. Coolify"
+                    :disabled="status === 'loading'"
+                    class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  />
                 </label>
 
-                <div class="mt-4 flex gap-3 border border-gray-800 bg-[#1f1f1f]/60 px-4 py-3 text-sm leading-6 text-gray-400">
-                  <FileCode2 class="mt-0.5 h-4 w-4 shrink-0 text-accent-300" />
-                  <span>
-                    This step validates the source format only. Admins still inspect quality, fit,
-                    safety, duplication, and whether the item belongs in sites or skills.
+                <label class="block">
+                  <span
+                    class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500"
+                  >
+                    Category <span class="text-red-400">*</span>
                   </span>
-                </div>
-              </section>
-
-              <section
-                v-else-if="activeStep === 'details'"
-                key="details"
-                aria-labelledby="publish-details-title"
-              >
-                <p class="text-xs font-semibold uppercase tracking-widest text-accent-300">
-                  Step 2
-                </p>
-                <h2 id="publish-details-title" class="mt-2 text-2xl font-bold text-white">
-                  Draft catalog metadata
-                </h2>
-                <p class="mt-2 text-sm leading-6 text-gray-500">
-                  These fields help the admin place the item without guessing. They can still adjust
-                  taxonomy and final copy before publishing.
-                </p>
-
-                <div class="mt-6 grid gap-5">
-                  <label class="block">
-                    <span class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                      Name <span class="text-red-400">*</span>
-                    </span>
-                    <input
-                      v-model="name"
-                      type="text"
-                      placeholder="e.g. Coolify"
-                      :disabled="status === 'loading'"
-                      class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
-                    />
-                  </label>
-
-                  <label class="block">
-                    <span class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                      Category <span class="text-red-400">*</span>
-                    </span>
-                    <select
-                      v-model="category"
-                      :disabled="status === 'loading'"
-                      class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  <select
+                    v-model="category"
+                    :disabled="status === 'loading'"
+                    class="h-12 w-full border border-zinc-700 bg-[#1f1f1f] px-4 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    <option value="" disabled>Select a category...</option>
+                    <option
+                      v-for="cat in selectedCategoryOptions"
+                      :key="cat.value"
+                      :value="cat.value"
                     >
-                      <option value="" disabled>Select a category...</option>
-                      <option
-                        v-for="cat in selectedCategoryOptions"
-                        :key="cat.value"
-                        :value="cat.value"
-                      >
-                        {{ cat.label }}
-                      </option>
-                    </select>
-                  </label>
+                      {{ cat.label }}
+                    </option>
+                  </select>
+                </label>
 
-                  <label class="block">
-                    <span class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                      Short description <span class="text-red-400">*</span>
+                <label class="block">
+                  <span
+                    class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500"
+                  >
+                    Short description <span class="text-red-400">*</span>
+                  </span>
+                  <textarea
+                    v-model="description"
+                    rows="3"
+                    placeholder="What does it do? Why is it useful?"
+                    :disabled="status === 'loading'"
+                    class="w-full resize-none border border-zinc-700 bg-[#1f1f1f] px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  ></textarea>
+                </label>
+
+                <label class="block">
+                  <span
+                    class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500"
+                  >
+                    Note for reviewers
+                    <span class="ml-1 font-normal normal-case tracking-normal text-zinc-600">
+                      optional
                     </span>
-                    <textarea
-                      v-model="description"
-                      rows="3"
-                      placeholder="What does it do? Why is it useful?"
-                      :disabled="status === 'loading'"
-                      class="w-full resize-none border border-zinc-700 bg-[#1f1f1f] px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
-                    ></textarea>
-                  </label>
+                  </span>
+                  <textarea
+                    v-model="submitterNote"
+                    rows="3"
+                    placeholder="Anything the reviewer should know..."
+                    :disabled="status === 'loading'"
+                    class="w-full resize-none border border-zinc-700 bg-[#1f1f1f] px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
+                  ></textarea>
+                </label>
+              </div>
+            </section>
 
-                  <label class="block">
-                    <span class="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-500">
-                      Note for reviewers
-                      <span class="ml-1 font-normal normal-case tracking-normal text-zinc-600">
-                        optional
-                      </span>
-                    </span>
-                    <textarea
-                      v-model="submitterNote"
-                      rows="3"
-                      placeholder="Anything the reviewer should know..."
-                      :disabled="status === 'loading'"
-                      class="w-full resize-none border border-zinc-700 bg-[#1f1f1f] px-4 py-3 text-sm text-white outline-none transition focus:border-accent-400 disabled:cursor-not-allowed disabled:opacity-60"
-                    ></textarea>
-                  </label>
-                </div>
-              </section>
+            <section v-else key="review">
+              <PublishReviewSummary
+                :resource-type-label="resourceTypeLabel"
+                :name="name"
+                :url="url"
+                :description="description"
+                :category="category"
+                :submitter-note="submitterNote"
+              />
+            </section>
+          </Transition>
 
-              <section v-else key="review">
-                <PublishReviewSummary
-                  :resource-type-label="resourceTypeLabel"
-                  :name="name"
-                  :url="url"
-                  :description="description"
-                  :category="category"
-                  :submitter-note="submitterNote"
-                />
-              </section>
-            </Transition>
-
-          <div class="mt-8 flex flex-col gap-3 border-t border-gray-800 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div
+            class="mt-8 flex flex-col gap-3 border-t border-gray-800 pt-5 sm:flex-row sm:items-center sm:justify-between"
+          >
             <button
               type="button"
               class="inline-flex h-11 items-center justify-center gap-2 border border-gray-800 px-4 text-sm font-semibold text-gray-300 transition hover:border-gray-600 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
