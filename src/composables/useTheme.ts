@@ -26,8 +26,7 @@ function persistTheme(nextTheme: ThemeMode) {
 
   try {
     window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme)
-  } catch {
-  }
+  } catch {}
 }
 
 function applyTheme(nextTheme: ThemeMode) {
