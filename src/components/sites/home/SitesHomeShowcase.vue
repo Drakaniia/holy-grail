@@ -23,10 +23,7 @@ defineProps<{
       </RouterLink>
     </div>
 
-    <div
-      v-if="items.length > 0"
-      class="sites-home-showcase__grid"
-    >
+    <div v-if="items.length > 0" class="sites-home-showcase__grid">
       <SitesHomePreviewCard
         v-for="item in items"
         :key="item.slug"
@@ -35,16 +32,8 @@ defineProps<{
       />
     </div>
 
-    <div
-      v-else-if="isLoading"
-      class="sites-home-showcase__grid"
-      aria-hidden="true"
-    >
-      <div
-        v-for="index in 6"
-        :key="index"
-        class="sites-home-showcase__skeleton hg-skeleton"
-      ></div>
+    <div v-else-if="isLoading" class="sites-home-showcase__grid" aria-hidden="true">
+      <div v-for="index in 6" :key="index" class="sites-home-showcase__skeleton hg-skeleton"></div>
     </div>
   </section>
 </template>
@@ -54,8 +43,7 @@ defineProps<{
   display: grid;
   gap: 1.25rem;
   padding: 0 clamp(1rem, 4%, 3rem) 3.5rem;
-  background:
-    linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 100%);
+  background: linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 100%);
   color: #ffffff;
 }
 
