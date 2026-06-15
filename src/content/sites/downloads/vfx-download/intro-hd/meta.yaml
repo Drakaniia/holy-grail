@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Bookmark
 lastCommit: Imported May 20, 2026
 lastRelease: Bookmark
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://intro-hd.net/
 docs: https://intro-hd.net/
-sourceCode: ""
+sourceCode: ''
 icon: intro-hd
 verified: false
 featured: false
