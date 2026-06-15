@@ -1,7 +1,17 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { AlertCircle, ArrowLeft, Check, Code2, Copy, ExternalLink, Eye, Tag, User } from 'lucide-vue-next'
+import {
+  AlertCircle,
+  ArrowLeft,
+  Check,
+  Code2,
+  Copy,
+  ExternalLink,
+  Eye,
+  Tag,
+  User,
+} from 'lucide-vue-next'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
 import SkillContentSkeleton from '@/components/skills/SkillContentSkeleton.vue'
 import SkillDetailSkeleton from '@/components/skills/SkillDetailSkeleton.vue'
@@ -50,9 +60,13 @@ async function loadSkillContent() {
   }
 }
 
-watch(slug, () => {
-  void loadSkillContent()
-}, { immediate: true })
+watch(
+  slug,
+  () => {
+    void loadSkillContent()
+  },
+  { immediate: true },
+)
 
 function formatNumber(num: number): string {
   if (num >= 1000) {
@@ -109,11 +123,7 @@ async function copyInstallCommand() {
           <h1 class="min-w-0 break-words text-3xl font-bold text-white md:text-4xl">
             {{ skill.title }}
           </h1>
-          <BookmarkButton
-            v-if="bookmarkResource"
-            :resource="bookmarkResource"
-            variant="detail"
-          />
+          <BookmarkButton v-if="bookmarkResource" :resource="bookmarkResource" variant="detail" />
         </div>
         <p class="text-gray-400 text-base leading-relaxed">
           {{ skill.description }}
@@ -121,7 +131,10 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Stats Bar -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        class="border border-gray-800 rounded-xl p-4 mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <div class="flex flex-wrap items-center gap-4 sm:gap-6">
           <div class="flex items-center gap-2 text-sm text-gray-400">
             <Eye class="w-4 h-4" />
@@ -137,14 +150,21 @@ async function copyInstallCommand() {
           </div>
           <div class="flex min-w-0 items-center gap-2 text-sm text-gray-400">
             <ExternalLink class="w-4 h-4" />
-            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="break-all transition-colors hover:text-accent-400">
+            <a
+              :href="`https://github.com/${skill.repoLink}`"
+              target="_blank"
+              class="break-all transition-colors hover:text-accent-400"
+            >
               {{ skill.repoLink }}
             </a>
           </div>
         </div>
 
         <!-- Tags -->
-        <div v-if="skill.tags.length" class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-800">
+        <div
+          v-if="skill.tags.length"
+          class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-800"
+        >
           <span
             v-for="tag in skill.tags"
             :key="tag"
@@ -157,11 +177,18 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Install Command -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        class="border border-gray-800 rounded-xl p-4 mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div class="min-w-0">
-            <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">Install Command</p>
-            <code class="block break-all font-mono text-sm text-gray-300">{{ getInstallCommand() }}</code>
+            <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">
+              Install Command
+            </p>
+            <code class="block break-all font-mono text-sm text-gray-300">{{
+              getInstallCommand()
+            }}</code>
           </div>
           <button
             @click="copyInstallCommand"
@@ -190,7 +217,11 @@ async function copyInstallCommand() {
           <p class="text-gray-400 text-sm mb-4">{{ error }}</p>
           <p class="text-gray-500 text-xs">
             Showing description only. Visit the
-            <a :href="`https://github.com/${skill.repoLink}`" target="_blank" class="text-accent-400 hover:underline">
+            <a
+              :href="`https://github.com/${skill.repoLink}`"
+              target="_blank"
+              class="text-accent-400 hover:underline"
+            >
               repository
             </a>
             for full documentation.
@@ -198,7 +229,11 @@ async function copyInstallCommand() {
         </div>
 
         <!-- Rendered Content -->
-        <div v-else-if="contentHtml" class="skill-content prose prose-invert prose-sm max-w-none overflow-x-auto break-words" v-html="contentHtml"></div>
+        <div
+          v-else-if="contentHtml"
+          class="skill-content prose prose-invert prose-sm max-w-none overflow-x-auto break-words"
+          v-html="contentHtml"
+        ></div>
 
         <!-- No Content Fallback -->
         <div v-else class="text-center py-12">
