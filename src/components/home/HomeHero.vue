@@ -46,8 +46,8 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
         <p class="home-hero__eyebrow">Holy Grail Library</p>
         <h1 id="home-hero-title" class="home-hero__title">Holy Grail</h1>
         <p class="home-hero__summary">
-          A working index for cloud hosting, AI tools, design references, CLI agents, UI
-          libraries, and reusable agent skills without losing the thread.
+          A working index for cloud hosting, AI tools, design references, CLI agents, UI libraries,
+          and reusable agent skills without losing the thread.
         </p>
 
         <div class="home-hero__actions" aria-label="Primary actions">
@@ -90,12 +90,7 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
                   aria-hidden="true"
                 >
                   <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
-                  <img
-                    :src="tile.previousItem.image"
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <img :src="tile.previousItem.image" alt="" loading="lazy" decoding="async" />
                 </picture>
 
                 <picture
@@ -138,17 +133,29 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
 
         <div class="home-hero__metrics" aria-label="Catalog totals">
           <div>
-            <span v-if="isLoading" class="home-hero__metric-skeleton hg-skeleton" aria-hidden="true"></span>
+            <span
+              v-if="isLoading"
+              class="home-hero__metric-skeleton hg-skeleton"
+              aria-hidden="true"
+            ></span>
             <span v-else>{{ totalSitesLabel }}</span>
             <p>Sites</p>
           </div>
           <div>
-            <span v-if="isLoading" class="home-hero__metric-skeleton hg-skeleton" aria-hidden="true"></span>
+            <span
+              v-if="isLoading"
+              class="home-hero__metric-skeleton hg-skeleton"
+              aria-hidden="true"
+            ></span>
             <span v-else>{{ totalSkillsLabel }}</span>
             <p>Skills</p>
           </div>
           <div>
-            <span v-if="isLoading" class="home-hero__metric-skeleton hg-skeleton" aria-hidden="true"></span>
+            <span
+              v-if="isLoading"
+              class="home-hero__metric-skeleton hg-skeleton"
+              aria-hidden="true"
+            ></span>
             <span v-else>{{ totalCategoriesLabel }}</span>
             <p>Groups</p>
           </div>
