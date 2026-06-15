@@ -1,12 +1,7 @@
 import type { RouteLocationNormalizedLoaded, Router } from 'vue-router'
 import { scheduleIdleTask } from '@/lib/idle'
 
-export type AnalyticsEventType =
-  | 'page_view'
-  | 'search'
-  | 'outbound_click'
-  | 'signup'
-  | 'bookmark'
+export type AnalyticsEventType = 'page_view' | 'search' | 'outbound_click' | 'signup' | 'bookmark'
 
 interface AnalyticsSettings {
   tracking_enabled: boolean
@@ -170,9 +165,7 @@ async function loadAnalyticsSettings(): Promise<AnalyticsSettings> {
   try {
     const { data, error } = await supabase
       .from('analytics_settings')
-      .select(
-        'tracking_enabled,track_authenticated_users,track_search_terms,track_outbound_clicks',
-      )
+      .select('tracking_enabled,track_authenticated_users,track_search_terms,track_outbound_clicks')
       .eq('id', 'global')
       .maybeSingle()
 
@@ -235,19 +228,21 @@ async function insertAnalyticsEvent(payload: AnalyticsPayload) {
     })
 
     if (error) throw error
-  } catch {
-  }
+  } catch {}
 }
 
 function schedulePageView(payload: AnalyticsPayload) {
   if (typeof window === 'undefined') return
 
-  scheduleIdleTask(() => {
-    void insertAnalyticsEvent(payload)
-  }, {
-    delay: PAGE_VIEW_DELAY_MS,
-    timeout: PAGE_VIEW_DELAY_MS,
-  })
+  scheduleIdleTask(
+    () => {
+      void insertAnalyticsEvent(payload)
+    },
+    {
+      delay: PAGE_VIEW_DELAY_MS,
+      timeout: PAGE_VIEW_DELAY_MS,
+    },
+  )
 }
 
 export function trackSearchQuery(query: string, source: string) {
