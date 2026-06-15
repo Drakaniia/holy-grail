@@ -52,7 +52,8 @@ function completeWithTimeout(): Promise<OAuthCompletion> {
 
       isTakingLong.value = true
       statusMessage.value = 'Still completing sign in...'
-      statusDetail.value = 'Mobile browsers can pause the provider handoff. This will stop waiting if it cannot finish.'
+      statusDetail.value =
+        'Mobile browsers can pause the provider handoff. This will stop waiting if it cannot finish.'
     }, CALLBACK_SLOW_MS)
 
     timeoutTimer = window.setTimeout(() => {
@@ -65,7 +66,8 @@ function completeWithTimeout(): Promise<OAuthCompletion> {
       resolve({
         handled: true,
         ok: false,
-        message: 'Sign in took too long on this device. Please try again from the same browser tab.',
+        message:
+          'Sign in took too long on this device. Please try again from the same browser tab.',
       })
     }, CALLBACK_TIMEOUT_MS)
 
@@ -121,7 +123,9 @@ onBeforeUnmount(clearTimers)
 </script>
 
 <template>
-  <div class="auth-callback-shell flex min-h-screen items-center justify-center bg-[#1f1f1f] px-4 text-white">
+  <div
+    class="auth-callback-shell flex min-h-screen items-center justify-center bg-[#1f1f1f] px-4 text-white"
+  >
     <div
       class="auth-callback-card flex max-w-sm items-start gap-3 border border-zinc-800 bg-[#1f1f1f] px-5 py-4 text-sm text-zinc-300"
     >
