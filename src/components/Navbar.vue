@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, nextTick, onMounted, onUnmounted, shallowRef, watch } from 'vue'
+import {
+  computed,
+  defineAsyncComponent,
+  nextTick,
+  onMounted,
+  onUnmounted,
+  shallowRef,
+  watch,
+} from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useSitesStore, type Site } from '@/stores/sites'
@@ -49,7 +57,7 @@ function springOut(t: number): number {
 }
 
 function animateCount(from: number, to: number, duration: number) {
-  return new Promise<void>(resolve => {
+  return new Promise<void>((resolve) => {
     const start = performance.now()
     isCountAnimating.value = true
 
@@ -73,15 +81,19 @@ function animateCount(from: number, to: number, duration: number) {
   })
 }
 
-watch(starCount, (newVal) => {
-  if (newVal === null || newVal === undefined) return
-  if (hasCountAnimated.value) return
-  hasCountAnimated.value = true
+watch(
+  starCount,
+  (newVal) => {
+    if (newVal === null || newVal === undefined) return
+    if (hasCountAnimated.value) return
+    hasCountAnimated.value = true
 
-  nextTick(() => {
-    void animateCount(0, newVal, 2000)
-  })
-}, { once: true })
+    nextTick(() => {
+      void animateCount(0, newVal, 2000)
+    })
+  },
+  { once: true },
+)
 
 const animatedFormattedCount = computed(() => {
   return Intl.NumberFormat('en', {
@@ -153,15 +165,13 @@ const currentSiteCollectionTrail = computed(() => {
     : [currentSite.value.parentCategory || currentSite.value.category]
   const seenLabels = new Set<string>()
 
-  return segments
-    .map(formatCollectionLabel)
-    .filter(label => {
-      const key = label.toLowerCase()
-      if (!key || seenLabels.has(key)) return false
+  return segments.map(formatCollectionLabel).filter((label) => {
+    const key = label.toLowerCase()
+    if (!key || seenLabels.has(key)) return false
 
-      seenLabels.add(key)
-      return true
-    })
+    seenLabels.add(key)
+    return true
+  })
 })
 
 const shortcutKey = '⌘'
@@ -183,7 +193,7 @@ function getRandomSite(candidates: Site[]) {
 
 function getRandomSiteCandidates() {
   const currentSlug = typeof route.params.slug === 'string' ? route.params.slug : ''
-  const otherSites = sites.allSites.filter(site => site.slug !== currentSlug)
+  const otherSites = sites.allSites.filter((site) => site.slug !== currentSlug)
 
   if (otherSites.length > 0) {
     return otherSites
@@ -193,11 +203,14 @@ function getRandomSiteCandidates() {
 }
 
 function formatCollectionLabel(value: string): string {
-  return collectionLabels[value] ?? value
-    .split(/[-_]/)
-    .filter(Boolean)
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
+  return (
+    collectionLabels[value] ??
+    value
+      .split(/[-_]/)
+      .filter(Boolean)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')
+  )
 }
 
 async function openRandomSite() {
@@ -239,12 +252,15 @@ async function loadStarCount() {
 }
 
 onMounted(() => {
-  cancelStarCountLoad = scheduleIdleTask(() => {
-    void loadStarCount()
-  }, {
-    delay: 4500,
-    timeout: 9000,
-  })
+  cancelStarCountLoad = scheduleIdleTask(
+    () => {
+      void loadStarCount()
+    },
+    {
+      delay: 4500,
+      timeout: 9000,
+    },
+  )
 })
 
 onUnmounted(() => {
@@ -285,20 +301,16 @@ onUnmounted(() => {
         class="hidden min-w-0 max-w-[18rem] items-center gap-1.5 rounded-md bg-[#1f1f1f] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-widest text-gray-500 sm:flex lg:max-w-none"
         aria-label="Current site collection"
       >
-        <template
-          v-for="(label, index) in currentSiteCollectionTrail"
-          :key="`${label}-${index}`"
-        >
+        <template v-for="(label, index) in currentSiteCollectionTrail" :key="`${label}-${index}`">
           <span
             class="min-w-0 truncate"
-            :class="index === currentSiteCollectionTrail.length - 1 ? 'text-gray-300' : 'text-gray-500'"
+            :class="
+              index === currentSiteCollectionTrail.length - 1 ? 'text-gray-300' : 'text-gray-500'
+            "
           >
             {{ label }}
           </span>
-          <span
-            v-if="index < currentSiteCollectionTrail.length - 1"
-            class="shrink-0 text-gray-700"
-          >
+          <span v-if="index < currentSiteCollectionTrail.length - 1" class="shrink-0 text-gray-700">
             /
           </span>
         </template>
@@ -359,20 +371,9 @@ onUnmounted(() => {
           aria-hidden="true"
         ></span>
         <span v-else class="github-star-count">
-          <span
-            v-if="hasCountAnimated.value"
-            class="digit-roller-group"
-            aria-hidden="true"
-          >
-            <span
-              v-for="(digit, idx) in countDigits"
-              :key="idx"
-              class="digit-roller"
-            >
-              <span
-                class="digit-strip"
-                :style="{ transform: `translateY(-${digit * 1.2}rem)` }"
-              >
+          <span v-if="hasCountAnimated.value" class="digit-roller-group" aria-hidden="true">
+            <span v-for="(digit, idx) in countDigits" :key="idx" class="digit-roller">
+              <span class="digit-strip" :style="{ transform: `translateY(-${digit * 1.2}rem)` }">
                 <span v-for="n in 10" :key="n">{{ n - 1 }}</span>
               </span>
             </span>
@@ -549,12 +550,7 @@ onUnmounted(() => {
 
 .navbar-search__shortcut kbd:first-child {
   font-family:
-    'Segoe UI Symbol',
-    'Apple Symbols',
-    'Noto Sans Symbols',
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
+    'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', ui-sans-serif, system-ui, sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   transform: translateY(0.03125rem);
