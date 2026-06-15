@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
-import {
-  Bot,
-  Code2,
-  Download,
-  Film,
-  Palette,
-} from 'lucide-vue-next'
+import { Bot, Code2, Download, Film, Palette } from 'lucide-vue-next'
 import type { SitesHomeCategorySummary, SitesHomeGroupKey } from '@/types/sitesHome'
 
 defineProps<{
@@ -76,14 +70,8 @@ function getCategoryIcon(key: SitesHomeGroupKey): Component {
           </RouterLink>
         </div>
 
-        <p
-          v-if="summary.featuredNames.length > 0"
-          class="sites-home-category-deck__featured"
-        >
-          <span
-            v-for="name in summary.featuredNames"
-            :key="name"
-          >
+        <p v-if="summary.featuredNames.length > 0" class="sites-home-category-deck__featured">
+          <span v-for="name in summary.featuredNames" :key="name">
             {{ name }}
           </span>
         </p>
@@ -97,8 +85,7 @@ function getCategoryIcon(key: SitesHomeGroupKey): Component {
   display: grid;
   gap: 1.25rem;
   padding: 3rem clamp(1rem, 4%, 3rem);
-  background:
-    linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 100%);
+  background: linear-gradient(180deg, #1f1f1f 0%, #1f1f1f 100%);
   color: #ffffff;
 }
 
@@ -144,7 +131,11 @@ function getCategoryIcon(key: SitesHomeGroupKey): Component {
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 0.5rem;
   background:
-    linear-gradient(145deg, color-mix(in srgb, var(--category-accent) 18%, transparent), transparent 48%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--category-accent) 18%, transparent),
+      transparent 48%
+    ),
     #1f1f1f;
 }
 
@@ -296,7 +287,11 @@ function getCategoryIcon(key: SitesHomeGroupKey): Component {
 :global(html.light .sites-home-category-deck__card) {
   border-color: var(--mocha-border);
   background:
-    linear-gradient(145deg, color-mix(in srgb, var(--category-accent) 15%, transparent), transparent 48%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--category-accent) 15%, transparent),
+      transparent 48%
+    ),
     var(--mocha-surface);
 }
 
