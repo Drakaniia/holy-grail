@@ -95,10 +95,7 @@ function compareSiteStatusFallbacks(first: Site, second: Site) {
 }
 
 function compareSiteFallbacks(first: Site, second: Site) {
-  return (
-    compareSiteStatusFallbacks(first, second) ||
-    compareNames(first, second)
-  )
+  return compareSiteStatusFallbacks(first, second) || compareNames(first, second)
 }
 
 function compareSitePopularityFallbacks(first: Site, second: Site) {
@@ -119,10 +116,7 @@ function compareSiteActivitySignals(first: Site, second: Site) {
 }
 
 function compareSiteActivity(first: Site, second: Site) {
-  return (
-    compareSiteActivitySignals(first, second) ||
-    compareSiteFallbacks(first, second)
-  )
+  return compareSiteActivitySignals(first, second) || compareSiteFallbacks(first, second)
 }
 
 export function sortSitesForTab(sites: Site[], tab: SiteSortTab) {
@@ -130,8 +124,7 @@ export function sortSitesForTab(sites: Site[], tab: SiteSortTab) {
     switch (tab) {
       case 'trending':
         return (
-          compareNumbers(first.stars, second.stars, 'desc') ||
-          compareSiteActivity(first, second)
+          compareNumbers(first.stars, second.stars, 'desc') || compareSiteActivity(first, second)
         )
       case 'newest':
         return (
@@ -176,7 +169,7 @@ export const useSitesStore = defineStore('sites', () => {
           throw new Error(`Failed to load sites index (${response.status})`)
         }
 
-        allSites.value = await response.json() as Site[]
+        allSites.value = (await response.json()) as Site[]
         loaded.value = true
       } catch (error) {
         loadError.value = error instanceof Error ? error.message : 'Failed to load sites index'
@@ -190,17 +183,17 @@ export const useSitesStore = defineStore('sites', () => {
   }
 
   const categories = computed(() => {
-    const cats = new Set(allSites.value.map(s => s.category))
+    const cats = new Set(allSites.value.map((s) => s.category))
     return ['All', ...Array.from(cats).sort()]
   })
 
   const getSitesByParentCategory = (parentCategory: string) => {
-    return allSites.value.filter(s => s.parentCategory === parentCategory)
+    return allSites.value.filter((s) => s.parentCategory === parentCategory)
   }
 
   const getSitesBySubcategory = (parentCategory: string, subcategory: string) => {
     return allSites.value.filter(
-      s => s.parentCategory === parentCategory && s.subcategory === subcategory
+      (s) => s.parentCategory === parentCategory && s.subcategory === subcategory,
     )
   }
 
@@ -210,16 +203,16 @@ export const useSitesStore = defineStore('sites', () => {
     if (searchQuery.value) {
       const query = searchQuery.value.toLowerCase()
       result = result.filter(
-        s =>
+        (s) =>
           s.name.toLowerCase().includes(query) ||
           s.description.toLowerCase().includes(query) ||
           s.category.toLowerCase().includes(query) ||
-          (s.tags && s.tags.some(t => t.toLowerCase().includes(query)))
+          (s.tags && s.tags.some((t) => t.toLowerCase().includes(query))),
       )
     }
 
     if (activeCategory.value !== 'All') {
-      result = result.filter(s => s.category === activeCategory.value)
+      result = result.filter((s) => s.category === activeCategory.value)
     }
 
     return sortSitesForTab(result, activeTab.value)
@@ -233,7 +226,7 @@ export const useSitesStore = defineStore('sites', () => {
   const totalPages = computed(() => Math.ceil(filteredSites.value.length / itemsPerPage))
 
   const getSiteBySlug = (slug: string) => {
-    return allSites.value.find(s => s.slug === slug)
+    return allSites.value.find((s) => s.slug === slug)
   }
 
   const setSearchQuery = (query: string) => {
