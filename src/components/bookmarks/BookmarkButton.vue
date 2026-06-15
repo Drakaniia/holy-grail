@@ -12,7 +12,7 @@ const props = withDefaults(
   }>(),
   {
     variant: 'compact',
-  }
+  },
 )
 
 const auth = useAuthStore()
@@ -27,7 +27,9 @@ const buttonLabel = computed(() => {
     return `Sign in to save ${props.resource.title}`
   }
 
-  return isSaved.value ? `Remove ${props.resource.title} from bookmarks` : `Save ${props.resource.title}`
+  return isSaved.value
+    ? `Remove ${props.resource.title} from bookmarks`
+    : `Save ${props.resource.title}`
 })
 
 onMounted(() => {
@@ -72,11 +74,7 @@ async function handleClick() {
     @click.stop.prevent="handleClick"
   >
     <Loader2 v-if="saving" class="h-4 w-4 animate-spin" />
-    <Bookmark
-      v-else
-      class="h-4 w-4"
-      :class="isSaved ? 'fill-current' : ''"
-    />
+    <Bookmark v-else class="h-4 w-4" :class="isSaved ? 'fill-current' : ''" />
     <span v-if="variant === 'detail'">{{ isSaved ? 'Saved' : 'Save' }}</span>
   </button>
 </template>
