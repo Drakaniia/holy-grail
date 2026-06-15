@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Geist Sans", "sans-serif";
+  --font-sans: 'Geist Sans', 'sans-serif';
 
   --color-accent-50: #fff7ed;
   --color-accent-100: #ffeed5;
@@ -96,12 +96,7 @@
     position: absolute;
     inset: 0;
     transform: translateX(-100%);
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.08),
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
     animation: hg-skeleton-shimmer 1.45s ease-in-out infinite;
   }
 }
@@ -111,12 +106,7 @@ html.light .hg-skeleton {
 }
 
 html.light .hg-skeleton::after {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.54),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.54), transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -271,15 +261,13 @@ html.light .app-sidebar .bg-white {
 
 html.light .theme-toggle {
   background:
-    linear-gradient(135deg, rgba(255, 140, 26, 0.14), transparent 60%),
-    var(--mocha-surface);
+    linear-gradient(135deg, rgba(255, 140, 26, 0.14), transparent 60%), var(--mocha-surface);
 }
 
 html.light .theme-toggle:hover {
   border-color: #ff8c1a !important;
   background:
-    linear-gradient(135deg, rgba(255, 140, 26, 0.18), transparent 60%),
-    var(--mocha-surface-strong) !important;
+    linear-gradient(135deg, rgba(255, 140, 26, 0.18), transparent 60%), var(--mocha-surface-strong) !important;
   color: #cc6100 !important;
 }
 
