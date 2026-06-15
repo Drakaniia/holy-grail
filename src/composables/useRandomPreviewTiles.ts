@@ -29,7 +29,7 @@ function takeRandomItems(
   count: number,
   blockedSlugs = new Set<string>(),
 ) {
-  const options = items.filter(item => !blockedSlugs.has(item.slug))
+  const options = items.filter((item) => !blockedSlugs.has(item.slug))
   const selected: HomePreviewItem[] = []
 
   while (selected.length < count && options.length > 0) {
@@ -60,7 +60,7 @@ export function useRandomPreviewTiles({
   let isDisposed = false
 
   const candidateItems = computed(() =>
-    items.value.filter(item => !failedSlugs.value.has(item.slug)),
+    items.value.filter((item) => !failedSlugs.value.has(item.slug)),
   )
 
   function getPreviewImageUrl(item: HomePreviewItem) {
@@ -86,9 +86,7 @@ export function useRandomPreviewTiles({
 
       image.decoding = 'async'
       image.onload = () => {
-        const decode = image.decode
-          ? image.decode().catch(() => undefined)
-          : Promise.resolve()
+        const decode = image.decode ? image.decode().catch(() => undefined) : Promise.resolve()
 
         void decode.finally(() => {
           loadedImageUrls.add(url)
@@ -132,8 +130,8 @@ export function useRandomPreviewTiles({
   }
 
   function clearAllTimers() {
-    rotationTimers.forEach(timer => window.clearTimeout(timer))
-    previousImageResetTimers.forEach(timer => window.clearTimeout(timer))
+    rotationTimers.forEach((timer) => window.clearTimeout(timer))
+    previousImageResetTimers.forEach((timer) => window.clearTimeout(timer))
     rotationTimers.clear()
     previousImageResetTimers.clear()
   }
@@ -145,21 +143,24 @@ export function useRandomPreviewTiles({
       window.clearTimeout(resetTimer)
     }
 
-    previousImageResetTimers.set(tileKey, window.setTimeout(() => {
-      tiles.value = tiles.value.map(tile => ({
-        ...tile,
-        previousItem: tile.key === tileKey ? null : tile.previousItem,
-      }))
-      previousImageResetTimers.delete(tileKey)
-    }, previousImageResetDelay))
+    previousImageResetTimers.set(
+      tileKey,
+      window.setTimeout(() => {
+        tiles.value = tiles.value.map((tile) => ({
+          ...tile,
+          previousItem: tile.key === tileKey ? null : tile.previousItem,
+        }))
+        previousImageResetTimers.delete(tileKey)
+      }, previousImageResetDelay),
+    )
   }
 
   async function rotateTilePreview(tileKey: string) {
-    const currentTile = tiles.value.find(tile => tile.key === tileKey)
+    const currentTile = tiles.value.find((tile) => tile.key === tileKey)
 
     if (!currentTile) return
 
-    const currentSlugs = new Set(tiles.value.map(tile => tile.item.slug))
+    const currentSlugs = new Set(tiles.value.map((tile) => tile.item.slug))
     const [replacementItem] = takeRandomItems(candidateItems.value, 1, currentSlugs)
     const [fallbackItem] = takeRandomItems(
       candidateItems.value,
@@ -171,14 +172,14 @@ export function useRandomPreviewTiles({
     if (!item || item.slug === currentTile.item.slug) return
 
     const isImageReady = await preloadPreviewImage(item)
-    const latestTile = tiles.value.find(tile => tile.key === tileKey)
-    const isVisibleElsewhere = tiles.value.some(tile =>
-      tile.key !== tileKey && tile.item.slug === item.slug,
+    const latestTile = tiles.value.find((tile) => tile.key === tileKey)
+    const isVisibleElsewhere = tiles.value.some(
+      (tile) => tile.key !== tileKey && tile.item.slug === item.slug,
     )
 
     if (!isImageReady || !latestTile || isDisposed || isVisibleElsewhere) return
 
-    tiles.value = tiles.value.map(tile =>
+    tiles.value = tiles.value.map((tile) =>
       tile.key === tileKey
         ? {
             ...tile,
@@ -198,13 +199,19 @@ export function useRandomPreviewTiles({
       window.clearTimeout(rotationTimer)
     }
 
-    rotationTimers.set(tileKey, window.setTimeout(() => {
-      void rotateTilePreview(tileKey).finally(() => {
-        if (!isDisposed && tiles.value.some(tile => tile.key === tileKey)) {
-          scheduleTileRotation(tileKey)
-        }
-      })
-    }, getRandomDelay(isInitial ? initialDelayRange : rotationDelayRange)))
+    rotationTimers.set(
+      tileKey,
+      window.setTimeout(
+        () => {
+          void rotateTilePreview(tileKey).finally(() => {
+            if (!isDisposed && tiles.value.some((tile) => tile.key === tileKey)) {
+              scheduleTileRotation(tileKey)
+            }
+          })
+        },
+        getRandomDelay(isInitial ? initialDelayRange : rotationDelayRange),
+      ),
+    )
   }
 
   function syncTiles(nextItems: HomePreviewItem[]) {
@@ -214,9 +221,9 @@ export function useRandomPreviewTiles({
       return
     }
 
-    const availableSlugs = new Set(nextItems.map(item => item.slug))
-    const preservedTiles = tiles.value.filter(tile => availableSlugs.has(tile.item.slug))
-    const preservedSlugs = new Set(preservedTiles.map(tile => tile.item.slug))
+    const availableSlugs = new Set(nextItems.map((item) => item.slug))
+    const preservedTiles = tiles.value.filter((tile) => availableSlugs.has(tile.item.slug))
+    const preservedSlugs = new Set(preservedTiles.map((tile) => tile.item.slug))
     const refillItems = takeRandomItems(
       nextItems,
       Math.max(0, tileCount - preservedTiles.length),
@@ -229,17 +236,17 @@ export function useRandomPreviewTiles({
       animationNonce: 0,
     }))
     const nextTiles = [...preservedTiles, ...refillTiles].slice(0, tileCount)
-    const nextTileKeys = new Set(nextTiles.map(tile => tile.key))
+    const nextTileKeys = new Set(nextTiles.map((tile) => tile.key))
 
     tiles.value = nextTiles
 
     Array.from(rotationTimers.keys())
-      .filter(tileKey => !nextTileKeys.has(tileKey))
+      .filter((tileKey) => !nextTileKeys.has(tileKey))
       .forEach(clearTileTimers)
 
     nextTiles
-      .filter(tile => !rotationTimers.has(tile.key))
-      .forEach(tile => scheduleTileRotation(tile.key, true))
+      .filter((tile) => !rotationTimers.has(tile.key))
+      .forEach((tile) => scheduleTileRotation(tile.key, true))
   }
 
   function markImageFailed(slug: string) {
