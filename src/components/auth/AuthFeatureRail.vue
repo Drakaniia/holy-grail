@@ -15,13 +15,13 @@ const props = defineProps<{
 }>()
 
 const headline = computed(() =>
-  props.mode === 'signup' ? 'Claim your Holy Grail workspace' : 'Enter the curated workspace'
+  props.mode === 'signup' ? 'Claim your Holy Grail workspace' : 'Enter the curated workspace',
 )
 
 const subline = computed(() =>
   props.mode === 'signup'
     ? 'Keep the tools, skills, and references that matter close to your build flow.'
-    : 'Your saved developer resources stay behind one Supabase-backed session.'
+    : 'Your saved developer resources stay behind one Supabase-backed session.',
 )
 
 const checkpoints = [
@@ -38,10 +38,14 @@ const checkpoints = [
     <div
       class="auth-grid-overlay pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[size:44px_44px]"
     ></div>
-    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-400 to-transparent"></div>
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-400 to-transparent"
+    ></div>
 
     <div class="relative">
-      <div class="mb-10 inline-flex items-center gap-2 border border-accent-500/30 bg-accent-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-200">
+      <div
+        class="mb-10 inline-flex items-center gap-2 border border-accent-500/30 bg-accent-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-200"
+      >
         <Fingerprint class="h-3.5 w-3.5" />
         Auth Gate
       </div>
@@ -73,7 +77,9 @@ const checkpoints = [
 
       <div class="auth-session-card border border-zinc-800 bg-[#1f1f1f]/80 p-5">
         <div class="flex items-start gap-4">
-          <div class="flex h-10 w-10 items-center justify-center border border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
+          <div
+            class="flex h-10 w-10 items-center justify-center border border-emerald-400/30 bg-emerald-400/10 text-emerald-200"
+          >
             <Braces class="h-5 w-5" />
           </div>
           <div>
@@ -83,7 +89,8 @@ const checkpoints = [
               Session contract
             </p>
             <p class="auth-session-copy mt-2 text-sm leading-6 text-zinc-300">
-              The UI reads from one Pinia auth store, so navigation, guards, and account state move together.
+              The UI reads from one Pinia auth store, so navigation, guards, and account state move
+              together.
             </p>
           </div>
         </div>
