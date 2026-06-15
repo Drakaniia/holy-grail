@@ -17,7 +17,9 @@
       <div class="hg-skeleton h-9 w-9 flex-shrink-0 rounded"></div>
     </div>
 
-    <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-gray-800 pt-4">
+    <div
+      class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-gray-800 pt-4"
+    >
       <div class="hg-skeleton h-4 w-24 rounded"></div>
       <div class="hg-skeleton h-4 w-16 rounded"></div>
     </div>
