@@ -32,10 +32,7 @@ function formatNumber(num: number): string {
       <BookmarkButton :resource="bookmarkResource" />
     </div>
 
-    <RouterLink
-      :to="`/sites/${site.slug}`"
-      class="block p-5 pr-16"
-    >
+    <RouterLink :to="`/sites/${site.slug}`" class="block p-5 pr-16">
       <div class="flex min-w-0 items-start gap-4 mb-3">
         <!-- Icon -->
         <SiteFavicon :website="site.website" :name="site.name" size="md" />
@@ -91,8 +88,7 @@ function formatNumber(num: number): string {
 .site-card {
   border-color: #1f2937;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%),
-    #1f1f1f;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f;
 }
 
 .site-card:hover {
