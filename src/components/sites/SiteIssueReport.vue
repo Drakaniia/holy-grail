@@ -38,7 +38,9 @@ watch(
 )
 
 function getSelectedIssueOption() {
-  return ISSUE_OPTIONS.find((option) => option.value === selectedIssueType.value) ?? ISSUE_OPTIONS[0]
+  return (
+    ISSUE_OPTIONS.find((option) => option.value === selectedIssueType.value) ?? ISSUE_OPTIONS[0]
+  )
 }
 
 async function reportSiteIssue() {
@@ -71,7 +73,10 @@ async function reportSiteIssue() {
     if (!data?.ok) throw new Error(data?.error || 'Site issue report failed. Please try again.')
 
     status.value = 'sent'
-    toast.success('Admin review queued', `${props.site.name} was ${getSelectedIssueOption().success}`)
+    toast.success(
+      'Admin review queued',
+      `${props.site.name} was ${getSelectedIssueOption().success}`,
+    )
   } catch (err) {
     status.value = 'idle'
     toast.error(
@@ -83,7 +88,9 @@ async function reportSiteIssue() {
 </script>
 
 <template>
-  <div class="inline-flex h-9 max-w-full items-center overflow-hidden rounded-lg border border-red-400/30 bg-red-400/10 text-red-100">
+  <div
+    class="inline-flex h-9 max-w-full items-center overflow-hidden rounded-lg border border-red-400/30 bg-red-400/10 text-red-100"
+  >
     <label :for="`site-issue-type-${site.slug}`" class="sr-only"> Site issue type </label>
     <select
       :id="`site-issue-type-${site.slug}`"
@@ -111,7 +118,9 @@ async function reportSiteIssue() {
       <Loader2 v-if="status === 'loading'" class="h-4 w-4 animate-spin" />
       <CheckCircle2 v-else-if="status === 'sent'" class="h-4 w-4" />
       <AlertTriangle v-else class="h-4 w-4" />
-      <span>{{ status === 'loading' ? 'Reporting...' : status === 'sent' ? 'Reported' : 'Report' }}</span>
+      <span>{{
+        status === 'loading' ? 'Reporting...' : status === 'sent' ? 'Reported' : 'Report'
+      }}</span>
     </button>
   </div>
 </template>
