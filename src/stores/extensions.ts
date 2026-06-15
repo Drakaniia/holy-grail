@@ -51,7 +51,10 @@ export type ExtensionSortTab = 'trending' | 'newest' | 'popular'
 export function sortExtensionsForTab(extensions: Extension[], tab: ExtensionSortTab) {
   return [...extensions].sort((a, b) => {
     if (tab === 'trending') {
-      return (b.chromeWebStoreRating || 0) - (a.chromeWebStoreRating || 0) || b.addedDaysAgo - a.addedDaysAgo
+      return (
+        (b.chromeWebStoreRating || 0) - (a.chromeWebStoreRating || 0) ||
+        b.addedDaysAgo - a.addedDaysAgo
+      )
     }
     if (tab === 'newest') {
       return a.addedDaysAgo - b.addedDaysAgo
@@ -97,20 +100,19 @@ export const useExtensionsStore = () => {
   }
 
   const categories = computed(() => {
-    const cats = new Set(allExtensions.value.map(e => e.category))
+    const cats = new Set(allExtensions.value.map((e) => e.category))
     return ['All', ...Array.from(cats).sort()]
   })
 
   const getExtensionsByParentCategory = (parentCategory: string) =>
-    allExtensions.value.filter(e => e.parentCategory === parentCategory)
+    allExtensions.value.filter((e) => e.parentCategory === parentCategory)
 
   const getExtensionsBySubcategory = (parentCategory: string, subcategory: string) =>
     allExtensions.value.filter(
-      e => e.parentCategory === parentCategory && e.subcategory === subcategory
+      (e) => e.parentCategory === parentCategory && e.subcategory === subcategory,
     )
 
-  const getExtensionBySlug = (slug: string) =>
-    allExtensions.value.find(e => e.slug === slug)
+  const getExtensionBySlug = (slug: string) => allExtensions.value.find((e) => e.slug === slug)
 
   const filteredExtensions = computed(() => {
     let result = [...allExtensions.value]
@@ -118,16 +120,16 @@ export const useExtensionsStore = () => {
     if (searchQuery.value) {
       const query = searchQuery.value.toLowerCase()
       result = result.filter(
-        e =>
+        (e) =>
           e.name.toLowerCase().includes(query) ||
           e.description.toLowerCase().includes(query) ||
           e.category.toLowerCase().includes(query) ||
-          e.tags?.some(tag => tag.toLowerCase().includes(query))
+          e.tags?.some((tag) => tag.toLowerCase().includes(query)),
       )
     }
 
     if (activeCategory.value !== 'All') {
-      result = result.filter(e => e.category === activeCategory.value)
+      result = result.filter((e) => e.category === activeCategory.value)
     }
 
     return sortExtensionsForTab(result, activeTab.value)
