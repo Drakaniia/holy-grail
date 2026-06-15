@@ -39,7 +39,9 @@ watch(
     aria-modal="true"
     aria-labelledby="delete-account-title"
   >
-    <section class="w-full max-w-sm rounded-xl border border-zinc-900 bg-[#1f1f1f] p-5 text-white shadow-2xl shadow-[#1f1f1f]/80">
+    <section
+      class="w-full max-w-sm rounded-xl border border-zinc-900 bg-[#1f1f1f] p-5 text-white shadow-2xl shadow-[#1f1f1f]/80"
+    >
       <h2 id="delete-account-title" class="text-lg font-bold text-white">Delete Account</h2>
       <p class="mt-2 text-sm leading-6 text-zinc-400">
         This action cannot be undone. This will permanently delete your account and associated data.
@@ -48,7 +50,9 @@ watch(
       <label class="mt-7 block">
         <span class="block text-sm leading-6 text-zinc-400">
           To confirm, type your email
-          <strong class="rounded bg-[#1f1f1f] px-1.5 py-0.5 font-mono text-zinc-100">{{ email }}</strong>
+          <strong class="rounded bg-[#1f1f1f] px-1.5 py-0.5 font-mono text-zinc-100">{{
+            email
+          }}</strong>
           below:
         </span>
         <input
