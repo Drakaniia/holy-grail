@@ -39,12 +39,7 @@ onMounted(() => {
     </RouterLink>
 
     <nav class="home-navbar__links" aria-label="Landing navigation">
-      <RouterLink
-        v-for="item in navItems"
-        :key="item.to"
-        :to="item.to"
-        class="home-navbar__link"
-      >
+      <RouterLink v-for="item in navItems" :key="item.to" :to="item.to" class="home-navbar__link">
         {{ item.label }}
       </RouterLink>
     </nav>
@@ -60,10 +55,7 @@ onMounted(() => {
         <component :is="isLightMode ? SunMedium : Moon" class="h-4 w-4" aria-hidden="true" />
       </button>
 
-      <RouterLink
-        :to="auth.isAuthenticated ? '/account' : '/login'"
-        class="home-navbar__account"
-      >
+      <RouterLink :to="auth.isAuthenticated ? '/account' : '/login'" class="home-navbar__account">
         <UserRound class="h-4 w-4" aria-hidden="true" />
         <span>{{ auth.isAuthenticated ? 'Account' : 'Sign In' }}</span>
       </RouterLink>
@@ -81,7 +73,12 @@ onMounted(() => {
     </div>
 
     <Transition name="home-menu">
-      <nav v-if="isMenuOpen" id="home-mobile-nav" class="home-navbar__mobile" aria-label="Mobile landing navigation">
+      <nav
+        v-if="isMenuOpen"
+        id="home-mobile-nav"
+        class="home-navbar__mobile"
+        aria-label="Mobile landing navigation"
+      >
         <RouterLink
           v-for="item in navItems"
           :key="item.to"
