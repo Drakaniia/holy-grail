@@ -7,10 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const plugins = [
-    vue(),
-    vueJsx(),
-  ]
+  const plugins = [vue(), vueJsx()]
 
   if (mode !== 'production') {
     plugins.push(vueDevTools())
