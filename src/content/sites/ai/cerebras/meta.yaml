@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://cloud.cerebras.ai/platform/org_drjncnkmm8y5kw2858w3jf26/get-started
 docs: https://cloud.cerebras.ai/platform/org_drjncnkmm8y5kw2858w3jf26/get-started
-sourceCode: ""
+sourceCode: ''
 icon: cerebras
 verified: false
 featured: false
@@ -48,8 +48,8 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: napkin
-    name: "- Napkin AI"
-    description: "- Napkin AI bookmarked for ai resources."
+    name: '- Napkin AI'
+    description: '- Napkin AI bookmarked for ai resources.'
     stars: 0
     addedDaysAgo: 0
     verified: false
