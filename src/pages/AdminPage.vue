@@ -47,14 +47,10 @@ onMounted(async () => {
   <div class="min-h-full bg-[#1f1f1f] text-white">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
       <div class="mb-8 border-b border-gray-800 pb-8">
-        <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
-          Admin
-        </p>
+        <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">Admin</p>
         <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">
-              Control room
-            </h1>
+            <h1 class="text-3xl font-bold tracking-normal text-white sm:text-4xl">Control room</h1>
             <p class="mt-3 max-w-2xl text-sm leading-6 text-gray-400">
               Monitor visitors, review submissions, triage broken sites, and tune analytics
               collection.
