@@ -112,7 +112,10 @@ const placements = {
 
 const folderMap = new Map([
   ['Bookmarks bar > AI', { parentCategory: 'ai', subcategory: null, category: 'AI' }],
-  ['Bookmarks bar > AI > Image', { parentCategory: 'ai', subcategory: 'image', category: 'AI Image' }],
+  [
+    'Bookmarks bar > AI > Image',
+    { parentCategory: 'ai', subcategory: 'image', category: 'AI Image' },
+  ],
   ['Bookmarks bar > AI > API', { parentCategory: 'ai', subcategory: 'api', category: 'AI API' }],
   [
     'Bookmarks bar > AI > Detector',
@@ -122,7 +125,10 @@ const folderMap = new Map([
     'Bookmarks bar > AI > Automation',
     { parentCategory: 'ai', subcategory: 'automation', category: 'AI Automation' },
   ],
-  ['Bookmarks bar > AI > Video', { parentCategory: 'ai', subcategory: 'video', category: 'AI Video' }],
+  [
+    'Bookmarks bar > AI > Video',
+    { parentCategory: 'ai', subcategory: 'video', category: 'AI Video' },
+  ],
   ['Bookmarks bar > AI > CHAT', { parentCategory: 'ai', subcategory: 'chat', category: 'AI Chat' }],
   [
     'Bookmarks bar > AI > WB',
@@ -142,15 +148,15 @@ const folderMap = new Map([
   ],
   ['Bookmarks bar > ML', { parentCategory: 'ai', subcategory: 'ml', category: 'Machine Learning' }],
   ['Bookmarks bar > AI > PPT', { parentCategory: 'ai', subcategory: 'ppt', category: 'AI PPT' }],
-  ['Bookmarks bar > AI > Others', { parentCategory: 'ai', subcategory: 'others', category: 'AI Tools' }],
+  [
+    'Bookmarks bar > AI > Others',
+    { parentCategory: 'ai', subcategory: 'others', category: 'AI Tools' },
+  ],
   [
     'Bookmarks bar > AI > CLI',
     { parentCategory: 'development', subcategory: 'cli-tools', category: 'AI CLI' },
   ],
-  [
-    'Bookmarks bar > CODE > Hosting Service',
-    placements.developmentCloudHosting,
-  ],
+  ['Bookmarks bar > CODE > Hosting Service', placements.developmentCloudHosting],
   [
     'Bookmarks bar > CODE > Database',
     { parentCategory: 'development', subcategory: 'cloud-hosting', category: 'Database' },
@@ -169,7 +175,10 @@ const folderMap = new Map([
     'Bookmarks bar > Design > Inspiration',
     { parentCategory: 'design', subcategory: 'inspiration', category: 'Inspiration' },
   ],
-  ['Bookmarks bar > Design > Fonts', { parentCategory: 'design', subcategory: 'fonts', category: 'Fonts' }],
+  [
+    'Bookmarks bar > Design > Fonts',
+    { parentCategory: 'design', subcategory: 'fonts', category: 'Fonts' },
+  ],
   ['Bookmarks bar > Design > 3d', { parentCategory: 'design', subcategory: '3d', category: '3D' }],
   ['Bookmarks bar > ALL > 3D', { parentCategory: 'design', subcategory: '3d', category: '3D' }],
   [
@@ -180,12 +189,18 @@ const folderMap = new Map([
     'Bookmarks bar > Design > ICONS/SVG',
     { parentCategory: 'design', subcategory: 'icons-svg', category: 'Icons/SVG' },
   ],
-  ['Bookmarks bar > Design > MD', { parentCategory: 'design', subcategory: 'md', category: 'Design MD' }],
+  [
+    'Bookmarks bar > Design > MD',
+    { parentCategory: 'design', subcategory: 'md', category: 'Design MD' },
+  ],
   [
     'Bookmarks bar > Design > Skills',
     { parentCategory: 'design', subcategory: 'design-tools', category: 'Design Skills' },
   ],
-  ['Bookmarks bar > CMPNTS', { parentCategory: 'development', subcategory: 'ui-libraries', category: 'UI Library' }],
+  [
+    'Bookmarks bar > CMPNTS',
+    { parentCategory: 'development', subcategory: 'ui-libraries', category: 'UI Library' },
+  ],
   [
     'Bookmarks bar > CMPNTS > Icons',
     { parentCategory: 'design', subcategory: 'icons-svg', category: 'Icons/SVG' },
@@ -257,7 +272,15 @@ function slugify(value) {
 
 function domainSlug(url) {
   try {
-    const ignoredSubdomains = new Set(['app', 'chat', 'cloud', 'console', 'dashboard', 'docs', 'editor'])
+    const ignoredSubdomains = new Set([
+      'app',
+      'chat',
+      'cloud',
+      'console',
+      'dashboard',
+      'docs',
+      'editor',
+    ])
     const hostname = new URL(url).hostname.toLowerCase().replace(/^www\./, '')
     const labels = hostname.split('.')
     const base = labels.length > 2 && ignoredSubdomains.has(labels[0]) ? labels[1] : labels[0]
@@ -370,7 +393,7 @@ function normalizeBookmarkRow(row) {
 }
 
 function includesAny(value, terms) {
-  return terms.some(term => value.includes(term))
+  return terms.some((term) => value.includes(term))
 }
 
 function classifyCodeRoot(row) {
@@ -829,7 +852,7 @@ for (const originalRow of bookmarks) {
       lineWidth: 100,
       noRefs: true,
       quotingType: '"',
-    })}`
+    })}`,
   )
   urls.add(canonical)
   imported += 1
