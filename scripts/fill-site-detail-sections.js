@@ -10,7 +10,7 @@ const refreshDescriptions = process.argv.includes('--refresh-descriptions')
 const refreshFeatures = process.argv.includes('--refresh-features')
 
 function readOption(name) {
-  const inline = process.argv.find(arg => arg.startsWith(`${name}=`))
+  const inline = process.argv.find((arg) => arg.startsWith(`${name}=`))
   if (inline) return inline.slice(name.length + 1)
 
   const index = process.argv.indexOf(name)
@@ -63,7 +63,10 @@ function context(meta) {
   if (parent === 'ai' && subcategory === 'chat') {
     return {
       core: [
-        ['Conversational Workspace', `${name} provides a browser-based chat interface for AI-assisted work.`],
+        [
+          'Conversational Workspace',
+          `${name} provides a browser-based chat interface for AI-assisted work.`,
+        ],
         ['Fast Web Access', 'Open the live service directly from the catalog without local setup.'],
       ],
       extra: [
@@ -84,9 +87,18 @@ function context(meta) {
         ['Direct Web Launch', 'Open the saved ML resource directly from the catalog entry.'],
       ],
       extra: [
-        ['Data Science Workflow', 'Useful for notebooks, model training, evaluation, deployment, or ML research.'],
-        ['Documentation Shortcut', 'Keeps the primary reference URL beside the saved tool or framework.'],
-        ['Category Grouping', 'Grouped with related ML frameworks, platforms, and learning resources.'],
+        [
+          'Data Science Workflow',
+          'Useful for notebooks, model training, evaluation, deployment, or ML research.',
+        ],
+        [
+          'Documentation Shortcut',
+          'Keeps the primary reference URL beside the saved tool or framework.',
+        ],
+        [
+          'Category Grouping',
+          'Grouped with related ML frameworks, platforms, and learning resources.',
+        ],
       ],
     }
   }
@@ -111,8 +123,14 @@ function context(meta) {
   if (parent === 'design') {
     return {
       core: [
-        ['Design Resource', `${name} is cataloged as ${article} ${lowerCategory} resource for design work.`],
-        ['Visual Reference', 'Useful as inspiration, tooling, assets, or implementation reference.'],
+        [
+          'Design Resource',
+          `${name} is cataloged as ${article} ${lowerCategory} resource for design work.`,
+        ],
+        [
+          'Visual Reference',
+          'Useful as inspiration, tooling, assets, or implementation reference.',
+        ],
       ],
       extra: [
         ['Browser Workflow', 'Works from the saved site link with no local install required.'],
@@ -139,13 +157,19 @@ function context(meta) {
   if (parent === 'development' && subcategory === 'cloud-hosting') {
     return {
       core: [
-        ['Cloud Service', `${name} is tracked for cloud hosting, deployment, or backend infrastructure work.`],
+        [
+          'Cloud Service',
+          `${name} is tracked for cloud hosting, deployment, or backend infrastructure work.`,
+        ],
         ['Hosted Access', 'The primary service is available through the website link.'],
       ],
       extra: [
         ['Documentation Path', 'Docs are linked when available for setup details.'],
         ['Deployment Context', 'Deployment type is recorded in the metadata.'],
-        ['Developer Workflow', 'Grouped under Development with related cloud and hosting resources.'],
+        [
+          'Developer Workflow',
+          'Grouped under Development with related cloud and hosting resources.',
+        ],
       ],
     }
   }
@@ -153,7 +177,10 @@ function context(meta) {
   if (isCliToolsCollection(parent, subcategory)) {
     return {
       core: [
-        ['Developer Tooling', `${name} is tracked as a command-line or developer workflow resource.`],
+        [
+          'Developer Tooling',
+          `${name} is tracked as a command-line or developer workflow resource.`,
+        ],
         ['Reference Access', 'Website and docs links are preserved for setup and usage details.'],
       ],
       extra: [
@@ -171,10 +198,16 @@ function context(meta) {
           'Developer Resource',
           `${name} is tracked as ${article} ${lowerCategory} resource for building and shipping software.`,
         ],
-        ['Workflow Reference', 'The saved link keeps the resource close to related development material.'],
+        [
+          'Workflow Reference',
+          'The saved link keeps the resource close to related development material.',
+        ],
       ],
       extra: [
-        ['Sorted by Use Case', 'Grouped by learning, references, tooling, repositories, MCP, or monitoring.'],
+        [
+          'Sorted by Use Case',
+          'Grouped by learning, references, tooling, repositories, MCP, or monitoring.',
+        ],
         ['Browser Ready', 'Available from the catalog without local setup.'],
         ['Repeatable Lookup', 'Metadata and tags make the resource easy to find later.'],
       ],
@@ -223,7 +256,7 @@ function similarToolsFor(site, allSites) {
     return bStars - aStars || compactName(a.meta.name).localeCompare(compactName(b.meta.name))
   }
 
-  const toSimilarTool = candidate => ({
+  const toSimilarTool = (candidate) => ({
     slug: candidate.meta.slug || path.basename(path.dirname(candidate.filePath)),
     name: candidate.meta.name || '',
     description: candidate.meta.description || '',
@@ -234,38 +267,38 @@ function similarToolsFor(site, allSites) {
   })
 
   const exactGroup = allSites.filter(
-    candidate =>
+    (candidate) =>
       candidate.meta.slug !== site.meta.slug &&
       candidate.meta.parentCategory === site.meta.parentCategory &&
-      (candidate.meta.subcategory || null) === (site.meta.subcategory || null)
+      (candidate.meta.subcategory || null) === (site.meta.subcategory || null),
   )
 
   const categoryGroup = allSites.filter(
-    candidate =>
+    (candidate) =>
       candidate.meta.slug !== site.meta.slug &&
       candidate.meta.parentCategory === site.meta.parentCategory &&
       candidate.meta.category === site.meta.category &&
-      !exactGroup.some(exact => exact.meta.slug === candidate.meta.slug)
+      !exactGroup.some((exact) => exact.meta.slug === candidate.meta.slug),
   )
 
   const parentGroup = allSites.filter(
-    candidate =>
+    (candidate) =>
       candidate.meta.slug !== site.meta.slug &&
       candidate.meta.parentCategory === site.meta.parentCategory &&
-      !exactGroup.some(exact => exact.meta.slug === candidate.meta.slug) &&
-      !categoryGroup.some(category => category.meta.slug === candidate.meta.slug)
+      !exactGroup.some((exact) => exact.meta.slug === candidate.meta.slug) &&
+      !categoryGroup.some((category) => category.meta.slug === candidate.meta.slug),
   )
 
   const globalGroup = allSites.filter(
-    candidate =>
+    (candidate) =>
       candidate.meta.slug !== site.meta.slug &&
-      !exactGroup.some(exact => exact.meta.slug === candidate.meta.slug) &&
-      !categoryGroup.some(category => category.meta.slug === candidate.meta.slug) &&
-      !parentGroup.some(parent => parent.meta.slug === candidate.meta.slug)
+      !exactGroup.some((exact) => exact.meta.slug === candidate.meta.slug) &&
+      !categoryGroup.some((category) => category.meta.slug === candidate.meta.slug) &&
+      !parentGroup.some((parent) => parent.meta.slug === candidate.meta.slug),
   )
 
-  const ordered = [exactGroup, categoryGroup, parentGroup, globalGroup].flatMap(group =>
-    group.sort(byStatsAndName)
+  const ordered = [exactGroup, categoryGroup, parentGroup, globalGroup].flatMap((group) =>
+    group.sort(byStatsAndName),
   )
 
   return ordered.slice(0, 3).map(toSimilarTool)
@@ -273,12 +306,12 @@ function similarToolsFor(site, allSites) {
 
 function isImportDescription(value) {
   return /imported from the browser bookmark folder|browser bookmark folder|Bookmarks bar/i.test(
-    String(value || '')
+    String(value || ''),
   )
 }
 
 function hasImportFeature(features) {
-  return (features || []).some(feature => isImportDescription(feature?.description))
+  return (features || []).some((feature) => isImportDescription(feature?.description))
 }
 
 function fullDescriptionFor(meta) {
@@ -374,7 +407,7 @@ function orderedMeta(meta, details) {
   }
 }
 
-const sites = walkMetaFiles(sitesDir).map(filePath => ({
+const sites = walkMetaFiles(sitesDir).map((filePath) => ({
   filePath,
   meta: yaml.load(fs.readFileSync(filePath, 'utf8')) || {},
 }))
@@ -417,6 +450,6 @@ console.log(
       filesChanged: changed,
     },
     null,
-    2
-  )
+    2,
+  ),
 )
