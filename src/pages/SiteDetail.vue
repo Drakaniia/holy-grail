@@ -53,17 +53,19 @@ const bookmarkResource = computed(() => {
 const hasSourceCode = computed(() => Boolean(site.value?.sourceCode))
 const hasReleaseInfo = computed(() => hasSourceCode.value && site.value?.lastRelease !== 'N/A')
 const hasCommitInfo = computed(() => hasSourceCode.value && site.value?.lastCommit !== 'N/A')
-const hasDistinctDocs = computed(() => Boolean(site.value?.docs && site.value.docs !== site.value.website))
+const hasDistinctDocs = computed(() =>
+  Boolean(site.value?.docs && site.value.docs !== site.value.website),
+)
 const hasDeploymentInfo = computed(
   () =>
     Boolean(site.value?.deployCompose) ||
     Boolean(site.value?.installCommand) ||
     Boolean(site.value?.website) ||
     hasDistinctDocs.value ||
-    hasSourceCode.value
+    hasSourceCode.value,
 )
-const isCliToolSite = computed(() =>
-  site.value?.parentCategory === 'cli-tools' || site.value?.subcategory === 'cli-tools'
+const isCliToolSite = computed(
+  () => site.value?.parentCategory === 'cli-tools' || site.value?.subcategory === 'cli-tools',
 )
 const installCommand = computed(() => {
   if (!isCliToolSite.value) {
@@ -78,9 +80,9 @@ const hasRepoActivity = computed(
     hasSourceCode.value &&
     Boolean(
       (site.value?.contributors || 0) > 0 ||
-        (site.value?.commitsThisYear || 0) > 0 ||
-        (site.value?.releases || 0) > 0
-    )
+      (site.value?.commitsThisYear || 0) > 0 ||
+      (site.value?.releases || 0) > 0,
+    ),
 )
 
 const backRoute = computed(() => {
@@ -177,11 +179,7 @@ async function copyInstallCommand() {
         </div>
 
         <div class="flex flex-wrap items-center gap-2">
-          <BookmarkButton
-            v-if="bookmarkResource"
-            :resource="bookmarkResource"
-            variant="detail"
-          />
+          <BookmarkButton v-if="bookmarkResource" :resource="bookmarkResource" variant="detail" />
           <SiteIssueReport :site="site" />
           <a
             :href="site.website"
@@ -233,15 +231,29 @@ async function copyInstallCommand() {
                   <GitCommit class="w-4 h-4" />
                   {{ site.lastCommit }}
                 </span>
-                <a :href="site.website" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
+                <a
+                  :href="site.website"
+                  target="_blank"
+                  class="flex items-center gap-1 hover:text-accent-400 transition-colors"
+                >
                   <Globe class="w-4 h-4" />
                   Website
                 </a>
-                <a v-if="site.docs" :href="site.docs" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
+                <a
+                  v-if="site.docs"
+                  :href="site.docs"
+                  target="_blank"
+                  class="flex items-center gap-1 hover:text-accent-400 transition-colors"
+                >
                   <BookOpen class="w-4 h-4" />
                   Docs
                 </a>
-                <a v-if="site.sourceCode" :href="site.sourceCode" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
+                <a
+                  v-if="site.sourceCode"
+                  :href="site.sourceCode"
+                  target="_blank"
+                  class="flex items-center gap-1 hover:text-accent-400 transition-colors"
+                >
                   <Code2 class="w-4 h-4" />
                   Source code
                 </a>
@@ -252,7 +264,10 @@ async function copyInstallCommand() {
               </div>
 
               <!-- Contributors Row -->
-              <div v-if="hasRepoActivity" class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+              <div
+                v-if="hasRepoActivity"
+                class="flex flex-wrap items-center gap-4 text-sm text-gray-500"
+              >
                 <span v-if="site.contributors > 0" class="flex items-center gap-1">
                   <Users class="w-4 h-4" />
                   {{ site.contributors }} contributors
@@ -268,11 +283,13 @@ async function copyInstallCommand() {
               </div>
             </div>
           </div>
-
         </div>
 
         <!-- Access & Deployment -->
-        <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+        <div
+          class="border border-gray-800 rounded-xl p-4 mb-6"
+          style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+        >
           <h3 class="text-sm font-medium text-gray-400 mb-3">Access & Deployment</h3>
           <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <div class="flex flex-wrap items-center gap-2">
@@ -308,7 +325,11 @@ async function copyInstallCommand() {
       <SitePreview :site="site" />
 
       <!-- At a Glance -->
-      <div v-if="site.atGlance" class="border border-accent-900/50 rounded-lg p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        v-if="site.atGlance"
+        class="border border-accent-900/50 rounded-lg p-4 mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <h3 class="text-sm font-medium text-accent-400 mb-1">At a Glance</h3>
         <p class="text-sm text-accent-300 italic">{{ site.atGlance }}</p>
       </div>
@@ -330,7 +351,9 @@ async function copyInstallCommand() {
             style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0">
+              <div
+                class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0"
+              >
                 <CheckCircle2 class="w-4 h-4 text-gray-400" />
               </div>
               <div>
@@ -353,7 +376,9 @@ async function copyInstallCommand() {
             style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0">
+              <div
+                class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0"
+              >
                 <Layers class="w-4 h-4 text-gray-500" />
               </div>
               <div>
@@ -366,20 +391,28 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Community Feedback -->
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        class="border border-gray-800 rounded-xl p-4 mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <div class="flex items-center gap-2 mb-4">
           <Heart class="w-4 h-4 text-gray-500" />
           <span class="text-sm text-gray-400">
-            Be the first to support this tool — early community support helps surface high-quality tools to others
+            Be the first to support this tool — early community support helps surface high-quality
+            tools to others
           </span>
         </div>
         <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
           <span class="text-xs text-gray-500">Share:</span>
           <div class="flex gap-2">
-            <button class="w-8 h-8 rounded bg-[#1f1f1f] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+            <button
+              class="w-8 h-8 rounded bg-[#1f1f1f] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors"
+            >
               <Share2 class="w-4 h-4" />
             </button>
-            <button class="w-8 h-8 rounded bg-[#1f1f1f] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors">
+            <button
+              class="w-8 h-8 rounded bg-[#1f1f1f] border border-gray-700 flex items-center justify-center text-gray-500 hover:text-white transition-colors"
+            >
               <Globe class="w-4 h-4" />
             </button>
           </div>
@@ -387,10 +420,16 @@ async function copyInstallCommand() {
       </div>
 
       <!-- Installation & Deployment -->
-      <div v-if="hasDeploymentInfo" class="border border-gray-800 rounded-xl mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        v-if="hasDeploymentInfo"
+        class="border border-gray-800 rounded-xl mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <div class="p-4 border-b border-gray-800">
           <h3 class="text-base font-semibold text-white mb-1">Installation & Deployment</h3>
-          <p class="text-sm text-gray-500">Choose a deployment method based on your environment and preferences</p>
+          <p class="text-sm text-gray-500">
+            Choose a deployment method based on your environment and preferences
+          </p>
         </div>
 
         <div class="p-4">
@@ -411,12 +450,17 @@ async function copyInstallCommand() {
                 ? 'Container-based deployment with docker-compose.yml'
                 : hasInstallCommand
                   ? 'Install the CLI locally, then authenticate through the official provider flow'
-                : 'Cloud-first access through the official website and available project links'
+                  : 'Cloud-first access through the official website and available project links'
             }}
           </p>
 
-          <div v-if="hasInstallCommand" class="mb-4 overflow-hidden rounded-lg border border-gray-800 bg-[#1f1f1f]">
-            <div class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
+          <div
+            v-if="hasInstallCommand"
+            class="mb-4 overflow-hidden rounded-lg border border-gray-800 bg-[#1f1f1f]"
+          >
+            <div
+              class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between"
+            >
               <div class="flex items-center gap-2">
                 <Code2 class="w-4 h-4 text-gray-500" />
                 <span class="text-sm text-gray-400">CLI setup command</span>
@@ -430,18 +474,27 @@ async function copyInstallCommand() {
                 {{ copiedInstallCommand ? 'Copied!' : 'Copy' }}
               </button>
             </div>
-            <pre class="overflow-x-auto p-4 text-xs text-gray-300"><code>{{ installCommand }}</code></pre>
+            <pre
+              class="overflow-x-auto p-4 text-xs text-gray-300"
+            ><code>{{ installCommand }}</code></pre>
           </div>
 
           <!-- Compose File -->
-          <div v-if="site.deployCompose" class="bg-[#1f1f1f] border border-gray-800 rounded-lg overflow-hidden">
-            <div class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
+          <div
+            v-if="site.deployCompose"
+            class="bg-[#1f1f1f] border border-gray-800 rounded-lg overflow-hidden"
+          >
+            <div
+              class="flex flex-col gap-2 border-b border-gray-800 px-4 py-2 sm:flex-row sm:items-center sm:justify-between"
+            >
               <div class="flex items-center gap-2">
                 <Code2 class="w-4 h-4 text-gray-500" />
                 <span class="text-sm text-gray-400">compose.yml</span>
               </div>
               <div class="flex flex-wrap items-center gap-2">
-                <span class="break-all text-xs text-gray-600">Path: /manifests/{{ site.name }}/compose.yml</span>
+                <span class="break-all text-xs text-gray-600"
+                  >Path: /manifests/{{ site.name }}/compose.yml</span
+                >
                 <button
                   @click="copyCompose"
                   class="flex items-center gap-1 px-2 py-1 rounded text-xs text-gray-400 hover:text-white transition-colors"
@@ -452,7 +505,9 @@ async function copyInstallCommand() {
               </div>
             </div>
             <div class="relative">
-              <pre class="p-4 text-xs text-gray-300 font-mono overflow-x-auto max-h-64 overflow-y-auto"><code>{{ site.deployCompose }}</code></pre>
+              <pre
+                class="p-4 text-xs text-gray-300 font-mono overflow-x-auto max-h-64 overflow-y-auto"
+              ><code>{{ site.deployCompose }}</code></pre>
             </div>
           </div>
 
@@ -507,17 +562,25 @@ async function copyInstallCommand() {
             style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3 mb-3">
-              <div class="w-10 h-10 rounded-lg bg-[#1f1f1f] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div
+                class="w-10 h-10 rounded-lg bg-[#1f1f1f] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden"
+              >
                 <SiteFavicon :website="tool.website" :name="tool.name" size="sm" />
               </div>
               <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">{{ tool.name }}</h4>
+                  <h4
+                    class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate"
+                  >
+                    {{ tool.name }}
+                  </h4>
                   <CheckCircle2 v-if="tool.verified" class="w-4 h-4 text-green-500 flex-shrink-0" />
                 </div>
               </div>
             </div>
-            <p class="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">{{ tool.description }}</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">
+              {{ tool.description }}
+            </p>
             <div class="flex items-center gap-3 text-xs text-gray-500">
               <div v-if="tool.stars > 0" class="flex items-center gap-1">
                 <Star class="w-3.5 h-3.5" />
