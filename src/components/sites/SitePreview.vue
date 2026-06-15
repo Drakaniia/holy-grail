@@ -28,7 +28,7 @@ watch(
   () => props.site.slug,
   () => {
     previewError.value = false
-  }
+  },
 )
 </script>
 
