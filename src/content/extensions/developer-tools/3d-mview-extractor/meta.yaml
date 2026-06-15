@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: "1.0"
+version: '1.0'
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Chrome Web Store
 website: https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh
 docs: https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh
-sourceCode: ""
+sourceCode: ''
 icon: 3d-mview-extractor
 verified: true
 featured: false
