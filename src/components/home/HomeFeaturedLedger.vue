@@ -43,8 +43,12 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
           <span class="home-ledger__skeleton-media hg-skeleton"></span>
         </span>
         <span class="home-ledger__item-meta">
-          <span class="home-ledger__meta-skeleton home-ledger__meta-skeleton--small hg-skeleton"></span>
-          <strong class="home-ledger__meta-skeleton home-ledger__meta-skeleton--title hg-skeleton"></strong>
+          <span
+            class="home-ledger__meta-skeleton home-ledger__meta-skeleton--small hg-skeleton"
+          ></span>
+          <strong
+            class="home-ledger__meta-skeleton home-ledger__meta-skeleton--title hg-skeleton"
+          ></strong>
         </span>
       </div>
     </div>
@@ -65,12 +69,7 @@ const { markImageFailed, tiles: visibleTiles } = useRandomPreviewTiles({
               aria-hidden="true"
             >
               <source :srcset="tile.previousItem.small" media="(max-width: 720px)" />
-              <img
-                :src="tile.previousItem.image"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
+              <img :src="tile.previousItem.image" alt="" loading="lazy" decoding="async" />
             </picture>
 
             <picture
