@@ -1,6 +1,6 @@
 title: Rust Best Practices
 slug: rust-best-practices
-description: 'Guide for writing idiomatic Rust code based on Apollo GraphQL''s best practices handbook. Use this skill when: (1) writing new Rust code or functions, (2) reviewing or refactoring existing Rust code, (3) deciding...'
+description: "Guide for writing idiomatic Rust code based on Apollo GraphQL's best practices handbook. Use this skill when: (1) writing new Rust code or functions, (2) reviewing or refactoring existing Rust code, (3) deciding..."
 category: Design
 tags:
   - autoskills
