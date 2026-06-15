@@ -27,13 +27,19 @@ function parseFrontmatter(content: string): { frontmatter: Record<string, unknow
     let value = line.slice(colonIndex + 1).trim()
 
     // Remove quotes
-    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
       value = value.slice(1, -1)
     }
 
     // Parse arrays like [item1, item2]
     if (value.startsWith('[') && value.endsWith(']')) {
-      const items = value.slice(1, -1).split(',').map(i => i.trim().replace(/^["']|["']$/g, ''))
+      const items = value
+        .slice(1, -1)
+        .split(',')
+        .map((i) => i.trim().replace(/^["']|["']$/g, ''))
       frontmatter[key] = items
     } else if (value === 'true') {
       frontmatter[key] = true
@@ -54,7 +60,7 @@ export async function fetchSkillContent(
   owner: string,
   repo: string,
   skillPath: string,
-  branch = 'main'
+  branch = 'main',
 ): Promise<SkillContent> {
   // Try multiple SKILL.md locations matching npx skills CLI behavior
   const candidates = skillPath
