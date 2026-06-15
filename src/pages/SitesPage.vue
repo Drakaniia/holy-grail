@@ -90,7 +90,8 @@ const pageDescription = computed(() => {
     'ui-libraries': 'UI component libraries and design systems',
     ai: 'AI-powered tools and services',
     design: 'Design resources, inspiration, and tools',
-    development: 'Cloud hosting, learning paths, references, tooling, CLI tools, UI libraries, repositories, and developer workflow resources',
+    development:
+      'Cloud hosting, learning paths, references, tooling, CLI tools, UI libraries, repositories, and developer workflow resources',
     watch: 'Saved streaming and watch source bookmarks for movies and anime',
     downloads: 'Saved download source bookmarks grouped by media and file type',
     image: 'AI image generation and editing tools',
@@ -113,7 +114,8 @@ const pageDescription = computed(() => {
     md: 'Markdown resources and tools',
     'design-tools': 'Design tools and utilities',
     learning: 'Courses, coding challenges, and structured programming practice',
-    'development/cloud-hosting': 'Cloud platforms, hosting, databases, and backend services for development work',
+    'development/cloud-hosting':
+      'Cloud platforms, hosting, databases, and backend services for development work',
     'development/cli-tools': 'Command-line tools and utilities for development workflows',
     'development/ui-libraries': 'UI component libraries and design systems for development work',
     references: 'Documentation, articles, and implementation references for developers',
@@ -130,7 +132,11 @@ const pageDescription = computed(() => {
     'downloads/movies': 'Movie download source bookmarks from the imported browser folder',
   }
   const key = subcategory.value ? `${category.value}/${subcategory.value}` : category.value
-  return descriptions[key] || descriptions[subcategory.value || category.value] || 'Curated tools and resources'
+  return (
+    descriptions[key] ||
+    descriptions[subcategory.value || category.value] ||
+    'Curated tools and resources'
+  )
 })
 
 const filteredSites = computed(() => {
@@ -147,16 +153,18 @@ const timeFilteredSites = computed(() => {
     return filteredSites.value
   }
 
-  return filteredSites.value.filter(site => site.addedDaysAgo <= rangeDays)
+  return filteredSites.value.filter((site) => site.addedDaysAgo <= rangeDays)
 })
 
 const categoryFilters = computed(() => {
-  const categories = new Set(filteredSites.value.map(site => site.category))
+  const categories = new Set(filteredSites.value.map((site) => site.category))
   return ['All', ...Array.from(categories).sort()]
 })
 
 const activeTimeRangeLabel = computed(() => {
-  return timeRangeOptions.find(option => option.value === activeTimeRange.value)?.label ?? 'All Time'
+  return (
+    timeRangeOptions.find((option) => option.value === activeTimeRange.value)?.label ?? 'All Time'
+  )
 })
 
 const displaySites = computed(() => {
@@ -165,16 +173,16 @@ const displaySites = computed(() => {
   if (store.searchQuery) {
     const query = store.searchQuery.toLowerCase()
     result = result.filter(
-      s =>
+      (s) =>
         s.name.toLowerCase().includes(query) ||
         s.description.toLowerCase().includes(query) ||
         s.category.toLowerCase().includes(query) ||
-        (s.tags && s.tags.some(t => t.toLowerCase().includes(query)))
-      )
+        (s.tags && s.tags.some((t) => t.toLowerCase().includes(query))),
+    )
   }
 
   if (store.activeCategory !== 'All') {
-    result = result.filter(site => site.category === store.activeCategory)
+    result = result.filter((site) => site.category === store.activeCategory)
   }
 
   return sortSitesForTab(result, store.activeTab)
@@ -251,12 +259,12 @@ watch([category, subcategory], () => {
 
 watch(
   () => store.searchQuery,
-  query => {
+  (query) => {
     trackSearchQuery(query, 'sites_search')
   },
 )
 
-watch(totalPages, pages => {
+watch(totalPages, (pages) => {
   if (store.currentPage > pages) {
     setPage(pages)
   }
@@ -281,7 +289,10 @@ watch(totalPages, pages => {
           </div>
 
           <div class="w-full flex-shrink-0 sm:w-auto">
-            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+            <div
+              class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5"
+              style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+            >
               <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
                 COLLECTION
               </p>
@@ -300,7 +311,10 @@ watch(totalPages, pages => {
     </div>
 
     <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        class="border border-gray-800 rounded-xl p-4 mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div class="relative min-w-0 flex-1">
             <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -333,7 +347,10 @@ watch(totalPages, pages => {
                 @click="toggleTimeRangeMenu"
               >
                 {{ activeTimeRangeLabel }}
-                <ChevronDown class="h-3.5 w-3.5 text-gray-500 transition-transform" :class="isTimeRangeMenuOpen ? 'rotate-180' : ''" />
+                <ChevronDown
+                  class="h-3.5 w-3.5 text-gray-500 transition-transform"
+                  :class="isTimeRangeMenuOpen ? 'rotate-180' : ''"
+                />
               </button>
 
               <div
@@ -346,7 +363,11 @@ watch(totalPages, pages => {
                   :key="option.value"
                   type="button"
                   class="block w-full px-3 py-2 text-left text-xs font-medium transition-colors"
-                  :class="activeTimeRange === option.value ? 'bg-[#1f1f1f] text-white' : 'text-gray-300 hover:bg-[#1f1f1f] hover:text-white'"
+                  :class="
+                    activeTimeRange === option.value
+                      ? 'bg-[#1f1f1f] text-white'
+                      : 'text-gray-300 hover:bg-[#1f1f1f] hover:text-white'
+                  "
                   role="menuitem"
                   @click="selectTimeRange(option.value)"
                 >
@@ -383,7 +404,6 @@ watch(totalPages, pages => {
               Publish
             </RouterLink>
           </div>
-
         </div>
 
         <div class="flex flex-wrap gap-2 mt-4">
@@ -392,9 +412,11 @@ watch(totalPages, pages => {
             :key="filter"
             @click="store.setCategory(filter)"
             class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
-            :class="store.activeCategory === filter
-              ? 'bg-accent-600 text-white'
-              : 'text-gray-400 hover:text-white border border-gray-700'"
+            :class="
+              store.activeCategory === filter
+                ? 'bg-accent-600 text-white'
+                : 'text-gray-400 hover:text-white border border-gray-700'
+            "
           >
             {{ filter }}
           </button>
@@ -417,18 +439,20 @@ watch(totalPages, pages => {
         {{ store.loadError }}
       </div>
 
-      <div v-else-if="paginatedSites.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <SiteCard
-          v-for="site in paginatedSites"
-          :key="site.slug"
-          :site="site"
-        />
+      <div
+        v-else-if="paginatedSites.length > 0"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        <SiteCard v-for="site in paginatedSites" :key="site.slug" :site="site" />
       </div>
 
       <div v-else class="text-center py-16">
         <p class="text-gray-500 text-lg">No sites found matching your search.</p>
         <button
-          @click="store.setSearchQuery(''); store.setCategory('All')"
+          @click="
+            store.setSearchQuery('')
+            store.setCategory('All')
+          "
           class="mt-4 text-accent-400 hover:text-accent-300 text-sm"
         >
           Clear filters
