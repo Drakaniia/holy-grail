@@ -107,8 +107,7 @@ function storeOAuthRedirectPath(path = '/account') {
 
   try {
     window.sessionStorage.setItem(OAUTH_NEXT_STORAGE_KEY, getRedirectPath(path))
-  } catch {
-  }
+  } catch {}
 }
 
 function consumeStoredOAuthRedirectPath() {
@@ -628,10 +627,7 @@ export const useAuthStore = defineStore('auth', () => {
       session.value = null
       return { ok: true }
     } catch (error) {
-      const message = await getSupabaseFunctionErrorMessage(
-        error,
-        'Account could not be deleted.',
-      )
+      const message = await getSupabaseFunctionErrorMessage(error, 'Account could not be deleted.')
       actionError.value = message
       return { ok: false, message }
     } finally {
