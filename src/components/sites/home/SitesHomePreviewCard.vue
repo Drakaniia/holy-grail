@@ -34,12 +34,7 @@ const emit = defineEmits<{
         aria-hidden="true"
       >
         <source :srcset="props.previousItem.small" media="(max-width: 720px)" />
-        <img
-          :src="props.previousItem.image"
-          alt=""
-          loading="lazy"
-          decoding="async"
-        />
+        <img :src="props.previousItem.image" alt="" loading="lazy" decoding="async" />
       </picture>
 
       <picture
@@ -66,10 +61,7 @@ const emit = defineEmits<{
         <span>{{ props.item.category }}</span>
       </span>
       <strong class="sites-home-preview-card__title">{{ props.item.name }}</strong>
-      <span
-        v-if="props.variant === 'showcase'"
-        class="sites-home-preview-card__description"
-      >
+      <span v-if="props.variant === 'showcase'" class="sites-home-preview-card__description">
         {{ props.item.description }}
       </span>
     </span>
