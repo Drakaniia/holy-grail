@@ -12,7 +12,9 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="inline-flex max-w-full overflow-x-auto rounded-lg border border-zinc-900 bg-[#1f1f1f]/80 p-1">
+  <div
+    class="inline-flex max-w-full overflow-x-auto rounded-lg border border-zinc-900 bg-[#1f1f1f]/80 p-1"
+  >
     <button
       v-for="tab in tabs"
       :key="tab.key"
