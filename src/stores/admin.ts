@@ -9,12 +9,7 @@ export type SubmissionStatus = 'pending' | 'approved' | 'rejected'
 export type SiteIssueStatus = 'open' | 'resolved' | 'ignored'
 export type SiteIssueType = 'down' | 'deprecated' | 'wrong-url' | 'other'
 export type AnalyticsRange = 7 | 30 | 90 | 'all'
-export type AnalyticsEventType =
-  | 'page_view'
-  | 'search'
-  | 'outbound_click'
-  | 'signup'
-  | 'bookmark'
+export type AnalyticsEventType = 'page_view' | 'search' | 'outbound_click' | 'signup' | 'bookmark'
 
 export interface Submission {
   id: string
@@ -243,9 +238,9 @@ function buildDailyPoints(events: AnalyticsEvent[], range: AnalyticsRange): Anal
 function buildAnalyticsSummary(events: AnalyticsEvent[], range: AnalyticsRange): AnalyticsSummary {
   const visitorKeys = new Set(events.map(getVisitorKey))
   const anonymousKeys = new Set(
-    events.filter(event => !event.user_id).map(event => `session:${event.session_id}`),
+    events.filter((event) => !event.user_id).map((event) => `session:${event.session_id}`),
   )
-  const signedInVisitors = countUnique(events.map(event => event.user_id))
+  const signedInVisitors = countUnique(events.map((event) => event.user_id))
   const topPages = new Map<string, number>()
   const topSites = new Map<string, number>()
   const topSkills = new Map<string, number>()
@@ -355,28 +350,28 @@ export const useAdminStore = defineStore('admin', () => {
   const isAdmin = computed(() => hasAdminRole(auth.user?.app_metadata))
 
   const pendingCount = computed(
-    () => submissions.value.filter(submission => submission.status === 'pending').length,
+    () => submissions.value.filter((submission) => submission.status === 'pending').length,
   )
   const approvedCount = computed(
-    () => submissions.value.filter(submission => submission.status === 'approved').length,
+    () => submissions.value.filter((submission) => submission.status === 'approved').length,
   )
   const rejectedCount = computed(
-    () => submissions.value.filter(submission => submission.status === 'rejected').length,
+    () => submissions.value.filter((submission) => submission.status === 'rejected').length,
   )
   const openSiteIssueCount = computed(
-    () => siteIssueReports.value.filter(report => report.status === 'open').length,
+    () => siteIssueReports.value.filter((report) => report.status === 'open').length,
   )
   const legacySiteIssueCount = computed(
     () =>
       siteIssueReports.value.filter(
-        report => report.status === 'open' && report.issue_type === 'deprecated',
+        (report) => report.status === 'open' && report.issue_type === 'deprecated',
       ).length,
   )
   const resolvedSiteIssueCount = computed(
-    () => siteIssueReports.value.filter(report => report.status === 'resolved').length,
+    () => siteIssueReports.value.filter((report) => report.status === 'resolved').length,
   )
   const ignoredSiteIssueCount = computed(
-    () => siteIssueReports.value.filter(report => report.status === 'ignored').length,
+    () => siteIssueReports.value.filter((report) => report.status === 'ignored').length,
   )
   const analyticsSummary = computed(() =>
     buildAnalyticsSummary(analyticsEvents.value, analyticsRange.value),
@@ -416,9 +411,7 @@ export const useAdminStore = defineStore('admin', () => {
     }
   }
 
-  async function loadSiteIssueReports(
-    statusFilter?: SiteIssueStatus,
-  ): Promise<AdminActionResult> {
+  async function loadSiteIssueReports(statusFilter?: SiteIssueStatus): Promise<AdminActionResult> {
     if (!supabase) {
       siteIssueError.value = 'Supabase is not configured.'
       return { ok: false, message: siteIssueError.value }
@@ -650,7 +643,7 @@ export const useAdminStore = defineStore('admin', () => {
       if (error) throw error
       if (!data) throw new Error('Submission could not be updated.')
 
-      const idx = submissions.value.findIndex(submission => submission.id === id)
+      const idx = submissions.value.findIndex((submission) => submission.id === id)
       if (idx !== -1) {
         submissions.value[idx] = {
           ...submissions.value[idx],
@@ -684,7 +677,7 @@ export const useAdminStore = defineStore('admin', () => {
 
       if (error) throw error
 
-      submissions.value = submissions.value.filter(submission => submission.id !== id)
+      submissions.value = submissions.value.filter((submission) => submission.id !== id)
       return { ok: true }
     } catch (err) {
       const message = getSupabaseErrorMessage(err)
@@ -708,7 +701,7 @@ export const useAdminStore = defineStore('admin', () => {
     siteIssueError.value = null
 
     try {
-      const resolvedBy = status === 'open' ? null : auth.user?.id ?? null
+      const resolvedBy = status === 'open' ? null : (auth.user?.id ?? null)
       const resolvedAt = status === 'open' ? null : new Date().toISOString()
       const { data, error } = await supabase
         .from('site_issue_reports')
@@ -724,7 +717,7 @@ export const useAdminStore = defineStore('admin', () => {
       if (error) throw error
       if (!data) throw new Error('Site issue could not be updated.')
 
-      const idx = siteIssueReports.value.findIndex(report => report.id === id)
+      const idx = siteIssueReports.value.findIndex((report) => report.id === id)
       if (idx !== -1) {
         siteIssueReports.value[idx] = {
           ...siteIssueReports.value[idx],
@@ -758,7 +751,7 @@ export const useAdminStore = defineStore('admin', () => {
 
       if (error) throw error
 
-      siteIssueReports.value = siteIssueReports.value.filter(report => report.id !== id)
+      siteIssueReports.value = siteIssueReports.value.filter((report) => report.id !== id)
       return { ok: true }
     } catch (err) {
       const message = getSupabaseErrorMessage(err)
