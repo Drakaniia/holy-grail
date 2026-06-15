@@ -1,11 +1,7 @@
 <template>
   <div aria-hidden="true">
     <div class="mb-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-      <article
-        v-for="index in 8"
-        :key="index"
-        class="border border-gray-800 bg-[#1f1f1f] p-4"
-      >
+      <article v-for="index in 8" :key="index" class="border border-gray-800 bg-[#1f1f1f] p-4">
         <div class="mb-5 flex items-center justify-between gap-3">
           <div class="hg-skeleton h-3 w-28 rounded"></div>
           <div class="hg-skeleton h-4 w-4 shrink-0 rounded"></div>
@@ -30,7 +26,20 @@
 
         <div class="flex h-52 items-end gap-1 border border-gray-900 bg-[#1f1f1f]/60 px-3 py-4">
           <div
-            v-for="height in ['22%', '48%', '34%', '76%', '58%', '92%', '66%', '38%', '54%', '82%', '44%', '70%']"
+            v-for="height in [
+              '22%',
+              '48%',
+              '34%',
+              '76%',
+              '58%',
+              '92%',
+              '66%',
+              '38%',
+              '54%',
+              '82%',
+              '44%',
+              '70%',
+            ]"
             :key="height"
             class="flex h-full min-w-0 flex-1 flex-col justify-end gap-2"
           >
@@ -61,7 +70,11 @@
         </div>
 
         <div class="mt-6 grid grid-cols-2 gap-3">
-          <div v-for="index in 2" :key="index" class="border border-gray-800 bg-[#1f1f1f] px-3 py-3">
+          <div
+            v-for="index in 2"
+            :key="index"
+            class="border border-gray-800 bg-[#1f1f1f] px-3 py-3"
+          >
             <div class="hg-skeleton h-4 w-12 rounded"></div>
             <div class="mt-2 hg-skeleton h-3 w-20 rounded"></div>
           </div>
@@ -70,11 +83,7 @@
     </div>
 
     <div class="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
-      <section
-        v-for="section in 6"
-        :key="section"
-        class="border border-gray-800 bg-[#1f1f1f] p-5"
-      >
+      <section v-for="section in 6" :key="section" class="border border-gray-800 bg-[#1f1f1f] p-5">
         <div class="mb-4 hg-skeleton h-4 w-32 rounded"></div>
         <ol class="space-y-3">
           <li
