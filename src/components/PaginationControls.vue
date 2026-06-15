@@ -19,7 +19,7 @@ const visiblePages = computed(() => {
   const pages = new Set([1, clampedPage, props.totalPages])
 
   const sortedPages = Array.from(pages)
-    .filter(page => page >= 1 && page <= props.totalPages)
+    .filter((page) => page >= 1 && page <= props.totalPages)
     .sort((first, second) => first - second)
   const result: Array<number | 'ellipsis'> = []
 
@@ -82,7 +82,7 @@ function selectPage(page: number) {
         class="inline-flex h-8 items-center rounded-lg px-1.5 text-xs font-medium text-accent-500/80 sm:h-10 sm:px-2 sm:text-sm"
         aria-hidden="true"
       >
-         ... 
+        ...
       </span>
     </template>
 
