@@ -1,17 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    target-branch: "grail"
+  - package-ecosystem: 'npm'
+    directory: '/'
+    target-branch: 'grail'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     open-pull-requests-limit: 10
     reviewers:
-      - "anomalyco"
+      - 'anomalyco'
     commit-message:
-      prefix: "deps"
+      prefix: 'deps'
     labels:
-      - "dependencies"
+      - 'dependencies'
     allow:
-      - dependency-type: "direct"
+      - dependency-type: 'direct'
     versioning-strategy: increase
