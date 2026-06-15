@@ -14,7 +14,8 @@ bun run build                    # production build (auto-runs generate scripts 
 bun run preview                  # preview production build
 bun run type-check               # vue-tsc --noEmit
 bun lint                         # oxlint --fix then eslint --fix --cache (sequential)
-bun run format                   # prettier --write --experimental-cli src/
+bun run format                   # prettier --write src/ scripts/ public/content/ supabase/functions/ .github/ + root configs
+bun run format:check             # prettier --check (used in CI)
 bun run generate:skills          # regenerate skills-index.json only
 bun run generate:extensions      # regenerate extensions-index.json only
 bun run import:bookmarks         # import bookmarks via scripts/import-bookmarks.js
