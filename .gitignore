@@ -47,3 +47,4 @@ __screenshots__/
 supabase/.temp/
 .opencode/plugins/emdash-notifications.js
 .gemini/settings.json
+.claude/settings.local.json
