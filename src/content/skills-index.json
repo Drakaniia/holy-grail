@@ -5,7 +5,12 @@
     "description": "Collaborative design workflow that turns rough ideas into concrete specs before implementation.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "planning", "product-design", "requirements"],
+    "tags": [
+      "superpowers",
+      "planning",
+      "product-design",
+      "requirements"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -24,7 +29,12 @@
     "description": "Delegate independent work to focused subagents with isolated context and precise instructions.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "agents", "delegation", "parallel-work"],
+    "tags": [
+      "superpowers",
+      "agents",
+      "delegation",
+      "parallel-work"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -43,7 +53,12 @@
     "description": "Execute written implementation plans with review checkpoints and completion reporting.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "planning", "execution", "workflow"],
+    "tags": [
+      "superpowers",
+      "planning",
+      "execution",
+      "workflow"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -62,7 +77,12 @@
     "description": "Guide branch completion with structured choices for merge, pull request, or cleanup after verification.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "git", "pull-request", "release-workflow"],
+    "tags": [
+      "superpowers",
+      "git",
+      "pull-request",
+      "release-workflow"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -81,7 +101,12 @@
     "description": "Evaluate review feedback rigorously before applying technically sound changes.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "code-review", "verification", "quality"],
+    "tags": [
+      "superpowers",
+      "code-review",
+      "verification",
+      "quality"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -100,7 +125,12 @@
     "description": "Dispatch focused code review to verify major work before merging or finishing.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "code-review", "quality", "agents"],
+    "tags": [
+      "superpowers",
+      "code-review",
+      "quality",
+      "agents"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -119,7 +149,12 @@
     "description": "Execute implementation plans by assigning independent tasks to subagents with staged reviews.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "agents", "implementation", "review"],
+    "tags": [
+      "superpowers",
+      "agents",
+      "implementation",
+      "review"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -138,7 +173,12 @@
     "description": "Debug failures by reproducing symptoms, tracing root cause, and verifying fixes.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "debugging", "root-cause", "verification"],
+    "tags": [
+      "superpowers",
+      "debugging",
+      "root-cause",
+      "verification"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -157,7 +197,12 @@
     "description": "Write failing tests first, implement the minimum fix, and refactor after green verification.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "tdd", "testing", "verification"],
+    "tags": [
+      "superpowers",
+      "tdd",
+      "testing",
+      "verification"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -176,7 +221,12 @@
     "description": "Create isolated workspaces for feature work using native tools or git worktrees.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "git", "worktrees", "isolation"],
+    "tags": [
+      "superpowers",
+      "git",
+      "worktrees",
+      "isolation"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -195,7 +245,12 @@
     "description": "Entry workflow for discovering and applying Superpowers skills at the right moment.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "skills", "agent-workflow", "methodology"],
+    "tags": [
+      "superpowers",
+      "skills",
+      "agent-workflow",
+      "methodology"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -214,7 +269,12 @@
     "description": "Require concrete verification evidence before claiming work is complete or passing.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "verification", "quality", "completion"],
+    "tags": [
+      "superpowers",
+      "verification",
+      "quality",
+      "completion"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -233,7 +293,12 @@
     "description": "Turn approved designs into step-by-step implementation plans with files, tests, and checkpoints.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "planning", "implementation", "specifications"],
+    "tags": [
+      "superpowers",
+      "planning",
+      "implementation",
+      "specifications"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -252,7 +317,12 @@
     "description": "Create and validate reusable skills with test-driven process documentation.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["superpowers", "skills", "documentation", "tdd"],
+    "tags": [
+      "superpowers",
+      "skills",
+      "documentation",
+      "tdd"
+    ],
     "views": 201121,
     "uses": 17918,
     "author": "obra",
@@ -271,7 +341,14 @@
     "description": "Official project-aware guidance for adding, searching, styling, composing, and updating shadcn/ui components with the shadcn CLI.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["shadcn", "shadcn-ui", "components", "tailwind", "registry", "ui"],
+    "tags": [
+      "shadcn",
+      "shadcn-ui",
+      "components",
+      "tailwind",
+      "registry",
+      "ui"
+    ],
     "views": 115000,
     "uses": 1200,
     "author": "shadcn-ui",
@@ -290,7 +367,13 @@
     "description": "Ultra-compressed communication mode that cuts filler while preserving technical accuracy.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "productivity", "brevity", "communication", "agents"],
+    "tags": [
+      "mattpocock",
+      "productivity",
+      "brevity",
+      "communication",
+      "agents"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -309,7 +392,13 @@
     "description": "Disciplined diagnosis loop for hard bugs and performance regressions from reproduction through regression testing.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "debugging", "diagnosis", "testing", "engineering"],
+    "tags": [
+      "mattpocock",
+      "debugging",
+      "diagnosis",
+      "testing",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -328,7 +417,13 @@
     "description": "Interview the user through a plan or design until dependencies and decision branches are resolved.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "productivity", "planning", "interview", "agents"],
+    "tags": [
+      "mattpocock",
+      "productivity",
+      "planning",
+      "interview",
+      "agents"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -347,7 +442,13 @@
     "description": "Stress-test a plan against project docs, sharpen domain language, and update CONTEXT.md and ADRs as decisions settle.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "planning", "documentation", "domain-modeling", "engineering"],
+    "tags": [
+      "mattpocock",
+      "planning",
+      "documentation",
+      "domain-modeling",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -366,7 +467,13 @@
     "description": "Compact the current conversation into a handoff document so another agent can continue the work.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "productivity", "handoff", "documentation", "agents"],
+    "tags": [
+      "mattpocock",
+      "productivity",
+      "handoff",
+      "documentation",
+      "agents"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -385,7 +492,13 @@
     "description": "Find codebase deepening opportunities using domain language, ADRs, module boundaries, and testability signals.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "architecture", "refactoring", "domain-modeling", "engineering"],
+    "tags": [
+      "mattpocock",
+      "architecture",
+      "refactoring",
+      "domain-modeling",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -404,7 +517,13 @@
     "description": "Build throwaway prototypes for state models, business logic, or multiple UI directions before committing to a design.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "prototype", "design", "exploration", "engineering"],
+    "tags": [
+      "mattpocock",
+      "prototype",
+      "design",
+      "exploration",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -423,7 +542,13 @@
     "description": "Configure AGENTS.md or CLAUDE.md with issue tracker, triage label, and domain documentation rules for Matt Pocock skills.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "setup", "agents", "documentation", "engineering"],
+    "tags": [
+      "mattpocock",
+      "setup",
+      "agents",
+      "documentation",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -442,7 +567,13 @@
     "description": "Test-driven development workflow for building features or fixing bugs with a red-green-refactor loop.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "tdd", "testing", "red-green-refactor", "engineering"],
+    "tags": [
+      "mattpocock",
+      "tdd",
+      "testing",
+      "red-green-refactor",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -461,7 +592,13 @@
     "description": "Break a plan, spec, or PRD into independently grabbable implementation issues using vertical slices.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "issues", "planning", "vertical-slices", "engineering"],
+    "tags": [
+      "mattpocock",
+      "issues",
+      "planning",
+      "vertical-slices",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -480,7 +617,13 @@
     "description": "Turn current conversation and codebase context into a PRD and publish it to the project issue tracker.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "prd", "planning", "issues", "engineering"],
+    "tags": [
+      "mattpocock",
+      "prd",
+      "planning",
+      "issues",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -499,7 +642,13 @@
     "description": "Triage issues through a state machine for incoming bugs, feature requests, agent-ready work, and workflow labels.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "issues", "triage", "workflow", "engineering"],
+    "tags": [
+      "mattpocock",
+      "issues",
+      "triage",
+      "workflow",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -518,7 +667,13 @@
     "description": "Create new agent skills with clear structure, progressive disclosure, resources, and validation guidance.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "productivity", "skills", "documentation", "agents"],
+    "tags": [
+      "mattpocock",
+      "productivity",
+      "skills",
+      "documentation",
+      "agents"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -537,7 +692,13 @@
     "description": "Ask the agent for broader context and a higher-level map of unfamiliar code using the project domain vocabulary.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["mattpocock", "codebase", "architecture", "context", "engineering"],
+    "tags": [
+      "mattpocock",
+      "codebase",
+      "architecture",
+      "context",
+      "engineering"
+    ],
     "views": 109000,
     "uses": 9600,
     "author": "mattpocock",
@@ -556,7 +717,13 @@
     "description": "Official GSAP core API guidance for tweens, easing, duration, stagger, defaults, responsive animation, and reduced motion.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "animation", "javascript", "tweens", "motion"],
+    "tags": [
+      "gsap",
+      "animation",
+      "javascript",
+      "tweens",
+      "motion"
+    ],
     "views": 36000,
     "uses": 4200,
     "author": "greensock",
@@ -575,7 +742,13 @@
     "description": "Official GSAP ScrollTrigger guidance for scroll-linked animation, pinning, scrubbed timelines, trigger setup, refresh, and cleanup.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "scrolltrigger", "scroll-animation", "parallax", "animation"],
+    "tags": [
+      "gsap",
+      "scrolltrigger",
+      "scroll-animation",
+      "parallax",
+      "animation"
+    ],
     "views": 34000,
     "uses": 3900,
     "author": "greensock",
@@ -594,7 +767,12 @@
     "description": "Conventional commit workflow for staging logical changes, analyzing diffs, and writing clear semantic commit messages.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["git", "commits", "conventional-commits", "workflow"],
+    "tags": [
+      "git",
+      "commits",
+      "conventional-commits",
+      "workflow"
+    ],
     "views": 33500,
     "uses": 4100,
     "author": "github",
@@ -613,7 +791,13 @@
     "description": "Official GSAP timeline guidance for sequencing, position parameters, labels, nesting, playback control, and choreographed motion.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "timeline", "animation", "sequencing", "motion"],
+    "tags": [
+      "gsap",
+      "timeline",
+      "animation",
+      "sequencing",
+      "motion"
+    ],
     "views": 33000,
     "uses": 3800,
     "author": "greensock",
@@ -632,7 +816,13 @@
     "description": "Official GSAP plugin guidance for registration, Flip, Draggable, ScrollToPlugin, SVG plugins, text plugins, easing plugins, and GSDevTools.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "plugins", "animation", "svg", "interaction"],
+    "tags": [
+      "gsap",
+      "plugins",
+      "animation",
+      "svg",
+      "interaction"
+    ],
     "views": 30000,
     "uses": 3300,
     "author": "greensock",
@@ -651,7 +841,13 @@
     "description": "Official GSAP React guidance for useGSAP, refs, gsap.context, cleanup, SSR concerns, and React or Next.js animation patterns.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "react", "nextjs", "animation", "usegsap"],
+    "tags": [
+      "gsap",
+      "react",
+      "nextjs",
+      "animation",
+      "usegsap"
+    ],
     "views": 28000,
     "uses": 3200,
     "author": "greensock",
@@ -670,7 +866,13 @@
     "description": "High-agency frontend design rules for stronger layout, typography, motion, spacing, component architecture, and anti-generic UI output.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["frontend", "ui", "ux", "visual-design", "motion"],
+    "tags": [
+      "frontend",
+      "ui",
+      "ux",
+      "visual-design",
+      "motion"
+    ],
     "views": 26000,
     "uses": 3100,
     "author": "Leonxlnx",
@@ -689,7 +891,13 @@
     "description": "Official gsap.utils guidance for clamp, mapRange, normalize, interpolate, random, snap, toArray, selector, wrap, pipe, and helper utilities.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "utilities", "javascript", "animation", "helpers"],
+    "tags": [
+      "gsap",
+      "utilities",
+      "javascript",
+      "animation",
+      "helpers"
+    ],
     "views": 26000,
     "uses": 2700,
     "author": "greensock",
@@ -708,7 +916,13 @@
     "description": "Stricter GPT and Codex-oriented taste rules for layout variance, GSAP direction, editorial typography, bento grids, and anti-slop enforcement.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["frontend", "codex", "ui", "gsap", "motion"],
+    "tags": [
+      "frontend",
+      "codex",
+      "ui",
+      "gsap",
+      "motion"
+    ],
     "views": 25000,
     "uses": 3000,
     "author": "Leonxlnx",
@@ -727,7 +941,13 @@
     "description": "Official GSAP performance guidance for smooth animation, transform-first motion, layout cost, will-change, batching, and jank reduction.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "performance", "animation", "fps", "optimization"],
+    "tags": [
+      "gsap",
+      "performance",
+      "animation",
+      "fps",
+      "optimization"
+    ],
     "views": 24000,
     "uses": 2500,
     "author": "greensock",
@@ -746,7 +966,13 @@
     "description": "Image-first website workflow for generating design references, analyzing them deeply, and implementing the frontend to match.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["image-to-code", "frontend", "visual-design", "implementation", "website"],
+    "tags": [
+      "image-to-code",
+      "frontend",
+      "visual-design",
+      "implementation",
+      "website"
+    ],
     "views": 24000,
     "uses": 2900,
     "author": "Leonxlnx",
@@ -765,7 +991,13 @@
     "description": "Audit-and-upgrade workflow for improving existing websites and apps with better layout, spacing, hierarchy, styling, and premium polish.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["redesign", "ui", "ux", "audit", "frontend"],
+    "tags": [
+      "redesign",
+      "ui",
+      "ux",
+      "audit",
+      "frontend"
+    ],
     "views": 23500,
     "uses": 2800,
     "author": "Leonxlnx",
@@ -784,7 +1016,13 @@
     "description": "Official GSAP guidance for Vue, Nuxt, Svelte, SvelteKit, lifecycle setup, selector scoping, and cleanup on unmount.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["gsap", "animation", "vue", "svelte", "frameworks"],
+    "tags": [
+      "gsap",
+      "animation",
+      "vue",
+      "svelte",
+      "frameworks"
+    ],
     "views": 23000,
     "uses": 2400,
     "author": "greensock",
@@ -803,7 +1041,13 @@
     "description": "Agency-grade UI direction for premium fonts, spacing, shadows, card structures, micro-interactions, and expensive-feeling websites.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["ui", "ux", "premium-design", "typography", "motion"],
+    "tags": [
+      "ui",
+      "ux",
+      "premium-design",
+      "typography",
+      "motion"
+    ],
     "views": 23000,
     "uses": 2700,
     "author": "Leonxlnx",
@@ -822,7 +1066,13 @@
     "description": "Editorial product UI direction with warm monochrome palettes, typographic contrast, flat bento grids, muted accents, and restrained styling.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["minimalism", "ui", "editorial", "typography", "bento"],
+    "tags": [
+      "minimalism",
+      "ui",
+      "editorial",
+      "typography",
+      "bento"
+    ],
     "views": 22000,
     "uses": 2500,
     "author": "Leonxlnx",
@@ -841,7 +1091,13 @@
     "description": "Brutalist and tactical telemetry UI direction with Swiss type, rigid grids, sharp contrast, dense dashboards, and experimental layouts.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["brutalism", "ui", "dashboard", "typography", "experimental"],
+    "tags": [
+      "brutalism",
+      "ui",
+      "dashboard",
+      "typography",
+      "experimental"
+    ],
     "views": 21000,
     "uses": 2300,
     "author": "Leonxlnx",
@@ -860,7 +1116,13 @@
     "description": "Premium website reference-image generation for heroes, landing pages, multi-section sites, conversion-aware composition, and art direction.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["image-generation", "web-design", "landing-page", "frontend", "art-direction"],
+    "tags": [
+      "image-generation",
+      "web-design",
+      "landing-page",
+      "frontend",
+      "art-direction"
+    ],
     "views": 20000,
     "uses": 2200,
     "author": "Leonxlnx",
@@ -879,7 +1141,13 @@
     "description": "Premium mobile app image-generation direction for iOS, Android, and cross-platform screens, flows, mockups, hierarchy, and consistency.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["image-generation", "mobile", "ui", "app-design", "mockups"],
+    "tags": [
+      "image-generation",
+      "mobile",
+      "ui",
+      "app-design",
+      "mockups"
+    ],
     "views": 19000,
     "uses": 2000,
     "author": "Leonxlnx",
@@ -898,7 +1166,13 @@
     "description": "Google Stitch-compatible design taste rules for premium DESIGN.md files, semantic design systems, micro-motion, and anti-generic UI standards.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["google-stitch", "design-system", "ui", "semantic-design", "motion"],
+    "tags": [
+      "google-stitch",
+      "design-system",
+      "ui",
+      "semantic-design",
+      "motion"
+    ],
     "views": 18500,
     "uses": 1950,
     "author": "Leonxlnx",
@@ -917,7 +1191,13 @@
     "description": "Premium brand-kit image generation for logo systems, identity boards, palettes, typography, and visual-world presentations.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["brand", "identity", "image-generation", "logo", "design"],
+    "tags": [
+      "brand",
+      "identity",
+      "image-generation",
+      "logo",
+      "design"
+    ],
     "views": 18400,
     "uses": 1900,
     "author": "Leonxlnx",
@@ -936,7 +1216,13 @@
     "description": "Enforces complete, unabridged output for production-critical tasks and bans placeholder or truncated code patterns.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["workflow", "output", "code-generation", "completeness", "ai"],
+    "tags": [
+      "workflow",
+      "output",
+      "code-generation",
+      "completeness",
+      "ai"
+    ],
     "views": 17000,
     "uses": 1800,
     "author": "Leonxlnx",
@@ -955,7 +1241,12 @@
     "description": "Academic paper writing workflow for outlines, drafts, revisions, abstracts, citation checks, format conversion, and disclosure statements.",
     "category": "Research",
     "parentCategory": "skills",
-    "tags": ["academic-writing", "papers", "citations", "revision"],
+    "tags": [
+      "academic-writing",
+      "papers",
+      "citations",
+      "revision"
+    ],
     "views": 15886,
     "uses": 1433,
     "author": "Imbad0202",
@@ -974,7 +1265,12 @@
     "description": "Multi-perspective peer review workflow for manuscript critique, methodology checks, revision roadmaps, and reviewer calibration.",
     "category": "Research",
     "parentCategory": "skills",
-    "tags": ["peer-review", "manuscript", "methodology", "academia"],
+    "tags": [
+      "peer-review",
+      "manuscript",
+      "methodology",
+      "academia"
+    ],
     "views": 15886,
     "uses": 1433,
     "author": "Imbad0202",
@@ -993,7 +1289,12 @@
     "description": "End-to-end academic workflow orchestration from research planning through writing, integrity checks, review, revision, and finalization.",
     "category": "Research",
     "parentCategory": "skills",
-    "tags": ["research-workflow", "academic-writing", "peer-review", "pipeline"],
+    "tags": [
+      "research-workflow",
+      "academic-writing",
+      "peer-review",
+      "pipeline"
+    ],
     "views": 15886,
     "uses": 1433,
     "author": "Imbad0202",
@@ -1012,7 +1313,12 @@
     "description": "Academic research agent team for literature reviews, fact-checking, evidence synthesis, systematic reviews, and guided research planning.",
     "category": "Research",
     "parentCategory": "skills",
-    "tags": ["research", "literature-review", "fact-checking", "academia"],
+    "tags": [
+      "research",
+      "literature-review",
+      "fact-checking",
+      "academia"
+    ],
     "views": 15886,
     "uses": 1433,
     "author": "Imbad0202",
@@ -1031,7 +1337,14 @@
     "description": "AI-powered design intelligence for UI styles, color palettes, typography, accessibility, charts, and stack-specific interface guidance.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["ui", "ux", "design-system", "accessibility", "typography", "color-palette"],
+    "tags": [
+      "ui",
+      "ux",
+      "design-system",
+      "accessibility",
+      "typography",
+      "color-palette"
+    ],
     "views": 12000,
     "uses": 1600,
     "author": "nextlevelbuilder",
@@ -1050,7 +1363,14 @@
     "description": "Create animation-rich HTML presentations from scratch or by converting PowerPoint files with distinctive frontend design styles.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["presentations", "slides", "html", "animation", "pptx", "frontend"],
+    "tags": [
+      "presentations",
+      "slides",
+      "html",
+      "animation",
+      "pptx",
+      "frontend"
+    ],
     "views": 9200,
     "uses": 1280,
     "author": "zarazhangrui",
@@ -1069,7 +1389,13 @@
     "description": "A format specification for describing visual identities to coding agents with design tokens and design rationale.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["design-system", "design-tokens", "markdown", "ai-agents", "frontend"],
+    "tags": [
+      "design-system",
+      "design-tokens",
+      "markdown",
+      "ai-agents",
+      "frontend"
+    ],
     "views": 8900,
     "uses": 1120,
     "author": "google-labs-code",
@@ -1088,7 +1414,11 @@
     "description": "Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to \"improve accessibility\", \"a11y audit\", \"WCAG compliance\", \"screen reader support\", \"keyboard navigation\", or \"make accessible\".",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "accessibility"],
+    "tags": [
+      "autoskills",
+      "design",
+      "accessibility"
+    ],
     "views": 6200,
     "uses": 900,
     "author": "midudev",
@@ -1107,7 +1437,13 @@
     "description": "Comprehensive writing guide for Angular documentation (adev). Covers Google Technical Writing standards, Angular-specific markdown extensions, code blocks, and components. You MUST use this skill any time you plan to...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "adev", "writing", "guide"],
+    "tags": [
+      "autoskills",
+      "design",
+      "adev",
+      "writing",
+      "guide"
+    ],
     "views": 6199,
     "uses": 899,
     "author": "midudev",
@@ -1126,7 +1462,12 @@
     "description": "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications, voice agents, or browser...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "agents", "sdk"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "agents",
+      "sdk"
+    ],
     "views": 6198,
     "uses": 898,
     "author": "midudev",
@@ -1145,7 +1486,13 @@
     "description": "Apply clean architecture boundaries, use cases, repositories, and lifecycle-aware presentation models in Android projects.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "architecture", "clean"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "architecture",
+      "clean"
+    ],
     "views": 6197,
     "uses": 897,
     "author": "midudev",
@@ -1164,7 +1511,13 @@
     "description": "Build Android UI with Jetpack Compose foundations, layouts, modifiers, theming, and stable component structure.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "compose", "foundations"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "compose",
+      "foundations"
+    ],
     "views": 6196,
     "uses": 896,
     "author": "midudev",
@@ -1183,7 +1536,13 @@
     "description": "Use coroutines, Flow, structured concurrency, dispatchers, and cancellation-safe Android async pipelines.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "coroutines", "flow"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "coroutines",
+      "flow"
+    ],
     "views": 6195,
     "uses": 895,
     "author": "midudev",
@@ -1202,7 +1561,13 @@
     "description": "Wire Android dependency injection with Hilt, scopes, testing overrides, and module ownership boundaries.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "di", "hilt"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "di",
+      "hilt"
+    ],
     "views": 6194,
     "uses": 894,
     "author": "midudev",
@@ -1221,7 +1586,14 @@
     "description": "Shape Android build logic with Gradle, version catalogs, plugins, convention patterns, and toolchain compatibility.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "gradle", "build", "logic"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "gradle",
+      "build",
+      "logic"
+    ],
     "views": 6193,
     "uses": 893,
     "author": "midudev",
@@ -1240,7 +1612,13 @@
     "description": "Use Kotlin idioms safely in Android apps, including nullability, data classes, sealed types, extension functions, and collection pipelines.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "kotlin", "core"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "kotlin",
+      "core"
+    ],
     "views": 6192,
     "uses": 892,
     "author": "midudev",
@@ -1259,7 +1637,14 @@
     "description": "Build Android networking stacks with Retrofit, OkHttp, interceptors, API contracts, and resilient error handling.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "networking", "retrofit", "okhttp"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "networking",
+      "retrofit",
+      "okhttp"
+    ],
     "views": 6191,
     "uses": 891,
     "author": "midudev",
@@ -1278,7 +1663,13 @@
     "description": "Write fast, focused Android unit tests for reducers, use cases, repositories, and lifecycle-safe state holders.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "android", "testing", "unit"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "android",
+      "testing",
+      "unit"
+    ],
     "views": 6190,
     "uses": 890,
     "author": "midudev",
@@ -1297,7 +1688,11 @@
     "description": "Generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "angular"],
+    "tags": [
+      "autoskills",
+      "design",
+      "angular"
+    ],
     "views": 6189,
     "uses": 889,
     "author": "midudev",
@@ -1316,7 +1711,12 @@
     "description": "Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, controller-based Web...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "aspnet", "core"],
+    "tags": [
+      "autoskills",
+      "design",
+      "aspnet",
+      "core"
+    ],
     "views": 6188,
     "uses": 888,
     "author": "midudev",
@@ -1335,7 +1735,14 @@
     "description": "Create ASP.NET Minimal API endpoints with proper OpenAPI documentation",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "aspnet", "minimal", "api", "openapi"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "aspnet",
+      "minimal",
+      "api",
+      "openapi"
+    ],
     "views": 6187,
     "uses": 887,
     "author": "midudev",
@@ -1354,7 +1761,11 @@
     "description": "Skill for building with the Astro web framework. Helps create Astro components and pages, configure SSR adapters, set up content collections, deploy static sites, and manage project structure and CLI commands. Use...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "astro"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "astro"
+    ],
     "views": 6186,
     "uses": 886,
     "author": "midudev",
@@ -1373,7 +1784,12 @@
     "description": "Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. WHEN: AI Search, query search, vector search, hybrid...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "azure", "ai"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "azure",
+      "ai"
+    ],
     "views": 6185,
     "uses": 885,
     "author": "midudev",
@@ -1392,7 +1808,12 @@
     "description": "Unified Azure cost management: query historical costs, forecast future spending, and optimize to reduce waste. WHEN: \"Azure costs\", \"Azure spending\", \"Azure bill\", \"cost breakdown\", \"cost by service\", \"cost by...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "azure", "cost"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "azure",
+      "cost"
+    ],
     "views": 6184,
     "uses": 884,
     "author": "midudev",
@@ -1411,7 +1832,12 @@
     "description": "Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md and infrastructure files. DO NOT use this skill when the user asks to CREATE a new application use...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "azure", "deploy"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "azure",
+      "deploy"
+    ],
     "views": 6183,
     "uses": 883,
     "author": "midudev",
@@ -1430,7 +1856,12 @@
     "description": "Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage. WHEN: debug production issues, troubleshoot app service, app service high CPU, app service deployment failure,...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "azure", "diagnostics"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "azure",
+      "diagnostics"
+    ],
     "views": 6182,
     "uses": 882,
     "author": "midudev",
@@ -1449,7 +1880,12 @@
     "description": "Master defensive Bash programming techniques for production-grade scripts. Use when writing robust shell scripts, CI/CD pipelines, or system utilities requiring fault tolerance and safety.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "bash", "defensive"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "bash",
+      "defensive"
+    ],
     "views": 6181,
     "uses": 881,
     "author": "midudev",
@@ -1468,7 +1904,12 @@
     "description": "Configure Better Auth server and client, set up database adapters, manage sessions, add plugins, and handle environment variables. Use when users mention Better Auth, betterauth, auth.ts, or need to set up TypeScript...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "better", "auth"],
+    "tags": [
+      "autoskills",
+      "database",
+      "better",
+      "auth"
+    ],
     "views": 6180,
     "uses": 880,
     "author": "midudev",
@@ -1487,7 +1928,13 @@
     "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "building", "native", "ui"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "building",
+      "native",
+      "ui"
+    ],
     "views": 6179,
     "uses": 879,
     "author": "midudev",
@@ -1506,7 +1953,11 @@
     "description": "Use when building, testing, and deploying JavaScript/TypeScript applications. Reach for Bun when you need to run scripts, manage dependencies, bundle code, or test applications with a single unified tool.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "bun"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "bun"
+    ],
     "views": 6178,
     "uses": 878,
     "author": "midudev",
@@ -1525,7 +1976,12 @@
     "description": "Expert guidelines for Chrome extension development with Manifest V3, covering security, performance, and best practices",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "chrome", "extension"],
+    "tags": [
+      "autoskills",
+      "design",
+      "chrome",
+      "extension"
+    ],
     "views": 6177,
     "uses": 877,
     "author": "midudev",
@@ -1544,7 +2000,11 @@
     "description": "Clerk authentication router. Use when user asks about adding authentication, setting up Clerk, custom sign-in flows, Swift or native iOS auth, native Android auth, Next.js patterns, React patterns, Vue patterns, Nuxt...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "clerk"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "clerk"
+    ],
     "views": 6176,
     "uses": 876,
     "author": "midudev",
@@ -1563,7 +2023,12 @@
     "description": "Implement Clerk authentication for native Android apps using Kotlin and Jetpack Compose with clerk-android source-guided patterns. Use for prebuilt AuthView/UserButton or custom API-driven auth flows. Do not use for...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "clerk", "android"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "clerk",
+      "android"
+    ],
     "views": 6175,
     "uses": 875,
     "author": "midudev",
@@ -1582,7 +2047,12 @@
     "description": "Astro patterns with Clerk middleware, SSR pages, island components, API routes, static vs SSR rendering. Triggers on: astro clerk, clerk astro middleware, astro protected page, clerk island component, astro API route...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "astro"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "astro"
+    ],
     "views": 6174,
     "uses": 874,
     "author": "midudev",
@@ -1601,7 +2071,12 @@
     "description": "Clerk Backend REST API explorer and executor. Browse tags, inspect endpoint schemas, and execute authenticated requests. Use when listing users, managing organizations, or calling any Clerk API endpoint.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "clerk", "api"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "clerk",
+      "api"
+    ],
     "views": 6173,
     "uses": 873,
     "author": "midudev",
@@ -1620,7 +2095,13 @@
     "description": "Chrome Extension auth with @clerk/chrome-extension -- popup/sidepanel setup, syncHost for OAuth/SAML via web app, createClerkClient for service workers and headless extensions, stable CRX ID. Triggers on: Chrome...",
     "category": "Tooling",
     "parentCategory": "skills",
-    "tags": ["autoskills", "tooling", "clerk", "chrome", "extension"],
+    "tags": [
+      "autoskills",
+      "tooling",
+      "clerk",
+      "chrome",
+      "extension"
+    ],
     "views": 6172,
     "uses": 872,
     "author": "midudev",
@@ -1639,7 +2120,13 @@
     "description": "Custom authentication flows and component appearance - hooks (useSignIn, useSignUp), themes, colors, fonts, CSS. Use for custom sign-in/sign-up flows, appearance styling, visual customization, branding.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "custom", "ui"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "custom",
+      "ui"
+    ],
     "views": 6171,
     "uses": 871,
     "author": "midudev",
@@ -1658,7 +2145,12 @@
     "description": "Expo / React Native patterns with Clerk SecureStore token cache, OAuth deep linking, useAuth in native, Expo Router protected routes, push notifications with user context. Triggers on: expo clerk, clerk react native,...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "clerk", "expo"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "clerk",
+      "expo"
+    ],
     "views": 6170,
     "uses": 870,
     "author": "midudev",
@@ -1677,7 +2169,12 @@
     "description": "Advanced Next.js patterns - middleware, Server Actions, caching with Clerk.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "clerk", "nextjs"],
+    "tags": [
+      "autoskills",
+      "development",
+      "clerk",
+      "nextjs"
+    ],
     "views": 6169,
     "uses": 869,
     "author": "midudev",
@@ -1696,7 +2193,12 @@
     "description": "Nuxt 3 auth patterns with @clerk/nuxt - middleware, composables, server API routes, SSR. Triggers on: Nuxt auth, useAuth composable, clerkMiddleware Nuxt, server API Clerk, Nuxt route protection.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "nuxt"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "nuxt"
+    ],
     "views": 6168,
     "uses": 868,
     "author": "midudev",
@@ -1715,7 +2217,12 @@
     "description": "Clerk Organizations for B2B SaaS - create multi-tenant apps with org switching, role-based access, verified domains, and enterprise SSO. Use for team workspaces, RBAC, org-based routing, member management.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "clerk", "orgs"],
+    "tags": [
+      "autoskills",
+      "development",
+      "clerk",
+      "orgs"
+    ],
     "views": 6167,
     "uses": 867,
     "author": "midudev",
@@ -1734,7 +2241,12 @@
     "description": "React SPA auth patterns with @clerk/react for Vite/CRA - ClerkProvider setup, useAuth/useUser/useClerk hooks, React Router protected routes, custom sign-in flows. Triggers on: Vite Clerk setup, React Router auth,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "react"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "react"
+    ],
     "views": 6166,
     "uses": 866,
     "author": "midudev",
@@ -1753,7 +2265,13 @@
     "description": "React Router v7 patterns with Clerk rootAuthLoader, getAuth in loaders, clerkMiddleware, protected routes, SSR user data, org switching. Triggers on: react-router auth, rootAuthLoader, getAuth loader, react-router...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "react", "router"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "react",
+      "router"
+    ],
     "views": 6165,
     "uses": 865,
     "author": "midudev",
@@ -1772,7 +2290,12 @@
     "description": "Add Clerk authentication to any project by following the official quickstart guides.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "setup"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "setup"
+    ],
     "views": 6164,
     "uses": 864,
     "author": "midudev",
@@ -1791,7 +2314,12 @@
     "description": "Implement Clerk authentication for native Swift and iOS apps using ClerkKit and ClerkKitUI source-guided patterns. Use for prebuilt AuthView or custom native flows. Do not use for Expo or React Native projects.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "clerk", "swift"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "clerk",
+      "swift"
+    ],
     "views": 6163,
     "uses": 863,
     "author": "midudev",
@@ -1810,7 +2338,12 @@
     "description": "TanStack React Start auth patterns with @clerk/tanstack-react-start - createServerFn, beforeLoad guards, loaders, Vinxi server. Triggers on: TanStack auth, createServerFn clerk, beforeLoad protection, TanStack Start...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "tanstack"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "tanstack"
+    ],
     "views": 6162,
     "uses": 862,
     "author": "midudev",
@@ -1829,7 +2362,11 @@
     "description": "E2E testing for Clerk apps. Use with Playwright or Cypress for auth flow tests.",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "clerk"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "clerk"
+    ],
     "views": 6161,
     "uses": 861,
     "author": "midudev",
@@ -1848,7 +2385,12 @@
     "description": "Vue 3 patterns with Clerk composables (useAuth, useUser, useClerk, useOrganization), Vue Router guards, Pinia auth store integration. Triggers on: vue clerk, useAuth vue, clerk composables, vue router clerk guard,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "clerk", "vue"],
+    "tags": [
+      "autoskills",
+      "design",
+      "clerk",
+      "vue"
+    ],
     "views": 6160,
     "uses": 860,
     "author": "midudev",
@@ -1867,7 +2409,12 @@
     "description": "Clerk webhooks for real-time events and data syncing. Always output complete, copy-paste-ready webhook handlers with verifyWebhook(req) verification. Listen for user creation, updates, deletion, and organization...",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "clerk", "webhooks"],
+    "tags": [
+      "autoskills",
+      "development",
+      "clerk",
+      "webhooks"
+    ],
     "views": 6159,
     "uses": 859,
     "author": "midudev",
@@ -1886,7 +2433,11 @@
     "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum), security (WAF, DDoS), and...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "cloudflare"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "cloudflare"
+    ],
     "views": 6158,
     "uses": 858,
     "author": "midudev",
@@ -1905,7 +2456,12 @@
     "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "cloudflare", "deploy"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "cloudflare",
+      "deploy"
+    ],
     "views": 6157,
     "uses": 857,
     "author": "midudev",
@@ -1924,7 +2480,12 @@
     "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "vercel", "composition"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "vercel",
+      "composition"
+    ],
     "views": 6156,
     "uses": 856,
     "author": "midudev",
@@ -1943,7 +2504,12 @@
     "description": "Containerize an ASP.NET Core project by creating Dockerfile and .dockerfile files customized for the project.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "containerize", "aspnetcore"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "containerize",
+      "aspnetcore"
+    ],
     "views": 6155,
     "uses": 855,
     "author": "midudev",
@@ -1962,7 +2528,12 @@
     "description": "Expert Core Data guidance (iOS/macOS): stack setup, fetch requests & NSFetchedResultsController, saving/merge conflicts, threading & Swift Concurrency, batch operations & persistent history, migrations, performance,...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "core", "data"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "core",
+      "data"
+    ],
     "views": 6154,
     "uses": 854,
     "author": "midudev",
@@ -1981,7 +2552,12 @@
     "description": "Get best practices for C# async programming",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "csharp", "async"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "csharp",
+      "async"
+    ],
     "views": 6153,
     "uses": 853,
     "author": "midudev",
@@ -2000,7 +2576,12 @@
     "description": "Ensure that C# types are documented with XML comments and follow best practices for documentation.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "csharp", "docs"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "csharp",
+      "docs"
+    ],
     "views": 6152,
     "uses": 852,
     "author": "midudev",
@@ -2019,7 +2600,12 @@
     "description": "Get best practices for MSTest 3.x/4.x unit testing, including modern assertion APIs and data-driven tests",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "csharp", "mstest"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "csharp",
+      "mstest"
+    ],
     "views": 6151,
     "uses": 851,
     "author": "midudev",
@@ -2038,7 +2624,12 @@
     "description": "Get best practices for NUnit unit testing, including data-driven tests",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "csharp", "nunit"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "csharp",
+      "nunit"
+    ],
     "views": 6150,
     "uses": 850,
     "author": "midudev",
@@ -2057,7 +2648,12 @@
     "description": "Get best practices for TUnit unit testing, including data-driven tests",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "csharp", "tunit"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "csharp",
+      "tunit"
+    ],
     "views": 6149,
     "uses": 849,
     "author": "midudev",
@@ -2076,7 +2672,12 @@
     "description": "Get best practices for XUnit unit testing, including data-driven tests",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "csharp", "xunit"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "csharp",
+      "xunit"
+    ],
     "views": 6148,
     "uses": 848,
     "author": "midudev",
@@ -2095,7 +2696,11 @@
     "description": "General best practices for Dart development. Covers code style, effective Dart, and language features.",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "dart"],
+    "tags": [
+      "autoskills",
+      "development",
+      "dart"
+    ],
     "views": 6147,
     "uses": 847,
     "author": "midudev",
@@ -2114,7 +2719,12 @@
     "description": "Use when deploying Deno apps to production, asking about Deno Deploy, or working with `deno deploy` CLI commands. Covers deployment workflows, environment variables, KV database access, custom domains, the --tunnel...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "deno", "deploy"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "deno",
+      "deploy"
+    ],
     "views": 6146,
     "uses": 846,
     "author": "midudev",
@@ -2133,7 +2743,11 @@
     "description": "Expert-level Deno knowledge for code review, debugging, and best practice enforcement. Use when reviewing Deno code or answering advanced Deno questions.",
     "category": "Tooling",
     "parentCategory": "skills",
-    "tags": ["autoskills", "tooling", "deno"],
+    "tags": [
+      "autoskills",
+      "tooling",
+      "deno"
+    ],
     "views": 6145,
     "uses": 845,
     "author": "midudev",
@@ -2152,7 +2766,12 @@
     "description": "Use when working with Fresh framework, creating routes or handlers in Fresh, building web UIs with Preact, or adding Tailwind CSS in Deno. Covers Fresh 2.x project structure, route handlers, islands, createDefine,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "deno", "frontend"],
+    "tags": [
+      "autoskills",
+      "design",
+      "deno",
+      "frontend"
+    ],
     "views": 6144,
     "uses": 844,
     "author": "midudev",
@@ -2171,7 +2790,12 @@
     "description": "Use when starting any Deno project, choosing packages, configuring deno.json, or running CLI commands. Provides foundational knowledge for building modern Deno applications.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "deno", "guidance"],
+    "tags": [
+      "autoskills",
+      "design",
+      "deno",
+      "guidance"
+    ],
     "views": 6143,
     "uses": 843,
     "author": "midudev",
@@ -2190,7 +2814,12 @@
     "description": "Use when building features that execute untrusted user code, AI-generated code, or need isolated code execution environments. Covers the @deno/sandbox SDK.",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "deno", "sandbox"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "deno",
+      "sandbox"
+    ],
     "views": 6142,
     "uses": 842,
     "author": "midudev",
@@ -2209,7 +2838,12 @@
     "description": "Guidelines for developing with Deno and TypeScript using modern runtime features, security model, and native tooling",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "deno", "typescript"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "deno",
+      "typescript"
+    ],
     "views": 6141,
     "uses": 841,
     "author": "midudev",
@@ -2228,7 +2862,13 @@
     "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "deploy", "to", "vercel"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "deploy",
+      "to",
+      "vercel"
+    ],
     "views": 6140,
     "uses": 840,
     "author": "midudev",
@@ -2247,7 +2887,13 @@
     "description": "Use when the user wants to design a mobile app, create screens, build UI, or interact with their Sleek projects. Covers high-level requests (\"design an app that does X\") and specific ones (\"list my projects\", \"create...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "sleek", "design", "apps"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "sleek",
+      "design",
+      "apps"
+    ],
     "views": 6139,
     "uses": 839,
     "author": "midudev",
@@ -2266,7 +2912,11 @@
     "description": "Expert Django backend development guidance. Use when creating Django models, views, serializers, or APIs; debugging ORM queries or migrations; optimizing database performance; implementing authentication; writing...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "django"],
+    "tags": [
+      "autoskills",
+      "database",
+      "django"
+    ],
     "views": 6138,
     "uses": 838,
     "author": "midudev",
@@ -2285,7 +2935,11 @@
     "description": "Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "django"],
+    "tags": [
+      "autoskills",
+      "design",
+      "django"
+    ],
     "views": 6137,
     "uses": 837,
     "author": "midudev",
@@ -2304,7 +2958,12 @@
     "description": "Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "django", "security"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "django",
+      "security"
+    ],
     "views": 6136,
     "uses": 836,
     "author": "midudev",
@@ -2323,7 +2982,11 @@
     "description": "Ensure .NET/C# code meets best practices for the solution/project.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "dotnet"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "dotnet"
+    ],
     "views": 6135,
     "uses": 835,
     "author": "midudev",
@@ -2342,7 +3005,13 @@
     "description": "Review the C#/.NET code for design pattern implementation and suggest improvements.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "dotnet", "pattern", "review"],
+    "tags": [
+      "autoskills",
+      "design",
+      "dotnet",
+      "pattern",
+      "review"
+    ],
     "views": 6134,
     "uses": 834,
     "author": "midudev",
@@ -2361,7 +3030,12 @@
     "description": "Ready-to-use prompts for comprehensive .NET framework upgrade analysis and execution",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "dotnet", "upgrade"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "dotnet",
+      "upgrade"
+    ],
     "views": 6133,
     "uses": 833,
     "author": "midudev",
@@ -2380,7 +3054,12 @@
     "description": "Type-safe SQL ORM for TypeScript with zero runtime overhead",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "drizzle", "orm"],
+    "tags": [
+      "autoskills",
+      "database",
+      "drizzle",
+      "orm"
+    ],
     "views": 6132,
     "uses": 832,
     "author": "midudev",
@@ -2399,7 +3078,12 @@
     "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "durable", "objects"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "durable",
+      "objects"
+    ],
     "views": 6131,
     "uses": 831,
     "author": "midudev",
@@ -2418,7 +3102,12 @@
     "description": "ElevenLabs AI music generation - create original music from text prompts via inference.sh CLI. Capabilities: text-to-music, custom duration up to 10 minutes, genre/mood/instrument control, royalty-free commercial...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "elevenlabs", "music"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "elevenlabs",
+      "music"
+    ],
     "views": 6130,
     "uses": 830,
     "author": "midudev",
@@ -2437,7 +3126,12 @@
     "description": "ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning via inference.sh CLI. Models: eleven_multilingual_v2 (highest quality), eleven_turbo_v2_5 (low latency), eleven_flash_v2_5...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "elevenlabs", "tts"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "elevenlabs",
+      "tts"
+    ],
     "views": 6129,
     "uses": 829,
     "author": "midudev",
@@ -2456,7 +3150,13 @@
     "description": "Configure email verification, implement password reset flows, set password policies, and customise hashing algorithms for Better Auth email/password authentication. Use when users need to set up login, sign-in,...",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "email", "and", "password"],
+    "tags": [
+      "autoskills",
+      "development",
+      "email",
+      "and",
+      "password"
+    ],
     "views": 6128,
     "uses": 828,
     "author": "midudev",
@@ -2475,7 +3175,13 @@
     "description": "Guidelines for creating API routes in Expo Router with EAS Hosting",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "expo", "api", "routes"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "expo",
+      "api",
+      "routes"
+    ],
     "views": 6127,
     "uses": 827,
     "author": "midudev",
@@ -2494,7 +3200,13 @@
     "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "expo", "cicd", "workflows"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "expo",
+      "cicd",
+      "workflows"
+    ],
     "views": 6126,
     "uses": 826,
     "author": "midudev",
@@ -2513,7 +3225,12 @@
     "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "expo", "deployment"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "expo",
+      "deployment"
+    ],
     "views": 6125,
     "uses": 825,
     "author": "midudev",
@@ -2532,7 +3249,13 @@
     "description": "Build and distribute Expo development clients locally or via TestFlight",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "expo", "dev", "client"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "expo",
+      "dev",
+      "client"
+    ],
     "views": 6124,
     "uses": 824,
     "author": "midudev",
@@ -2551,7 +3274,13 @@
     "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "expo", "tailwind", "setup"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "expo",
+      "tailwind",
+      "setup"
+    ],
     "views": 6123,
     "uses": 823,
     "author": "midudev",
@@ -2570,7 +3299,12 @@
     "description": "Expert in FastAPI Python development with best practices for APIs and async operations",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "fastapi", "python"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "fastapi",
+      "python"
+    ],
     "views": 6122,
     "uses": 822,
     "author": "midudev",
@@ -2589,7 +3323,12 @@
     "description": "Create production-ready FastAPI projects with async patterns, dependency injection, and comprehensive error handling. Use when building new FastAPI applications or setting up backend API projects.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "fastapi", "templates"],
+    "tags": [
+      "autoskills",
+      "design",
+      "fastapi",
+      "templates"
+    ],
     "views": 6121,
     "uses": 821,
     "author": "midudev",
@@ -2608,7 +3347,12 @@
     "description": "Develop lightweight Flask APIs with routing, blueprints, database integration, authentication, and request/response handling. Use when building RESTful APIs, microservices, or lightweight web services with Flask.",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "flask", "api"],
+    "tags": [
+      "autoskills",
+      "database",
+      "flask",
+      "api"
+    ],
     "views": 6120,
     "uses": 820,
     "author": "midudev",
@@ -2627,7 +3371,12 @@
     "description": "Guide for using the Microsoft Fluent UI Blazor component library (Microsoft.FluentUI.AspNetCore.Components NuGet package) in Blazor applications. Use this when the user is building a Blazor app with Fluent UI...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "fluentui", "blazor"],
+    "tags": [
+      "autoskills",
+      "design",
+      "fluentui",
+      "blazor"
+    ],
     "views": 6119,
     "uses": 819,
     "author": "midudev",
@@ -2646,7 +3395,12 @@
     "description": "Add, fix, refactor, debug, test, or explain Flutter animations and motion effects. Use when working with implicit animations such as AnimatedContainer, AnimatedOpacity, AnimatedSwitcher, and TweenAnimationBuilder;...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "flutter", "animations"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "flutter",
+      "animations"
+    ],
     "views": 6118,
     "uses": 818,
     "author": "midudev",
@@ -2665,7 +3419,11 @@
     "description": "Use when building cross-platform applications with Flutter 3+ and Dart. Invoke for widget development, Riverpod/Bloc state management, GoRouter navigation, platform-specific implementations, performance optimization.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "flutter"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "flutter"
+    ],
     "views": 6117,
     "uses": 817,
     "author": "midudev",
@@ -2684,7 +3442,12 @@
     "description": "Write, fix, review, debug, and validate Flutter tests for apps, packages, and plugins. Use when adding unit tests, widget tests, integration tests, MethodChannel or plugin mocks, Mockito or mocktail test doubles,...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "flutter", "testing"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "flutter",
+      "testing"
+    ],
     "views": 6116,
     "uses": 816,
     "author": "midudev",
@@ -2703,7 +3466,11 @@
     "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "frontend"],
+    "tags": [
+      "autoskills",
+      "design",
+      "frontend"
+    ],
     "views": 6115,
     "uses": 815,
     "author": "midudev",
@@ -2722,7 +3489,12 @@
     "description": "Generates or updates Sorbet type signatures in separate .rbi files. Triggers when creating, updating, or maintaining type signatures for Ruby source files.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "generating", "sorbet"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "generating",
+      "sorbet"
+    ],
     "views": 6114,
     "uses": 814,
     "author": "midudev",
@@ -2741,7 +3513,13 @@
     "description": "Generates or updates Sorbet inline type signatures directly in Ruby source files using sig blocks. Triggers when creating, updating, or maintaining inline type signatures for Ruby source files.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "generating", "sorbet", "inline"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "generating",
+      "sorbet",
+      "inline"
+    ],
     "views": 6113,
     "uses": 813,
     "author": "midudev",
@@ -2760,7 +3538,11 @@
     "description": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "golang"],
+    "tags": [
+      "autoskills",
+      "design",
+      "golang"
+    ],
     "views": 6112,
     "uses": 812,
     "author": "midudev",
@@ -2779,7 +3561,11 @@
     "description": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "golang"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "golang"
+    ],
     "views": 6111,
     "uses": 811,
     "author": "midudev",
@@ -2798,7 +3584,11 @@
     "description": "Use when building Hono web applications or when the user asks about Hono APIs, routing, middleware, JSX, validation, testing, or streaming. TRIGGER when code imports from 'hono' or 'hono/*', or user mentions Hono....",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "hono"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "hono"
+    ],
     "views": 6110,
     "uses": 810,
     "author": "midudev",
@@ -2817,7 +3607,11 @@
     "description": "Build complete, functional apps with InstantDB as the backend. Use when creating React/vanilla JS or expo applications. Triggers on requests for building apps.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "instantdb"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "instantdb"
+    ],
     "views": 6109,
     "uses": 809,
     "author": "midudev",
@@ -2836,7 +3630,13 @@
     "description": "Java coding standards for Spring Boot services: naming, immutability, Optional usage, streams, exceptions, generics, and project layout.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "java", "coding", "standards"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "java",
+      "coding",
+      "standards"
+    ],
     "views": 6108,
     "uses": 808,
     "author": "midudev",
@@ -2855,7 +3655,12 @@
     "description": "Ensure that Java types are documented with Javadoc comments and follow best practices for documentation.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "java", "docs"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "java",
+      "docs"
+    ],
     "views": 6107,
     "uses": 807,
     "author": "midudev",
@@ -2874,7 +3679,12 @@
     "description": "Get best practices for developing applications with Spring Boot.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "java", "springboot"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "java",
+      "springboot"
+    ],
     "views": 6106,
     "uses": 806,
     "author": "midudev",
@@ -2893,7 +3703,14 @@
     "description": "Migrates Kotlin Multiplatform (KMP) projects to Android Gradle Plugin 9.0+. Handles plugin replacement (com.android.kotlin.multiplatform.library), module splitting, DSL migration, and the new default project...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "kotlin", "tooling", "agp9", "migration"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "kotlin",
+      "tooling",
+      "agp9",
+      "migration"
+    ],
     "views": 6105,
     "uses": 805,
     "author": "midudev",
@@ -2912,7 +3729,14 @@
     "description": "Migrate KMP projects from CocoaPods (kotlin(\"native.cocoapods\")) to Swift Package Manager (swiftPMDependencies DSL) replaces pod() with swiftPackage(), transforms cocoapods.* imports to swiftPMImport.*, and...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "kotlin", "tooling", "cocoapods", "spm"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "kotlin",
+      "tooling",
+      "cocoapods",
+      "spm"
+    ],
     "views": 6104,
     "uses": 804,
     "author": "midudev",
@@ -2931,7 +3755,11 @@
     "description": "Laravel architecture patterns, routing/controllers, Eloquent ORM, service layers, queues, events, caching, and API resources for production apps.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "laravel"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "laravel"
+    ],
     "views": 6103,
     "uses": 803,
     "author": "midudev",
@@ -2950,7 +3778,12 @@
     "description": "Build and configure Laravel 10+ applications, including creating Eloquent models and relationships, implementing Sanctum authentication, configuring Horizon queues, designing RESTful APIs with API resources, and...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "laravel", "specialist"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "laravel",
+      "specialist"
+    ],
     "views": 6102,
     "uses": 802,
     "author": "midudev",
@@ -2969,7 +3802,12 @@
     "description": "Python machine learning with scikit-learn, PyTorch, and TensorFlow",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "machine", "learning"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "machine",
+      "learning"
+    ],
     "views": 6101,
     "uses": 801,
     "author": "midudev",
@@ -2988,7 +3826,13 @@
     "description": "Migrates Next.js projects to vinext (Vite-based Next.js reimplementation). Load when asked to migrate, convert, or switch from Next.js to vinext. Handles compatibility scanning, package replacement, Vite config...",
     "category": "Tooling",
     "parentCategory": "skills",
-    "tags": ["autoskills", "tooling", "migrate", "to", "vinext"],
+    "tags": [
+      "autoskills",
+      "tooling",
+      "migrate",
+      "to",
+      "vinext"
+    ],
     "views": 6100,
     "uses": 800,
     "author": "midudev",
@@ -3007,7 +3851,14 @@
     "description": "File upload endpoints in ASP.NET minimal APIs (.NET 8+)",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "minimal", "api", "file", "upload"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "minimal",
+      "api",
+      "file",
+      "upload"
+    ],
     "views": 6099,
     "uses": 799,
     "author": "midudev",
@@ -3026,7 +3877,13 @@
     "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "native", "data", "fetching"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "native",
+      "data",
+      "fetching"
+    ],
     "views": 6098,
     "uses": 798,
     "author": "midudev",
@@ -3045,7 +3902,12 @@
     "description": "Guides and best practices for working with Neon Serverless Postgres. Covers getting started, local development with Neon, choosing a connection method, Neon features, authentication (@neondatabase/auth),...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "neon", "postgres"],
+    "tags": [
+      "autoskills",
+      "database",
+      "neon",
+      "postgres"
+    ],
     "views": 6097,
     "uses": 797,
     "author": "midudev",
@@ -3064,7 +3926,11 @@
     "description": "NestJS best practices and architecture patterns for building production-ready applications. This skill should be used when writing, reviewing, or refactoring NestJS code to ensure proper patterns for modules,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "nestjs"],
+    "tags": [
+      "autoskills",
+      "design",
+      "nestjs"
+    ],
     "views": 6096,
     "uses": 796,
     "author": "midudev",
@@ -3083,7 +3949,11 @@
     "description": "Next.js best practices - file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route handlers, image/font optimization, bundling",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "next"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "next"
+    ],
     "views": 6095,
     "uses": 795,
     "author": "midudev",
@@ -3102,7 +3972,13 @@
     "description": "Next.js 16 Cache Components - PPR, use cache directive, cacheLife, cacheTag, updateTag",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "next", "cache", "components"],
+    "tags": [
+      "autoskills",
+      "design",
+      "next",
+      "cache",
+      "components"
+    ],
     "views": 6094,
     "uses": 794,
     "author": "midudev",
@@ -3121,7 +3997,12 @@
     "description": "Upgrade Next.js to the latest version following official migration guides and codemods",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "next", "upgrade"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "next",
+      "upgrade"
+    ],
     "views": 6093,
     "uses": 793,
     "author": "midudev",
@@ -3140,7 +4021,12 @@
     "description": "Build production-ready Node.js backend services with Express/Fastify, implementing middleware patterns, error handling, authentication, database integration, and API design best practices. Use when creating Node.js...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "nodejs", "backend"],
+    "tags": [
+      "autoskills",
+      "database",
+      "nodejs",
+      "backend"
+    ],
     "views": 6092,
     "uses": 792,
     "author": "midudev",
@@ -3159,7 +4045,11 @@
     "description": "Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, not copying.",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "nodejs"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "nodejs"
+    ],
     "views": 6091,
     "uses": 791,
     "author": "midudev",
@@ -3178,7 +4068,13 @@
     "description": "Build production-ready Express.js servers with middleware, authentication, routing, and database integration. Use when creating REST APIs, managing requests/responses, implementing middleware chains, and handling...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "nodejs", "express", "server"],
+    "tags": [
+      "autoskills",
+      "database",
+      "nodejs",
+      "express",
+      "server"
+    ],
     "views": 6090,
     "uses": 790,
     "author": "midudev",
@@ -3197,7 +4093,11 @@
     "description": "Nuxt full-stack Vue framework with SSR, auto-imports, and file-based routing. Use when working with Nuxt apps, server routes, useFetch, middleware, or hybrid rendering.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "nuxt"],
+    "tags": [
+      "autoskills",
+      "design",
+      "nuxt"
+    ],
     "views": 6089,
     "uses": 789,
     "author": "midudev",
@@ -3216,7 +4116,11 @@
     "description": "Configure multi-tenant organizations, manage members and invitations, define custom roles and permissions, set up teams, and implement RBAC using Better Auth's organization plugin. Use when users need org setup, team...",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "organization"],
+    "tags": [
+      "autoskills",
+      "development",
+      "organization"
+    ],
     "views": 6088,
     "uses": 788,
     "author": "midudev",
@@ -3235,7 +4139,11 @@
     "description": "Run and configure oxlint the high-performance JavaScript/TypeScript linter built on the Oxc compiler stack. Use this skill whenever working in a project that has oxlint installed (check for `oxlint` in package.json...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "oxlint"],
+    "tags": [
+      "autoskills",
+      "design",
+      "oxlint"
+    ],
     "views": 6087,
     "uses": 787,
     "author": "midudev",
@@ -3254,7 +4162,13 @@
     "description": "Master data manipulation, analysis, and visualization with Pandas, NumPy, and Matplotlib",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "pandas", "data", "analysis"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "pandas",
+      "data",
+      "analysis"
+    ],
     "views": 6086,
     "uses": 786,
     "author": "midudev",
@@ -3273,7 +4187,12 @@
     "description": "Performs pandas DataFrame operations for data analysis, manipulation, and transformation. Use when working with pandas DataFrames, data cleaning, aggregation, merging, or time series analysis. Invoke for data...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "pandas", "pro"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "pandas",
+      "pro"
+    ],
     "views": 6085,
     "uses": 785,
     "author": "midudev",
@@ -3292,7 +4211,12 @@
     "description": "Use when building PHP applications with modern PHP 8.3+ features, Laravel, or Symfony frameworks. Invokes strict typing, PHPStan level 9, async patterns with Swoole, and PSR standards. Creates controllers, configures...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "php", "pro"],
+    "tags": [
+      "autoskills",
+      "design",
+      "php",
+      "pro"
+    ],
     "views": 6084,
     "uses": 784,
     "author": "midudev",
@@ -3311,7 +4235,11 @@
     "description": "Use when writing Playwright tests, fixing flaky tests, debugging failures, implementing Page Object Model, configuring CI/CD, optimizing performance, mocking APIs, handling authentication or OAuth, testing...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "playwright"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "playwright"
+    ],
     "views": 6083,
     "uses": 783,
     "author": "midudev",
@@ -3330,7 +4258,12 @@
     "description": "Guidelines and tools for reviewing pull requests in the Angular repository.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "pr", "review"],
+    "tags": [
+      "autoskills",
+      "design",
+      "pr",
+      "review"
+    ],
     "views": 6082,
     "uses": 782,
     "author": "midudev",
@@ -3349,7 +4282,12 @@
     "description": "Prisma CLI commands reference covering all available commands, options, and usage patterns. Use when running Prisma CLI commands, setting up projects, generating client, running migrations, managing databases, or...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "prisma", "cli"],
+    "tags": [
+      "autoskills",
+      "database",
+      "prisma",
+      "cli"
+    ],
     "views": 6081,
     "uses": 781,
     "author": "midudev",
@@ -3368,7 +4306,13 @@
     "description": "Prisma Client API reference covering model queries, filters, operators, and client methods. Use when writing database queries, using CRUD operations, filtering data, or configuring Prisma Client. Triggers on \"prisma...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "prisma", "client", "api"],
+    "tags": [
+      "autoskills",
+      "database",
+      "prisma",
+      "client",
+      "api"
+    ],
     "views": 6080,
     "uses": 780,
     "author": "midudev",
@@ -3387,7 +4331,12 @@
     "description": "Guides for configuring Prisma with different database providers (PostgreSQL, MySQL, SQLite, MongoDB, etc.). Use when setting up a new project, changing databases, or troubleshooting connection issues. Triggers on...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "prisma", "setup"],
+    "tags": [
+      "autoskills",
+      "database",
+      "prisma",
+      "setup"
+    ],
     "views": 6079,
     "uses": 779,
     "author": "midudev",
@@ -3406,7 +4355,12 @@
     "description": "Prisma Postgres setup and operations guidance across Console, create-db CLI, Management API, and Management API SDK. Use when creating Prisma Postgres databases, working in Prisma Console, provisioning with...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "prisma", "postgres"],
+    "tags": [
+      "autoskills",
+      "database",
+      "prisma",
+      "postgres"
+    ],
     "views": 6078,
     "uses": 778,
     "author": "midudev",
@@ -3425,7 +4379,11 @@
     "description": "Python data validation using type hints and runtime type checking with Pydantic v2's Rust-powered core for high-performance validation in FastAPI, Django, and configuration management.",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "pydantic"],
+    "tags": [
+      "autoskills",
+      "database",
+      "pydantic"
+    ],
     "views": 6077,
     "uses": 777,
     "author": "midudev",
@@ -3444,7 +4402,13 @@
     "description": "Python background job patterns including task queues, workers, and event-driven architecture. Use when implementing async task processing, job queues, long-running operations, or decoupling work from request/response...",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "python", "background", "jobs"],
+    "tags": [
+      "autoskills",
+      "development",
+      "python",
+      "background",
+      "jobs"
+    ],
     "views": 6076,
     "uses": 776,
     "author": "midudev",
@@ -3463,7 +4427,12 @@
     "description": "Execute Python code in a safe sandboxed environment via [inference.sh](https://inference.sh). Pre-installed: NumPy, Pandas, Matplotlib, requests, BeautifulSoup, Selenium, Playwright, MoviePy, Pillow, OpenCV, trimesh,...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "python", "executor"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "python",
+      "executor"
+    ],
     "views": 6075,
     "uses": 775,
     "author": "midudev",
@@ -3482,7 +4451,11 @@
     "description": "Pythonic idioms, PEP 8 standards, type hints, and best practices for building robust, efficient, and maintainable Python applications.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "python"],
+    "tags": [
+      "autoskills",
+      "design",
+      "python"
+    ],
     "views": 6074,
     "uses": 774,
     "author": "midudev",
@@ -3501,7 +4474,11 @@
     "description": "Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "python"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "python"
+    ],
     "views": 6073,
     "uses": 773,
     "author": "midudev",
@@ -3520,7 +4497,13 @@
     "description": "Use when adding or reviewing background jobs in Rails. Configures Active Job workers, implements idempotency checks, sets up retry/discard strategies, selects Solid Queue (Rails 8+) or Sidekiq based on scale, and...",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "rails", "background", "jobs"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "rails",
+      "background",
+      "jobs"
+    ],
     "views": 6072,
     "uses": 772,
     "author": "midudev",
@@ -3539,7 +4522,13 @@
     "description": "Use when investigating a bug, error, or regression in a Ruby on Rails codebase. Creates a failing RSpec reproduction test, isolates the broken code path, and produces a minimal fix plan. Trigger words: debug, broken,...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "rails", "bug", "triage"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "rails",
+      "bug",
+      "triage"
+    ],
     "views": 6071,
     "uses": 771,
     "author": "midudev",
@@ -3558,7 +4547,13 @@
     "description": "Reviews Rails pull requests, focusing on controller/model conventions, migration safety, query performance, and Rails Way compliance. Covers routing, ActiveRecord, security, caching, and background jobs. Use when...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "rails", "code", "review"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "rails",
+      "code",
+      "review"
+    ],
     "views": 6070,
     "uses": 770,
     "author": "midudev",
@@ -3577,7 +4572,12 @@
     "description": "Official Rails documentation. Use when asked about any Rails-specific topic including ActiveRecord, routing, controllers, views, mailers, jobs, Action Cable, Action Text, Active Storage, migrations, validations,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "rails", "guides"],
+    "tags": [
+      "autoskills",
+      "design",
+      "rails",
+      "guides"
+    ],
     "views": 6069,
     "uses": 769,
     "author": "midudev",
@@ -3596,7 +4596,13 @@
     "description": "Use when planning or reviewing production database migrations, adding columns, indexes, constraints, backfills, renames, table rewrites, or concurrent operations. Covers phased rollouts, lock behavior, rollback...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "rails", "migration", "safety"],
+    "tags": [
+      "autoskills",
+      "database",
+      "rails",
+      "migration",
+      "safety"
+    ],
     "views": 6068,
     "uses": 768,
     "author": "midudev",
@@ -3615,7 +4621,13 @@
     "description": "Performs security audits and vulnerability assessments on Ruby on Rails application code. Use when reviewing Rails code for security risks, assessing authentication or authorization, auditing parameter handling,...",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "rails", "security", "review"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "rails",
+      "security",
+      "review"
+    ],
     "views": 6067,
     "uses": 767,
     "author": "midudev",
@@ -3634,7 +4646,13 @@
     "description": "Use when writing new Rails code for a project using the PostgreSQL + Hotwire + Tailwind CSS stack. Covers stack-specific patterns only: MVC structure, ActiveRecord query conventions, Turbo Frames/Streams wiring,...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "rails", "stack", "conventions"],
+    "tags": [
+      "autoskills",
+      "database",
+      "rails",
+      "stack",
+      "conventions"
+    ],
     "views": 6066,
     "uses": 766,
     "author": "midudev",
@@ -3653,7 +4671,13 @@
     "description": "Use when choosing the best first failing RSpec spec or vertical slice for a Ruby on Rails change. Covers request vs model vs service vs job vs engine spec selection, system spec escalation, smallest safe slice...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "rails", "tdd", "slices"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "rails",
+      "tdd",
+      "slices"
+    ],
     "views": 6065,
     "uses": 765,
     "author": "midudev",
@@ -3672,7 +4696,12 @@
     "description": "Analyzes Rails applications and generates comprehensive upgrade reports with breaking changes, deprecations, and step-by-step migration guides for Rails 2.3 through 8.1. Use when upgrading Rails applications,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "rails", "upgrade"],
+    "tags": [
+      "autoskills",
+      "design",
+      "rails",
+      "upgrade"
+    ],
     "views": 6064,
     "uses": 764,
     "author": "midudev",
@@ -3691,7 +4720,12 @@
     "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "vercel", "react"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "vercel",
+      "react"
+    ],
     "views": 6063,
     "uses": 763,
     "author": "midudev",
@@ -3710,7 +4744,13 @@
     "description": "React Hook Form performance optimization for client-side form validation using useForm, useWatch, useController, and useFieldArray. This skill should be used when building client-side controlled forms with React Hook...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "react", "hook", "form"],
+    "tags": [
+      "autoskills",
+      "design",
+      "react",
+      "hook",
+      "form"
+    ],
     "views": 6062,
     "uses": 762,
     "author": "midudev",
@@ -3729,7 +4769,13 @@
     "description": "React Three Fiber 3D renderer for json-render. Use when working with @json-render/react-three-fiber, building 3D scenes from JSON specs, rendering meshes/lights/models/environments, or integrating Three.js with...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "react", "three", "fiber"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "react",
+      "three",
+      "fiber"
+    ],
     "views": 6061,
     "uses": 761,
     "author": "midudev",
@@ -3748,7 +4794,11 @@
     "description": "Redis performance optimization and best practices. Use this skill when working with Redis data structures, Redis Query Engine (RQE), vector search with RedisVL, semantic caching with LangCache, or optimizing Redis...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "redis"],
+    "tags": [
+      "autoskills",
+      "database",
+      "redis"
+    ],
     "views": 6060,
     "uses": 760,
     "author": "midudev",
@@ -3767,7 +4817,12 @@
     "description": "Transform monolithic Terraform configurations into reusable, maintainable modules following HashiCorp's module design principles and community best practices.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "refactor", "module"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "refactor",
+      "module"
+    ],
     "views": 6059,
     "uses": 759,
     "author": "midudev",
@@ -3786,7 +4841,13 @@
     "description": "Explains the mental model and architecture of the code under `packages/compiler-cli`. You MUST use this skill any time you plan to work with code in `packages/compiler-cli`",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "reference", "compiler", "cli"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "reference",
+      "compiler",
+      "cli"
+    ],
     "views": 6058,
     "uses": 758,
     "author": "midudev",
@@ -3805,7 +4866,12 @@
     "description": "Explains the mental model and architecture of the code under `packages/core`. You MUST use this skill any time you plan to work with code in `packages/core`",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "reference", "core"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "reference",
+      "core"
+    ],
     "views": 6057,
     "uses": 757,
     "author": "midudev",
@@ -3824,7 +4890,13 @@
     "description": "Explains the mental model and architecture of the code under `packages/forms/signals`. You MUST use this skill any time you plan to work with code in `packages/forms/signals`",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "reference", "signal", "forms"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "reference",
+      "signal",
+      "forms"
+    ],
     "views": 6056,
     "uses": 756,
     "author": "midudev",
@@ -3843,7 +4915,11 @@
     "description": "Best practices for Remotion - Video creation in React",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "remotion"],
+    "tags": [
+      "autoskills",
+      "design",
+      "remotion"
+    ],
     "views": 6055,
     "uses": 755,
     "author": "midudev",
@@ -3862,7 +4938,11 @@
     "description": "Use when writing, reviewing, or cleaning up RSpec tests for Ruby and Rails codebases. Covers spec type selection, factory design, flaky test fixes, shared examples, deterministic assertions, test-driven development...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "rspec"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "rspec"
+    ],
     "views": 6054,
     "uses": 754,
     "author": "midudev",
@@ -3881,7 +4961,12 @@
     "description": "Use when writing RSpec tests for service objects, API clients, orchestrators, or business logic in spec/services/. Covers instance_double, FactoryBot hash factories, shared_examples, subject/let blocks,...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "rspec", "service"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "rspec",
+      "service"
+    ],
     "views": 6053,
     "uses": 753,
     "author": "midudev",
@@ -3900,7 +4985,11 @@
     "description": "Use when writing, reviewing, or debugging pure Ruby code idiomatic patterns, modern 3.x+ features (pattern matching, Data.define, endless methods), error handling conventions (raise vs fail, result objects),...",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "ruby"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "ruby"
+    ],
     "views": 6052,
     "uses": 752,
     "author": "midudev",
@@ -3919,7 +5008,13 @@
     "description": "Ruby on Rails architecture and coding patterns from Basecamp. Use when writing, reviewing, or refactoring Rails code to follow proven conventions for models, controllers, jobs, and concerns. Triggers on tasks...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "ruby", "on", "rails"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "ruby",
+      "on",
+      "rails"
+    ],
     "views": 6051,
     "uses": 751,
     "author": "midudev",
@@ -3938,7 +5033,11 @@
     "description": "Guide for writing idiomatic Rust code based on Apollo GraphQL's best practices handbook. Use this skill when: (1) writing new Rust code or functions, (2) reviewing or refactoring existing Rust code, (3) deciding...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "rust"],
+    "tags": [
+      "autoskills",
+      "design",
+      "rust"
+    ],
     "views": 6050,
     "uses": 750,
     "author": "midudev",
@@ -3957,7 +5056,12 @@
     "description": "Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle,...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "sandbox", "sdk"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "sandbox",
+      "sdk"
+    ],
     "views": 6049,
     "uses": 749,
     "author": "midudev",
@@ -3976,7 +5080,12 @@
     "description": "Machine learning in Python with scikit-learn. Use when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality reduction), model evaluation, hyperparameter...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "scikit", "learn"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "scikit",
+      "learn"
+    ],
     "views": 6048,
     "uses": 748,
     "author": "midudev",
@@ -3995,7 +5104,13 @@
     "description": "World-class data science skill for statistical modeling, experimentation, causal inference, and advanced analytics. Expertise in Python (NumPy, Pandas, Scikit-learn), R, SQL, statistical methods, A/B testing, time...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "senior", "data", "scientist"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "senior",
+      "data",
+      "scientist"
+    ],
     "views": 6047,
     "uses": 747,
     "author": "midudev",
@@ -4014,7 +5129,11 @@
     "description": "Optimize for search engine visibility and ranking. Use when asked to \"improve SEO\", \"optimize for search\", \"fix meta tags\", \"add structured data\", \"sitemap optimization\", or \"search engine optimization\".",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "seo"],
+    "tags": [
+      "autoskills",
+      "development",
+      "seo"
+    ],
     "views": 6046,
     "uses": 746,
     "author": "midudev",
@@ -4033,7 +5152,11 @@
     "description": "Manages shadcn components and projects adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "shadcn"],
+    "tags": [
+      "autoskills",
+      "design",
+      "shadcn"
+    ],
     "views": 6045,
     "uses": 745,
     "author": "midudev",
@@ -4052,7 +5175,12 @@
     "description": "SQLAlchemy Python SQL toolkit and ORM with powerful query builder, relationship mapping, and database migrations via Alembic",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "sqlalchemy", "orm"],
+    "tags": [
+      "autoskills",
+      "database",
+      "sqlalchemy",
+      "orm"
+    ],
     "views": 6044,
     "uses": 744,
     "author": "midudev",
@@ -4071,7 +5199,14 @@
     "description": "SQLAlchemy ORM and Alembic migration best practices for building safe, performant database schemas. This skill should be used when writing, reviewing, or refactoring SQLAlchemy models, Alembic migrations, or database...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "sqlalchemy", "alembic", "code", "review"],
+    "tags": [
+      "autoskills",
+      "database",
+      "sqlalchemy",
+      "alembic",
+      "code",
+      "review"
+    ],
     "views": 6043,
     "uses": 743,
     "author": "midudev",
@@ -4090,7 +5225,11 @@
     "description": "Guides Stripe integration decisions API selection (Checkout Sessions vs PaymentIntents), Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial accounts, integration...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "stripe"],
+    "tags": [
+      "autoskills",
+      "design",
+      "stripe"
+    ],
     "views": 6042,
     "uses": 742,
     "author": "midudev",
@@ -4109,7 +5248,12 @@
     "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "supabase", "postgres"],
+    "tags": [
+      "autoskills",
+      "database",
+      "supabase",
+      "postgres"
+    ],
     "views": 6041,
     "uses": 741,
     "author": "midudev",
@@ -4128,7 +5272,13 @@
     "description": "CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used whenever creating, editing or analyzing any Svelte component (.svelte) or Svelte module (.svelte.ts/.svelte.js). If possible, this skill...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "svelte", "code", "writer"],
+    "tags": [
+      "autoskills",
+      "design",
+      "svelte",
+      "code",
+      "writer"
+    ],
     "views": 6040,
     "uses": 740,
     "author": "midudev",
@@ -4147,7 +5297,11 @@
     "description": "Svelte 5 runes, snippets, SvelteKit patterns, and modern best practices for TypeScript and component development. Use when writing, reviewing, or refactoring Svelte 5 components and SvelteKit applications. Triggers...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "svelte5"],
+    "tags": [
+      "autoskills",
+      "design",
+      "svelte5"
+    ],
     "views": 6039,
     "uses": 739,
     "author": "midudev",
@@ -4166,7 +5320,12 @@
     "description": "Diagnose Swift Concurrency issues, refactor callback-based code to async/await, and guide Swift 6 migration when working with tasks, actors, @MainActor, Sendable, data races, thread safety, or concurrency-related...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "swift", "concurrency"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "swift",
+      "concurrency"
+    ],
     "views": 6038,
     "uses": 738,
     "author": "midudev",
@@ -4185,7 +5344,12 @@
     "description": "Expert guidance for Swift Testing: test structure, #expect/#require macros, traits and tags, parameterized tests, test plans, parallel execution, async waiting patterns, and XCTest migration. Use when writing new...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "swift", "testing"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "swift",
+      "testing"
+    ],
     "views": 6037,
     "uses": 737,
     "author": "midudev",
@@ -4204,7 +5368,11 @@
     "description": "Write, review, or improve SwiftUI code following best practices for state management, view composition, performance, macOS-specific APIs, and iOS 26+ Liquid Glass adoption. Use when building new SwiftUI features,...",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "swiftui"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "swiftui"
+    ],
     "views": 6036,
     "uses": 736,
     "author": "midudev",
@@ -4223,7 +5391,12 @@
     "description": "Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "tailwind", "css"],
+    "tags": [
+      "autoskills",
+      "design",
+      "tailwind",
+      "css"
+    ],
     "views": 6035,
     "uses": 735,
     "author": "midudev",
@@ -4242,7 +5415,13 @@
     "description": "| Production-tested setup for Tailwind CSS v4 with shadcn/ui, Vite, and React. Use when: initializing React projects with Tailwind v4, setting up shadcn/ui, implementing dark mode, debugging CSS variable issues,...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "tailwind", "v4", "shadcn"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "tailwind",
+      "v4",
+      "shadcn"
+    ],
     "views": 6034,
     "uses": 734,
     "author": "midudev",
@@ -4261,7 +5440,12 @@
     "description": "Full-stack React framework powered by TanStack Router with SSR, streaming, server functions, and deployment to any hosting provider.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "tanstack", "start"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "tanstack",
+      "start"
+    ],
     "views": 6033,
     "uses": 733,
     "author": "midudev",
@@ -4280,7 +5464,12 @@
     "description": "Tauri v2+ cross-platform app development with Rust backend. Use when configuring tauri.conf.json, implementing Rust commands (#[tauri::command]), setting up IPC patterns (invoke, emit, channels), configuring...",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "tauri", "v2"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "tauri",
+      "v2"
+    ],
     "views": 6032,
     "uses": 732,
     "author": "midudev",
@@ -4299,7 +5488,13 @@
     "description": "Build reusable Terraform modules for AWS, Azure, GCP, and OCI infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "terraform", "module", "library"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "terraform",
+      "module",
+      "library"
+    ],
     "views": 6031,
     "uses": 731,
     "author": "midudev",
@@ -4318,7 +5513,12 @@
     "description": "Comprehensive guide for working with HashiCorp Terraform Stacks. Use when creating, modifying, or validating Terraform Stack configurations (.tfcomponent.hcl, .tfdeploy.hcl files), working with stack components and...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "terraform", "stacks"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "terraform",
+      "stacks"
+    ],
     "views": 6030,
     "uses": 730,
     "author": "midudev",
@@ -4337,7 +5537,13 @@
     "description": "Generate Terraform HCL code following HashiCorp's official style conventions and best practices. Use when writing, reviewing, or generating Terraform configurations.",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "terraform", "style", "guide"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "terraform",
+      "style",
+      "guide"
+    ],
     "views": 6029,
     "uses": 729,
     "author": "midudev",
@@ -4356,7 +5562,12 @@
     "description": "Three.js animation - keyframe animation, skeletal animation, morph targets, animation mixing. Use when animating objects, playing GLTF animations, creating procedural motion, or blending animations.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "animation"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "animation"
+    ],
     "views": 6028,
     "uses": 728,
     "author": "midudev",
@@ -4375,7 +5586,12 @@
     "description": "Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "fundamentals"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "fundamentals"
+    ],
     "views": 6027,
     "uses": 727,
     "author": "midudev",
@@ -4394,7 +5610,12 @@
     "description": "Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Use when creating 3D shapes, working with vertices, building custom meshes, or optimizing with instanced rendering.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "geometry"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "geometry"
+    ],
     "views": 6026,
     "uses": 726,
     "author": "midudev",
@@ -4413,7 +5634,12 @@
     "description": "Three.js interaction - raycasting, controls, mouse/touch input, object selection. Use when handling user input, implementing click detection, adding camera controls, or creating interactive 3D experiences.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "interaction"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "interaction"
+    ],
     "views": 6025,
     "uses": 725,
     "author": "midudev",
@@ -4432,7 +5658,12 @@
     "description": "Three.js lighting - light types, shadows, environment lighting. Use when adding lights, configuring shadows, setting up IBL, or optimizing lighting performance.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "lighting"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "lighting"
+    ],
     "views": 6024,
     "uses": 724,
     "author": "midudev",
@@ -4451,7 +5682,12 @@
     "description": "Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "threejs", "loaders"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "threejs",
+      "loaders"
+    ],
     "views": 6023,
     "uses": 723,
     "author": "midudev",
@@ -4470,7 +5706,12 @@
     "description": "Three.js materials - PBR, basic, phong, shader materials, material properties. Use when styling meshes, working with textures, creating custom shaders, or optimizing material performance.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "materials"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "materials"
+    ],
     "views": 6022,
     "uses": 722,
     "author": "midudev",
@@ -4489,7 +5730,12 @@
     "description": "Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Use when adding visual effects, color grading, blur, glow, or creating custom screen-space shaders.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "postprocessing"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "postprocessing"
+    ],
     "views": 6021,
     "uses": 721,
     "author": "midudev",
@@ -4508,7 +5754,12 @@
     "description": "Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "shaders"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "shaders"
+    ],
     "views": 6020,
     "uses": 720,
     "author": "midudev",
@@ -4527,7 +5778,12 @@
     "description": "Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "threejs", "textures"],
+    "tags": [
+      "autoskills",
+      "design",
+      "threejs",
+      "textures"
+    ],
     "views": 6019,
     "uses": 719,
     "author": "midudev",
@@ -4546,7 +5802,11 @@
     "description": "Turborepo monorepo build system guidance. Triggers on: turbo.json, task pipelines, dependsOn, caching, remote cache, the \"turbo\" CLI, --filter, --affected, CI optimization, environment variables, internal packages,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "turborepo"],
+    "tags": [
+      "autoskills",
+      "design",
+      "turborepo"
+    ],
     "views": 6018,
     "uses": 718,
     "author": "midudev",
@@ -4565,7 +5825,13 @@
     "description": "Configure TOTP authenticator apps, send OTP codes via email/SMS, manage backup codes, handle trusted devices, and implement 2FA sign-in flows using Better Auth's twoFactor plugin. Use when users need MFA,...",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "two", "factor", "authentication"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "two",
+      "factor",
+      "authentication"
+    ],
     "views": 6017,
     "uses": 717,
     "author": "midudev",
@@ -4584,7 +5850,13 @@
     "description": "Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "typescript", "advanced", "types"],
+    "tags": [
+      "autoskills",
+      "design",
+      "typescript",
+      "advanced",
+      "types"
+    ],
     "views": 6016,
     "uses": 716,
     "author": "midudev",
@@ -4603,7 +5875,12 @@
     "description": "Guide for upgrading Stripe API versions and SDKs",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "upgrade", "stripe"],
+    "tags": [
+      "autoskills",
+      "design",
+      "upgrade",
+      "stripe"
+    ],
     "views": 6015,
     "uses": 715,
     "author": "midudev",
@@ -4622,7 +5899,12 @@
     "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "upgrading", "expo"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "upgrading",
+      "expo"
+    ],
     "views": 6014,
     "uses": 714,
     "author": "midudev",
@@ -4641,7 +5923,11 @@
     "description": "Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents,...",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "sdk"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "sdk"
+    ],
     "views": 6013,
     "uses": 713,
     "author": "midudev",
@@ -4660,7 +5946,12 @@
     "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "use", "dom"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "use",
+      "dom"
+    ],
     "views": 6012,
     "uses": 712,
     "author": "midudev",
@@ -4679,7 +5970,11 @@
     "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "vite"],
+    "tags": [
+      "autoskills",
+      "design",
+      "vite"
+    ],
     "views": 6011,
     "uses": 711,
     "author": "midudev",
@@ -4698,7 +5993,11 @@
     "description": "Vitest fast unit testing framework powered by Vite with Jest-compatible API. Use when writing tests, mocking, configuring coverage, or working with test filtering and fixtures.",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "vitest"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "vitest"
+    ],
     "views": 6010,
     "uses": 710,
     "author": "midudev",
@@ -4717,7 +6016,11 @@
     "description": "Vue 3 Composition API, script setup macros, reactivity system, and built-in components. Use when writing Vue SFCs, defineProps/defineEmits/defineModel, watchers, or using Transition/Teleport/Suspense/KeepAlive.",
     "category": "AI",
     "parentCategory": "skills",
-    "tags": ["autoskills", "ai", "vue"],
+    "tags": [
+      "autoskills",
+      "ai",
+      "vue"
+    ],
     "views": 6009,
     "uses": 709,
     "author": "midudev",
@@ -4736,7 +6039,11 @@
     "description": "MUST be used for Vue.js tasks. Strongly recommends Composition API with `<script setup>` and TypeScript as the standard approach. Covers Vue 3, SSR, Volar, vue-tsc. Load for any Vue, .vue files, Vue Router, Pinia, or...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "vue"],
+    "tags": [
+      "autoskills",
+      "design",
+      "vue"
+    ],
     "views": 6008,
     "uses": 708,
     "author": "midudev",
@@ -4755,7 +6062,13 @@
     "description": "Vue 3 debugging and error handling for runtime errors, warnings, async failures, and SSR/hydration issues. Use when diagnosing or fixing Vue issues.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "vue", "debug", "guides"],
+    "tags": [
+      "autoskills",
+      "design",
+      "vue",
+      "debug",
+      "guides"
+    ],
     "views": 6007,
     "uses": 707,
     "author": "midudev",
@@ -4774,7 +6087,12 @@
     "description": "Pinia stores, state management patterns, store setup, and reactivity with stores.",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "vue", "pinia"],
+    "tags": [
+      "autoskills",
+      "design",
+      "vue",
+      "pinia"
+    ],
     "views": 6006,
     "uses": 706,
     "author": "midudev",
@@ -4793,7 +6111,12 @@
     "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP, CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources, network dependency chains, layout...",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "web", "perf"],
+    "tags": [
+      "autoskills",
+      "development",
+      "web",
+      "perf"
+    ],
     "views": 6005,
     "uses": 705,
     "author": "midudev",
@@ -4812,7 +6135,12 @@
     "description": "Use when the user asks about WordPress codebases (plugins, themes, block themes, Gutenberg blocks, WP core checkouts) and you need to quickly classify the repo and route to the correct workflow/skill (blocks,...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "wordpress", "router"],
+    "tags": [
+      "autoskills",
+      "design",
+      "wordpress",
+      "router"
+    ],
     "views": 6004,
     "uses": 704,
     "author": "midudev",
@@ -4831,7 +6159,11 @@
     "description": "Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "workers"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "workers"
+    ],
     "views": 6003,
     "uses": 703,
     "author": "midudev",
@@ -4850,7 +6182,12 @@
     "description": "Use when developing WordPress (Gutenberg) blocks: block.json metadata, register_block_type(_from_metadata), attributes/serialization, supports, dynamic rendering (render.php/render_callback), deprecations/migrations,...",
     "category": "Backend",
     "parentCategory": "skills",
-    "tags": ["autoskills", "backend", "wp", "block"],
+    "tags": [
+      "autoskills",
+      "backend",
+      "wp",
+      "block"
+    ],
     "views": 6002,
     "uses": 702,
     "author": "midudev",
@@ -4869,7 +6206,13 @@
     "description": "Use when developing WordPress block themes: theme.json (global settings/styles), templates and template parts, patterns, style variations, and Site Editor troubleshooting (style hierarchy, overrides, caching).",
     "category": "Development",
     "parentCategory": "skills",
-    "tags": ["autoskills", "development", "wp", "block", "themes"],
+    "tags": [
+      "autoskills",
+      "development",
+      "wp",
+      "block",
+      "themes"
+    ],
     "views": 6001,
     "uses": 701,
     "author": "midudev",
@@ -4888,7 +6231,12 @@
     "description": "Use when investigating or improving WordPress performance (backend-only agent): profiling and measurement (WP-CLI profile/doctor, Server-Timing, Query Monitor via REST headers), database/query optimization,...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "wp", "performance"],
+    "tags": [
+      "autoskills",
+      "database",
+      "wp",
+      "performance"
+    ],
     "views": 6000,
     "uses": 900,
     "author": "midudev",
@@ -4907,7 +6255,12 @@
     "description": "Use when developing WordPress plugins: architecture and hooks, activation/deactivation/uninstall, admin UI and Settings API, data storage, cron/tasks, security (nonces/capabilities/sanitization/escaping), and release...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "wp", "plugin"],
+    "tags": [
+      "autoskills",
+      "database",
+      "wp",
+      "plugin"
+    ],
     "views": 5999,
     "uses": 899,
     "author": "midudev",
@@ -4926,7 +6279,13 @@
     "description": "Use when you need a deterministic inspection of a WordPress repository (plugin/theme/block theme/WP core/Gutenberg/full site) including tooling/tests/version hints, and a structured JSON report to guide workflows and...",
     "category": "Testing",
     "parentCategory": "skills",
-    "tags": ["autoskills", "testing", "wp", "project", "triage"],
+    "tags": [
+      "autoskills",
+      "testing",
+      "wp",
+      "project",
+      "triage"
+    ],
     "views": 5998,
     "uses": 898,
     "author": "midudev",
@@ -4945,7 +6304,13 @@
     "description": "Use when building, extending, or debugging WordPress REST API endpoints/routes: register_rest_route, WP_REST_Controller/controller classes, schema/argument validation, permission_callback/authentication, response...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "wp", "rest", "api"],
+    "tags": [
+      "autoskills",
+      "design",
+      "wp",
+      "rest",
+      "api"
+    ],
     "views": 5997,
     "uses": 897,
     "author": "midudev",
@@ -4964,7 +6329,14 @@
     "description": "Use when working with WP-CLI (wp) for WordPress operations: safe search-replace, db export/import, plugin/theme/user/content management, cron, cache flushing, multisite, and scripting/automation with wp-cli.yml.",
     "category": "Mobile",
     "parentCategory": "skills",
-    "tags": ["autoskills", "mobile", "wp", "wpcli", "and", "ops"],
+    "tags": [
+      "autoskills",
+      "mobile",
+      "wp",
+      "wpcli",
+      "and",
+      "ops"
+    ],
     "views": 5996,
     "uses": 896,
     "author": "midudev",
@@ -4983,7 +6355,11 @@
     "description": "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler...",
     "category": "Cloud",
     "parentCategory": "skills",
-    "tags": ["autoskills", "cloud", "wrangler"],
+    "tags": [
+      "autoskills",
+      "cloud",
+      "wrangler"
+    ],
     "views": 5995,
     "uses": 895,
     "author": "midudev",
@@ -5002,7 +6378,13 @@
     "description": "Orchestrate Xcode build optimization by benchmarking first, running the specialist analysis skills, prioritizing findings, requesting explicit approval, delegating approved fixes to xcode-build-fixer, and...",
     "category": "Design",
     "parentCategory": "design",
-    "tags": ["autoskills", "design", "xcode", "build", "orchestrator"],
+    "tags": [
+      "autoskills",
+      "design",
+      "xcode",
+      "build",
+      "orchestrator"
+    ],
     "views": 5994,
     "uses": 894,
     "author": "midudev",
@@ -5021,7 +6403,11 @@
     "description": "Zod schema validation best practices for type safety, parsing, and error handling. This skill should be used when defining z.object schemas, using z.string validations, safeParse, or z.infer. This skill does NOT...",
     "category": "Database",
     "parentCategory": "skills",
-    "tags": ["autoskills", "database", "zod"],
+    "tags": [
+      "autoskills",
+      "database",
+      "zod"
+    ],
     "views": 5993,
     "uses": 893,
     "author": "midudev",

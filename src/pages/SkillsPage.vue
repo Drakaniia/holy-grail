@@ -92,6 +92,11 @@ function setPage(page: number) {
   store.setPage(Math.min(Math.max(page, 1), Math.max(totalPages.value, 1)))
 }
 
+function clearFilters() {
+  store.setSearchQuery('')
+  store.setCategory('All')
+}
+
 watch(category, () => {
   store.setCategory('All')
   store.setPage(1)
@@ -252,13 +257,7 @@ watch(totalPages, (pages) => {
 
       <div v-else class="text-center py-16">
         <p class="text-gray-500 text-lg">No skills found matching your search.</p>
-        <button
-          @click="
-            store.setSearchQuery('')
-            store.setCategory('All')
-          "
-          class="mt-4 text-accent-400 hover:text-accent-300 text-sm"
-        >
+        <button @click="clearFilters" class="mt-4 text-accent-400 hover:text-accent-300 text-sm">
           Clear filters
         </button>
       </div>

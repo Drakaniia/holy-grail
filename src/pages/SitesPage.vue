@@ -199,6 +199,11 @@ function setPage(page: number) {
   store.setPage(Math.min(Math.max(page, 1), Math.max(totalPages.value, 1)))
 }
 
+function clearFilters() {
+  store.setSearchQuery('')
+  store.setCategory('All')
+}
+
 function getSortButtonClass(tab: SiteSortTab) {
   return store.activeTab === tab
     ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
@@ -448,13 +453,7 @@ watch(totalPages, (pages) => {
 
       <div v-else class="text-center py-16">
         <p class="text-gray-500 text-lg">No sites found matching your search.</p>
-        <button
-          @click="
-            store.setSearchQuery('')
-            store.setCategory('All')
-          "
-          class="mt-4 text-accent-400 hover:text-accent-300 text-sm"
-        >
+        <button @click="clearFilters" class="mt-4 text-accent-400 hover:text-accent-300 text-sm">
           Clear filters
         </button>
       </div>

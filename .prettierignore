@@ -1,0 +1,47 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+coverage/
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System files
+.DS_Store
+.git/
+.vscode/
+.idea/
+
+# Lock files
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Project specific
+supabase/.temp/
+.opencode/
+.gemini/
+.claude/
+*.timestamp-*-*.mjs
+
+# Agent and Skill definitions (handled separately or kept as-is)
+.agents/
+
+# Documentation and root level files (currently not in format script scope)
+docs/
+*.md
+index.html
+
+# Generated or static assets that shouldn't be formatted
+public/previews/
+public/content/*-index.json
+src/content/*-index.json
