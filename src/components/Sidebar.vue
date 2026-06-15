@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, onMounted, onUnmounted, reactive, shallowRef, watch } from 'vue'
+import {
+  computed,
+  defineAsyncComponent,
+  onMounted,
+  onUnmounted,
+  reactive,
+  shallowRef,
+  watch,
+} from 'vue'
 import { useRoute } from 'vue-router'
 import {
   Activity,
@@ -538,12 +546,15 @@ watch(isAuthenticated, (authenticated) => {
     return
   }
 
-  cancelAdminLoad = scheduleIdleTask(() => {
-    void loadAdminStore()
-  }, {
-    delay: 1500,
-    timeout: 5000,
-  })
+  cancelAdminLoad = scheduleIdleTask(
+    () => {
+      void loadAdminStore()
+    },
+    {
+      delay: 1500,
+      timeout: 5000,
+    },
+  )
 })
 
 onMounted(() => {
@@ -595,9 +606,7 @@ onUnmounted(() => {
               d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
             />
           </svg>
-          <span class="truncate text-sm font-bold tracking-tight uppercase">
-            Holy Grail
-          </span>
+          <span class="truncate text-sm font-bold tracking-tight uppercase"> Holy Grail </span>
         </RouterLink>
       </template>
 
@@ -659,11 +668,7 @@ onUnmounted(() => {
           </button>
         </li>
 
-        <li
-          v-for="group in visibleCompactSiteGroups"
-          :key="group.group"
-          class="sidebar-rail-group"
-        >
+        <li v-for="group in visibleCompactSiteGroups" :key="group.group" class="sidebar-rail-group">
           <RouterLink
             :to="group.route"
             class="sidebar-rail-button"
@@ -1217,7 +1222,9 @@ onUnmounted(() => {
           >
             <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
               <Puzzle class="w-3.5 h-3.5 flex-shrink-0" />
-              <span class="min-w-0 flex-1 truncate font-semibold uppercase tracking-wider">Extensions</span>
+              <span class="min-w-0 flex-1 truncate font-semibold uppercase tracking-wider"
+                >Extensions</span
+              >
             </span>
             <ChevronRight
               class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
@@ -1314,9 +1321,7 @@ onUnmounted(() => {
         to="/"
         class="sidebar-rail-button"
         :class="
-          isActive('/')
-            ? 'text-white'
-            : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+          isActive('/') ? 'text-white' : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
         "
         aria-label="Home"
       >
