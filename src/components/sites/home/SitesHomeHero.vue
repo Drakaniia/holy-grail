@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
 import { ArrowRight, Boxes, Hammer, Palette, Sparkles } from 'lucide-vue-next'
+import ShapeGrid from '@/components/home/ShapeGrid.vue'
 import { scheduleIdleTask } from '@/lib/idle'
 import type { HomePreviewItem } from '@/types/home'
 import type { SitesHomeMetric } from '@/types/sitesHome'
@@ -43,7 +44,17 @@ onUnmounted(() => {
 
 <template>
   <section class="sites-home-hero" aria-labelledby="sites-home-title">
-    <div class="sites-home-hero__grid" aria-hidden="true"></div>
+    <ShapeGrid
+      class="sites-home-hero__shape-grid"
+      direction="right"
+      :speed="0.35"
+      :square-size="54"
+      border-color="rgba(57, 255, 180, 0.26)"
+      hover-fill-color="rgba(57, 255, 180, 0.18)"
+      shape="hexagon"
+      :hover-trail-amount="5"
+      aria-hidden="true"
+    />
 
     <div class="sites-home-hero__index">
       <span>Sites Atlas</span>
@@ -143,19 +154,15 @@ onUnmounted(() => {
     radial-gradient(circle at 82% 20%, rgba(57, 255, 180, 0.12), transparent 20rem);
 }
 
-.sites-home-hero__grid {
+.sites-home-hero__shape-grid {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.62;
-  background:
-    linear-gradient(30deg, transparent 0 48%, rgba(255, 255, 255, 0.16) 49% 51%, transparent 52%),
-    linear-gradient(150deg, transparent 0 48%, rgba(255, 255, 255, 0.1) 49% 51%, transparent 52%);
-  background-position:
-    0 0,
-    31px 0;
-  background-size: 62px 62px;
-  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.88) 42%, transparent 100%);
+  opacity: 0.72;
+}
+
+:global(html.light .sites-home-hero__shape-grid) {
+  opacity: 0.38;
 }
 
 .sites-home-hero__index,
