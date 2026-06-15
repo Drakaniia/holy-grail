@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Bookmark
 lastCommit: Imported May 20, 2026
 lastRelease: Bookmark
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://sketchfab.com/features/free-3d-models
 docs: https://sketchfab.com/features/free-3d-models
-sourceCode: ""
+sourceCode: ''
 icon: sketchfab
 verified: false
 featured: false
@@ -60,8 +60,8 @@ similarTools:
     verified: false
     website: https://free3d.com/
   - slug: turbosquid
-    name: "3D Models for Professionals :: TurboSquid"
-    description: "3D Models for Professionals :: TurboSquid bookmarked for 3d resources."
+    name: '3D Models for Professionals :: TurboSquid'
+    description: '3D Models for Professionals :: TurboSquid bookmarked for 3d resources.'
     stars: 0
     addedDaysAgo: 0
     verified: false
