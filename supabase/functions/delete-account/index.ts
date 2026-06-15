@@ -25,8 +25,8 @@ function readServiceRoleKey() {
 
     if (parsed && typeof parsed === 'object') {
       const values = Object.values(parsed as Record<string, unknown>)
-      const secretKey = values.find((value): value is string =>
-        typeof value === 'string' && value.trim().length > 0
+      const secretKey = values.find(
+        (value): value is string => typeof value === 'string' && value.trim().length > 0,
       )
 
       return secretKey?.trim() ?? ''
@@ -53,7 +53,7 @@ function getAllowedOrigins() {
 
   return new Set(
     origins
-      .map(origin => origin.trim())
+      .map((origin) => origin.trim())
       .filter(Boolean)
       .map(normalizeOrigin),
   )
@@ -71,7 +71,7 @@ function getCorsHeaders(origin: string | null) {
       'Access-Control-Allow-Headers': CORS_ALLOWED_HEADERS,
       'Access-Control-Allow-Methods': CORS_ALLOWED_METHODS,
       'Access-Control-Max-Age': '86400',
-      'Vary': 'Origin',
+      Vary: 'Origin',
     },
   }
 }
@@ -134,7 +134,7 @@ Deno.serve(async (req) => {
 
   if (req.method !== 'POST') {
     return jsonResponse({ error: 'Method not allowed.' }, 405, corsHeaders, {
-      'Allow': 'POST, OPTIONS',
+      Allow: 'POST, OPTIONS',
     })
   }
 
