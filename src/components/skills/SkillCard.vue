@@ -33,15 +33,16 @@ function formatNumber(num: number): string {
       <BookmarkButton :resource="bookmarkResource" />
     </div>
 
-    <RouterLink
-      :to="`/skills/${skill.slug}`"
-      class="block p-5 pr-16"
-    >
+    <RouterLink :to="`/skills/${skill.slug}`" class="block p-5 pr-16">
       <div class="flex min-w-0 items-start justify-between gap-3 mb-3">
-        <h3 class="min-w-0 break-words text-sm font-semibold text-white transition-colors group-hover:text-accent-400">
+        <h3
+          class="min-w-0 break-words text-sm font-semibold text-white transition-colors group-hover:text-accent-400"
+        >
           {{ skill.title }}
         </h3>
-        <ExternalLink class="w-4 h-4 text-gray-600 group-hover:text-gray-400 transition-colors flex-shrink-0" />
+        <ExternalLink
+          class="w-4 h-4 text-gray-600 group-hover:text-gray-400 transition-colors flex-shrink-0"
+        />
       </div>
 
       <p class="text-xs text-gray-400 leading-relaxed mb-4 line-clamp-3">
@@ -62,7 +63,9 @@ function formatNumber(num: number): string {
       <div class="border-t border-gray-800 pt-3">
         <div class="flex min-w-0 items-center justify-between gap-3">
           <div class="min-w-0 flex items-center gap-2">
-            <div class="w-5 h-5 rounded-full bg-gray-700 flex items-center justify-center text-xs text-gray-400">
+            <div
+              class="w-5 h-5 rounded-full bg-gray-700 flex items-center justify-center text-xs text-gray-400"
+            >
               {{ skill.authorName.charAt(0).toUpperCase() }}
             </div>
             <span class="truncate text-xs text-gray-400">{{ skill.authorName }}</span>
