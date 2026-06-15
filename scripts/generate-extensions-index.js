@@ -20,11 +20,7 @@ function findMetaYamlFiles(dir, parentCategory = '', subcategory = '') {
       if (fs.existsSync(yamlPath)) {
         results.push({ yamlPath, parentCategory, subcategory: subcategory || null })
       } else {
-        const nested = findMetaYamlFiles(
-          fullPath,
-          parentCategory || entry.name,
-          entry.name
-        )
+        const nested = findMetaYamlFiles(fullPath, parentCategory || entry.name, entry.name)
         results.push(...nested)
       }
     }
@@ -49,7 +45,7 @@ function buildExtensionsIndex() {
       description: meta.description || '',
       category: meta.category || 'Uncategorized',
       parentCategory: meta.parentCategory || parentCategory,
-      subcategory: meta.subcategory !== undefined ? meta.subcategory : (subcategory || null),
+      subcategory: meta.subcategory !== undefined ? meta.subcategory : subcategory || null,
       version: meta.version || '',
       addedDaysAgo: meta.addedDaysAgo || 0,
       license: meta.license || '',
@@ -64,7 +60,7 @@ function buildExtensionsIndex() {
       fullDescription: meta.fullDescription || '',
       coreFeatures: meta.coreFeatures || [],
       additionalFeatures: meta.additionalFeatures || [],
-      similarTools: (meta.similarTools || []).map(t => ({
+      similarTools: (meta.similarTools || []).map((t) => ({
         slug: t.slug || '',
         name: t.name || '',
         description: t.description || '',
