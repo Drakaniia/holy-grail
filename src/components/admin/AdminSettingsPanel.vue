@@ -86,12 +86,12 @@ async function purgeOldEvents() {
         <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-300">
           Admin Settings
         </p>
-        <h2 id="admin-settings-title" class="text-2xl font-bold text-white">
-          Analytics controls
-        </h2>
+        <h2 id="admin-settings-title" class="text-2xl font-bold text-white">Analytics controls</h2>
       </div>
 
-      <div class="flex items-center gap-2 border border-gray-800 bg-[#1f1f1f] px-3 py-2 text-xs text-gray-500">
+      <div
+        class="flex items-center gap-2 border border-gray-800 bg-[#1f1f1f] px-3 py-2 text-xs text-gray-500"
+      >
         <SlidersHorizontal class="h-4 w-4 text-accent-300" />
         Updated {{ updatedLabel }}
       </div>
