@@ -49,11 +49,12 @@ function getCachedContent(slug: string): SkillContent | null {
 function setCachedContent(slug: string, content: SkillContent): void {
   try {
     const raw = localStorage.getItem(CACHE_KEY)
-    const cache: Record<string, { data: SkillContent; timestamp: number }> = raw ? JSON.parse(raw) : {}
+    const cache: Record<string, { data: SkillContent; timestamp: number }> = raw
+      ? JSON.parse(raw)
+      : {}
     cache[slug] = { data: content, timestamp: Date.now() }
     localStorage.setItem(CACHE_KEY, JSON.stringify(cache))
-  } catch {
-  }
+  } catch {}
 }
 
 export const useSkillsStore = defineStore('skills', () => {
@@ -87,7 +88,7 @@ export const useSkillsStore = defineStore('skills', () => {
           throw new Error(`Failed to load skills index (${response.status})`)
         }
 
-        allSkills.value = await response.json() as Skill[]
+        allSkills.value = (await response.json()) as Skill[]
         loaded.value = true
       } catch (error) {
         loadError.value = error instanceof Error ? error.message : 'Failed to load skills index'
@@ -101,12 +102,12 @@ export const useSkillsStore = defineStore('skills', () => {
   }
 
   const categories = computed(() => {
-    const cats = new Set(allSkills.value.map(s => s.category))
+    const cats = new Set(allSkills.value.map((s) => s.category))
     return ['All', ...Array.from(cats).sort()]
   })
 
   const getSkillsByParentCategory = (parentCategory: string) => {
-    return allSkills.value.filter(s => s.parentCategory === parentCategory)
+    return allSkills.value.filter((s) => s.parentCategory === parentCategory)
   }
 
   const filteredSkills = computed(() => {
@@ -115,15 +116,15 @@ export const useSkillsStore = defineStore('skills', () => {
     if (searchQuery.value) {
       const query = searchQuery.value.toLowerCase()
       result = result.filter(
-        s =>
+        (s) =>
           s.title.toLowerCase().includes(query) ||
           s.description.toLowerCase().includes(query) ||
-          s.tags.some(t => t.toLowerCase().includes(query))
+          s.tags.some((t) => t.toLowerCase().includes(query)),
       )
     }
 
     if (activeCategory.value !== 'All') {
-      result = result.filter(s => s.category === activeCategory.value)
+      result = result.filter((s) => s.category === activeCategory.value)
     }
 
     switch (activeTab.value) {
@@ -149,7 +150,7 @@ export const useSkillsStore = defineStore('skills', () => {
   const totalPages = computed(() => Math.ceil(filteredSkills.value.length / itemsPerPage))
 
   const getSkillBySlug = (slug: string) => {
-    return allSkills.value.find(s => s.slug === slug)
+    return allSkills.value.find((s) => s.slug === slug)
   }
 
   const getSkillContent = async (slug: string): Promise<SkillContent | null> => {
@@ -183,8 +184,7 @@ export const useSkillsStore = defineStore('skills', () => {
           setCachedContent(slug, content)
           return content
         }
-      } catch {
-      }
+      } catch {}
     }
 
     const [owner, repo] = skill.repoLink.split('/')
