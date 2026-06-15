@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue'
-import {
-  AlertCircle,
-  Check,
-  CheckCircle2,
-  ExternalLink,
-  Trash2,
-  X,
-} from 'lucide-vue-next'
+import { AlertCircle, Check, CheckCircle2, ExternalLink, Trash2, X } from 'lucide-vue-next'
 import AdminSubmissionSkeleton from '@/components/admin/AdminSubmissionSkeleton.vue'
 import { useAdminStore, type SubmissionStatus } from '@/stores/admin'
 
@@ -48,7 +41,7 @@ const REVIEW_FLOW = [
 
 const displaySubmissions = computed(() => {
   if (activeTab.value === 'all') return admin.submissions
-  return admin.submissions.filter(submission => submission.status === activeTab.value)
+  return admin.submissions.filter((submission) => submission.status === activeTab.value)
 })
 
 async function approve(id: string) {
