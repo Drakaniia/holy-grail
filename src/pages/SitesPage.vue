@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, shallowRef, useTemplateRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { Calendar, ChevronDown, List, Search, Send, Shuffle, Sparkles } from 'lucide-vue-next'
+import ShapeGrid from '@/components/home/ShapeGrid.vue'
 import { sortSitesForTab, useSitesStore, type SiteSortTab } from '@/stores/sites'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SiteCard from '@/components/sites/SiteCard.vue'
@@ -264,7 +265,18 @@ watch(totalPages, pages => {
 </script>
 
 <template>
-  <div class="bg-[#1f1f1f] text-white">
+  <div class="relative overflow-hidden bg-[#1f1f1f] text-white">
+    <ShapeGrid
+      class="sites-page__shape-grid"
+      direction="right"
+      :speed="0.35"
+      :square-size="54"
+      border-color="rgba(255, 140, 26, 0.26)"
+      hover-fill-color="rgba(255, 140, 26, 0.18)"
+      shape="hexagon"
+      :hover-trail-amount="5"
+      aria-hidden="true"
+    />
     <div class="border-b border-gray-800">
       <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
@@ -443,3 +455,17 @@ watch(totalPages, pages => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.sites-page__shape-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+:global(html.light .sites-page__shape-grid) {
+  opacity: 0.42;
+}
+</style>
