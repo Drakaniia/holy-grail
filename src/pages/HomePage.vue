@@ -53,8 +53,7 @@ function getSeededPreviewScore(slug: string) {
 
 function compareRandomizedSites(first: Site, second: Site) {
   return (
-    getSeededPreviewScore(first.slug) -
-      getSeededPreviewScore(second.slug) ||
+    getSeededPreviewScore(first.slug) - getSeededPreviewScore(second.slug) ||
     compareFeaturedSites(first, second)
   )
 }
@@ -89,9 +88,7 @@ const isCatalogLoading = computed(
 
 const catalogError = computed(() => sitesStore.loadError || skillsStore.loadError)
 
-const totalSitesLabel = computed(() =>
-  formatCount(sitesStore.allSites.length, sitesStore.loaded),
-)
+const totalSitesLabel = computed(() => formatCount(sitesStore.allSites.length, sitesStore.loaded))
 
 const totalSkillsLabel = computed(() =>
   formatCount(skillsStore.allSkills.length, skillsStore.loaded),
@@ -100,15 +97,15 @@ const totalSkillsLabel = computed(() =>
 const totalGroupsLabel = computed(() => {
   const groups = new Set<string>()
 
-  sitesStore.allSites.forEach(site => groups.add(site.parentCategory))
-  skillsStore.allSkills.forEach(skill => groups.add(skill.parentCategory))
+  sitesStore.allSites.forEach((site) => groups.add(site.parentCategory))
+  skillsStore.allSkills.forEach((skill) => groups.add(skill.parentCategory))
 
   return formatCount(groups.size, sitesStore.loaded || skillsStore.loaded)
 })
 
 const previewItems = computed(() => {
   return sitesStore.allSites
-    .filter(site => Boolean(previews[site.slug]?.image))
+    .filter((site) => Boolean(previews[site.slug]?.image))
     .sort(compareRandomizedSites)
     .map(toPreviewItem)
     .filter((item): item is HomePreviewItem => Boolean(item))
@@ -119,7 +116,8 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     index: '01',
     label: 'Sites',
     kicker: 'Tools and references',
-    description: 'Cloud hosting, AI utilities, design sources, developer references, downloads, CLI agents, and UI libraries.',
+    description:
+      'Cloud hosting, AI utilities, design sources, developer references, downloads, CLI agents, and UI libraries.',
     countLabel: totalSitesLabel.value,
     countLoading: isCatalogLoading.value,
     to: '/sites',
@@ -128,7 +126,8 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     index: '02',
     label: 'Skills',
     kicker: 'Agent workflows',
-    description: 'Reusable operating instructions for development, design, research, security, deployment, and automation.',
+    description:
+      'Reusable operating instructions for development, design, research, security, deployment, and automation.',
     countLabel: totalSkillsLabel.value,
     countLoading: isCatalogLoading.value,
     to: '/skills/skills',
@@ -137,7 +136,8 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     index: '03',
     label: 'Saved',
     kicker: 'Personal shelf',
-    description: 'Signed-in users can keep a focused shortlist of resources and return to them from the bookmark shelf.',
+    description:
+      'Signed-in users can keep a focused shortlist of resources and return to them from the bookmark shelf.',
     countLabel: 'Auth',
     to: '/bookmarks',
   },
@@ -145,7 +145,8 @@ const directoryRows = computed<HomeDirectoryRow[]>(() => [
     index: '04',
     label: 'Publish',
     kicker: 'Catalog intake',
-    description: 'Add missing resources into the review flow so the library can keep expanding without losing structure.',
+    description:
+      'Add missing resources into the review flow so the library can keep expanding without losing structure.',
     countLabel: 'Open',
     to: '/publish',
   },
