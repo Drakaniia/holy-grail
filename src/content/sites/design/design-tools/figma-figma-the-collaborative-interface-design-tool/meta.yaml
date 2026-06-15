@@ -1,6 +1,6 @@
 slug: figma-figma-the-collaborative-interface-design-tool
-name: "Figma: The Collaborative Interface Design Tool"
-description: "Figma: The Collaborative Interface Design Tool bookmarked for design tools resources."
+name: 'Figma: The Collaborative Interface Design Tool'
+description: 'Figma: The Collaborative Interface Design Tool bookmarked for design tools resources.'
 category: Design Tools
 parentCategory: design
 subcategory: design-tools
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://www.figma.com/
 docs: https://www.figma.com/
-sourceCode: ""
+sourceCode: ''
 icon: figma
 verified: false
 featured: false
@@ -29,7 +29,7 @@ tags:
   - design
   - design-tools
   - tools
-atGlance: "Figma: The Collaborative Interface Design Tool"
+atGlance: 'Figma: The Collaborative Interface Design Tool'
 fullDescription: >-
   Figma: The Collaborative Interface Design Tool is kept as a design tools resource for design
   inspiration, assets, and reference work.
