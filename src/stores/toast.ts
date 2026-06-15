@@ -52,7 +52,10 @@ export const useToastStore = defineStore('toast', () => {
     activeToasts.value = [...activeToasts.value, toast].slice(-MAX_TOASTS)
 
     if (typeof window !== 'undefined') {
-      const timer = window.setTimeout(() => removeToast(id), options.duration ?? DEFAULT_TOAST_DURATION_MS)
+      const timer = window.setTimeout(
+        () => removeToast(id),
+        options.duration ?? DEFAULT_TOAST_DURATION_MS,
+      )
       timers.set(id, timer)
     }
 
