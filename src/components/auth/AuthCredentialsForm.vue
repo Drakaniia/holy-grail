@@ -40,11 +40,9 @@ const authTitle = computed(() => (isSignup.value ? 'Create account' : 'Welcome b
 const authSubtitle = computed(() =>
   isSignup.value
     ? 'Use an email and password to start a secured Holy Grail account.'
-    : 'Sign in with the email connected to your Holy Grail account.'
+    : 'Sign in with the email connected to your Holy Grail account.',
 )
-const switchPrompt = computed(() =>
-  isSignup.value ? 'Already have access?' : 'Need a workspace?'
-)
+const switchPrompt = computed(() => (isSignup.value ? 'Already have access?' : 'Need a workspace?'))
 const switchRoute = computed(() => (isSignup.value ? '/login' : '/signup'))
 const switchLabel = computed(() => (isSignup.value ? 'Sign in' : 'Create one'))
 const submitLabel = computed(() => (isSignup.value ? 'Create account' : 'Sign in'))
@@ -70,7 +68,7 @@ watch(
     confirmPassword.value = ''
     fullName.value = ''
     validationMessage.value = null
-  }
+  },
 )
 
 function validateForm() {
@@ -153,8 +151,8 @@ function requestPasswordReset() {
       v-if="disabled"
       class="auth-warning mb-5 border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm leading-6 text-amber-100"
     >
-      Supabase env vars are missing. Create <code>.env.local</code> from
-      <code>.env.example</code>, then restart <code>bun dev</code>.
+      Supabase env vars are missing. Create <code>.env.local</code> from <code>.env.example</code>,
+      then restart <code>bun dev</code>.
     </div>
 
     <div
@@ -218,7 +216,9 @@ function requestPasswordReset() {
 
     <div class="mb-6 flex items-center gap-3">
       <span class="auth-divider-line h-px flex-1 bg-[#1f1f1f]"></span>
-      <span class="auth-divider-label text-xs font-semibold uppercase tracking-widest text-zinc-600">
+      <span
+        class="auth-divider-label text-xs font-semibold uppercase tracking-widest text-zinc-600"
+      >
         or use email
       </span>
       <span class="auth-divider-line h-px flex-1 bg-[#1f1f1f]"></span>
