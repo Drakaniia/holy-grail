@@ -25,7 +25,7 @@
     "@fontsource/geist-sans": "^5.2.5",
     "@mdx-js/rollup": "^3.1.1",
     "@mdx-js/vue": "^3.1.1",
-    "@supabase/supabase-js": "^2.108.0",
+    "@supabase/supabase-js": "^2.108.1",
     "js-yaml": "^4.2.0",
     "lucide-vue-next": "^1.0.0",
     "markdown-it": "^14.2.0",
