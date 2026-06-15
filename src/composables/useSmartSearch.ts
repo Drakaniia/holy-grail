@@ -100,12 +100,22 @@ const navigationItems: SearchItem[] = [
     description: 'Cloud platforms, hosting, databases, and backend services for development work',
     category: 'Sites',
     to: '/sites/development/cloud-hosting',
-    keywords: ['platforms', 'hosting', 'cloud', 'deployment', 'backend', 'vercel', 'railway', 'supabase'],
+    keywords: [
+      'platforms',
+      'hosting',
+      'cloud',
+      'deployment',
+      'backend',
+      'vercel',
+      'railway',
+      'supabase',
+    ],
   }),
   createNavigationItem({
     id: 'collection-sites-ai',
     title: 'AI Tools',
-    description: 'AI chat, image, automation, agent skills, research, API, video, and website development tools',
+    description:
+      'AI chat, image, automation, agent skills, research, API, video, and website development tools',
     category: 'Sites',
     to: '/sites/ai',
     keywords: ['chatgpt', 'claude', 'gemini', 'agents', 'automation', 'models'],
@@ -145,7 +155,8 @@ const navigationItems: SearchItem[] = [
   createNavigationItem({
     id: 'collection-sites-development',
     title: 'Development Resources',
-    description: 'Cloud hosting, learning, references, tooling, CLI tools, UI libraries, repositories, MCP, and monitoring resources',
+    description:
+      'Cloud hosting, learning, references, tooling, CLI tools, UI libraries, repositories, MCP, and monitoring resources',
     category: 'Sites',
     to: '/sites/development',
     keywords: ['docs', 'code', 'learning', 'github', 'monitoring', 'mcp', 'cli', 'components'],
@@ -210,22 +221,23 @@ export function useSmartSearch(query: Ref<string>) {
   const results = computed<SmartSearchResult[]>(() => {
     if (!hasQuery.value) {
       return corpus.value
-        .filter(item => item.featured || item.kind === 'collection')
+        .filter((item) => item.featured || item.kind === 'collection')
         .sort((a, b) => b.popularity - a.popularity)
         .slice(0, MAX_RESULTS)
-        .map(item => toResult(item, 0))
+        .map((item) => toResult(item, 0))
     }
 
     const ranked = corpus.value
-      .map(item => ({ item, score: scoreSearchItem(normalizedQuery.value, item) }))
-      .filter(result => result.score > 0)
+      .map((item) => ({ item, score: scoreSearchItem(normalizedQuery.value, item) }))
+      .filter((result) => result.score > 0)
       .sort((a, b) => b.score - a.score || b.item.popularity - a.item.popularity)
 
-    const bestAvailable = ranked.length > 0
-      ? ranked
-      : corpus.value
-          .map(item => ({ item, score: item.popularity / 100 }))
-          .sort((a, b) => b.score - a.score)
+    const bestAvailable =
+      ranked.length > 0
+        ? ranked
+        : corpus.value
+            .map((item) => ({ item, score: item.popularity / 100 }))
+            .sort((a, b) => b.score - a.score)
 
     return bestAvailable.slice(0, MAX_RESULTS).map(({ item, score }) => toResult(item, score))
   })
@@ -290,12 +302,9 @@ function siteToSearchItem(site: Site): SearchItem {
       title: site.name,
       titleWithDomain: [site.name, domainLabel].filter(Boolean).join(' '),
       description: site.description,
-      category: [
-        ...categoryPath,
-        site.parentCategory,
-        site.subcategory,
-        site.category,
-      ].filter(Boolean).join(' '),
+      category: [...categoryPath, site.parentCategory, site.subcategory, site.category]
+        .filter(Boolean)
+        .join(' '),
       tags,
       domain: domainSearchText,
       source: [...siteSources, domainSearchText].filter(Boolean).join(' '),
@@ -311,7 +320,7 @@ function getSiteCategoryPath(site: Site): string[] {
     .map(formatRouteLabel)
 
   const seen = new Set<string>()
-  return labels.filter(label => {
+  return labels.filter((label) => {
     const key = normalizeText(label)
     if (!key || seen.has(key)) return false
 
@@ -461,19 +470,21 @@ function scoreSearchItem(query: string, item: SearchItem): number {
   const terms = tokenize(query)
   const compactQuery = query.replaceAll(' ', '')
   const bestFullFieldScore = Math.max(
-    ...item.fields.map(field => getTextSimilarity(query, field.value) * field.weight),
+    ...item.fields.map((field) => getTextSimilarity(query, field.value) * field.weight),
   )
   const bestCompactScore = Math.max(
-    ...item.fields.map(field => getTextSimilarity(compactQuery, field.value) * field.weight),
+    ...item.fields.map((field) => getTextSimilarity(compactQuery, field.value) * field.weight),
   )
 
-  const termScores = terms.map(term =>
-    Math.max(...item.fields.map(field => getTextSimilarity(term, field.value) * field.weight)),
+  const termScores = terms.map((term) =>
+    Math.max(...item.fields.map((field) => getTextSimilarity(term, field.value) * field.weight)),
   )
   const averageTermScore =
-    termScores.length > 0 ? termScores.reduce((sum, score) => sum + score, 0) / termScores.length : 0
+    termScores.length > 0
+      ? termScores.reduce((sum, score) => sum + score, 0) / termScores.length
+      : 0
   const coverage =
-    termScores.length > 0 ? termScores.filter(score => score >= 42).length / termScores.length : 0
+    termScores.length > 0 ? termScores.filter((score) => score >= 42).length / termScores.length : 0
   const exactTokenBoost = getExactTokenBoost(query, terms, item)
   const popularityBoost = Math.min(Math.log10(item.popularity + 10) * 2.6, 10)
   const featuredBoost = item.featured ? 5 : 0
@@ -525,7 +536,7 @@ function getTextSimilarity(rawNeedle: string, rawHaystack: string): number {
 
   const acronym = haystack
     .split(' ')
-    .map(word => word.at(0) ?? '')
+    .map((word) => word.at(0) ?? '')
     .join('')
 
   if (compactNeedle && acronym.startsWith(compactNeedle)) return 0.8
@@ -613,7 +624,7 @@ function getLevenshteinDistance(left: string, right: string): number {
 function tokenize(value: string): string[] {
   return normalizeText(value)
     .split(' ')
-    .filter(token => token.length > 0)
+    .filter((token) => token.length > 0)
 }
 
 function normalizeText(value: string): string {
