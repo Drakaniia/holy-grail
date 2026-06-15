@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 
-const props = withDefaults(defineProps<{
-  website: string
-  name: string
-  size?: 'sm' | 'md' | 'lg'
-}>(), {
-  size: 'md'
-})
+const props = withDefaults(
+  defineProps<{
+    website: string
+    name: string
+    size?: 'sm' | 'md' | 'lg'
+  }>(),
+  {
+    size: 'md',
+  },
+)
 
 const imageError = ref(false)
 
@@ -30,7 +33,12 @@ const sizeClasses = computed(() => {
 </script>
 
 <template>
-  <div :class="['rounded-lg bg-[#1f1f1f] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden', sizeClasses.container]">
+  <div
+    :class="[
+      'rounded-lg bg-[#1f1f1f] border border-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden',
+      sizeClasses.container,
+    ]"
+  >
     <img
       v-if="faviconUrl && !imageError"
       :src="faviconUrl"
@@ -38,6 +46,8 @@ const sizeClasses = computed(() => {
       :class="[sizeClasses.image, 'object-contain']"
       @error="imageError = true"
     />
-    <span v-else :class="[sizeClasses.letter, 'font-bold text-white']">{{ name.charAt(0).toUpperCase() }}</span>
+    <span v-else :class="[sizeClasses.letter, 'font-bold text-white']">{{
+      name.charAt(0).toUpperCase()
+    }}</span>
   </div>
 </template>
