@@ -12,7 +12,7 @@ const yearStart = `${currentYear}-01-01T00:00:00Z`
 const concurrency = Number(process.env.ENRICH_CONCURRENCY || (useSearch ? 2 : 8))
 
 function readOption(name) {
-  const inline = process.argv.find(arg => arg.startsWith(`${name}=`))
+  const inline = process.argv.find((arg) => arg.startsWith(`${name}=`))
   if (inline) return inline.slice(name.length + 1)
 
   const index = process.argv.indexOf(name)
@@ -71,13 +71,14 @@ const repoOverrides = new Map([
   ['uiball', 'GriffinJohnston/ldrs'],
 ])
 
-const noRepoOverrides = new Set([
-  'cerebras',
-])
+const noRepoOverrides = new Set(['cerebras'])
 
 function getGithubToken() {
   try {
-    return execFileSync('gh', ['auth', 'token'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+    return execFileSync('gh', ['auth', 'token'], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim()
   } catch {
     return ''
   }
@@ -176,7 +177,7 @@ function scoreCandidate(repo, meta) {
     'website',
   ])
 
-  for (const token of siteName.split(/\s+/).filter(t => t.length > 3 && !genericTokens.has(t))) {
+  for (const token of siteName.split(/\s+/).filter((t) => t.length > 3 && !genericTokens.has(t))) {
     if (owner.includes(token) || repoName.includes(token)) score += 1
   }
 
@@ -212,7 +213,8 @@ async function fetchText(url) {
 function extractGithubRepos(html) {
   const repos = []
   const seen = new Set()
-  const pattern = /https?:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\.git)?(?:[/?#[^\s"'<>)]*)?/gi
+  const pattern =
+    /https?:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+(?:\.git)?(?:[/?#[^\s"'<>)]*)?/gi
   for (const match of html.matchAll(pattern)) {
     const repo = parseGithubRepoUrl(match[0])
     if (repo && !seen.has(repo.toLowerCase())) {
@@ -235,7 +237,7 @@ async function discoverRepoFromPages(meta) {
   if (!candidates.length) return null
 
   const ranked = candidates
-    .map(repo => ({ repo, score: scoreCandidate(repo, meta) }))
+    .map((repo) => ({ repo, score: scoreCandidate(repo, meta) }))
     .sort((a, b) => b.score - a.score)
 
   return ranked[0]?.score >= 4 ? ranked[0].repo : null
@@ -264,8 +266,8 @@ function countFromLinkHeader(linkHeader, currentLength) {
   if (!linkHeader) return currentLength
   const last = linkHeader
     .split(',')
-    .map(part => part.trim())
-    .find(part => part.includes('rel="last"'))
+    .map((part) => part.trim())
+    .find((part) => part.includes('rel="last"'))
   if (!last) return currentLength
   const match = last.match(/[?&]page=(\d+)/)
   return match ? Number(match[1]) : currentLength
@@ -287,16 +289,22 @@ async function searchGithubRepo(meta) {
   const base = domainBase(meta.website)
   const name = normalizeText(meta.name)
     .split(/\s+/)
-    .filter(token => token.length > 2)
+    .filter((token) => token.length > 2)
     .slice(0, 4)
     .join(' ')
   const query = encodeURIComponent(`${base || meta.slug} ${name} in:name,description`)
-  const data = await githubJson(`https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&per_page=5`)
+  const data = await githubJson(
+    `https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&per_page=5`,
+  )
   const items = data?.items || []
   if (!items.length) return null
 
   const ranked = items
-    .map(item => ({ repo: item.full_name, score: scoreCandidate(item.full_name, meta), stars: item.stargazers_count || 0 }))
+    .map((item) => ({
+      repo: item.full_name,
+      score: scoreCandidate(item.full_name, meta),
+      stars: item.stargazers_count || 0,
+    }))
     .sort((a, b) => b.score - a.score || b.stars - a.stars)
 
   return ranked[0]?.score >= 4 ? ranked[0].repo : null
@@ -309,18 +317,25 @@ async function getRepoStats(fullName) {
   const encoded = `${repo.owner.login}/${repo.name}`
   const latestRelease = await githubJson(`https://api.github.com/repos/${encoded}/releases/latest`)
   const releases = await githubCount(`https://api.github.com/repos/${encoded}/releases?per_page=1`)
-  const contributors = await githubCount(`https://api.github.com/repos/${encoded}/contributors?anon=1&per_page=1`)
+  const contributors = await githubCount(
+    `https://api.github.com/repos/${encoded}/contributors?anon=1&per_page=1`,
+  )
   const commitsThisYear = await githubCount(
-    `https://api.github.com/repos/${encoded}/commits?since=${encodeURIComponent(yearStart)}&per_page=1`
+    `https://api.github.com/repos/${encoded}/commits?since=${encodeURIComponent(yearStart)}&per_page=1`,
   )
 
   return {
     sourceCode: repo.html_url,
     stars: repo.stargazers_count || 0,
     watchers: repo.subscribers_count || 0,
-    license: repo.license?.spdx_id && repo.license.spdx_id !== 'NOASSERTION' ? repo.license.spdx_id : 'Unknown',
+    license:
+      repo.license?.spdx_id && repo.license.spdx_id !== 'NOASSERTION'
+        ? repo.license.spdx_id
+        : 'Unknown',
     lastCommit: repo.pushed_at ? relativeDate(repo.pushed_at) : 'Unknown',
-    lastRelease: latestRelease?.published_at ? relativeDate(latestRelease.published_at) : 'No releases',
+    lastRelease: latestRelease?.published_at
+      ? relativeDate(latestRelease.published_at)
+      : 'No releases',
     version: latestRelease?.tag_name || '',
     contributors,
     commitsThisYear,
@@ -357,9 +372,13 @@ function orderedMeta(meta, stats) {
     stars: stats?.stars ?? meta.stars ?? 0,
     watchers: stats?.watchers ?? meta.watchers ?? 0,
     addedDaysAgo: meta.addedDaysAgo ?? 0,
-    license: stats?.license ?? (meta.license === 'Bookmark' ? 'Proprietary' : meta.license || 'Unknown'),
-    lastCommit: stats?.lastCommit ?? (meta.lastCommit?.startsWith('Imported ') ? 'N/A' : meta.lastCommit || 'N/A'),
-    lastRelease: stats?.lastRelease ?? (meta.lastRelease === 'Bookmark' ? 'N/A' : meta.lastRelease || 'N/A'),
+    license:
+      stats?.license ?? (meta.license === 'Bookmark' ? 'Proprietary' : meta.license || 'Unknown'),
+    lastCommit:
+      stats?.lastCommit ??
+      (meta.lastCommit?.startsWith('Imported ') ? 'N/A' : meta.lastCommit || 'N/A'),
+    lastRelease:
+      stats?.lastRelease ?? (meta.lastRelease === 'Bookmark' ? 'N/A' : meta.lastRelease || 'N/A'),
     version: stats?.version ?? meta.version ?? '',
     contributors: stats?.contributors ?? meta.contributors ?? 0,
     commitsThisYear: stats?.commitsThisYear ?? meta.commitsThisYear ?? 0,
@@ -385,13 +404,13 @@ function orderedMeta(meta, stats) {
 async function main() {
   const metaFiles = walkMetaFiles(sitesDir)
   const rows = metaFiles
-    .map(filePath => ({
+    .map((filePath) => ({
       filePath,
       meta: yaml.load(fs.readFileSync(filePath, 'utf8')) || {},
     }))
-    .filter(row => !onlyNew || row.meta.addedDaysAgo === 0)
-    .filter(row => !parentFilter || row.meta.parentCategory === parentFilter)
-    .filter(row => !subcategoryFilter || (row.meta.subcategory || '') === subcategoryFilter)
+    .filter((row) => !onlyNew || row.meta.addedDaysAgo === 0)
+    .filter((row) => !parentFilter || row.meta.parentCategory === parentFilter)
+    .filter((row) => !subcategoryFilter || (row.meta.subcategory || '') === subcategoryFilter)
 
   let found = 0
   let updated = 0
@@ -406,7 +425,10 @@ async function main() {
       const existing = parseGithubRepoUrl(row.meta.sourceCode || '')
       const discovered = noRepoOverrides.has(slug)
         ? null
-        : repoOverrides.get(slug) || existing || (await discoverRepoFromPages(row.meta)) || (await searchGithubRepo(row.meta))
+        : repoOverrides.get(slug) ||
+          existing ||
+          (await discoverRepoFromPages(row.meta)) ||
+          (await searchGithubRepo(row.meta))
       let stats = null
 
       if (discovered) {
@@ -430,7 +452,9 @@ async function main() {
         skipped += 1
       }
 
-      const repoNote = stats?.sourceCode ? ` -> ${stats.sourceCode}` : ' -> no public GitHub repo found'
+      const repoNote = stats?.sourceCode
+        ? ` -> ${stats.sourceCode}`
+        : ' -> no public GitHub repo found'
       console.log(`${label}${repoNote}`)
     } catch (error) {
       failures.push(`${label}: ${error.message}`)
@@ -454,8 +478,8 @@ async function main() {
         failures: failures.length,
       },
       null,
-      2
-    )
+      2,
+    ),
   )
 
   if (failures.length) {
