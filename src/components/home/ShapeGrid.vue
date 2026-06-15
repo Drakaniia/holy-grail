@@ -139,10 +139,7 @@ function startGrid() {
       for (let col = -2; col < cols; col += 1) {
         for (let row = -2; row < rows; row += 1) {
           const cx = col * hexHoriz + offsetX
-          const cy =
-            row * hexVert +
-            ((col + colShift) % 2 !== 0 ? hexVert / 2 : 0) +
-            offsetY
+          const cy = row * hexVert + ((col + colShift) % 2 !== 0 ? hexVert / 2 : 0) + offsetY
           const cellKey = `${col},${row}`
 
           fillHoveredCell(cellKey, () => drawHex(cx, cy, tileSize))
@@ -335,13 +332,9 @@ function startGrid() {
     const adjustedX = mouseX - offsetX
     const adjustedY = mouseY - offsetY
     const col =
-      props.shape === 'circle'
-        ? Math.round(adjustedX / tileSize)
-        : Math.floor(adjustedX / tileSize)
+      props.shape === 'circle' ? Math.round(adjustedX / tileSize) : Math.floor(adjustedX / tileSize)
     const row =
-      props.shape === 'circle'
-        ? Math.round(adjustedY / tileSize)
-        : Math.floor(adjustedY / tileSize)
+      props.shape === 'circle' ? Math.round(adjustedY / tileSize) : Math.floor(adjustedY / tileSize)
 
     setHoveredCell({ x: col, y: row })
   }
