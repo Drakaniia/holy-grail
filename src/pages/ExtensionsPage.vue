@@ -76,14 +76,19 @@ function formatNumber(num: number): string {
         >
           <div class="flex min-w-0 items-start gap-3">
             <div class="flex-1 min-w-0">
-              <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">
+              <h3
+                class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate"
+              >
                 {{ extension.name }}
               </h3>
               <p class="text-xs text-gray-400 line-clamp-2 mt-2">
                 {{ extension.description }}
               </p>
               <div class="flex items-center gap-3 mt-3 text-xs text-gray-500">
-                <span v-if="extension.chromeWebStoreRating > 0" class="flex items-center gap-1 text-amber-400">
+                <span
+                  v-if="extension.chromeWebStoreRating > 0"
+                  class="flex items-center gap-1 text-amber-400"
+                >
                   <Star class="w-3.5 h-3.5 fill-amber-400" />
                   {{ extension.chromeWebStoreRating.toFixed(1) }}
                 </span>
@@ -104,8 +109,7 @@ function formatNumber(num: number): string {
 .ext-card {
   border-color: #1f2937;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%),
-    #1f1f1f;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f;
 }
 
 .ext-card:hover {
