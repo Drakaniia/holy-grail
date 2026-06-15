@@ -14,7 +14,9 @@ const props = defineProps<{
   completedStepIds: string[]
 }>()
 
-const activeStepIndex = computed(() => props.steps.findIndex(step => step.id === props.activeStep))
+const activeStepIndex = computed(() =>
+  props.steps.findIndex((step) => step.id === props.activeStep),
+)
 
 function isCompleted(stepId: string) {
   return props.completedStepIds.includes(stepId)
