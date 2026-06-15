@@ -193,7 +193,9 @@ async function handleSignOut() {
         >
           <Bookmark class="h-4 w-4 text-gray-500" />
           <span>Bookmarks</span>
-          <span class="ml-auto max-w-[6rem] truncate text-xs text-gray-600">{{ bookmarkLabel }}</span>
+          <span class="ml-auto max-w-[6rem] truncate text-xs text-gray-600">{{
+            bookmarkLabel
+          }}</span>
         </RouterLink>
 
         <div class="account-help-menu relative" role="none">
