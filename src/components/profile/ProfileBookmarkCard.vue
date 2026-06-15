@@ -12,7 +12,7 @@ const emit = defineEmits<{
   remove: [id: string]
 }>()
 
-const typeLabel = computed(() => props.item.type === 'site' ? 'Site' : 'Skill')
+const typeLabel = computed(() => (props.item.type === 'site' ? 'Site' : 'Skill'))
 </script>
 
 <template>
@@ -20,7 +20,9 @@ const typeLabel = computed(() => props.item.type === 'site' ? 'Site' : 'Skill')
     <div class="flex items-start justify-between gap-4">
       <div class="min-w-0">
         <div class="mb-3 flex flex-wrap items-center gap-2">
-          <span class="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#1f1f1f] px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-zinc-400">
+          <span
+            class="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-[#1f1f1f] px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-zinc-400"
+          >
             <Globe2 v-if="item.type === 'site'" class="h-3 w-3" />
             <Code2 v-else class="h-3 w-3" />
             {{ typeLabel }}
@@ -50,7 +52,9 @@ const typeLabel = computed(() => props.item.type === 'site' ? 'Site' : 'Skill')
       </button>
     </div>
 
-    <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-4">
+    <div
+      class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-900 pt-4"
+    >
       <RouterLink
         :to="item.route"
         class="text-sm font-semibold text-accent-300 transition hover:text-accent-100"
