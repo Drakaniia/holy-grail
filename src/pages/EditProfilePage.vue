@@ -51,7 +51,9 @@ async function handleAvatarChange(event: Event) {
         Profile
       </RouterLink>
 
-      <div class="mb-6 flex flex-col gap-3 border-b border-zinc-900 pb-6 sm:flex-row sm:items-end sm:justify-between">
+      <div
+        class="mb-6 flex flex-col gap-3 border-b border-zinc-900 pb-6 sm:flex-row sm:items-end sm:justify-between"
+      >
         <div>
           <h1 class="text-2xl font-bold tracking-normal text-white">Edit Profile</h1>
           <p class="mt-2 text-sm text-zinc-500">Basic information</p>
@@ -79,7 +81,9 @@ async function handleAvatarChange(event: Event) {
                 shape="circle"
               />
               <div class="min-w-0">
-                <p class="truncate text-base font-bold text-white">{{ displayName || auth.displayName }}</p>
+                <p class="truncate text-base font-bold text-white">
+                  {{ displayName || auth.displayName }}
+                </p>
                 <p class="mt-1 truncate text-sm text-zinc-500">{{ auth.profileHandle }}</p>
               </div>
             </div>
