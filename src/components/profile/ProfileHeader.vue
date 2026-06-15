@@ -16,7 +16,9 @@ defineProps<{
 
 <template>
   <section class="border-b border-zinc-900 bg-[#1f1f1f] px-4 py-7 text-white sm:px-6 lg:px-8">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-start md:justify-between">
+    <div
+      class="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-start md:justify-between"
+    >
       <div class="flex min-w-0 items-start gap-4 sm:gap-5">
         <UserAvatar
           :src="avatarUrl"
@@ -28,7 +30,9 @@ defineProps<{
 
         <div class="min-w-0 pt-1">
           <div class="flex flex-wrap items-center gap-3">
-            <h1 class="min-w-0 break-words text-2xl font-bold tracking-normal text-white sm:text-3xl">
+            <h1
+              class="min-w-0 break-words text-2xl font-bold tracking-normal text-white sm:text-3xl"
+            >
               {{ displayName }}
             </h1>
 
