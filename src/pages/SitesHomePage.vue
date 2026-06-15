@@ -41,8 +41,8 @@ const store = useSitesStore()
 const previews = shallowRef<Record<string, SitePreviewEntry>>({})
 const hasQueuedCatalogLoad = shallowRef(true)
 const hasLoadedPreviewIndex = shallowRef(false)
-const isDesktopViewport = typeof window !== 'undefined' &&
-  window.matchMedia('(min-width: 768px)').matches
+const isDesktopViewport =
+  typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches
 const showBelowFoldSections = shallowRef(isDesktopViewport)
 let cancelCatalogLoad: (() => void) | undefined
 let cancelPreviewLoad: (() => void) | undefined
@@ -56,28 +56,37 @@ async function loadPreviewIndex() {
 
 onMounted(() => {
   if (!showBelowFoldSections.value) {
-    cancelBelowFoldRender = scheduleIdleTask(() => {
-      showBelowFoldSections.value = true
-    }, {
-      delay: 6000,
-      timeout: 9000,
-    })
+    cancelBelowFoldRender = scheduleIdleTask(
+      () => {
+        showBelowFoldSections.value = true
+      },
+      {
+        delay: 6000,
+        timeout: 9000,
+      },
+    )
   }
 
-  cancelCatalogLoad = scheduleIdleTask(() => {
-    hasQueuedCatalogLoad.value = false
-    void store.loadSites()
-  }, {
-    delay: 3200,
-    timeout: 7000,
-  })
+  cancelCatalogLoad = scheduleIdleTask(
+    () => {
+      hasQueuedCatalogLoad.value = false
+      void store.loadSites()
+    },
+    {
+      delay: 3200,
+      timeout: 7000,
+    },
+  )
 
-  cancelPreviewLoad = scheduleIdleTask(() => {
-    void loadPreviewIndex()
-  }, {
-    delay: 3600,
-    timeout: 8000,
-  })
+  cancelPreviewLoad = scheduleIdleTask(
+    () => {
+      void loadPreviewIndex()
+    },
+    {
+      delay: 3600,
+      timeout: 8000,
+    },
+  )
 })
 
 onUnmounted(() => {
@@ -133,7 +142,8 @@ const siteGroups: SiteGroupDefinition[] = [
     key: 'ai',
     name: 'AI',
     route: '/sites/ai',
-    description: 'Chat labs, model APIs, image studios, automation tools, agent skills, research surfaces, and builder stacks.',
+    description:
+      'Chat labs, model APIs, image studios, automation tools, agent skills, research surfaces, and builder stacks.',
     accent: '#39ffb4',
     subroutes: [
       { label: 'Agent Skills', route: '/sites/ai/agent-skills', subcategory: 'agent-skills' },
@@ -146,7 +156,8 @@ const siteGroups: SiteGroupDefinition[] = [
     key: 'design',
     name: 'Design',
     route: '/sites/design',
-    description: 'Inspiration, fonts, 3D libraries, icon sources, prompts, design utilities, and visual systems.',
+    description:
+      'Inspiration, fonts, 3D libraries, icon sources, prompts, design utilities, and visual systems.',
     accent: '#ff5f8f',
     subroutes: [
       { label: 'Inspiration', route: '/sites/design/inspiration', subcategory: 'inspiration' },
@@ -158,12 +169,21 @@ const siteGroups: SiteGroupDefinition[] = [
     key: 'development',
     name: 'Development',
     route: '/sites/development',
-    description: 'Cloud hosting, learning paths, references, tooling, CLI agents, UI libraries, repos, and MCP.',
+    description:
+      'Cloud hosting, learning paths, references, tooling, CLI agents, UI libraries, repos, and MCP.',
     accent: '#7aa7ff',
     subroutes: [
-      { label: 'Cloud & Hosting', route: '/sites/development/cloud-hosting', subcategory: 'cloud-hosting' },
+      {
+        label: 'Cloud & Hosting',
+        route: '/sites/development/cloud-hosting',
+        subcategory: 'cloud-hosting',
+      },
       { label: 'CLI Tools', route: '/sites/development/cli-tools', subcategory: 'cli-tools' },
-      { label: 'UI Libraries', route: '/sites/development/ui-libraries', subcategory: 'ui-libraries' },
+      {
+        label: 'UI Libraries',
+        route: '/sites/development/ui-libraries',
+        subcategory: 'ui-libraries',
+      },
     ],
   },
   {
@@ -181,10 +201,15 @@ const siteGroups: SiteGroupDefinition[] = [
     key: 'downloads',
     name: 'Downloads',
     route: '/sites/downloads',
-    description: 'Game, VFX, software, torrent, and movie download references kept in one scan-friendly lane.',
+    description:
+      'Game, VFX, software, torrent, and movie download references kept in one scan-friendly lane.',
     accent: '#ff8c1a',
     subroutes: [
-      { label: 'Software', route: '/sites/downloads/software-download', subcategory: 'software-download' },
+      {
+        label: 'Software',
+        route: '/sites/downloads/software-download',
+        subcategory: 'software-download',
+      },
       { label: 'Games', route: '/sites/downloads/game-download', subcategory: 'game-download' },
       { label: 'VFX', route: '/sites/downloads/vfx-download', subcategory: 'vfx-download' },
     ],
@@ -217,7 +242,7 @@ function getRouteLabel(slug: string | null) {
   const generatedLabel = slug
     .split('-')
     .filter(Boolean)
-    .map(part => part[0]?.toUpperCase() + part.slice(1))
+    .map((part) => part[0]?.toUpperCase() + part.slice(1))
     .join(' ')
 
   return routeLabels[slug] || generatedLabel
@@ -249,7 +274,9 @@ function getPopularSites(sites: Site[]) {
 }
 
 const isLoading = computed(() => hasQueuedCatalogLoad.value || (store.loading && !store.loaded))
-const canRenderShowcase = computed(() => hasLoadedPreviewIndex.value && showcaseItems.value.length > 0)
+const canRenderShowcase = computed(
+  () => hasLoadedPreviewIndex.value && showcaseItems.value.length > 0,
+)
 
 const previewItems = computed(() =>
   getPopularSites(store.allSites.filter(hasPreview))
@@ -287,7 +314,7 @@ const categorySummaries = computed<SitesHomeCategorySummary[]>(() =>
       description: group.description,
       countLabel: formatCountLabel(sites.length, store.loaded, 'site'),
       accent: group.accent,
-      subroutes: group.subroutes.map(subroute => ({
+      subroutes: group.subroutes.map((subroute) => ({
         label: subroute.label,
         to: subroute.route,
         countLabel: formatCount(
@@ -330,16 +357,9 @@ const showcaseItems = computed(() => {
 
 <template>
   <div class="sites-home-page">
-    <SitesHomeHero
-      :metrics="metrics"
-      :preview-items="previewItems"
-      :is-loading="isLoading"
-    />
+    <SitesHomeHero :metrics="metrics" :preview-items="previewItems" :is-loading="isLoading" />
     <div class="sites-home-page__below-fold">
-      <SitesHomeCategoryDeck
-        v-if="showBelowFoldSections"
-        :summaries="categorySummaries"
-      />
+      <SitesHomeCategoryDeck v-if="showBelowFoldSections" :summaries="categorySummaries" />
       <SitesHomeShowcase
         v-if="showBelowFoldSections && canRenderShowcase"
         :items="showcaseItems"
