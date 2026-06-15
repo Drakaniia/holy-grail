@@ -16,25 +16,27 @@ const props = defineProps<{
   isLoading: boolean
 }>()
 
-const isDesktopViewport = typeof window !== 'undefined' &&
-  window.matchMedia('(min-width: 768px)').matches
+const isDesktopViewport =
+  typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches
 const showPreviewField = shallowRef(isDesktopViewport)
 let cancelPreviewFieldRender: (() => void) | undefined
 
 const previewCountLabel = computed(() => props.previewItems.length)
 
-function handleImageError() {
-}
+function handleImageError() {}
 
 onMounted(() => {
   if (showPreviewField.value) return
 
-  cancelPreviewFieldRender = scheduleIdleTask(() => {
-    showPreviewField.value = true
-  }, {
-    delay: 6000,
-    timeout: 9000,
-  })
+  cancelPreviewFieldRender = scheduleIdleTask(
+    () => {
+      showPreviewField.value = true
+    },
+    {
+      delay: 6000,
+      timeout: 9000,
+    },
+  )
 })
 
 onUnmounted(() => {
@@ -67,12 +69,10 @@ onUnmounted(() => {
           <Sparkles class="h-4 w-4" aria-hidden="true" />
           Curated web shelf
         </p>
-        <h1 id="sites-home-title" class="sites-home-hero__title">
-          Browse by signal.
-        </h1>
+        <h1 id="sites-home-title" class="sites-home-hero__title">Browse by signal.</h1>
         <p class="sites-home-hero__summary">
-          A visual front door for AI builders, design references, developer platforms,
-          streaming shelves, downloads, and the odd tools worth keeping close.
+          A visual front door for AI builders, design references, developer platforms, streaming
+          shelves, downloads, and the odd tools worth keeping close.
         </p>
 
         <div class="sites-home-hero__actions" aria-label="Featured site collections">
@@ -85,7 +85,10 @@ onUnmounted(() => {
             <Palette class="h-4 w-4" aria-hidden="true" />
             Inspiration
           </RouterLink>
-          <RouterLink to="/sites/development/ui-libraries" class="sites-home-hero__secondary-action">
+          <RouterLink
+            to="/sites/development/ui-libraries"
+            class="sites-home-hero__secondary-action"
+          >
             <Boxes class="h-4 w-4" aria-hidden="true" />
             UI kits
           </RouterLink>
@@ -150,7 +153,12 @@ onUnmounted(() => {
   pointer-events: none;
   content: '';
   background:
-    linear-gradient(90deg, rgba(31, 31, 31, 0.92), rgba(31, 31, 31, 0.42) 58%, rgba(31, 31, 31, 0.9)),
+    linear-gradient(
+      90deg,
+      rgba(31, 31, 31, 0.92),
+      rgba(31, 31, 31, 0.42) 58%,
+      rgba(31, 31, 31, 0.9)
+    ),
     radial-gradient(circle at 82% 20%, rgba(57, 255, 180, 0.12), transparent 20rem);
 }
 
@@ -358,8 +366,7 @@ onUnmounted(() => {
   min-height: 9rem;
   border-radius: 0.5rem;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 62%),
-    rgba(255, 255, 255, 0.04);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 62%), rgba(255, 255, 255, 0.04);
 }
 
 .sites-home-hero__main-preview.sites-home-hero__preview-skeleton,
@@ -369,15 +376,18 @@ onUnmounted(() => {
 
 :global(html.light .sites-home-hero) {
   border-bottom-color: var(--mocha-border);
-  background:
-    linear-gradient(135deg, rgba(255, 140, 26, 0.2), transparent 24rem),
-    var(--mocha-bg);
+  background: linear-gradient(135deg, rgba(255, 140, 26, 0.2), transparent 24rem), var(--mocha-bg);
   color: var(--mocha-text);
 }
 
 :global(html.light .sites-home-hero::before) {
   background:
-    linear-gradient(90deg, rgba(245, 238, 230, 0.94), rgba(245, 238, 230, 0.34) 58%, rgba(245, 238, 230, 0.9)),
+    linear-gradient(
+      90deg,
+      rgba(245, 238, 230, 0.94),
+      rgba(245, 238, 230, 0.34) 58%,
+      rgba(245, 238, 230, 0.9)
+    ),
     radial-gradient(circle at 82% 20%, rgba(4, 120, 87, 0.1), transparent 20rem);
 }
 
