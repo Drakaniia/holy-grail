@@ -40,7 +40,9 @@ const installUrl = computed(() => {
   return extension.value?.website || ''
 })
 
-const hasDistinctDocs = computed(() => Boolean(extension.value?.docs && extension.value.docs !== extension.value.website))
+const hasDistinctDocs = computed(() =>
+  Boolean(extension.value?.docs && extension.value.docs !== extension.value.website),
+)
 
 function formatNumber(num: number): string {
   if (num >= 1000000) {
@@ -108,17 +110,26 @@ function renderStars(rating: number): string {
           <div class="flex min-w-0 items-start gap-4">
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-3 mb-2">
-                <h1 class="min-w-0 break-words text-2xl font-bold text-white">{{ extension.name }}</h1>
+                <h1 class="min-w-0 break-words text-2xl font-bold text-white">
+                  {{ extension.name }}
+                </h1>
                 <CheckCircle2 v-if="extension.verified" class="w-5 h-5 text-green-500" />
-                <span v-if="extension.version" class="text-sm text-gray-400">v{{ extension.version }}</span>
+                <span v-if="extension.version" class="text-sm text-gray-400"
+                  >v{{ extension.version }}</span
+                >
               </div>
 
               <!-- Rating and Users -->
               <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-3">
-                <span v-if="extension.chromeWebStoreRating > 0" class="flex items-center gap-1 text-amber-400">
+                <span
+                  v-if="extension.chromeWebStoreRating > 0"
+                  class="flex items-center gap-1 text-amber-400"
+                >
                   <Star class="w-4 h-4 fill-amber-400" />
                   {{ extension.chromeWebStoreRating.toFixed(1) }}
-                  <span class="text-amber-400/70">{{ renderStars(extension.chromeWebStoreRating) }}</span>
+                  <span class="text-amber-400/70">{{
+                    renderStars(extension.chromeWebStoreRating)
+                  }}</span>
                 </span>
                 <span v-if="extension.userCount > 0" class="flex items-center gap-1">
                   <Users class="w-4 h-4" />
@@ -132,7 +143,12 @@ function renderStars(rating: number): string {
                   <Shield class="w-4 h-4" />
                   {{ extension.license }}
                 </span>
-                <a v-if="extension.sourceCode" :href="extension.sourceCode" target="_blank" class="flex items-center gap-1 hover:text-accent-400 transition-colors">
+                <a
+                  v-if="extension.sourceCode"
+                  :href="extension.sourceCode"
+                  target="_blank"
+                  class="flex items-center gap-1 hover:text-accent-400 transition-colors"
+                >
                   <Code2 class="w-4 h-4" />
                   Source code
                 </a>
@@ -178,7 +194,9 @@ function renderStars(rating: number): string {
             class="border border-gray-800 rounded-lg p-4"
           >
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0">
+              <div
+                class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0"
+              >
                 <CheckCircle2 class="w-4 h-4 text-gray-400" />
               </div>
               <div>
@@ -200,7 +218,9 @@ function renderStars(rating: number): string {
             class="border border-gray-800 rounded-lg p-4"
           >
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0">
+              <div
+                class="w-8 h-8 rounded-lg bg-[#1f1f1f] border border-gray-700 flex items-center justify-center flex-shrink-0"
+              >
                 <Layers class="w-4 h-4 text-gray-500" />
               </div>
               <div>
@@ -263,12 +283,18 @@ function renderStars(rating: number): string {
             <div class="flex items-start gap-3 mb-3">
               <div class="flex-1 min-w-0">
                 <div class="flex items-center gap-2">
-                  <h4 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">{{ tool.name }}</h4>
+                  <h4
+                    class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate"
+                  >
+                    {{ tool.name }}
+                  </h4>
                   <CheckCircle2 v-if="tool.verified" class="w-4 h-4 text-green-500 flex-shrink-0" />
                 </div>
               </div>
             </div>
-            <p class="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">{{ tool.description }}</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-3 line-clamp-2">
+              {{ tool.description }}
+            </p>
             <div class="flex items-center gap-3 text-xs text-gray-500">
               <div v-if="tool.stars > 0" class="flex items-center gap-1">
                 <Star class="w-3.5 h-3.5" />
@@ -313,8 +339,7 @@ function renderStars(rating: number): string {
 .ext-detail-card {
   border-color: #1f2937;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%),
-    #1f1f1f;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f;
 }
 
 .ext-detail-card:hover {
