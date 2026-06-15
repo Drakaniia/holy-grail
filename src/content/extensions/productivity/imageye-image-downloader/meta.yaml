@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: "5.30.1"
+version: '5.30.1'
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Chrome Web Store
 website: https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm
 docs: https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm
-sourceCode: ""
+sourceCode: ''
 icon: imageye-image-downloader
 verified: true
 featured: false
