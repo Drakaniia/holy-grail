@@ -31,8 +31,7 @@ interface BookmarkActionResult {
   requiresAuth?: boolean
 }
 
-const BOOKMARK_COLUMNS =
-  'id,user_id,resource_type,resource_slug,title,url,category,created_at'
+const BOOKMARK_COLUMNS = 'id,user_id,resource_type,resource_slug,title,url,category,created_at'
 const SUPABASE_CONFIG_ERROR = 'Supabase is not configured for bookmarks yet.'
 
 function getBookmarkKey(type: BookmarkResourceType, slug: string) {
@@ -61,7 +60,12 @@ export const useBookmarksStore = defineStore('bookmarks', () => {
   const actionError = shallowRef<string | null>(null)
 
   const bookmarkKeys = computed(
-    () => new Set(bookmarks.value.map(bookmark => getBookmarkKey(bookmark.resource_type, bookmark.resource_slug)))
+    () =>
+      new Set(
+        bookmarks.value.map((bookmark) =>
+          getBookmarkKey(bookmark.resource_type, bookmark.resource_slug),
+        ),
+      ),
   )
   const bookmarkCount = computed(() => bookmarks.value.length)
 
@@ -135,7 +139,7 @@ export const useBookmarksStore = defineStore('bookmarks', () => {
         throw error
       }
 
-      bookmarks.value = bookmarks.value.filter(bookmark => bookmark.id !== id)
+      bookmarks.value = bookmarks.value.filter((bookmark) => bookmark.id !== id)
       return { ok: true }
     } catch (error) {
       const message = getBookmarkErrorMessage(error)
@@ -148,10 +152,10 @@ export const useBookmarksStore = defineStore('bookmarks', () => {
 
   async function removeBookmarkByResource(
     type: BookmarkResourceType,
-    slug: string
+    slug: string,
   ): Promise<BookmarkActionResult> {
     const bookmark = bookmarks.value.find(
-      item => item.resource_type === type && item.resource_slug === slug
+      (item) => item.resource_type === type && item.resource_slug === slug,
     )
 
     if (!bookmark) {
