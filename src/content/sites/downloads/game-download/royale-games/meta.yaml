@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Bookmark
 lastCommit: Imported May 20, 2026
 lastRelease: Bookmark
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://royale-games.com/
 docs: https://royale-games.com/
-sourceCode: ""
+sourceCode: ''
 icon: royale-games
 verified: false
 featured: false
@@ -58,8 +58,8 @@ similarTools:
     verified: false
     website: https://ig-repacks.com/browse.html
   - slug: igrovuha
-    name: "Minecraft: Bedrock Edition v1.21.101"
-    description: "Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources."
+    name: 'Minecraft: Bedrock Edition v1.21.101'
+    description: 'Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources.'
     stars: 0
     addedDaysAgo: 0
     verified: false
