@@ -1,5 +1,5 @@
 slug: lottiefiles
-name: "LottieFiles: Download Free lightweight animations for website & apps."
+name: 'LottieFiles: Download Free lightweight animations for website & apps.'
 description: >-
   LottieFiles: Download Free lightweight animations for website & apps. bookmarked for design tools
   resources.
@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://lottiefiles.com/
 docs: https://lottiefiles.com/
-sourceCode: ""
+sourceCode: ''
 icon: lottiefiles
 verified: false
 featured: false
@@ -31,7 +31,7 @@ tags:
   - design
   - design-tools
   - tools
-atGlance: "LottieFiles: Download Free lightweight animations for website & apps."
+atGlance: 'LottieFiles: Download Free lightweight animations for website & apps.'
 fullDescription: >-
   LottieFiles: Download Free lightweight animations for website & apps. is kept as a design tools
   resource for design inspiration, assets, and reference work.
