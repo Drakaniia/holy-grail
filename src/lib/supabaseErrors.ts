@@ -32,18 +32,24 @@ async function readResponseErrorMessage(response: Response) {
   const contentType = response.headers.get('Content-Type') ?? ''
 
   if (contentType.includes('application/json')) {
-    const body = await response.clone().json().catch(() => null)
+    const body = await response
+      .clone()
+      .json()
+      .catch(() => null)
 
     if (isRecord(body)) {
       return (
-        readString(body.error) ??
-        readString(body.message) ??
-        readString(body.error_description)
+        readString(body.error) ?? readString(body.message) ?? readString(body.error_description)
       )
     }
   }
 
-  return readString(await response.clone().text().catch(() => ''))
+  return readString(
+    await response
+      .clone()
+      .text()
+      .catch(() => ''),
+  )
 }
 
 export function getSupabaseErrorMessage(error: unknown, fallback = 'Request failed.'): string {
@@ -60,9 +66,7 @@ export function getSupabaseErrorMessage(error: unknown, fallback = 'Request fail
   }
 
   const message =
-    readString(error.message) ??
-    readString(error.error_description) ??
-    readString(error.error)
+    readString(error.message) ?? readString(error.error_description) ?? readString(error.error)
   const details = readString(error.details)
   const hint = readString(error.hint)
   const code = readString(error.code)
