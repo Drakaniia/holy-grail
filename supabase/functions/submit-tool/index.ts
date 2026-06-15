@@ -92,8 +92,8 @@ function readServiceRoleKey() {
 
     if (parsed && typeof parsed === 'object') {
       const values = Object.values(parsed as Record<string, unknown>)
-      const secretKey = values.find((value): value is string =>
-        typeof value === 'string' && value.trim().length > 0
+      const secretKey = values.find(
+        (value): value is string => typeof value === 'string' && value.trim().length > 0,
       )
 
       return secretKey?.trim() ?? ''
@@ -120,7 +120,7 @@ function getAllowedOrigins() {
 
   return new Set(
     origins
-      .map(origin => origin.trim())
+      .map((origin) => origin.trim())
       .filter(Boolean)
       .map(normalizeOrigin),
   )
@@ -138,7 +138,7 @@ function getCorsHeaders(origin: string | null) {
       'Access-Control-Allow-Headers': CORS_ALLOWED_HEADERS,
       'Access-Control-Allow-Methods': CORS_ALLOWED_METHODS,
       'Access-Control-Max-Age': '86400',
-      'Vary': 'Origin',
+      Vary: 'Origin',
     },
   }
 }
@@ -227,7 +227,11 @@ function getAdminUrl() {
   }
 
   const siteUrl = Deno.env.get('PUBLIC_SITE_URL')?.trim()
-  if (siteUrl && !siteUrl.includes('your-real-vercel-app') && !siteUrl.includes('your-vercel-domain')) {
+  if (
+    siteUrl &&
+    !siteUrl.includes('your-real-vercel-app') &&
+    !siteUrl.includes('your-vercel-domain')
+  ) {
     return new URL('/admin', siteUrl).toString()
   }
 
@@ -253,7 +257,9 @@ function buildEmail(submission: NormalizedSubmission, adminUrl: string) {
     submission.submitted_by_email ? `Submitted by: ${submission.submitted_by_email}` : null,
     '',
     `Review: ${adminUrl}`,
-  ].filter(Boolean).join('\n')
+  ]
+    .filter(Boolean)
+    .join('\n')
 
   const html = `
     <div style="font-family:Inter,Arial,sans-serif;color:#111827;line-height:1.5">
@@ -304,9 +310,10 @@ async function notifyAdmin(submission: NormalizedSubmission) {
 }
 
 function getClientIp(req: Request) {
-  const forwardedFor = req.headers.get('x-forwarded-for')
+  const forwardedFor = req.headers
+    .get('x-forwarded-for')
     ?.split(',')
-    .map(value => value.trim())
+    .map((value) => value.trim())
     .filter(Boolean)
 
   return (
@@ -320,7 +327,7 @@ function getClientIp(req: Request) {
 async function sha256Hex(value: string) {
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value))
   return Array.from(new Uint8Array(digest))
-    .map(byte => byte.toString(16).padStart(2, '0'))
+    .map((byte) => byte.toString(16).padStart(2, '0'))
     .join('')
 }
 
@@ -386,7 +393,7 @@ Deno.serve(async (req) => {
 
   if (req.method !== 'POST') {
     return jsonResponse({ error: 'Method not allowed.' }, 405, corsHeaders, {
-      'Allow': 'POST, OPTIONS',
+      Allow: 'POST, OPTIONS',
     })
   }
 
@@ -410,21 +417,17 @@ Deno.serve(async (req) => {
 
   const rateLimit = await checkRateLimit(adminClient, req)
   if (!rateLimit.allowed) {
-    return jsonResponse(
-      { error: 'Too many submissions. Try again later.' },
-      429,
-      corsHeaders,
-      {
-        'Retry-After': String(rateLimit.retry_after_seconds),
-        'X-RateLimit-Remaining': '0',
-      },
-    )
+    return jsonResponse({ error: 'Too many submissions. Try again later.' }, 429, corsHeaders, {
+      'Retry-After': String(rateLimit.retry_after_seconds),
+      'X-RateLimit-Remaining': '0',
+    })
   }
 
   const body = await req.json().catch(() => null)
-  const rawSubmission = body && typeof body === 'object'
-    ? (body as { submission?: SubmissionPayload }).submission ?? null
-    : null
+  const rawSubmission =
+    body && typeof body === 'object'
+      ? ((body as { submission?: SubmissionPayload }).submission ?? null)
+      : null
   const user = await getUserFromRequest(adminClient, req)
   const normalized = normalizeSubmission(rawSubmission, user)
 
