@@ -38,7 +38,7 @@ const ISSUE_LABELS: Record<SiteIssueType, string> = {
 
 const displayReports = computed(() => {
   if (activeTab.value === 'all') return admin.siteIssueReports
-  return admin.siteIssueReports.filter(report => report.status === activeTab.value)
+  return admin.siteIssueReports.filter((report) => report.status === activeTab.value)
 })
 
 async function resolve(id: string) {
@@ -260,9 +260,7 @@ function formatDate(value: string | null) {
               <span>Slug {{ report.slug }}</span>
               <span v-if="report.reporter_email">By {{ report.reporter_email }}</span>
               <span>Reported {{ formatDate(report.created_at) }}</span>
-              <span v-if="report.resolved_at">
-                Reviewed {{ formatDate(report.resolved_at) }}
-              </span>
+              <span v-if="report.resolved_at"> Reviewed {{ formatDate(report.resolved_at) }} </span>
             </div>
           </div>
 
