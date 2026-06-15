@@ -15,12 +15,7 @@ defineProps<{
     </div>
 
     <div class="home-directory__rows">
-      <RouterLink
-        v-for="row in rows"
-        :key="row.index"
-        :to="row.to"
-        class="home-directory__row"
-      >
+      <RouterLink v-for="row in rows" :key="row.index" :to="row.to" class="home-directory__row">
         <span class="home-directory__index">{{ row.index }}</span>
         <span class="home-directory__name">
           <span>{{ row.label }}</span>
