@@ -1,6 +1,6 @@
 slug: turbosquid
-name: "3D Models for Professionals :: TurboSquid"
-description: "3D Models for Professionals :: TurboSquid bookmarked for 3d resources."
+name: '3D Models for Professionals :: TurboSquid'
+description: '3D Models for Professionals :: TurboSquid bookmarked for 3d resources.'
 category: 3D
 parentCategory: design
 subcategory: 3d
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Bookmark
 lastCommit: Imported May 20, 2026
 lastRelease: Bookmark
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://www.turbosquid.com/
 docs: https://www.turbosquid.com/
-sourceCode: ""
+sourceCode: ''
 icon: turbosquid
 verified: false
 featured: false
@@ -28,13 +28,13 @@ tags:
   - bookmark
   - design
   - 3d
-atGlance: "3D Models for Professionals :: TurboSquid"
+atGlance: '3D Models for Professionals :: TurboSquid'
 fullDescription: >-
   3D Models for Professionals :: TurboSquid is kept as a 3d resource for design inspiration, assets,
   and reference work.
 coreFeatures:
   - name: Design Resource
-    description: "3D Models for Professionals :: TurboSquid is cataloged as a 3d resource for design work."
+    description: '3D Models for Professionals :: TurboSquid is cataloged as a 3d resource for design work.'
     icon: check
   - name: Visual Reference
     description: Useful as inspiration, tooling, assets, or implementation reference.
