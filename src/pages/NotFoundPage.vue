@@ -26,9 +26,7 @@ function goBack() {
       />
 
       <p class="not-found-page__eyebrow">404</p>
-      <h1 id="not-found-title" class="not-found-page__title">
-        This page doesn't exist
-      </h1>
+      <h1 id="not-found-title" class="not-found-page__title">This page doesn't exist</h1>
       <p class="not-found-page__message">
         Oops... this page seems to have wandered off.<br />
         It might have been moved, renamed, or decided to take a vacation.
@@ -58,8 +56,7 @@ function goBack() {
   place-items: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 24%, rgba(44, 98, 255, 0.1), transparent 21rem),
-    #1f1f1f;
+    radial-gradient(circle at 50% 24%, rgba(44, 98, 255, 0.1), transparent 21rem), #1f1f1f;
   color: #ffffff;
   color-scheme: dark;
   padding: 2rem 1rem;
