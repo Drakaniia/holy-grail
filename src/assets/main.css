@@ -373,3 +373,12 @@ html.light .navbar-search__shortcut kbd {
   background: rgba(255, 255, 255, 0.55) !important;
   color: var(--mocha-text) !important;
 }
+
+html.light .btn-primary {
+  background-color: var(--color-accent-500) !important;
+  color: white !important;
+}
+
+html.light .btn-primary:hover {
+  background-color: var(--color-accent-600) !important;
+}

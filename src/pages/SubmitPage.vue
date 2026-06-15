@@ -555,7 +555,7 @@ function resetForm() {
               v-if="activeStep !== 'review'"
               type="button"
               :disabled="status === 'loading'"
-              class="inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
+              class="btn-primary inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
               @click="goNext"
             >
               <span>{{ nextButtonLabel }}</span>
@@ -566,7 +566,7 @@ function resetForm() {
               v-else
               type="submit"
               :disabled="status === 'loading' || !canContinue"
-              class="inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
+              class="btn-primary inline-flex h-11 items-center justify-center gap-2 bg-white px-5 text-sm font-bold text-[#1f1f1f] transition hover:bg-accent-200 disabled:cursor-not-allowed disabled:opacity-60"
             >
               <Loader2 v-if="status === 'loading'" class="h-4 w-4 animate-spin" />
               <Send v-else class="h-4 w-4" />

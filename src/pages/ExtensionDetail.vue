@@ -86,7 +86,7 @@ function renderStars(rating: number): string {
             :href="installUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#1f1f1f] transition-colors hover:bg-gray-200"
+            class="btn-primary inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#1f1f1f] transition-colors hover:bg-gray-200"
           >
             <Download class="w-4 h-4" />
             Add to Chrome
