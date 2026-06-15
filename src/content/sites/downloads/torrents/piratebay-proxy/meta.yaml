@@ -1,6 +1,6 @@
 slug: piratebay-proxy
-name: "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites"
-description: "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites bookmarked for torrents resources."
+name: 'PirateBay Proxy: Unblock PirateBay & Pirate Bay sites'
+description: 'PirateBay Proxy: Unblock PirateBay & Pirate Bay sites bookmarked for torrents resources.'
 category: Torrents
 parentCategory: downloads
 subcategory: torrents
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Bookmark
 lastCommit: Imported May 20, 2026
 lastRelease: Bookmark
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://piratebay-proxy.co/
 docs: https://piratebay-proxy.co/
-sourceCode: ""
+sourceCode: ''
 icon: piratebay-proxy
 verified: false
 featured: false
@@ -28,13 +28,13 @@ tags:
   - bookmark
   - downloads
   - torrents
-atGlance: "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites"
+atGlance: 'PirateBay Proxy: Unblock PirateBay & Pirate Bay sites'
 fullDescription: >-
   PirateBay Proxy: Unblock PirateBay & Pirate Bay sites is kept as a torrents source in the
   downloads collection.
 coreFeatures:
   - name: Download Source
-    description: "PirateBay Proxy: Unblock PirateBay & Pirate Bay sites is cataloged as a torrents bookmark."
+    description: 'PirateBay Proxy: Unblock PirateBay & Pirate Bay sites is cataloged as a torrents bookmark.'
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.
