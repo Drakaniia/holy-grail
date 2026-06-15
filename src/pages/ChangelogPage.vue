@@ -126,13 +126,13 @@ const totalCommits = computed(() =>
 )
 const mergeCommits = computed(() =>
   changelogSections.reduce(
-    (total, section) => total + section.commits.filter(commit => commit.type === 'merge').length,
+    (total, section) => total + section.commits.filter((commit) => commit.type === 'merge').length,
     0,
   ),
 )
 const dependencyCommits = computed(() =>
   changelogSections.reduce(
-    (total, section) => total + section.commits.filter(commit => commit.type === 'deps').length,
+    (total, section) => total + section.commits.filter((commit) => commit.type === 'deps').length,
     0,
   ),
 )
@@ -170,8 +170,8 @@ function goBack() {
         </div>
         <h1>Changelog<span>.</span></h1>
         <p>
-          Every entry below is generated from the local Git history, grouped by date and
-          expanded into highlights plus the full commit index.
+          Every entry below is generated from the local Git history, grouped by date and expanded
+          into highlights plus the full commit index.
         </p>
 
         <dl class="changelog-stats">
@@ -211,8 +211,8 @@ function goBack() {
       <footer class="changelog-source">
         <Sparkles class="h-4 w-4" aria-hidden="true" />
         <p>
-          Source of truth: <code>CHANGELOG.md</code>, generated from every commit reachable
-          from the current branch.
+          Source of truth: <code>CHANGELOG.md</code>, generated from every commit reachable from the
+          current branch.
         </p>
       </footer>
     </main>
@@ -388,8 +388,7 @@ function goBack() {
   border: 1px solid var(--changelog-accent);
   border-radius: 0.85rem;
   background:
-    linear-gradient(135deg, var(--changelog-accent-soft), transparent 75%),
-    var(--changelog-surface);
+    linear-gradient(135deg, var(--changelog-accent-soft), transparent 75%), var(--changelog-surface);
   padding: 1.45rem;
 }
 
