@@ -1,14 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, shallowRef } from 'vue'
 import { useRouter } from 'vue-router'
-import {
-  ArrowLeft,
-  CheckCircle2,
-  Clock3,
-  FileCode2,
-  ShieldCheck,
-  Sparkles,
-} from 'lucide-vue-next'
+import { ArrowLeft, CheckCircle2, Clock3, FileCode2, ShieldCheck, Sparkles } from 'lucide-vue-next'
 import Footer from '@/components/Footer.vue'
 import DocsCodeBlock from '@/components/docs/DocsCodeBlock.vue'
 import DocsOnThisPage from '@/components/docs/DocsOnThisPage.vue'
@@ -34,39 +27,79 @@ const sections = [
 const overviewCards = [
   {
     title: 'Static catalog core',
-    description: 'Published resources live as checked-in YAML under src/content and are regenerated into JSON indexes before Vite serves or builds the app.',
+    description:
+      'Published resources live as checked-in YAML under src/content and are regenerated into JSON indexes before Vite serves or builds the app.',
     icon: FileCode2,
   },
   {
     title: 'Moderated intake',
-    description: 'The publish page collects structured submissions, stores them as pending Supabase rows, and leaves final catalog changes to an admin review pass.',
+    description:
+      'The publish page collects structured submissions, stores them as pending Supabase rows, and leaves final catalog changes to an admin review pass.',
     icon: ShieldCheck,
   },
   {
     title: 'Runtime convenience',
-    description: 'Pinia stores fetch generated indexes from /content, while skill detail pages fetch remote SKILL.md files and cache them in localStorage for 24 hours.',
+    description:
+      'Pinia stores fetch generated indexes from /content, while skill detail pages fetch remote SKILL.md files and cache them in localStorage for 24 hours.',
     icon: Sparkles,
   },
 ]
 
 const routeRows = [
-  { route: '/', owner: 'Standalone home', notes: 'Landing directory, preview strip, and high-level navigation.' },
-  { route: '/sites/:category/:subcategory?', owner: 'SitesPage', notes: 'Category and subcategory catalog browsing.' },
-  { route: '/sites/:slug', owner: 'SiteDetail', notes: 'Resource detail, preview, links, features, and issue reporting.' },
+  {
+    route: '/',
+    owner: 'Standalone home',
+    notes: 'Landing directory, preview strip, and high-level navigation.',
+  },
+  {
+    route: '/sites/:category/:subcategory?',
+    owner: 'SitesPage',
+    notes: 'Category and subcategory catalog browsing.',
+  },
+  {
+    route: '/sites/:slug',
+    owner: 'SiteDetail',
+    notes: 'Resource detail, preview, links, features, and issue reporting.',
+  },
   { route: '/skills/:category', owner: 'SkillsPage', notes: 'Skill category browser.' },
-  { route: '/skills/:slug', owner: 'SkillDetail', notes: 'Skill metadata plus remote SKILL.md content.' },
-  { route: '/publish', owner: 'SubmitPage', notes: 'Public intake flow. /submit remains a compatibility alias.' },
+  {
+    route: '/skills/:slug',
+    owner: 'SkillDetail',
+    notes: 'Skill metadata plus remote SKILL.md content.',
+  },
+  {
+    route: '/publish',
+    owner: 'SubmitPage',
+    notes: 'Public intake flow. /submit remains a compatibility alias.',
+  },
   { route: '/admin', owner: 'AdminPage', notes: 'Authenticated admin review console.' },
-  { route: '/docs', owner: 'DocumentationPage', notes: 'Standalone documentation surface without the app shell.' },
-  { route: '/changelog', owner: 'ChangelogPage', notes: 'Version history generated from the full commit log.' },
+  {
+    route: '/docs',
+    owner: 'DocumentationPage',
+    notes: 'Standalone documentation surface without the app shell.',
+  },
+  {
+    route: '/changelog',
+    owner: 'ChangelogPage',
+    notes: 'Version history generated from the full commit log.',
+  },
 ]
 
 const artifactRows = [
-  { file: 'src/content/sites-index.json', purpose: 'Generated sites catalog consumed by the sites store.' },
+  {
+    file: 'src/content/sites-index.json',
+    purpose: 'Generated sites catalog consumed by the sites store.',
+  },
   { file: 'public/content/sites-index.json', purpose: 'Runtime copy fetched by the browser.' },
-  { file: 'src/content/skills-index.json', purpose: 'Generated skills catalog consumed by the skills store.' },
+  {
+    file: 'src/content/skills-index.json',
+    purpose: 'Generated skills catalog consumed by the skills store.',
+  },
   { file: 'public/content/skills-index.json', purpose: 'Runtime copy fetched by the browser.' },
-  { file: 'public/previews/manifest.json', purpose: 'Static preview manifest written by the preview generator.' },
+  {
+    file: 'public/previews/manifest.json',
+    purpose: 'Static preview manifest written by the preview generator.',
+  },
   { file: 'src/content/site-previews.json', purpose: 'Preview lookup imported by the app.' },
 ]
 
@@ -86,13 +119,20 @@ const statusRows = [
   { status: 'Pending review', meaning: 'Supabase stored the submission and notified the admin.' },
   { status: 'Approved', meaning: 'Admin accepted the submission as worth adding.' },
   { status: 'Rejected', meaning: 'Admin closed the submission with a reason or note.' },
-  { status: 'Published', meaning: 'A checked-in YAML entry exists, generated assets are updated, and the app has been built/deployed.' },
+  {
+    status: 'Published',
+    meaning:
+      'A checked-in YAML entry exists, generated assets are updated, and the app has been built/deployed.',
+  },
 ]
 
 const validationRows = [
   { command: 'bun run type-check', purpose: 'Runs vue-tsc with strict TypeScript settings.' },
   { command: 'bun lint', purpose: 'Runs oxlint first, then ESLint with fixes/cache.' },
-  { command: 'bun run build', purpose: 'Regenerates indexes, type-checks, and builds the Vite app.' },
+  {
+    command: 'bun run build',
+    purpose: 'Regenerates indexes, type-checks, and builds the Vite app.',
+  },
 ]
 
 const troubleshootingRows = [
@@ -205,7 +245,7 @@ onMounted(() => {
   observer = new IntersectionObserver(
     (entries) => {
       const activeEntry = entries
-        .filter(entry => entry.isIntersecting)
+        .filter((entry) => entry.isIntersecting)
         .sort((first, second) => first.boundingClientRect.top - second.boundingClientRect.top)[0]
 
       if (activeEntry?.target.id) {
@@ -251,18 +291,16 @@ onUnmounted(() => {
           </div>
           <h1>Getting <em>started.</em></h1>
           <p>
-            Operate Holy Grail as a curated catalog: add resources, regenerate indexes,
-            review submissions, create previews, and ship changes through the normal
-            validation path.
+            Operate Holy Grail as a curated catalog: add resources, regenerate indexes, review
+            submissions, create previews, and ship changes through the normal validation path.
           </p>
         </header>
 
         <section id="overview" class="docs-section">
           <h2>Overview</h2>
           <p>
-            Holy Grail is not a database-first directory. The public catalog is a static,
-            versioned content system, while Supabase handles intake, review state, and
-            admin notifications.
+            Holy Grail is not a database-first directory. The public catalog is a static, versioned
+            content system, while Supabase handles intake, review state, and admin notifications.
           </p>
 
           <div class="docs-card-grid">
@@ -277,23 +315,22 @@ onUnmounted(() => {
         <section id="local-setup" class="docs-section">
           <h2>Local setup</h2>
           <p>
-            Use Bun for every package and script command. The development server and
-            production build both regenerate catalog indexes before Vite starts.
+            Use Bun for every package and script command. The development server and production
+            build both regenerate catalog indexes before Vite starts.
           </p>
           <DocsCodeBlock label="Start the app" :code="setupCommands" />
           <p>
-            The default local target is <code>http://localhost:5173</code>. If the port is
-            already in use, Vite will choose the next available port and print it in the
-            terminal.
+            The default local target is <code>http://localhost:5173</code>. If the port is already
+            in use, Vite will choose the next available port and print it in the terminal.
           </p>
         </section>
 
         <section id="routes-shell" class="docs-section">
           <h2>Routes and shell</h2>
           <p>
-            The home and auth pages are standalone. Catalog, publishing, admin, account,
-            and documentation pages use the shared app shell with sidebar, top navigation,
-            command palette, and footer.
+            The home and auth pages are standalone. Catalog, publishing, admin, account, and
+            documentation pages use the shared app shell with sidebar, top navigation, command
+            palette, and footer.
           </p>
 
           <div class="docs-table" role="table" aria-label="Holy Grail route map">
@@ -313,15 +350,15 @@ onUnmounted(() => {
         <section id="sites-catalog" class="docs-section">
           <h2>Sites catalog</h2>
           <p>
-            Sites are authored as directories under <code>src/content/sites/</code>. Each
-            resource owns a <code>meta.yaml</code> file with its category, URL, description,
-            tags, feature details, and related tools.
+            Sites are authored as directories under <code>src/content/sites/</code>. Each resource
+            owns a <code>meta.yaml</code> file with its category, URL, description, tags, feature
+            details, and related tools.
           </p>
           <DocsCodeBlock label="Minimal site metadata" :code="siteYamlExample" />
           <p>
-            Manual additions should use stable slugs, meaningful categories, and complete
-            detail sections. Bookmark imports can bootstrap many resources, but the
-            generated metadata still needs a review pass before publishing.
+            Manual additions should use stable slugs, meaningful categories, and complete detail
+            sections. Bookmark imports can bootstrap many resources, but the generated metadata
+            still needs a review pass before publishing.
           </p>
           <DocsCodeBlock label="Bookmark import pipeline" :code="siteImportCommands" />
 
@@ -337,14 +374,14 @@ onUnmounted(() => {
         <section id="skills-catalog" class="docs-section">
           <h2>Skills catalog</h2>
           <p>
-            Skills are cataloged from <code>src/content/skills/&lt;slug&gt;/meta.yaml</code>.
-            The local metadata powers browsing, while the actual <code>SKILL.md</code>
+            Skills are cataloged from <code>src/content/skills/&lt;slug&gt;/meta.yaml</code>. The
+            local metadata powers browsing, while the actual <code>SKILL.md</code>
             content is fetched from the linked GitHub repository at runtime.
           </p>
           <DocsCodeBlock label="Minimal skill metadata" :code="skillYamlExample" />
           <p>
-            Skill content is cached in localStorage for 24 hours to keep detail pages fast
-            without bundling remote markdown into the app.
+            Skill content is cached in localStorage for 24 hours to keep detail pages fast without
+            bundling remote markdown into the app.
           </p>
           <DocsCodeBlock label="Regenerate skills" code="bun run generate:skills" />
         </section>
@@ -352,8 +389,8 @@ onUnmounted(() => {
         <section id="publish-flow" class="docs-section">
           <h2>Publish flow</h2>
           <p>
-            Publishing is a moderated workflow. A contributor can submit a resource, but
-            that does not automatically make it public in the catalog.
+            Publishing is a moderated workflow. A contributor can submit a resource, but that does
+            not automatically make it public in the catalog.
           </p>
 
           <ol class="docs-process-list">
@@ -378,15 +415,15 @@ onUnmounted(() => {
         <section id="admin-review" class="docs-section">
           <h2>Admin review</h2>
           <p>
-            Admin access comes from server-controlled Supabase <code>app_metadata</code>,
-            not user-editable profile metadata. The admin page lists pending submissions,
-            supports approval or rejection, and keeps notes with the reviewed row.
+            Admin access comes from server-controlled Supabase <code>app_metadata</code>, not
+            user-editable profile metadata. The admin page lists pending submissions, supports
+            approval or rejection, and keeps notes with the reviewed row.
           </p>
           <div class="docs-note docs-note--warning">
             <ShieldCheck class="h-4 w-4" aria-hidden="true" />
             <p>
-              Approval means the item is accepted for catalog work. The final public listing
-              still requires a YAML entry, generated assets, validation, and deployment.
+              Approval means the item is accepted for catalog work. The final public listing still
+              requires a YAML entry, generated assets, validation, and deployment.
             </p>
           </div>
         </section>
@@ -394,12 +431,16 @@ onUnmounted(() => {
         <section id="previews" class="docs-section">
           <h2>Previews</h2>
           <p>
-            Site previews are static assets. They are not fetched live at runtime, so every
-            new site needs preview generation before it can look complete in the UI.
+            Site previews are static assets. They are not fetched live at runtime, so every new site
+            needs preview generation before it can look complete in the UI.
           </p>
           <DocsCodeBlock label="Preview commands" :code="previewCommands" />
 
-          <div class="docs-table docs-table--artifacts" role="table" aria-label="Generated artifacts">
+          <div
+            class="docs-table docs-table--artifacts"
+            role="table"
+            aria-label="Generated artifacts"
+          >
             <div class="docs-table__row docs-table__row--head" role="row">
               <span role="columnheader">Artifact</span>
               <span role="columnheader">Purpose</span>
@@ -411,8 +452,8 @@ onUnmounted(() => {
           </div>
 
           <p>
-            If a live site blocks Puppeteer, the generator writes a fallback preview so the
-            catalog entry is never blank.
+            If a live site blocks Puppeteer, the generator writes a fallback preview so the catalog
+            entry is never blank.
           </p>
           <p>
             Run the preview review when images look broken, stale, or like generated fallback
@@ -431,20 +472,17 @@ onUnmounted(() => {
           <DocsCodeBlock label="Submission secrets" :code="supabaseSecretCommands" />
           <p>
             The <code>submit-tool</code> function validates the request origin, applies a
-            server-side rate limit, inserts the pending row with service credentials, and
-            emails the admin after the row is saved.
-            The <code>report-site-issue</code> function uses the same protected path to create
-            broken, legacy, wrong-URL, and other issue rows for the admin dashboard.
-            The <code>delete-account</code> function performs signed-in account deletion with
-            server-side confirmation.
+            server-side rate limit, inserts the pending row with service credentials, and emails the
+            admin after the row is saved. The <code>report-site-issue</code> function uses the same
+            protected path to create broken, legacy, wrong-URL, and other issue rows for the admin
+            dashboard. The <code>delete-account</code> function performs signed-in account deletion
+            with server-side confirmation.
           </p>
         </section>
 
         <section id="validation" class="docs-section">
           <h2>Validation</h2>
-          <p>
-            Use the same sequence as CI before treating a content or UI change as complete.
-          </p>
+          <p>Use the same sequence as CI before treating a content or UI change as complete.</p>
           <DocsCodeBlock label="Verification sequence" :code="validationCommands" />
 
           <div class="docs-table docs-table--status" role="table" aria-label="Validation commands">
@@ -452,7 +490,12 @@ onUnmounted(() => {
               <span role="columnheader">Command</span>
               <span role="columnheader">Purpose</span>
             </div>
-            <div v-for="row in validationRows" :key="row.command" class="docs-table__row" role="row">
+            <div
+              v-for="row in validationRows"
+              :key="row.command"
+              class="docs-table__row"
+              role="row"
+            >
               <code role="cell">{{ row.command }}</code>
               <span role="cell">{{ row.purpose }}</span>
             </div>
@@ -472,8 +515,8 @@ onUnmounted(() => {
         <footer class="docs-finish">
           <Clock3 class="h-4 w-4" aria-hidden="true" />
           <p>
-            The shortest safe path for a new public listing is metadata, preview,
-            generated index, type-check, lint, build, then deploy.
+            The shortest safe path for a new public listing is metadata, preview, generated index,
+            type-check, lint, build, then deploy.
           </p>
           <RouterLink to="/publish">Open publish flow</RouterLink>
         </footer>
