@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ website: >-
   https://labs.google/fx/tools/image-fx?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=
 docs: >-
   https://labs.google/fx/tools/image-fx?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=
-sourceCode: ""
+sourceCode: ''
 icon: labs
 verified: false
 featured: false
