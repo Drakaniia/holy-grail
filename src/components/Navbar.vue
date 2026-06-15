@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
+import { computed, defineAsyncComponent, nextTick, onMounted, onUnmounted, shallowRef, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useSitesStore, type Site } from '@/stores/sites'
@@ -32,20 +32,72 @@ const GITHUB_REPO_URL = 'https://github.com/Drakaniia/holy-grail'
 const GITHUB_REPO_API_URL = 'https://api.github.com/repos/Drakaniia/holy-grail'
 const starCount = shallowRef<number | null>(null)
 const isStarCountLoading = shallowRef(false)
-const formattedStarCount = computed(() => {
-  if (starCount.value === null) return 'Stars'
-
-  return Intl.NumberFormat('en', {
-    notation: 'compact',
-    maximumFractionDigits: 1,
-  }).format(starCount.value)
-})
 const showStarCountSkeleton = computed(() => starCount.value === null && isStarCountLoading.value)
 const starLinkLabel = computed(() =>
   starCount.value === null
     ? 'Open Holy Grail GitHub repository stars'
     : `Open Holy Grail GitHub repository with ${starCount.value.toLocaleString()} stars`,
 )
+const animatedCount = shallowRef(0)
+const hasCountAnimated = shallowRef(false)
+const isCountAnimating = shallowRef(false)
+
+function springOut(t: number): number {
+  const c1 = 1.70158
+  const c3 = c1 + 1
+  return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2)
+}
+
+function animateCount(from: number, to: number, duration: number) {
+  return new Promise<void>(resolve => {
+    const start = performance.now()
+    isCountAnimating.value = true
+
+    function frame(now: number) {
+      const elapsed = now - start
+      const progress = Math.min(elapsed / duration, 1)
+      const eased = springOut(progress)
+      const current = Math.round(from + (to - from) * eased)
+      animatedCount.value = current
+
+      if (progress < 1) {
+        requestAnimationFrame(frame)
+      } else {
+        animatedCount.value = to
+        isCountAnimating.value = false
+        resolve()
+      }
+    }
+
+    requestAnimationFrame(frame)
+  })
+}
+
+watch(starCount, (newVal) => {
+  if (newVal === null || newVal === undefined) return
+  if (hasCountAnimated.value) return
+  hasCountAnimated.value = true
+
+  nextTick(() => {
+    void animateCount(0, newVal, 2000)
+  })
+}, { once: true })
+
+const animatedFormattedCount = computed(() => {
+  return Intl.NumberFormat('en', {
+    notation: 'compact',
+    maximumFractionDigits: 1,
+  }).format(animatedCount.value)
+})
+
+const countDigits = computed(() => {
+  return animatedCount.value.toString().split('').map(Number)
+})
+
+const starFillPercent = computed(() => {
+  if (!starCount.value || starCount.value === 0) return 0
+  return Math.min((animatedCount.value / starCount.value) * 100, 100)
+})
 const collectionLabels: Record<string, string> = {
   '3d': '3D',
   ai: 'AI',
@@ -306,8 +358,37 @@ onUnmounted(() => {
           class="github-star-count-skeleton hg-skeleton"
           aria-hidden="true"
         ></span>
-        <span v-else class="github-star-count">{{ formattedStarCount }}</span>
-        <Star class="github-star-icon h-4 w-4 fill-yellow-500 text-yellow-500" />
+        <span v-else class="github-star-count">
+          <span
+            v-if="hasCountAnimated.value"
+            class="digit-roller-group"
+            aria-hidden="true"
+          >
+            <span
+              v-for="(digit, idx) in countDigits"
+              :key="idx"
+              class="digit-roller"
+            >
+              <span
+                class="digit-strip"
+                :style="{ transform: `translateY(-${digit * 1.2}rem)` }"
+              >
+                <span v-for="n in 10" :key="n">{{ n - 1 }}</span>
+              </span>
+            </span>
+          </span>
+          <span v-else>{{ animatedFormattedCount }}</span>
+        </span>
+        <span class="star-icon-wrapper">
+          <Star class="github-star-icon h-4 w-4 text-gray-400" />
+          <span
+            v-if="hasCountAnimated.value"
+            class="star-fill-overlay"
+            :style="{ clipPath: `inset(${100 - starFillPercent}% 0 0 0)` }"
+          >
+            <Star class="github-star-icon h-4 w-4 fill-yellow-500 text-yellow-500" />
+          </span>
+        </span>
       </a>
 
       <span class="tooltip-shell hidden sm:inline-flex">
@@ -518,12 +599,8 @@ onUnmounted(() => {
   transform: translate(-50%, 0);
 }
 
-.github-stars:hover .github-star-icon {
+.github-stars:hover .star-icon-wrapper {
   animation: star-pop 720ms ease both;
-}
-
-.github-star-count {
-  animation: count-rise 480ms ease both;
 }
 
 .github-star-count-skeleton {
@@ -533,21 +610,58 @@ onUnmounted(() => {
   border-radius: 9999px;
 }
 
-.github-star-icon {
+.github-star-count {
+  position: relative;
+}
+
+.digit-roller-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.digit-roller {
+  display: inline-block;
+  height: 1.2rem;
+  overflow: hidden;
+  vertical-align: middle;
+  line-height: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.digit-strip {
+  display: block;
+  transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.digit-strip > span {
+  display: block;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.star-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   animation: star-breathe 2.2s ease-in-out infinite;
   transform-origin: center;
 }
 
-@keyframes count-rise {
-  from {
-    opacity: 0.62;
-    transform: translateY(2px);
-  }
+.star-fill-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.github-star-icon {
+  display: block;
 }
 
 @keyframes star-breathe {
