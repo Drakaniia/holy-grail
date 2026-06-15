@@ -11,15 +11,11 @@ const sites = useSitesStore()
 const skills = useSkillsStore()
 
 onMounted(() => {
-  void Promise.all([
-    bookmarks.loadBookmarks(true),
-    sites.loadSites(),
-    skills.loadSkills(),
-  ])
+  void Promise.all([bookmarks.loadBookmarks(true), sites.loadSites(), skills.loadSkills()])
 })
 
 const savedItems = computed(() =>
-  bookmarks.bookmarks.map(bookmark => {
+  bookmarks.bookmarks.map((bookmark) => {
     if (bookmark.resource_type === 'site') {
       const site = sites.getSiteBySlug(bookmark.resource_slug)
       return {
@@ -41,7 +37,7 @@ const savedItems = computed(() =>
       route: `/skills/${bookmark.resource_slug}`,
       externalUrl: skill ? `https://github.com/${skill.repoLink}` : bookmark.url,
     }
-  })
+  }),
 )
 
 async function removeBookmark(bookmark: UserBookmark) {
@@ -52,7 +48,9 @@ async function removeBookmark(bookmark: UserBookmark) {
 <template>
   <div class="min-h-full bg-[#1f1f1f] text-white">
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
-      <div class="mb-8 flex flex-col gap-5 border-b border-gray-800 pb-8 md:flex-row md:items-end md:justify-between">
+      <div
+        class="mb-8 flex flex-col gap-5 border-b border-gray-800 pb-8 md:flex-row md:items-end md:justify-between"
+      >
         <div>
           <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-300">
             Saved Library
@@ -64,9 +62,7 @@ async function removeBookmark(bookmark: UserBookmark) {
         </div>
 
         <div class="w-full border border-gray-800 bg-[#1f1f1f] px-5 py-4 sm:w-auto">
-          <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
-            Saved
-          </p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">Saved</p>
           <div class="mt-2 flex items-baseline gap-2">
             <span class="text-3xl font-bold text-white">{{ bookmarks.bookmarkCount }}</span>
             <span class="text-sm text-gray-500">items</span>
@@ -97,7 +93,8 @@ async function removeBookmark(bookmark: UserBookmark) {
         <Bookmark class="mx-auto h-10 w-10 text-gray-600" />
         <h2 class="mt-5 text-2xl font-bold text-white">No bookmarks yet</h2>
         <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-gray-400">
-          Save useful sites and skills from cards or detail pages. They will sync to your Supabase account.
+          Save useful sites and skills from cards or detail pages. They will sync to your Supabase
+          account.
         </p>
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           <RouterLink
@@ -124,7 +121,9 @@ async function removeBookmark(bookmark: UserBookmark) {
           <div class="flex items-start justify-between gap-4">
             <div class="min-w-0">
               <div class="mb-3 flex flex-wrap items-center gap-2">
-                <span class="border border-gray-700 bg-[#1f1f1f] px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-gray-400">
+                <span
+                  class="border border-gray-700 bg-[#1f1f1f] px-2 py-1 text-[10px] font-semibold uppercase tracking-widest text-gray-400"
+                >
                   {{ item.bookmark.resource_type }}
                 </span>
                 <span class="text-xs text-gray-500">{{ item.category }}</span>
@@ -151,7 +150,9 @@ async function removeBookmark(bookmark: UserBookmark) {
             </button>
           </div>
 
-          <div class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-gray-800 pt-4">
+          <div
+            class="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-gray-800 pt-4"
+          >
             <RouterLink
               :to="item.route"
               class="text-sm font-semibold text-accent-300 transition hover:text-accent-100"
