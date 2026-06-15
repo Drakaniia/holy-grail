@@ -53,7 +53,10 @@ function parseArgs(argv) {
       if (!inlineValue) index += 1
     }
     if (key === '--slug' && nextValue) {
-      for (const slug of nextValue.split(',').map(value => value.trim()).filter(Boolean)) {
+      for (const slug of nextValue
+        .split(',')
+        .map((value) => value.trim())
+        .filter(Boolean)) {
         options.slugs.add(slug)
       }
       if (!inlineValue) index += 1
@@ -62,12 +65,12 @@ function parseArgs(argv) {
 
   return {
     ...options,
-    concurrency: Number.isFinite(options.concurrency) && options.concurrency > 0
-      ? Math.min(options.concurrency, 6)
-      : defaults.concurrency,
-    timeout: Number.isFinite(options.timeout) && options.timeout > 0
-      ? options.timeout
-      : defaults.timeout,
+    concurrency:
+      Number.isFinite(options.concurrency) && options.concurrency > 0
+        ? Math.min(options.concurrency, 6)
+        : defaults.concurrency,
+    timeout:
+      Number.isFinite(options.timeout) && options.timeout > 0 ? options.timeout : defaults.timeout,
     limit: Number.isFinite(options.limit) && options.limit > 0 ? options.limit : 0,
   }
 }
@@ -141,7 +144,7 @@ function findBrowserExecutable() {
     path.join(home, 'AppData/Local/Microsoft/Edge/Application/msedge.exe'),
   ]
 
-  return candidates.find(candidate => fs.existsSync(candidate)) || ''
+  return candidates.find((candidate) => fs.existsSync(candidate)) || ''
 }
 
 function sortManifest(manifest) {
@@ -149,7 +152,7 @@ function sortManifest(manifest) {
 }
 
 function pruneManifest(manifest, sites) {
-  const validSlugs = new Set(sites.map(site => site.slug).filter(Boolean))
+  const validSlugs = new Set(sites.map((site) => site.slug).filter(Boolean))
   return Object.fromEntries(Object.entries(manifest).filter(([slug]) => validSlugs.has(slug)))
 }
 
@@ -161,13 +164,13 @@ async function preparePage(page) {
   })
   await page.setUserAgent(
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
-      '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+      '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
   )
   await page.setExtraHTTPHeaders({
     'accept-language': 'en-US,en;q=0.9',
   })
   await page.setRequestInterception(true)
-  page.on('request', request => {
+  page.on('request', (request) => {
     if (request.resourceType() === 'media') {
       void request.abort()
       return
@@ -186,11 +189,11 @@ async function settlePage(page, timeout) {
   await page.evaluate(async () => {
     document.documentElement.style.scrollBehavior = 'auto'
     window.scrollTo(0, Math.min(500, document.body.scrollHeight / 3))
-    await new Promise(resolve => window.setTimeout(resolve, 450))
+    await new Promise((resolve) => window.setTimeout(resolve, 450))
     window.scrollTo(0, 0)
     await document.fonts?.ready
   })
-  await new Promise(resolve => setTimeout(resolve, 500))
+  await new Promise((resolve) => setTimeout(resolve, 500))
 }
 
 async function assertVisualDetail(buffer) {
@@ -360,7 +363,7 @@ async function createFallbackPreview(site, options, reason) {
 }
 
 function eligibleSites(sites, manifest, options) {
-  const filtered = sites.filter(site => {
+  const filtered = sites.filter((site) => {
     if (!site.slug || !site.website) return false
     if (shouldSkipUrl(site.website)) return false
     if (options.slugs.size && !options.slugs.has(site.slug)) return false
@@ -410,7 +413,7 @@ async function main() {
 
   if (!browserPath) {
     throw new Error(
-      'No Chrome or Edge executable found. Install Chrome/Edge or set PREVIEW_BROWSER_PATH.'
+      'No Chrome or Edge executable found. Install Chrome/Edge or set PREVIEW_BROWSER_PATH.',
     )
   }
 
@@ -430,8 +433,8 @@ async function main() {
         timeout: options.timeout,
       },
       null,
-      2
-    )
+      2,
+    ),
   )
 
   if (!queue.length) {
@@ -459,8 +462,8 @@ async function main() {
   try {
     await Promise.all(
       Array.from({ length: options.concurrency }, (_, index) =>
-        runWorker(index + 1, browser, queue, manifest, failures, options)
-      )
+        runWorker(index + 1, browser, queue, manifest, failures, options),
+      ),
     )
   } finally {
     await browser.close()
@@ -484,8 +487,8 @@ async function main() {
         failed: failures.length,
       },
       null,
-      2
-    )
+      2,
+    ),
   )
 }
 
