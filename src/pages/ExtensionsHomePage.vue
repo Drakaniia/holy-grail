@@ -15,20 +15,62 @@ const parentCategory = computed(() => route.params.category as string)
 const subcategory = computed(() => route.params.subcategory as string | undefined)
 
 const categories = [
-  { key: 'writing', name: 'Writing', description: 'Citation, research writing, grammar, and academic workflows', accent: '#39ffb4', count: 0 },
-  { key: 'productivity', name: 'Productivity', description: 'Everyday productivity and browser-based task management', accent: '#7aa7ff', count: 0 },
-  { key: 'developer-tools', name: 'Developer Tools', description: 'Developer workflows, debugging, and web inspection', accent: '#ff5f8f', count: 0 },
-  { key: 'privacy', name: 'Privacy', description: 'Privacy, security, and safer browsing habits', accent: '#a78bfa', count: 0 },
-  { key: 'research', name: 'Research', description: 'Research discovery, note capture, and source management', accent: '#ffd166', count: 0 },
-  { key: 'design', name: 'Design', description: 'Design inspiration, color, typography, and visual workflows', accent: '#ff8c1a', count: 0 },
-  { key: 'automation', name: 'Automation', description: 'Automating repetitive browser tasks and workflows', accent: '#34d399', count: 0 },
+  {
+    key: 'writing',
+    name: 'Writing',
+    description: 'Citation, research writing, grammar, and academic workflows',
+    accent: '#39ffb4',
+    count: 0,
+  },
+  {
+    key: 'productivity',
+    name: 'Productivity',
+    description: 'Everyday productivity and browser-based task management',
+    accent: '#7aa7ff',
+    count: 0,
+  },
+  {
+    key: 'developer-tools',
+    name: 'Developer Tools',
+    description: 'Developer workflows, debugging, and web inspection',
+    accent: '#ff5f8f',
+    count: 0,
+  },
+  {
+    key: 'privacy',
+    name: 'Privacy',
+    description: 'Privacy, security, and safer browsing habits',
+    accent: '#a78bfa',
+    count: 0,
+  },
+  {
+    key: 'research',
+    name: 'Research',
+    description: 'Research discovery, note capture, and source management',
+    accent: '#ffd166',
+    count: 0,
+  },
+  {
+    key: 'design',
+    name: 'Design',
+    description: 'Design inspiration, color, typography, and visual workflows',
+    accent: '#ff8c1a',
+    count: 0,
+  },
+  {
+    key: 'automation',
+    name: 'Automation',
+    description: 'Automating repetitive browser tasks and workflows',
+    accent: '#34d399',
+    count: 0,
+  },
 ]
 
 const categorySummaries = computed(() =>
-  categories.map(cat => ({
+  categories.map((cat) => ({
     ...cat,
     count: store.getExtensionsByParentCategory(cat.key).length,
-  }))
+  })),
 )
 
 const extensions = computed(() => {
@@ -39,9 +81,7 @@ const extensions = computed(() => {
   return base
 })
 
-const featuredExtensions = computed(() =>
-  extensions.value.filter(e => e.featured).slice(0, 6),
-)
+const featuredExtensions = computed(() => extensions.value.filter((e) => e.featured).slice(0, 6))
 
 function formatNumber(num: number): string {
   if (num >= 1000000) return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M'
@@ -81,7 +121,9 @@ function formatNumber(num: number): string {
             class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
           >
             <div class="flex items-start justify-between mb-3">
-              <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors">
+              <h3
+                class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors"
+              >
                 {{ cat.name }}
               </h3>
               <span class="text-xs text-gray-500">{{ cat.count }}</span>
@@ -91,11 +133,18 @@ function formatNumber(num: number): string {
         </div>
       </section>
 
-        <div v-if="store.loading" class="grid grid-cols-1 gap-6">
-          <div v-for="index in 3" :key="index" class="ext-card-skeleton border rounded-xl h-32 animate-pulse" />
+      <div v-if="store.loading" class="grid grid-cols-1 gap-6">
+        <div
+          v-for="index in 3"
+          :key="index"
+          class="ext-card-skeleton border rounded-xl h-32 animate-pulse"
+        />
       </div>
 
-      <div v-else-if="store.loadError" class="border border-red-900/70 bg-red-950/30 px-4 py-4 text-sm text-red-100">
+      <div
+        v-else-if="store.loadError"
+        class="border border-red-900/70 bg-red-950/30 px-4 py-4 text-sm text-red-100"
+      >
         {{ store.loadError }}
       </div>
 
@@ -114,14 +163,19 @@ function formatNumber(num: number): string {
             >
               <div class="flex min-w-0 items-start gap-3">
                 <div class="flex-1 min-w-0">
-                  <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">
+                  <h3
+                    class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate"
+                  >
                     {{ extension.name }}
                   </h3>
                   <p class="text-xs text-gray-400 line-clamp-2 mt-2">
                     {{ extension.description }}
                   </p>
                   <div class="flex items-center gap-3 mt-3 text-xs text-gray-500">
-                    <span v-if="extension.chromeWebStoreRating > 0" class="flex items-center gap-1 text-amber-400">
+                    <span
+                      v-if="extension.chromeWebStoreRating > 0"
+                      class="flex items-center gap-1 text-amber-400"
+                    >
                       <Star class="w-3.5 h-3.5 fill-amber-400" />
                       {{ extension.chromeWebStoreRating.toFixed(1) }}
                     </span>
@@ -150,14 +204,19 @@ function formatNumber(num: number): string {
             >
               <div class="flex min-w-0 items-start gap-3">
                 <div class="flex-1 min-w-0">
-                  <h3 class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate">
+                  <h3
+                    class="text-sm font-semibold text-white group-hover:text-accent-400 transition-colors truncate"
+                  >
                     {{ extension.name }}
                   </h3>
                   <p class="text-xs text-gray-400 line-clamp-2 mt-2">
                     {{ extension.description }}
                   </p>
                   <div class="flex items-center gap-3 mt-3 text-xs text-gray-500">
-                    <span v-if="extension.chromeWebStoreRating > 0" class="flex items-center gap-1 text-amber-400">
+                    <span
+                      v-if="extension.chromeWebStoreRating > 0"
+                      class="flex items-center gap-1 text-amber-400"
+                    >
                       <Star class="w-3.5 h-3.5 fill-amber-400" />
                       {{ extension.chromeWebStoreRating.toFixed(1) }}
                     </span>
@@ -180,8 +239,7 @@ function formatNumber(num: number): string {
 .ext-card {
   border-color: #1f2937;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%),
-    #1f1f1f;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f;
 }
 
 .ext-card:hover {
