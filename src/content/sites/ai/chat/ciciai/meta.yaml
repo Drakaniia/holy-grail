@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://www.ciciai.com/chat/?from_login=1&origin_landing=https%3A%2F%2Fwww.ciciai.com%2F
 docs: https://www.ciciai.com/chat/?from_login=1&origin_landing=https%3A%2F%2Fwww.ciciai.com%2F
-sourceCode: ""
+sourceCode: ''
 icon: ciciai
 verified: false
 featured: false
