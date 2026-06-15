@@ -30,9 +30,7 @@ const summary = computed(() => admin.analyticsSummary)
 const maxDailyActivity = computed(() =>
   Math.max(
     1,
-    ...summary.value.daily.map(
-      point => point.pageViews + point.searches + point.outboundClicks,
-    ),
+    ...summary.value.daily.map((point) => point.pageViews + point.searches + point.outboundClicks),
   ),
 )
 
@@ -165,9 +163,7 @@ async function refreshAnalytics() {
         <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-300">
           Analytics
         </p>
-        <h2 id="admin-analytics-title" class="text-2xl font-bold text-white">
-          Visitor operations
-        </h2>
+        <h2 id="admin-analytics-title" class="text-2xl font-bold text-white">Visitor operations</h2>
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
@@ -224,7 +220,9 @@ async function refreshAnalytics() {
           class="border border-gray-800 bg-[#1f1f1f] p-4"
         >
           <div class="mb-5 flex items-center justify-between gap-3">
-            <p class="min-w-0 truncate text-xs font-semibold uppercase tracking-widest text-gray-500">
+            <p
+              class="min-w-0 truncate text-xs font-semibold uppercase tracking-widest text-gray-500"
+            >
               {{ metric.label }}
             </p>
             <component :is="metric.icon" class="h-4 w-4 shrink-0" :class="metric.tone" />
@@ -237,12 +235,8 @@ async function refreshAnalytics() {
         <section class="border border-gray-800 bg-[#1f1f1f] p-5" aria-labelledby="activity-title">
           <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
-                Activity
-              </p>
-              <h3 id="activity-title" class="mt-1 text-lg font-bold text-white">
-                Daily signal
-              </h3>
+              <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">Activity</p>
+              <h3 id="activity-title" class="mt-1 text-lg font-bold text-white">Daily signal</h3>
             </div>
             <div class="flex flex-wrap gap-3 text-xs text-gray-500">
               <span class="inline-flex items-center gap-1.5">
@@ -284,9 +278,7 @@ async function refreshAnalytics() {
         </section>
 
         <section class="border border-gray-800 bg-[#1f1f1f] p-5" aria-labelledby="visitor-title">
-          <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">
-            Visitor split
-          </p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-gray-500">Visitor split</p>
           <h3 id="visitor-title" class="mt-1 text-lg font-bold text-white">
             Anonymous and signed-in
           </h3>
