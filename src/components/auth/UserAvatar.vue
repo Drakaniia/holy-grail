@@ -14,7 +14,7 @@ const props = withDefaults(
     shape: 'rounded',
     size: 'md',
     src: null,
-  }
+  },
 )
 
 const imageFailed = shallowRef(false)
@@ -31,13 +31,13 @@ const sizeClass = computed(() => {
       return 'h-10 w-10 text-sm'
   }
 })
-const shapeClass = computed(() => props.shape === 'circle' ? 'rounded-full' : 'rounded-lg')
+const shapeClass = computed(() => (props.shape === 'circle' ? 'rounded-full' : 'rounded-lg'))
 
 watch(
   () => props.src,
   () => {
     imageFailed.value = false
-  }
+  },
 )
 </script>
 
