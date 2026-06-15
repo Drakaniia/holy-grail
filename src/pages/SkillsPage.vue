@@ -36,7 +36,7 @@ const filteredSkills = computed(() => {
 })
 
 const categoryFilters = computed(() => {
-  const categories = new Set(filteredSkills.value.map(skill => skill.category))
+  const categories = new Set(filteredSkills.value.map((skill) => skill.category))
   return ['All', ...Array.from(categories).sort()]
 })
 
@@ -46,15 +46,15 @@ const displaySkills = computed(() => {
   if (store.searchQuery) {
     const query = store.searchQuery.toLowerCase()
     result = result.filter(
-      s =>
+      (s) =>
         s.title.toLowerCase().includes(query) ||
         s.description.toLowerCase().includes(query) ||
-        s.tags.some(t => t.toLowerCase().includes(query))
-      )
+        s.tags.some((t) => t.toLowerCase().includes(query)),
+    )
   }
 
   if (store.activeCategory !== 'All') {
-    result = result.filter(skill => skill.category === store.activeCategory)
+    result = result.filter((skill) => skill.category === store.activeCategory)
   }
 
   switch (store.activeTab) {
@@ -85,7 +85,7 @@ const pageRangeStart = computed(() => {
 })
 
 const pageRangeEnd = computed(() =>
-  Math.min(store.currentPage * store.itemsPerPage, displaySkills.value.length)
+  Math.min(store.currentPage * store.itemsPerPage, displaySkills.value.length),
 )
 
 function setPage(page: number) {
@@ -99,12 +99,12 @@ watch(category, () => {
 
 watch(
   () => store.searchQuery,
-  query => {
+  (query) => {
     trackSearchQuery(query, 'skills_search')
   },
 )
 
-watch(totalPages, pages => {
+watch(totalPages, (pages) => {
   if (store.currentPage > pages) {
     setPage(pages)
   }
@@ -129,7 +129,10 @@ watch(totalPages, pages => {
           </div>
 
           <div class="w-full flex-shrink-0 sm:w-auto">
-            <div class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+            <div
+              class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5"
+              style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+            >
               <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
                 LIBRARY PULSE
               </p>
@@ -148,7 +151,10 @@ watch(totalPages, pages => {
     </div>
 
     <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-8">
-      <div class="border border-gray-800 rounded-xl p-4 mb-6" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+      <div
+        class="border border-gray-800 rounded-xl p-4 mb-6"
+        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+      >
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div class="relative min-w-0 flex-1">
             <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -161,11 +167,16 @@ watch(totalPages, pages => {
             />
           </div>
 
-          <div class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto" style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)">
+          <div
+            class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto"
+            style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+          >
             <button
               @click="store.setTab('popular')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="
+                store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+              "
             >
               <TrendingUp class="w-3.5 h-3.5" />
               POPULAR
@@ -173,7 +184,9 @@ watch(totalPages, pages => {
             <button
               @click="store.setTab('trending')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="
+                store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+              "
             >
               <TrendingUp class="w-3.5 h-3.5" />
               TRENDING
@@ -181,7 +194,9 @@ watch(totalPages, pages => {
             <button
               @click="store.setTab('recent')"
               class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
-              :class="store.activeTab === 'recent' ? 'text-white' : 'text-gray-500 hover:text-gray-300'"
+              :class="
+                store.activeTab === 'recent' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+              "
             >
               <Clock class="w-3.5 h-3.5" />
               RECENT
@@ -201,9 +216,11 @@ watch(totalPages, pages => {
             :key="filter"
             @click="store.setCategory(filter)"
             class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
-            :class="store.activeCategory === filter
-              ? 'bg-accent-600 text-white'
-              : 'text-gray-400 hover:text-white border border-gray-700'"
+            :class="
+              store.activeCategory === filter
+                ? 'bg-accent-600 text-white'
+                : 'text-gray-400 hover:text-white border border-gray-700'
+            "
           >
             {{ filter }}
           </button>
@@ -226,18 +243,20 @@ watch(totalPages, pages => {
         {{ store.loadError }}
       </div>
 
-      <div v-else-if="paginatedSkills.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <SkillCard
-          v-for="skill in paginatedSkills"
-          :key="skill.slug"
-          :skill="skill"
-        />
+      <div
+        v-else-if="paginatedSkills.length > 0"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      >
+        <SkillCard v-for="skill in paginatedSkills" :key="skill.slug" :skill="skill" />
       </div>
 
       <div v-else class="text-center py-16">
         <p class="text-gray-500 text-lg">No skills found matching your search.</p>
         <button
-          @click="store.setSearchQuery(''); store.setCategory('All')"
+          @click="
+            store.setSearchQuery('')
+            store.setCategory('All')
+          "
           class="mt-4 text-accent-400 hover:text-accent-300 text-sm"
         >
           Clear filters
