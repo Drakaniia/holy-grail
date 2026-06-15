@@ -58,9 +58,7 @@ function buildSkillsIndex() {
       addedBy: meta.addedBy || '',
       featured: meta.featured || false,
       dateAdded: meta.dateAdded || '',
-      hasLocalContent: fs.existsSync(
-        path.join(path.dirname(yamlPath), 'SKILL.md')
-      ),
+      hasLocalContent: fs.existsSync(path.join(path.dirname(yamlPath), 'SKILL.md')),
     })
   }
 
