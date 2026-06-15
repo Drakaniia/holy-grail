@@ -49,12 +49,15 @@ export function useDeferredAuthStatus(options: DeferredAuthStatusOptions = {}) {
       return
     }
 
-    cancelScheduledLoad = scheduleIdleTask(() => {
-      void loadAuth()
-    }, {
-      delay: options.delay ?? 3500,
-      timeout: options.timeout ?? 7000,
-    })
+    cancelScheduledLoad = scheduleIdleTask(
+      () => {
+        void loadAuth()
+      },
+      {
+        delay: options.delay ?? 3500,
+        timeout: options.timeout ?? 7000,
+      },
+    )
   })
 
   onUnmounted(() => {
