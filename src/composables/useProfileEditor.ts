@@ -186,7 +186,8 @@ export function useProfileEditor() {
       avatarUrl.value = await createAvatarDataUrl(file)
     } catch (error) {
       saveStatus.value = 'error'
-      saveError.value = error instanceof Error ? error.message : 'Avatar image could not be changed.'
+      saveError.value =
+        error instanceof Error ? error.message : 'Avatar image could not be changed.'
     } finally {
       avatarProcessing.value = false
     }
