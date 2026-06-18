@@ -515,6 +515,94 @@
     ]
   },
   {
+    "slug": "digitalplat-freedomain",
+    "name": "DigitalPlat FreeDomain",
+    "description": "Free Domain For Everyone - A platform offering free domain names and management.",
+    "category": "Deployment",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 179000,
+    "watchers": 890,
+    "addedDaysAgo": 0,
+    "license": "AGPL-3.0",
+    "lastCommit": "1 day ago",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 10,
+    "commitsThisYear": 50,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://domain.digitalplat.org",
+    "docs": "https://domain.digitalplat.org",
+    "sourceCode": "https://github.com/DigitalPlatDev/FreeDomain",
+    "icon": "globe",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "domain",
+      "dns",
+      "free"
+    ],
+    "atGlance": "Free Domain For Everyone - A platform offering free domain names and management.",
+    "fullDescription": "DigitalPlat FreeDomain is a non-profit project that provides free domain names (subdomains)  to developers, students, and open-source projects. It offers full DNS control and  compatibility with major providers like Cloudflare.",
+    "coreFeatures": [
+      {
+        "name": "Free Domain Registration",
+        "description": "Offers unique domain names with no strings attached.",
+        "icon": "check"
+      },
+      {
+        "name": "Multiple Extensions",
+        "description": "Supports extensions like .DPDNS.ORG, .US.KG, .QZZ.IO, .XX.KG, and .QD.JE.",
+        "icon": "check"
+      },
+      {
+        "name": "DNS Compatibility",
+        "description": "Allows users to host their domains with popular DNS providers such as Cloudflare or FreeDNS.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Non-Profit Backed",
+        "description": "Operated by the DigitalPlat Foundation, a non-profit organization.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "The platform itself is open-source and community-driven.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "vercel",
+        "name": "Vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 12500,
+        "addedDaysAgo": 2,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "supabase",
+        "name": "Supabase",
+        "description": "The open source Firebase alternative.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      }
+    ]
+  },
+  {
     "slug": "ui-figma-shadcn-ui",
     "name": "Figma - shadcn/ui",
     "description": "Figma - shadcn/ui bookmarked for design tools resources.",

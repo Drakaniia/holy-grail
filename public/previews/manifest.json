@@ -840,6 +840,15 @@
     "height": 600,
     "bytes": 25672
   },
+  "digitalplat-freedomain": {
+    "image": "/previews/digitalplat-freedomain.webp",
+    "small": "/previews/digitalplat-freedomain-sm.webp",
+    "sourceUrl": "https://domain.digitalplat.org/",
+    "capturedAt": "2026-06-18T09:42:04.599Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 31362
+  },
   "dodi-repacks": {
     "image": "/previews/dodi-repacks.webp",
     "small": "/previews/dodi-repacks-sm.webp",
