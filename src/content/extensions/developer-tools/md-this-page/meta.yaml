@@ -1,0 +1,65 @@
+slug: md-this-page
+name: '.MD this page'
+description: Turn any webpage into clean, LLM-ready Markdown in one click.
+category: Chrome Extensions
+parentCategory: developer-tools
+subcategory: developer-tools
+stars: 831
+watchers: 6
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: '1.0.0'
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/md-this-page/banfcmclfmmlbkhionmemhibbjedhikm
+docs: https://github.com/Ademking/MD-This-Page
+sourceCode: https://github.com/Ademking/MD-This-Page
+icon: md-this-page
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - markdown
+  - developer-tools
+  - llm
+  - productivity
+atGlance: Convert any webpage to clean Markdown instantly with one click or keyboard shortcut.
+fullDescription: .MD this page is a Chrome extension that extracts the main content of any webpage, removes clutter, and converts it into well-formatted Markdown. Built for developers, writers, and AI enthusiasts who need to feed web content into LLMs or capture it as structured notes. Powered by Mozilla Readability and Turndown for high-quality output.
+coreFeatures:
+  - name: One-Click Conversion
+    description: Convert any webpage to Markdown instantly via right-click menu or Alt+M keyboard shortcut.
+    icon: check
+  - name: Smart Content Extraction
+    description: Uses Mozilla Readability to isolate the main article content and strip navigation, ads, and clutter.
+    icon: check
+  - name: Configurable Output
+    description: Toggle images, links, metadata, and URLs to customize the Markdown output to your needs.
+    icon: check
+  - name: Multiple Export Options
+    description: Copy to clipboard, save as a file, or generate LLM-optimized prompt strings.
+    icon: check
+additionalFeatures:
+  - name: Preview Panel
+    description: Review the generated Markdown in a dedicated side panel before copying or saving.
+    icon: check
+  - name: Open Source
+    description: Fully open source under MIT license, built with Plasmo, React, and Tailwind CSS.
+    icon: check
+similarTools: []
+extensionSpecific:
+  chromeWebStoreId: banfcmclfmmlbkhionmemhibbjedhikm
+  chromeWebStoreRating: 4.8
+  userCount: 10000
+  permissions:
+    - activeTab
+    - contextMenus
+    - storage
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store
