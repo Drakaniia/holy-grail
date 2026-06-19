@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, watchEffect, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   AlertCircle,
@@ -23,6 +23,18 @@ const store = useSkillsStore()
 
 const slug = computed(() => route.params.slug as string)
 const skill = computed(() => store.getSkillBySlug(slug.value))
+
+watchEffect(() => {
+  if (skill.value) {
+    document.title = `${skill.value.title} | Holy Grail`
+  } else {
+    document.title = 'Holy Grail'
+  }
+})
+
+onUnmounted(() => {
+  document.title = 'Holy Grail'
+})
 const bookmarkResource = computed(() => {
   if (!skill.value) {
     return null

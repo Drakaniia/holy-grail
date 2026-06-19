@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watchEffect, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   ArrowLeft,
@@ -24,6 +24,18 @@ void store.loadExtensions()
 
 const slug = computed(() => route.params.slug as string)
 const extension = computed(() => store.getExtensionBySlug(slug.value))
+
+watchEffect(() => {
+  if (extension.value) {
+    document.title = `${extension.value.name} | Holy Grail`
+  } else {
+    document.title = 'Holy Grail'
+  }
+})
+
+onUnmounted(() => {
+  document.title = 'Holy Grail'
+})
 
 const backRoute = computed(() => {
   if (!extension.value) return '/extensions'

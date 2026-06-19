@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   ArrowLeft,
@@ -37,6 +37,18 @@ void store.loadSites()
 
 const slug = computed(() => route.params.slug as string)
 const site = computed(() => store.getSiteBySlug(slug.value))
+
+watchEffect(() => {
+  if (site.value) {
+    document.title = `${site.value.name} | Holy Grail`
+  } else {
+    document.title = 'Holy Grail'
+  }
+})
+
+onUnmounted(() => {
+  document.title = 'Holy Grail'
+})
 const bookmarkResource = computed(() => {
   if (!site.value) {
     return null
