@@ -11,6 +11,8 @@ import {
 import { useRoute, useRouter } from 'vue-router'
 import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useSitesStore, type Site } from '@/stores/sites'
+import { useSkillsStore } from '@/stores/skills'
+import { useExtensionsStore } from '@/stores/extensions'
 import { useTheme } from '@/composables/useTheme'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
@@ -33,6 +35,8 @@ const emit = defineEmits<{
 const UserProfilePill = defineAsyncComponent(() => import('@/components/auth/UserProfilePill.vue'))
 const { isAuthenticated } = useDeferredAuthStatus()
 const sites = useSitesStore()
+const skills = useSkillsStore()
+const extensions = useExtensionsStore()
 const route = useRoute()
 const router = useRouter()
 const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
@@ -156,6 +160,20 @@ const currentSite = computed(() => {
   }
 
   return sites.getSiteBySlug(route.params.slug) ?? null
+})
+const currentSkill = computed(() => {
+  if (route.name !== 'skill-detail' || typeof route.params.slug !== 'string') {
+    return null
+  }
+
+  return skills.getSkillBySlug(route.params.slug) ?? null
+})
+const currentExtension = computed(() => {
+  if (route.name !== 'extension-detail' || typeof route.params.slug !== 'string') {
+    return null
+  }
+
+  return extensions.getExtensionBySlug(route.params.slug) ?? null
 })
 const currentSiteCollectionTrail = computed(() => {
   if (!currentSite.value) return []
@@ -293,7 +311,17 @@ onUnmounted(() => {
             d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
           />
         </svg>
-        <span class="truncate">Holy Grail</span>
+        <span class="truncate">
+          {{
+            currentSite
+              ? currentSite.name
+              : currentSkill
+                ? currentSkill.title
+                : currentExtension
+                  ? currentExtension.name
+                  : 'Holy Grail'
+          }}
+        </span>
       </RouterLink>
 
       <nav
