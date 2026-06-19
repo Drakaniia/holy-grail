@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef } from 'vue'
 import { ArrowRight, Boxes, Hammer, Palette, Sparkles } from 'lucide-vue-next'
+import { useTheme } from '@/composables/useTheme'
 import ShapeGrid from '@/components/home/ShapeGrid.vue'
 import { scheduleIdleTask } from '@/lib/idle'
 import type { HomePreviewItem } from '@/types/home'
@@ -42,6 +43,14 @@ onMounted(() => {
 onUnmounted(() => {
   cancelPreviewFieldRender?.()
 })
+
+const { isLightMode } = useTheme()
+const gridBorderColor = computed(() =>
+  isLightMode.value ? 'rgba(4, 120, 87, 0.3)' : 'rgba(57, 255, 180, 0.26)',
+)
+const gridHoverColor = computed(() =>
+  isLightMode.value ? 'rgba(4, 120, 87, 0.18)' : 'rgba(57, 255, 180, 0.18)',
+)
 </script>
 
 <template>
@@ -51,8 +60,8 @@ onUnmounted(() => {
       direction="right"
       :speed="0.35"
       :square-size="54"
-      border-color="rgba(57, 255, 180, 0.26)"
-      hover-fill-color="rgba(57, 255, 180, 0.18)"
+      :border-color="gridBorderColor"
+      :hover-fill-color="gridHoverColor"
       shape="hexagon"
       :hover-trail-amount="5"
       aria-hidden="true"

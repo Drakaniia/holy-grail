@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { ArrowRight, Search, Sparkles } from 'lucide-vue-next'
 import { useRandomPreviewTiles } from '@/composables/useRandomPreviewTiles'
+import { useTheme } from '@/composables/useTheme'
 import ShapeGrid from '@/components/home/ShapeGrid.vue'
 import type { HomePreviewItem } from '@/types/home'
 
@@ -20,6 +21,13 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
   initialDelayRange: [120, 1600],
   rotationDelayRange: [2200, 5200],
 })
+const { isLightMode } = useTheme()
+const gridBorderColor = computed(() =>
+  isLightMode.value ? 'rgba(217, 107, 0, 0.4)' : 'rgba(255, 140, 26, 0.26)',
+)
+const gridHoverColor = computed(() =>
+  isLightMode.value ? 'rgba(217, 107, 0, 0.2)' : 'rgba(255, 140, 26, 0.18)',
+)
 </script>
 
 <template>
@@ -29,8 +37,8 @@ const { markImageFailed, tiles: heroPreviewTiles } = useRandomPreviewTiles({
       direction="right"
       :speed="0.35"
       :square-size="54"
-      border-color="rgba(255, 140, 26, 0.26)"
-      hover-fill-color="rgba(255, 140, 26, 0.18)"
+      :border-color="gridBorderColor"
+      :hover-fill-color="gridHoverColor"
       shape="hexagon"
       :hover-trail-amount="5"
       aria-hidden="true"
