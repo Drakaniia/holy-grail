@@ -1,0 +1,94 @@
+slug: netlify
+name: Netlify - Web Development Platform
+description: All-in-one platform for building, deploying, and scaling modern web applications with global edge network.
+category: Cloud Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+  - CLI
+deployment:
+  - Cloud
+  - Edge
+website: https://www.netlify.com/
+docs: https://docs.netlify.com/
+sourceCode: ''
+icon: netlify
+verified: false
+featured: false
+tags:
+  - development
+  - cloud-hosting
+  - hosting
+  - jamstack
+  - ci-cd
+  - deployment
+  - serverless
+atGlance: All-in-one web development platform with Git-integrated CI/CD, global edge network, and serverless primitives.
+fullDescription: >-
+  Netlify is a cloud computing platform for building, deploying, and scaling
+  modern web applications. It provides automated Git-integrated CI/CD, deploy
+  previews for every pull request, serverless functions, edge computing,
+  built-in authentication, form handling, and a global CDN with 100+ edge
+  locations. Originally known for pioneering the Jamstack architecture, it now
+  supports dynamic web applications with AI integration and composable
+  infrastructure.
+coreFeatures:
+  - name: Git-Integrated CI/CD
+    description: Automatic builds and deployments triggered by every Git push.
+    icon: check
+  - name: Deploy Previews
+    description: Unique live URL for every pull request enabling instant team review and collaboration.
+    icon: check
+  - name: Global Edge Network
+    description: Automatic deployment to 100+ edge locations with built-in DDoS protection and auto-scaling.
+    icon: check
+additionalFeatures:
+  - name: Serverless Functions
+    description: Edge-computed and background functions for API endpoints without server management.
+    icon: check
+  - name: Netlify Blobs & Database
+    description: Built-in storage and database primitives for full-stack applications.
+    icon: check
+  - name: Identity & Forms
+    description: Built-in user authentication and form submission handling without custom backend code.
+    icon: check
+  - name: Framework Agnostic
+    description: Supports React, Vue, Next.js, Gatsby, and virtually all modern frontend frameworks.
+    icon: check
+  - name: AI Agent Runners
+    description: Generate and iterate on projects directly from AI prompts.
+    icon: check
+similarTools:
+  - slug: vercel
+    name: Vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/

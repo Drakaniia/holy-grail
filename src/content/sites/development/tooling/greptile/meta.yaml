@@ -1,0 +1,86 @@
+slug: greptile
+name: Greptile - AI Code Review
+description: AI code review that understands your entire codebase and comments on pull requests.
+category: Tooling
+parentCategory: development
+subcategory: tooling
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+  - Self-hosted
+website: https://www.greptile.com/
+docs: https://www.greptile.com/docs/introduction
+sourceCode: ''
+icon: greptile
+verified: false
+featured: false
+tags:
+  - development
+  - tooling
+  - ai
+  - code-review
+atGlance: AI code reviewer that builds a graph of your repo and comments on pull requests.
+fullDescription: >-
+  Greptile is an AI code review platform that builds a graph of your entire
+  repository to understand how pull request changes affect the wider system. It
+  integrates with GitHub and GitLab, posts review comments within minutes, and
+  learns from team feedback to suppress noisy suggestions over time.
+coreFeatures:
+  - name: Whole-Repo Code Review
+    description: >-
+      Builds a graph of functions, classes, and dependencies to catch issues
+      that file-by-file linters miss.
+    icon: check
+  - name: Pull Request Comments
+    description: Analyzes new pull requests and posts findings as inline comments within minutes.
+    icon: check
+  - name: Adaptive Feedback Loop
+    description: Learns from thumbs up/down reactions and replies to match team preferences over time.
+    icon: check
+additionalFeatures:
+  - name: GitHub & GitLab Integration
+    description: Connects to cloud and self-managed version control, including enterprise installs.
+    icon: check
+  - name: One-Click Agent Fixes
+    description: Hands findings off to agents like Claude Code, Cursor, or Devin to implement fixes.
+    icon: check
+  - name: Self-Hosted & Air-Gapped
+    description: Deploy via Greptile Cloud or self-host with Docker Compose or Kubernetes.
+    icon: check
+  - name: Enterprise Security
+    description: SOC 2 Type II compliance, SSO/SAML, and repository-specific custom rules.
+    icon: check
+similarTools:
+  - slug: codebuff
+    name: Codebuff
+    description: AI coding agent that edits your codebase from the terminal.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.codebuff.com/
+  - slug: posthog
+    name: PostHog - How developers build successful products
+    description: PostHog - How developers build successful products bookmarked for tooling resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://posthog.com/
+  - slug: resend
+    name: Resend - Email for developers
+    description: Resend - Email for developers bookmarked for tooling resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://resend.com/

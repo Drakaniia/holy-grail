@@ -1,0 +1,85 @@
+slug: noiz
+name: Noiz - AI Audio Generation
+description: AI-powered audio generation platform for text-to-speech, voice cloning, and storytelling.
+category: AI Audio
+parentCategory: ai
+subcategory: audio
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+website: https://noiz.ai/
+docs: https://noiz.ai/
+sourceCode: ''
+icon: noiz
+verified: false
+featured: false
+tags:
+  - ai
+  - audio
+  - tts
+  - voice
+  - text-to-speech
+atGlance: AI audio studio for expressive text-to-speech, voice cloning, and storytelling.
+fullDescription: >-
+  Noiz is an AI-powered audio generation platform that combines
+  text-to-speech, voice cloning, and intelligent storytelling into a single
+  studio. It offers emotion-controlled TTS, multilingual dubbing, a voice
+  design library, and developer APIs for integration into third-party
+  applications.
+coreFeatures:
+  - name: AI Text-to-Speech
+    description: Generates lifelike speech from text with emotion control for expressive output.
+    icon: check
+  - name: Voice Cloning
+    description: Creates custom AI voice replicas from short audio samples.
+    icon: check
+  - name: Multilingual Dubbing
+    description: Supports dubbing content across multiple languages for global reach.
+    icon: check
+additionalFeatures:
+  - name: Voice Design Library
+    description: Provides a library of voices and tools for crafting specific vocal characteristics.
+    icon: check
+  - name: Developer API Access
+    description: Offers APIs for integrating voice generation and cloning into third-party apps.
+    icon: check
+  - name: Intelligent Storytelling
+    description: Unites precision voice design with automated narrative assembly for podcasts and audiobooks.
+    icon: check
+  - name: Web Studio
+    description: Access the full studio experience directly from the browser.
+    icon: check
+similarTools:
+  - slug: elevenlabs
+    name: ElevenLabs
+    description: AI voice synthesis and text-to-speech platform.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://elevenlabs.io/
+  - slug: murf
+    name: Murf AI
+    description: AI voice generator for professional-quality text-to-speech.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://murf.ai/
+  - slug: wellsaid
+    name: WellSaid
+    description: AI voice platform for enterprise text-to-speech and voiceovers.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://wellsaid.com/

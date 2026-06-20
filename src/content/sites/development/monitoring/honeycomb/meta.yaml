@@ -1,0 +1,88 @@
+slug: honeycomb
+name: Honeycomb - Observability Platform
+description: Event-based observability platform for debugging and understanding complex distributed systems.
+category: Monitoring
+parentCategory: development
+subcategory: monitoring
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+  - Private Cloud
+website: https://www.honeycomb.io/
+docs: https://docs.honeycomb.io/
+sourceCode: ''
+icon: honeycomb
+verified: false
+featured: false
+tags:
+  - development
+  - monitoring
+  - observability
+  - apm
+  - tracing
+  - devops
+atGlance: Event-based observability platform for understanding and debugging complex microservice and AI-driven systems.
+fullDescription: >-
+  Honeycomb is an observability platform that helps engineering teams
+  understand, debug, and improve complex modern software systems through
+  event-based telemetry. It enables arbitrary querying of high-cardinality
+  data, features BubbleUp for automatic root cause comparison, supports
+  OpenTelemetry natively, and provides SLO-based monitoring with AI copilot
+  capabilities for natural-language system analysis.
+coreFeatures:
+  - name: Event-Based Observability
+    description: Query any dimension of production data in real-time without pre-defined dashboards.
+    icon: check
+  - name: BubbleUp Analysis
+    description: Automatically compares outlier data subsets to identify unique characteristics and root causes.
+    icon: check
+  - name: OpenTelemetry Native
+    description: First-class support for OpenTelemetry for ingesting traces, metrics, and logs.
+    icon: check
+additionalFeatures:
+  - name: High Cardinality Support
+    description: Handles millions of unique dimensions like user IDs and trace IDs that traditional tools cannot.
+    icon: check
+  - name: SLO-Based Monitoring
+    description: Set performance targets and alert based on end-user impact rather than infrastructure metrics.
+    icon: check
+  - name: AI Copilot & MCP
+    description: Natural-language analysis and agentic workflows for debugging and querying.
+    icon: check
+  - name: Refinery Sampling
+    description: Dynamic sampling to control costs while preserving high-granularity data.
+    icon: check
+similarTools:
+  - slug: betterstack
+    name: Better Stack Uptime
+    description: Better Stack Uptime bookmarked for monitoring resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://betterstack.com/uptime
+  - slug: datadog
+    name: Datadog
+    description: Cloud-scale monitoring and security platform for infrastructure and applications.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.datadoghq.com/
+  - slug: newrelic
+    name: New Relic
+    description: Observability platform for monitoring, debugging, and improving applications.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://newrelic.com/

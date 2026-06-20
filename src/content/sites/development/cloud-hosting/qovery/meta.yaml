@@ -1,0 +1,89 @@
+slug: qovery
+name: Qovery - Agentic Infrastructure Platform
+description: Unified cloud-native infrastructure platform with CI/CD, Kubernetes, and AI agent governance.
+category: Cloud Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+  - CLI
+deployment:
+  - Cloud
+  - Self-hosted
+website: https://www.qovery.com/
+docs: https://www.qovery.com/docs
+sourceCode: ''
+icon: qovery
+verified: false
+featured: false
+tags:
+  - development
+  - cloud-hosting
+  - infrastructure
+  - kubernetes
+  - ci-cd
+  - platform-engineering
+atGlance: Single control plane for cloud-native infrastructure, CI/CD, and AI agent operations.
+fullDescription: >-
+  Qovery is an agentic infrastructure platform that unifies the fragmented
+  cloud-native toolchain — CI/CD, Kubernetes, Terraform, secrets, and
+  monitoring — into a single governed API. It acts as a control plane on top
+  of existing cloud infrastructure (AWS, GCP, Azure), enabling both human
+  engineers and AI agents to deploy, observe, secure, and optimize
+  infrastructure with built-in RBAC, audit trails, and guardrails.
+coreFeatures:
+  - name: Agentic Infrastructure Control
+    description: Single API designed for both human engineers and AI agents with full governance.
+    icon: check
+  - name: Bring Your Own Cloud
+    description: Workloads, data, and secrets remain in your own VPC/cloud account.
+    icon: check
+  - name: Ephemeral Environments
+    description: Rapidly create isolated full-stack testing environments for every pull request.
+    icon: check
+additionalFeatures:
+  - name: CI/CD Integration
+    description: Built-in continuous integration and deployment pipelines.
+    icon: check
+  - name: Kubernetes Management
+    description: Simplified Kubernetes cluster management without manual configuration.
+    icon: check
+  - name: Governance & Compliance
+    description: SOC 2 and HIPAA ready with audit logs and policy-as-code enforcement.
+    icon: check
+  - name: Open-Source Core
+    description: The deployment engine powering Qovery clusters is open-source (Rust).
+    icon: check
+similarTools:
+  - slug: vercel
+    name: Vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/

@@ -1,0 +1,91 @@
+slug: cockroachlabs
+name: CockroachDB - Distributed SQL Database
+description: Cloud-native distributed SQL database with horizontal scaling, ACID compliance, and multi-region resilience.
+category: Database
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+  - CLI
+deployment:
+  - Cloud
+  - Self-hosted
+  - Docker
+  - Kubernetes
+website: https://www.cockroachlabs.com/
+docs: https://www.cockroachlabs.com/docs
+sourceCode: ''
+icon: cockroachlabs
+verified: false
+featured: false
+tags:
+  - development
+  - cloud-hosting
+  - database
+  - sql
+  - distributed
+  - postgresql
+atGlance: Cloud-native distributed SQL database with strong consistency, horizontal scaling, and multi-region survivability.
+fullDescription: >-
+  CockroachDB is a distributed SQL database built for cloud-native,
+  mission-critical applications. Created by former Google engineers, it
+  combines the strong consistency and ACID transactions of traditional RDBMS
+  with the horizontal scalability and resilience of NoSQL systems. It is
+  PostgreSQL wire-compatible, survives datacenter outages with automated
+  repair, and offers geo-partitioning for data sovereignty compliance.
+coreFeatures:
+  - name: Distributed SQL
+    description: PostgreSQL-compatible SQL API with distributed, transactional, strongly consistent key-value storage.
+    icon: check
+  - name: ACID Compliance
+    description: Serializable transaction isolation for correct data even across distributed clusters.
+    icon: check
+  - name: Horizontal Scaling
+    description: Automatically scales reads and writes by adding nodes with no manual sharding required.
+    icon: check
+additionalFeatures:
+  - name: Multi-Region Resilience
+    description: Survives disk, machine, rack, and datacenter outages with automated repair and rebalancing.
+    icon: check
+  - name: Geo-Partitioning
+    description: Pin data to specific geographic regions for data residency and regulatory compliance.
+    icon: check
+  - name: CockroachDB Cloud
+    description: Fully managed service on AWS, GCP, and Azure with serverless and dedicated options.
+    icon: check
+  - name: Enterprise Security
+    description: AES-256 encryption, RBAC, audit logging, SOC 2, HIPAA, and PCI DSS compliance.
+    icon: check
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Supabase bookmarked for hosting resources.
+    stars: 102722
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: vercel
+    name: Vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com
+  - slug: coolify
+    name: Coolify
+    description: Coolify bookmarked for hosting resources.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/
