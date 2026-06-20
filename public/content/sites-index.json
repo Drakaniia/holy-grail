@@ -8157,6 +8157,116 @@
     ]
   },
   {
+    "slug": "noiz",
+    "name": "Noiz - AI Audio Generation",
+    "description": "AI-powered audio generation platform for text-to-speech, voice cloning, and storytelling.",
+    "category": "AI Audio",
+    "parentCategory": "ai",
+    "subcategory": "audio",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://noiz.ai/",
+    "docs": "https://noiz.ai/",
+    "sourceCode": "",
+    "icon": "noiz",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "ai",
+      "audio",
+      "tts",
+      "voice",
+      "text-to-speech"
+    ],
+    "atGlance": "AI audio studio for expressive text-to-speech, voice cloning, and storytelling.",
+    "fullDescription": "Noiz is an AI-powered audio generation platform that combines text-to-speech, voice cloning, and intelligent storytelling into a single studio. It offers emotion-controlled TTS, multilingual dubbing, a voice design library, and developer APIs for integration into third-party applications.",
+    "coreFeatures": [
+      {
+        "name": "AI Text-to-Speech",
+        "description": "Generates lifelike speech from text with emotion control for expressive output.",
+        "icon": "check"
+      },
+      {
+        "name": "Voice Cloning",
+        "description": "Creates custom AI voice replicas from short audio samples.",
+        "icon": "check"
+      },
+      {
+        "name": "Multilingual Dubbing",
+        "description": "Supports dubbing content across multiple languages for global reach.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Voice Design Library",
+        "description": "Provides a library of voices and tools for crafting specific vocal characteristics.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer API Access",
+        "description": "Offers APIs for integrating voice generation and cloning into third-party apps.",
+        "icon": "check"
+      },
+      {
+        "name": "Intelligent Storytelling",
+        "description": "Unites precision voice design with automated narrative assembly for podcasts and audiobooks.",
+        "icon": "check"
+      },
+      {
+        "name": "Web Studio",
+        "description": "Access the full studio experience directly from the browser.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "elevenlabs",
+        "name": "ElevenLabs",
+        "description": "AI voice synthesis and text-to-speech platform.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://elevenlabs.io/"
+      },
+      {
+        "slug": "murf",
+        "name": "Murf AI",
+        "description": "AI voice generator for professional-quality text-to-speech.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://murf.ai/"
+      },
+      {
+        "slug": "wellsaid",
+        "name": "WellSaid",
+        "description": "AI voice platform for enterprise text-to-speech and voiceovers.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://wellsaid.com/"
+      }
+    ]
+  },
+  {
     "slug": "gumloop",
     "name": "Gumloop | AI Automation Framework",
     "description": "Gumloop | AI Automation Framework bookmarked for ai automation resources.",
@@ -26860,6 +26970,121 @@
     ]
   },
   {
+    "slug": "cockroachlabs",
+    "name": "CockroachDB - Distributed SQL Database",
+    "description": "Cloud-native distributed SQL database with horizontal scaling, ACID compliance, and multi-region resilience.",
+    "category": "Database",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud",
+      "Self-hosted",
+      "Docker",
+      "Kubernetes"
+    ],
+    "website": "https://www.cockroachlabs.com/",
+    "docs": "https://www.cockroachlabs.com/docs",
+    "sourceCode": "",
+    "icon": "cockroachlabs",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "cloud-hosting",
+      "database",
+      "sql",
+      "distributed",
+      "postgresql"
+    ],
+    "atGlance": "Cloud-native distributed SQL database with strong consistency, horizontal scaling, and multi-region survivability.",
+    "fullDescription": "CockroachDB is a distributed SQL database built for cloud-native, mission-critical applications. Created by former Google engineers, it combines the strong consistency and ACID transactions of traditional RDBMS with the horizontal scalability and resilience of NoSQL systems. It is PostgreSQL wire-compatible, survives datacenter outages with automated repair, and offers geo-partitioning for data sovereignty compliance.",
+    "coreFeatures": [
+      {
+        "name": "Distributed SQL",
+        "description": "PostgreSQL-compatible SQL API with distributed, transactional, strongly consistent key-value storage.",
+        "icon": "check"
+      },
+      {
+        "name": "ACID Compliance",
+        "description": "Serializable transaction isolation for correct data even across distributed clusters.",
+        "icon": "check"
+      },
+      {
+        "name": "Horizontal Scaling",
+        "description": "Automatically scales reads and writes by adding nodes with no manual sharding required.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multi-Region Resilience",
+        "description": "Survives disk, machine, rack, and datacenter outages with automated repair and rebalancing.",
+        "icon": "check"
+      },
+      {
+        "name": "Geo-Partitioning",
+        "description": "Pin data to specific geographic regions for data residency and regulatory compliance.",
+        "icon": "check"
+      },
+      {
+        "name": "CockroachDB Cloud",
+        "description": "Fully managed service on AWS, GCP, and Azure with serverless and dedicated options.",
+        "icon": "check"
+      },
+      {
+        "name": "Enterprise Security",
+        "description": "AES-256 encryption, RBAC, audit logging, SOC 2, HIPAA, and PCI DSS compliance.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "vercel",
+        "name": "Vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 12500,
+        "addedDaysAgo": 2,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
     "slug": "cyclic",
     "name": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
     "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds bookmarked for hosting resources.",
@@ -27043,6 +27268,117 @@
         "addedDaysAgo": 5,
         "verified": true,
         "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "eon",
+    "name": "Eon - Intelligent Cloud Data Protection",
+    "description": "Enterprise cloud data protection platform with intelligent backup, deduplication, and zero-ETL data lakes.",
+    "category": "Cloud Infrastructure",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud",
+      "Self-hosted"
+    ],
+    "website": "https://www.eon.io/",
+    "docs": "https://www.eon.io/",
+    "sourceCode": "",
+    "icon": "eon",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "cloud-hosting",
+      "backup",
+      "data-protection",
+      "infrastructure"
+    ],
+    "atGlance": "Intelligent cloud backup and data management platform with zero-ETL data lake access.",
+    "fullDescription": "Eon is an enterprise cloud data protection platform that modernizes traditional backup processes. It provides agentless, cloud-native backup with global deduplication, Cloud Backup Posture Management (CBPM), and zero-ETL data lake infrastructure that makes backup data queryable from tools like Snowflake, Databricks, and BigQuery without custom pipelines.",
+    "coreFeatures": [
+      {
+        "name": "Intelligent Cloud Backup",
+        "description": "Agentless, cloud-native data protection with global deduplication to reduce storage costs.",
+        "icon": "check"
+      },
+      {
+        "name": "Cloud Backup Posture Management",
+        "description": "Continuously scans and maps cloud resources, automatically classifying data and setting backup policies.",
+        "icon": "check"
+      },
+      {
+        "name": "Zero-ETL Data Lake",
+        "description": "Converts backups into open analytics-ready formats (Apache Iceberg, Parquet) for instant querying.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Granular Recovery",
+        "description": "Restore data down to a single database row or file without recovering entire snapshots.",
+        "icon": "check"
+      },
+      {
+        "name": "AI-Ready Architecture",
+        "description": "Built-in AI enables natural-language search and connectivity for AI agents.",
+        "icon": "check"
+      },
+      {
+        "name": "Founded by CloudEndure Team",
+        "description": "Built by the team behind CloudEndure, a disaster recovery startup acquired by AWS.",
+        "icon": "check"
+      },
+      {
+        "name": "Enterprise Security",
+        "description": "SOC 2 Type II compliance with read-only IAM role deployment.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "vercel",
+        "name": "Vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 12500,
+        "addedDaysAgo": 2,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
       },
       {
         "slug": "coolify",
@@ -27644,6 +27980,125 @@
     ]
   },
   {
+    "slug": "netlify",
+    "name": "Netlify - Web Development Platform",
+    "description": "All-in-one platform for building, deploying, and scaling modern web applications with global edge network.",
+    "category": "Cloud Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud",
+      "Edge"
+    ],
+    "website": "https://www.netlify.com/",
+    "docs": "https://docs.netlify.com/",
+    "sourceCode": "",
+    "icon": "netlify",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "jamstack",
+      "ci-cd",
+      "deployment",
+      "serverless"
+    ],
+    "atGlance": "All-in-one web development platform with Git-integrated CI/CD, global edge network, and serverless primitives.",
+    "fullDescription": "Netlify is a cloud computing platform for building, deploying, and scaling modern web applications. It provides automated Git-integrated CI/CD, deploy previews for every pull request, serverless functions, edge computing, built-in authentication, form handling, and a global CDN with 100+ edge locations. Originally known for pioneering the Jamstack architecture, it now supports dynamic web applications with AI integration and composable infrastructure.",
+    "coreFeatures": [
+      {
+        "name": "Git-Integrated CI/CD",
+        "description": "Automatic builds and deployments triggered by every Git push.",
+        "icon": "check"
+      },
+      {
+        "name": "Deploy Previews",
+        "description": "Unique live URL for every pull request enabling instant team review and collaboration.",
+        "icon": "check"
+      },
+      {
+        "name": "Global Edge Network",
+        "description": "Automatic deployment to 100+ edge locations with built-in DDoS protection and auto-scaling.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Serverless Functions",
+        "description": "Edge-computed and background functions for API endpoints without server management.",
+        "icon": "check"
+      },
+      {
+        "name": "Netlify Blobs & Database",
+        "description": "Built-in storage and database primitives for full-stack applications.",
+        "icon": "check"
+      },
+      {
+        "name": "Identity & Forms",
+        "description": "Built-in user authentication and form submission handling without custom backend code.",
+        "icon": "check"
+      },
+      {
+        "name": "Framework Agnostic",
+        "description": "Supports React, Vue, Next.js, Gatsby, and virtually all modern frontend frameworks.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Agent Runners",
+        "description": "Generate and iterate on projects directly from AI prompts.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "vercel",
+        "name": "Vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 12500,
+        "addedDaysAgo": 2,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
     "slug": "northflank",
     "name": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank",
     "description": "Can you use Vercel for backend? What works and when to use something else | Blog - Northflank bookmarked for hosting resources.",
@@ -27925,6 +28380,119 @@
         "addedDaysAgo": 5,
         "verified": true,
         "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Coolify bookmarked for hosting resources.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "qovery",
+    "name": "Qovery - Agentic Infrastructure Platform",
+    "description": "Unified cloud-native infrastructure platform with CI/CD, Kubernetes, and AI agent governance.",
+    "category": "Cloud Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud",
+      "Self-hosted"
+    ],
+    "website": "https://www.qovery.com/",
+    "docs": "https://www.qovery.com/docs",
+    "sourceCode": "",
+    "icon": "qovery",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "cloud-hosting",
+      "infrastructure",
+      "kubernetes",
+      "ci-cd",
+      "platform-engineering"
+    ],
+    "atGlance": "Single control plane for cloud-native infrastructure, CI/CD, and AI agent operations.",
+    "fullDescription": "Qovery is an agentic infrastructure platform that unifies the fragmented cloud-native toolchain — CI/CD, Kubernetes, Terraform, secrets, and monitoring — into a single governed API. It acts as a control plane on top of existing cloud infrastructure (AWS, GCP, Azure), enabling both human engineers and AI agents to deploy, observe, secure, and optimize infrastructure with built-in RBAC, audit trails, and guardrails.",
+    "coreFeatures": [
+      {
+        "name": "Agentic Infrastructure Control",
+        "description": "Single API designed for both human engineers and AI agents with full governance.",
+        "icon": "check"
+      },
+      {
+        "name": "Bring Your Own Cloud",
+        "description": "Workloads, data, and secrets remain in your own VPC/cloud account.",
+        "icon": "check"
+      },
+      {
+        "name": "Ephemeral Environments",
+        "description": "Rapidly create isolated full-stack testing environments for every pull request.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "CI/CD Integration",
+        "description": "Built-in continuous integration and deployment pipelines.",
+        "icon": "check"
+      },
+      {
+        "name": "Kubernetes Management",
+        "description": "Simplified Kubernetes cluster management without manual configuration.",
+        "icon": "check"
+      },
+      {
+        "name": "Governance & Compliance",
+        "description": "SOC 2 and HIPAA ready with audit logs and policy-as-code enforcement.",
+        "icon": "check"
+      },
+      {
+        "name": "Open-Source Core",
+        "description": "The deployment engine powering Qovery clusters is open-source (Rust).",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "vercel",
+        "name": "Vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 12500,
+        "addedDaysAgo": 2,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase bookmarked for hosting resources.",
+        "stars": 102722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
       },
       {
         "slug": "coolify",
@@ -29976,6 +30544,118 @@
     ]
   },
   {
+    "slug": "honeycomb",
+    "name": "Honeycomb - Observability Platform",
+    "description": "Event-based observability platform for debugging and understanding complex distributed systems.",
+    "category": "Monitoring",
+    "parentCategory": "development",
+    "subcategory": "monitoring",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud",
+      "Private Cloud"
+    ],
+    "website": "https://www.honeycomb.io/",
+    "docs": "https://docs.honeycomb.io/",
+    "sourceCode": "",
+    "icon": "honeycomb",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "monitoring",
+      "observability",
+      "apm",
+      "tracing",
+      "devops"
+    ],
+    "atGlance": "Event-based observability platform for understanding and debugging complex microservice and AI-driven systems.",
+    "fullDescription": "Honeycomb is an observability platform that helps engineering teams understand, debug, and improve complex modern software systems through event-based telemetry. It enables arbitrary querying of high-cardinality data, features BubbleUp for automatic root cause comparison, supports OpenTelemetry natively, and provides SLO-based monitoring with AI copilot capabilities for natural-language system analysis.",
+    "coreFeatures": [
+      {
+        "name": "Event-Based Observability",
+        "description": "Query any dimension of production data in real-time without pre-defined dashboards.",
+        "icon": "check"
+      },
+      {
+        "name": "BubbleUp Analysis",
+        "description": "Automatically compares outlier data subsets to identify unique characteristics and root causes.",
+        "icon": "check"
+      },
+      {
+        "name": "OpenTelemetry Native",
+        "description": "First-class support for OpenTelemetry for ingesting traces, metrics, and logs.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "High Cardinality Support",
+        "description": "Handles millions of unique dimensions like user IDs and trace IDs that traditional tools cannot.",
+        "icon": "check"
+      },
+      {
+        "name": "SLO-Based Monitoring",
+        "description": "Set performance targets and alert based on end-user impact rather than infrastructure metrics.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Copilot & MCP",
+        "description": "Natural-language analysis and agentic workflows for debugging and querying.",
+        "icon": "check"
+      },
+      {
+        "name": "Refinery Sampling",
+        "description": "Dynamic sampling to control costs while preserving high-granularity data.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "betterstack",
+        "name": "Better Stack Uptime",
+        "description": "Better Stack Uptime bookmarked for monitoring resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://betterstack.com/uptime"
+      },
+      {
+        "slug": "datadog",
+        "name": "Datadog",
+        "description": "Cloud-scale monitoring and security platform for infrastructure and applications.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.datadoghq.com/"
+      },
+      {
+        "slug": "newrelic",
+        "name": "New Relic",
+        "description": "Observability platform for monitoring, debugging, and improving applications.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://newrelic.com/"
+      }
+    ]
+  },
+  {
     "slug": "uptimerobot",
     "name": "UptimeRobot",
     "description": "UptimeRobot bookmarked for monitoring resources.",
@@ -31330,6 +32010,116 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "greptile",
+    "name": "Greptile - AI Code Review",
+    "description": "AI code review that understands your entire codebase and comments on pull requests.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud",
+      "Self-hosted"
+    ],
+    "website": "https://www.greptile.com/",
+    "docs": "https://www.greptile.com/docs/introduction",
+    "sourceCode": "",
+    "icon": "greptile",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "tooling",
+      "ai",
+      "code-review"
+    ],
+    "atGlance": "AI code reviewer that builds a graph of your repo and comments on pull requests.",
+    "fullDescription": "Greptile is an AI code review platform that builds a graph of your entire repository to understand how pull request changes affect the wider system. It integrates with GitHub and GitLab, posts review comments within minutes, and learns from team feedback to suppress noisy suggestions over time.",
+    "coreFeatures": [
+      {
+        "name": "Whole-Repo Code Review",
+        "description": "Builds a graph of functions, classes, and dependencies to catch issues that file-by-file linters miss.",
+        "icon": "check"
+      },
+      {
+        "name": "Pull Request Comments",
+        "description": "Analyzes new pull requests and posts findings as inline comments within minutes.",
+        "icon": "check"
+      },
+      {
+        "name": "Adaptive Feedback Loop",
+        "description": "Learns from thumbs up/down reactions and replies to match team preferences over time.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "GitHub & GitLab Integration",
+        "description": "Connects to cloud and self-managed version control, including enterprise installs.",
+        "icon": "check"
+      },
+      {
+        "name": "One-Click Agent Fixes",
+        "description": "Hands findings off to agents like Claude Code, Cursor, or Devin to implement fixes.",
+        "icon": "check"
+      },
+      {
+        "name": "Self-Hosted & Air-Gapped",
+        "description": "Deploy via Greptile Cloud or self-host with Docker Compose or Kubernetes.",
+        "icon": "check"
+      },
+      {
+        "name": "Enterprise Security",
+        "description": "SOC 2 Type II compliance, SSO/SAML, and repository-specific custom rules.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "AI coding agent that edits your codebase from the terminal.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.codebuff.com/"
+      },
+      {
+        "slug": "posthog",
+        "name": "PostHog - How developers build successful products",
+        "description": "PostHog - How developers build successful products bookmarked for tooling resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://posthog.com/"
+      },
+      {
+        "slug": "resend",
+        "name": "Resend - Email for developers",
+        "description": "Resend - Email for developers bookmarked for tooling resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://resend.com/"
       }
     ]
   },

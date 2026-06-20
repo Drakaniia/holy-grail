@@ -515,6 +515,15 @@
     "height": 600,
     "bytes": 27132
   },
+  "cockroachlabs": {
+    "image": "/previews/cockroachlabs.webp",
+    "small": "/previews/cockroachlabs-sm.webp",
+    "sourceUrl": "https://www.cockroachlabs.com/",
+    "capturedAt": "2026-06-20T14:43:30.721Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 48262
+  },
   "code": {
     "image": "/previews/code.webp",
     "small": "/previews/code-sm.webp",
@@ -958,6 +967,15 @@
     "height": 600,
     "bytes": 15320
   },
+  "eon": {
+    "image": "/previews/eon.webp",
+    "small": "/previews/eon-sm.webp",
+    "sourceUrl": "https://www.eon.io/",
+    "capturedAt": "2026-06-20T14:43:35.918Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 59776
+  },
   "eslint": {
     "image": "/previews/eslint.webp",
     "small": "/previews/eslint-sm.webp",
@@ -1337,6 +1355,15 @@
     "height": 600,
     "bytes": 28680
   },
+  "greptile": {
+    "image": "/previews/greptile.webp",
+    "small": "/previews/greptile-sm.webp",
+    "sourceUrl": "https://www.greptile.com/",
+    "capturedAt": "2026-06-19T10:41:57.839Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20782
+  },
   "groq": {
     "image": "/previews/groq.webp",
     "small": "/previews/groq-sm.webp",
@@ -1436,6 +1463,15 @@
     "width": 960,
     "height": 600,
     "bytes": 25278
+  },
+  "honeycomb": {
+    "image": "/previews/honeycomb.webp",
+    "small": "/previews/honeycomb-sm.webp",
+    "sourceUrl": "https://www.honeycomb.io/",
+    "capturedAt": "2026-06-20T14:43:43.873Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34650
   },
   "huggingface": {
     "image": "/previews/huggingface.webp",
@@ -2167,6 +2203,15 @@
     "bytes": 8084,
     "fallback": true
   },
+  "netlify": {
+    "image": "/previews/netlify.webp",
+    "small": "/previews/netlify-sm.webp",
+    "sourceUrl": "https://www.netlify.com/",
+    "capturedAt": "2026-06-20T14:43:38.643Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 38026
+  },
   "neuform": {
     "image": "/previews/neuform.webp",
     "small": "/previews/neuform-sm.webp",
@@ -2221,6 +2266,15 @@
     "width": 960,
     "height": 600,
     "bytes": 23170
+  },
+  "noiz": {
+    "image": "/previews/noiz.webp",
+    "small": "/previews/noiz-sm.webp",
+    "sourceUrl": "https://noiz.ai/",
+    "capturedAt": "2026-06-20T14:43:29.405Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 19742
   },
   "northflank": {
     "image": "/previews/northflank.webp",
@@ -2527,6 +2581,15 @@
     "width": 960,
     "height": 600,
     "bytes": 34694
+  },
+  "qovery": {
+    "image": "/previews/qovery.webp",
+    "small": "/previews/qovery-sm.webp",
+    "sourceUrl": "https://www.qovery.com/",
+    "capturedAt": "2026-06-20T14:43:38.539Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 32596
   },
   "quillbot": {
     "image": "/previews/quillbot.webp",
