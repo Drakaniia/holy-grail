@@ -4,16 +4,16 @@ description: Develop, preview, and ship web applications with the fastest global
 category: Deployment
 parentCategory: development
 subcategory: cloud-hosting
-stars: 12500
-watchers: 890
+stars: 15723
+watchers: 228
 addedDaysAgo: 2
 license: Apache-2.0
-lastCommit: 2 days ago
-lastRelease: 1 week ago
-version: 42.0.0
-contributors: 245
-commitsThisYear: 1800
-releases: 34
+lastCommit: 20 minutes ago
+lastRelease: 1 day ago
+version: "@vercel/python-workers@0.0.25"
+contributors: 432
+commitsThisYear: 1287
+releases: 4557
 platforms:
   - Web
   - API

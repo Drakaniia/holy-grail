@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://www.kittl.com/workspace/cmgcfq3opgdma0j9vd5bkdxui
 docs: https://www.kittl.com/workspace/cmgcfq3opgdma0j9vd5bkdxui
-sourceCode: ''
+sourceCode: ""
 icon: kittl
 verified: false
 featured: false

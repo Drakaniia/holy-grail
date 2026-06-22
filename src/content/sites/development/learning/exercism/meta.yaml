@@ -4,14 +4,14 @@ description: Exercism bookmarked for learning resources.
 category: Learning
 parentCategory: development
 subcategory: learning
-stars: 0
-watchers: 0
+stars: 7567
+watchers: 176
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
+license: Unknown
+lastCommit: 2 years ago
+lastRelease: No releases
+version: ""
+contributors: 12
 commitsThisYear: 0
 releases: 0
 platforms:
@@ -20,9 +20,9 @@ deployment:
   - Cloud
 website: https://exercism.org/
 docs: https://exercism.org/
-sourceCode: ''
+sourceCode: https://github.com/exercism/exercism
 icon: exercism
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

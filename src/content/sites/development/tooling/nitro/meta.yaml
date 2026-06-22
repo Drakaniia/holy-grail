@@ -4,16 +4,16 @@ description: Runtime-agnostic server toolkit for full-stack Vite applications.
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 10838
-watchers: 44
+stars: 10943
+watchers: 43
 addedDaysAgo: 0
-license: MIT
-lastCommit: 1 day ago
-lastRelease: 21 days ago
-version: v3.0.260429-beta
-contributors: 358
-commitsThisYear: 322
-releases: 75
+license: Unknown
+lastCommit: 17 hours ago
+lastRelease: 11 days ago
+version: v3.0.260610-beta
+contributors: 364
+commitsThisYear: 371
+releases: 78
 platforms:
   - Web
   - Node.js

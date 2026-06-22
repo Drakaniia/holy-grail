@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Private Cloud
 website: https://www.honeycomb.io/
 docs: https://docs.honeycomb.io/
-sourceCode: ''
+sourceCode: ""
 icon: honeycomb
 verified: false
 featured: false
@@ -33,27 +33,32 @@ tags:
   - apm
   - tracing
   - devops
-atGlance: Event-based observability platform for understanding and debugging complex microservice and AI-driven systems.
+atGlance: >-
+  Event-based observability platform for understanding and debugging complex microservice and
+  AI-driven systems.
 fullDescription: >-
-  Honeycomb is an observability platform that helps engineering teams
-  understand, debug, and improve complex modern software systems through
-  event-based telemetry. It enables arbitrary querying of high-cardinality
-  data, features BubbleUp for automatic root cause comparison, supports
-  OpenTelemetry natively, and provides SLO-based monitoring with AI copilot
-  capabilities for natural-language system analysis.
+  Honeycomb is an observability platform that helps engineering teams understand, debug, and improve
+  complex modern software systems through event-based telemetry. It enables arbitrary querying of
+  high-cardinality data, features BubbleUp for automatic root cause comparison, supports
+  OpenTelemetry natively, and provides SLO-based monitoring with AI copilot capabilities for
+  natural-language system analysis.
 coreFeatures:
   - name: Event-Based Observability
     description: Query any dimension of production data in real-time without pre-defined dashboards.
     icon: check
   - name: BubbleUp Analysis
-    description: Automatically compares outlier data subsets to identify unique characteristics and root causes.
+    description: >-
+      Automatically compares outlier data subsets to identify unique characteristics and root
+      causes.
     icon: check
   - name: OpenTelemetry Native
     description: First-class support for OpenTelemetry for ingesting traces, metrics, and logs.
     icon: check
 additionalFeatures:
   - name: High Cardinality Support
-    description: Handles millions of unique dimensions like user IDs and trace IDs that traditional tools cannot.
+    description: >-
+      Handles millions of unique dimensions like user IDs and trace IDs that traditional tools
+      cannot.
     icon: check
   - name: SLO-Based Monitoring
     description: Set performance targets and alert based on end-user impact rather than infrastructure metrics.

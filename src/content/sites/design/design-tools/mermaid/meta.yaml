@@ -4,15 +4,15 @@ description: Mermaid | Diagramming and charting tool bookmarked for design tools
 category: Design Tools
 parentCategory: design
 subcategory: design-tools
-stars: 88166
+stars: 88769
 watchers: 646
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 hour ago
-lastRelease: 8 days ago
-version: '@mermaid-js/mermaid-zenuml@0.2.3'
-contributors: 802
-commitsThisYear: 915
+lastCommit: 22 hours ago
+lastRelease: 1 month ago
+version: "@mermaid-js/mermaid-zenuml@0.2.3"
+contributors: 834
+commitsThisYear: 1449
 releases: 193
 platforms:
   - Web

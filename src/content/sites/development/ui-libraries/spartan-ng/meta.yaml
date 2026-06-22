@@ -6,15 +6,15 @@ description: >-
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 2604
-watchers: 34
+stars: 2650
+watchers: 33
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 day ago
+lastCommit: 38 minutes ago
 lastRelease: No releases
-version: ''
-contributors: 124
-commitsThisYear: 451
+version: ""
+contributors: 131
+commitsThisYear: 734
 releases: 0
 platforms:
   - Web

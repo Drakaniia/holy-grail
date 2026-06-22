@@ -4,15 +4,15 @@ description: Kiro (AWS) CLI setup reference for AI-assisted terminal coding work
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 3908
+watchers: 36
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Unknown
+lastCommit: 1 month ago
+lastRelease: No releases
+version: ""
+contributors: 10
+commitsThisYear: 35
 releases: 0
 platforms:
   - CLI
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://kiro.dev/docs/cli/
 docs: https://kiro.dev/docs/cli/
-sourceCode: ''
+sourceCode: https://github.com/kirodotdev/Kiro
 icon: kiro-cli
 verified: true
 featured: false
@@ -32,7 +32,6 @@ tags:
   - terminal
   - kiro
   - kiro-cli
-installCommand: curl -fsSL https://cli.kiro.dev/install | bash
 atGlance: Kiro (AWS) is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Kiro (AWS) is cataloged as a CLI tool for developers who want AI-assisted coding from the

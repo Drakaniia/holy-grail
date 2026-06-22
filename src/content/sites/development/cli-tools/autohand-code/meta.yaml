@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://autohand.ai/code/
 docs: https://autohand.ai/code/
-sourceCode: ''
+sourceCode: ""
 icon: autohand-code
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g autohand-cli
 atGlance: Autohand Code is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Autohand Code is cataloged as a CLI tool for developers who want AI-assisted coding from the

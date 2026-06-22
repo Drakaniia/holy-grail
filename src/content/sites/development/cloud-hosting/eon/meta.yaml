@@ -1,6 +1,8 @@
 slug: eon
 name: Eon - Intelligent Cloud Data Protection
-description: Enterprise cloud data protection platform with intelligent backup, deduplication, and zero-ETL data lakes.
+description: >-
+  Enterprise cloud data protection platform with intelligent backup, deduplication, and zero-ETL
+  data lakes.
 category: Cloud Infrastructure
 parentCategory: development
 subcategory: cloud-hosting
@@ -10,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +24,7 @@ deployment:
   - Self-hosted
 website: https://www.eon.io/
 docs: https://www.eon.io/
-sourceCode: ''
+sourceCode: ""
 icon: eon
 verified: false
 featured: false
@@ -34,20 +36,23 @@ tags:
   - infrastructure
 atGlance: Intelligent cloud backup and data management platform with zero-ETL data lake access.
 fullDescription: >-
-  Eon is an enterprise cloud data protection platform that modernizes
-  traditional backup processes. It provides agentless, cloud-native backup
-  with global deduplication, Cloud Backup Posture Management (CBPM), and
-  zero-ETL data lake infrastructure that makes backup data queryable from
+  Eon is an enterprise cloud data protection platform that modernizes traditional backup processes.
+  It provides agentless, cloud-native backup with global deduplication, Cloud Backup Posture
+  Management (CBPM), and zero-ETL data lake infrastructure that makes backup data queryable from
   tools like Snowflake, Databricks, and BigQuery without custom pipelines.
 coreFeatures:
   - name: Intelligent Cloud Backup
     description: Agentless, cloud-native data protection with global deduplication to reduce storage costs.
     icon: check
   - name: Cloud Backup Posture Management
-    description: Continuously scans and maps cloud resources, automatically classifying data and setting backup policies.
+    description: >-
+      Continuously scans and maps cloud resources, automatically classifying data and setting backup
+      policies.
     icon: check
   - name: Zero-ETL Data Lake
-    description: Converts backups into open analytics-ready formats (Apache Iceberg, Parquet) for instant querying.
+    description: >-
+      Converts backups into open analytics-ready formats (Apache Iceberg, Parquet) for instant
+      querying.
     icon: check
 additionalFeatures:
   - name: Granular Recovery

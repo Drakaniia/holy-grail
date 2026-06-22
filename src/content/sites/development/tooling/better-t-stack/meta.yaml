@@ -4,25 +4,25 @@ description: Better-T-Stack bookmarked for tooling resources.
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 0
-watchers: 0
+stars: 5502
+watchers: 10
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 1 day ago
+lastRelease: 1 day ago
+version: v3.33.2
+contributors: 73
+commitsThisYear: 177
+releases: 458
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://www.better-t-stack.dev/
 docs: https://www.better-t-stack.dev/
-sourceCode: ''
+sourceCode: https://github.com/AmanVarshney01/create-better-t-stack
 icon: better-t-stack
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

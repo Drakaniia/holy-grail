@@ -4,16 +4,16 @@ description: Gemini CLI setup reference for AI-assisted terminal coding workflow
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 105476
+watchers: 569
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 3 hours ago
+lastRelease: 4 days ago
+version: v0.47.0
+contributors: 685
+commitsThisYear: 2526
+releases: 525
 platforms:
   - CLI
 deployment:
@@ -31,7 +31,6 @@ tags:
   - coding-agent
   - terminal
   - gemini
-installCommand: npm install -g @google/gemini-cli
 atGlance: Gemini is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Gemini is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

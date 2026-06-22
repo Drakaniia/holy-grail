@@ -4,23 +4,23 @@ description: Auggie CLI setup reference for AI-assisted terminal coding workflow
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 239
+watchers: 3
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Unknown
+lastCommit: 2 days ago
+lastRelease: 3 days ago
+version: v0.30.0
+contributors: 10
+commitsThisYear: 32
+releases: 248
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://docs.augmentcode.com/cli/overview
 docs: https://docs.augmentcode.com/cli/overview
-sourceCode: ''
+sourceCode: https://github.com/augmentcode/auggie
 icon: auggie
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @augmentcode/auggie
 atGlance: Auggie is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Auggie is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

@@ -4,16 +4,16 @@ description: Open agent skills directory and leaderboard for reusable AI agent c
 category: AI Agent Skills
 parentCategory: ai
 subcategory: agent-skills
-stars: 19541
-watchers: 64
+stars: 23131
+watchers: 70
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 7 days ago
-lastRelease: 7 days ago
-version: v1.5.7
-contributors: 95
-commitsThisYear: 286
-releases: 26
+lastCommit: 1 day ago
+lastRelease: 3 days ago
+version: v1.5.12
+contributors: 102
+commitsThisYear: 331
+releases: 31
 platforms:
   - Web
   - CLI

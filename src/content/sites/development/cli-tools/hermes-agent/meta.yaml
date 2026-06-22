@@ -4,16 +4,16 @@ description: Hermes Agent CLI setup reference for AI-assisted terminal coding wo
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 199181
+watchers: 786
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 46 minutes ago
+lastRelease: 2 days ago
+version: v2026.6.19
+contributors: 1644
+commitsThisYear: 12440
+releases: 18
 platforms:
   - CLI
 deployment:
@@ -30,9 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: >-
-  curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh |
-  bash
 atGlance: Hermes Agent is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Hermes Agent is cataloged as a CLI tool for developers who want AI-assisted coding from the

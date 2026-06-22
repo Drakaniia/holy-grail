@@ -4,15 +4,15 @@ description: Sub-Agents Directory - Claude Code Sub-Agents & MCP Servers bookmar
 category: AI API
 parentCategory: ai
 subcategory: api
-stars: 124
+stars: 129
 watchers: 0
 addedDaysAgo: 0
 license: MIT
-lastCommit: 5 days ago
+lastCommit: 7 days ago
 lastRelease: No releases
-version: ''
+version: ""
 contributors: 4
-commitsThisYear: 98
+commitsThisYear: 104
 releases: 0
 platforms:
   - Web

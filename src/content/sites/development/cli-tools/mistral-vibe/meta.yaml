@@ -4,16 +4,16 @@ description: Mistral Vibe CLI setup reference for AI-assisted terminal coding wo
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 4548
+watchers: 20
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 2 days ago
+lastRelease: 2 days ago
+version: v2.17.1
+contributors: 8
+commitsThisYear: 46
+releases: 63
 platforms:
   - CLI
 deployment:
@@ -32,7 +32,6 @@ tags:
   - terminal
   - mistral
   - vibe
-installCommand: curl -LsSf https://mistral.ai/vibe/install.sh | bash
 atGlance: Mistral Vibe is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Mistral Vibe is cataloged as a CLI tool for developers who want AI-assisted coding from the

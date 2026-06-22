@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://docs.qoder.com/cli/quick-start
 docs: https://docs.qoder.com/cli/quick-start
-sourceCode: ''
+sourceCode: ""
 icon: qodercli
 verified: true
 featured: false
@@ -32,7 +32,6 @@ tags:
   - terminal
   - qoder
   - qodercli
-installCommand: npm install -g @qoder-ai/qodercli
 atGlance: Qoder CLI is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Qoder CLI is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

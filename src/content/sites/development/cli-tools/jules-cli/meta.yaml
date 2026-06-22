@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://jules.google/docs/cli/reference/
 docs: https://jules.google/docs/cli/reference/
-sourceCode: ''
+sourceCode: ""
 icon: jules-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @google/jules
 atGlance: Jules is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Jules is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

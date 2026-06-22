@@ -4,16 +4,16 @@ description: Animated React components for shadcn/ui, Motion, and Tailwind CSS i
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 797
+stars: 825
 watchers: 1
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 day ago
-lastRelease: 27 days ago
-version: v3.4.0
-contributors: 5
-commitsThisYear: 170
-releases: 3
+lastCommit: 9 days ago
+lastRelease: 20 days ago
+version: v3.4.1
+contributors: 6
+commitsThisYear: 177
+releases: 4
 platforms:
   - Web
 deployment:

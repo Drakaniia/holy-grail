@@ -1,6 +1,6 @@
 slug: fontofweb
-name: 'Font Of Web: AI-Powered Design Inspiration & Font Discovery'
-description: 'Font Of Web: AI-Powered Design Inspiration & Font Discovery bookmarked for design tools resources.'
+name: "Font Of Web: AI-Powered Design Inspiration & Font Discovery"
+description: "Font Of Web: AI-Powered Design Inspiration & Font Discovery bookmarked for design tools resources."
 category: Design Tools
 parentCategory: design
 subcategory: design-tools
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://fontofweb.com/
 docs: https://fontofweb.com/
-sourceCode: ''
+sourceCode: ""
 icon: fontofweb
 verified: false
 featured: false
@@ -29,7 +29,7 @@ tags:
   - design
   - design-tools
   - tools
-atGlance: 'Font Of Web: AI-Powered Design Inspiration & Font Discovery'
+atGlance: "Font Of Web: AI-Powered Design Inspiration & Font Discovery"
 fullDescription: >-
   Font Of Web: AI-Powered Design Inspiration & Font Discovery is kept as a design tools resource for
   design inspiration, assets, and reference work.

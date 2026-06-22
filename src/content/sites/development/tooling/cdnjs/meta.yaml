@@ -1,19 +1,19 @@
 slug: cdnjs
-name: 'cdnjs - The #1 free and open source CDN built to make life easier for developers'
+name: "cdnjs - The #1 free and open source CDN built to make life easier for developers"
 description: >-
   cdnjs - The #1 free and open source CDN built to make life easier for developers bookmarked for
   tooling resources.
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 0
-watchers: 0
+stars: 10708
+watchers: 267
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
+license: MIT
+lastCommit: 8 months ago
+lastRelease: No releases
+version: ""
+contributors: 1719
 commitsThisYear: 0
 releases: 0
 platforms:
@@ -22,15 +22,15 @@ deployment:
   - Cloud
 website: https://cdnjs.com/
 docs: https://cdnjs.com/
-sourceCode: ''
+sourceCode: https://github.com/cdnjs/cdnjs
 icon: cdnjs
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark
   - development
   - tooling
-atGlance: 'cdnjs - The #1 free and open source CDN built to make life easier for developers'
+atGlance: "cdnjs - The #1 free and open source CDN built to make life easier for developers"
 fullDescription: >-
   cdnjs - The #1 free and open source CDN built to make life easier for developers is kept as a
   tooling resource for building and shipping software.

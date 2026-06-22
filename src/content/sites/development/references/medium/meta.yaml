@@ -11,10 +11,10 @@ subcategory: references
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -26,7 +26,7 @@ website: >-
   https://medium.com/@moise.lala/hosting-on-digital-ocean-docker-nginx-reverse-proxy-and-lets-encrypt-04ffacca5dfc
 docs: >-
   https://medium.com/@moise.lala/hosting-on-digital-ocean-docker-nginx-reverse-proxy-and-lets-encrypt-04ffacca5dfc
-sourceCode: ''
+sourceCode: ""
 icon: medium
 verified: false
 featured: false

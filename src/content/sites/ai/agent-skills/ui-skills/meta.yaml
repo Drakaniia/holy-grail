@@ -4,16 +4,16 @@ description: Curated agent skill directory for design engineers.
 category: AI Agent Skills
 parentCategory: ai
 subcategory: agent-skills
-stars: 2236
-watchers: 6
+stars: 3288
+watchers: 8
 addedDaysAgo: 0
 license: MIT
-lastCommit: 12 days ago
-lastRelease: 4 months ago
-version: v0.1.5
-contributors: 1
-commitsThisYear: 108
-releases: 6
+lastCommit: 18 hours ago
+lastRelease: 6 days ago
+version: v0.2.2
+contributors: 3
+commitsThisYear: 131
+releases: 7
 platforms:
   - Web
 deployment:

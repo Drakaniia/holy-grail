@@ -1,5 +1,5 @@
 slug: behance
-name: 'Esittele, etsi ja palkkaa luovien alojen ammattilaisia :: Behance'
+name: "Esittele, etsi ja palkkaa luovien alojen ammattilaisia :: Behance"
 description: >-
   Esittele, etsi ja palkkaa luovien alojen ammattilaisia :: Behance bookmarked for inspiration
   resources.
@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://www.behance.net/
 docs: https://www.behance.net/
-sourceCode: ''
+sourceCode: ""
 icon: behance
 verified: false
 featured: false
@@ -30,7 +30,7 @@ tags:
   - bookmark
   - design
   - inspiration
-atGlance: 'Esittele, etsi ja palkkaa luovien alojen ammattilaisia :: Behance'
+atGlance: "Esittele, etsi ja palkkaa luovien alojen ammattilaisia :: Behance"
 fullDescription: >-
   Esittele, etsi ja palkkaa luovien alojen ammattilaisia :: Behance is kept as an inspiration
   resource for design inspiration, assets, and reference work.

@@ -4,16 +4,16 @@ description: Simple, modular, and accessible UI components for React application
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 40413
-watchers: 196
+stars: 40465
+watchers: 197
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 day ago
-lastRelease: 1 month ago
-version: '@chakra-ui/charts@3.35.0'
-contributors: 799
-commitsThisYear: 175
-releases: 3592
+lastCommit: 7 hours ago
+lastRelease: 11 days ago
+version: "@chakra-ui/codemod@3.36.0"
+contributors: 803
+commitsThisYear: 197
+releases: 3597
 platforms:
   - Web
 deployment:

@@ -4,16 +4,16 @@ description: Aider CLI setup reference for AI-assisted terminal coding workflows
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 45300
-watchers: 0
+stars: 46550
+watchers: 251
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+lastCommit: 1 month ago
+lastRelease: 10 months ago
+version: v0.86.0
+contributors: 182
+commitsThisYear: 82
+releases: 93
 platforms:
   - CLI
 deployment:
@@ -31,12 +31,10 @@ tags:
   - coding-agent
   - terminal
   - aider
-installCommand: python -m pip install aider-install && aider-install
 atGlance: Aider is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Aider is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
-  The setup command is shown directly on this CLI tool page for quick installation or
-  authentication.
+  Aider is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The
+  setup command is shown directly on this CLI tool page for quick installation or authentication.
 coreFeatures:
   - name: Supported CLI Provider
     description: Aider is tracked as a supported AI coding CLI for terminal-based development workflows.

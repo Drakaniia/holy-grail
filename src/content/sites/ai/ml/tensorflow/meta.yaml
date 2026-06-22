@@ -4,15 +4,15 @@ description: TensorFlow bookmarked for machine learning resources.
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 195309
-watchers: 7385
+stars: 195812
+watchers: 7476
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 9 minutes ago
-lastRelease: 2 months ago
+lastCommit: 33 minutes ago
+lastRelease: 3 months ago
 version: v2.21.0
-contributors: 5086
-commitsThisYear: 5774
+contributors: 5104
+commitsThisYear: 6500
 releases: 222
 platforms:
   - Web
@@ -58,7 +58,7 @@ similarTools:
     verified: true
     website: https://pytorch.org/
   - slug: scikit-learn
-    name: 'scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation'
+    name: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
     description: >-
       scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation bookmarked for
       machine learning resources.

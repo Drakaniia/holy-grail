@@ -4,15 +4,15 @@ description: Droid CLI setup reference for AI-assisted terminal coding workflows
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 977
+watchers: 10
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Unknown
+lastCommit: 3 days ago
+lastRelease: No releases
+version: ""
+contributors: 41
+commitsThisYear: 258
 releases: 0
 platforms:
   - CLI
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://docs.factory.ai/cli/getting-started/quickstart
 docs: https://docs.factory.ai/cli/getting-started/quickstart
-sourceCode: ''
+sourceCode: https://github.com/Factory-AI/factory
 icon: droid-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: curl -fsSL https://app.factory.ai/cli | sh
 atGlance: Droid is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Droid is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

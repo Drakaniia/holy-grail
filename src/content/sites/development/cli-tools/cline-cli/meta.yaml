@@ -4,23 +4,23 @@ description: Cline CLI setup reference for AI-assisted terminal coding workflows
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 63628
+watchers: 274
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 54 minutes ago
+lastRelease: 1 day ago
+version: cli-v3.0.29
+contributors: 299
+commitsThisYear: 1771
+releases: 293
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://docs.cline.bot/cline-cli/overview
 docs: https://docs.cline.bot/cline-cli/overview
-sourceCode: ''
+sourceCode: https://github.com/cline/cline
 icon: cline-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g cline
 atGlance: Cline is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Cline is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

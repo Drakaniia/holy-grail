@@ -4,16 +4,16 @@ description: Modern React component library with accessible primitives, themes, 
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 29324
-watchers: 92
+stars: 29676
+watchers: 89
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 2 hours ago
+lastCommit: 1 hour ago
 lastRelease: 4 days ago
-version: v3.0.5
-contributors: 237
-commitsThisYear: 218
-releases: 4692
+version: v3.2.1
+contributors: 243
+commitsThisYear: 327
+releases: 4695
 platforms:
   - Web
 deployment:

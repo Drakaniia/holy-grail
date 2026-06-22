@@ -4,13 +4,13 @@ description: Unstyled accessible components from Tailwind Labs for React and Vue
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 28559
+stars: 28628
 watchers: 158
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 month ago
-lastRelease: 1 month ago
-version: '@headlessui/react@v2.2.10'
+lastCommit: 2 months ago
+lastRelease: 2 months ago
+version: "@headlessui/react@v2.2.10"
 contributors: 75
 commitsThisYear: 4
 releases: 130

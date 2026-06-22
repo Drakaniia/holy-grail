@@ -4,16 +4,16 @@ description: Unstyled accessible React primitives from MUI for building custom d
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 9646
+stars: 10025
 watchers: 32
 addedDaysAgo: 0
 license: MIT
-lastCommit: 15 hours ago
-lastRelease: 16 hours ago
-version: v1.5.0
-contributors: 295
-commitsThisYear: 741
-releases: 25
+lastCommit: 53 minutes ago
+lastRelease: 3 days ago
+version: v1.6.0
+contributors: 301
+commitsThisYear: 902
+releases: 26
 platforms:
   - Web
 deployment:

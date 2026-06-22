@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -21,7 +21,7 @@ deployment:
   - Cloud
 website: https://noiz.ai/
 docs: https://noiz.ai/
-sourceCode: ''
+sourceCode: ""
 icon: noiz
 verified: false
 featured: false
@@ -33,11 +33,9 @@ tags:
   - text-to-speech
 atGlance: AI audio studio for expressive text-to-speech, voice cloning, and storytelling.
 fullDescription: >-
-  Noiz is an AI-powered audio generation platform that combines
-  text-to-speech, voice cloning, and intelligent storytelling into a single
-  studio. It offers emotion-controlled TTS, multilingual dubbing, a voice
-  design library, and developer APIs for integration into third-party
-  applications.
+  Noiz is an AI-powered audio generation platform that combines text-to-speech, voice cloning, and
+  intelligent storytelling into a single studio. It offers emotion-controlled TTS, multilingual
+  dubbing, a voice design library, and developer APIs for integration into third-party applications.
 coreFeatures:
   - name: AI Text-to-Speech
     description: Generates lifelike speech from text with emotion control for expressive output.

@@ -4,15 +4,15 @@ description: Beautiful README badges styled like shadcn/ui buttons.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 309
+stars: 415
 watchers: 0
 addedDaysAgo: 0
 license: MIT
-lastCommit: 53 minutes ago
+lastCommit: 6 minutes ago
 lastRelease: No releases
-version: ''
-contributors: 3
-commitsThisYear: 83
+version: ""
+contributors: 4
+commitsThisYear: 115
 releases: 0
 platforms:
   - Web

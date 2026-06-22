@@ -6,25 +6,25 @@ description: >-
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 0
-watchers: 0
+stars: 27380
+watchers: 350
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 4 minutes ago
+lastRelease: 9 days ago
+version: v10.5.0
+contributors: 1215
+commitsThisYear: 280
+releases: 384
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://eslint.org/
 docs: https://eslint.org/
-sourceCode: ''
+sourceCode: https://github.com/eslint/eslint
 icon: eslint
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

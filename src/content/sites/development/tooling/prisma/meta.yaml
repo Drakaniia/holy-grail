@@ -4,15 +4,15 @@ description: Prisma bookmarked for tooling resources.
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 0
-watchers: 0
+stars: 6637
+watchers: 43
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Apache-2.0
+lastCommit: 23 hours ago
+lastRelease: No releases
+version: ""
+contributors: 129
+commitsThisYear: 82
 releases: 0
 platforms:
   - Web
@@ -20,9 +20,9 @@ deployment:
   - Cloud
 website: https://www.prisma.io/
 docs: https://www.prisma.io/
-sourceCode: ''
+sourceCode: https://github.com/prisma/prisma-examples
 icon: prisma
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

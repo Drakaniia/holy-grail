@@ -4,14 +4,14 @@ description: SETUP bookmarked for repositories resources.
 category: Repositories
 parentCategory: development
 subcategory: repositories
-stars: 0
-watchers: 0
+stars: 125
+watchers: 1
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
+license: Unknown
+lastCommit: 1 year ago
+lastRelease: No releases
+version: ""
+contributors: 3
 commitsThisYear: 0
 releases: 0
 platforms:
@@ -22,7 +22,7 @@ website: https://github.com/emmabostian/fem-css-foundations
 docs: https://github.com/emmabostian/fem-css-foundations
 sourceCode: https://github.com/emmabostian/fem-css-foundations
 icon: github
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

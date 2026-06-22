@@ -1,6 +1,6 @@
 slug: pythonanywhere
-name: 'Host, run, and code Python in the cloud: PythonAnywhere'
-description: 'Host, run, and code Python in the cloud: PythonAnywhere bookmarked for hosting resources.'
+name: "Host, run, and code Python in the cloud: PythonAnywhere"
+description: "Host, run, and code Python in the cloud: PythonAnywhere bookmarked for hosting resources."
 category: Hosting
 parentCategory: development
 subcategory: cloud-hosting
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://www.pythonanywhere.com/
 docs: https://www.pythonanywhere.com/
-sourceCode: ''
+sourceCode: ""
 icon: pythonanywhere
 verified: false
 featured: false
@@ -29,7 +29,7 @@ tags:
   - development
   - cloud-hosting
   - hosting
-atGlance: 'Host, run, and code Python in the cloud: PythonAnywhere'
+atGlance: "Host, run, and code Python in the cloud: PythonAnywhere"
 fullDescription: >-
   Host, run, and code Python in the cloud: PythonAnywhere is kept as a hosting resource for cloud
   hosting, deployment, or backend infrastructure work.

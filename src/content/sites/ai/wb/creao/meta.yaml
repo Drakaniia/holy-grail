@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://creao.ai/
 docs: https://creao.ai/
-sourceCode: ''
+sourceCode: ""
 icon: creao
 verified: false
 featured: false
@@ -57,8 +57,8 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: bolt
-    name: 'Bolt AI builder: Websites, apps & prototypes'
-    description: 'Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources.'
+    name: "Bolt AI builder: Websites, apps & prototypes"
+    description: "Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources."
     stars: 16379
     addedDaysAgo: 0
     verified: true

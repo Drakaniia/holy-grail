@@ -4,15 +4,15 @@ description: Copy-paste Tailwind and React components now surfaced through the C
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 9811
-watchers: 34
+stars: 10117
+watchers: 35
 addedDaysAgo: 0
 license: AGPL-3.0
-lastCommit: 1 day ago
+lastCommit: 10 days ago
 lastRelease: No releases
-version: ''
+version: ""
 contributors: 50
-commitsThisYear: 127
+commitsThisYear: 131
 releases: 0
 platforms:
   - Web

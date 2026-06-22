@@ -1,5 +1,5 @@
 slug: kaggle
-name: 'Kaggle: Your Machine Learning and Data Science Community'
+name: "Kaggle: Your Machine Learning and Data Science Community"
 description: >-
   Kaggle: Your Machine Learning and Data Science Community bookmarked for machine learning
   resources.
@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://www.kaggle.com/
 docs: https://www.kaggle.com/
-sourceCode: ''
+sourceCode: ""
 icon: kaggle
 verified: false
 featured: false
@@ -32,7 +32,7 @@ tags:
   - ml
   - machine
   - learning
-atGlance: 'Kaggle: Your Machine Learning and Data Science Community'
+atGlance: "Kaggle: Your Machine Learning and Data Science Community"
 fullDescription: >-
   Kaggle: Your Machine Learning and Data Science Community is kept as a machine learning resource
   for AI-assisted workflows.
@@ -71,7 +71,7 @@ similarTools:
     verified: true
     website: https://pytorch.org/
   - slug: scikit-learn
-    name: 'scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation'
+    name: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
     description: >-
       scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation bookmarked for
       machine learning resources.

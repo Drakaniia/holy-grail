@@ -4,25 +4,25 @@ description: Drizzle ORM - next gen TypeScript ORM. bookmarked for tooling resou
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 0
-watchers: 0
+stars: 34879
+watchers: 86
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 19 hours ago
+lastRelease: 2 months ago
+version: 0.45.2
+contributors: 135
+commitsThisYear: 4
+releases: 181
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://orm.drizzle.team/
 docs: https://orm.drizzle.team/
-sourceCode: ''
+sourceCode: https://github.com/drizzle-team/drizzle-orm
 icon: orm
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

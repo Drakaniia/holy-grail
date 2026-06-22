@@ -4,16 +4,16 @@ description: Tailwind CSS component and template library for dashboards, landing
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 1595
+stars: 1609
 watchers: 18
 addedDaysAgo: 0
 license: MIT
 lastCommit: 20 hours ago
-lastRelease: 1 day ago
-version: '@tailgrids/cli@1.4.0'
+lastRelease: 20 hours ago
+version: "@tailgrids/cli@1.4.2"
 contributors: 10
-commitsThisYear: 522
-releases: 9
+commitsThisYear: 567
+releases: 11
 platforms:
   - Web
 deployment:

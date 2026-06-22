@@ -4,16 +4,16 @@ description: Codex CLI setup reference for AI-assisted terminal coding workflows
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 92567
+watchers: 506
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 11 minutes ago
+lastRelease: 4 days ago
+version: rust-v0.141.0
+contributors: 486
+commitsThisYear: 5063
+releases: 859
 platforms:
   - CLI
 deployment:
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @openai/codex
 atGlance: Codex is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Codex is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

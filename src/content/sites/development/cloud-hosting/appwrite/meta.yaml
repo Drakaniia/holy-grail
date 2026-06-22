@@ -4,16 +4,16 @@ description: A backend platform providing authentication, databases, storage, an
 category: Backend
 parentCategory: development
 subcategory: cloud-hosting
-stars: 56000
+stars: 56377
 watchers: 412
 addedDaysAgo: 5
 license: BSD-3-Clause
-lastCommit: 1 week ago
-lastRelease: 1 month ago
+lastCommit: 24 minutes ago
+lastRelease: 2 months ago
 version: 1.9.0
-contributors: 367
-commitsThisYear: 3300
-releases: 7
+contributors: 426
+commitsThisYear: 4700
+releases: 128
 platforms:
   - Web
 deployment:

@@ -4,23 +4,23 @@ description: Pi CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 64513
+watchers: 225
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 7 hours ago
+lastRelease: 1 day ago
+version: v0.79.9
+contributors: 225
+commitsThisYear: 3211
+releases: 236
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent
 docs: https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent
-sourceCode: https://github.com/badlogic/pi-mono
+sourceCode: https://github.com/earendil-works/pi
 icon: pi-coding-agent
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @mariozechner/pi-coding-agent
 atGlance: Pi is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Pi is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

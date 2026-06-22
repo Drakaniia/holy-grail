@@ -4,15 +4,15 @@ description: Animated React, Tailwind, and Framer Motion components for landing 
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 21037
-watchers: 40
+stars: 21334
+watchers: 42
 addedDaysAgo: 0
 license: MIT
-lastCommit: 9 days ago
+lastCommit: 18 days ago
 lastRelease: No releases
-version: ''
-contributors: 145
-commitsThisYear: 79
+version: ""
+contributors: 147
+commitsThisYear: 85
 releases: 0
 platforms:
   - Web

@@ -4,16 +4,16 @@ description: CLI - OpenHands Docs bookmarked for ai cli resources.
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 74203
-watchers: 443
+stars: 77956
+watchers: 457
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 2 hours ago
-lastRelease: 18 days ago
-version: 1.7.0
-contributors: 475
-commitsThisYear: 955
-releases: 102
+lastCommit: 13 hours ago
+lastRelease: 11 days ago
+version: 1.8.0
+contributors: 484
+commitsThisYear: 1142
+releases: 103
 platforms:
   - Web
 deployment:

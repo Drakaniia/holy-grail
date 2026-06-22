@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://www.codebuddy.ai/docs/cli/installation
 docs: https://www.codebuddy.ai/docs/cli/installation
-sourceCode: ''
+sourceCode: ""
 icon: codebuddy
 verified: true
 featured: false
@@ -31,11 +31,10 @@ tags:
   - coding-agent
   - terminal
   - codebuddy
-installCommand: npm install -g @tencent-ai/codebuddy-code
 atGlance: CodeBuddy is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  CodeBuddy is cataloged as a CLI tool for developers who want AI-assisted coding from the
-  terminal. The setup command is shown directly on this CLI tool page for quick installation or
+  CodeBuddy is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
+  The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider

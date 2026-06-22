@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -21,7 +21,7 @@ deployment:
   - Cloud
 website: https://app.buildship.com/
 docs: https://docs.buildship.com/
-sourceCode: ''
+sourceCode: ""
 icon: buildship
 verified: false
 featured: false
@@ -36,8 +36,8 @@ tags:
   - api
 atGlance: AI-powered visual backend builder for APIs, workflows, and cloud functions.
 fullDescription: >-
-  BuildShip is tracked as a cloud-hosted backend and AI workflow builder for creating scalable
-  APIs, scheduled tasks, backend cloud functions, and integrations from a visual workflow editor.
+  BuildShip is tracked as a cloud-hosted backend and AI workflow builder for creating scalable APIs,
+  scheduled tasks, backend cloud functions, and integrations from a visual workflow editor.
 coreFeatures:
   - name: Visual Backend Builder
     description: Build APIs, scheduled jobs, cloud functions, and workflow logic from a browser workspace.

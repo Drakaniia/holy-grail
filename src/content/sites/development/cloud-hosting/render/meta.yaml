@@ -4,15 +4,15 @@ description: Cloud application hosting and deployment platform for web services.
 category: Hosting
 parentCategory: development
 subcategory: cloud-hosting
-stars: 0
+stars: 2
 watchers: 0
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Unknown
+lastCommit: 2 months ago
+lastRelease: No releases
+version: ""
+contributors: 4
+commitsThisYear: 9
 releases: 0
 platforms:
   - Web
@@ -20,9 +20,9 @@ deployment:
   - Cloud
 website: https://render.com/
 docs: https://render.com/docs
-sourceCode: ''
+sourceCode: https://github.com/render-examples/render-workflows-examples-ts
 icon: render
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

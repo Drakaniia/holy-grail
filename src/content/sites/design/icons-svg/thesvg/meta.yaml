@@ -6,16 +6,16 @@ description: >-
 category: Icons/SVG
 parentCategory: design
 subcategory: icons-svg
-stars: 2043
-watchers: 7
+stars: 2329
+watchers: 8
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 day ago
-lastRelease: 3 days ago
-version: v3.0.0
-contributors: 7
-commitsThisYear: 370
-releases: 27
+lastCommit: 5 days ago
+lastRelease: 5 days ago
+version: "@thesvg/vue@3.0.17"
+contributors: 12
+commitsThisYear: 510
+releases: 53
 platforms:
   - Web
 deployment:

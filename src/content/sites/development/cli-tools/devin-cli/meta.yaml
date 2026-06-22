@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://cli.devin.ai/docs
 docs: https://cli.devin.ai/docs
-sourceCode: ''
+sourceCode: ""
 icon: devin-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: curl -fsSL https://cli.devin.ai/install.sh | bash
 atGlance: Devin is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Devin is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

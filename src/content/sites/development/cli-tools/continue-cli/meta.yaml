@@ -4,23 +4,23 @@ description: Continue CLI setup reference for AI-assisted terminal coding workfl
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 34234
+watchers: 159
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 5 hours ago
+lastRelease: 3 days ago
+version: v2.0.0-vscode
+contributors: 507
+commitsThisYear: 846
+releases: 827
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://docs.continue.dev/guides/cli
 docs: https://docs.continue.dev/guides/cli
-sourceCode: ''
+sourceCode: https://github.com/continuedev/continue
 icon: continue-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm i -g @continuedev/cli
 atGlance: Continue is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Continue is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

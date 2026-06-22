@@ -4,16 +4,16 @@ description: Geist Font bookmarked for fonts resources.
 category: Fonts
 parentCategory: design
 subcategory: fonts
-stars: 3428
-watchers: 17
+stars: 3489
+watchers: 16
 addedDaysAgo: 0
 license: OFL-1.1
-lastCommit: 1 month ago
-lastRelease: 2 months ago
-version: 1.8.0
-contributors: 24
-commitsThisYear: 74
-releases: 16
+lastCommit: 20 days ago
+lastRelease: 20 days ago
+version: v1.7.2
+contributors: 25
+commitsThisYear: 84
+releases: 18
 platforms:
   - Web
 deployment:

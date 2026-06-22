@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://planetscale.com/
 docs: https://planetscale.com/
-sourceCode: ''
+sourceCode: ""
 icon: planetscale
 verified: false
 featured: false

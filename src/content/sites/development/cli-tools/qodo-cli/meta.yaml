@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://docs.qodo.ai/qodo-command/getting-started/setup-and-quickstart
 docs: https://docs.qodo.ai/qodo-command/getting-started/setup-and-quickstart
-sourceCode: ''
+sourceCode: ""
 icon: qodo-cli
 verified: true
 featured: false
@@ -31,11 +31,10 @@ tags:
   - coding-agent
   - terminal
   - qodo
-installCommand: npm install -g @qodo/command
 atGlance: Qodo CLI is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
-  Qodo CLI is cataloged as a CLI tool for developers who want AI-assisted coding from the
-  terminal. The setup command is shown directly on this CLI tool page for quick installation or
+  Qodo CLI is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.
+  The setup command is shown directly on this CLI tool page for quick installation or
   authentication.
 coreFeatures:
   - name: Supported CLI Provider

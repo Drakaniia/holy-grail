@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://designengineer.tools/
 docs: https://designengineer.tools/
-sourceCode: ''
+sourceCode: ""
 icon: designengineer-tools
 verified: false
 featured: false
@@ -33,8 +33,8 @@ tags:
   - directory
 atGlance: Curated directory of useful tools for web-focused design engineers.
 fullDescription: >-
-  Design Engineer Tools is kept as a broad design-engineering reference for inspiration,
-  components, web utilities, interface tools, motion tools, 3D tools, and adjacent resources.
+  Design Engineer Tools is kept as a broad design-engineering reference for inspiration, components,
+  web utilities, interface tools, motion tools, 3D tools, and adjacent resources.
 coreFeatures:
   - name: Design Engineering Directory
     description: Collects tools across inspiration, components, utilities, interface design, motion, and 3D.

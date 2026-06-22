@@ -4,16 +4,16 @@ description: Figma - shadcn/ui bookmarked for design tools resources.
 category: Design Tools
 parentCategory: design
 subcategory: design-tools
-stars: 114722
-watchers: 346
+stars: 117109
+watchers: 441
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 hour ago
-lastRelease: 14 days ago
-version: shadcn@4.7.0
-contributors: 533
-commitsThisYear: 934
-releases: 94
+lastCommit: 15 hours ago
+lastRelease: 13 days ago
+version: shadcn@4.11.0
+contributors: 562
+commitsThisYear: 1018
+releases: 101
 platforms:
   - Web
 deployment:

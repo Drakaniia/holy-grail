@@ -4,15 +4,15 @@ description: Copy-paste React map components built on MapLibre and Tailwind CSS.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 9498
-watchers: 35
+stars: 9809
+watchers: 36
 addedDaysAgo: 0
 license: MIT
-lastCommit: 1 month ago
+lastCommit: 19 hours ago
 lastRelease: No releases
-version: ''
-contributors: 2
-commitsThisYear: 58
+version: ""
+contributors: 3
+commitsThisYear: 65
 releases: 0
 platforms:
   - Web

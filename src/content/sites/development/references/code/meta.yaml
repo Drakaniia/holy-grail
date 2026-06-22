@@ -4,25 +4,25 @@ description: Getting started with Visual Studio Code bookmarked for references r
 category: References
 parentCategory: development
 subcategory: references
-stars: 0
-watchers: 0
+stars: 186621
+watchers: 3515
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 50 minutes ago
+lastRelease: 4 days ago
+version: 1.125.0
+contributors: 3129
+commitsThisYear: 14553
+releases: 222
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://code.visualstudio.com/docs/introvideos/basics
 docs: https://code.visualstudio.com/docs/introvideos/basics
-sourceCode: ''
+sourceCode: https://github.com/microsoft/vscode
 icon: code
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

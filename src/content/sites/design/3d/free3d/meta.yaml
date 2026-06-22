@@ -7,10 +7,10 @@ subcategory: 3d
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://free3d.com/
 docs: https://free3d.com/
-sourceCode: ''
+sourceCode: ""
 icon: free3d
 verified: false
 featured: false
@@ -51,8 +51,8 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: turbosquid
-    name: '3D Models for Professionals :: TurboSquid'
-    description: '3D Models for Professionals :: TurboSquid bookmarked for 3d resources.'
+    name: "3D Models for Professionals :: TurboSquid"
+    description: "3D Models for Professionals :: TurboSquid bookmarked for 3d resources."
     stars: 0
     addedDaysAgo: 0
     verified: false

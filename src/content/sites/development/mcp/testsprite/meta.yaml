@@ -4,25 +4,25 @@ description: AI testing platform with MCP-oriented workflow support.
 category: MCP
 parentCategory: development
 subcategory: mcp
-stars: 0
-watchers: 0
+stars: 731
+watchers: 4
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 2 days ago
+lastRelease: 2 days ago
+version: v0.1.2
+contributors: 3
+commitsThisYear: 7
+releases: 2
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://www.testsprite.com/
 docs: https://www.testsprite.com/
-sourceCode: ''
+sourceCode: https://github.com/TestSprite/testsprite-cli
 icon: testsprite
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

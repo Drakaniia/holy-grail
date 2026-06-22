@@ -4,15 +4,15 @@ description: Svelte port of the shadcn/ui component workflow with Tailwind CSS a
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 8757
+stars: 8875
 watchers: 47
 addedDaysAgo: 0
 license: MIT
-lastCommit: 5 days ago
-lastRelease: 1 month ago
+lastCommit: 4 days ago
+lastRelease: 2 months ago
 version: shadcn-svelte@1.2.7
-contributors: 186
-commitsThisYear: 76
+contributors: 191
+commitsThisYear: 90
 releases: 103
 platforms:
   - Web

@@ -7,10 +7,10 @@ subcategory: movies
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
+license: Proprietary
 lastCommit: Updated Jun 3, 2026
-lastRelease: Bookmark
-version: ''
+lastRelease: N/A
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://sflix.app/home
 docs: https://sflix.app/home
-sourceCode: ''
+sourceCode: ""
 icon: sflix
 verified: false
 featured: false

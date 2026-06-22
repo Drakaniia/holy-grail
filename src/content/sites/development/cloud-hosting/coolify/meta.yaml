@@ -4,16 +4,16 @@ description: Coolify bookmarked for hosting resources.
 category: Hosting
 parentCategory: development
 subcategory: cloud-hosting
-stars: 55610
-watchers: 172
+stars: 57271
+watchers: 180
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 13 hours ago
-lastRelease: 1 day ago
-version: v4.1.0
-contributors: 658
-commitsThisYear: 1248
-releases: 678
+lastCommit: 8 hours ago
+lastRelease: 17 days ago
+version: v4.1.2
+contributors: 674
+commitsThisYear: 1582
+releases: 680
 platforms:
   - Web
 deployment:

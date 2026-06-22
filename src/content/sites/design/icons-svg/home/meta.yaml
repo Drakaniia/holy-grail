@@ -1,6 +1,6 @@
 slug: home
-name: 'Streamline Icons: The Only Icon System'
-description: 'Streamline Icons: The Only Icon System bookmarked for icons/svg resources.'
+name: "Streamline Icons: The Only Icon System"
+description: "Streamline Icons: The Only Icon System bookmarked for icons/svg resources."
 category: Icons/SVG
 parentCategory: design
 subcategory: icons-svg
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://home.streamlinehq.com/
 docs: https://home.streamlinehq.com/
-sourceCode: ''
+sourceCode: ""
 icon: home
 verified: false
 featured: false
@@ -30,13 +30,13 @@ tags:
   - icons-svg
   - icons
   - svg
-atGlance: 'Streamline Icons: The Only Icon System'
+atGlance: "Streamline Icons: The Only Icon System"
 fullDescription: >-
   Streamline Icons: The Only Icon System is kept as an icons/svg resource for design inspiration,
   assets, and reference work.
 coreFeatures:
   - name: Design Resource
-    description: 'Streamline Icons: The Only Icon System is cataloged as an icons/svg resource for design work.'
+    description: "Streamline Icons: The Only Icon System is cataloged as an icons/svg resource for design work."
     icon: check
   - name: Visual Reference
     description: Useful as inspiration, tooling, assets, or implementation reference.

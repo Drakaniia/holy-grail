@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://60fps.design/
 docs: https://60fps.design/
-sourceCode: ''
+sourceCode: ""
 icon: 60fps
 verified: false
 featured: false
@@ -40,7 +40,9 @@ coreFeatures:
     description: Browse app interaction examples focused on animation, transitions, and interface details.
     icon: check
   - name: Filtered References
-    description: The catalog groups examples by interaction patterns such as buttons, cards, loading, scroll, tabs, and gestures.
+    description: >-
+      The catalog groups examples by interaction patterns such as buttons, cards, loading, scroll,
+      tabs, and gestures.
     icon: check
 additionalFeatures:
   - name: Browser Workflow
@@ -55,7 +57,9 @@ additionalFeatures:
 similarTools:
   - slug: mobbin
     name: Mobbin - UI & UX design inspiration for mobile & web apps
-    description: Mobbin - UI & UX design inspiration for mobile & web apps bookmarked for inspiration resources.
+    description: >-
+      Mobbin - UI & UX design inspiration for mobile & web apps bookmarked for inspiration
+      resources.
     stars: 0
     addedDaysAgo: 0
     verified: false

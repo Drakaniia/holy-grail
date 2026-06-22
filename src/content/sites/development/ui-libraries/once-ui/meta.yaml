@@ -4,15 +4,15 @@ description: Open-source design system and component foundation for polished Nex
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 224
+stars: 228
 watchers: 0
 addedDaysAgo: 0
 license: MIT
-lastCommit: 8 days ago
-lastRelease: 24 days ago
+lastCommit: 3 days ago
+lastRelease: 1 month ago
 version: v1.7.0
 contributors: 12
-commitsThisYear: 170
+commitsThisYear: 179
 releases: 4
 platforms:
   - Web

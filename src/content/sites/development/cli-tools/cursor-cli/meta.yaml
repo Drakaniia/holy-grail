@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://cursor.com/cli
 docs: https://cursor.com/cli
-sourceCode: ''
+sourceCode: ""
 icon: cursor-cli
 verified: true
 featured: false
@@ -31,7 +31,6 @@ tags:
   - coding-agent
   - terminal
   - cursor-agent
-installCommand: curl https://cursor.com/install -fsS | bash
 atGlance: Cursor Agent is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Cursor Agent is cataloged as a CLI tool for developers who want AI-assisted coding from the

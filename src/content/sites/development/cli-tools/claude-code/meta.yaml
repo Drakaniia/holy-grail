@@ -4,23 +4,23 @@ description: Claude Code CLI setup reference for AI-assisted terminal coding wor
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 133648
+watchers: 814
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Unknown
+lastCommit: 1 day ago
+lastRelease: 1 day ago
+version: v2.1.185
+contributors: 54
+commitsThisYear: 269
+releases: 147
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://docs.anthropic.com/claude/docs/claude-code
 docs: https://docs.anthropic.com/claude/docs/claude-code
-sourceCode: ''
+sourceCode: https://github.com/anthropics/claude-code
 icon: claude-code
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: curl -fsSL https://claude.ai/install.sh | bash
 atGlance: Claude Code is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Claude Code is cataloged as a CLI tool for developers who want AI-assisted coding from the

@@ -4,14 +4,14 @@ description: 100+ free open-source SVG loading icons for web interfaces.
 category: Icons/SVG
 parentCategory: design
 subcategory: icons-svg
-stars: 0
-watchers: 0
+stars: 7018
+watchers: 131
 addedDaysAgo: 0
 license: MIT
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
+lastCommit: 1 year ago
+lastRelease: No releases
+version: ""
+contributors: 6
 commitsThisYear: 0
 releases: 0
 platforms:
@@ -20,9 +20,9 @@ deployment:
   - Cloud
 website: https://magecdn.com/tools/svg-loaders
 docs: https://magecdn.com/tools/svg-loaders
-sourceCode: ''
+sourceCode: https://github.com/SamHerbert/SVG-Loaders
 icon: magecdn-svg-loaders
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

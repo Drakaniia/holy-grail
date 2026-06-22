@@ -4,15 +4,15 @@ description: Free Domain For Everyone - A platform offering free domain names an
 category: Deployment
 parentCategory: development
 subcategory: cloud-hosting
-stars: 179000
-watchers: 890
+stars: 179694
+watchers: 259
 addedDaysAgo: 0
 license: AGPL-3.0
-lastCommit: 1 day ago
-lastRelease: N/A
-version: ''
-contributors: 10
-commitsThisYear: 50
+lastCommit: 1 month ago
+lastRelease: No releases
+version: ""
+contributors: 2
+commitsThisYear: 10
 releases: 0
 platforms:
   - Web
@@ -30,9 +30,9 @@ tags:
   - free
 atGlance: Free Domain For Everyone - A platform offering free domain names and management.
 fullDescription: >-
-  DigitalPlat FreeDomain is a non-profit project that provides free domain names (subdomains) 
-  to developers, students, and open-source projects. It offers full DNS control and 
-  compatibility with major providers like Cloudflare.
+  DigitalPlat FreeDomain is a non-profit project that provides free domain names (subdomains)  to
+  developers, students, and open-source projects. It offers full DNS control and  compatibility with
+  major providers like Cloudflare.
 coreFeatures:
   - name: Free Domain Registration
     description: Offers unique domain names with no strings attached.

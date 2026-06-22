@@ -4,15 +4,15 @@ description: Supabase | The Postgres Development Platform. bookmarked for hostin
 category: Hosting
 parentCategory: development
 subcategory: cloud-hosting
-stars: 102722
-watchers: 677
+stars: 104640
+watchers: 776
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 4 minutes ago
-lastRelease: 12 days ago
+lastCommit: 4 hours ago
+lastRelease: 1 month ago
 version: v1.26.05
-contributors: 1939
-commitsThisYear: 2336
+contributors: 1970
+commitsThisYear: 2909
 releases: 28
 platforms:
   - Web

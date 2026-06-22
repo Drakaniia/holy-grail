@@ -4,16 +4,16 @@ description: Qwen Code CLI setup reference for AI-assisted terminal coding workf
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 25425
+watchers: 132
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 13 minutes ago
+lastRelease: 15 hours ago
+version: v0.18.5
+contributors: 457
+commitsThisYear: 3376
+releases: 498
 platforms:
   - CLI
 deployment:
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @qwen-code/qwen-code
 atGlance: Qwen Code is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Qwen Code is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

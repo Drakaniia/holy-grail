@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://hex.tech/
 docs: https://hex.tech/
-sourceCode: ''
+sourceCode: ""
 icon: hex
 verified: false
 featured: false
@@ -69,7 +69,7 @@ similarTools:
     verified: true
     website: https://pytorch.org/
   - slug: scikit-learn
-    name: 'scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation'
+    name: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
     description: >-
       scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation bookmarked for
       machine learning resources.

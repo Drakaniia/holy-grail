@@ -13,16 +13,16 @@ description: >-
 category: Repositories
 parentCategory: development
 subcategory: repositories
-stars: 0
-watchers: 0
+stars: 690
+watchers: 6
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Unknown
+lastCommit: 28 days ago
+lastRelease: 1 month ago
+version: lightswindui/v3.1.28
+contributors: 3
+commitsThisYear: 6
+releases: 3
 platforms:
   - Web
 deployment:
@@ -31,7 +31,7 @@ website: https://github.com/codewithMUHILAN/Lightswind-UI-Library
 docs: https://github.com/codewithMUHILAN/Lightswind-UI-Library
 sourceCode: https://github.com/codewithMUHILAN/Lightswind-UI-Library
 icon: github
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

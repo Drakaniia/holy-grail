@@ -4,15 +4,15 @@ description: Getting Started - Eleventy bookmarked for references resources.
 category: References
 parentCategory: development
 subcategory: references
-stars: 0
-watchers: 0
+stars: 543
+watchers: 14
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: MIT
+lastCommit: 4 days ago
+lastRelease: No releases
+version: ""
+contributors: 784
+commitsThisYear: 270
 releases: 0
 platforms:
   - Web
@@ -20,9 +20,9 @@ deployment:
   - Cloud
 website: https://www.11ty.dev/docs/
 docs: https://www.11ty.dev/docs/
-sourceCode: ''
+sourceCode: https://github.com/11ty/11ty-website
 icon: 11ty
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

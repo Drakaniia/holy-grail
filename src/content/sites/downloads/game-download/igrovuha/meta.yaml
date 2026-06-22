@@ -1,16 +1,16 @@
 slug: igrovuha
-name: 'Minecraft: Bedrock Edition v1.21.101'
-description: 'Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources.'
+name: "Minecraft: Bedrock Edition v1.21.101"
+description: "Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources."
 category: Game Download
 parentCategory: downloads
 subcategory: game-download
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://igrovuha.org/14292-minecraft-bedrock-edition.html
 docs: https://igrovuha.org/14292-minecraft-bedrock-edition.html
-sourceCode: ''
+sourceCode: ""
 icon: igrovuha
 verified: false
 featured: false
@@ -30,13 +30,13 @@ tags:
   - game-download
   - game
   - download
-atGlance: 'Minecraft: Bedrock Edition v1.21.101'
+atGlance: "Minecraft: Bedrock Edition v1.21.101"
 fullDescription: >-
   Minecraft: Bedrock Edition v1.21.101 is kept as a game download source in the downloads
   collection.
 coreFeatures:
   - name: Download Source
-    description: 'Minecraft: Bedrock Edition v1.21.101 is cataloged as a game download bookmark.'
+    description: "Minecraft: Bedrock Edition v1.21.101 is cataloged as a game download bookmark."
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.

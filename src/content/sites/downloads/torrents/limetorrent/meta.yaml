@@ -7,10 +7,10 @@ subcategory: torrents
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://limetorrent.net/
 docs: https://limetorrent.net/
-sourceCode: ''
+sourceCode: ""
 icon: limetorrent
 verified: false
 featured: false

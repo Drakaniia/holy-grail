@@ -1,16 +1,16 @@
 slug: bolt
-name: 'Bolt AI builder: Websites, apps & prototypes'
-description: 'Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources.'
+name: "Bolt AI builder: Websites, apps & prototypes"
+description: "Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources."
 category: Website Development
 parentCategory: ai
 subcategory: wb
-stars: 16379
-watchers: 164
+stars: 16423
+watchers: 165
 addedDaysAgo: 0
 license: MIT
 lastCommit: 1 year ago
 lastRelease: No releases
-version: ''
+version: ""
 contributors: 18
 commitsThisYear: 0
 releases: 0
@@ -30,7 +30,7 @@ tags:
   - wb
   - website
   - builder
-atGlance: 'Bolt AI builder: Websites, apps & prototypes'
+atGlance: "Bolt AI builder: Websites, apps & prototypes"
 fullDescription: >-
   Bolt AI builder: Websites, apps & prototypes is kept as a website builder resource for AI-assisted
   workflows.

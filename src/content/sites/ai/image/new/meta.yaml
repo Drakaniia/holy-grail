@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ website: >-
   https://new.express.adobe.com/generate-image?ecid=07836440244156685301869309654324361656&%24web_only=true&after-susi=text-to-image-button&prompt=Create+a+logo+for+the+text+%22Ideation%22+and+a+subtitle+for+%22Reality+Showdown%22.
 docs: >-
   https://new.express.adobe.com/generate-image?ecid=07836440244156685301869309654324361656&%24web_only=true&after-susi=text-to-image-button&prompt=Create+a+logo+for+the+text+%22Ideation%22+and+a+subtitle+for+%22Reality+Showdown%22.
-sourceCode: ''
+sourceCode: ""
 icon: new
 verified: false
 featured: false

@@ -4,23 +4,23 @@ description: Kilocode CLI setup reference for AI-assisted terminal coding workfl
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 23711
+watchers: 107
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 3 hours ago
+lastRelease: 2 days ago
+version: v7.3.50
+contributors: 1105
+commitsThisYear: 16796
+releases: 133
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://kilo.ai/docs/code-with-ai/platforms/cli
 docs: https://kilo.ai/docs/code-with-ai/platforms/cli
-sourceCode: ''
+sourceCode: https://github.com/Kilo-Org/kilocode
 icon: kilocode-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @kilocode/cli
 atGlance: Kilocode is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Kilocode is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

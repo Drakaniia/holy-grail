@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -23,7 +23,7 @@ deployment:
   - Self-hosted
 website: https://www.qovery.com/
 docs: https://www.qovery.com/docs
-sourceCode: ''
+sourceCode: ""
 icon: qovery
 verified: false
 featured: false
@@ -36,12 +36,11 @@ tags:
   - platform-engineering
 atGlance: Single control plane for cloud-native infrastructure, CI/CD, and AI agent operations.
 fullDescription: >-
-  Qovery is an agentic infrastructure platform that unifies the fragmented
-  cloud-native toolchain — CI/CD, Kubernetes, Terraform, secrets, and
-  monitoring — into a single governed API. It acts as a control plane on top
-  of existing cloud infrastructure (AWS, GCP, Azure), enabling both human
-  engineers and AI agents to deploy, observe, secure, and optimize
-  infrastructure with built-in RBAC, audit trails, and guardrails.
+  Qovery is an agentic infrastructure platform that unifies the fragmented cloud-native toolchain —
+  CI/CD, Kubernetes, Terraform, secrets, and monitoring — into a single governed API. It acts as a
+  control plane on top of existing cloud infrastructure (AWS, GCP, Azure), enabling both human
+  engineers and AI agents to deploy, observe, secure, and optimize infrastructure with built-in
+  RBAC, audit trails, and guardrails.
 coreFeatures:
   - name: Agentic Infrastructure Control
     description: Single API designed for both human engineers and AI agents with full governance.

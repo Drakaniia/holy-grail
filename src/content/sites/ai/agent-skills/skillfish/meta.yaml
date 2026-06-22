@@ -4,15 +4,15 @@ description: Skill manager and discovery catalog for AI coding agent skills.
 category: AI Agent Skills
 parentCategory: ai
 subcategory: agent-skills
-stars: 262
+stars: 278
 watchers: 3
 addedDaysAgo: 0
 license: AGPL-3.0
-lastCommit: 1 month ago
+lastCommit: 3 days ago
 lastRelease: No releases
-version: ''
-contributors: 1
-commitsThisYear: 84
+version: ""
+contributors: 5
+commitsThisYear: 86
 releases: 0
 platforms:
   - Web
@@ -34,8 +34,8 @@ tags:
   - agent-skills
 atGlance: Skill manager and discovery catalog for AI coding agent skills.
 fullDescription: >-
-  Skill.Fish helps users discover, install, update, share, and sync reusable agent skills across
-  AI coding tools from a web catalog and the skillfish CLI.
+  Skill.Fish helps users discover, install, update, share, and sync reusable agent skills across AI
+  coding tools from a web catalog and the skillfish CLI.
 coreFeatures:
   - name: Skill Discovery
     description: Browse and search community agent skills from the saved Skill.Fish catalog.

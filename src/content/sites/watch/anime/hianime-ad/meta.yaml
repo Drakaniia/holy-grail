@@ -7,10 +7,10 @@ subcategory: anime
 stars: 0
 watchers: 0
 addedDaysAgo: 0
-license: Bookmark
+license: Proprietary
 lastCommit: Added May 24, 2026
-lastRelease: Bookmark
-version: ''
+lastRelease: N/A
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://hianime.ad/home
 docs: https://hianime.ad/home
-sourceCode: ''
+sourceCode: ""
 icon: hianime-ad
 verified: false
 featured: false

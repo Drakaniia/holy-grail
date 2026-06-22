@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -21,7 +21,7 @@ deployment:
   - Cloud
 website: https://www.youtube-transcript.io/
 docs: https://www.youtube-transcript.io/api
-sourceCode: ''
+sourceCode: ""
 icon: youtube-transcript
 verified: false
 featured: false

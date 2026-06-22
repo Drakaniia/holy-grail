@@ -1,18 +1,20 @@
 slug: cockroachlabs
 name: CockroachDB - Distributed SQL Database
-description: Cloud-native distributed SQL database with horizontal scaling, ACID compliance, and multi-region resilience.
+description: >-
+  Cloud-native distributed SQL database with horizontal scaling, ACID compliance, and multi-region
+  resilience.
 category: Database
 parentCategory: development
 subcategory: cloud-hosting
-stars: 0
-watchers: 0
+stars: 32220
+watchers: 659
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Unknown
+lastCommit: 5 days ago
+lastRelease: No releases
+version: ""
+contributors: 1117
+commitsThisYear: 6300
 releases: 0
 platforms:
   - Web
@@ -25,9 +27,9 @@ deployment:
   - Kubernetes
 website: https://www.cockroachlabs.com/
 docs: https://www.cockroachlabs.com/docs
-sourceCode: ''
+sourceCode: https://github.com/cockroachdb/cockroach
 icon: cockroachlabs
-verified: false
+verified: true
 featured: false
 tags:
   - development
@@ -36,17 +38,20 @@ tags:
   - sql
   - distributed
   - postgresql
-atGlance: Cloud-native distributed SQL database with strong consistency, horizontal scaling, and multi-region survivability.
+atGlance: >-
+  Cloud-native distributed SQL database with strong consistency, horizontal scaling, and
+  multi-region survivability.
 fullDescription: >-
-  CockroachDB is a distributed SQL database built for cloud-native,
-  mission-critical applications. Created by former Google engineers, it
-  combines the strong consistency and ACID transactions of traditional RDBMS
-  with the horizontal scalability and resilience of NoSQL systems. It is
-  PostgreSQL wire-compatible, survives datacenter outages with automated
-  repair, and offers geo-partitioning for data sovereignty compliance.
+  CockroachDB is a distributed SQL database built for cloud-native, mission-critical applications.
+  Created by former Google engineers, it combines the strong consistency and ACID transactions of
+  traditional RDBMS with the horizontal scalability and resilience of NoSQL systems. It is
+  PostgreSQL wire-compatible, survives datacenter outages with automated repair, and offers
+  geo-partitioning for data sovereignty compliance.
 coreFeatures:
   - name: Distributed SQL
-    description: PostgreSQL-compatible SQL API with distributed, transactional, strongly consistent key-value storage.
+    description: >-
+      PostgreSQL-compatible SQL API with distributed, transactional, strongly consistent key-value
+      storage.
     icon: check
   - name: ACID Compliance
     description: Serializable transaction isolation for correct data even across distributed clusters.

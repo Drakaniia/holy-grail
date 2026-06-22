@@ -1,21 +1,21 @@
 slug: scikit-learn
-name: 'scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation'
+name: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
 description: >-
   scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation bookmarked for machine
   learning resources.
 category: Machine Learning
 parentCategory: ai
 subcategory: ml
-stars: 66203
-watchers: 2121
+stars: 66391
+watchers: 2120
 addedDaysAgo: 0
 license: BSD-3-Clause
-lastCommit: 20 hours ago
-lastRelease: 5 months ago
-version: 1.8.0
-contributors: 3516
-commitsThisYear: 433
-releases: 49
+lastCommit: 12 hours ago
+lastRelease: 19 days ago
+version: 1.9.0
+contributors: 3525
+commitsThisYear: 509
+releases: 50
 platforms:
   - Web
 deployment:
@@ -32,7 +32,7 @@ tags:
   - ml
   - machine
   - learning
-atGlance: 'scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation'
+atGlance: "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation"
 fullDescription: >-
   scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation is kept as a machine
   learning resource for AI-assisted workflows.

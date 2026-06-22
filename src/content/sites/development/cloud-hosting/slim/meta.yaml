@@ -4,16 +4,16 @@ description: Slim - Local HTTPS Domains, Tunnels & Dev Environment Toolkit bookm
 category: Hosting
 parentCategory: development
 subcategory: cloud-hosting
-stars: 1303
+stars: 1332
 watchers: 3
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 11 days ago
-lastRelease: 1 month ago
-version: 0.9.1
+lastCommit: 1 day ago
+lastRelease: 1 day ago
+version: v0.9.3
 contributors: 1
-commitsThisYear: 126
-releases: 9
+commitsThisYear: 128
+releases: 10
 platforms:
   - Web
 deployment:

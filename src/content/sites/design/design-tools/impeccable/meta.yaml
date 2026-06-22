@@ -6,16 +6,16 @@ description: >-
 category: Design Skills
 parentCategory: design
 subcategory: design-tools
-stars: 29019
-watchers: 57
+stars: 40080
+watchers: 74
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 1 day ago
-lastRelease: 5 days ago
-version: skill-v3.1.1
-contributors: 24
-commitsThisYear: 624
-releases: 10
+lastCommit: 8 hours ago
+lastRelease: 8 hours ago
+version: cli-v3.1.0
+contributors: 30
+commitsThisYear: 779
+releases: 27
 platforms:
   - Web
 deployment:

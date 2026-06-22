@@ -4,15 +4,15 @@ description: Amp CLI setup reference for AI-assisted terminal coding workflows.
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 190
+watchers: 5
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Apache-2.0
+lastCommit: 10 days ago
+lastRelease: No releases
+version: ""
+contributors: 8
+commitsThisYear: 4
 releases: 0
 platforms:
   - CLI
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://ampcode.com/manual#install
 docs: https://ampcode.com/manual#install
-sourceCode: ''
+sourceCode: https://github.com/ampcode/amp.nvim
 icon: amp
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: npm install -g @sourcegraph/amp@latest
 atGlance: Amp is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Amp is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

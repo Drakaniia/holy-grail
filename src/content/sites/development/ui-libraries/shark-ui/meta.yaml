@@ -4,15 +4,15 @@ description: Accessible 90+ component set for building reusable design systems.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 34
+stars: 152
 watchers: 2
 addedDaysAgo: 0
 license: MIT
-lastCommit: just now
+lastCommit: 17 days ago
 lastRelease: No releases
-version: ''
+version: ""
 contributors: 3
-commitsThisYear: 151
+commitsThisYear: 160
 releases: 0
 platforms:
   - Web
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://shark.vini.one/
 docs: https://shark.vini.one/docs/installation
-sourceCode: https://github.com/vinihvc/shark-ui
+sourceCode: https://github.com/sharkui-inc/shark-ui
 icon: shark-ui
 verified: true
 featured: false

@@ -4,16 +4,16 @@ description: Charm Crush CLI setup reference for AI-assisted terminal coding wor
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 25565
+watchers: 108
 addedDaysAgo: 0
 license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+lastCommit: 3 hours ago
+lastRelease: 1 day ago
+version: v0.79.1
+contributors: 121
+commitsThisYear: 1292
+releases: 168
 platforms:
   - CLI
 deployment:
@@ -31,7 +31,6 @@ tags:
   - coding-agent
   - terminal
   - crush
-installCommand: npm install -g @charmland/crush
 atGlance: Charm Crush is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Charm Crush is cataloged as a CLI tool for developers who want AI-assisted coding from the

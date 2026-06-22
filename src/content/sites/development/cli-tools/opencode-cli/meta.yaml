@@ -4,23 +4,23 @@ description: OpenCode CLI setup reference for AI-assisted terminal coding workfl
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 177077
+watchers: 684
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: MIT
+lastCommit: 47 minutes ago
+lastRelease: 1 day ago
+version: v1.17.9
+contributors: 961
+commitsThisYear: 7700
+releases: 826
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://opencode.ai/docs/cli/
 docs: https://opencode.ai/docs/cli/
-sourceCode: ''
+sourceCode: https://github.com/anomalyco/opencode
 icon: opencode-cli
 verified: true
 featured: false
@@ -31,7 +31,6 @@ tags:
   - coding-agent
   - terminal
   - opencode
-installCommand: npm install -g opencode-ai
 atGlance: OpenCode is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   OpenCode is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

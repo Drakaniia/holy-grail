@@ -1,6 +1,6 @@
 slug: copilot
-name: 'Microsoft Copilot: Your AI companion'
-description: 'Microsoft Copilot: Your AI companion bookmarked for ai chat resources.'
+name: "Microsoft Copilot: Your AI companion"
+description: "Microsoft Copilot: Your AI companion bookmarked for ai chat resources."
 category: AI Chat
 parentCategory: ai
 subcategory: chat
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://copilot.microsoft.com/chats/xwNZHCH99ZSyh1N92zQWV
 docs: https://copilot.microsoft.com/chats/xwNZHCH99ZSyh1N92zQWV
-sourceCode: ''
+sourceCode: ""
 icon: copilot
 verified: false
 featured: false
@@ -28,8 +28,8 @@ tags:
   - bookmark
   - ai
   - chat
-atGlance: 'Microsoft Copilot: Your AI companion'
-fullDescription: 'Microsoft Copilot: Your AI companion is kept as an ai chat resource for AI-assisted workflows.'
+atGlance: "Microsoft Copilot: Your AI companion"
+fullDescription: "Microsoft Copilot: Your AI companion is kept as an ai chat resource for AI-assisted workflows."
 coreFeatures:
   - name: Conversational Workspace
     description: >-

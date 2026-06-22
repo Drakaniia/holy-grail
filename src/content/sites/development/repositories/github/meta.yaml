@@ -6,15 +6,15 @@ description: >-
 category: Repositories
 parentCategory: development
 subcategory: repositories
-stars: 0
-watchers: 0
+stars: 390619
+watchers: 9785
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: CC-BY-4.0
+lastCommit: 13 hours ago
+lastRelease: No releases
+version: ""
+contributors: 3511
+commitsThisYear: 77
 releases: 0
 platforms:
   - Web
@@ -24,7 +24,7 @@ website: https://github.com/EbookFoundation/free-programming-books/tree/main/.gi
 docs: https://github.com/EbookFoundation/free-programming-books/tree/main/.github
 sourceCode: https://github.com/EbookFoundation/free-programming-books
 icon: github
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

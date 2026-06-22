@@ -4,15 +4,15 @@ description: Design engineered charts and components with beautiful, animated da
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 800
-watchers: 8
+stars: 1081
+watchers: 9
 addedDaysAgo: 0
-license: No license file
-lastCommit: 18 hours ago
+license: MIT
+lastCommit: 16 hours ago
 lastRelease: No releases
-version: ''
-contributors: 10
-commitsThisYear: 287
+version: ""
+contributors: 12
+commitsThisYear: 414
 releases: 0
 platforms:
   - Web
@@ -21,6 +21,7 @@ deployment:
 website: https://ui.bklit.com/
 docs: https://ui.bklit.com/docs/installation
 sourceCode: https://github.com/bklit/bklit-ui
+icon: bklit-ui
 verified: true
 featured: false
 tags:

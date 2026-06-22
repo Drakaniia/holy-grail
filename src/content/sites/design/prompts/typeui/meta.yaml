@@ -4,16 +4,16 @@ description: UI Design Prompts | TypeUI bookmarked for prompts resources.
 category: Prompts
 parentCategory: design
 subcategory: prompts
-stars: 921
+stars: 1235
 watchers: 8
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 18 hours ago
-lastRelease: 2 days ago
-version: v0.7.1
+lastCommit: 1 day ago
+lastRelease: 20 days ago
+version: v1.0.0
 contributors: 1
-commitsThisYear: 71
-releases: 3
+commitsThisYear: 116
+releases: 4
 platforms:
   - Web
 deployment:

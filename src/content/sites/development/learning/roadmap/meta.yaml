@@ -4,25 +4,25 @@ description: Developer Roadmaps - roadmap.sh bookmarked for learning resources.
 category: Learning
 parentCategory: development
 subcategory: learning
-stars: 0
-watchers: 0
+stars: 357948
+watchers: 6834
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Unknown
+lastCommit: 3 days ago
+lastRelease: 3 years ago
+version: "4.0"
+contributors: 1569
+commitsThisYear: 343
+releases: 1
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://roadmap.sh/
 docs: https://roadmap.sh/
-sourceCode: ''
+sourceCode: https://github.com/nilbuild/developer-roadmap
 icon: roadmap
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

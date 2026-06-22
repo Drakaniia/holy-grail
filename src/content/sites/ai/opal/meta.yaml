@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://opal.google/landing/
 docs: https://opal.google/landing/
-sourceCode: ''
+sourceCode: ""
 icon: opal
 verified: false
 featured: false
@@ -48,8 +48,8 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: napkin
-    name: '- Napkin AI'
-    description: '- Napkin AI bookmarked for ai resources.'
+    name: "- Napkin AI"
+    description: "- Napkin AI bookmarked for ai resources."
     stars: 0
     addedDaysAgo: 0
     verified: false

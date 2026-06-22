@@ -4,16 +4,16 @@ description: AI-first automation for every team - Activepieces bookmarked for ai
 category: AI Automation
 parentCategory: ai
 subcategory: automation
-stars: 22476
-watchers: 124
+stars: 22907
+watchers: 125
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 2 hours ago
-lastRelease: 1 day ago
-version: 0.84.0
-contributors: 459
-commitsThisYear: 1583
-releases: 329
+lastCommit: 20 minutes ago
+lastRelease: 4 days ago
+version: 0.85.4
+contributors: 477
+commitsThisYear: 1814
+releases: 336
 platforms:
   - Web
 deployment:

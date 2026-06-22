@@ -4,15 +4,15 @@ description: Retro-styled 8-bit components and blocks for copy-paste UI work.
 category: UI Library
 parentCategory: development
 subcategory: ui-libraries
-stars: 1863
-watchers: 5
+stars: 1904
+watchers: 6
 addedDaysAgo: 0
 license: MIT
-lastCommit: 15 days ago
+lastCommit: 10 days ago
 lastRelease: No releases
-version: ''
+version: ""
 contributors: 37
-commitsThisYear: 53
+commitsThisYear: 56
 releases: 0
 platforms:
   - Web

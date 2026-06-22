@@ -4,25 +4,25 @@ description: Serverless Postgres platform for developer workflows.
 category: Database
 parentCategory: development
 subcategory: cloud-hosting
-stars: 0
-watchers: 0
+stars: 22320
+watchers: 117
 addedDaysAgo: 0
-license: Proprietary
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 27 days ago
+lastRelease: 10 months ago
+version: release-proxy-8853
+contributors: 168
+commitsThisYear: 4
+releases: 245
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://neon.tech/
 docs: https://neon.tech/docs
-sourceCode: ''
+sourceCode: https://github.com/neondatabase/neon
 icon: neon
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

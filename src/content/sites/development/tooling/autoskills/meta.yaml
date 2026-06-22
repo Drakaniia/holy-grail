@@ -4,25 +4,25 @@ description: autoskills - Auto-install best AI skills for your project bookmarke
 category: Tooling
 parentCategory: development
 subcategory: tooling
-stars: 0
-watchers: 0
+stars: 6080
+watchers: 22
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Unknown
+lastCommit: 6 days ago
+lastRelease: 1 month ago
+version: v0.3.6
+contributors: 39
+commitsThisYear: 375
+releases: 16
 platforms:
   - Web
 deployment:
   - Cloud
 website: https://www.autoskills.sh/
 docs: https://www.autoskills.sh/
-sourceCode: ''
+sourceCode: https://github.com/midudev/autoskills
 icon: autoskills
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

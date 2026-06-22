@@ -6,15 +6,15 @@ description: >-
 category: Design Tools
 parentCategory: design
 subcategory: design-tools
-stars: 670
+stars: 708
 watchers: 4
 addedDaysAgo: 0
 license: Apache-2.0
-lastCommit: 2 months ago
+lastCommit: 13 hours ago
 lastRelease: No releases
-version: ''
-contributors: 18
-commitsThisYear: 110
+version: ""
+contributors: 20
+commitsThisYear: 123
 releases: 0
 platforms:
   - Web

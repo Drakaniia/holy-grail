@@ -4,23 +4,23 @@ description: Goose CLI setup reference for AI-assisted terminal coding workflows
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 50001
+watchers: 250
 addedDaysAgo: 0
-license: Unknown
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+license: Apache-2.0
+lastCommit: 5 minutes ago
+lastRelease: 5 days ago
+version: v1.38.0
+contributors: 521
+commitsThisYear: 1777
+releases: 138
 platforms:
   - CLI
 deployment:
   - Local CLI
 website: https://block.github.io/goose/docs/category/getting-started/
 docs: https://block.github.io/goose/docs/category/getting-started/
-sourceCode: https://github.com/block/goose
+sourceCode: https://github.com/aaif-goose/goose
 icon: goose-cli
 verified: true
 featured: false
@@ -30,7 +30,6 @@ tags:
   - cli
   - coding-agent
   - terminal
-installCommand: curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash
 atGlance: Goose is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Goose is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. The

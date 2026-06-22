@@ -1,5 +1,5 @@
 slug: dora
-name: 'Dora: Start with AI, ship 3D animated websites without code'
+name: "Dora: Start with AI, ship 3D animated websites without code"
 description: >-
   Dora: Start with AI, ship 3D animated websites without code bookmarked for website builder
   resources.
@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ''
+version: ""
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://www.dora.run/
 docs: https://www.dora.run/
-sourceCode: ''
+sourceCode: ""
 icon: dora
 verified: false
 featured: false
@@ -32,7 +32,7 @@ tags:
   - wb
   - website
   - builder
-atGlance: 'Dora: Start with AI, ship 3D animated websites without code'
+atGlance: "Dora: Start with AI, ship 3D animated websites without code"
 fullDescription: >-
   Dora: Start with AI, ship 3D animated websites without code is kept as a website builder resource
   for AI-assisted workflows.
@@ -57,8 +57,8 @@ additionalFeatures:
     icon: check
 similarTools:
   - slug: bolt
-    name: 'Bolt AI builder: Websites, apps & prototypes'
-    description: 'Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources.'
+    name: "Bolt AI builder: Websites, apps & prototypes"
+    description: "Bolt AI builder: Websites, apps & prototypes bookmarked for website builder resources."
     stars: 16379
     addedDaysAgo: 0
     verified: true

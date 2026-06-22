@@ -4,16 +4,16 @@ description: Neovate CLI setup reference for AI-assisted terminal coding workflo
 category: AI CLI
 parentCategory: development
 subcategory: cli-tools
-stars: 0
-watchers: 0
+stars: 1545
+watchers: 15
 addedDaysAgo: 0
 license: MIT
-lastCommit: N/A
-lastRelease: N/A
-version: ''
-contributors: 0
-commitsThisYear: 0
-releases: 0
+lastCommit: 2 months ago
+lastRelease: 3 months ago
+version: 0.28.5
+contributors: 34
+commitsThisYear: 357
+releases: 111
 platforms:
   - CLI
 deployment:
@@ -32,7 +32,6 @@ tags:
   - terminal
   - neovate
   - neo
-installCommand: npm i @neovate/code -g
 atGlance: Neovate is a supported CLI provider for AI-assisted coding workflows.
 fullDescription: >-
   Neovate is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal.

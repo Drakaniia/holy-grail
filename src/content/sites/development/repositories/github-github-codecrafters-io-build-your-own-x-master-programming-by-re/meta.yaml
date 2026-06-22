@@ -8,15 +8,15 @@ description: >-
 category: Repositories
 parentCategory: development
 subcategory: repositories
-stars: 0
-watchers: 0
+stars: 518179
+watchers: 6758
 addedDaysAgo: 0
-license: Bookmark
-lastCommit: Imported May 20, 2026
-lastRelease: Bookmark
-version: ''
-contributors: 0
-commitsThisYear: 0
+license: Unknown
+lastCommit: 4 months ago
+lastRelease: No releases
+version: ""
+contributors: 140
+commitsThisYear: 11
 releases: 0
 platforms:
   - Web
@@ -26,7 +26,7 @@ website: https://github.com/codecrafters-io/build-your-own-x
 docs: https://github.com/codecrafters-io/build-your-own-x
 sourceCode: https://github.com/codecrafters-io/build-your-own-x
 icon: github
-verified: false
+verified: true
 featured: false
 tags:
   - bookmark

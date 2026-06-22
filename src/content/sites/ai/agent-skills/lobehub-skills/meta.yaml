@@ -4,16 +4,16 @@ description: Agent-first skills marketplace for publishing, browsing, and instal
 category: AI Agent Skills
 parentCategory: ai
 subcategory: agent-skills
-stars: 78234
-watchers: 291
+stars: 78945
+watchers: 292
 addedDaysAgo: 0
 license: Unknown
-lastCommit: 1 minute ago
-lastRelease: 1 day ago
-version: v2.2.2
-contributors: 329
-commitsThisYear: 3155
-releases: 2754
+lastCommit: 6 minutes ago
+lastRelease: 2 days ago
+version: v2.2.7
+contributors: 332
+commitsThisYear: 3610
+releases: 2793
 platforms:
   - Web
 deployment:
@@ -38,20 +38,28 @@ fullDescription: >-
   SKILL.md bundles, publishing skill releases, and helping agents find installable capabilities.
 coreFeatures:
   - name: Agent Skill Discovery
-    description: Browse reusable skills across categories for agent workflows, coding assistants, automation, and research.
+    description: >-
+      Browse reusable skills across categories for agent workflows, coding assistants, automation,
+      and research.
     icon: check
   - name: Agent Setup Prompt
-    description: Provides a direct setup prompt that points agents at the LobeHub Skills Marketplace skill instructions.
+    description: >-
+      Provides a direct setup prompt that points agents at the LobeHub Skills Marketplace skill
+      instructions.
     icon: check
   - name: Publishing Workflow
     description: Supports publishing SKILL.md bundles and versioned releases for marketplace discovery.
     icon: check
 additionalFeatures:
   - name: Multi-Agent Support
-    description: Lists compatibility paths for tools such as LobeHub, OpenClaw, Claude Code, Codex, Cursor, opencode, Antigravity, and NousResearch.
+    description: >-
+      Lists compatibility paths for tools such as LobeHub, OpenClaw, Claude Code, Codex, Cursor,
+      opencode, Antigravity, and NousResearch.
     icon: check
   - name: Category Browsing
-    description: Groups skills by domains such as coding agents, frontend development, DevOps, research, browser automation, and AI tools.
+    description: >-
+      Groups skills by domains such as coding agents, frontend development, DevOps, research,
+      browser automation, and AI tools.
     icon: check
   - name: Open Source Platform
     description: The related LobeHub application source is available from the public GitHub repository.
