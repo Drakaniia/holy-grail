@@ -1,0 +1,103 @@
+slug: openskills
+name: Open Skills - Discover Awesome Agent Skills
+description: >-
+  Open-source skills directory and standard for extending AI agent capabilities across multiple
+  coding assistants.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: agent-skills
+stars: 10467
+watchers: 58
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 5 months ago
+lastRelease: 5 months ago
+version: v1.5.0
+contributors: 3
+commitsThisYear: 17
+releases: 9
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+website: https://openskills.cc/
+docs: https://openskills.cc/
+sourceCode: https://github.com/numman-ali/openskills
+icon: openskills
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - cli
+  - agent-skills
+  - openskills
+atGlance: Open-source skills directory and standard for extending AI agent capabilities.
+fullDescription: >-
+  Open Skills is an open ecosystem for discovering, installing, and sharing reusable skill packages
+  that extend AI coding agents with specialized knowledge and workflows. Built on an open standard
+  originally developed by Anthropic, it provides a universal format (SKILL.md with YAML frontmatter)
+  that works across multiple agent products including Claude Code, Cursor, Codex, opencode, and
+  Copilot. The Open Skills CLI (`npx openskills`) enables discovery and installation of skills with
+  progressive disclosure — loading only metadata at startup and activating full instructions when
+  needed.
+coreFeatures:
+  - name: Open Skill Standard
+    description: >-
+      Uses a lightweight SKILL.md format with YAML frontmatter for portable, version-controlled
+      agent skills.
+    icon: check
+  - name: Cross-Agent Compatibility
+    description: Works across Claude Code, Cursor, Codex, opencode, Copilot, and other skills-compatible tools.
+    icon: check
+  - name: Progressive Disclosure
+    description: >-
+      Loads only skill names and descriptions at startup; full instructions activate only when
+      needed.
+    icon: check
+additionalFeatures:
+  - name: CLI Install Flow
+    description: >-
+      Provides openskills CLI for discovering and installing skills from GitHub repositories or
+      local paths.
+    icon: check
+  - name: Open Source Tooling
+    description: The openskills CLI and ecosystem tooling are available from the public GitHub repository.
+    icon: check
+  - name: Community Skill Library
+    description: >-
+      Browse 1800+ open-source skills spanning frontend design, persona creation, PDF processing,
+      and more.
+    icon: check
+similarTools:
+  - slug: skills-sh
+    name: Skills
+    description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+    stars: 19541
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skills.sh/
+  - slug: lobehub-skills
+    name: LobeHub Skills Marketplace
+    description: Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.
+    stars: 78234
+    addedDaysAgo: 0
+    verified: true
+    website: https://lobehub.com/skills
+  - slug: skillfish
+    name: Skill.Fish
+    description: Skill manager and discovery catalog for AI coding agent skills.
+    stars: 262
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skill.fish/
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/
