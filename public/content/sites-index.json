@@ -3125,6 +3125,122 @@
     ]
   },
   {
+    "slug": "openskills",
+    "name": "Open Skills - Discover Awesome Agent Skills",
+    "description": "Open-source skills directory and standard for extending AI agent capabilities across multiple coding assistants.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 10467,
+    "watchers": 58,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 1,
+    "commitsThisYear": 0,
+    "releases": 1,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://openskills.cc/",
+    "docs": "https://openskills.cc/",
+    "sourceCode": "https://github.com/numman-ali/openskills",
+    "icon": "openskills",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "cli",
+      "agent-skills",
+      "openskills"
+    ],
+    "atGlance": "Open-source skills directory and standard for extending AI agent capabilities.",
+    "fullDescription": "Open Skills is an open ecosystem for discovering, installing, and sharing reusable skill packages that extend AI coding agents with specialized knowledge and workflows. Built on an open standard originally developed by Anthropic, it provides a universal format (SKILL.md with YAML frontmatter) that works across multiple agent products including Claude Code, Cursor, Codex, opencode, and Copilot. The Open Skills CLI (`npx openskills`) enables discovery and installation of skills with progressive disclosure — loading only metadata at startup and activating full instructions when needed.",
+    "coreFeatures": [
+      {
+        "name": "Open Skill Standard",
+        "description": "Uses a lightweight SKILL.md format with YAML frontmatter for portable, version-controlled agent skills.",
+        "icon": "check"
+      },
+      {
+        "name": "Cross-Agent Compatibility",
+        "description": "Works across Claude Code, Cursor, Codex, opencode, Copilot, and other skills-compatible tools.",
+        "icon": "check"
+      },
+      {
+        "name": "Progressive Disclosure",
+        "description": "Loads only skill names and descriptions at startup; full instructions activate only when needed.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "CLI Install Flow",
+        "description": "Provides openskills CLI for discovering and installing skills from GitHub repositories or local paths.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Tooling",
+        "description": "The openskills CLI and ecosystem tooling are available from the public GitHub repository.",
+        "icon": "check"
+      },
+      {
+        "name": "Community Skill Library",
+        "description": "Browse 1800+ open-source skills spanning frontend design, persona creation, PDF processing, and more.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "lobehub-skills",
+        "name": "LobeHub Skills Marketplace",
+        "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+        "stars": 78234,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lobehub.com/skills"
+      },
+      {
+        "slug": "skillfish",
+        "name": "Skill.Fish",
+        "description": "Skill manager and discovery catalog for AI coding agent skills.",
+        "stars": 262,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skill.fish/"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      }
+    ]
+  },
+  {
     "slug": "tweakcn",
     "name": "Beautiful themes for shadcn/ui - tweakcn | Theme Editor & Generator",
     "description": "Beautiful themes for shadcn/ui - tweakcn | Theme Editor & Generator bookmarked for design tools resources.",
@@ -7862,6 +7978,121 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://agentskill.sh/"
+      }
+    ]
+  },
+  {
+    "slug": "claudepluginhub",
+    "name": "ClaudePluginHub - Community-Driven Claude Code Plugin Directory",
+    "description": "Community-driven directory for discovering, evaluating, and installing Claude Code plugins.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.claudepluginhub.com/",
+    "docs": "https://www.claudepluginhub.com/about",
+    "sourceCode": "",
+    "icon": "claudepluginhub",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "claude",
+      "plugins",
+      "mcp",
+      "agent-skills"
+    ],
+    "atGlance": "Community-driven directory for discovering, evaluating, and installing Claude Code plugins.",
+    "fullDescription": "ClaudePluginHub is a community-driven platform for discovering, evaluating, and installing plugins that extend Claude Code with custom commands, agents, skills, hooks, MCP servers, and LSP servers. It automatically indexes plugins from public GitHub repositories and surfaces trust signals — including star counts, maintenance scores, and community feedback — to help users make informed decisions. The platform also features a power search with semantic AI-powered relevance ranking, a plugin recommender that analyzes the user's development stack, and custom plugin bundling.",
+    "coreFeatures": [
+      {
+        "name": "Plugin Discovery",
+        "description": "Searchable library of thousands of Claude Code plugins with semantic AI-powered relevance ranking.",
+        "icon": "check"
+      },
+      {
+        "name": "Trust Signals",
+        "description": "Repository maintenance scores, GitHub star counts, and community feedback for informed evaluation.",
+        "icon": "check"
+      },
+      {
+        "name": "Plugin Recommender",
+        "description": "Analyzes GitHub repos or CLAUDE.md files to suggest relevant plugins based on your stack.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Custom Plugin Bundling",
+        "description": "Cherry-pick individual commands, agents, or skills from various plugins into a single installable package.",
+        "icon": "check"
+      },
+      {
+        "name": "Plugin Author Tools",
+        "description": "Plugin authors can submit repos for indexing, get analytics, verified badges, and embeddable install-count badges.",
+        "icon": "check"
+      },
+      {
+        "name": "Multi-Component Support",
+        "description": "Indexes custom commands, AI agents, skills, hooks, MCP servers, and LSP servers.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      },
+      {
+        "slug": "mcpmarket",
+        "name": "MCPMarket",
+        "description": "Marketplace for Model Context Protocol servers and tools.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mcpmarket.com/"
+      },
+      {
+        "slug": "needmcp",
+        "name": "Need MCP",
+        "description": "Directory of MCP server implementations and tools.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://needmcp.com/"
+      },
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
       }
     ]
   },

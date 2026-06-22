@@ -506,6 +506,15 @@
     "height": 600,
     "bytes": 39036
   },
+  "claudepluginhub": {
+    "image": "/previews/claudepluginhub.webp",
+    "small": "/previews/claudepluginhub-sm.webp",
+    "sourceUrl": "https://www.claudepluginhub.com/",
+    "capturedAt": "2026-06-22T05:02:21.462Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27162
+  },
   "cline-cli": {
     "image": "/previews/cline-cli.webp",
     "small": "/previews/cline-cli-sm.webp",
@@ -2365,6 +2374,15 @@
     "width": 960,
     "height": 600,
     "bytes": 28070
+  },
+  "openskills": {
+    "image": "/previews/openskills.webp",
+    "small": "/previews/openskills-sm.webp",
+    "sourceUrl": "https://openskills.cc/",
+    "capturedAt": "2026-06-22T05:02:22.097Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34650
   },
   "originui": {
     "image": "/previews/originui.webp",
