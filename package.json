@@ -26,7 +26,7 @@
     "@mdx-js/rollup": "^3.1.1",
     "@mdx-js/vue": "^3.1.1",
     "@supabase/supabase-js": "^2.108.2",
-    "js-yaml": "^4.2.0",
+    "js-yaml": "^5.1.0",
     "lucide-vue-next": "^1.0.0",
     "markdown-it": "^14.2.0",
     "pinia": "^3.0.4",
