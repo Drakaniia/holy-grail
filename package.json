@@ -50,7 +50,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.70.0",
     "eslint-plugin-vue": "~10.9.2",
-    "globals": "^17.6.0",
+    "globals": "^17.7.0",
     "happy-dom": "^20.10.6",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.70.0",
