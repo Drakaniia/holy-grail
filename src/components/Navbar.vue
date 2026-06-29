@@ -9,7 +9,7 @@ import {
   watch,
 } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Menu, Moon, Search, Sparkles, Star, SunMedium, UserRound, X } from 'lucide-vue-next'
+import { Menu, Moon, Search, Sparkles, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useSitesStore, type Site } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
@@ -46,12 +46,6 @@ const GITHUB_REPO_URL = 'https://github.com/Drakaniia/holy-grail'
 const GITHUB_REPO_API_URL = 'https://api.github.com/repos/Drakaniia/holy-grail'
 const starCount = shallowRef<number | null>(null)
 const isStarCountLoading = shallowRef(false)
-const showStarCountSkeleton = computed(() => starCount.value === null && isStarCountLoading.value)
-const starLinkLabel = computed(() =>
-  starCount.value === null
-    ? 'Open Holy Grail GitHub repository stars'
-    : `Open Holy Grail GitHub repository with ${starCount.value.toLocaleString()} stars`,
-)
 const animatedCount = shallowRef(0)
 const hasCountAnimated = shallowRef(false)
 const isCountAnimating = shallowRef(false)
