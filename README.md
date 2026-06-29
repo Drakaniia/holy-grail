@@ -96,7 +96,7 @@ src/
 
 ## Design
 
-Inspired by Vercel's design language — stark black-and-ink on near-white canvas with multi-color mesh gradients. See [DESIGN.md](DESIGN.md) for full design system.
+Inspired by Vercel's design language — stark black-and-ink on near-white canvas with multi-color mesh gradients. See [docs/DESIGN.md](docs/DESIGN.md) for full design system.
 
 ## Deployment
 
