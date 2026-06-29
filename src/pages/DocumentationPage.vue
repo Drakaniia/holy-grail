@@ -185,9 +185,9 @@ verified: true
 
 const siteImportCommands = `
 bun run import:bookmarks
-bun run scripts/enrich-site-metadata.js --apply
-bun run scripts/fill-site-detail-sections.js --apply
-bun run scripts/generate-sites-index.js
+bun run scripts/enrichment/enrich-site-metadata.js --apply
+bun run scripts/enrichment/fill-site-detail-sections.js --apply
+bun run scripts/build/generate-sites-index.js
 `
 
 const skillYamlExample = `
@@ -204,7 +204,7 @@ tags:
 `
 
 const previewCommands = `
-bun run scripts/generate-site-previews.js --slug <slug>
+bun run scripts/previews/generate-site-previews.js --slug <slug>
 bun run generate:previews
 bun run generate:previews:all
 bun run review:previews

@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && bun run scripts/generate-extensions-index.js && vite",
-    "build": "bun run scripts/generate-skills-index.js && bun run scripts/generate-sites-index.js && bun run scripts/generate-extensions-index.js && vue-tsc && vite build",
+    "dev": "bun run scripts/build/generate-skills-index.js && bun run scripts/build/generate-sites-index.js && bun run scripts/build/generate-extensions-index.js && vite",
+    "build": "bun run scripts/build/generate-skills-index.js && bun run scripts/build/generate-sites-index.js && bun run scripts/build/generate-extensions-index.js && vue-tsc && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "bun run lint:oxlint && bun run lint:eslint",
@@ -13,13 +13,13 @@
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/ scripts/ public/content/ supabase/functions/ .github/ vite.config.ts postcss.config.js eslint.config.js",
     "format:check": "prettier --check --experimental-cli src/ scripts/ public/content/ supabase/functions/ .github/ vite.config.ts postcss.config.js eslint.config.js",
-    "generate:skills": "bun run scripts/generate-skills-index.js",
-    "generate:extensions": "bun run scripts/generate-extensions-index.js",
-    "generate:previews": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
-    "generate:previews:missing": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js",
-    "generate:previews:all": "bun run scripts/generate-sites-index.js && bun run scripts/generate-site-previews.js --all",
-    "review:previews": "python scripts/review-site-previews.py",
-    "import:bookmarks": "bun run scripts/import-bookmarks.js"
+    "generate:skills": "bun run scripts/build/generate-skills-index.js",
+    "generate:extensions": "bun run scripts/build/generate-extensions-index.js",
+    "generate:previews": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js",
+    "generate:previews:missing": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js",
+    "generate:previews:all": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js --all",
+    "review:previews": "python scripts/previews/review-site-previews.py",
+    "import:bookmarks": "bun run scripts/enrichment/import-bookmarks.js"
   },
   "dependencies": {
     "@fontsource/geist-sans": "^5.2.5",

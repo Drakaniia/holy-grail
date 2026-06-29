@@ -49,8 +49,8 @@ The dev server runs index generation scripts automatically before starting.
 Sites are defined as `meta.yaml` files under `src/content/sites/`. After adding a new site:
 
 ```bash
-bun run scripts/generate-sites-index.js
-bun run scripts/generate-site-previews.js --slug <your-slug>
+bun run scripts/build/generate-sites-index.js
+bun run scripts/previews/generate-site-previews.js --slug <your-slug>
 ```
 
 See [docs/ADDING-SITES.md](docs/ADDING-SITES.md) for full details.

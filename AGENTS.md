@@ -18,7 +18,7 @@ bun run format                   # prettier --write src/ scripts/ public/content
 bun run format:check             # prettier --check (used in CI)
 bun run generate:skills          # regenerate skills-index.json only
 bun run generate:extensions      # regenerate extensions-index.json only
-bun run import:bookmarks         # import bookmarks via scripts/import-bookmarks.js
+bun run import:bookmarks         # import bookmarks via scripts/enrichment/import-bookmarks.js
 bun run generate:previews        # capture missing site previews only
 bun run generate:previews:all    # regenerate every site preview
 ```
@@ -30,7 +30,7 @@ Previews are static `.webp` files — they are NOT fetched at runtime. The scrip
 
 ```
 # Capture only the new site (fastest)
-bun run scripts/generate-site-previews.js --slug <slug>
+bun run scripts/previews/generate-site-previews.js --slug <slug>
 
 # Capture all missing previews
 bun run generate:previews
@@ -54,9 +54,9 @@ Chrome/Edge must be installed locally. Set `PREVIEW_BROWSER_PATH` env var to ove
 
 ## Build Prerequisites — Critical
 Both `dev` and `build` run three generation scripts **before** Vite starts:
-- `scripts/generate-skills-index.js` — reads `src/content/skills/*/meta.yaml` → writes `src/content/skills-index.json`
-- `scripts/generate-sites-index.js` — reads `src/content/sites/*/meta.yaml` → writes `src/content/sites-index.json`
-- `scripts/generate-extensions-index.js` — reads `src/content/extensions/*/meta.yaml` → writes `src/content/extensions-index.json` and `public/content/extensions-index.json`
+- `scripts/build/generate-skills-index.js` — reads `src/content/skills/*/meta.yaml` → writes `src/content/skills-index.json`
+- `scripts/build/generate-sites-index.js` — reads `src/content/sites/*/meta.yaml` → writes `src/content/sites-index.json`
+- `scripts/build/generate-extensions-index.js` — reads `src/content/extensions/*/meta.yaml` → writes `src/content/extensions-index.json` and `public/content/extensions-index.json`
 
 These JSON files are imported directly by Pinia stores. If you add/edit a skill, site, or extension, the corresponding `meta.yaml` must exist and the index will be regenerated on next `dev`/`build`.
 

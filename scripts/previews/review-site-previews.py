@@ -566,7 +566,7 @@ def text_report(report: dict[str, Any], show_count: int) -> str:
         lines.append("")
         lines.append("Suggested regeneration command:")
         lines.append(
-            "bun run scripts/generate-site-previews.js --all --slug "
+            "bun run scripts/previews/generate-site-previews.js --all --slug "
             + ",".join(shown_slugs)
             + suffix
         )

@@ -27,7 +27,7 @@ src/content/sites/
 2. Add `meta.yaml` using the schema below.
 3. Include `coreFeatures`, `additionalFeatures`, and `similarTools` so the detail
    page is complete.
-4. Run `bun run scripts/generate-sites-index.js`.
+4. Run `bun run scripts/build/generate-sites-index.js`.
 5. Run `bun run type-check`, `bun lint`, and `bun run build` before finishing.
 
 ## Bookmark Import Flow
@@ -36,10 +36,10 @@ Imported bookmark entries start with lightweight metadata. After importing, run
 the enrichment scripts before regenerating the index:
 
 ```bash
-bun run scripts/import-bookmarks.js
-bun run scripts/enrich-site-metadata.js --apply
-bun run scripts/fill-site-detail-sections.js --apply
-bun run scripts/generate-sites-index.js
+bun run scripts/enrichment/import-bookmarks.js
+bun run scripts/enrichment/enrich-site-metadata.js --apply
+bun run scripts/enrichment/fill-site-detail-sections.js --apply
+bun run scripts/build/generate-sites-index.js
 ```
 
 `enrich-site-metadata.js` looks for public GitHub repos from the site/docs pages
@@ -47,9 +47,9 @@ and fills repo-backed fields such as stars, contributors, commits this year,
 releases, latest release, and source code. It accepts:
 
 ```bash
-bun run scripts/enrich-site-metadata.js             # dry run, imported sites only
-bun run scripts/enrich-site-metadata.js --apply     # write changes
-bun run scripts/enrich-site-metadata.js --all       # include older entries
+bun run scripts/enrichment/enrich-site-metadata.js             # dry run, imported sites only
+bun run scripts/enrichment/enrich-site-metadata.js --apply     # write changes
+bun run scripts/enrichment/enrich-site-metadata.js --all       # include older entries
 ```
 
 `fill-site-detail-sections.js` fills `coreFeatures`, `additionalFeatures`, and
@@ -242,7 +242,7 @@ Sites are sorted by:
 manually:
 
 ```bash
-bun run scripts/generate-sites-index.js
+bun run scripts/build/generate-sites-index.js
 ```
 
 Output: `src/content/sites-index.json`.

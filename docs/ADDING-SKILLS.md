@@ -82,7 +82,7 @@ Skills are sorted by:
 The index is auto-regenerated on every `bun dev` or `bun run build`. To regenerate manually:
 
 ```bash
-bun run scripts/generate-skills-index.js
+bun run scripts/build/generate-skills-index.js
 ```
 
 Output: `src/content/skills-index.json` (imported by Pinia store)
