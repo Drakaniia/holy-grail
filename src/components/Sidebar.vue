@@ -10,47 +10,20 @@ import {
 } from 'vue'
 import { useRoute } from 'vue-router'
 import {
-  Activity,
-  BrainCircuit,
   Bot,
-  BookOpen,
-  Box,
   ChevronRight,
   Code2,
-  Component as ComponentIcon,
-  Disc3,
   Download,
-  FileText,
   Film,
-  Gamepad2,
-  GraduationCap,
-  Github,
-  Hammer,
-  HardDriveDownload,
   Home,
-  Image,
-  Lightbulb,
-  MessageSquare,
-  Microscope,
-  Package,
   Palette,
-  Plug,
-  Presentation,
   Puzzle,
-  ScanSearch,
   Search,
   Send,
-  Server,
-  Shapes,
   ShieldCheck,
+  Sparkles,
   SquareChevronLeft,
   SquareChevronRight,
-  Sparkles,
-  Terminal,
-  Type,
-  Video,
-  Workflow,
-  Wrench,
   X,
 } from 'lucide-vue-next'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
@@ -59,6 +32,21 @@ import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
 import type { useAdminStore } from '@/stores/admin'
+import {
+  aiSubcategories,
+  designSubcategories,
+  developmentSubcategories,
+  watchSubcategories,
+  downloadsSubcategories,
+  siteSubcategoryGroups,
+  siteGroupNav,
+  skillsNav,
+  extensionCategories,
+  isSiteGroupRoute,
+  type SiteGroup,
+} from '@/components/sidebar/sidebarNav'
+import SidebarExpandedGroup from '@/components/sidebar/SidebarExpandedGroup.vue'
+import SidebarRail from '@/components/sidebar/SidebarRail.vue'
 
 type AdminStore = ReturnType<typeof useAdminStore>
 
@@ -89,22 +77,6 @@ void sitesStore.loadSites()
 let cancelSkillsLoad: (() => void) | undefined
 let cancelAdminLoad: (() => void) | undefined
 
-type SiteGroup = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
-
-interface SidebarNavItem {
-  name: string
-  icon: typeof Server
-  route: string
-}
-
-interface SidebarNavGroup {
-  name: string
-  icon: typeof Server
-  route: string
-  group: SiteGroup
-  items: SidebarNavItem[]
-}
-
 const isCollapsed = computed(() => props.collapsed)
 const sidebarToggleLabel = computed(() =>
   isCollapsed.value ? 'Expand sidebar' : 'Collapse sidebar',
@@ -119,10 +91,6 @@ const expandedGroups = reactive<Record<SiteGroup, boolean>>({
 })
 
 const isExtensionsExpanded = shallowRef(true)
-
-const isSiteGroupRoute = (path: string, group: SiteGroup) => {
-  return path === `/sites/${group}` || path.startsWith(`/sites/${group}/`)
-}
 
 const toggleGroup = (group: SiteGroup) => {
   expandedGroups[group] = !expandedGroups[group]
@@ -139,24 +107,11 @@ const isActive = (path: string, exact = true) => {
 watch(
   () => route.path,
   (path) => {
-    if (isSiteGroupRoute(path, 'ai')) {
-      expandedGroups.ai = true
-    }
-
-    if (isSiteGroupRoute(path, 'design')) {
-      expandedGroups.design = true
-    }
-
-    if (isSiteGroupRoute(path, 'development')) {
-      expandedGroups.development = true
-    }
-
-    if (isSiteGroupRoute(path, 'watch')) {
-      expandedGroups.watch = true
-    }
-
-    if (isSiteGroupRoute(path, 'downloads')) {
-      expandedGroups.downloads = true
+    const groups: SiteGroup[] = ['ai', 'design', 'development', 'watch', 'downloads']
+    for (const group of groups) {
+      if (isSiteGroupRoute(path, group)) {
+        expandedGroups[group] = true
+      }
     }
   },
   { immediate: true },
@@ -167,107 +122,6 @@ const isDesignExpanded = computed(() => expandedGroups.design)
 const isDevelopmentExpanded = computed(() => expandedGroups.development)
 const isWatchExpanded = computed(() => expandedGroups.watch)
 const isDownloadsExpanded = computed(() => expandedGroups.downloads)
-
-const watchSubcategories = [
-  { name: 'Movies', icon: Video, route: '/sites/watch/movies' },
-  { name: 'Anime', icon: Sparkles, route: '/sites/watch/anime' },
-]
-
-const downloadsSubcategories = [
-  { name: 'Game Download', icon: Gamepad2, route: '/sites/downloads/game-download' },
-  { name: 'VFX Download', icon: Video, route: '/sites/downloads/vfx-download' },
-  {
-    name: 'Software Download',
-    icon: HardDriveDownload,
-    route: '/sites/downloads/software-download',
-  },
-  { name: 'Torrents', icon: Disc3, route: '/sites/downloads/torrents' },
-  { name: 'Movies', icon: Film, route: '/sites/downloads/movies' },
-]
-
-const aiSubcategories = [
-  { name: 'Image', icon: Image, route: '/sites/ai/image' },
-  { name: 'API', icon: Plug, route: '/sites/ai/api' },
-  { name: 'Detector', icon: ScanSearch, route: '/sites/ai/detector' },
-  { name: 'Automation', icon: Workflow, route: '/sites/ai/automation' },
-  { name: 'Agent Skills', icon: Bot, route: '/sites/ai/agent-skills' },
-  { name: 'Video', icon: Video, route: '/sites/ai/video' },
-  { name: 'Machine Learning', icon: BrainCircuit, route: '/sites/ai/ml' },
-  { name: 'CHAT', icon: MessageSquare, route: '/sites/ai/chat' },
-  { name: 'Website Development', icon: Hammer, route: '/sites/ai/wb' },
-  { name: 'Research', icon: Microscope, route: '/sites/ai/research' },
-  { name: 'PPT', icon: Presentation, route: '/sites/ai/ppt' },
-  { name: 'Others', icon: Package, route: '/sites/ai/others' },
-]
-
-const designSubcategories = [
-  { name: 'Inspiration', icon: Lightbulb, route: '/sites/design/inspiration' },
-  { name: 'Fonts', icon: Type, route: '/sites/design/fonts' },
-  { name: '3D', icon: Box, route: '/sites/design/3d' },
-  { name: 'Prompts', icon: FileText, route: '/sites/design/prompts' },
-  { name: 'ICONS/SVG', icon: Shapes, route: '/sites/design/icons-svg' },
-  { name: 'MD', icon: BookOpen, route: '/sites/design/md' },
-  { name: 'Design Tools', icon: Wrench, route: '/sites/design/design-tools' },
-]
-
-const developmentSubcategories = [
-  { name: 'Cloud & Hosting', icon: Server, route: '/sites/development/cloud-hosting' },
-  { name: 'Learning', icon: GraduationCap, route: '/sites/development/learning' },
-  { name: 'References', icon: BookOpen, route: '/sites/development/references' },
-  { name: 'Tooling', icon: Wrench, route: '/sites/development/tooling' },
-  { name: 'CLI Tools', icon: Terminal, route: '/sites/development/cli-tools' },
-  { name: 'UI Libraries', icon: ComponentIcon, route: '/sites/development/ui-libraries' },
-  { name: 'Repositories', icon: Github, route: '/sites/development/repositories' },
-  { name: 'MCP', icon: Plug, route: '/sites/development/mcp' },
-  { name: 'Monitoring', icon: Activity, route: '/sites/development/monitoring' },
-]
-
-const skillsNav = [
-  { name: 'Skills', icon: Sparkles, route: '/skills/skills' },
-  { name: 'Design', icon: Palette, route: '/skills/design' },
-]
-
-const extensionCategories = [
-  { name: 'Writing', icon: FileText, route: '/extensions/writing' },
-  { name: 'Productivity', icon: Workflow, route: '/extensions/productivity' },
-  { name: 'Developer Tools', icon: Code2, route: '/extensions/developer-tools' },
-  { name: 'Privacy', icon: ShieldCheck, route: '/extensions/privacy' },
-  { name: 'Design', icon: Palette, route: '/extensions/design' },
-]
-
-const siteSubcategoryGroups = [
-  { parentCategory: 'ai', items: aiSubcategories },
-  { parentCategory: 'design', items: designSubcategories },
-  { parentCategory: 'development', items: developmentSubcategories },
-  { parentCategory: 'watch', items: watchSubcategories },
-  { parentCategory: 'downloads', items: downloadsSubcategories },
-] satisfies { parentCategory: SiteGroup; items: SidebarNavItem[] }[]
-
-const siteGroupNav = [
-  { name: 'AI', icon: Bot, route: '/sites/ai', group: 'ai', items: aiSubcategories },
-  {
-    name: 'Design',
-    icon: Palette,
-    route: '/sites/design',
-    group: 'design',
-    items: designSubcategories,
-  },
-  {
-    name: 'Development',
-    icon: Code2,
-    route: '/sites/development',
-    group: 'development',
-    items: developmentSubcategories,
-  },
-  { name: 'Watch', icon: Film, route: '/sites/watch', group: 'watch', items: watchSubcategories },
-  {
-    name: 'Downloads',
-    icon: Download,
-    route: '/sites/downloads',
-    group: 'downloads',
-    items: downloadsSubcategories,
-  },
-] satisfies SidebarNavGroup[]
 
 const siteGroupCounts = computed<Record<SiteGroup, number>>(() => ({
   ai: sitesStore.getSitesByParentCategory('ai').length,
@@ -305,10 +159,11 @@ const extensionRouteCounts = computed<Record<string, number>>(() => {
   }
   return counts
 })
+
 const isAdmin = computed(() => admin.value?.isAdmin ?? false)
 const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
 
-const getSiteGroupCount = (group: SiteGroup) => siteGroupCounts.value[group]
+const getSiteGroupCount = (group: SiteGroup | string) => siteGroupCounts.value[group as SiteGroup]
 const getSiteRouteCount = (route: string) => siteRouteCounts.value[route] ?? 0
 const getSkillRouteCount = (route: string) => skillRouteCounts.value[route] ?? 0
 const getExtensionRouteCount = (route: string) => extensionRouteCounts.value[route] ?? 0
@@ -324,10 +179,10 @@ const sidebarSearchTerms = computed(() =>
 
 const hasSidebarSearch = computed(() => sidebarSearchTerms.value.length > 0)
 
-const matchesSidebarSearch = (label: string, route = '', parent = '') => {
+const matchesSidebarSearch = (label: string, routePath = '', parent = '') => {
   if (!hasSidebarSearch.value) return true
 
-  const haystack = `${parent} ${label} ${route}`.toLowerCase().replace(/[^a-z0-9]+/g, ' ')
+  const haystack = `${parent} ${label} ${routePath}`.toLowerCase().replace(/[^a-z0-9]+/g, ' ')
 
   return sidebarSearchTerms.value.every((term) => haystack.includes(term))
 }
@@ -371,8 +226,7 @@ const designGroupMatches = computed(
   () => hasSidebarSearch.value && matchesSidebarSearch('Design', '/sites/design', 'Sites'),
 )
 const developmentGroupMatches = computed(
-  () =>
-    hasSidebarSearch.value && matchesSidebarSearch('Development', '/sites/development', 'Sites'),
+  () => hasSidebarSearch.value && matchesSidebarSearch('Development', '/sites/development', 'Sites'),
 )
 const watchGroupMatches = computed(
   () => hasSidebarSearch.value && matchesSidebarSearch('Watch', '/sites/watch', 'Sites'),
@@ -588,6 +442,7 @@ onUnmounted(() => {
     class="app-sidebar flex h-full w-full select-none flex-col overflow-visible border-r border-gray-800 bg-[#1f1f1f]"
     :class="{ 'app-sidebar--collapsed': isCollapsed }"
   >
+    <!-- Header -->
     <div
       class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800"
       :class="isCollapsed ? 'justify-center px-2' : 'gap-1 px-2'"
@@ -622,6 +477,7 @@ onUnmounted(() => {
       </button>
     </div>
 
+    <!-- Search bar (expanded only) -->
     <div v-if="!isCollapsed" class="shrink-0 border-b border-gray-800 px-3 py-3">
       <label class="sr-only" for="sidebar-tab-search">Search sidebar tabs</label>
       <div class="relative">
@@ -650,562 +506,102 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <nav
+    <!-- Collapsed rail view -->
+    <SidebarRail
       v-if="isCollapsed"
-      class="min-h-0 flex-1 overflow-visible px-2 py-3"
-      aria-label="Collapsed navigation"
-    >
-      <ul class="space-y-1">
-        <li>
-          <button
-            type="button"
-            class="sidebar-rail-button sidebar-rail-button--plain"
-            aria-label="Search tabs"
-            @click="openSearchFromRail"
-          >
-            <Search class="h-4 w-4" />
-            <span class="sidebar-rail-tooltip">Search tabs</span>
-          </button>
-        </li>
+      :groups="visibleCompactSiteGroups"
+      :is-active="isActive"
+      :get-group-count="getSiteGroupCount"
+      :get-item-count="getSiteRouteCount"
+      :show-extensions-section="showExtensionsSection"
+      :show-skills-section="showSkillsSection"
+      :extension-categories="visibleExtensionCategories"
+      :skills-nav="visibleSkillsNav"
+      :total-skill-count="totalSkillCount"
+      @open-search="openSearchFromRail"
+    />
 
-        <li v-for="group in visibleCompactSiteGroups" :key="group.group" class="sidebar-rail-group">
-          <RouterLink
-            :to="group.route"
-            class="sidebar-rail-button"
-            :class="
-              isActive(group.route, false)
-                ? 'text-white'
-                : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-            "
-            :aria-label="`${group.name} sites`"
-          >
-            <span
-              v-if="isActive(group.route, false)"
-              class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
-            ></span>
-            <component :is="group.icon" class="h-4 w-4" />
-          </RouterLink>
-
-          <div class="sidebar-rail-flyout">
-            <div class="border-b border-gray-800 px-3 py-2">
-              <div class="flex items-center gap-2">
-                <component :is="group.icon" class="h-4 w-4 text-gray-400" />
-                <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
-                  {{ group.name }}
-                </span>
-                <span class="rounded px-1.5 text-[10px] font-semibold text-gray-500">
-                  {{ getSiteGroupCount(group.group) }}
-                </span>
-              </div>
-            </div>
-
-            <div class="custom-scrollbar max-h-[min(30rem,calc(100vh-7rem))] overflow-y-auto p-2">
-              <RouterLink
-                v-for="item in group.items"
-                :key="item.name"
-                :to="item.route"
-                class="sidebar-flyout-link"
-                :class="
-                  isActive(item.route)
-                    ? 'bg-[#1f1f1f] text-white'
-                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-                "
-              >
-                <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
-                <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
-                <span
-                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
-                >
-                  {{ getSiteRouteCount(item.route) }}
-                </span>
-              </RouterLink>
-            </div>
-          </div>
-        </li>
-
-        <li v-if="showExtensionsSection" class="sidebar-rail-group pt-3">
-          <RouterLink
-            to="/extensions/writing"
-            class="sidebar-rail-button"
-            :class="
-              isActive('/extensions', false)
-                ? 'text-white'
-                : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-            "
-            aria-label="Extensions"
-          >
-            <span
-              v-if="isActive('/extensions', false)"
-              class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
-            ></span>
-            <Puzzle class="h-4 w-4" />
-          </RouterLink>
-
-          <div class="sidebar-rail-flyout">
-            <div class="border-b border-gray-800 px-3 py-2">
-              <div class="flex items-center gap-2">
-                <Puzzle class="h-4 w-4 text-gray-400" />
-                <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
-                  Extensions
-                </span>
-              </div>
-            </div>
-
-            <div class="p-2">
-              <RouterLink
-                v-for="item in visibleExtensionCategories"
-                :key="item.name"
-                :to="item.route"
-                class="sidebar-flyout-link"
-                :class="
-                  isActive(item.route)
-                    ? 'bg-[#1f1f1f] text-white'
-                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-                "
-              >
-                <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
-                <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
-                <span
-                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
-                >
-                  {{ getExtensionRouteCount(item.route) }}
-                </span>
-              </RouterLink>
-            </div>
-          </div>
-        </li>
-
-        <li v-if="showSkillsSection" class="sidebar-rail-group pt-3">
-          <RouterLink
-            to="/skills/skills"
-            class="sidebar-rail-button"
-            :class="
-              isActive('/skills', false)
-                ? 'text-white'
-                : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-            "
-            aria-label="Skills"
-          >
-            <span
-              v-if="isActive('/skills', false)"
-              class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
-            ></span>
-            <Sparkles class="h-4 w-4" />
-          </RouterLink>
-
-          <div class="sidebar-rail-flyout">
-            <div class="border-b border-gray-800 px-3 py-2">
-              <div class="flex items-center gap-2">
-                <Sparkles class="h-4 w-4 text-gray-400" />
-                <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
-                  Skills
-                </span>
-                <span class="rounded px-1.5 text-[10px] font-semibold text-gray-500">
-                  {{ totalSkillCount }}
-                </span>
-              </div>
-            </div>
-
-            <div class="p-2">
-              <RouterLink
-                v-for="item in visibleSkillsNav"
-                :key="item.name"
-                :to="item.route"
-                class="sidebar-flyout-link"
-                :class="
-                  isActive(item.route)
-                    ? 'bg-[#1f1f1f] text-white'
-                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-                "
-              >
-                <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
-                <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
-                <span
-                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
-                >
-                  {{ getSkillRouteCount(item.route) }}
-                </span>
-              </RouterLink>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </nav>
-
+    <!-- Expanded tree view -->
     <nav v-else class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
       <ul class="space-y-0.5 px-4">
         <template v-if="showSitesSection">
-          <li v-if="showAiGroup">
-            <button
-              type="button"
-              class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
-              :class="
-                isActive('/sites/ai', false)
-                  ? 'bg-[#1f1f1f] text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-              "
-              :aria-expanded="isAiVisibleExpanded"
-              aria-controls="sidebar-ai-branch"
-              aria-label="Toggle AI sites"
-              @click="toggleGroup('ai')"
-            >
-              <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
-                <Bot class="w-3.5 h-3.5 flex-shrink-0" />
-                <span class="min-w-0 flex-1 truncate font-medium">AI</span>
-                <span
-                  class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive('/sites/ai', false)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getSiteGroupCount('ai') }}
-                </span>
-              </span>
-              <ChevronRight
-                class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                :class="{ 'rotate-90': isAiVisibleExpanded }"
-              />
-            </button>
-          </li>
+          <SidebarExpandedGroup
+            :icon="Bot"
+            name="AI"
+            route="/sites/ai"
+            group="ai"
+            :is-expanded="isAiVisibleExpanded"
+            :is-group-active="isActive('/sites/ai', false)"
+            :visible-items="visibleAiSubcategories"
+            :show-group="showAiGroup"
+            :get-group-count="getSiteGroupCount"
+            :get-item-count="getSiteRouteCount"
+            :is-item-active="(r: string) => isActive(r)"
+            @toggle="toggleGroup('ai')"
+          />
 
-          <Transition name="sidebar-group">
-            <li
-              v-if="isAiVisibleExpanded && visibleAiSubcategories.length > 0"
-              id="sidebar-ai-branch"
-              class="sidebar-group-shell"
-            >
-              <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                <li v-for="item in visibleAiSubcategories" :key="item.name">
-                  <RouterLink
-                    :to="item.route"
-                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                    :class="
-                      isActive(item.route)
-                        ? 'bg-[#1f1f1f] text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                    "
-                  >
-                    <div
-                      v-if="isActive(item.route)"
-                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                    ></div>
-                    <component :is="item.icon" class="w-3.5 h-3.5" />
-                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                    <span
-                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                      :class="
-                        isActive(item.route)
-                          ? 'text-zinc-300'
-                          : 'text-gray-600 group-hover:text-gray-300'
-                      "
-                    >
-                      {{ getSiteRouteCount(item.route) }}
-                    </span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </li>
-          </Transition>
+          <SidebarExpandedGroup
+            :icon="Palette"
+            name="Design"
+            route="/sites/design"
+            group="design"
+            :is-expanded="isDesignVisibleExpanded"
+            :is-group-active="isActive('/sites/design', false)"
+            :visible-items="visibleDesignSubcategories"
+            :show-group="showDesignGroup"
+            :get-group-count="getSiteGroupCount"
+            :get-item-count="getSiteRouteCount"
+            :is-item-active="(r: string) => isActive(r)"
+            @toggle="toggleGroup('design')"
+          />
 
-          <li v-if="showDesignGroup">
-            <button
-              type="button"
-              class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
-              :class="
-                isActive('/sites/design', false)
-                  ? 'bg-[#1f1f1f] text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-              "
-              :aria-expanded="isDesignVisibleExpanded"
-              aria-controls="sidebar-design-branch"
-              aria-label="Toggle design sites"
-              @click="toggleGroup('design')"
-            >
-              <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
-                <Palette class="w-3.5 h-3.5 flex-shrink-0" />
-                <span class="min-w-0 flex-1 truncate font-medium">Design</span>
-                <span
-                  class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive('/sites/design', false)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getSiteGroupCount('design') }}
-                </span>
-              </span>
-              <ChevronRight
-                class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                :class="{ 'rotate-90': isDesignVisibleExpanded }"
-              />
-            </button>
-          </li>
+          <SidebarExpandedGroup
+            :icon="Code2"
+            name="Development"
+            route="/sites/development"
+            group="development"
+            :is-expanded="isDevelopmentVisibleExpanded"
+            :is-group-active="isActive('/sites/development', false)"
+            :visible-items="visibleDevelopmentSubcategories"
+            :show-group="showDevelopmentGroup"
+            :get-group-count="getSiteGroupCount"
+            :get-item-count="getSiteRouteCount"
+            :is-item-active="(r: string) => isActive(r)"
+            @toggle="toggleGroup('development')"
+          />
 
-          <Transition name="sidebar-group">
-            <li
-              v-if="isDesignVisibleExpanded && visibleDesignSubcategories.length > 0"
-              id="sidebar-design-branch"
-              class="sidebar-group-shell"
-            >
-              <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                <li v-for="item in visibleDesignSubcategories" :key="item.name">
-                  <RouterLink
-                    :to="item.route"
-                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                    :class="
-                      isActive(item.route)
-                        ? 'bg-[#1f1f1f] text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                    "
-                  >
-                    <div
-                      v-if="isActive(item.route)"
-                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                    ></div>
-                    <component :is="item.icon" class="w-3.5 h-3.5" />
-                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                    <span
-                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                      :class="
-                        isActive(item.route)
-                          ? 'text-zinc-300'
-                          : 'text-gray-600 group-hover:text-gray-300'
-                      "
-                    >
-                      {{ getSiteRouteCount(item.route) }}
-                    </span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </li>
-          </Transition>
+          <SidebarExpandedGroup
+            :icon="Film"
+            name="Watch"
+            route="/sites/watch"
+            group="watch"
+            :is-expanded="isWatchVisibleExpanded"
+            :is-group-active="isActive('/sites/watch', false)"
+            :visible-items="visibleWatchSubcategories"
+            :show-group="showWatchGroup"
+            :get-group-count="getSiteGroupCount"
+            :get-item-count="getSiteRouteCount"
+            :is-item-active="(r: string) => isActive(r)"
+            @toggle="toggleGroup('watch')"
+          />
 
-          <li v-if="showDevelopmentGroup">
-            <button
-              type="button"
-              class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
-              :class="
-                isActive('/sites/development', false)
-                  ? 'bg-[#1f1f1f] text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-              "
-              :aria-expanded="isDevelopmentVisibleExpanded"
-              aria-controls="sidebar-development-branch"
-              aria-label="Toggle development sites"
-              @click="toggleGroup('development')"
-            >
-              <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
-                <Code2 class="w-3.5 h-3.5 flex-shrink-0" />
-                <span class="min-w-0 flex-1 truncate font-medium">Development</span>
-                <span
-                  class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive('/sites/development', false)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getSiteGroupCount('development') }}
-                </span>
-              </span>
-              <ChevronRight
-                class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                :class="{ 'rotate-90': isDevelopmentVisibleExpanded }"
-              />
-            </button>
-          </li>
-
-          <Transition name="sidebar-group">
-            <li
-              v-if="isDevelopmentVisibleExpanded && visibleDevelopmentSubcategories.length > 0"
-              id="sidebar-development-branch"
-              class="sidebar-group-shell"
-            >
-              <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                <li v-for="item in visibleDevelopmentSubcategories" :key="item.name">
-                  <RouterLink
-                    :to="item.route"
-                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                    :class="
-                      isActive(item.route)
-                        ? 'bg-[#1f1f1f] text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                    "
-                  >
-                    <div
-                      v-if="isActive(item.route)"
-                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                    ></div>
-                    <component :is="item.icon" class="w-3.5 h-3.5" />
-                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                    <span
-                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                      :class="
-                        isActive(item.route)
-                          ? 'text-zinc-300'
-                          : 'text-gray-600 group-hover:text-gray-300'
-                      "
-                    >
-                      {{ getSiteRouteCount(item.route) }}
-                    </span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </li>
-          </Transition>
-
-          <li v-if="showWatchGroup">
-            <button
-              type="button"
-              class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
-              :class="
-                isActive('/sites/watch', false)
-                  ? 'bg-[#1f1f1f] text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-              "
-              :aria-expanded="isWatchVisibleExpanded"
-              aria-controls="sidebar-watch-branch"
-              aria-label="Toggle watch sites"
-              @click="toggleGroup('watch')"
-            >
-              <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
-                <Film class="w-3.5 h-3.5 flex-shrink-0" />
-                <span class="min-w-0 flex-1 truncate font-medium">Watch</span>
-                <span
-                  class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive('/sites/watch', false)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getSiteGroupCount('watch') }}
-                </span>
-              </span>
-              <ChevronRight
-                class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                :class="{ 'rotate-90': isWatchVisibleExpanded }"
-              />
-            </button>
-          </li>
-
-          <Transition name="sidebar-group">
-            <li
-              v-if="isWatchVisibleExpanded && visibleWatchSubcategories.length > 0"
-              id="sidebar-watch-branch"
-              class="sidebar-group-shell"
-            >
-              <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                <li v-for="item in visibleWatchSubcategories" :key="item.name">
-                  <RouterLink
-                    :to="item.route"
-                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                    :class="
-                      isActive(item.route)
-                        ? 'bg-[#1f1f1f] text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                    "
-                  >
-                    <div
-                      v-if="isActive(item.route)"
-                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                    ></div>
-                    <component :is="item.icon" class="w-3.5 h-3.5" />
-                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                    <span
-                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                      :class="
-                        isActive(item.route)
-                          ? 'text-zinc-300'
-                          : 'text-gray-600 group-hover:text-gray-300'
-                      "
-                    >
-                      {{ getSiteRouteCount(item.route) }}
-                    </span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </li>
-          </Transition>
-
-          <li v-if="showDownloadsGroup">
-            <button
-              type="button"
-              class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
-              :class="
-                isActive('/sites/downloads', false)
-                  ? 'bg-[#1f1f1f] text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-              "
-              :aria-expanded="isDownloadsVisibleExpanded"
-              aria-controls="sidebar-downloads-branch"
-              aria-label="Toggle downloads sites"
-              @click="toggleGroup('downloads')"
-            >
-              <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
-                <Download class="w-3.5 h-3.5 flex-shrink-0" />
-                <span class="min-w-0 flex-1 truncate font-medium">Downloads</span>
-                <span
-                  class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive('/sites/downloads', false)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getSiteGroupCount('downloads') }}
-                </span>
-              </span>
-              <ChevronRight
-                class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-                :class="{ 'rotate-90': isDownloadsVisibleExpanded }"
-              />
-            </button>
-          </li>
-
-          <Transition name="sidebar-group">
-            <li
-              v-if="isDownloadsVisibleExpanded && visibleDownloadsSubcategories.length > 0"
-              id="sidebar-downloads-branch"
-              class="sidebar-group-shell"
-            >
-              <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                <li v-for="item in visibleDownloadsSubcategories" :key="item.name">
-                  <RouterLink
-                    :to="item.route"
-                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                    :class="
-                      isActive(item.route)
-                        ? 'bg-[#1f1f1f] text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                    "
-                  >
-                    <div
-                      v-if="isActive(item.route)"
-                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                    ></div>
-                    <component :is="item.icon" class="w-3.5 h-3.5" />
-                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                    <span
-                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                      :class="
-                        isActive(item.route)
-                          ? 'text-zinc-300'
-                          : 'text-gray-600 group-hover:text-gray-300'
-                      "
-                    >
-                      {{ getSiteRouteCount(item.route) }}
-                    </span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </li>
-          </Transition>
+          <SidebarExpandedGroup
+            :icon="Download"
+            name="Downloads"
+            route="/sites/downloads"
+            group="downloads"
+            :is-expanded="isDownloadsVisibleExpanded"
+            :is-group-active="isActive('/sites/downloads', false)"
+            :visible-items="visibleDownloadsSubcategories"
+            :show-group="showDownloadsGroup"
+            :get-group-count="getSiteGroupCount"
+            :get-item-count="getSiteRouteCount"
+            :is-item-active="(r: string) => isActive(r)"
+            @toggle="toggleGroup('downloads')"
+          />
         </template>
 
+        <!-- Extensions section -->
         <li v-if="showExtensionsSection" :class="{ 'mt-6': showSitesSection }">
           <button
             type="button"
@@ -1272,6 +668,7 @@ onUnmounted(() => {
           </Transition>
         </li>
 
+        <!-- Skills section -->
         <li v-if="showSkillsSection" :class="{ 'mt-6': showSitesSection || showExtensionsSection }">
           <div class="w-full flex items-center gap-3 text-gray-500 py-2">
             <Sparkles class="w-4 h-4" />
@@ -1310,12 +707,14 @@ onUnmounted(() => {
           </ul>
         </li>
 
+        <!-- Empty state -->
         <li v-if="!hasVisibleSidebarTabs" class="px-2 py-6 text-center">
           <p class="text-xs font-medium text-gray-500">No tabs match "{{ sidebarSearch }}".</p>
         </li>
       </ul>
     </nav>
 
+    <!-- Footer (collapsed) -->
     <div v-if="isCollapsed" class="shrink-0 space-y-1 border-t border-gray-800 p-2">
       <RouterLink
         to="/"
@@ -1377,6 +776,7 @@ onUnmounted(() => {
       </RouterLink>
     </div>
 
+    <!-- Footer (expanded) -->
     <div v-else class="shrink-0 space-y-1 border-t border-gray-800 p-4">
       <RouterLink
         to="/"
