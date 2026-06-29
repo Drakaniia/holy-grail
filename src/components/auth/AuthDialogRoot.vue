@@ -42,11 +42,11 @@ function handleClose() {
   if (isDirectOpen.value) {
     closeAuthDialog()
   } else if (isAuthRoute.value) {
-    if (window.history.length > 1) {
-      router.back()
-    } else {
-      router.push('/')
-    }
+    // Always navigate to home when closing from an auth route.
+    // Using router.back() is unsafe post-logout: the previous history entry
+    // is often a protected route (e.g. /account) which the navigation guard
+    // immediately redirects back to /login, creating an inescapable loop.
+    router.push('/')
   }
 }
 

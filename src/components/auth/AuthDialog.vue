@@ -182,9 +182,9 @@ function handlePasswordReset() {
             <div v-if="isLogin" class="text-center w-full">
               <div class="mb-6">
                 <span class="text-[10px] font-semibold uppercase tracking-widest text-zinc-500">Welcome back</span>
-                <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">Sign in to Toolfolio.</h2>
+                <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">Sign in to Holy Grail.</h2>
                 <p class="text-sm text-zinc-400 leading-relaxed mt-2 max-w-xs mx-auto">
-                  Pick up where you left off with bookmarks, collections, and your account settings.
+                  Pick up where you left off — your bookmarks, collections, and curated developer resources.
                 </p>
               </div>
 
@@ -217,8 +217,8 @@ function handlePasswordReset() {
             <!-- Signup Content -->
             <div v-else-if="isSignup" class="w-full">
               <div class="text-center mb-5">
-                <h2 class="text-2xl md:text-2xl font-bold tracking-tight text-white leading-snug">
-                  Know What's Next in AI and Software Before Everyone Else.
+                <h2 class="text-2xl md:text-2xl tracking-tight text-white leading-snug">
+                  Your curated directory of <strong class="text-amber-300">dev tools and AI platforms.</strong>
                 </h2>
               </div>
 
