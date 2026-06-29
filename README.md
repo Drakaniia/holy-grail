@@ -1,111 +1,71 @@
-# Holy Grail
+<p align="center">
+  <img src="src/assets/readme.png" alt="Holy Grail" width="100%" />
+</p>
+<p align="center">
+  <a href="holy-grail-eta.vercel.app/sites"><strong>Visit the site »</strong></a>
+  <br />
+  <a href="#getting-started"><strong>Getting Started</strong></a> ·
+  <a href="#adding-content"><strong>Adding Content</strong></a> ·
+  <a href="docs/DESIGN.md"><strong>Design System</strong></a> ·
+  <a href="CHANGELOG.md"><strong>Changelog</strong></a>
+</p>
 
-A curated directory of development tools, AI platforms, and developer resources — built with Vue 3 and Tailwind.
+<p align="center">
+  <a href="https://github.com/Drakaniia/holy-grail/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/Drakaniia/holy-grail/ci.yml?branch=grail&style=flat&label=build&color=f59e0b" alt="Build status" />
+  </a>
+  <a href="https://github.com/Drakaniia/holy-grail/LICENSE">
+    <img src="https://img.shields.io/github/license/Drakaniia/holy-grail?style=flat&color=f59e0b" alt="License" />
+  </a>
+  <img src="https://img.shields.io/badge/Vue-3.5-4FC08D?style=flat&logo=vuedotjs&logoColor=white" alt="Vue 3" />
+  <img src="https://img.shields.io/badge/Bun-required-fbf0df?style=flat&logo=bun&logoColor=black" alt="Bun" />
+</p>
 
-## Tech Stack
+<br />
 
-- Vue 3 (Composition API + `<script setup>`)
-- Vite 8
-- TypeScript
-- Tailwind CSS 4
-- Pinia (state management)
-- Vue Router 5
-- Supabase (auth & submissions)
-- MDX (markdown components)
+## Introduction
 
-## Prerequisites
+Holy Grail is an open-source, handpicked directory of developer tools, AI platforms, browser extensions, and learning resources. Every entry is reviewed and enriched with live screenshots — built for developers who value signal over noise.
 
-- [Bun](https://bun.sh/) (package manager)
-- Node.js 24.x
-- Chrome or Edge (for site preview generation)
+Built with Vue 3, Vite 8, TypeScript, Tailwind CSS 4, Pinia, and Supabase.
+
+<br />
 
 ## Getting Started
 
 ```bash
 bun install
-
+cp docs/.env.example .env.local  # add your Supabase keys
 bun dev
 ```
 
-The dev server runs index generation scripts automatically before starting.
+The app runs without Supabase — auth and submissions are gracefully disabled.
 
-## Available Scripts
+<br />
 
-| Script | Description |
-|--------|-------------|
-| `bun dev` | Start dev server |
-| `bun run build` | Production build (includes type-check) |
-| `bun run preview` | Preview production build |
-| `bun run type-check` | Run vue-tsc --noEmit |
-| `bun lint` | Run oxlint then eslint |
-| `bun run format` | Format with prettier |
-| `bun run generate:skills` | Regenerate skills index |
-| `bun run generate:previews` | Capture missing site previews |
-| `bun run generate:previews:all` | Regenerate all previews |
-| `bun run import:bookmarks` | Import bookmarks |
+## Adding Content
 
-## Adding Sites
-
-Sites are defined as `meta.yaml` files under `src/content/sites/`. After adding a new site:
+Sites, skills, and extensions are each defined as `meta.yaml` files under `src/content/`. After adding an entry, regenerate the relevant index:
 
 ```bash
-bun run scripts/build/generate-sites-index.js
-bun run scripts/previews/generate-site-previews.js --slug <your-slug>
+bun run generate:skills     # after adding a skill
+bun run generate:previews   # after adding a site (captures screenshot)
 ```
 
-See [docs/ADDING-SITES.md](docs/ADDING-SITES.md) for full details.
+Full guides: [`docs/ADDING-SITES.md`](docs/ADDING-SITES.md) · [`docs/ADDING-SKILLS.md`](docs/ADDING-SKILLS.md) · [`docs/ADDING-EXTENSIONS.md`](docs/ADDING-EXTENSIONS.md)
 
-## Adding Skills
+<br />
 
-Skills are defined in `src/content/skills/`. After adding or editing:
+## Contributing
 
-```bash
-bun run generate:skills
-```
+Pull requests are welcome. For larger changes, open an issue first.
 
-See [docs/ADDING-SKILLS.md](docs/ADDING-SKILLS.md) for full details.
+CI runs `type-check → lint → test → build` on every push to `grail`.
 
-## Site Previews
+<br />
 
-Previews are static WebP files generated with Puppeteer. Output goes to:
+---
 
-- `public/previews/<slug>.webp` — full size (960×600)
-- `public/previews/<slug>-sm.webp` — thumbnail (480×300)
-- `src/content/site-previews.json` — must be committed
-
-Set `PREVIEW_BROWSER_PATH` to override the auto-detected Chrome/Edge path.
-
-## Architecture
-
-```
-src/
-├── components/       # Vue components
-├── composables/      # Composition functions
-├── content/
-│   ├── sites/        # Site meta.yaml files
-│   └── skills/       # Skill meta.yaml files
-├── pages/            # Route components
-├── stores/           # Pinia stores
-│   ├── sites.ts
-│   ├── skills.ts
-│   ├── auth.ts       # Supabase auth
-│   └── admin.ts      # Admin functionality
-├── types/            # TypeScript interfaces
-└── main.ts           # App entry
-```
-
-## Design
-
-Inspired by Vercel's design language — stark black-and-ink on near-white canvas with multi-color mesh gradients. See [docs/DESIGN.md](docs/DESIGN.md) for full design system.
-
-## Deployment
-
-Deployed to Vercel as a SPA. All routes rewrite to `index.html`.
-
-## CI/CD
-
-CI runs on push/PR to the `grail` branch:
-
-1. `type-check` — vue-tsc --noEmit
-2. `lint` — oxlint then eslint
-3. `build` — production build
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/Drakaniia">Drakaniia</a>
+</p>
