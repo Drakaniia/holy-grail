@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {
   computed,
-  defineAsyncComponent,
   onMounted,
   onUnmounted,
   reactive,
@@ -15,15 +14,10 @@ import {
   Code2,
   Download,
   Film,
-  Home,
   Palette,
   Puzzle,
   Search,
-  Send,
-  ShieldCheck,
   Sparkles,
-  SquareChevronLeft,
-  SquareChevronRight,
   X,
 } from 'lucide-vue-next'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
@@ -33,26 +27,16 @@ import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
 import type { useAdminStore } from '@/stores/admin'
 import {
-  aiSubcategories,
-  designSubcategories,
-  developmentSubcategories,
-  watchSubcategories,
-  downloadsSubcategories,
-  siteSubcategoryGroups,
-  siteGroupNav,
-  skillsNav,
-  extensionCategories,
+  SidebarHeader,
+  SidebarRail,
+  SidebarFooter,
+  SidebarExpandedGroup,
+  useSidebarSearch,
   isSiteGroupRoute,
   type SiteGroup,
-} from '@/components/sidebar/sidebarNav'
-import SidebarExpandedGroup from '@/components/sidebar/SidebarExpandedGroup.vue'
-import SidebarRail from '@/components/sidebar/SidebarRail.vue'
+} from '@/components/sidebar'
 
 type AdminStore = ReturnType<typeof useAdminStore>
-
-const SidebarAccountMenu = defineAsyncComponent(
-  () => import('@/components/auth/SidebarAccountMenu.vue'),
-)
 
 const route = useRoute()
 const props = withDefaults(
@@ -67,20 +51,18 @@ const emit = defineEmits<{
   toggleCollapsed: []
   openSearch: []
 }>()
+
 const { isAuthenticated } = useDeferredAuthStatus()
 const admin = shallowRef<AdminStore | null>(null)
 const sitesStore = useSitesStore()
 const skillsStore = useSkillsStore()
 const extensionsStore = useExtensionsStore()
-const sidebarSearch = shallowRef('')
+
 void sitesStore.loadSites()
 let cancelSkillsLoad: (() => void) | undefined
 let cancelAdminLoad: (() => void) | undefined
 
 const isCollapsed = computed(() => props.collapsed)
-const sidebarToggleLabel = computed(() =>
-  isCollapsed.value ? 'Expand sidebar' : 'Collapse sidebar',
-)
 
 const expandedGroups = reactive<Record<SiteGroup, boolean>>({
   ai: true,
@@ -91,6 +73,34 @@ const expandedGroups = reactive<Record<SiteGroup, boolean>>({
 })
 
 const isExtensionsExpanded = shallowRef(true)
+
+const {
+  sidebarSearch,
+  hasSidebarSearch,
+  clearSidebarSearch,
+  visibleAiSubcategories,
+  visibleDesignSubcategories,
+  visibleDevelopmentSubcategories,
+  visibleWatchSubcategories,
+  visibleDownloadsSubcategories,
+  showAiGroup,
+  showDesignGroup,
+  showDevelopmentGroup,
+  showWatchGroup,
+  showDownloadsGroup,
+  showSitesSection,
+  showSkillsSection,
+  showExtensionsSection,
+  visibleSkillsNav,
+  visibleExtensionCategories,
+  visibleCompactSiteGroups,
+  totalSkillCount,
+  getSiteGroupCount,
+  getSiteRouteCount,
+  getSkillRouteCount,
+  getExtensionRouteCount,
+  hasVisibleSidebarTabs,
+} = useSidebarSearch()
 
 const toggleGroup = (group: SiteGroup) => {
   expandedGroups[group] = !expandedGroups[group]
@@ -123,176 +133,6 @@ const isDevelopmentExpanded = computed(() => expandedGroups.development)
 const isWatchExpanded = computed(() => expandedGroups.watch)
 const isDownloadsExpanded = computed(() => expandedGroups.downloads)
 
-const siteGroupCounts = computed<Record<SiteGroup, number>>(() => ({
-  ai: sitesStore.getSitesByParentCategory('ai').length,
-  design: sitesStore.getSitesByParentCategory('design').length,
-  development: sitesStore.getSitesByParentCategory('development').length,
-  watch: sitesStore.getSitesByParentCategory('watch').length,
-  downloads: sitesStore.getSitesByParentCategory('downloads').length,
-}))
-
-const siteRouteCounts = computed<Record<string, number>>(() => {
-  const counts: Record<string, number> = {}
-
-  for (const group of siteSubcategoryGroups) {
-    for (const item of group.items) {
-      const subcategory = item.route.split('/').pop()
-      counts[item.route] = subcategory
-        ? sitesStore.getSitesBySubcategory(group.parentCategory, subcategory).length
-        : 0
-    }
-  }
-
-  return counts
-})
-
-const skillRouteCounts = computed<Record<string, number>>(() => ({
-  '/skills/skills': skillsStore.getSkillsByParentCategory('skills').length,
-  '/skills/design': skillsStore.getSkillsByParentCategory('design').length,
-}))
-
-const extensionRouteCounts = computed<Record<string, number>>(() => {
-  const counts: Record<string, number> = {}
-  for (const cat of extensionCategories) {
-    const key = cat.route.split('/').pop() || ''
-    counts[cat.route] = extensionsStore.getExtensionsByParentCategory(key).length
-  }
-  return counts
-})
-
-const isAdmin = computed(() => admin.value?.isAdmin ?? false)
-const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
-
-const getSiteGroupCount = (group: SiteGroup | string) => siteGroupCounts.value[group as SiteGroup]
-const getSiteRouteCount = (route: string) => siteRouteCounts.value[route] ?? 0
-const getSkillRouteCount = (route: string) => skillRouteCounts.value[route] ?? 0
-const getExtensionRouteCount = (route: string) => extensionRouteCounts.value[route] ?? 0
-
-const sidebarSearchTerms = computed(() =>
-  sidebarSearch.value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim()
-    .split(' ')
-    .filter(Boolean),
-)
-
-const hasSidebarSearch = computed(() => sidebarSearchTerms.value.length > 0)
-
-const matchesSidebarSearch = (label: string, routePath = '', parent = '') => {
-  if (!hasSidebarSearch.value) return true
-
-  const haystack = `${parent} ${label} ${routePath}`.toLowerCase().replace(/[^a-z0-9]+/g, ' ')
-
-  return sidebarSearchTerms.value.every((term) => haystack.includes(term))
-}
-
-const filterSidebarItems = <T extends { name: string; route: string }>(
-  items: T[],
-  showAll: boolean,
-  parent = '',
-) => {
-  return showAll
-    ? items
-    : items.filter((item) => matchesSidebarSearch(item.name, item.route, parent))
-}
-
-const sitesSectionMatches = computed(() => hasSidebarSearch.value && matchesSidebarSearch('Sites'))
-const skillsSectionMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('Skills'),
-)
-const showAllSitesTabs = computed(() => !hasSidebarSearch.value || sitesSectionMatches.value)
-const showAllSkillsTabs = computed(() => !hasSidebarSearch.value || skillsSectionMatches.value)
-const extensionsSectionMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('Extensions'),
-)
-
-const visibleSkillsNav = computed(() =>
-  filterSidebarItems(skillsNav, showAllSkillsTabs.value, 'Skills'),
-)
-
-const showAllExtensionsTabs = computed(
-  () => !hasSidebarSearch.value || extensionsSectionMatches.value,
-)
-
-const visibleExtensionCategories = computed(() =>
-  filterSidebarItems(extensionCategories, showAllExtensionsTabs.value, 'Extensions'),
-)
-
-const aiGroupMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('AI', '/sites/ai', 'Sites'),
-)
-const designGroupMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('Design', '/sites/design', 'Sites'),
-)
-const developmentGroupMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('Development', '/sites/development', 'Sites'),
-)
-const watchGroupMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('Watch', '/sites/watch', 'Sites'),
-)
-const downloadsGroupMatches = computed(
-  () => hasSidebarSearch.value && matchesSidebarSearch('Downloads', '/sites/downloads', 'Sites'),
-)
-
-const visibleAiSubcategories = computed(() =>
-  filterSidebarItems(aiSubcategories, showAllSitesTabs.value || aiGroupMatches.value, 'Sites AI'),
-)
-const visibleDesignSubcategories = computed(() =>
-  filterSidebarItems(
-    designSubcategories,
-    showAllSitesTabs.value || designGroupMatches.value,
-    'Sites Design',
-  ),
-)
-const visibleDevelopmentSubcategories = computed(() =>
-  filterSidebarItems(
-    developmentSubcategories,
-    showAllSitesTabs.value || developmentGroupMatches.value,
-    'Sites Development',
-  ),
-)
-const visibleWatchSubcategories = computed(() =>
-  filterSidebarItems(
-    watchSubcategories,
-    showAllSitesTabs.value || watchGroupMatches.value,
-    'Sites Watch',
-  ),
-)
-const visibleDownloadsSubcategories = computed(() =>
-  filterSidebarItems(
-    downloadsSubcategories,
-    showAllSitesTabs.value || downloadsGroupMatches.value,
-    'Sites Downloads',
-  ),
-)
-
-const showAiGroup = computed(
-  () => showAllSitesTabs.value || aiGroupMatches.value || visibleAiSubcategories.value.length > 0,
-)
-const showDesignGroup = computed(
-  () =>
-    showAllSitesTabs.value ||
-    designGroupMatches.value ||
-    visibleDesignSubcategories.value.length > 0,
-)
-const showDevelopmentGroup = computed(
-  () =>
-    showAllSitesTabs.value ||
-    developmentGroupMatches.value ||
-    visibleDevelopmentSubcategories.value.length > 0,
-)
-const showWatchGroup = computed(
-  () =>
-    showAllSitesTabs.value || watchGroupMatches.value || visibleWatchSubcategories.value.length > 0,
-)
-const showDownloadsGroup = computed(
-  () =>
-    showAllSitesTabs.value ||
-    downloadsGroupMatches.value ||
-    visibleDownloadsSubcategories.value.length > 0,
-)
-
 const isAiVisibleExpanded = computed(
   () => showAiGroup.value && (isAiExpanded.value || hasSidebarSearch.value),
 )
@@ -309,45 +149,8 @@ const isDownloadsVisibleExpanded = computed(
   () => showDownloadsGroup.value && (isDownloadsExpanded.value || hasSidebarSearch.value),
 )
 
-const showSitesSection = computed(
-  () =>
-    showAllSitesTabs.value ||
-    showAiGroup.value ||
-    showDesignGroup.value ||
-    showDevelopmentGroup.value ||
-    showWatchGroup.value ||
-    showDownloadsGroup.value,
-)
-
-const showSkillsSection = computed(
-  () => showAllSkillsTabs.value || visibleSkillsNav.value.length > 0,
-)
-
-const showExtensionsSection = computed(
-  () => showAllExtensionsTabs.value || visibleExtensionCategories.value.length > 0,
-)
-
-const visibleCompactSiteGroups = computed(() =>
-  siteGroupNav.filter((group) => {
-    if (group.group === 'ai') return showAiGroup.value
-    if (group.group === 'design') return showDesignGroup.value
-    if (group.group === 'development') return showDevelopmentGroup.value
-    if (group.group === 'watch') return showWatchGroup.value
-    return showDownloadsGroup.value
-  }),
-)
-
-const totalSkillCount = computed(() =>
-  visibleSkillsNav.value.reduce((total, item) => total + getSkillRouteCount(item.route), 0),
-)
-
-const hasVisibleSidebarTabs = computed(
-  () => showSitesSection.value || showExtensionsSection.value || showSkillsSection.value,
-)
-
-function clearSidebarSearch() {
-  sidebarSearch.value = ''
-}
+const isAdmin = computed(() => admin.value?.isAdmin ?? false)
+const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
 
 function toggleSidebarCollapsed() {
   emit('toggleCollapsed')
@@ -443,39 +246,7 @@ onUnmounted(() => {
     :class="{ 'app-sidebar--collapsed': isCollapsed }"
   >
     <!-- Header -->
-    <div
-      class="relative z-[85] flex h-12 shrink-0 items-center border-b border-gray-800"
-      :class="isCollapsed ? 'justify-center px-2' : 'gap-1 px-2'"
-    >
-      <template v-if="!isCollapsed">
-        <SidebarAccountMenu v-if="isAuthenticated" />
-
-        <RouterLink
-          v-else
-          to="/"
-          class="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 text-white transition-colors hover:bg-accent-500/10"
-          aria-label="Holy Grail home"
-        >
-          <svg class="h-5 w-5 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-            />
-          </svg>
-          <span class="truncate text-sm font-bold tracking-tight uppercase"> Holy Grail </span>
-        </RouterLink>
-      </template>
-
-      <button
-        type="button"
-        class="sidebar-collapse-button"
-        :aria-label="sidebarToggleLabel"
-        :title="sidebarToggleLabel"
-        @click="toggleSidebarCollapsed"
-      >
-        <SquareChevronRight v-if="isCollapsed" class="h-4 w-4" />
-        <SquareChevronLeft v-else class="h-4 w-4" />
-      </button>
-    </div>
+    <SidebarHeader :collapsed="isCollapsed" :is-authenticated="isAuthenticated" @toggle-collapsed="toggleSidebarCollapsed" />
 
     <!-- Search bar (expanded only) -->
     <div v-if="!isCollapsed" class="shrink-0 border-b border-gray-800 px-3 py-3">
@@ -714,114 +485,13 @@ onUnmounted(() => {
       </ul>
     </nav>
 
-    <!-- Footer (collapsed) -->
-    <div v-if="isCollapsed" class="shrink-0 space-y-1 border-t border-gray-800 p-2">
-      <RouterLink
-        to="/"
-        class="sidebar-rail-button"
-        :class="
-          isActive('/') ? 'text-white' : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-        "
-        aria-label="Home"
-      >
-        <span
-          v-if="isActive('/')"
-          class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
-        ></span>
-        <Home class="h-4 w-4" />
-        <span class="sidebar-rail-tooltip">Home</span>
-      </RouterLink>
-
-      <RouterLink
-        to="/publish"
-        class="sidebar-rail-button"
-        :class="
-          isActive('/publish') || isActive('/submit')
-            ? 'text-white'
-            : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-        "
-        aria-label="Publish"
-      >
-        <span
-          v-if="isActive('/publish') || isActive('/submit')"
-          class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
-        ></span>
-        <Send class="h-4 w-4" />
-        <span class="sidebar-rail-tooltip">Publish</span>
-      </RouterLink>
-
-      <RouterLink
-        v-if="isAdmin"
-        to="/admin"
-        class="sidebar-rail-button"
-        :class="
-          isActive('/admin')
-            ? 'text-white'
-            : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-        "
-        aria-label="Admin"
-      >
-        <span
-          v-if="isActive('/admin')"
-          class="absolute left-0 top-2 bottom-2 w-0.5 rounded-full bg-white"
-        ></span>
-        <ShieldCheck class="h-4 w-4" />
-        <span
-          v-if="pendingAdminCount > 0"
-          class="absolute -right-0.5 -top-0.5 h-4 min-w-[1rem] rounded-full bg-amber-500 px-1 text-center text-[9px] font-bold leading-4 text-[#1f1f1f]"
-        >
-          {{ pendingAdminCount }}
-        </span>
-        <span class="sidebar-rail-tooltip">Admin</span>
-      </RouterLink>
-    </div>
-
-    <!-- Footer (expanded) -->
-    <div v-else class="shrink-0 space-y-1 border-t border-gray-800 p-4">
-      <RouterLink
-        to="/"
-        class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
-        :class="isActive('/') ? 'bg-[#1f1f1f] text-white' : ''"
-      >
-        <Home
-          class="h-4 w-4 transition-colors"
-          :class="isActive('/') ? 'text-accent-400' : 'text-gray-500 group-hover:text-accent-400'"
-        />
-        <span class="text-xs font-medium">Home</span>
-      </RouterLink>
-
-      <RouterLink
-        to="/publish"
-        class="group flex w-full items-center gap-3 rounded-md px-3 py-2 text-gray-400 transition-colors hover:bg-accent-500/10 hover:text-white"
-        :class="isActive('/publish') || isActive('/submit') ? 'bg-[#1f1f1f] text-white' : ''"
-      >
-        <Send
-          class="h-4 w-4 transition-colors"
-          :class="
-            isActive('/publish') || isActive('/submit')
-              ? 'text-accent-400'
-              : 'text-accent-500 group-hover:text-accent-400'
-          "
-        />
-        <span class="text-xs font-medium">Publish</span>
-      </RouterLink>
-
-      <RouterLink
-        v-if="isAdmin"
-        to="/admin"
-        class="w-full flex items-center gap-3 px-3 py-2 text-gray-400 hover:text-white transition-colors group rounded-md hover:bg-accent-500/10"
-        :class="isActive('/admin') ? 'bg-[#1f1f1f] text-white' : ''"
-      >
-        <ShieldCheck class="w-4 h-4" />
-        <span class="font-medium text-xs">Admin</span>
-        <span
-          v-if="pendingAdminCount > 0"
-          class="ml-auto rounded-full bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-[#1f1f1f]"
-        >
-          {{ pendingAdminCount }}
-        </span>
-      </RouterLink>
-    </div>
+    <!-- Footer -->
+    <SidebarFooter
+      :collapsed="isCollapsed"
+      :is-active="isActive"
+      :is-admin="isAdmin"
+      :pending-admin-count="pendingAdminCount"
+    />
   </aside>
 </template>
 
@@ -841,142 +511,6 @@ onUnmounted(() => {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #374151;
-}
-
-.sidebar-collapse-button {
-  display: inline-flex;
-  height: 2rem;
-  width: 2rem;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  border: 1px solid #1f1f1f;
-  color: #6b7280;
-  transition:
-    border-color 160ms ease,
-    background-color 160ms ease,
-    color 160ms ease;
-}
-
-.sidebar-collapse-button:hover,
-.sidebar-collapse-button:focus-visible {
-  border-color: #374151;
-  background: rgba(255, 140, 26, 0.1);
-  color: #ffffff;
-  outline: none;
-}
-
-.sidebar-rail-button {
-  position: relative;
-  display: flex;
-  height: 2.25rem;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  transition:
-    background-color 160ms ease,
-    color 160ms ease;
-}
-
-.sidebar-rail-button:focus-visible {
-  outline: 1px solid #ff8c1a;
-  outline-offset: 2px;
-}
-
-.sidebar-rail-button--plain {
-  color: #6b7280;
-}
-
-.sidebar-rail-group {
-  position: relative;
-}
-
-.sidebar-rail-group:hover > .sidebar-rail-button,
-.sidebar-rail-group:has(:focus-visible) > .sidebar-rail-button {
-  background: rgba(255, 140, 26, 0.1);
-  color: #ffffff;
-}
-
-.sidebar-rail-tooltip {
-  pointer-events: none;
-  position: absolute;
-  left: calc(100% + 0.5rem);
-  top: 50%;
-  z-index: 105;
-  transform: translate(-0.25rem, -50%);
-  visibility: hidden;
-  white-space: nowrap;
-  border-radius: 0.375rem;
-  border: 1px solid #374151;
-  background: #1f1f1f;
-  padding: 0.35rem 0.5rem;
-  color: #e5e7eb;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1;
-  opacity: 0;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
-  transition:
-    opacity 140ms ease,
-    transform 140ms ease,
-    visibility 140ms ease;
-}
-
-.sidebar-rail-button:hover .sidebar-rail-tooltip,
-.sidebar-rail-button:focus-visible .sidebar-rail-tooltip {
-  transform: translate(0, -50%);
-  visibility: visible;
-  opacity: 1;
-}
-
-.sidebar-rail-flyout {
-  pointer-events: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  z-index: 100;
-  width: 16rem;
-  transform: translateX(-0.25rem);
-  visibility: hidden;
-  overflow: hidden;
-  border: 1px solid #1f1f1f;
-  border-radius: 0.5rem;
-  background: #1f1f1f;
-  opacity: 0;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.46);
-  transition:
-    opacity 160ms ease,
-    transform 160ms ease,
-    visibility 160ms ease;
-}
-
-.sidebar-rail-group:hover .sidebar-rail-flyout,
-.sidebar-rail-group:has(:focus-visible) .sidebar-rail-flyout {
-  pointer-events: auto;
-  transform: translateX(0);
-  visibility: visible;
-  opacity: 1;
-}
-
-.sidebar-flyout-link {
-  display: flex;
-  min-height: 2rem;
-  align-items: center;
-  gap: 0.75rem;
-  border-radius: 0.375rem;
-  padding: 0.5rem 0.625rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  transition:
-    background-color 150ms ease,
-    color 150ms ease;
-}
-
-.sidebar-flyout-link:focus-visible {
-  outline: 1px solid #ff8c1a;
-  outline-offset: 2px;
 }
 
 .sidebar-group-shell {
@@ -1013,11 +547,6 @@ onUnmounted(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sidebar-collapse-button,
-  .sidebar-rail-button,
-  .sidebar-rail-tooltip,
-  .sidebar-rail-flyout,
-  .sidebar-flyout-link,
   .sidebar-group-enter-active,
   .sidebar-group-leave-active {
     transition: none;
