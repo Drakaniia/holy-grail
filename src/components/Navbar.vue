@@ -15,6 +15,7 @@ import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
 import { useTheme } from '@/composables/useTheme'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
+import { useAuthDialog } from '@/composables/useAuthDialog'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
 import { scheduleIdleTask } from '@/lib/idle'
 
@@ -34,6 +35,7 @@ const emit = defineEmits<{
 
 const UserProfilePill = defineAsyncComponent(() => import('@/components/auth/UserProfilePill.vue'))
 const { isAuthenticated } = useDeferredAuthStatus()
+const { openAuthDialog } = useAuthDialog()
 const sites = useSitesStore()
 const skills = useSkillsStore()
 const extensions = useExtensionsStore()
@@ -385,41 +387,6 @@ onUnmounted(() => {
         <span class="tooltip-bubble">Open random Grail</span>
       </button>
 
-      <a
-        :href="GITHUB_REPO_URL"
-        target="_blank"
-        rel="noreferrer"
-        class="github-stars hidden h-8 items-center gap-2 rounded-md bg-white px-3 text-sm font-medium text-[#1f1f1f] transition-colors hover:bg-gray-100 sm:flex"
-        :aria-label="starLinkLabel"
-      >
-        <GitHubMark class="h-4 w-4" />
-        <span
-          v-if="showStarCountSkeleton"
-          class="github-star-count-skeleton hg-skeleton"
-          aria-hidden="true"
-        ></span>
-        <span v-else class="github-star-count">
-          <span v-if="hasCountAnimated.value" class="digit-roller-group" aria-hidden="true">
-            <span v-for="(digit, idx) in countDigits" :key="idx" class="digit-roller">
-              <span class="digit-strip" :style="{ transform: `translateY(-${digit * 1.2}rem)` }">
-                <span v-for="n in 10" :key="n">{{ n - 1 }}</span>
-              </span>
-            </span>
-          </span>
-          <span v-else>{{ animatedFormattedCount }}</span>
-        </span>
-        <span class="star-icon-wrapper">
-          <Star class="github-star-icon h-4 w-4 text-gray-400" />
-          <span
-            v-if="hasCountAnimated.value"
-            class="star-fill-overlay"
-            :style="{ clipPath: `inset(${100 - starFillPercent}% 0 0 0)` }"
-          >
-            <Star class="github-star-icon h-4 w-4 fill-yellow-500 text-yellow-500" />
-          </span>
-        </span>
-      </a>
-
       <span class="tooltip-shell hidden sm:inline-flex">
         <a
           :href="GITHUB_REPO_URL"
@@ -448,16 +415,27 @@ onUnmounted(() => {
         <span class="tooltip-bubble">{{ themeToggleLabel }}</span>
       </button>
 
-      <UserProfilePill v-if="isAuthenticated" />
-
-      <RouterLink
-        v-else
-        to="/login"
-        class="inline-flex h-8 items-center gap-2 rounded-lg border border-gray-700 px-2 text-sm font-semibold transition-colors hover:bg-[#1f1f1f] sm:px-3"
-      >
-        <UserRound class="h-4 w-4 text-gray-400" />
-        <span class="hidden sm:inline">Sign In</span>
-      </RouterLink>
+      <template v-if="isAuthenticated">
+        <UserProfilePill />
+      </template>
+      <template v-else>
+        <button
+          type="button"
+          class="inline-flex h-8 items-center gap-2 rounded-lg border border-gray-700 px-2 text-sm font-semibold transition-colors hover:bg-[#1f1f1f] sm:px-3"
+          @click="openAuthDialog('login')"
+        >
+          <UserRound class="h-4 w-4 text-gray-400" />
+          <span>Login</span>
+        </button>
+        <button
+          type="button"
+          class="inline-flex h-8 items-center gap-2 rounded-lg border border-accent-500/40 bg-accent-500/10 px-2 text-sm font-semibold text-accent-200 transition-colors hover:bg-accent-500/20 sm:px-3"
+          @click="openAuthDialog('signup')"
+        >
+          <UserRound class="h-4 w-4 text-accent-300" />
+          <span>Sign Up</span>
+        </button>
+      </template>
     </div>
   </nav>
 </template>

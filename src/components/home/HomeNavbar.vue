@@ -2,10 +2,12 @@
 import { onMounted, shallowRef } from 'vue'
 import { Menu, Moon, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
+import { useAuthDialog } from '@/composables/useAuthDialog'
 import { useTheme } from '@/composables/useTheme'
 
 const auth = useAuthStore()
 const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
+const { openAuthDialog } = useAuthDialog()
 const isMenuOpen = shallowRef(false)
 
 const navItems = [
@@ -55,10 +57,21 @@ onMounted(() => {
         <component :is="isLightMode ? SunMedium : Moon" class="h-4 w-4" aria-hidden="true" />
       </button>
 
-      <RouterLink :to="auth.isAuthenticated ? '/account' : '/login'" class="home-navbar__account">
-        <UserRound class="h-4 w-4" aria-hidden="true" />
-        <span>{{ auth.isAuthenticated ? 'Account' : 'Sign In' }}</span>
-      </RouterLink>
+      <template v-if="auth.isAuthenticated">
+        <RouterLink to="/account" class="home-navbar__account">
+          <UserRound class="h-4 w-4" aria-hidden="true" />
+          <span>Account</span>
+        </RouterLink>
+      </template>
+      <template v-else>
+        <button type="button" class="home-navbar__account" @click="openAuthDialog('login')">
+          <UserRound class="h-4 w-4" aria-hidden="true" />
+          <span>Login</span>
+        </button>
+        <button type="button" class="home-navbar__account" @click="openAuthDialog('signup')">
+          <span>Sign Up</span>
+        </button>
+      </template>
 
       <button
         type="button"
@@ -93,7 +106,7 @@ onMounted(() => {
           class="home-navbar__mobile-link home-navbar__mobile-link--strong"
           @click="closeMenu"
         >
-          {{ auth.isAuthenticated ? 'Account' : 'Sign In' }}
+          {{ auth.isAuthenticated ? 'Account' : 'Login' }}
         </RouterLink>
       </nav>
     </Transition>

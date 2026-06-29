@@ -2,6 +2,7 @@
 import { computed, defineAsyncComponent, onMounted, onUnmounted, shallowRef, watch } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 import AppToast from './components/AppToast.vue'
+import AuthDialogRoot from './components/auth/AuthDialogRoot.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
@@ -10,8 +11,9 @@ const Sidebar = defineAsyncComponent(() => import('./components/Sidebar.vue'))
 const SIDEBAR_COLLAPSED_STORAGE_KEY = 'holy-grail-sidebar-collapsed'
 const route = useRoute()
 const isAuthRoute = computed(
-  () => route.name === 'login' || route.name === 'signup' || route.name === 'auth-callback',
+  () => route.name === 'login' || route.name === 'signup',
 )
+const isAuthCallbackRoute = computed(() => route.name === 'auth-callback')
 const isStandaloneRoute = computed(
   () =>
     route.name === 'home' ||
@@ -20,7 +22,7 @@ const isStandaloneRoute = computed(
     route.name === 'not-found',
 )
 const shouldRenderAppShell = computed(
-  () => !isAuthRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
+  () => !isAuthCallbackRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
 )
 const storedSidebarCollapsed = getStoredSidebarCollapsed()
 const isSidebarCollapsed = shallowRef(storedSidebarCollapsed)
@@ -196,10 +198,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <RouterView v-if="isAuthRoute || isStandaloneRoute" />
+  <RouterView v-if="isAuthCallbackRoute || isStandaloneRoute" />
 
   <div
-    v-else-if="shouldRenderAppShell"
+    v-else-if="shouldRenderAppShell || isAuthRoute"
     class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white"
   >
     <div
@@ -274,6 +276,7 @@ onUnmounted(() => {
     <CommandPalette v-if="isCommandPaletteOpen" v-model:open="isCommandPaletteOpen" />
   </div>
 
+  <AuthDialogRoot />
   <AppToast />
 </template>
 
