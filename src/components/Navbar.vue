@@ -18,6 +18,7 @@ import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import { useAuthDialog } from '@/composables/useAuthDialog'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
 import { scheduleIdleTask } from '@/lib/idle'
+import holyGrailLogo from '@/assets/holy-grail.png'
 
 const props = withDefaults(
   defineProps<{
@@ -95,21 +96,6 @@ watch(
   { once: true },
 )
 
-const animatedFormattedCount = computed(() => {
-  return Intl.NumberFormat('en', {
-    notation: 'compact',
-    maximumFractionDigits: 1,
-  }).format(animatedCount.value)
-})
-
-const countDigits = computed(() => {
-  return animatedCount.value.toString().split('').map(Number)
-})
-
-const starFillPercent = computed(() => {
-  if (!starCount.value || starCount.value === 0) return 0
-  return Math.min((animatedCount.value / starCount.value) * 100, 100)
-})
 const collectionLabels: Record<string, string> = {
   '3d': '3D',
   ai: 'AI',
@@ -302,11 +288,7 @@ onUnmounted(() => {
         to="/"
         class="flex min-w-0 items-center gap-2 text-sm font-bold uppercase tracking-tight text-white md:hidden"
       >
-        <svg class="h-5 w-5 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-          />
-        </svg>
+        <img :src="holyGrailLogo" alt="" class="h-6 w-6 shrink-0 rounded" />
         <span class="truncate">
           {{
             currentSite

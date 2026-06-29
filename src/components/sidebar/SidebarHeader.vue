@@ -2,6 +2,7 @@
 import { defineAsyncComponent } from 'vue'
 import { SquareChevronLeft, SquareChevronRight } from 'lucide-vue-next'
 import { RouterLink } from 'vue-router'
+import holyGrailLogo from '@/assets/holy-grail.png'
 
 const SidebarAccountMenu = defineAsyncComponent(
   () => import('@/components/auth/SidebarAccountMenu.vue'),
@@ -63,11 +64,7 @@ const emit = defineEmits<{
         class="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 text-white transition-colors hover:bg-accent-500/10"
         aria-label="Holy Grail home"
       >
-        <svg class="h-5 w-5 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-          />
-        </svg>
+        <img :src="holyGrailLogo" alt="" class="h-7 w-7 shrink-0 rounded" />
         <span class="truncate text-sm font-bold tracking-tight uppercase"> Holy Grail </span>
       </RouterLink>
     </template>

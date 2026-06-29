@@ -4,6 +4,7 @@ import { Menu, Moon, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useAuthStore } from '@/stores/auth'
 import { useAuthDialog } from '@/composables/useAuthDialog'
 import { useTheme } from '@/composables/useTheme'
+import holyGrailLogo from '@/assets/holy-grail.png'
 
 const auth = useAuthStore()
 const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
@@ -32,11 +33,7 @@ onMounted(() => {
 <template>
   <header class="home-navbar">
     <RouterLink to="/" class="home-navbar__brand" aria-label="Holy Grail home" @click="closeMenu">
-      <svg class="home-navbar__mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path
-          d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-        />
-      </svg>
+      <img :src="holyGrailLogo" alt="" class="home-navbar__mark" />
       <span>Holy Grail</span>
     </RouterLink>
 
@@ -149,9 +146,10 @@ onMounted(() => {
 }
 
 .home-navbar__mark {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .home-navbar__links {
