@@ -338,8 +338,7 @@ onUnmounted(() => {
           @keydown.enter.prevent="emit('openSearch')"
         />
         <span class="navbar-search__shortcut" aria-hidden="true">
-          <kbd>{{ shortcutKey }}</kbd>
-          <kbd>K</kbd>
+          <kbd>{{ shortcutKey }}K</kbd>
         </span>
       </div>
 
@@ -498,26 +497,19 @@ onUnmounted(() => {
   position: absolute;
   right: 0.625rem;
   top: 50%;
-  display: flex;
-  height: 1.25rem;
-  align-items: center;
-  gap: 0.2rem;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
   color: #9ca3af;
 }
 
 .navbar-search__shortcut kbd {
-  display: grid;
-  box-sizing: border-box;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
   border-radius: 0.375rem;
-  border: 0;
   background: #303030;
-  padding: 0;
-  text-align: center;
+  padding: 0.125rem 0.375rem;
   font-family:
     ui-sans-serif,
     system-ui,
@@ -525,21 +517,10 @@ onUnmounted(() => {
     BlinkMacSystemFont,
     'Segoe UI',
     sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.navbar-search__shortcut kbd:first-child {
-  font-family:
-    'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', ui-sans-serif, system-ui, sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  transform: translateY(0.03125rem);
-}
-
-.navbar-search__shortcut kbd:last-child {
-  font-size: 0.625rem;
+  line-height: 1.25rem;
+  color: #c0c5cc;
 }
 
 .tooltip-shell {
