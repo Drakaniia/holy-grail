@@ -1,0 +1,76 @@
+slug: everydev
+name: EveryDev - AI Developer Community and Tools Directory
+description: Community-driven platform for AI developers to discover tools, share projects, and stay current.
+category: AI
+parentCategory: ai
+subcategory: others
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.everydev.ai
+docs: https://www.everydev.ai
+sourceCode: ""
+icon: everydev
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - community
+  - tools
+  - directory
+atGlance: AI developer community hub with tools directory and project sharing.
+fullDescription: >-
+  EveryDev is a community-driven platform for developers building with AI. It features
+  a curated directory of over 2,000 AI tools with real developer reviews, project
+  showcasing, developer profiles, and a daily feed of AI development news and discussions.
+coreFeatures:
+  - name: AI Tools Directory
+    description: Curated directory of 2,000+ AI tools with real developer reviews.
+    icon: check
+  - name: Developer Community
+    description: Share projects, build reputation, and discover tools from peers.
+    icon: check
+additionalFeatures:
+  - name: Daily AI Feed
+    description: Curated news and discussions on LLMs, RAG, agents, and more.
+    icon: check
+  - name: Tool Comparisons
+    description: Side-by-side comparisons of popular AI coding assistants.
+    icon: check
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+similarTools:
+  - slug: n8n
+    name: n8n
+    description: AI Workflow Automation Platform & Tools.
+    stars: 188794
+    addedDaysAgo: 0
+    verified: true
+    website: https://n8n.io/
+  - slug: mcpmarket
+    name: MCP Market
+    description: Discover and share MCP servers and tools.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://mcpmarket.com/
+  - slug: needmcp
+    name: Need MCP
+    description: Directory of MCP servers for AI tools.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://needmcp.com/

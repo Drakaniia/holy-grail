@@ -1,0 +1,76 @@
+slug: holygrid-studio
+name: Holy Grid Studio - Framer Templates for Creatives
+description: Premium and free Framer website templates for portfolios, landing pages, and brand sites.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://holygrid.studio
+docs: https://holygrid.studio
+sourceCode: ""
+icon: holygrid-studio
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - templates
+  - framer
+atGlance: Premium Framer templates for portfolios and landing pages.
+fullDescription: >-
+  Holy Grid Studio is a marketplace for premium and free Framer website templates
+  designed for creatives, startups, and developers. Build professional portfolios,
+  landing pages, and brand sites quickly without coding.
+coreFeatures:
+  - name: Framer Templates
+    description: Pre-designed responsive templates for the Framer no-code builder.
+    icon: check
+  - name: Design Resource
+    description: Useful for quickly launching portfolios and brand sites.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Templates work directly in Framer with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under design tools with related resources.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: flowbase
+    name: Flowbase
+    description: Webflow templates and design resources for builders.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.flowbase.co/
+  - slug: impeccable
+    name: Impeccable
+    description: The missing upgrade to Anthropic's impeccable skill.
+    stars: 29019
+    addedDaysAgo: 0
+    verified: true
+    website: https://impeccable.style/

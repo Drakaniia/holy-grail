@@ -1,0 +1,76 @@
+slug: iconinspo
+name: Iconinspo - App Icon Inspiration Gallery
+description: Curated gallery of 60,000+ App Store icons for design inspiration and reference.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://iconinspo.com
+docs: https://iconinspo.com
+sourceCode: ""
+icon: iconinspo
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - inspiration
+atGlance: Curated App Store icon gallery for design inspiration.
+fullDescription: >-
+  Iconinspo.com is a curated online gallery of over 60,000 App Store icons for
+  designers and developers seeking visual inspiration for their app icon designs.
+  Browse by category, discover similar designs, and bookmark favorites for mood boards.
+coreFeatures:
+  - name: Icon Gallery
+    description: Browse 60,000+ real App Store icons for design reference.
+    icon: check
+  - name: Category Browsing
+    description: Explore icons sorted by category to find relevant design styles.
+    icon: check
+additionalFeatures:
+  - name: Similar Designs
+    description: Discover visually similar icons for mood board research.
+    icon: check
+  - name: Bookmark Collections
+    description: Save favorite icons to personal mood boards.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under icons/svg with related design resources.
+    icon: check
+similarTools:
+  - slug: thesvg
+    name: theSVG
+    description: Free brand SVG icons for developers and designers.
+    stars: 2329
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/
+  - slug: heroicons
+    name: Heroicons
+    description: Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.
+    stars: 23538
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/solid
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/

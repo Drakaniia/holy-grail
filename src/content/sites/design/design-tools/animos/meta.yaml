@@ -1,0 +1,76 @@
+slug: animos
+name: Animos - Motion Design Tool for Creatives
+description: Browser-based motion design tool for creating portfolio showcases and animated graphics.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://animos.app
+docs: https://animos.app
+sourceCode: ""
+icon: animos
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - motion
+  - animation
+atGlance: Browser-based motion design tool for portfolio showcases.
+fullDescription: >-
+  Animos is a web-based motion design tool that helps designers and creatives create
+  professional-looking motion graphics for portfolio pieces and design showcases.
+  Drop in images or videos, apply ready-made templates, and export high-quality video files.
+coreFeatures:
+  - name: Motion Templates
+    description: Ready-made animation templates for quick motion graphics.
+    icon: check
+  - name: Browser-Based
+    description: No installation required — works directly in the browser.
+    icon: check
+additionalFeatures:
+  - name: Export Options
+    description: Export creations as MP4 or WebM video files.
+    icon: check
+  - name: Portfolio Ready
+    description: Designed for showcasing design work with motion.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under design tools with related resources.
+    icon: check
+similarTools:
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: lottiefiles
+    name: LottieFiles
+    description: Free lightweight animations for websites and apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lottiefiles.com/
+  - slug: rotato
+    name: Rotato
+    description: 3D mockup and motion design tool for product showcases.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://rotato.app/

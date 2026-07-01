@@ -9263,103 +9263,6 @@
     ]
   },
   {
-    "slug": "github-codewithmuhilan-lightswind-ui-library-animated-react-components",
-    "name": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly",
-    "description": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly bookmarked for repositories resources.",
-    "category": "Repositories",
-    "parentCategory": "development",
-    "subcategory": "repositories",
-    "stars": 690,
-    "watchers": 6,
-    "addedDaysAgo": 0,
-    "license": "Unknown",
-    "lastCommit": "28 days ago",
-    "lastRelease": "1 month ago",
-    "version": "lightswindui/v3.1.28",
-    "contributors": 3,
-    "commitsThisYear": 6,
-    "releases": 3,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
-    "docs": "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
-    "sourceCode": "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
-    "icon": "github",
-    "verified": true,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "development",
-      "repositories"
-    ],
-    "atGlance": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly",
-    "fullDescription": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly is kept as a repositories resource for building and shipping software.",
-    "coreFeatures": [
-      {
-        "name": "Developer Resource",
-        "description": "codewithMUHILAN/Lightswind-UI-Library: Animated React Components - Lightswind UI. Create stunning web applications effortlessly with Lightwind UI. Access 100+ customizable CLI components, blocks, and templates-from dashboards to resource pages. Available in React, these animated elements are fully customizable, helping you craft user-friendly, visually appealing apps quickly is tracked as a repositories resource for building and shipping software.",
-        "icon": "check"
-      },
-      {
-        "name": "Workflow Reference",
-        "description": "The saved link keeps the resource close to related development material.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Sorted by Use Case",
-        "description": "Grouped by learning, references, tooling, repositories, MCP, or monitoring.",
-        "icon": "check"
-      },
-      {
-        "name": "Browser Ready",
-        "description": "Available from the catalog without local setup.",
-        "icon": "check"
-      },
-      {
-        "name": "Repeatable Lookup",
-        "description": "Metadata and tags make the resource easy to find later.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "n8n",
-        "name": "AI Workflow Automation Platform & Tools - n8n",
-        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
-        "stars": 188794,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://n8n.io/"
-      },
-      {
-        "slug": "ui-figma-shadcn-ui",
-        "name": "Figma - shadcn/ui",
-        "description": "Figma - shadcn/ui bookmarked for design tools resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/docs/figma"
-      },
-      {
-        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
-        "name": "The Foundation for your Design System - shadcn/ui",
-        "description": "The Foundation for your Design System - shadcn/ui bookmarked for ui library resources.",
-        "stars": 114722,
-        "addedDaysAgo": 0,
-        "verified": true,
-        "website": "https://ui.shadcn.com/"
-      }
-    ]
-  },
-  {
     "slug": "lightswind",
     "name": "Lightswind UI",
     "description": "Animated React and Tailwind UI library with components, templates, and motion effects.",
@@ -16231,6 +16134,105 @@
     ]
   },
   {
+    "slug": "everydev",
+    "name": "EveryDev - AI Developer Community and Tools Directory",
+    "description": "Community-driven platform for AI developers to discover tools, share projects, and stay current.",
+    "category": "AI",
+    "parentCategory": "ai",
+    "subcategory": "others",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.everydev.ai",
+    "docs": "https://www.everydev.ai",
+    "sourceCode": "",
+    "icon": "everydev",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "community",
+      "tools",
+      "directory"
+    ],
+    "atGlance": "AI developer community hub with tools directory and project sharing.",
+    "fullDescription": "EveryDev is a community-driven platform for developers building with AI. It features a curated directory of over 2,000 AI tools with real developer reviews, project showcasing, developer profiles, and a daily feed of AI development news and discussions.",
+    "coreFeatures": [
+      {
+        "name": "AI Tools Directory",
+        "description": "Curated directory of 2,000+ AI tools with real developer reviews.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Community",
+        "description": "Share projects, build reputation, and discover tools from peers.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Daily AI Feed",
+        "description": "Curated news and discussions on LLMs, RAG, agents, and more.",
+        "icon": "check"
+      },
+      {
+        "name": "Tool Comparisons",
+        "description": "Side-by-side comparisons of popular AI coding assistants.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "n8n",
+        "description": "AI Workflow Automation Platform & Tools.",
+        "stars": 188794,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "mcpmarket",
+        "name": "MCP Market",
+        "description": "Discover and share MCP servers and tools.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mcpmarket.com/"
+      },
+      {
+        "slug": "needmcp",
+        "name": "Need MCP",
+        "description": "Directory of MCP servers for AI tools.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://needmcp.com/"
+      }
+    ]
+  },
+  {
     "slug": "locofy",
     "name": "Locofy.ai - Design to Code with AI - frontend development in a flash",
     "description": "Locofy.ai - Design to Code with AI - frontend development in a flash bookmarked for ai tools resources.",
@@ -18442,6 +18444,107 @@
     ]
   },
   {
+    "slug": "orchids",
+    "name": "Orchids - AI App Builder and IDE",
+    "description": "AI-powered IDE for building and deploying full-stack applications from natural language prompts.",
+    "category": "Website Development",
+    "parentCategory": "ai",
+    "subcategory": "wb",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Desktop"
+    ],
+    "deployment": [
+      "Cloud",
+      "Desktop"
+    ],
+    "website": "https://www.orchids.app",
+    "docs": "https://www.orchids.app",
+    "sourceCode": "",
+    "icon": "orchids",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "development",
+      "app-builder",
+      "ide"
+    ],
+    "atGlance": "AI-powered IDE for building full-stack apps with natural language.",
+    "fullDescription": "Orchids is an AI-powered integrated development environment that lets you build and deploy full-stack applications from natural language descriptions. Supports mobile apps, Chrome extensions, Slack bots, AI agents, and diverse software stacks. Features a built-in VS Code editor and connects to existing AI subscriptions.",
+    "coreFeatures": [
+      {
+        "name": "AI Code Generation",
+        "description": "Build apps from natural language prompts.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Built-in Editor",
+        "description": "Integrated VS Code editor for manual code adjustments.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Diverse App Support",
+        "description": "Build mobile apps, extensions, bots, and agents.",
+        "icon": "layers"
+      },
+      {
+        "name": "Deployment",
+        "description": "Deploy applications directly from the platform.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Cross-Platform",
+        "description": "Available as desktop app (macOS, Windows, Linux) and web.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "lovable",
+        "name": "Lovable",
+        "description": "AI-powered full-stack web app builder.",
+        "stars": 8900,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lovable.dev"
+      },
+      {
+        "slug": "bolt",
+        "name": "Bolt",
+        "description": "AI-powered web app builder from prompt to deployment.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://bolt.new/"
+      },
+      {
+        "slug": "v0",
+        "name": "v0",
+        "description": "Generative UI system by Vercel that creates React components from text prompts.",
+        "stars": 15200,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://v0.dev"
+      }
+    ]
+  },
+  {
     "slug": "readdy",
     "name": "Readdy",
     "description": "Readdy bookmarked for website builder resources.",
@@ -20010,6 +20113,105 @@
     ]
   },
   {
+    "slug": "animos",
+    "name": "Animos - Motion Design Tool for Creatives",
+    "description": "Browser-based motion design tool for creating portfolio showcases and animated graphics.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://animos.app",
+    "docs": "https://animos.app",
+    "sourceCode": "",
+    "icon": "animos",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "motion",
+      "animation"
+    ],
+    "atGlance": "Browser-based motion design tool for portfolio showcases.",
+    "fullDescription": "Animos is a web-based motion design tool that helps designers and creatives create professional-looking motion graphics for portfolio pieces and design showcases. Drop in images or videos, apply ready-made templates, and export high-quality video files.",
+    "coreFeatures": [
+      {
+        "name": "Motion Templates",
+        "description": "Ready-made animation templates for quick motion graphics.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser-Based",
+        "description": "No installation required — works directly in the browser.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Export Options",
+        "description": "Export creations as MP4 or WebM video files.",
+        "icon": "check"
+      },
+      {
+        "name": "Portfolio Ready",
+        "description": "Designed for showcasing design work with motion.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under design tools with related resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "jitter",
+        "name": "Jitter",
+        "description": "Fast and simple motion design tool for creatives.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://jitter.video/"
+      },
+      {
+        "slug": "lottiefiles",
+        "name": "LottieFiles",
+        "description": "Free lightweight animations for websites and apps.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lottiefiles.com/"
+      },
+      {
+        "slug": "rotato",
+        "name": "Rotato",
+        "description": "3D mockup and motion design tool for product showcases.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://rotato.app/"
+      }
+    ]
+  },
+  {
     "slug": "artlist",
     "name": "Infographics by CB Sounddesign | SFX - Artlist",
     "description": "Infographics by CB Sounddesign | SFX - Artlist bookmarked for design tools resources.",
@@ -21376,6 +21578,105 @@
         "slug": "impeccable",
         "name": "Impeccable: The missing upgrade to Anthropic's impeccable skill",
         "description": "Impeccable: The missing upgrade to Anthropic's impeccable skill bookmarked for design skills resources.",
+        "stars": 29019,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://impeccable.style/"
+      }
+    ]
+  },
+  {
+    "slug": "holygrid-studio",
+    "name": "Holy Grid Studio - Framer Templates for Creatives",
+    "description": "Premium and free Framer website templates for portfolios, landing pages, and brand sites.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://holygrid.studio",
+    "docs": "https://holygrid.studio",
+    "sourceCode": "",
+    "icon": "holygrid-studio",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "templates",
+      "framer"
+    ],
+    "atGlance": "Premium Framer templates for portfolios and landing pages.",
+    "fullDescription": "Holy Grid Studio is a marketplace for premium and free Framer website templates designed for creatives, startups, and developers. Build professional portfolios, landing pages, and brand sites quickly without coding.",
+    "coreFeatures": [
+      {
+        "name": "Framer Templates",
+        "description": "Pre-designed responsive templates for the Framer no-code builder.",
+        "icon": "check"
+      },
+      {
+        "name": "Design Resource",
+        "description": "Useful for quickly launching portfolios and brand sites.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Templates work directly in Framer with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under design tools with related resources.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "jitter",
+        "name": "Jitter",
+        "description": "Fast and simple motion design tool for creatives.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://jitter.video/"
+      },
+      {
+        "slug": "flowbase",
+        "name": "Flowbase",
+        "description": "Webflow templates and design resources for builders.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.flowbase.co/"
+      },
+      {
+        "slug": "impeccable",
+        "name": "Impeccable",
+        "description": "The missing upgrade to Anthropic's impeccable skill.",
         "stars": 29019,
         "addedDaysAgo": 0,
         "verified": true,
@@ -24535,6 +24836,105 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/"
+      }
+    ]
+  },
+  {
+    "slug": "iconinspo",
+    "name": "Iconinspo - App Icon Inspiration Gallery",
+    "description": "Curated gallery of 60,000+ App Store icons for design inspiration and reference.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://iconinspo.com",
+    "docs": "https://iconinspo.com",
+    "sourceCode": "",
+    "icon": "iconinspo",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "inspiration"
+    ],
+    "atGlance": "Curated App Store icon gallery for design inspiration.",
+    "fullDescription": "Iconinspo.com is a curated online gallery of over 60,000 App Store icons for designers and developers seeking visual inspiration for their app icon designs. Browse by category, discover similar designs, and bookmark favorites for mood boards.",
+    "coreFeatures": [
+      {
+        "name": "Icon Gallery",
+        "description": "Browse 60,000+ real App Store icons for design reference.",
+        "icon": "check"
+      },
+      {
+        "name": "Category Browsing",
+        "description": "Explore icons sorted by category to find relevant design styles.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Similar Designs",
+        "description": "Discover visually similar icons for mood board research.",
+        "icon": "check"
+      },
+      {
+        "name": "Bookmark Collections",
+        "description": "Save favorite icons to personal mood boards.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under icons/svg with related design resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "thesvg",
+        "name": "theSVG",
+        "description": "Free brand SVG icons for developers and designers.",
+        "stars": 2329,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://thesvg.org/"
+      },
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.",
+        "stars": 23538,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/solid"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
       }
     ]
   },
@@ -33750,105 +34150,6 @@
     ]
   },
   {
-    "slug": "igrovuha",
-    "name": "Minecraft: Bedrock Edition v1.21.101",
-    "description": "Minecraft: Bedrock Edition v1.21.101 bookmarked for game download resources.",
-    "category": "Game Download",
-    "parentCategory": "downloads",
-    "subcategory": "game-download",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "N/A",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://igrovuha.org/14292-minecraft-bedrock-edition.html",
-    "docs": "https://igrovuha.org/14292-minecraft-bedrock-edition.html",
-    "sourceCode": "",
-    "icon": "igrovuha",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "downloads",
-      "game-download",
-      "game",
-      "download"
-    ],
-    "atGlance": "Minecraft: Bedrock Edition v1.21.101",
-    "fullDescription": "Minecraft: Bedrock Edition v1.21.101 is kept as a game download source in the downloads collection.",
-    "coreFeatures": [
-      {
-        "name": "Download Source",
-        "description": "Minecraft: Bedrock Edition v1.21.101 is cataloged as a game download bookmark.",
-        "icon": "check"
-      },
-      {
-        "name": "Direct Web Launch",
-        "description": "Open the saved source directly from the catalog entry.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Grouped by Type",
-        "description": "Sorted by games, VFX, software, torrents, or movies.",
-        "icon": "check"
-      },
-      {
-        "name": "Imported Bookmark",
-        "description": "Preserves the saved browser bookmark link.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Tagged under the downloads collection for search and filtering.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "ig-repacks",
-        "name": "IG-Repacks / Games",
-        "description": "IG-Repacks / Games bookmarked for game download resources.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://ig-repacks.com/browse.html"
-      },
-      {
-        "slug": "oceanofgames",
-        "name": "Ocean of Games",
-        "description": "Ocean of Games bookmarked for game download resources.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://oceanofgames.com/"
-      },
-      {
-        "slug": "fitgirl-repacks",
-        "name": "Popular Repacks - FitGirl Repacks",
-        "description": "Popular Repacks - FitGirl Repacks bookmarked for game download resources.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://fitgirl-repacks.site/popular-repacks/"
-      }
-    ]
-  },
-  {
     "slug": "oceanofgames",
     "name": "Ocean of Games",
     "description": "Ocean of Games bookmarked for game download resources.",
@@ -38434,90 +38735,6 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://hianime.re/home"
-      }
-    ]
-  },
-  {
-    "slug": "hianime-re",
-    "name": "HiAnime RE",
-    "description": "Anime watch source bookmark for quick launch.",
-    "category": "Anime",
-    "parentCategory": "watch",
-    "subcategory": "anime",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "Added May 24, 2026",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://hianime.re/home",
-    "docs": "https://hianime.re/home",
-    "sourceCode": "",
-    "icon": "hianime-re",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "watch",
-      "anime",
-      "streaming"
-    ],
-    "atGlance": "Anime watch bookmark.",
-    "fullDescription": "HiAnime RE is kept as an anime watch source in the Watch collection.",
-    "coreFeatures": [
-      {
-        "name": "Watch Source",
-        "description": "Cataloged as a saved anime watch bookmark.",
-        "icon": "check"
-      },
-      {
-        "name": "Direct Web Launch",
-        "description": "Opens the saved watch source directly from the catalog entry.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Watch Collection",
-        "description": "Grouped under Watch for movie and anime sources.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Tagged for watch, anime, and streaming search.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "animewave",
-        "name": "AnimeWave",
-        "description": "Anime watch source bookmark for quick launch.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://animewave.to/home"
-      },
-      {
-        "slug": "hianime-ad",
-        "name": "HiAnime AD",
-        "description": "Anime watch source bookmark for quick launch.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://hianime.ad/home"
       }
     ]
   },

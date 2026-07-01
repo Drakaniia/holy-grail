@@ -1,0 +1,79 @@
+slug: orchids
+name: Orchids - AI App Builder and IDE
+description: AI-powered IDE for building and deploying full-stack applications from natural language prompts.
+category: Website Development
+parentCategory: ai
+subcategory: wb
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Desktop
+deployment:
+  - Cloud
+  - Desktop
+website: https://www.orchids.app
+docs: https://www.orchids.app
+sourceCode: ""
+icon: orchids
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - development
+  - app-builder
+  - ide
+atGlance: AI-powered IDE for building full-stack apps with natural language.
+fullDescription: >-
+  Orchids is an AI-powered integrated development environment that lets you build
+  and deploy full-stack applications from natural language descriptions. Supports
+  mobile apps, Chrome extensions, Slack bots, AI agents, and diverse software stacks.
+  Features a built-in VS Code editor and connects to existing AI subscriptions.
+coreFeatures:
+  - name: AI Code Generation
+    description: Build apps from natural language prompts.
+    icon: sparkles
+  - name: Built-in Editor
+    description: Integrated VS Code editor for manual code adjustments.
+    icon: check
+additionalFeatures:
+  - name: Diverse App Support
+    description: Build mobile apps, extensions, bots, and agents.
+    icon: layers
+  - name: Deployment
+    description: Deploy applications directly from the platform.
+    icon: rocket
+  - name: Cross-Platform
+    description: Available as desktop app (macOS, Windows, Linux) and web.
+    icon: check
+similarTools:
+  - slug: lovable
+    name: Lovable
+    description: AI-powered full-stack web app builder.
+    stars: 8900
+    addedDaysAgo: 0
+    verified: true
+    website: https://lovable.dev
+  - slug: bolt
+    name: Bolt
+    description: AI-powered web app builder from prompt to deployment.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://bolt.new/
+  - slug: v0
+    name: v0
+    description: Generative UI system by Vercel that creates React components from text prompts.
+    stars: 15200
+    addedDaysAgo: 0
+    verified: true
+    website: https://v0.dev
