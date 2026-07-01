@@ -32533,6 +32533,114 @@
     ]
   },
   {
+    "slug": "checkly",
+    "name": "Checkly - Synthetic Monitoring Platform",
+    "description": "Monitoring as Code platform for modern engineering teams to test, monitor, and debug applications from pull request to production.",
+    "category": "Monitoring",
+    "parentCategory": "development",
+    "subcategory": "monitoring",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.checklyhq.com",
+    "docs": "https://checklyhq.com/docs",
+    "sourceCode": "",
+    "icon": "checkly",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "monitoring",
+      "synthetic-monitoring",
+      "observability",
+      "devops",
+      "playwright"
+    ],
+    "atGlance": "AI-native application reliability platform for testing, monitoring, and debugging with Monitoring as Code.",
+    "fullDescription": "Checkly is an AI-native application reliability platform built for modern engineering teams. It combines synthetic monitoring, uptime monitoring, and incident communication into a single platform. Create and reuse tests using Playwright or OpenAPI, run them locally or in CI/CD, then deploy to global infrastructure for 24/7 monitoring. With Monitoring as Code (MaC), teams define checks as code alongside their application code using the Checkly CLI, Terraform, or Pulumi — enabling Git-based workflows, code reviews, and CI/CD integration for monitoring infrastructure.",
+    "coreFeatures": [
+      {
+        "name": "Synthetic Monitoring",
+        "description": "Run Playwright-powered browser checks and API checks from 22+ global locations at high frequency.",
+        "icon": "check"
+      },
+      {
+        "name": "Monitoring as Code",
+        "description": "Define, version, and deploy monitoring infrastructure using CLI, Terraform, or Pulumi alongside your code.",
+        "icon": "check"
+      },
+      {
+        "name": "Playwright-Native",
+        "description": "Reuse existing Playwright test suites as production monitors with native browser automation.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multi-Protocol Uptime",
+        "description": "Monitor HTTP, HTTPS, TCP, ICMP, DNS, and Heartbeat endpoints with sub-10-second check intervals.",
+        "icon": "check"
+      },
+      {
+        "name": "Built-in Status Pages",
+        "description": "Automatically update branded status pages when checks fail, with real-time incident communication.",
+        "icon": "check"
+      },
+      {
+        "name": "AI-Powered Insights",
+        "description": "Distributed OpenTelemetry tracing and AI-driven root cause analysis for faster debugging.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "betterstack",
+        "name": "Better Stack Uptime",
+        "description": "Better Stack Uptime bookmarked for monitoring resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://betterstack.com/uptime"
+      },
+      {
+        "slug": "honeycomb",
+        "name": "Honeycomb - Observability Platform",
+        "description": "Event-based observability platform for debugging and understanding complex distributed systems.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.honeycomb.io/"
+      },
+      {
+        "slug": "uptimerobot",
+        "name": "UptimeRobot",
+        "description": "UptimeRobot bookmarked for monitoring resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://uptimerobot.com/"
+      }
+    ]
+  },
+  {
     "slug": "honeycomb",
     "name": "Honeycomb - Observability Platform",
     "description": "Event-based observability platform for debugging and understanding complex distributed systems.",
