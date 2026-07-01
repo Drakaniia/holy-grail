@@ -1,7 +1,7 @@
 name: ✨ Feature Request
 description: Suggest a new feature or enhancement for the project
-title: "feat: <short description>"
-labels: ["enhancement"]
+title: 'feat: <short description>'
+labels: ['enhancement']
 assignees: []
 body:
   - type: markdown
@@ -51,9 +51,9 @@ body:
       label: Priority
       description: How important is this feature to you?
       options:
-        - "Nice to have"
-        - "Important"
-        - "Critical — blocking my work"
+        - 'Nice to have'
+        - 'Important'
+        - 'Critical — blocking my work'
     validations:
       required: true
 

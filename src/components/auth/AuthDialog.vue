@@ -138,7 +138,10 @@ function handlePasswordReset() {
         aria-modal="true"
       >
         <!-- Signup Left Image column -->
-        <div v-if="isSignup" class="hidden md:block h-full w-full overflow-hidden select-none border-r border-zinc-800/40">
+        <div
+          v-if="isSignup"
+          class="hidden md:block h-full w-full overflow-hidden select-none border-r border-zinc-800/40"
+        >
           <img
             :src="signupImg"
             alt="Sign Up illustration"
@@ -148,7 +151,9 @@ function handlePasswordReset() {
         </div>
 
         <!-- Right Side / Main content container -->
-        <div class="relative flex flex-col h-full w-full justify-between overflow-y-auto p-6 md:p-8">
+        <div
+          class="relative flex flex-col h-full w-full justify-between overflow-y-auto p-6 md:p-8"
+        >
           <!-- Close button -->
           <button
             type="button"
@@ -181,17 +186,28 @@ function handlePasswordReset() {
             <!-- Login Content -->
             <div v-if="isLogin" class="text-center w-full">
               <div class="mb-6">
-                <span class="text-[10px] font-semibold uppercase tracking-widest text-zinc-500">Welcome back</span>
-                <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">Sign in to Holy Grail.</h2>
+                <span class="text-[10px] font-semibold uppercase tracking-widest text-zinc-500"
+                  >Welcome back</span
+                >
+                <h2 class="text-3xl font-extrabold tracking-tight text-white mt-1">
+                  Sign in to Holy Grail.
+                </h2>
                 <p class="text-sm text-zinc-400 leading-relaxed mt-2 max-w-xs mx-auto">
-                  Pick up where you left off — your bookmarks, collections, and curated developer resources.
+                  Pick up where you left off — your bookmarks, collections, and curated developer
+                  resources.
                 </p>
               </div>
 
               <!-- Divider line (if form is hidden) -->
-              <div v-if="!showEmailForm" class="relative flex py-2 items-center justify-center my-4 w-full">
+              <div
+                v-if="!showEmailForm"
+                class="relative flex py-2 items-center justify-center my-4 w-full"
+              >
                 <div class="flex-grow border-t border-zinc-800/85"></div>
-                <span class="flex-shrink mx-4 text-xxs font-semibold uppercase tracking-widest text-zinc-500">Sign in</span>
+                <span
+                  class="flex-shrink mx-4 text-xxs font-semibold uppercase tracking-widest text-zinc-500"
+                  >Sign in</span
+                >
                 <div class="flex-grow border-t border-zinc-800/85"></div>
               </div>
 
@@ -218,25 +234,36 @@ function handlePasswordReset() {
             <div v-else-if="isSignup" class="w-full">
               <div class="text-center mb-5">
                 <h2 class="text-2xl md:text-2xl tracking-tight text-white leading-snug">
-                  Your curated directory of <strong class="text-amber-300">dev tools and AI platforms.</strong>
+                  Your curated directory of
+                  <strong class="text-amber-300">dev tools and AI platforms.</strong>
                 </h2>
               </div>
 
               <!-- Feature Prop Badges -->
               <div class="grid grid-cols-2 gap-2 mb-6 w-full max-w-sm mx-auto">
-                <div class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300">
+                <div
+                  class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300"
+                >
                   <Sparkles class="h-4 w-4 text-zinc-400 shrink-0" />
                   <span class="text-[11px] font-medium leading-none">AI Search</span>
                 </div>
-                <div class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300">
+                <div
+                  class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300"
+                >
                   <Mail class="h-4 w-4 text-zinc-400 shrink-0" />
-                  <span class="text-[11px] font-medium leading-none font-sans">Weekly Newsletter</span>
+                  <span class="text-[11px] font-medium leading-none font-sans"
+                    >Weekly Newsletter</span
+                  >
                 </div>
-                <div class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300">
+                <div
+                  class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300"
+                >
                   <Bookmark class="h-4 w-4 text-zinc-400 shrink-0" />
                   <span class="text-[11px] font-medium leading-none">Save Bookmarks</span>
                 </div>
-                <div class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300">
+                <div
+                  class="flex items-center gap-2 rounded-xl bg-white/5 border border-zinc-800/40 p-2.5 text-zinc-300"
+                >
                   <FolderOpen class="h-4 w-4 text-zinc-400 shrink-0" />
                   <span class="text-[11px] font-medium leading-none">Create Collections</span>
                 </div>
@@ -245,7 +272,10 @@ function handlePasswordReset() {
               <!-- Divider line -->
               <div class="relative flex py-1 items-center justify-center my-4 w-full">
                 <div class="flex-grow border-t border-zinc-800/85"></div>
-                <span class="flex-shrink mx-3.5 text-xxs font-semibold uppercase tracking-widest text-zinc-500">Create a Free Account</span>
+                <span
+                  class="flex-shrink mx-3.5 text-xxs font-semibold uppercase tracking-widest text-zinc-500"
+                  >Create a Free Account</span
+                >
                 <div class="flex-grow border-t border-zinc-800/85"></div>
               </div>
 
@@ -281,9 +311,13 @@ function handlePasswordReset() {
               </div>
               <div v-else class="space-y-4">
                 <div class="flex flex-col gap-1.5 text-left">
-                  <label class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Email Address</label>
+                  <label class="text-xs font-semibold uppercase tracking-widest text-zinc-500"
+                    >Email Address</label
+                  >
                   <div class="relative">
-                    <Mail class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+                    <Mail
+                      class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500"
+                    />
                     <input
                       v-model="resetEmail"
                       data-testid="reset-email-input"

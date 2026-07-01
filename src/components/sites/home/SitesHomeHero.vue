@@ -78,10 +78,15 @@ const gridHoverColor = computed(() =>
           <Sparkles class="h-4 w-4" aria-hidden="true" />
           Curated web shelf
         </p>
-        <h1 id="sites-home-title" class="sites-home-hero__title">Browse by signal.</h1>
+        <h1 id="sites-home-title" class="sites-home-hero__title">
+          聖杯<br />
+          収集録
+        </h1>
         <p class="sites-home-hero__summary">
-          A visual front door for AI builders, design references, developer platforms, streaming
-          shelves, downloads, and the odd tools worth keeping close.
+          ランク：EX　種別：対ウェブ宝具　最大捕捉：∞<br />
+          あらゆるサイトを収集し、カテゴリに分類する能力。<br />
+          一度登録されたページは二度と失われない。<br />
+          ───さあ、次の回廊を開け。
         </p>
 
         <div class="sites-home-hero__actions" aria-label="Featured site collections">

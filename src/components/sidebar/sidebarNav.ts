@@ -60,7 +60,11 @@ export const watchSubcategories: SidebarNavItem[] = [
 export const downloadsSubcategories: SidebarNavItem[] = [
   { name: 'Game Download', icon: Gamepad2, route: '/sites/downloads/game-download' },
   { name: 'VFX Download', icon: Video, route: '/sites/downloads/vfx-download' },
-  { name: 'Software Download', icon: HardDriveDownload, route: '/sites/downloads/software-download' },
+  {
+    name: 'Software Download',
+    icon: HardDriveDownload,
+    route: '/sites/downloads/software-download',
+  },
   { name: 'Torrents', icon: Disc3, route: '/sites/downloads/torrents' },
   { name: 'Movies', icon: Film, route: '/sites/downloads/movies' },
 ]
@@ -125,10 +129,28 @@ export const siteSubcategoryGroups: { parentCategory: SiteGroup; items: SidebarN
 
 export const siteGroupNav: SidebarNavGroup[] = [
   { name: 'AI', icon: Bot, route: '/sites/ai', group: 'ai', items: aiSubcategories },
-  { name: 'Design', icon: Palette, route: '/sites/design', group: 'design', items: designSubcategories },
-  { name: 'Development', icon: Code2, route: '/sites/development', group: 'development', items: developmentSubcategories },
+  {
+    name: 'Design',
+    icon: Palette,
+    route: '/sites/design',
+    group: 'design',
+    items: designSubcategories,
+  },
+  {
+    name: 'Development',
+    icon: Code2,
+    route: '/sites/development',
+    group: 'development',
+    items: developmentSubcategories,
+  },
   { name: 'Watch', icon: Film, route: '/sites/watch', group: 'watch', items: watchSubcategories },
-  { name: 'Downloads', icon: Download, route: '/sites/downloads', group: 'downloads', items: downloadsSubcategories },
+  {
+    name: 'Downloads',
+    icon: Download,
+    route: '/sites/downloads',
+    group: 'downloads',
+    items: downloadsSubcategories,
+  },
 ] as const
 
 export const isSiteGroupRoute = (path: string, group: SiteGroup): boolean => {

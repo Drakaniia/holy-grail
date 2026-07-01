@@ -14,13 +14,9 @@ const auth = useAuthStore()
 const toast = useToastStore()
 const { authDialogState, closeAuthDialog, openAuthDialog } = useAuthDialog()
 
-const isAuthRoute = computed(
-  () => route.name === 'login' || route.name === 'signup',
-)
+const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
 
-const shouldShowDialog = computed(
-  () => authDialogState.value.isOpen || isAuthRoute.value,
-)
+const shouldShowDialog = computed(() => authDialogState.value.isOpen || isAuthRoute.value)
 
 const authMode = computed<AuthMode | 'reset'>(() => {
   if (authDialogState.value.isOpen) {
@@ -61,9 +57,7 @@ function handleSwitchMode(mode: AuthMode) {
 
 async function handleSubmit(credentials: AuthCredentials) {
   const result =
-    authMode.value === 'signup'
-      ? await auth.signUp(credentials)
-      : await auth.signIn(credentials)
+    authMode.value === 'signup' ? await auth.signUp(credentials) : await auth.signIn(credentials)
 
   if (!result.ok) return
 

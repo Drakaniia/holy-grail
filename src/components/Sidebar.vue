@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  computed,
-  onMounted,
-  onUnmounted,
-  reactive,
-  shallowRef,
-  watch,
-} from 'vue'
+import { computed, onMounted, onUnmounted, reactive, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import {
   Bot,
@@ -246,7 +239,11 @@ onUnmounted(() => {
     :class="{ 'app-sidebar--collapsed': isCollapsed }"
   >
     <!-- Header -->
-    <SidebarHeader :collapsed="isCollapsed" :is-authenticated="isAuthenticated" @toggle-collapsed="toggleSidebarCollapsed" />
+    <SidebarHeader
+      :collapsed="isCollapsed"
+      :is-authenticated="isAuthenticated"
+      @toggle-collapsed="toggleSidebarCollapsed"
+    />
 
     <!-- Search bar (expanded only) -->
     <div v-if="!isCollapsed" class="shrink-0 border-b border-gray-800 px-3 py-3">

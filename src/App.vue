@@ -10,9 +10,7 @@ const CommandPalette = defineAsyncComponent(() => import('./components/search/Co
 const Sidebar = defineAsyncComponent(() => import('./components/Sidebar.vue'))
 const SIDEBAR_COLLAPSED_STORAGE_KEY = 'holy-grail-sidebar-collapsed'
 const route = useRoute()
-const isAuthRoute = computed(
-  () => route.name === 'login' || route.name === 'signup',
-)
+const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
 const isAuthCallbackRoute = computed(() => route.name === 'auth-callback')
 const isStandaloneRoute = computed(
   () =>

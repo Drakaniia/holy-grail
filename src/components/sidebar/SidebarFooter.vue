@@ -111,9 +111,7 @@ defineProps<{
       to="/admin"
       class="sidebar-rail-button"
       :class="
-        isActive('/admin')
-          ? 'text-white'
-          : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+        isActive('/admin') ? 'text-white' : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
       "
       aria-label="Admin"
     >

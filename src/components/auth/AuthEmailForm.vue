@@ -1,14 +1,6 @@
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue'
-import {
-  ArrowRight,
-  Eye,
-  EyeOff,
-  KeyRound,
-  Loader2,
-  Mail,
-  UserRound,
-} from 'lucide-vue-next'
+import { ArrowRight, Eye, EyeOff, KeyRound, Loader2, Mail, UserRound } from 'lucide-vue-next'
 import type { AuthCredentials } from '@/types/auth'
 
 const props = defineProps<{
@@ -36,7 +28,8 @@ const submitLabel = computed(() => (isSignup.value ? 'Create account' : 'Sign in
 
 const passwordStrength = computed(() => {
   if (!password.value) return { label: 'No password', width: '0%', className: 'bg-zinc-800' }
-  if (password.value.length >= 12) return { label: 'Strong', width: '100%', className: 'bg-emerald-400' }
+  if (password.value.length >= 12)
+    return { label: 'Strong', width: '100%', className: 'bg-emerald-400' }
   if (password.value.length >= 8) return { label: 'Good', width: '66%', className: 'bg-amber-400' }
   return { label: 'Too short', width: '33%', className: 'bg-red-400' }
 })
@@ -78,7 +71,10 @@ function handleForgotPassword() {
 
 <template>
   <form class="space-y-4 w-full" @submit.prevent="handleSubmit">
-    <div v-if="validationError" class="rounded-lg border border-red-500/20 bg-red-500/10 p-3 text-xs text-red-200 text-left">
+    <div
+      v-if="validationError"
+      class="rounded-lg border border-red-500/20 bg-red-500/10 p-3 text-xs text-red-200 text-left"
+    >
       {{ validationError }}
     </div>
 
@@ -157,7 +153,9 @@ function handleForgotPassword() {
       </div>
 
       <div class="flex flex-col gap-1.5 text-left">
-        <label class="text-xs font-semibold uppercase tracking-widest text-zinc-500">Confirm password</label>
+        <label class="text-xs font-semibold uppercase tracking-widest text-zinc-500"
+          >Confirm password</label
+        >
         <div class="relative">
           <KeyRound class="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
           <input

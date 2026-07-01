@@ -85,11 +85,7 @@ const emit = defineEmits<{
         <span class="min-w-0 flex-1 truncate font-medium">{{ name }}</span>
         <span
           class="shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-          :class="
-            isGroupActive
-              ? 'text-zinc-300'
-              : 'text-gray-600 group-hover:text-gray-300'
-          "
+          :class="isGroupActive ? 'text-zinc-300' : 'text-gray-600 group-hover:text-gray-300'"
         >
           {{ getGroupCount(group) }}
         </span>

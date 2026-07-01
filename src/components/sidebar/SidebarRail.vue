@@ -160,10 +160,7 @@ const emit = defineEmits<{
 </style>
 
 <template>
-  <nav
-    class="min-h-0 flex-1 overflow-visible px-2 py-3"
-    aria-label="Collapsed navigation"
-  >
+  <nav class="min-h-0 flex-1 overflow-visible px-2 py-3" aria-label="Collapsed navigation">
     <ul class="space-y-1">
       <li>
         <button
@@ -222,9 +219,7 @@ const emit = defineEmits<{
             >
               <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
               <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
-              <span
-                class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
-              >
+              <span class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600">
                 {{ getItemCount(item.route) }}
               </span>
             </RouterLink>
@@ -274,9 +269,7 @@ const emit = defineEmits<{
             >
               <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
               <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
-              <span
-                class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
-              >
+              <span class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600">
                 {{ getItemCount(item.route) }}
               </span>
             </RouterLink>
@@ -306,9 +299,7 @@ const emit = defineEmits<{
           <div class="border-b border-gray-800 px-3 py-2">
             <div class="flex items-center gap-2">
               <Sparkles class="h-4 w-4 text-gray-400" />
-              <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white">
-                Skills
-              </span>
+              <span class="min-w-0 flex-1 truncate text-sm font-semibold text-white"> Skills </span>
               <span class="rounded px-1.5 text-[10px] font-semibold text-gray-500">
                 {{ totalSkillCount }}
               </span>
@@ -329,9 +320,7 @@ const emit = defineEmits<{
             >
               <component :is="item.icon" class="h-3.5 w-3.5 shrink-0" />
               <span class="min-w-0 flex-1 truncate">{{ item.name }}</span>
-              <span
-                class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600"
-              >
+              <span class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold text-gray-600">
                 {{ getItemCount(item.route) }}
               </span>
             </RouterLink>

@@ -110,7 +110,7 @@ chore: bump dependencies
 Every push and pull request to `grail` runs:
 
 ```
-type-check → lint → test → build → format:check
+type-check → lint → build → format:check
 ```
 
 Make sure all steps pass before requesting a review:
@@ -203,20 +203,12 @@ bun test --coverage     # with coverage report
 ## Pull Request Process
 
 1. Ensure your branch is up to date with `grail`.
-2. Run all quality checks locally (`type-check`, `lint`, `build`, `format:check`, `test`).
-3. Open a pull request against the `grail` branch.
-4. Fill out the [PR template](.github/PULL_REQUEST_TEMPLATE.md) completely.
-5. A maintainer will review your changes. Address any feedback.
-6. Once approved, your PR will be squash-merged.
-
-### PR Checklist
-
-- [ ] My code follows the existing code style and conventions
-- [ ] I've self-reviewed my changes
-- [ ] Tests pass and new tests are added for new functionality
-- [ ] Documentation is updated if needed
-- [ ] No breaking changes introduced (or noted clearly)
-- [ ] Screenshots added for visual changes
+2. **For larger changes, open an issue first** to discuss the approach before investing time in code.
+3. Run all quality checks locally (`type-check`, `lint`, `build`, `format:check`, `test`).
+4. Open a pull request against the `grail` branch.
+5. Fill out the [PR template](.github/PULL_REQUEST_TEMPLATE.md) completely — the checklist there covers everything.
+6. A maintainer will review your changes. Address any feedback.
+7. Once approved, your PR will be squash-merged.
 
 <br/>
 

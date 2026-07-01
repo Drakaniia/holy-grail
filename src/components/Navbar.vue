@@ -338,7 +338,7 @@ onUnmounted(() => {
           @keydown.enter.prevent="emit('openSearch')"
         />
         <span class="navbar-search__shortcut" aria-hidden="true">
-          <kbd>{{ shortcutKey }}K</kbd>
+          <kbd>{{ shortcutKey }}<span class="font-bold">K</span></kbd>
         </span>
       </div>
 
@@ -506,7 +506,7 @@ onUnmounted(() => {
 .navbar-search__shortcut kbd {
   display: inline-flex;
   align-items: center;
-  gap: 0.125rem;
+  gap: 0.5rem;
   border-radius: 0.375rem;
   background: #303030;
   padding: 0.125rem 0.375rem;

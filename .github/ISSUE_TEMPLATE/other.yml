@@ -1,6 +1,6 @@
 name: 💬 Other
 description: Something else on your mind — questions, ideas, discussions, or feedback
-title: ""
+title: ''
 labels: []
 assignees: []
 body:
@@ -14,15 +14,15 @@ body:
     attributes:
       label: What type of issue is this?
       options:
-        - "Question / Help"
-        - "Discussion"
-        - "Feedback"
-        - "Documentation"
-        - "Refactor / Tech Debt"
-        - "Design / UI Polish"
-        - "Performance"
-        - "Security"
-        - "Other"
+        - 'Question / Help'
+        - 'Discussion'
+        - 'Feedback'
+        - 'Documentation'
+        - 'Refactor / Tech Debt'
+        - 'Design / UI Polish'
+        - 'Performance'
+        - 'Security'
+        - 'Other'
     validations:
       required: true
 
@@ -31,7 +31,7 @@ body:
     attributes:
       label: Details
       description: Tell us what's on your mind.
-      placeholder: "I was thinking about..."
+      placeholder: 'I was thinking about...'
     validations:
       required: true
 
@@ -40,6 +40,6 @@ body:
     attributes:
       label: Additional Context
       description: Any links, references, or supporting information.
-      placeholder: "Relevant links, screenshots, or related issues..."
+      placeholder: 'Relevant links, screenshots, or related issues...'
     validations:
       required: false
