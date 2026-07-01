@@ -153,6 +153,15 @@
     "height": 600,
     "bytes": 46618
   },
+  "animos": {
+    "image": "/previews/animos.webp",
+    "small": "/previews/animos-sm.webp",
+    "sourceUrl": "https://animos.app/",
+    "capturedAt": "2026-07-01T01:22:51.079Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27784
+  },
   "anything": {
     "image": "/previews/anything.webp",
     "small": "/previews/anything-sm.webp",
@@ -478,6 +487,15 @@
     "width": 960,
     "height": 600,
     "bytes": 14852
+  },
+  "checkly": {
+    "image": "/previews/checkly.webp",
+    "small": "/previews/checkly-sm.webp",
+    "sourceUrl": "https://www.checklyhq.com/",
+    "capturedAt": "2026-07-01T01:23:03.150Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 26846
   },
   "ciciai": {
     "image": "/previews/ciciai.webp",
@@ -994,6 +1012,15 @@
     "height": 600,
     "bytes": 30282
   },
+  "everydev": {
+    "image": "/previews/everydev.webp",
+    "small": "/previews/everydev-sm.webp",
+    "sourceUrl": "https://www.everydev.ai/",
+    "capturedAt": "2026-07-01T01:22:53.622Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 46674
+  },
   "evilcharts": {
     "image": "/previews/evilcharts.webp",
     "small": "/previews/evilcharts-sm.webp",
@@ -1445,6 +1472,15 @@
     "height": 600,
     "bytes": 47060
   },
+  "holygrid-studio": {
+    "image": "/previews/holygrid-studio.webp",
+    "small": "/previews/holygrid-studio-sm.webp",
+    "sourceUrl": "https://holygrid.studio/",
+    "capturedAt": "2026-07-01T01:22:56.619Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 25368
+  },
   "home": {
     "image": "/previews/home.webp",
     "small": "/previews/home-sm.webp",
@@ -1480,6 +1516,15 @@
     "width": 960,
     "height": 600,
     "bytes": 21788
+  },
+  "iconinspo": {
+    "image": "/previews/iconinspo.webp",
+    "small": "/previews/iconinspo-sm.webp",
+    "sourceUrl": "https://iconinspo.com/",
+    "capturedAt": "2026-07-01T01:22:56.821Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 62454
   },
   "iconly": {
     "image": "/previews/iconly.webp",
@@ -2355,6 +2400,15 @@
     "width": 960,
     "height": 600,
     "bytes": 34650
+  },
+  "orchids": {
+    "image": "/previews/orchids.webp",
+    "small": "/previews/orchids-sm.webp",
+    "sourceUrl": "https://www.orchids.app/",
+    "capturedAt": "2026-07-01T01:22:55.236Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 16810
   },
   "originui": {
     "image": "/previews/originui.webp",
