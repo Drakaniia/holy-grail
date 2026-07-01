@@ -12,7 +12,7 @@ This skill documents the complete methodology for adding new sites to the Holy G
 ## Workflow Summary
 
 ```
-Research (parallel) → Categorize → Create meta.yaml files (parallel) → Regenerate index → Validate
+Research (parallel) → Categorize → Create meta.yaml files (parallel) → Regenerate index → Generate previews → Validate
 ```
 
 ## Step 1: Gather Context (Always do first)
@@ -240,7 +240,23 @@ This reads all `meta.yaml` files from `src/content/sites/` and writes:
 
 **Note**: The output will print "Generated sites index with N sites". Compare N to the previous count to verify your new sites were added.
 
-## Step 8: Validate
+## Step 8: Generate Preview Images
+
+After the index is regenerated, capture preview screenshots for the new sites:
+
+```bash
+bun run generate:previews       # captures only sites without previews
+```
+
+This runs Playwright-based browser captures against each new site's URL. The output is saved to `public/previews/{slug}.webp` and `public/previews/{slug}-sm.webp`.
+
+After generation, verify previews are present:
+
+```bash
+bun run review:previews         # check if previews are present or fallback
+```
+
+## Step 9: Validate
 
 Run type checking and linting:
 
@@ -273,20 +289,14 @@ mkdir -p src/content/sites/design/icons-svg/iconinspo \
 node scripts/build/generate-sites-index.js
 # Output: Generated sites index with 403 sites (was 398)
 
-# 5. Validate
+# 5. Generate previews
+bun run generate:previews
+# Output: captures only sites without previews, saves to public/previews/
+
+# 6. Validate
 npx vue-tsc --noEmit        # Passes
+npx oxlint --fix            # Passes
 ```
-
-## Post-Creation: Generate Preview Images
-
-New sites won't have preview screenshots until you run the preview generator:
-
-```bash
-bun run generate:previews       # captures only sites without previews
-bun run review:previews         # check if previews are present or fallback
-```
-
-This is optional — sites display fine without previews (they show a fallback).
 
 ## Verification Checklist
 
@@ -296,7 +306,9 @@ This is optional — sites display fine without previews (they show a fallback).
 - [ ] `parentCategory` and `subcategory` match actual folder structure
 - [ ] `similarTools` references use existing slugs (verify with `find src/content/sites -type d -name "SLUG"`)
 - [ ] The `sites-index.json` regeneration succeeded and shows correct count
+- [ ] Preview images generated (`public/previews/{slug}.webp` and `-sm.webp`)
 - [ ] Type checking passes (`vue-tsc --noEmit`)
+- [ ] Linting passes (`oxlint --fix`)
 - [ ] No duplicate entries (site wasn't already in the catalog)
 
 ## References
