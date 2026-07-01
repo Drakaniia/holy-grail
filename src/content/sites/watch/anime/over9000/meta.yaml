@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: Added Jun 1, 2026
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://over9000.stream
 docs: https://over9000.stream
-sourceCode: ""
+sourceCode: ''
 icon: over9000
 verified: false
 featured: false

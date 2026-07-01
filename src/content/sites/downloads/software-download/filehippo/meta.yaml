@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -24,7 +24,7 @@ website: >-
   https://filehippo.com/download_hp-usb-disk-storage-format-tool/post_download/?dt=internalDownload&installerType=riseInstaller
 docs: >-
   https://filehippo.com/download_hp-usb-disk-storage-format-tool/post_download/?dt=internalDownload&installerType=riseInstaller
-sourceCode: ""
+sourceCode: ''
 icon: filehippo
 verified: false
 featured: false

@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://yts.bz/browse-movies/0/all/all/0/downloads/0/all
 docs: https://yts.bz/browse-movies/0/all/all/0/downloads/0/all
-sourceCode: ""
+sourceCode: ''
 icon: yts
 verified: false
 featured: false

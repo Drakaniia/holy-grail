@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Desktop
 website: https://www.orchids.app
 docs: https://www.orchids.app
-sourceCode: ""
+sourceCode: ''
 icon: orchids
 verified: false
 featured: false

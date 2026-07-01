@@ -1,6 +1,6 @@
 slug: napkin
-name: "- Napkin AI"
-description: "- Napkin AI bookmarked for ai resources."
+name: '- Napkin AI'
+description: '- Napkin AI bookmarked for ai resources.'
 category: AI
 parentCategory: ai
 subcategory: null
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,18 +22,18 @@ website: >-
   https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDE0N2EyMzBlLTNjOGYtNDgzZS1iMzYwLTMzMDExNzExODJiOQ?tid=onboarding_gen_ai_1&ts=Prompt
 docs: >-
   https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDE0N2EyMzBlLTNjOGYtNDgzZS1iMzYwLTMzMDExNzExODJiOQ?tid=onboarding_gen_ai_1&ts=Prompt
-sourceCode: ""
+sourceCode: ''
 icon: napkin
 verified: false
 featured: false
 tags:
   - bookmark
   - ai
-atGlance: "- Napkin AI"
-fullDescription: "- Napkin AI is kept as an ai resource for AI-assisted workflows."
+atGlance: '- Napkin AI'
+fullDescription: '- Napkin AI is kept as an ai resource for AI-assisted workflows.'
 coreFeatures:
   - name: AI Workflow Support
-    description: "- Napkin AI is tracked as an ai resource for AI-assisted workflows."
+    description: '- Napkin AI is tracked as an ai resource for AI-assisted workflows.'
     icon: check
   - name: Direct Web Launch
     description: The live product is available from the saved website link.

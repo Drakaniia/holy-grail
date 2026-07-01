@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ website: >-
   https://glowupui.io/?utm_source=vibeui&utm_medium=referral&utm_campaign=cross_promo&utm_content=footer_banner
 docs: >-
   https://glowupui.io/?utm_source=vibeui&utm_medium=referral&utm_campaign=cross_promo&utm_content=footer_banner
-sourceCode: ""
+sourceCode: ''
 icon: glowupui
 verified: false
 featured: false

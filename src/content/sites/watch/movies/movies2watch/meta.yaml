@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: Added May 24, 2026
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://movies2watch.watch/home/
 docs: https://movies2watch.watch/home/
-sourceCode: ""
+sourceCode: ''
 icon: movies2watch
 verified: false
 featured: false

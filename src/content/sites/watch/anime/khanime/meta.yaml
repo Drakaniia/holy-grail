@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: Added Jun 15, 2026
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://khanime.co/series/
 docs: https://khanime.co/series/
-sourceCode: ""
+sourceCode: ''
 icon: khanime
 verified: false
 featured: false

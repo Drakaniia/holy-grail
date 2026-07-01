@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://junie.jetbrains.com/docs/junie-cli.html
 docs: https://junie.jetbrains.com/docs/junie-cli.html
-sourceCode: ""
+sourceCode: ''
 icon: junie-cli
 verified: true
 featured: false

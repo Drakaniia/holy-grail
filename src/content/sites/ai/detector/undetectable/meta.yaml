@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Cloud
 website: https://undetectable.ai/
 docs: https://undetectable.ai/
-sourceCode: ""
+sourceCode: ''
 icon: undetectable
 verified: false
 featured: false

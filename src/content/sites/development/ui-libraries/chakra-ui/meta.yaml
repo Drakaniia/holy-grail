@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: MIT
 lastCommit: 7 hours ago
 lastRelease: 11 days ago
-version: "@chakra-ui/codemod@3.36.0"
+version: '@chakra-ui/codemod@3.36.0'
 contributors: 803
 commitsThisYear: 197
 releases: 3597

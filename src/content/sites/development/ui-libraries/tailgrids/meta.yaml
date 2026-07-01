@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: MIT
 lastCommit: 20 hours ago
 lastRelease: 20 hours ago
-version: "@tailgrids/cli@1.4.2"
+version: '@tailgrids/cli@1.4.2'
 contributors: 10
 commitsThisYear: 567
 releases: 11

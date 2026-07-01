@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -22,7 +22,7 @@ deployment:
   - Self-hosted
 website: https://www.greptile.com/
 docs: https://www.greptile.com/docs/introduction
-sourceCode: ""
+sourceCode: ''
 icon: greptile
 verified: false
 featured: false

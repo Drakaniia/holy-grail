@@ -10,7 +10,7 @@ addedDaysAgo: 2
 license: Apache-2.0
 lastCommit: 20 minutes ago
 lastRelease: 1 day ago
-version: "@vercel/python-workers@0.0.25"
+version: '@vercel/python-workers@0.0.25'
 contributors: 432
 commitsThisYear: 1287
 releases: 4557

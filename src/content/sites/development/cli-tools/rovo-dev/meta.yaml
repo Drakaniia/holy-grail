@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Local CLI
 website: https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/
 docs: https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/
-sourceCode: ""
+sourceCode: ''
 icon: rovo-dev
 verified: true
 featured: false

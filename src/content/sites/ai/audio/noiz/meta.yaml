@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -21,7 +21,7 @@ deployment:
   - Cloud
 website: https://noiz.ai/
 docs: https://noiz.ai/
-sourceCode: ""
+sourceCode: ''
 icon: noiz
 verified: false
 featured: false

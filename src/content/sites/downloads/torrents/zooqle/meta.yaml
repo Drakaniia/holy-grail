@@ -1,6 +1,6 @@
 slug: zooqle
-name: "Start | Zooqle: Verified torrents"
-description: "Start | Zooqle: Verified torrents bookmarked for torrents resources."
+name: 'Start | Zooqle: Verified torrents'
+description: 'Start | Zooqle: Verified torrents bookmarked for torrents resources.'
 category: Torrents
 parentCategory: downloads
 subcategory: torrents
@@ -10,7 +10,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -20,7 +20,7 @@ deployment:
   - Cloud
 website: https://zooqle.io/
 docs: https://zooqle.io/
-sourceCode: ""
+sourceCode: ''
 icon: zooqle
 verified: false
 featured: false
@@ -28,11 +28,11 @@ tags:
   - bookmark
   - downloads
   - torrents
-atGlance: "Start | Zooqle: Verified torrents"
-fullDescription: "Start - Zooqle: Verified torrents is kept as a torrents source in the downloads collection."
+atGlance: 'Start | Zooqle: Verified torrents'
+fullDescription: 'Start - Zooqle: Verified torrents is kept as a torrents source in the downloads collection.'
 coreFeatures:
   - name: Download Source
-    description: "Start - Zooqle: Verified torrents is cataloged as a torrents bookmark."
+    description: 'Start - Zooqle: Verified torrents is cataloged as a torrents bookmark.'
     icon: check
   - name: Direct Web Launch
     description: Open the saved source directly from the catalog entry.

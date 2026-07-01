@@ -12,7 +12,7 @@ addedDaysAgo: 0
 license: Proprietary
 lastCommit: N/A
 lastRelease: N/A
-version: ""
+version: ''
 contributors: 0
 commitsThisYear: 0
 releases: 0
@@ -25,7 +25,7 @@ deployment:
   - Edge
 website: https://www.netlify.com/
 docs: https://docs.netlify.com/
-sourceCode: ""
+sourceCode: ''
 icon: netlify
 verified: false
 featured: false
