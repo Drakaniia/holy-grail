@@ -1,0 +1,80 @@
+name: 🐛 Bug Report
+description: Report a bug to help us improve the project
+title: "fix: <short description>"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide as much detail as possible so we can reproduce and fix it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "When I do X, Y happens instead of Z..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Exact steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen instead.
+      placeholder: "It should..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Logs / Console Output
+      description: Paste any relevant error logs, console output, or stack traces here.
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: What browser, OS, and version are you using?
+      placeholder: "e.g., Chrome 125, Windows 11"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - "Cosmetic — doesn't affect functionality"
+        - "Minor — works with a workaround"
+        - "Major — core feature broken"
+        - "Critical — app unusable"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have searched for existing bug reports before creating this one.
+          required: true
+        - label: I can consistently reproduce this bug.
+          required: true

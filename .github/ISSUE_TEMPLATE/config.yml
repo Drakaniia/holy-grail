@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/Drakaniia/holy-grail/discussions
+    about: Please use Discussions for open-ended questions, ideas, and community conversation.
+  - name: 📖 Documentation
+    url: https://github.com/Drakaniia/holy-grail#readme
+    about: Check the README before filing an issue.

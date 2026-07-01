@@ -1,0 +1,45 @@
+name: 💬 Other
+description: Something else on your mind — questions, ideas, discussions, or feedback
+title: ""
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Not a feature request or a bug? No problem. Drop whatever's on your mind here.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: What type of issue is this?
+      options:
+        - "Question / Help"
+        - "Discussion"
+        - "Feedback"
+        - "Documentation"
+        - "Refactor / Tech Debt"
+        - "Design / UI Polish"
+        - "Performance"
+        - "Security"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Details
+      description: Tell us what's on your mind.
+      placeholder: "I was thinking about..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any links, references, or supporting information.
+      placeholder: "Relevant links, screenshots, or related issues..."
+    validations:
+      required: false
