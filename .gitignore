@@ -49,3 +49,6 @@ supabase/.temp/
 .gemini/settings.json
 .claude/settings.local.json
 .pi/extensions/emdash-hook.ts
+.vibe/hooks.toml
+.vibe/config.toml
+.env.local
