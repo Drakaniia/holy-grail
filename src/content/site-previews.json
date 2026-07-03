@@ -72,6 +72,15 @@
     "height": 600,
     "bytes": 55084
   },
+  "ai-cli": {
+    "image": "/previews/ai-cli.webp",
+    "small": "/previews/ai-cli-sm.webp",
+    "sourceUrl": "https://ai-cli.dev/",
+    "capturedAt": "2026-07-03T01:25:50.036Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 14618
+  },
   "aider": {
     "image": "/previews/aider.webp",
     "small": "/previews/aider-sm.webp",
@@ -1517,6 +1526,15 @@
     "height": 600,
     "bytes": 21788
   },
+  "icones": {
+    "image": "/previews/icones.webp",
+    "small": "/previews/icones-sm.webp",
+    "sourceUrl": "https://icones.js.org/",
+    "capturedAt": "2026-07-03T01:19:19.324Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 30676
+  },
   "iconinspo": {
     "image": "/previews/iconinspo.webp",
     "small": "/previews/iconinspo-sm.webp",
@@ -1967,6 +1985,15 @@
     "height": 600,
     "bytes": 23776
   },
+  "majesticons": {
+    "image": "/previews/majesticons.webp",
+    "small": "/previews/majesticons-sm.webp",
+    "sourceUrl": "https://www.majesticons.com/",
+    "capturedAt": "2026-07-03T01:19:14.332Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 28816
+  },
   "manus": {
     "image": "/previews/manus.webp",
     "small": "/previews/manus-sm.webp",
@@ -2200,6 +2227,15 @@
     "width": 960,
     "height": 600,
     "bytes": 39224
+  },
+  "navbar-design": {
+    "image": "/previews/navbar-design.webp",
+    "small": "/previews/navbar-design-sm.webp",
+    "sourceUrl": "https://navbar.design/navbars",
+    "capturedAt": "2026-07-03T01:25:50.974Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 19614
   },
   "needmcp": {
     "image": "/previews/needmcp.webp",
@@ -2500,6 +2536,15 @@
     "height": 600,
     "bytes": 36258
   },
+  "pikaicons": {
+    "image": "/previews/pikaicons.webp",
+    "small": "/previews/pikaicons-sm.webp",
+    "sourceUrl": "https://pikaicons.com/",
+    "capturedAt": "2026-07-03T01:19:20.378Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27478
+  },
   "piratebay-proxy": {
     "image": "/previews/piratebay-proxy.webp",
     "small": "/previews/piratebay-proxy-sm.webp",
@@ -2526,6 +2571,15 @@
     "width": 960,
     "height": 600,
     "bytes": 17806
+  },
+  "pixelarticons": {
+    "image": "/previews/pixelarticons.webp",
+    "small": "/previews/pixelarticons-sm.webp",
+    "sourceUrl": "https://pixelarticons.com/",
+    "capturedAt": "2026-07-03T01:19:15.649Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 26198
   },
   "planetscale": {
     "image": "/previews/planetscale.webp",
