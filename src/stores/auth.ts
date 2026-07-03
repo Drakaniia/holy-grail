@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, shallowRef } from 'vue'
 import type { Session, User } from '@supabase/supabase-js'
+import posthog from 'posthog-js'
 import { hasSupabaseConfig, supabase } from '@/lib/supabase'
 import { getAuthRedirectOrigin } from '@/lib/publicUrl'
 import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
@@ -311,6 +312,12 @@ export const useAuthStore = defineStore('auth', () => {
 
       session.value = data.session
       initialized.value = true
+      if (data.session?.user) {
+        posthog.identify(data.session.user.id, { email: data.session.user.email })
+        posthog.capture('user_signed_in', {
+          method: data.session.user.app_metadata?.provider ?? 'oauth',
+        })
+      }
 
       return { handled: true, ok: true }
     } catch (error) {
@@ -372,6 +379,10 @@ export const useAuthStore = defineStore('auth', () => {
       }
 
       session.value = data.session
+      if (data.user) {
+        posthog.identify(data.user.id, { email: data.user.email })
+        posthog.capture('user_signed_in', { method: 'email' })
+      }
       return { ok: true }
     } catch (error) {
       const message = getAuthErrorMessage(error)
@@ -408,6 +419,13 @@ export const useAuthStore = defineStore('auth', () => {
       }
 
       session.value = data.session
+      if (data.user) {
+        posthog.identify(data.user.id, { email: data.user.email })
+        posthog.capture('user_signed_up', {
+          method: 'email',
+          needs_email_confirmation: !data.session,
+        })
+      }
 
       return {
         ok: true,
@@ -455,6 +473,7 @@ export const useAuthStore = defineStore('auth', () => {
         throw new Error(`${getProviderLabel(provider)} sign-in could not start.`)
       }
 
+      posthog.capture('user_signed_in_with_oauth', { provider })
       return { ok: true, message: `Redirecting to ${getProviderLabel(provider)}...` }
     } catch (error) {
       const message = getOAuthErrorMessage(error, provider)
@@ -509,6 +528,8 @@ export const useAuthStore = defineStore('auth', () => {
         throw error
       }
 
+      posthog.capture('user_signed_out')
+      posthog.reset()
       session.value = null
       return { ok: true }
     } catch (error) {
@@ -575,6 +596,11 @@ export const useAuthStore = defineStore('auth', () => {
         }
       }
 
+      posthog.capture('profile_updated', {
+        updated_fields: Object.keys(updates).filter(
+          (k) => updates[k as keyof typeof updates] !== undefined,
+        ),
+      })
       return { ok: true }
     } catch (error) {
       const message = getAuthErrorMessage(error)
@@ -624,6 +650,8 @@ export const useAuthStore = defineStore('auth', () => {
         throw new Error(data?.error || 'Account could not be deleted.')
       }
 
+      posthog.capture('user_account_deleted')
+      posthog.reset()
       session.value = null
       return { ok: true }
     } catch (error) {

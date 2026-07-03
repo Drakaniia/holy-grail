@@ -13,6 +13,7 @@ import {
 } from 'lucide-vue-next'
 import PublishReviewSummary from '@/components/publish/PublishReviewSummary.vue'
 import PublishStepIndicator from '@/components/publish/PublishStepIndicator.vue'
+import posthog from 'posthog-js'
 import { supabase } from '@/lib/supabase'
 import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
 import { useAuthStore } from '@/stores/auth'
@@ -209,11 +210,20 @@ function goNext() {
   stepTransitionName.value = 'publish-slide-forward'
 
   if (activeStep.value === 'source') {
+    posthog.capture('submission_step_completed', {
+      step: 'source',
+      resource_type: resourceType.value,
+    })
     activeStep.value = 'details'
     return
   }
 
   if (activeStep.value === 'details') {
+    posthog.capture('submission_step_completed', {
+      step: 'details',
+      resource_type: resourceType.value,
+      category: category.value,
+    })
     activeStep.value = 'review'
   }
 }
@@ -270,6 +280,11 @@ async function handleSubmit() {
     if (!data?.ok) throw new Error(data?.error || 'Submission failed. Please try again.')
 
     status.value = 'success'
+    posthog.capture('submission_submitted', {
+      resource_type: resourceType.value,
+      category: category.value,
+      is_authenticated: auth.isAuthenticated,
+    })
     toast.success('Submission queued', 'An admin will review it before it is added to the catalog.')
   } catch (err) {
     status.value = 'error'
@@ -277,6 +292,10 @@ async function handleSubmit() {
       err,
       'Submission failed. Please try again.',
     )
+    posthog.capture('submission_failed', {
+      resource_type: resourceType.value,
+      error_message: errorMessage.value,
+    })
   }
 }
 

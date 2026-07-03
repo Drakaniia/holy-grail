@@ -2,6 +2,7 @@
 import { computed, onMounted, shallowRef } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Bookmark, Loader2 } from 'lucide-vue-next'
+import posthog from 'posthog-js'
 import { useAuthStore } from '@/stores/auth'
 import { useBookmarksStore, type BookmarkResource } from '@/stores/bookmarks'
 
@@ -50,8 +51,14 @@ async function handleClick() {
   }
 
   saving.value = true
+  const wasBookmarked = isSaved.value
   try {
     await bookmarks.toggleBookmark(props.resource)
+    const eventName = wasBookmarked ? 'resource_unbookmarked' : 'resource_bookmarked'
+    posthog.capture(eventName, {
+      resource_type: props.resource.type,
+      resource_slug: props.resource.slug,
+    })
   } finally {
     saving.value = false
   }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, shallowRef } from 'vue'
 import { AlertCircle, Check, CheckCircle2, ExternalLink, Trash2, X } from 'lucide-vue-next'
+import posthog from 'posthog-js'
 import AdminSubmissionSkeleton from '@/components/admin/AdminSubmissionSkeleton.vue'
 import { useAdminStore, type SubmissionStatus } from '@/stores/admin'
 
@@ -46,10 +47,12 @@ const displaySubmissions = computed(() => {
 
 async function approve(id: string) {
   await admin.updateSubmissionStatus(id, 'approved')
+  posthog.capture('admin_submission_approved', { submission_id: id })
 }
 
 async function reject(id: string) {
   await admin.updateSubmissionStatus(id, 'rejected')
+  posthog.capture('admin_submission_rejected', { submission_id: id })
 }
 
 async function remove(id: string) {
