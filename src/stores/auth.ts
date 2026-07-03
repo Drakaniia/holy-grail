@@ -355,6 +355,10 @@ export const useAuthStore = defineStore('auth', () => {
 
     session.value = data.session
 
+    if (data.session?.user) {
+      posthog.identify(data.session.user.id, { email: data.session.user.email })
+    }
+
     initialized.value = true
     initializing.value = false
   }
