@@ -6438,6 +6438,112 @@
     ]
   },
   {
+    "slug": "icones",
+    "name": "Icônes",
+    "description": "Open-source icon explorer and browser powered by Iconify — fuzzy search across thousands of icon sets.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 6200,
+    "watchers": 70,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "1 week ago",
+    "lastRelease": "3 months ago",
+    "version": "v0.6.0",
+    "contributors": 25,
+    "commitsThisYear": 40,
+    "releases": 20,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://icones.js.org/",
+    "docs": "https://icones.js.org/",
+    "sourceCode": "https://github.com/antfu/icones",
+    "icon": "icones",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "iconify",
+      "open-source"
+    ],
+    "atGlance": "Instant fuzzy-search icon explorer for thousands of open-source icon sets.",
+    "fullDescription": "Icônes is an open-source icon explorer and browser created by Anthony Fu. Powered by the Iconify framework, it provides instant fuzzy searching across thousands of icons from numerous open-source icon sets including Material Design Icons, Font Awesome, Phosphor, Carbon, and many more. Users can browse individual collections, search across all sets, collect favorites, and export selected icons as SVG sprites or icon fonts — all in the browser.",
+    "coreFeatures": [
+      {
+        "name": "Cross-Set Search",
+        "description": "Instant fuzzy search across thousands of icons from dozens of open-source collections.",
+        "icon": "search"
+      },
+      {
+        "name": "Powered by Iconify",
+        "description": "Leverages Iconify's unified syntax for browsing and using icons from any library.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser-Based Export",
+        "description": "Pack selected SVGs into icon fonts or download individually without any install.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Collection Management",
+        "description": "Browse, favorite, and organize icons from different sets in one place.",
+        "icon": "layers"
+      },
+      {
+        "name": "Framework Integration",
+        "description": "Works with unplugin-icons for on-demand icon components in Vue, React, and Svelte.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "MIT-licensed project with active community contributions on GitHub.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.",
+        "stars": 23613,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/"
+      },
+      {
+        "slug": "nucleoapp",
+        "name": "Nucleo",
+        "description": "Premium icon library with 40,000+ customizable icons.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nucleoapp.com/"
+      },
+      {
+        "slug": "thesvg",
+        "name": "theSVG",
+        "description": "5,652+ free brand SVG icons for developers and designers.",
+        "stars": 2043,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://thesvg.org/"
+      }
+    ]
+  },
+  {
     "slug": "autoskills",
     "name": "autoskills - Auto-install best AI skills for your project",
     "description": "autoskills - Auto-install best AI skills for your project bookmarked for tooling resources.",
@@ -6731,6 +6837,217 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "ai-cli",
+    "name": "AI CLI",
+    "description": "Tiny agent-native CLI for generating text, images, video, and audio from the terminal using any AI model.",
+    "category": "AI CLI",
+    "parentCategory": "development",
+    "subcategory": "cli-tools",
+    "stars": 5200,
+    "watchers": 80,
+    "addedDaysAgo": 0,
+    "license": "Apache-2.0",
+    "lastCommit": "1 week ago",
+    "lastRelease": "2 weeks ago",
+    "version": "v0.5.0",
+    "contributors": 15,
+    "commitsThisYear": 120,
+    "releases": 25,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://ai-cli.dev/",
+    "docs": "https://ai-cli.dev/docs",
+    "sourceCode": "https://github.com/vercel-labs/ai-cli",
+    "icon": "ai-cli",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "terminal",
+      "generative-ai",
+      "vercel"
+    ],
+    "atGlance": "Vercel Labs CLI for generating text, images, video, and audio from any model.",
+    "fullDescription": "AI CLI is an open-source, agent-native CLI tool by Vercel Labs for generating text, images, video, and audio directly from the terminal. Powered by the Vercel AI SDK and AI Gateway, it provides unified access to hundreds of AI models through dead-simple commands like ai text, ai image, ai video, and ai audio. Supports stdin/stdout piping, inline previews (Kitty protocol), multi-model comparison, and JSON metadata output for agentic workflows.",
+    "coreFeatures": [
+      {
+        "name": "Multi-Modal Generation",
+        "description": "Generate text, images, video, and audio from a single CLI tool.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Unified Model Access",
+        "description": "Hundreds of models via Vercel AI SDK and AI Gateway with a single interface.",
+        "icon": "check"
+      },
+      {
+        "name": "Stdin/Stdout Piping",
+        "description": "Pipe inputs and outputs for composable shell workflows and agent integration.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Inline Previews",
+        "description": "View images, video frames, and audio waveforms directly in the terminal.",
+        "icon": "check"
+      },
+      {
+        "name": "Multi-Model Comparison",
+        "description": "Run the same prompt across multiple models simultaneously.",
+        "icon": "layers"
+      },
+      {
+        "name": "JSON Metadata Mode",
+        "description": "Predictable JSON output designed for agentic and scripted workflows.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "claude-code",
+        "name": "Claude Code",
+        "description": "AI-assisted coding from the terminal by Anthropic.",
+        "stars": 133648,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://docs.anthropic.com/claude/docs/claude-code"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "AI coding assistant for the terminal with natural language commands.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://codebuff.com/"
+      },
+      {
+        "slug": "gemini-cli",
+        "name": "Gemini CLI",
+        "description": "Google's AI-powered CLI assistant for coding and shell tasks.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://google-gemini.github.io/gemini-cli/"
+      }
+    ]
+  },
+  {
+    "slug": "pixelarticons",
+    "name": "Pixelarticons",
+    "description": "Hand-crafted pixel art SVG icons — 4,400+ icons in Base, Sharp, Glyph, and Solid styles.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 4950,
+    "watchers": 55,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "2 months ago",
+    "lastRelease": "6 months ago",
+    "version": "v1.9.0",
+    "contributors": 3,
+    "commitsThisYear": 12,
+    "releases": 15,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://pixelarticons.com/",
+    "docs": "https://pixelarticons.com/",
+    "sourceCode": "https://github.com/halfmage/pixelarticons",
+    "icon": "pixelarticons",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "pixel-art",
+      "retro"
+    ],
+    "atGlance": "Hand-crafted pixel art SVG icons for modern UI.",
+    "fullDescription": "Pixelarticons is a hand-crafted pixel art icon library designed for modern interfaces. Built on a strict 24×24 pixel grid, it offers over 4,400 icons across four stylistic variations — Base, Sharp, Glyph, and Solid. A free MIT-licensed subset (880 icons) is available via npm, with the full set available as a one-time Pro purchase. Created by designer and frontend developer Gerrit Halfmann.",
+    "coreFeatures": [
+      {
+        "name": "Pixel Art Style",
+        "description": "Hand-crafted pixel art aesthetic optimized for modern UI rather than gaming.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Four Style Variations",
+        "description": "Base outlines, Sharp angular, Glyph detailed, and Solid filled variants.",
+        "icon": "layers"
+      },
+      {
+        "name": "SVG on 24×24 Grid",
+        "description": "All icons delivered as crisp SVG on a strict 24×24 pixel grid.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "npm Package",
+        "description": "Free 880-icon subset available via npm with framework support.",
+        "icon": "package"
+      },
+      {
+        "name": "One-Time Purchase",
+        "description": "Full 4,400+ icon set with a one-time Pro license and lifetime updates.",
+        "icon": "check"
+      },
+      {
+        "name": "Framework Integrations",
+        "description": "Usable with React, Vue, Svelte, and direct SVG export.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.",
+        "stars": 23613,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams with free icons.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
       }
     ]
   },
@@ -25339,6 +25656,112 @@
     ]
   },
   {
+    "slug": "majesticons",
+    "name": "Majesticons",
+    "description": "Premium icon library with 11,000+ icons in Line, Duotone, and Solid styles with Figma integration.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Figma"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.majesticons.com/",
+    "docs": "https://www.majesticons.com/",
+    "sourceCode": "",
+    "icon": "majesticons",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "figma"
+    ],
+    "atGlance": "Premium icon library for designers and developers.",
+    "fullDescription": "Majesticons is a professional icon library offering over 11,000 SVG icons organized into 54 categories. Icons are available in three distinct visual styles — Line, Duotone, and Solid — and are natively built for Figma with one-click style switching. The library uses a one-time purchase model with lifetime access, with tiers for individuals, teams, and enterprises.",
+    "coreFeatures": [
+      {
+        "name": "11,000+ Icons",
+        "description": "Extensive library with 54 categories covering UI, development, finance, social, and more.",
+        "icon": "layers"
+      },
+      {
+        "name": "Three Visual Styles",
+        "description": "Line, Duotone, and Solid styles for design versatility.",
+        "icon": "check"
+      },
+      {
+        "name": "Figma Native",
+        "description": "Built-in Figma component with variants for one-click style switching.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "SVG Export",
+        "description": "Download or copy icons as SVG for design and development use.",
+        "icon": "check"
+      },
+      {
+        "name": "One-Time Purchase",
+        "description": "Lifetime access with no subscriptions, including all future updates.",
+        "icon": "check"
+      },
+      {
+        "name": "Team & Enterprise Tiers",
+        "description": "Multi-seat licenses with priority support for teams.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "nucleoapp",
+        "name": "Nucleo",
+        "description": "Premium icon library with 40,000+ customizable icons.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nucleoapp.com/"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
+      },
+      {
+        "slug": "thesvg",
+        "name": "theSVG",
+        "description": "5,652+ free brand SVG icons for developers and designers.",
+        "stars": 2043,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://thesvg.org/"
+      }
+    ]
+  },
+  {
     "slug": "mgc",
     "name": "MGC Icon System Pro - Carefully crafted icon solution for you",
     "description": "MGC Icon System Pro - Carefully crafted icon solution for you bookmarked for icons/svg resources.",
@@ -25533,6 +25956,112 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://allsvgicons.com/blog/best-free-svg-icon-packs-for-product-ui/"
+      }
+    ]
+  },
+  {
+    "slug": "pikaicons",
+    "name": "Pikaicons",
+    "description": "Premium icon library with 5,000+ icons in 5 cohesive styles — stroke, solid, duo-stroke, duo-solid, and contrast.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Figma"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://pikaicons.com/",
+    "docs": "https://pikaicons.com/",
+    "sourceCode": "",
+    "icon": "pikaicons",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "figma"
+    ],
+    "atGlance": "Premium drawn icon system with 5 distinct styles and lifetime access.",
+    "fullDescription": "Pikaicons is a premium icon library by designer Ashish Kashyap, offering over 5,000 hand-drawn icons across 27 categories in five cohesive styles — Stroke, Solid, Duo-Stroke, Duo-Solid, and Contrast. Each icon is designed as part of a unified family, ensuring visual consistency across all styles. Available as SVG, Figma variants, and framework-specific packages for React, Vue, React Native, and SolidJS. One-time purchase with lifetime updates.",
+    "coreFeatures": [
+      {
+        "name": "5,000+ Icons",
+        "description": "Drawn icons across 27 categories in five consistent visual styles.",
+        "icon": "layers"
+      },
+      {
+        "name": "Five Cohesive Styles",
+        "description": "Stroke, Solid, Duo-Stroke, Duo-Solid, and Contrast — all designed as a unified family.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Figma Variants",
+        "description": "Native Figma components with one-click style switching via variants.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Framework Support",
+        "description": "Code-ready packages for React, Vue, React Native, and SolidJS.",
+        "icon": "check"
+      },
+      {
+        "name": "One-Time Purchase",
+        "description": "Lifetime access with no subscriptions, including all future updates.",
+        "icon": "check"
+      },
+      {
+        "name": "Custom Icon Requests",
+        "description": "Paid users can request custom icons from the creator.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "nucleoapp",
+        "name": "Nucleo",
+        "description": "Premium icon library with 40,000+ customizable icons.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nucleoapp.com/"
+      },
+      {
+        "slug": "majesticons",
+        "name": "Majesticons",
+        "description": "Premium icon library with 11,000+ icons in three styles with Figma integration.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.majesticons.com/"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
       }
     ]
   },
@@ -26605,6 +27134,111 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://craftwork.design/curated/websites/"
+      }
+    ]
+  },
+  {
+    "slug": "navbar-design",
+    "name": "Navbar Design Inspiration",
+    "description": "Curated gallery of unique navigation bar designs — dropdown, mega, full screen, sticky, and mobile menus.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://navbar.design/navbars",
+    "docs": "https://navbar.design/navbars",
+    "sourceCode": "",
+    "icon": "navbar-design",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "navigation",
+      "ui",
+      "ux"
+    ],
+    "atGlance": "Curated design inspiration gallery for website navigation bars.",
+    "fullDescription": "Navbar.design is a curated design inspiration gallery focused exclusively on website navigation bars and menu designs. It features a handpicked collection of unique navbars categorized by style and behavior — Dropdown, Mega, Full Screen, Mobile, Sticky, Side Drawer, and Static. Each entry includes screenshots and links to the original site, making it a valuable reference for designers and developers seeking navigation UI inspiration.",
+    "coreFeatures": [
+      {
+        "name": "Curated Navbar Gallery",
+        "description": "Handpicked collection of unique navigation designs from across the web.",
+        "icon": "check"
+      },
+      {
+        "name": "Category Filters",
+        "description": "Browse by style — Dropdown, Mega, Full Screen, Sticky, Mobile, and more.",
+        "icon": "layers"
+      },
+      {
+        "name": "Visual Reference",
+        "description": "Each entry includes screenshots with direct links to the original site.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the design inspiration subcategory.",
+        "icon": "check"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "godly",
+        "name": "Godly",
+        "description": "Astronomically good web design inspiration gallery.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://godly.website/"
+      },
+      {
+        "slug": "siteinspire",
+        "name": "Siteinspire",
+        "description": "Best website design inspiration gallery.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.siteinspire.com/"
+      },
+      {
+        "slug": "landing",
+        "name": "Landing",
+        "description": "Curated landing page design inspiration.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://landing.xyz/"
       }
     ]
   },

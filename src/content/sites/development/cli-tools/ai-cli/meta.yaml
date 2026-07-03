@@ -1,0 +1,82 @@
+slug: ai-cli
+name: AI CLI
+description: Tiny agent-native CLI for generating text, images, video, and audio from the terminal using any AI model.
+category: AI CLI
+parentCategory: development
+subcategory: cli-tools
+stars: 5200
+watchers: 80
+addedDaysAgo: 0
+license: Apache-2.0
+lastCommit: 1 week ago
+lastRelease: 2 weeks ago
+version: v0.5.0
+contributors: 15
+commitsThisYear: 120
+releases: 25
+platforms:
+  - CLI
+deployment:
+  - Local CLI
+website: https://ai-cli.dev/
+docs: https://ai-cli.dev/docs
+sourceCode: https://github.com/vercel-labs/ai-cli
+icon: ai-cli
+verified: true
+featured: false
+tags:
+  - cli-tools
+  - ai
+  - cli
+  - terminal
+  - generative-ai
+  - vercel
+atGlance: Vercel Labs CLI for generating text, images, video, and audio from any model.
+fullDescription: >-
+  AI CLI is an open-source, agent-native CLI tool by Vercel Labs for generating text, images,
+  video, and audio directly from the terminal. Powered by the Vercel AI SDK and AI Gateway, it
+  provides unified access to hundreds of AI models through dead-simple commands like ai text, ai
+  image, ai video, and ai audio. Supports stdin/stdout piping, inline previews (Kitty protocol),
+  multi-model comparison, and JSON metadata output for agentic workflows.
+coreFeatures:
+  - name: Multi-Modal Generation
+    description: Generate text, images, video, and audio from a single CLI tool.
+    icon: sparkles
+  - name: Unified Model Access
+    description: Hundreds of models via Vercel AI SDK and AI Gateway with a single interface.
+    icon: check
+  - name: Stdin/Stdout Piping
+    description: Pipe inputs and outputs for composable shell workflows and agent integration.
+    icon: check
+additionalFeatures:
+  - name: Inline Previews
+    description: View images, video frames, and audio waveforms directly in the terminal.
+    icon: check
+  - name: Multi-Model Comparison
+    description: Run the same prompt across multiple models simultaneously.
+    icon: layers
+  - name: JSON Metadata Mode
+    description: Predictable JSON output designed for agentic and scripted workflows.
+    icon: check
+similarTools:
+  - slug: claude-code
+    name: Claude Code
+    description: AI-assisted coding from the terminal by Anthropic.
+    stars: 133648
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.anthropic.com/claude/docs/claude-code
+  - slug: codebuff
+    name: Codebuff
+    description: AI coding assistant for the terminal with natural language commands.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://codebuff.com/
+  - slug: gemini-cli
+    name: Gemini CLI
+    description: Google's AI-powered CLI assistant for coding and shell tasks.
+    stars: 0
+    addedDaysAgo: 0
+    verified: true
+    website: https://google-gemini.github.io/gemini-cli/

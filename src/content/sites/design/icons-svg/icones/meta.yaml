@@ -1,0 +1,83 @@
+slug: icones
+name: Icônes
+description: Open-source icon explorer and browser powered by Iconify — fuzzy search across thousands of icon sets.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 6200
+watchers: 70
+addedDaysAgo: 0
+license: MIT
+lastCommit: 1 week ago
+lastRelease: 3 months ago
+version: v0.6.0
+contributors: 25
+commitsThisYear: 40
+releases: 20
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://icones.js.org/
+docs: https://icones.js.org/
+sourceCode: https://github.com/antfu/icones
+icon: icones
+verified: true
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - iconify
+  - open-source
+atGlance: Instant fuzzy-search icon explorer for thousands of open-source icon sets.
+fullDescription: >-
+  Icônes is an open-source icon explorer and browser created by Anthony Fu. Powered by the Iconify
+  framework, it provides instant fuzzy searching across thousands of icons from numerous open-source
+  icon sets including Material Design Icons, Font Awesome, Phosphor, Carbon, and many more. Users
+  can browse individual collections, search across all sets, collect favorites, and export selected
+  icons as SVG sprites or icon fonts — all in the browser.
+coreFeatures:
+  - name: Cross-Set Search
+    description: Instant fuzzy search across thousands of icons from dozens of open-source collections.
+    icon: search
+  - name: Powered by Iconify
+    description: Leverages Iconify's unified syntax for browsing and using icons from any library.
+    icon: check
+  - name: Browser-Based Export
+    description: Pack selected SVGs into icon fonts or download individually without any install.
+    icon: check
+additionalFeatures:
+  - name: Collection Management
+    description: Browse, favorite, and organize icons from different sets in one place.
+    icon: layers
+  - name: Framework Integration
+    description: Works with unplugin-icons for on-demand icon components in Vue, React, and Svelte.
+    icon: check
+  - name: Open Source
+    description: MIT-licensed project with active community contributions on GitHub.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.
+    stars: 23613
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/
+  - slug: nucleoapp
+    name: Nucleo
+    description: Premium icon library with 40,000+ customizable icons.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://nucleoapp.com/
+  - slug: thesvg
+    name: theSVG
+    description: 5,652+ free brand SVG icons for developers and designers.
+    stars: 2043
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/

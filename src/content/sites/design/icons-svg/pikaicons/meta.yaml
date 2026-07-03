@@ -1,0 +1,83 @@
+slug: pikaicons
+name: Pikaicons
+description: Premium icon library with 5,000+ icons in 5 cohesive styles — stroke, solid, duo-stroke, duo-solid, and contrast.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Figma
+deployment:
+  - Cloud
+website: https://pikaicons.com/
+docs: https://pikaicons.com/
+sourceCode: ''
+icon: pikaicons
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - figma
+atGlance: Premium drawn icon system with 5 distinct styles and lifetime access.
+fullDescription: >-
+  Pikaicons is a premium icon library by designer Ashish Kashyap, offering over 5,000 hand-drawn
+  icons across 27 categories in five cohesive styles — Stroke, Solid, Duo-Stroke, Duo-Solid, and
+  Contrast. Each icon is designed as part of a unified family, ensuring visual consistency across
+  all styles. Available as SVG, Figma variants, and framework-specific packages for React, Vue,
+  React Native, and SolidJS. One-time purchase with lifetime updates.
+coreFeatures:
+  - name: 5,000+ Icons
+    description: Drawn icons across 27 categories in five consistent visual styles.
+    icon: layers
+  - name: Five Cohesive Styles
+    description: Stroke, Solid, Duo-Stroke, Duo-Solid, and Contrast — all designed as a unified family.
+    icon: sparkles
+  - name: Figma Variants
+    description: Native Figma components with one-click style switching via variants.
+    icon: check
+additionalFeatures:
+  - name: Framework Support
+    description: Code-ready packages for React, Vue, React Native, and SolidJS.
+    icon: check
+  - name: One-Time Purchase
+    description: Lifetime access with no subscriptions, including all future updates.
+    icon: check
+  - name: Custom Icon Requests
+    description: Paid users can request custom icons from the creator.
+    icon: check
+similarTools:
+  - slug: nucleoapp
+    name: Nucleo
+    description: Premium icon library with 40,000+ customizable icons.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://nucleoapp.com/
+  - slug: majesticons
+    name: Majesticons
+    description: Premium icon library with 11,000+ icons in three styles with Figma integration.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.majesticons.com/
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/

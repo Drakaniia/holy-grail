@@ -1,0 +1,82 @@
+slug: navbar-design
+name: Navbar Design Inspiration
+description: Curated gallery of unique navigation bar designs — dropdown, mega, full screen, sticky, and mobile menus.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://navbar.design/navbars
+docs: https://navbar.design/navbars
+sourceCode: ''
+icon: navbar-design
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - navigation
+  - ui
+  - ux
+atGlance: Curated design inspiration gallery for website navigation bars.
+fullDescription: >-
+  Navbar.design is a curated design inspiration gallery focused exclusively on website navigation
+  bars and menu designs. It features a handpicked collection of unique navbars categorized by
+  style and behavior — Dropdown, Mega, Full Screen, Mobile, Sticky, Side Drawer, and Static.
+  Each entry includes screenshots and links to the original site, making it a valuable reference
+  for designers and developers seeking navigation UI inspiration.
+coreFeatures:
+  - name: Curated Navbar Gallery
+    description: Handpicked collection of unique navigation designs from across the web.
+    icon: check
+  - name: Category Filters
+    description: Browse by style — Dropdown, Mega, Full Screen, Sticky, Mobile, and more.
+    icon: layers
+  - name: Visual Reference
+    description: Each entry includes screenshots with direct links to the original site.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the design inspiration subcategory.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: godly
+    name: Godly
+    description: Astronomically good web design inspiration gallery.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://godly.website/
+  - slug: siteinspire
+    name: Siteinspire
+    description: Best website design inspiration gallery.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
+  - slug: landing
+    name: Landing
+    description: Curated landing page design inspiration.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://landing.xyz/

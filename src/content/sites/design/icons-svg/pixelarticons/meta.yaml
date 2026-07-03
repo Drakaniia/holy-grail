@@ -1,0 +1,83 @@
+slug: pixelarticons
+name: Pixelarticons
+description: Hand-crafted pixel art SVG icons — 4,400+ icons in Base, Sharp, Glyph, and Solid styles.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 4950
+watchers: 55
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: 2 months ago
+lastRelease: 6 months ago
+version: v1.9.0
+contributors: 3
+commitsThisYear: 12
+releases: 15
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://pixelarticons.com/
+docs: https://pixelarticons.com/
+sourceCode: https://github.com/halfmage/pixelarticons
+icon: pixelarticons
+verified: true
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - pixel-art
+  - retro
+atGlance: Hand-crafted pixel art SVG icons for modern UI.
+fullDescription: >-
+  Pixelarticons is a hand-crafted pixel art icon library designed for modern interfaces. Built on a
+  strict 24×24 pixel grid, it offers over 4,400 icons across four stylistic variations — Base,
+  Sharp, Glyph, and Solid. A free MIT-licensed subset (880 icons) is available via npm, with the
+  full set available as a one-time Pro purchase. Created by designer and frontend developer Gerrit
+  Halfmann.
+coreFeatures:
+  - name: Pixel Art Style
+    description: Hand-crafted pixel art aesthetic optimized for modern UI rather than gaming.
+    icon: sparkles
+  - name: Four Style Variations
+    description: Base outlines, Sharp angular, Glyph detailed, and Solid filled variants.
+    icon: layers
+  - name: SVG on 24×24 Grid
+    description: All icons delivered as crisp SVG on a strict 24×24 pixel grid.
+    icon: check
+additionalFeatures:
+  - name: npm Package
+    description: Free 880-icon subset available via npm with framework support.
+    icon: package
+  - name: One-Time Purchase
+    description: Full 4,400+ icon set with a one-time Pro license and lifetime updates.
+    icon: check
+  - name: Framework Integrations
+    description: Usable with React, Vue, Svelte, and direct SVG export.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.
+    stars: 23613
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams with free icons.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/

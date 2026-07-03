@@ -1,0 +1,82 @@
+slug: majesticons
+name: Majesticons
+description: Premium icon library with 11,000+ icons in Line, Duotone, and Solid styles with Figma integration.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Figma
+deployment:
+  - Cloud
+website: https://www.majesticons.com/
+docs: https://www.majesticons.com/
+sourceCode: ''
+icon: majesticons
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - figma
+atGlance: Premium icon library for designers and developers.
+fullDescription: >-
+  Majesticons is a professional icon library offering over 11,000 SVG icons organized into 54
+  categories. Icons are available in three distinct visual styles — Line, Duotone, and Solid — and
+  are natively built for Figma with one-click style switching. The library uses a one-time purchase
+  model with lifetime access, with tiers for individuals, teams, and enterprises.
+coreFeatures:
+  - name: 11,000+ Icons
+    description: Extensive library with 54 categories covering UI, development, finance, social, and more.
+    icon: layers
+  - name: Three Visual Styles
+    description: Line, Duotone, and Solid styles for design versatility.
+    icon: check
+  - name: Figma Native
+    description: Built-in Figma component with variants for one-click style switching.
+    icon: check
+additionalFeatures:
+  - name: SVG Export
+    description: Download or copy icons as SVG for design and development use.
+    icon: check
+  - name: One-Time Purchase
+    description: Lifetime access with no subscriptions, including all future updates.
+    icon: check
+  - name: Team & Enterprise Tiers
+    description: Multi-seat licenses with priority support for teams.
+    icon: check
+similarTools:
+  - slug: nucleoapp
+    name: Nucleo
+    description: Premium icon library with 40,000+ customizable icons.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://nucleoapp.com/
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/
+  - slug: thesvg
+    name: theSVG
+    description: 5,652+ free brand SVG icons for developers and designers.
+    stars: 2043
+    addedDaysAgo: 0
+    verified: true
+    website: https://thesvg.org/
