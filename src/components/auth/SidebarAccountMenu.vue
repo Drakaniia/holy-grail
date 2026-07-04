@@ -21,6 +21,7 @@ import { useBookmarksStore } from '@/stores/bookmarks'
 import { useAdminStore } from '@/stores/admin'
 import { useToastStore } from '@/stores/toast'
 import UserAvatar from '@/components/auth/UserAvatar.vue'
+import holyGrailLogo from '@/assets/holy-grail.png'
 
 const GITHUB_REPO_URL = 'https://github.com/Drakaniia/holy-grail'
 
@@ -131,15 +132,7 @@ async function handleSignOut() {
       aria-label="Open Holy Grail account menu"
       @click="toggleMenu"
     >
-      <span
-        class="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-gray-800 bg-[#1f1f1f] text-white"
-      >
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path
-            d="M13 3L16.29 6.29L17.29 5.29L18.71 6.71L17.71 7.71L21 11V3H13ZM3 3V21H11V17.71L7.71 21H3ZM5 5L11 11V5H5ZM13 13V18L16.29 14.71L17.29 15.71L18.71 14.29L17.71 13.29L21 10V21H13V13Z"
-          />
-        </svg>
-      </span>
+      <img :src="holyGrailLogo" alt="" class="h-7 w-7 shrink-0 rounded" />
       <span class="min-w-0 flex-1">
         <span class="block truncate text-sm font-bold uppercase tracking-tight text-white">
           Holy Grail
@@ -210,7 +203,7 @@ async function handleSignOut() {
           </button>
 
           <div
-            class="account-help-submenu absolute left-[calc(100%-0.125rem)] top-0 z-[100] w-56 rounded-lg border border-gray-800 bg-[#1f1f1f] p-2 shadow-2xl shadow-[#1f1f1f]/60"
+            class="account-help-submenu absolute right-0 top-0 z-[100] w-56 rounded-lg border border-gray-800 bg-[#1f1f1f] p-2 shadow-2xl shadow-[#1f1f1f]/60"
             role="menu"
             aria-label="Help"
           >
