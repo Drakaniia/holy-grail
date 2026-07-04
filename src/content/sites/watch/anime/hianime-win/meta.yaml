@@ -1,0 +1,69 @@
+slug: hianime-win
+name: HiAnime Win
+description: Anime watch source bookmark for quick launch.
+category: Anime
+parentCategory: watch
+subcategory: anime
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: Added Jul 4, 2026
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://hianime.win/home
+docs: https://hianime.win/home
+sourceCode: ''
+icon: hianime-win
+verified: false
+featured: false
+tags:
+  - bookmark
+  - watch
+  - anime
+  - streaming
+atGlance: Anime watch bookmark.
+fullDescription: HiAnime Win is kept as an anime watch source in the Watch collection.
+coreFeatures:
+  - name: Watch Source
+    description: Cataloged as a saved anime watch bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Opens the saved watch source directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Watch Collection
+    description: Grouped under Watch for movie and anime sources.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged for watch, anime, and streaming search.
+    icon: check
+similarTools:
+  - slug: hianime-ad
+    name: HiAnime AD
+    description: Anime watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://hianime.ad/home
+  - slug: animewave
+    name: AnimeWave
+    description: Anime watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://animewave.to/home
+  - slug: khanime
+    name: KHiAnime
+    description: Anime watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://khanime.page/

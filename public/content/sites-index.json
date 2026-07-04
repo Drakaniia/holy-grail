@@ -37931,6 +37931,103 @@
     ]
   },
   {
+    "slug": "yify",
+    "name": "YIFY",
+    "description": "Torrent download source bookmark for quick launch.",
+    "category": "Torrents",
+    "parentCategory": "downloads",
+    "subcategory": "torrents",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Jul 4, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://yify.co/home/",
+    "docs": "https://yify.co/home/",
+    "sourceCode": "",
+    "icon": "yify",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "torrents"
+    ],
+    "atGlance": "Torrent download bookmark.",
+    "fullDescription": "YIFY is kept as a torrents source in the downloads collection.",
+    "coreFeatures": [
+      {
+        "name": "Download Source",
+        "description": "YIFY is cataloged as a torrents bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Grouped by Type",
+        "description": "Sorted by games, VFX, software, torrents, or movies.",
+        "icon": "check"
+      },
+      {
+        "name": "Imported Bookmark",
+        "description": "Preserves the saved browser bookmark link.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged under the downloads collection for search and filtering.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "yts",
+        "name": "The Official Home of YIFY Movies Torrent Download - YTS",
+        "description": "The Official Home of YIFY Movies Torrent Download - YTS bookmarked for torrents resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://yts.mx/"
+      },
+      {
+        "slug": "1337x",
+        "name": "Torrent Search Engine | 1337x.to",
+        "description": "Torrent Search Engine | 1337x.to bookmarked for torrents resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://1337x.to/"
+      },
+      {
+        "slug": "torrentgalaxy",
+        "name": "Download Latest Top Torrents by Subcategories torrentGalaxy",
+        "description": "Download Latest Top Torrents by Subcategories torrentGalaxy bookmarked for torrents resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://torrentgalaxy.one/"
+      }
+    ]
+  },
+  {
     "slug": "yts",
     "name": "The Official Home of YIFY Movies Torrent Download - YTS",
     "description": "The Official Home of YIFY Movies Torrent Download - YTS bookmarked for torrents resources.",
@@ -39481,6 +39578,99 @@
     ]
   },
   {
+    "slug": "hianime-win",
+    "name": "HiAnime Win",
+    "description": "Anime watch source bookmark for quick launch.",
+    "category": "Anime",
+    "parentCategory": "watch",
+    "subcategory": "anime",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Jul 4, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://hianime.win/home",
+    "docs": "https://hianime.win/home",
+    "sourceCode": "",
+    "icon": "hianime-win",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "anime",
+      "streaming"
+    ],
+    "atGlance": "Anime watch bookmark.",
+    "fullDescription": "HiAnime Win is kept as an anime watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved anime watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, anime, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "hianime-ad",
+        "name": "HiAnime AD",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.ad/home"
+      },
+      {
+        "slug": "animewave",
+        "name": "AnimeWave",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://animewave.to/home"
+      },
+      {
+        "slug": "khanime",
+        "name": "KHiAnime",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://khanime.page/"
+      }
+    ]
+  },
+  {
     "slug": "khanime",
     "name": "KHAnime",
     "description": "Anime watch source bookmark for quick launch.",
@@ -39565,6 +39755,99 @@
     ]
   },
   {
+    "slug": "miruro",
+    "name": "Miruro",
+    "description": "Anime watch source bookmark for quick launch.",
+    "category": "Anime",
+    "parentCategory": "watch",
+    "subcategory": "anime",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Jul 4, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://miruro.ro/",
+    "docs": "https://miruro.ro/",
+    "sourceCode": "",
+    "icon": "miruro",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "anime",
+      "streaming"
+    ],
+    "atGlance": "Anime watch bookmark.",
+    "fullDescription": "Miruro is kept as an anime watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved anime watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, anime, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "animewave",
+        "name": "AnimeWave",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://animewave.to/home"
+      },
+      {
+        "slug": "hianime-ad",
+        "name": "HiAnime AD",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.ad/home"
+      },
+      {
+        "slug": "over9000",
+        "name": "Over9000",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://over9000.bio/"
+      }
+    ]
+  },
+  {
     "slug": "over9000",
     "name": "Over9000",
     "description": "Anime watch source bookmark for quick launch.",
@@ -39645,6 +39928,99 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://hianime.re/home"
+      }
+    ]
+  },
+  {
+    "slug": "123movieslive",
+    "name": "123MoviesLive",
+    "description": "Movie watch source bookmark for quick launch.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Jul 4, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://123movieslive.top/home/",
+    "docs": "https://123movieslive.top/home/",
+    "sourceCode": "",
+    "icon": "123movieslive",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie watch bookmark.",
+    "fullDescription": "123MoviesLive is kept as a movie watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
+      },
+      {
+        "slug": "nextflicks",
+        "name": "NextFlicks",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nextflicks.link"
       }
     ]
   },

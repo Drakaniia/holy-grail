@@ -18,6 +18,15 @@
     "bytes": 13906,
     "fallback": true
   },
+  "123movieslive": {
+    "image": "/previews/123movieslive.webp",
+    "small": "/previews/123movieslive-sm.webp",
+    "sourceUrl": "https://123movieslive.top/home/",
+    "capturedAt": "2026-07-04T03:55:34.944Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 62824
+  },
   "1337x": {
     "image": "/previews/1337x.webp",
     "small": "/previews/1337x-sm.webp",
@@ -1472,6 +1481,15 @@
     "height": 600,
     "bytes": 70486
   },
+  "hianime-win": {
+    "image": "/previews/hianime-win.webp",
+    "small": "/previews/hianime-win-sm.webp",
+    "sourceUrl": "https://hianime.win/home",
+    "capturedAt": "2026-07-04T03:55:40.249Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 71752
+  },
   "higgsfield": {
     "image": "/previews/higgsfield.webp",
     "small": "/previews/higgsfield-sm.webp",
@@ -2092,6 +2110,15 @@
     "width": 960,
     "height": 600,
     "bytes": 32020
+  },
+  "miruro": {
+    "image": "/previews/miruro.webp",
+    "small": "/previews/miruro-sm.webp",
+    "sourceUrl": "https://miruro.ro/",
+    "capturedAt": "2026-07-04T03:55:35.183Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 84830
   },
   "mistral-vibe": {
     "image": "/previews/mistral-vibe.webp",
@@ -3634,6 +3661,15 @@
     "width": 960,
     "height": 600,
     "bytes": 56544
+  },
+  "yify": {
+    "image": "/previews/yify.webp",
+    "small": "/previews/yify-sm.webp",
+    "sourceUrl": "https://yify.co/home/",
+    "capturedAt": "2026-07-04T03:55:30.765Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8362
   },
   "yiyan": {
     "image": "/previews/yiyan.webp",
