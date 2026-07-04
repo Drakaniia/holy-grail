@@ -1,4 +1,5 @@
 import { computed, shallowRef } from 'vue'
+import { defineStore } from 'pinia'
 
 export interface ExtensionFeature {
   name: string
@@ -63,7 +64,7 @@ export function sortExtensionsForTab(extensions: Extension[], tab: ExtensionSort
   })
 }
 
-export const useExtensionsStore = () => {
+export const useExtensionsStore = defineStore('extensions', () => {
   const allExtensions = shallowRef<Extension[]>([])
   const searchQuery = shallowRef('')
   const activeCategory = shallowRef('All')
@@ -192,4 +193,4 @@ export const useExtensionsStore = () => {
     setPage,
     reset,
   }
-}
+})
