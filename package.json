@@ -29,7 +29,7 @@
     "@supabase/supabase-js": "^2.108.2",
     "js-yaml": "^4.2.0",
     "lucide-vue-next": "^1.0.0",
-    "markdown-it": "^14.2.0",
+    "markdown-it": "^14.3.0",
     "pinia": "^3.0.4",
     "posthog-js": "^1.396.5",
     "vue": "^3.5.39",
