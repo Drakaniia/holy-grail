@@ -1,0 +1,82 @@
+slug: animmaster-lib
+name: Animmaster Lib
+description: Premium collection of 300+ animated UI components for building Awwwards-level interactive web experiences.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://animmasterlib.dev/
+docs: https://animmasterlib.dev/
+sourceCode: ""
+icon: animmaster-lib
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - animation
+atGlance: Premium animated UI components for high-impact, motion-rich websites.
+fullDescription: >-
+  Animmaster Lib is a premium collection of over 300 animated UI components
+  designed for building Awwwards-level interactive web experiences. It includes
+  hero sections, sliders, navigation menus, scroll-triggered animations, mouse
+  interactions, and WebGL shader effects. Components are built with HTML, CSS,
+  and JavaScript (60%), React (30%), and Next.js (10%), making it accessible
+  for a wide range of frontend workflows.
+coreFeatures:
+  - name: 300+ Animated Components
+    description: Extensive library of pre-built, polished animations and interactive elements.
+    icon: check
+  - name: Multi-Framework Support
+    description: Available in HTML/CSS/JS, React, and Next.js variants for flexible integration.
+    icon: check
+  - name: Advanced Interactions
+    description: Includes scroll-driven animations, WebGL shaders, mouse interactions, and 3D effects.
+    icon: check
+additionalFeatures:
+  - name: Premium Quality
+    description: Awwwards-level design and animation quality for professional marketing and portfolio sites.
+    icon: check
+  - name: Copy-Paste Ship Workflow
+    description: Designed for rapid integration with minimal setup overhead.
+    icon: check
+  - name: Extensive Variety
+    description: Covers hero sections, sliders, navigation, buttons, and complex interactive patterns.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: motion-primitives
+    name: Motion Primitives
+    description: Composable animated React primitives for building motion-rich product interfaces.
+    stars: 5602
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion-primitives.com/
+  - slug: reactbits
+    name: React Bits
+    description: Animated, interactive React components for building memorable landing pages and websites.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/

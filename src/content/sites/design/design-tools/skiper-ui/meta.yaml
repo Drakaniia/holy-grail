@@ -1,0 +1,83 @@
+slug: skiper-ui
+name: Skiper UI
+description: Curated library of uncommon, high-interaction UI components for shadcn/ui and Next.js projects.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://skiper-ui.com/
+docs: https://skiper-ui.com/docs/quick-start
+sourceCode: ""
+icon: skiper-ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - ui
+  - reference
+atGlance: Uncommon, high-interaction UI components and design reference for shadcn/ui projects.
+fullDescription: >-
+  Skiper UI is a curated library of uncommon, high-interaction UI components
+  designed specifically for Next.js projects using the shadcn/ui ecosystem.
+  It features over 105 components including advanced hover effects, image
+  reveals, cursor trails, and complex scroll-driven interactions. Components
+  are reverse-engineered from industry-leading design portfolios and can be
+  installed via the shadcn CLI or copied directly. Serves as a design reference
+  and implementation resource for developers seeking premium visual effects.
+coreFeatures:
+  - name: Uncommon Components
+    description: Over 105 high-interaction components with sophisticated hover, scroll, and reveal effects.
+    icon: check
+  - name: shadcn/ui Integration
+    description: Seamlessly installs via the shadcn CLI into existing projects with Radix and Tailwind.
+    icon: check
+  - name: Design Reference
+    description: Provides replications of award-winning design patterns from leading industry portfolios.
+    icon: check
+additionalFeatures:
+  - name: Premium Templates
+    description: Offers coded portfolio templates with Figma files for Pro subscribers.
+    icon: check
+  - name: Framer Motion and GSAP
+    description: Components powered by Framer Motion and GSAP for advanced animation capabilities.
+    icon: check
+  - name: Free and Pro Tiers
+    description: Free components available with attribution; Pro tier unlocks premium components without attribution.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: reactbits
+    name: React Bits
+    description: Animated, interactive React components for building memorable landing pages and websites.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/
+  - slug: motion-primitives
+    name: Motion Primitives
+    description: Composable animated React primitives for building motion-rich product interfaces.
+    stars: 5602
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion-primitives.com/

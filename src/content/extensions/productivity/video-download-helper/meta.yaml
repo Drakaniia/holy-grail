@@ -1,0 +1,71 @@
+slug: video-download-helper
+name: Video DownloadHelper
+description: Detect and download videos and audio from over 1,000 websites with format conversion support.
+category: Chrome Extensions
+parentCategory: productivity
+subcategory: productivity
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: '10.5.2.2'
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Chrome Extension
+deployment:
+  - Chrome Web Store
+website: https://chromewebstore.google.com/detail/video-download-helper/lmjnegcaeklhafolokijcfjliaokphfk
+docs: https://chromewebstore.google.com/detail/video-download-helper/lmjnegcaeklhafolokijcfjliaokphfk
+sourceCode: ''
+icon: video-download-helper
+verified: true
+featured: false
+tags:
+  - chrome-extension
+  - video
+  - download
+  - audio
+  - productivity
+atGlance: Detect, download, and convert video and audio from thousands of websites.
+fullDescription: Video DownloadHelper is a powerful extension that detects and downloads video and audio content from over 1,000 websites. It supports multiple streaming protocols including DASH, HLS, and MPD, and can handle live streaming content. The built-in conversion engine lets you transform downloaded media into popular formats such as MP4, MKV, WebM, and MP3 for audio extraction.
+coreFeatures:
+  - name: Broad Website Support
+    description: Detects and downloads media from over 1,000 websites with wide protocol compatibility.
+    icon: check
+  - name: Format Conversion
+    description: Convert downloaded videos to MP4, MKV, WebM, and extract audio to MP3.
+    icon: check
+  - name: Streaming Protocol Support
+    description: Handles DASH, HLS, and MPD streaming protocols including live streams.
+    icon: check
+additionalFeatures:
+  - name: Audio Extraction
+    description: Extract audio from videos and save as MP3 for offline listening or podcast creation.
+    icon: check
+  - name: Download Queue
+    description: Manage multiple downloads simultaneously with a built-in queue manager.
+    icon: check
+similarTools:
+  - slug: video-downloader-professional
+    name: Video Downloader Professional
+    description: Alternative video downloader with watchlist and download management features.
+    stars: 0
+    addedDaysAgo: 0
+    verified: true
+    website: https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil
+extensionSpecific:
+  chromeWebStoreId: lmjnegcaeklhafolokijcfjliaokphfk
+  chromeWebStoreRating: 4.5
+  userCount: 5000000
+  permissions:
+    - activeTab
+    - scripting
+    - webRequest
+    - download
+    - webRequestBlocking
+  manifestVersion: 3
+  installButtonBehavior: redirect-to-chrome-web-store

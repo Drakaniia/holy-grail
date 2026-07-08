@@ -1,0 +1,81 @@
+slug: vengenceui
+name: Vengeance UI
+description: Animated React and Tailwind CSS components for building high-performance landing pages and marketing websites.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 879
+watchers: 5
+addedDaysAgo: 0
+license: Unknown
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 1
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.vengenceui.com/
+docs: https://www.vengenceui.com/
+sourceCode: https://github.com/Ashutoshx7/VengenceUI
+icon: vengenceui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Animated copy-paste components for React, Next.js, and Tailwind projects.
+fullDescription: >-
+  Vengeance UI is an open-source library of animated, high-performance UI
+  components built for React 19 and Next.js. It features advanced interaction
+  patterns such as displacement hover effects, scroll-driven cards, animated
+  tooltips, and responsive bento layouts. The library uses Tailwind CSS,
+  Framer Motion, GSAP, and Three.js to deliver premium, distinct interactivity
+  for landing pages and marketing websites.
+coreFeatures:
+  - name: Animated Components
+    description: Provides motion-rich UI components including spotlight nav bars, kinetic loaders, and interactive hero sections.
+    icon: check
+  - name: React and Next.js
+    description: Built for modern React 19 and Next.js 16 with TypeScript support.
+    icon: check
+  - name: Copy-Paste Workflow
+    description: Components are intended to be copied into projects and customized directly.
+    icon: check
+additionalFeatures:
+  - name: Framer Motion and GSAP
+    description: Combines multiple animation libraries for complex, tasteful motion effects.
+    icon: check
+  - name: 3D Graphics Support
+    description: Includes Three.js integration via @react-three/fiber for 3D and canvas interactions.
+    icon: check
+  - name: CLI Tooling
+    description: Ships with a CLI for adding components to existing projects, similar to shadcn/ui.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/

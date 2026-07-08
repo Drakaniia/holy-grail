@@ -9188,6 +9188,109 @@
     ]
   },
   {
+    "slug": "vengenceui",
+    "name": "Vengeance UI",
+    "description": "Animated React and Tailwind CSS components for building high-performance landing pages and marketing websites.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 879,
+    "watchers": 5,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 1,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.vengenceui.com/",
+    "docs": "https://www.vengenceui.com/",
+    "sourceCode": "https://github.com/Ashutoshx7/VengenceUI",
+    "icon": "vengenceui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Animated copy-paste components for React, Next.js, and Tailwind projects.",
+    "fullDescription": "Vengeance UI is an open-source library of animated, high-performance UI components built for React 19 and Next.js. It features advanced interaction patterns such as displacement hover effects, scroll-driven cards, animated tooltips, and responsive bento layouts. The library uses Tailwind CSS, Framer Motion, GSAP, and Three.js to deliver premium, distinct interactivity for landing pages and marketing websites.",
+    "coreFeatures": [
+      {
+        "name": "Animated Components",
+        "description": "Provides motion-rich UI components including spotlight nav bars, kinetic loaders, and interactive hero sections.",
+        "icon": "check"
+      },
+      {
+        "name": "React and Next.js",
+        "description": "Built for modern React 19 and Next.js 16 with TypeScript support.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Workflow",
+        "description": "Components are intended to be copied into projects and customized directly.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Framer Motion and GSAP",
+        "description": "Combines multiple animation libraries for complex, tasteful motion effects.",
+        "icon": "check"
+      },
+      {
+        "name": "3D Graphics Support",
+        "description": "Includes Three.js integration via @react-three/fiber for 3D and canvas interactions.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Tooling",
+        "description": "Ships with a CLI for adding components to existing projects, similar to shadcn/ui.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      }
+    ]
+  },
+  {
     "slug": "wigggle-ui",
     "name": "WigggleUI",
     "description": "Open-source web widgets and playful UI components for modern frontend projects.",
@@ -24077,6 +24180,110 @@
     ]
   },
   {
+    "slug": "skiper-ui",
+    "name": "Skiper UI",
+    "description": "Curated library of uncommon, high-interaction UI components for shadcn/ui and Next.js projects.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://skiper-ui.com/",
+    "docs": "https://skiper-ui.com/docs/quick-start",
+    "sourceCode": "",
+    "icon": "skiper-ui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "ui",
+      "reference"
+    ],
+    "atGlance": "Uncommon, high-interaction UI components and design reference for shadcn/ui projects.",
+    "fullDescription": "Skiper UI is a curated library of uncommon, high-interaction UI components designed specifically for Next.js projects using the shadcn/ui ecosystem. It features over 105 components including advanced hover effects, image reveals, cursor trails, and complex scroll-driven interactions. Components are reverse-engineered from industry-leading design portfolios and can be installed via the shadcn CLI or copied directly. Serves as a design reference and implementation resource for developers seeking premium visual effects.",
+    "coreFeatures": [
+      {
+        "name": "Uncommon Components",
+        "description": "Over 105 high-interaction components with sophisticated hover, scroll, and reveal effects.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn/ui Integration",
+        "description": "Seamlessly installs via the shadcn CLI into existing projects with Radix and Tailwind.",
+        "icon": "check"
+      },
+      {
+        "name": "Design Reference",
+        "description": "Provides replications of award-winning design patterns from leading industry portfolios.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Premium Templates",
+        "description": "Offers coded portfolio templates with Figma files for Pro subscribers.",
+        "icon": "check"
+      },
+      {
+        "name": "Framer Motion and GSAP",
+        "description": "Components powered by Framer Motion and GSAP for advanced animation capabilities.",
+        "icon": "check"
+      },
+      {
+        "name": "Free and Pro Tiers",
+        "description": "Free components available with attribution; Pro tier unlocks premium components without attribution.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Animated, interactive React components for building memorable landing pages and websites.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
+      },
+      {
+        "slug": "motion-primitives",
+        "name": "Motion Primitives",
+        "description": "Composable animated React primitives for building motion-rich product interfaces.",
+        "stars": 5602,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion-primitives.com/"
+      }
+    ]
+  },
+  {
     "slug": "storyset",
     "name": "Storyset | Customize, animate and download illustration for free",
     "description": "Storyset | Customize, animate and download illustration for free bookmarked for design tools resources.",
@@ -34172,6 +34379,110 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "animmaster-lib",
+    "name": "Animmaster Lib",
+    "description": "Premium collection of 300+ animated UI components for building Awwwards-level interactive web experiences.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://animmasterlib.dev/",
+    "docs": "https://animmasterlib.dev/",
+    "sourceCode": "",
+    "icon": "animmaster-lib",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "animation"
+    ],
+    "atGlance": "Premium animated UI components for high-impact, motion-rich websites.",
+    "fullDescription": "Animmaster Lib is a premium collection of over 300 animated UI components designed for building Awwwards-level interactive web experiences. It includes hero sections, sliders, navigation menus, scroll-triggered animations, mouse interactions, and WebGL shader effects. Components are built with HTML, CSS, and JavaScript (60%), React (30%), and Next.js (10%), making it accessible for a wide range of frontend workflows.",
+    "coreFeatures": [
+      {
+        "name": "300+ Animated Components",
+        "description": "Extensive library of pre-built, polished animations and interactive elements.",
+        "icon": "check"
+      },
+      {
+        "name": "Multi-Framework Support",
+        "description": "Available in HTML/CSS/JS, React, and Next.js variants for flexible integration.",
+        "icon": "check"
+      },
+      {
+        "name": "Advanced Interactions",
+        "description": "Includes scroll-driven animations, WebGL shaders, mouse interactions, and 3D effects.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Premium Quality",
+        "description": "Awwwards-level design and animation quality for professional marketing and portfolio sites.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Ship Workflow",
+        "description": "Designed for rapid integration with minimal setup overhead.",
+        "icon": "check"
+      },
+      {
+        "name": "Extensive Variety",
+        "description": "Covers hero sections, sliders, navigation, buttons, and complex interactive patterns.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "motion-primitives",
+        "name": "Motion Primitives",
+        "description": "Composable animated React primitives for building motion-rich product interfaces.",
+        "stars": 5602,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion-primitives.com/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Animated, interactive React components for building memorable landing pages and websites.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
       }
     ]
   },
