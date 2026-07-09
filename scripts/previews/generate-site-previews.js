@@ -26,6 +26,7 @@ const defaults = {
 function parseArgs(argv) {
   const options = {
     all: false,
+    refresh: false,
     dryRun: false,
     limit: 0,
     slugs: new Set(),
@@ -39,6 +40,7 @@ function parseArgs(argv) {
     const nextValue = inlineValue ?? argv[index + 1]
 
     if (arg === '--all' || arg === '--force') options.all = true
+    if (arg === '--refresh') options.refresh = true
     if (arg === '--dry-run') options.dryRun = true
     if (key === '--limit' && nextValue) {
       options.limit = Number(nextValue)
@@ -371,6 +373,11 @@ function eligibleSites(sites, manifest, options) {
 
     const imagePath = path.join(publicPreviewsDir, `${site.slug}.webp`)
     const smallPath = path.join(publicPreviewsDir, `${site.slug}-sm.webp`)
+
+    if (options.refresh) {
+      return !!manifest[site.slug] && fileExists(imagePath) && fileExists(smallPath)
+    }
+
     return !manifest[site.slug] || !fileExists(imagePath) || !fileExists(smallPath)
   })
 
@@ -426,7 +433,7 @@ async function main() {
     JSON.stringify(
       {
         mode: options.dryRun ? 'dry-run' : 'apply',
-        selection: options.all ? 'all matching sites' : 'missing previews only',
+        selection: options.all ? 'all matching sites' : options.refresh ? 'existing previews only (refresh)' : 'missing previews only',
         browserPath,
         candidates: queue.length,
         concurrency: options.concurrency,

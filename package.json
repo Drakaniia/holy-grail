@@ -19,6 +19,7 @@
     "generate:previews": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js",
     "generate:previews:missing": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js",
     "generate:previews:all": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js --all",
+    "generate:previews:refresh": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js --refresh",
     "review:previews": "python scripts/previews/review-site-previews.py",
     "import:bookmarks": "bun run scripts/enrichment/import-bookmarks.js"
   },
