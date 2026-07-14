@@ -119,13 +119,13 @@ async function copyInstallCommand() {
 
 <template>
   <div class="bg-[#1f1f1f] text-white">
-    <div v-if="skill" class="max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-8">
+    <div v-if="skill" class="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
       <!-- Back Button -->
       <button
         @click="router.push(backRoute)"
-        class="flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors"
+        class="mb-8 flex items-center gap-2 text-gray-400 transition-colors hover:text-white"
       >
-        <ArrowLeft class="w-4 h-4" />
+        <ArrowLeft class="h-4 w-4" />
         <span class="text-sm">Back to Skills</span>
       </button>
 
@@ -137,67 +137,56 @@ async function copyInstallCommand() {
           </h1>
           <BookmarkButton v-if="bookmarkResource" :resource="bookmarkResource" variant="detail" />
         </div>
-        <p class="text-gray-400 text-base leading-relaxed">
+        <p class="text-base leading-relaxed text-gray-400">
           {{ skill.description }}
         </p>
       </div>
 
-      <!-- Stats Bar -->
-      <div
-        class="border border-gray-800 rounded-xl p-4 mb-6"
-        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
-      >
-        <div class="flex flex-wrap items-center gap-4 sm:gap-6">
-          <div class="flex items-center gap-2 text-sm text-gray-400">
-            <Eye class="w-4 h-4" />
-            <span>{{ formatNumber(skill.views) }} views</span>
-          </div>
-          <div class="flex items-center gap-2 text-sm text-gray-400">
-            <Code2 class="w-4 h-4" />
-            <span>{{ formatNumber(skill.uses) }} uses</span>
-          </div>
-          <div class="flex items-center gap-2 text-sm text-gray-400">
-            <User class="w-4 h-4" />
-            <span>By {{ skill.authorName }}</span>
-          </div>
-          <div class="flex min-w-0 items-center gap-2 text-sm text-gray-400">
-            <ExternalLink class="w-4 h-4" />
-            <a
-              :href="`https://github.com/${skill.repoLink}`"
-              target="_blank"
-              class="break-all transition-colors hover:text-accent-400"
-            >
-              {{ skill.repoLink }}
-            </a>
-          </div>
+      <!-- Simplified Stats Bar -->
+      <div class="mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-400">
+        <div class="flex items-center gap-1.5">
+          <Eye class="h-4 w-4" />
+          <span>{{ formatNumber(skill.views) }} views</span>
         </div>
-
-        <!-- Tags -->
-        <div
-          v-if="skill.tags.length"
-          class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-800"
-        >
-          <span
-            v-for="tag in skill.tags"
-            :key="tag"
-            class="flex items-center gap-1 px-2 py-1 bg-[#1f1f1f] border border-gray-700 rounded-md text-xs text-gray-400"
+        <span class="text-gray-600">·</span>
+        <div class="flex items-center gap-1.5">
+          <Code2 class="h-4 w-4" />
+          <span>{{ formatNumber(skill.uses) }} uses</span>
+        </div>
+        <span class="text-gray-600">·</span>
+        <div class="flex items-center gap-1.5">
+          <User class="h-4 w-4" />
+          <span>By {{ skill.authorName }}</span>
+        </div>
+        <span class="text-gray-600">·</span>
+        <div class="flex min-w-0 items-center gap-1.5">
+          <ExternalLink class="h-4 w-4 shrink-0" />
+          <a
+            :href="`https://github.com/${skill.repoLink}`"
+            target="_blank"
+            class="break-all transition-colors hover:text-accent-400"
           >
-            <Tag class="w-3 h-3" />
-            {{ tag }}
-          </span>
+            {{ skill.repoLink }}
+          </a>
         </div>
       </div>
 
-      <!-- Install Command -->
-      <div
-        class="border border-gray-800 rounded-xl p-4 mb-6"
-        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
-      >
+      <!-- Tag badges -->
+      <div v-if="skill.tags.length" class="mb-6 flex flex-wrap gap-2">
+        <span
+          v-for="tag in skill.tags"
+          :key="tag"
+          class="flex items-center gap-1 rounded-md border border-gray-700 bg-[#1f1f1f] px-2 py-1 text-xs text-gray-400"
+        >
+          <Tag class="h-3 w-3" />
+          {{ tag }}
+        </span>
+      </div>
+
+      <!-- Install Command (simplified) -->
+      <div class="mb-6 rounded-xl border border-gray-800 bg-[#1f1f1f] p-4">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div class="min-w-0">
-            <p class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1">
-              Install Command
-            </p>
             <code class="block break-all font-mono text-sm text-gray-300">{{
               getInstallCommand()
             }}</code>
@@ -205,9 +194,9 @@ async function copyInstallCommand() {
           <button
             @click="copyInstallCommand"
             class="flex w-fit flex-shrink-0 items-center gap-1.5 rounded-lg border border-gray-700 bg-[#1f1f1f] px-3 py-2 text-sm font-medium text-gray-400 transition-all hover:border-gray-600 hover:text-white"
-            :class="copied ? 'text-green-400 border-green-800' : ''"
+            :class="copied ? 'border-green-800 text-green-400' : ''"
           >
-            <component :is="copied ? Check : Copy" class="w-4 h-4" />
+            <component :is="copied ? Check : Copy" class="h-4 w-4" />
             {{ copied ? 'Copied!' : 'Copy' }}
           </button>
         </div>
@@ -215,19 +204,18 @@ async function copyInstallCommand() {
 
       <!-- Content Area -->
       <div
-        class="min-w-0 overflow-hidden border border-gray-800 rounded-xl p-4 sm:p-6 md:p-8"
-        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+        class="min-w-0 overflow-hidden rounded-xl border border-gray-800 bg-[#1f1f1f] p-4 sm:p-6 md:p-8"
         :aria-busy="isLoading"
       >
         <!-- Loading State -->
         <SkillContentSkeleton v-if="isLoading" />
 
         <!-- Error State with Fallback -->
-        <div v-else-if="error" class="text-center py-12">
-          <AlertCircle class="w-12 h-12 text-red-400 mx-auto mb-4" />
-          <h3 class="text-lg font-semibold text-white mb-2">Failed to load content</h3>
-          <p class="text-gray-400 text-sm mb-4">{{ error }}</p>
-          <p class="text-gray-500 text-xs">
+        <div v-else-if="error" class="py-12 text-center">
+          <AlertCircle class="mx-auto mb-4 h-12 w-12 text-red-400" />
+          <h3 class="mb-2 text-lg font-semibold text-white">Failed to load content</h3>
+          <p class="mb-4 text-sm text-gray-400">{{ error }}</p>
+          <p class="text-xs text-gray-500">
             Showing description only. Visit the
             <a
               :href="`https://github.com/${skill.repoLink}`"
@@ -248,7 +236,7 @@ async function copyInstallCommand() {
         ></div>
 
         <!-- No Content Fallback -->
-        <div v-else class="text-center py-12">
+        <div v-else class="py-12 text-center">
           <p class="text-gray-500">No content available for this skill.</p>
         </div>
       </div>
@@ -257,11 +245,11 @@ async function copyInstallCommand() {
     <SkillDetailSkeleton v-else-if="store.loading" />
 
     <div v-else-if="store.loadError" class="mx-auto max-w-xl px-4 py-24 text-center">
-      <h2 class="text-2xl font-bold text-white mb-2">Could not load skills</h2>
-      <p class="text-gray-400 mb-6">{{ store.loadError }}</p>
+      <h2 class="mb-2 text-2xl font-bold text-white">Could not load skills</h2>
+      <p class="mb-6 text-gray-400">{{ store.loadError }}</p>
       <button
         @click="router.push(backRoute)"
-        class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
+        class="rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-700"
       >
         Browse Skills
       </button>
@@ -269,11 +257,11 @@ async function copyInstallCommand() {
 
     <!-- Not Found -->
     <div v-else class="flex flex-col items-center justify-center py-24">
-      <h2 class="text-2xl font-bold text-white mb-2">Skill not found</h2>
-      <p class="text-gray-400 mb-6">The skill you're looking for doesn't exist.</p>
+      <h2 class="mb-2 text-2xl font-bold text-white">Skill not found</h2>
+      <p class="mb-6 text-gray-400">The skill you're looking for doesn't exist.</p>
       <button
         @click="router.push(backRoute)"
-        class="px-4 py-2 bg-accent-600 hover:bg-accent-700 text-white rounded-lg text-sm font-medium transition-colors"
+        class="rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-700"
       >
         Browse Skills
       </button>
@@ -285,39 +273,39 @@ async function copyInstallCommand() {
 @reference "tailwindcss";
 
 .skill-content :deep(h1) {
-  @apply text-2xl font-bold text-white mb-4 mt-0;
+  @apply mb-4 mt-0 text-2xl font-bold text-white;
 }
 
 .skill-content :deep(h2) {
-  @apply text-xl font-semibold text-white mb-3 mt-6;
+  @apply mb-3 mt-6 text-xl font-semibold text-white;
 }
 
 .skill-content :deep(h3) {
-  @apply text-lg font-medium text-white mb-2 mt-4;
+  @apply mb-2 mt-4 text-lg font-medium text-white;
 }
 
 .skill-content :deep(h4) {
-  @apply text-base font-medium text-white mb-2 mt-4;
+  @apply mb-2 mt-4 text-base font-medium text-white;
 }
 
 .skill-content :deep(h5) {
-  @apply text-sm font-medium text-white mb-2 mt-4;
+  @apply mb-2 mt-4 text-sm font-medium text-white;
 }
 
 .skill-content :deep(h6) {
-  @apply text-xs font-semibold uppercase text-white mb-2 mt-4;
+  @apply mb-2 mt-4 text-xs font-semibold uppercase text-white;
 }
 
 .skill-content :deep(p) {
-  @apply text-gray-400 mb-4 leading-relaxed;
+  @apply mb-4 leading-relaxed text-gray-400;
 }
 
 .skill-content :deep(ul) {
-  @apply list-disc list-inside text-gray-400 mb-4 space-y-1;
+  @apply mb-4 list-inside list-disc space-y-1 text-gray-400;
 }
 
 .skill-content :deep(ol) {
-  @apply list-decimal list-inside text-gray-400 mb-4 space-y-1;
+  @apply mb-4 list-inside list-decimal space-y-1 text-gray-400;
 }
 
 .skill-content :deep(li) {
@@ -334,15 +322,15 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(pre) {
-  @apply bg-[#1f1f1f] border border-gray-800 rounded-lg p-4 overflow-x-auto mb-4;
+  @apply mb-4 overflow-x-auto rounded-lg border border-gray-800 bg-[#1f1f1f] p-4;
 }
 
 .skill-content :deep(pre code) {
-  @apply bg-transparent text-gray-300 p-0;
+  @apply bg-transparent p-0 text-gray-300;
 }
 
 .skill-content :deep(strong) {
-  @apply text-white font-semibold;
+  @apply font-semibold text-white;
 }
 
 .skill-content :deep(a) {
@@ -354,23 +342,23 @@ async function copyInstallCommand() {
 }
 
 .skill-content :deep(blockquote) {
-  @apply border-l-4 border-gray-700 pl-4 text-gray-500 italic my-4;
+  @apply my-4 border-l-4 border-gray-700 pl-4 italic text-gray-500;
 }
 
 .skill-content :deep(hr) {
-  @apply border-gray-800 my-6;
+  @apply my-6 border-gray-800;
 }
 
 .skill-content :deep(table) {
-  @apply w-full border-collapse mb-4;
+  @apply mb-4 w-full border-collapse;
 }
 
 .skill-content :deep(th) {
-  @apply text-left text-sm font-semibold text-white border-b border-gray-700 px-3 py-2;
+  @apply border-b border-gray-700 px-3 py-2 text-left text-sm font-semibold text-white;
 }
 
 .skill-content :deep(td) {
-  @apply text-sm text-gray-400 border-b border-gray-800 px-3 py-2;
+  @apply border-b border-gray-800 px-3 py-2 text-sm text-gray-400;
 }
 
 :global(html.light .skill-content h1),
