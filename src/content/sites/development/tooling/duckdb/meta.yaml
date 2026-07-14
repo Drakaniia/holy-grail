@@ -1,0 +1,86 @@
+slug: duckdb
+name: DuckDB - In-Process Analytical SQL Database
+description: In-process SQL OLAP database management system designed for fast analytical queries on large datasets.
+category: Tooling
+parentCategory: development
+subcategory: tooling
+stars: 39400
+watchers: 340
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - CLI
+  - Web
+deployment:
+  - Local CLI
+  - Docker Compose
+website: https://duckdb.org
+docs: https://duckdb.org/docs
+sourceCode: https://github.com/duckdb/duckdb
+icon: duckdb
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - tooling
+  - database
+  - analytics
+  - sql
+  - olap
+atGlance: High-performance in-process analytical SQL database for data analysis and ETL workloads.
+fullDescription: >-
+  DuckDB is an in-process SQL OLAP database management system designed for high-performance
+  analytical queries on large datasets. Often described as "SQLite for analytics," it uses a
+  columnar-vectorized query execution engine to deliver fast aggregate queries, joins, and data
+  transformations. DuckDB runs embedded within host applications (Python, R, Java, Node.js, CLI)
+  with no external dependencies, and can query Parquet, CSV, and JSON files directly from local
+  storage or S3-compatible object stores.
+coreFeatures:
+  - name: Columnar Analytics Engine
+    description: Vectorized query execution optimized for analytical OLAP workloads.
+    icon: check
+  - name: In-Process Architecture
+    description: Runs embedded within applications with no separate server process required.
+    icon: check
+  - name: Direct File Queries
+    description: Query Parquet, CSV, and JSON files directly from local or remote storage.
+    icon: check
+additionalFeatures:
+  - name: Multi-Language Support
+    description: Native bindings for Python, R, Java, Node.js, C, C++, and more.
+    icon: layers
+  - name: Extensibility
+    description: Plugin system supporting Parquet, Iceberg, Delta Lake, Spatial, and more.
+    icon: puzzle
+  - name: Spill-to-Disk
+    description: Handles datasets larger than RAM by efficiently spilling to disk.
+    icon: hard-drive
+similarTools:
+  - slug: prisma
+    name: Prisma
+    description: Next-generation ORM for Node.js and TypeScript.
+    stars: 6637
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.prisma.io/
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Open source Firebase alternative with Postgres database and real-time subscriptions.
+    stars: 104640
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
