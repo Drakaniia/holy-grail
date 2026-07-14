@@ -118,150 +118,139 @@ watch(totalPages, (pages) => {
 
 <template>
   <div class="bg-[#1f1f1f] text-white">
+    <!-- Simplified Header -->
     <div class="border-b border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-          <div class="min-w-0 flex-1">
-            <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-3">
-              AURA {{ category.toUpperCase() }}
-            </p>
-            <h1 class="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl mb-4">
-              {{ pageTitle }}
-            </h1>
-            <p class="text-gray-400 text-base leading-relaxed max-w-2xl">
-              {{ pageDescription }}
-            </p>
-          </div>
-
-          <div class="w-full flex-shrink-0 sm:w-auto">
-            <div
-              class="w-full border border-gray-800 rounded-xl px-5 py-4 sm:min-w-[200px] sm:px-6 sm:py-5"
-              style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
-            >
-              <p class="text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">
-                LIBRARY PULSE
-              </p>
-              <div class="flex items-baseline gap-2 mb-2">
-                <span class="text-3xl font-bold text-white">{{ filteredSkills.length }}</span>
-                <span class="text-sm text-gray-500">skills</span>
-              </div>
-              <div class="flex items-center gap-1.5 text-gray-500 text-xs">
-                <Sparkles class="w-3 h-3 text-yellow-500" />
-                <span>Updated May 20, 2026</span>
-              </div>
-            </div>
-          </div>
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+        <div class="flex flex-col gap-2">
+          <h1 class="font-mono text-3xl font-bold text-white sm:text-4xl">
+            {{ pageTitle }}<span class="text-accent-500">_</span>
+          </h1>
+          <p class="max-w-2xl text-base leading-relaxed text-gray-400">
+            {{ pageDescription }}
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-8">
-      <div
-        class="border border-gray-800 rounded-xl p-4 mb-6"
-        style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
-      >
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <!-- Unified Filter Bar -->
+    <div class="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-8">
+      <div class="mb-6 rounded-xl border border-gray-800 bg-[#1f1f1f] p-4">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <!-- Search input with $ prefix -->
           <div class="relative min-w-0 flex-1">
-            <Search class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
+            <span
+              class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-gray-500"
+            >
+              $
+            </span>
+            <Search class="absolute left-7 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
             <input
               v-model="store.searchQuery"
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
-              placeholder="Search skills by name or intent"
-              class="w-full bg-[#1f1f1f] border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
+              placeholder="Search skills..."
+              class="w-full rounded-lg border border-gray-700 bg-[#1f1f1f] py-2.5 pl-12 pr-4 text-sm text-white placeholder-gray-500 transition-all focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500"
             />
           </div>
 
+          <!-- Sort tabs -->
           <div
-            class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 p-1 md:w-auto"
-            style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
+            class="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-700 bg-[#1f1f1f] p-1 md:w-auto"
           >
             <button
               @click="store.setTab('popular')"
-              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all"
               :class="
                 store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
               "
             >
-              <TrendingUp class="w-3.5 h-3.5" />
+              <TrendingUp class="h-3.5 w-3.5" />
               POPULAR
             </button>
             <button
               @click="store.setTab('trending')"
-              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all"
               :class="
                 store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
               "
             >
-              <TrendingUp class="w-3.5 h-3.5" />
+              <Sparkles class="h-3.5 w-3.5" />
               TRENDING
             </button>
             <button
               @click="store.setTab('recent')"
-              class="flex shrink-0 items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all"
               :class="
                 store.activeTab === 'recent' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
               "
             >
-              <Clock class="w-3.5 h-3.5" />
+              <Clock class="h-3.5 w-3.5" />
               RECENT
             </button>
           </div>
 
+          <!-- Results count -->
           <div class="flex items-center gap-3">
-            <span class="text-xs text-gray-500">
-              Showing {{ pageRangeStart }}-{{ pageRangeEnd }} of {{ displaySkills.length }} skills
+            <span class="font-mono text-xs text-gray-500">
+              [{{ String(pageRangeStart).padStart(2, '0') }}-{{ String(pageRangeEnd).padStart(2, '0')
+              }}/{{ displaySkills.length }}]
             </span>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-2 mt-4">
+        <!-- Category filter pills -->
+        <div class="mt-4 flex flex-wrap gap-2">
           <button
             v-for="filter in categoryFilters"
             :key="filter"
             @click="store.setCategory(filter)"
-            class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
+            class="rounded-lg px-3 py-1.5 text-xs font-medium transition-all"
             :class="
               store.activeCategory === filter
                 ? 'bg-accent-600 text-white'
-                : 'text-gray-400 hover:text-white border border-gray-700'
+                : 'border border-gray-700 text-gray-400 hover:text-white'
             "
           >
-            {{ filter }}
+            {{ filter === 'All' ? '--all' : `--${filter.toLowerCase()}` }}
           </button>
         </div>
       </div>
 
+      <!-- Loading State -->
       <div
         v-if="store.loading && filteredSkills.length === 0"
-        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"
         aria-busy="true"
         aria-label="Loading skills"
       >
-        <SkillCardSkeleton v-for="index in 8" :key="index" />
+        <SkillCardSkeleton v-for="index in 6" :key="index" />
       </div>
 
+      <!-- Error State -->
       <div
         v-else-if="store.loadError"
-        class="border border-red-900/70 bg-red-950/30 px-4 py-4 text-sm text-red-100"
+        class="rounded-xl border border-red-900/70 bg-red-950/30 px-4 py-4 text-sm text-red-100"
       >
         {{ store.loadError }}
       </div>
 
+      <!-- Skills Grid -->
       <div
         v-else-if="paginatedSkills.length > 0"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"
       >
         <SkillCard v-for="skill in paginatedSkills" :key="skill.slug" :skill="skill" />
       </div>
 
-      <div v-else class="text-center py-16">
-        <p class="text-gray-500 text-lg">No skills found matching your search.</p>
-        <button @click="clearFilters" class="mt-4 text-accent-400 hover:text-accent-300 text-sm">
+      <!-- Empty State -->
+      <div v-else class="py-16 text-center">
+        <p class="text-lg text-gray-500">No skills found matching your search.</p>
+        <button @click="clearFilters" class="mt-4 text-sm text-accent-400 hover:text-accent-300">
           Clear filters
         </button>
       </div>
 
+      <!-- Pagination -->
       <PaginationControls
         :current-page="store.currentPage"
         :total-pages="totalPages"
