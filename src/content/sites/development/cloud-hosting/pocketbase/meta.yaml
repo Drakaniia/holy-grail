@@ -1,0 +1,83 @@
+slug: pocketbase
+name: PocketBase | Open Source Backend Platform
+description: Open-source backend platform with embedded SQLite database, real-time subscriptions, authentication, and file storage in a single Go binary.
+category: Backend
+parentCategory: development
+subcategory: cloud-hosting
+stars: 42000
+watchers: 320
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Docker Compose
+  - Local CLI
+website: https://pocketbase.io
+docs: https://pocketbase.io/docs
+sourceCode: https://github.com/pocketbase/pocketbase
+icon: pocketbase
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - backend
+  - baas
+  - sqlite
+atGlance: All-in-one open-source backend with embedded database, auth, file storage, and admin UI in a single binary.
+fullDescription: >-
+  PocketBase is an open-source backend platform distributed as a single Go binary. It bundles an
+  embedded SQLite database, real-time WebSocket subscriptions, user authentication with OAuth2
+  support, file storage, and a built-in admin dashboard. Designed for self-hosting, it eliminates
+  the need for separate database servers or complex infrastructure setups — making it ideal for
+  MVPs, side projects, and small-to-medium production applications.
+coreFeatures:
+  - name: Single Binary
+    description: Entire backend runs from a single executable file with zero external dependencies.
+    icon: check
+  - name: Embedded SQLite
+    description: Built-in SQLite database with no separate database server required.
+    icon: database
+  - name: Admin Dashboard
+    description: Built-in web UI for managing data, users, and logs without custom code.
+    icon: layout
+additionalFeatures:
+  - name: Real-Time Subscriptions
+    description: WebSocket-based real-time updates for database changes pushed to clients.
+    icon: zap
+  - name: Authentication & OAuth2
+    description: Built-in user management with email/password and OAuth2 (Google, GitHub, etc.).
+    icon: lock
+  - name: File Storage
+    description: Local or S3-compatible file storage with built-in upload handling.
+    icon: folder
+similarTools:
+  - slug: supabase
+    name: Supabase | The Postgres Development Platform.
+    description: Open source Firebase alternative with Postgres database, auth, and real-time subscriptions.
+    stars: 104640
+    addedDaysAgo: 0
+    verified: true
+    website: https://supabase.com/
+  - slug: appwrite
+    name: appwrite
+    description: A backend platform providing authentication, databases, storage, and realtime APIs
+    stars: 56000
+    addedDaysAgo: 5
+    verified: true
+    website: https://appwrite.io
+  - slug: coolify
+    name: Coolify
+    description: Self-hostable deployment platform for hosting apps, databases, and services.
+    stars: 55610
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/
