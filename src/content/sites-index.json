@@ -1190,6 +1190,107 @@
     ]
   },
   {
+    "slug": "langchain",
+    "name": "LangChain - Build LLM-Powered Applications",
+    "description": "LangChain bookmarked for machine learning resources.",
+    "category": "Machine Learning",
+    "parentCategory": "ai",
+    "subcategory": "ml",
+    "stars": 140000,
+    "watchers": 2300,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://langchain.com",
+    "docs": "https://langchain.com/docs",
+    "sourceCode": "https://github.com/langchain-ai/langchain",
+    "icon": "langchain",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "ml",
+      "machine",
+      "learning",
+      "llm",
+      "agents"
+    ],
+    "atGlance": "LangChain is an open-source framework for building LLM-powered applications and AI agents.",
+    "fullDescription": "LangChain is kept as a machine learning resource for AI-assisted workflows. It provides a modular framework for chaining together LLMs, vector databases, document loaders, and external tools to build complex AI applications — from simple chatbots to autonomous agents with long-horizon planning capabilities.",
+    "coreFeatures": [
+      {
+        "name": "Machine Learning Resource",
+        "description": "LangChain is tracked for model development, data science, or machine learning reference work.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved ML resource directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Data Science Workflow",
+        "description": "Useful for notebooks, model training, evaluation, deployment, or ML research.",
+        "icon": "check"
+      },
+      {
+        "name": "Documentation Shortcut",
+        "description": "Keeps the primary reference URL beside the saved tool or framework.",
+        "icon": "check"
+      },
+      {
+        "name": "Category Grouping",
+        "description": "Grouped with related ML frameworks, platforms, and learning resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "tensorflow",
+        "name": "TensorFlow",
+        "description": "TensorFlow bookmarked for machine learning resources.",
+        "stars": 195214,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.tensorflow.org/"
+      },
+      {
+        "slug": "pytorch",
+        "name": "PyTorch",
+        "description": "PyTorch bookmarked for machine learning resources.",
+        "stars": 100054,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://pytorch.org/"
+      },
+      {
+        "slug": "scikit-learn",
+        "name": "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation",
+        "description": "scikit-learn: machine learning in Python - scikit-learn 1.8.0 documentation bookmarked for machine learning resources.",
+        "stars": 66131,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://scikit-learn.org/stable/"
+      }
+    ]
+  },
+  {
     "slug": "claude-code",
     "name": "Claude Code",
     "description": "Claude Code CLI setup reference for AI-assisted terminal coding workflows.",
@@ -2880,6 +2981,112 @@
     ]
   },
   {
+    "slug": "pocketbase",
+    "name": "PocketBase | Open Source Backend Platform",
+    "description": "Open-source backend platform with embedded SQLite database, real-time subscriptions, authentication, and file storage in a single Go binary.",
+    "category": "Backend",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 42000,
+    "watchers": 320,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Docker Compose",
+      "Local CLI"
+    ],
+    "website": "https://pocketbase.io",
+    "docs": "https://pocketbase.io/docs",
+    "sourceCode": "https://github.com/pocketbase/pocketbase",
+    "icon": "pocketbase",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "backend",
+      "baas",
+      "sqlite"
+    ],
+    "atGlance": "All-in-one open-source backend with embedded database, auth, file storage, and admin UI in a single binary.",
+    "fullDescription": "PocketBase is an open-source backend platform distributed as a single Go binary. It bundles an embedded SQLite database, real-time WebSocket subscriptions, user authentication with OAuth2 support, file storage, and a built-in admin dashboard. Designed for self-hosting, it eliminates the need for separate database servers or complex infrastructure setups — making it ideal for MVPs, side projects, and small-to-medium production applications.",
+    "coreFeatures": [
+      {
+        "name": "Single Binary",
+        "description": "Entire backend runs from a single executable file with zero external dependencies.",
+        "icon": "check"
+      },
+      {
+        "name": "Embedded SQLite",
+        "description": "Built-in SQLite database with no separate database server required.",
+        "icon": "database"
+      },
+      {
+        "name": "Admin Dashboard",
+        "description": "Built-in web UI for managing data, users, and logs without custom code.",
+        "icon": "layout"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Real-Time Subscriptions",
+        "description": "WebSocket-based real-time updates for database changes pushed to clients.",
+        "icon": "zap"
+      },
+      {
+        "name": "Authentication & OAuth2",
+        "description": "Built-in user management with email/password and OAuth2 (Google, GitHub, etc.).",
+        "icon": "lock"
+      },
+      {
+        "name": "File Storage",
+        "description": "Local or S3-compatible file storage with built-in upload handling.",
+        "icon": "folder"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Open source Firebase alternative with Postgres database, auth, and real-time subscriptions.",
+        "stars": 104640,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Self-hostable deployment platform for hosting apps, databases, and services.",
+        "stars": 55610,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
     "slug": "reactbits",
     "name": "React Bits",
     "description": "Animated, interactive React components for building memorable landing pages and websites.",
@@ -3182,6 +3389,114 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.tasteskill.dev/"
+      }
+    ]
+  },
+  {
+    "slug": "duckdb",
+    "name": "DuckDB - In-Process Analytical SQL Database",
+    "description": "In-process SQL OLAP database management system designed for fast analytical queries on large datasets.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 39400,
+    "watchers": 340,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI",
+      "Web"
+    ],
+    "deployment": [
+      "Local CLI",
+      "Docker Compose"
+    ],
+    "website": "https://duckdb.org",
+    "docs": "https://duckdb.org/docs",
+    "sourceCode": "https://github.com/duckdb/duckdb",
+    "icon": "duckdb",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling",
+      "database",
+      "analytics",
+      "sql",
+      "olap"
+    ],
+    "atGlance": "High-performance in-process analytical SQL database for data analysis and ETL workloads.",
+    "fullDescription": "DuckDB is an in-process SQL OLAP database management system designed for high-performance analytical queries on large datasets. Often described as \"SQLite for analytics,\" it uses a columnar-vectorized query execution engine to deliver fast aggregate queries, joins, and data transformations. DuckDB runs embedded within host applications (Python, R, Java, Node.js, CLI) with no external dependencies, and can query Parquet, CSV, and JSON files directly from local storage or S3-compatible object stores.",
+    "coreFeatures": [
+      {
+        "name": "Columnar Analytics Engine",
+        "description": "Vectorized query execution optimized for analytical OLAP workloads.",
+        "icon": "check"
+      },
+      {
+        "name": "In-Process Architecture",
+        "description": "Runs embedded within applications with no separate server process required.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct File Queries",
+        "description": "Query Parquet, CSV, and JSON files directly from local or remote storage.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multi-Language Support",
+        "description": "Native bindings for Python, R, Java, Node.js, C, C++, and more.",
+        "icon": "layers"
+      },
+      {
+        "name": "Extensibility",
+        "description": "Plugin system supporting Parquet, Iceberg, Delta Lake, Spatial, and more.",
+        "icon": "puzzle"
+      },
+      {
+        "name": "Spill-to-Disk",
+        "description": "Handles datasets larger than RAM by efficiently spilling to disk.",
+        "icon": "hard-drive"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "prisma",
+        "name": "Prisma",
+        "description": "Next-generation ORM for Node.js and TypeScript.",
+        "stars": 6637,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.prisma.io/"
+      },
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Open source Firebase alternative with Postgres database and real-time subscriptions.",
+        "stars": 104640,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
       }
     ]
   },
@@ -29694,6 +30009,106 @@
     ]
   },
   {
+    "slug": "oh-my-pi",
+    "name": "Oh My Pi",
+    "description": "Oh My Pi CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "development",
+    "subcategory": "cli-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://omp.sh",
+    "docs": "https://omp.sh/docs",
+    "sourceCode": "",
+    "icon": "oh-my-pi",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "oh-my-pi"
+    ],
+    "atGlance": "Oh My Pi is a supported CLI provider for AI-assisted coding workflows.",
+    "fullDescription": "Oh My Pi (omp) is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. It features subagent orchestration, plan mode, and built-in LSP/DAP protocol support for an enhanced development workflow. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "Oh My Pi is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "aider",
+        "name": "Aider",
+        "description": "Aider is another supported AI coding CLI.",
+        "stars": 46550,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://aider.chat/docs/install.html"
+      },
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "codebuff",
+        "name": "Codebuff",
+        "description": "Codebuff is another supported AI coding CLI.",
+        "stars": 5511,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
     "slug": "qodercli",
     "name": "Qoder CLI",
     "description": "Qoder CLI setup reference for AI-assisted terminal coding workflows.",
@@ -29992,6 +30407,107 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://autohand.ai/code/"
+      }
+    ]
+  },
+  {
+    "slug": "zcode",
+    "name": "ZCode",
+    "description": "ZCode CLI setup reference for AI-assisted terminal coding workflows.",
+    "category": "AI CLI",
+    "parentCategory": "development",
+    "subcategory": "cli-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "CLI"
+    ],
+    "deployment": [
+      "Local CLI"
+    ],
+    "website": "https://zcode.z.ai/en",
+    "docs": "https://zcode.z.ai/en",
+    "sourceCode": "",
+    "icon": "zcode",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "cli-tools",
+      "ai",
+      "cli",
+      "coding-agent",
+      "terminal",
+      "zcode",
+      "glm"
+    ],
+    "atGlance": "ZCode is a supported CLI provider for AI-assisted coding workflows powered by the GLM-5.2 model.",
+    "fullDescription": "ZCode is cataloged as a CLI tool for developers who want AI-assisted coding from the terminal. It is an Agentic Development Environment (ADE) deeply integrated with the GLM-5.2 model, providing a persistent 1M-token context window for long-horizon development tasks including planning, coding, debugging, testing, and deployment. The setup command is shown directly on this CLI tool page for quick installation or authentication.",
+    "coreFeatures": [
+      {
+        "name": "Supported CLI Provider",
+        "description": "ZCode is tracked as a supported AI coding CLI for terminal-based development workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Setup Command",
+        "description": "The primary install or authentication command is available directly on the detail page.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Terminal Workflow",
+        "description": "Designed for command-line setup and day-to-day developer workflows.",
+        "icon": "check"
+      },
+      {
+        "name": "Official Reference",
+        "description": "Links point to the provider documentation, install page, or public source repository.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Catalog Grouping",
+        "description": "Grouped with other AI CLI tools for quick comparison and lookup.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "aider",
+        "name": "Aider",
+        "description": "Aider is another supported AI coding CLI.",
+        "stars": 46550,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://aider.chat/docs/install.html"
+      },
+      {
+        "slug": "opencode-cli",
+        "name": "OpenCode",
+        "description": "OpenCode is another supported AI coding CLI.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://opencode.ai/docs/cli/"
+      },
+      {
+        "slug": "claude-code",
+        "name": "Claude Code",
+        "description": "Claude Code is another supported AI coding CLI.",
+        "stars": 133648,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://docs.anthropic.com/claude/docs/claude-code"
       }
     ]
   },

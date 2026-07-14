@@ -173,6 +173,15 @@
     "height": 600,
     "bytes": 45504
   },
+  "animmaster-lib": {
+    "image": "/previews/animmaster-lib.webp",
+    "small": "/previews/animmaster-lib-sm.webp",
+    "sourceUrl": "https://animmasterlib.dev/",
+    "capturedAt": "2026-07-14T13:03:15.090Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 22288
+  },
   "animos": {
     "image": "/previews/animos.webp",
     "small": "/previews/animos-sm.webp",
@@ -985,6 +994,15 @@
     "width": 960,
     "height": 600,
     "bytes": 35694
+  },
+  "duckdb": {
+    "image": "/previews/duckdb.webp",
+    "small": "/previews/duckdb-sm.webp",
+    "sourceUrl": "https://duckdb.org/",
+    "capturedAt": "2026-07-14T13:03:07.554Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20812
   },
   "efecto": {
     "image": "/previews/efecto.webp",
@@ -1858,6 +1876,15 @@
     "height": 600,
     "bytes": 53078
   },
+  "langchain": {
+    "image": "/previews/langchain.webp",
+    "small": "/previews/langchain-sm.webp",
+    "sourceUrl": "https://langchain.com/",
+    "capturedAt": "2026-07-14T13:21:39.472Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20890
+  },
   "learn-anything": {
     "image": "/previews/learn-anything.webp",
     "small": "/previews/learn-anything-sm.webp",
@@ -2413,6 +2440,15 @@
     "bytes": 9894,
     "fallback": true
   },
+  "oh-my-pi": {
+    "image": "/previews/oh-my-pi.webp",
+    "small": "/previews/oh-my-pi-sm.webp",
+    "sourceUrl": "https://omp.sh/",
+    "capturedAt": "2026-07-14T13:03:14.606Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 24124
+  },
   "once-ui": {
     "image": "/previews/once-ui.webp",
     "small": "/previews/once-ui-sm.webp",
@@ -2638,6 +2674,15 @@
     "width": 960,
     "height": 600,
     "bytes": 40926
+  },
+  "pocketbase": {
+    "image": "/previews/pocketbase.webp",
+    "small": "/previews/pocketbase-sm.webp",
+    "sourceUrl": "https://pocketbase.io/",
+    "capturedAt": "2026-07-14T13:03:10.239Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 18062
   },
   "posthog": {
     "image": "/previews/posthog.webp",
@@ -3103,6 +3148,15 @@
     "height": 600,
     "bytes": 23128
   },
+  "skiper-ui": {
+    "image": "/previews/skiper-ui.webp",
+    "small": "/previews/skiper-ui-sm.webp",
+    "sourceUrl": "https://skiper-ui.com/",
+    "capturedAt": "2026-07-14T13:03:15.938Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 9812
+  },
   "sleek": {
     "image": "/previews/sleek.webp",
     "small": "/previews/sleek-sm.webp",
@@ -3546,6 +3600,15 @@
     "height": 600,
     "bytes": 41294
   },
+  "vengenceui": {
+    "image": "/previews/vengenceui.webp",
+    "small": "/previews/vengenceui-sm.webp",
+    "sourceUrl": "https://www.vengenceui.com/",
+    "capturedAt": "2026-07-14T13:03:06.962Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20954
+  },
   "venngage": {
     "image": "/previews/venngage.webp",
     "small": "/previews/venngage-sm.webp",
@@ -3755,6 +3818,15 @@
     "width": 960,
     "height": 600,
     "bytes": 10368
+  },
+  "zcode": {
+    "image": "/previews/zcode.webp",
+    "small": "/previews/zcode-sm.webp",
+    "sourceUrl": "https://zcode.z.ai/en",
+    "capturedAt": "2026-07-14T13:21:32.919Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34114
   },
   "zooqle": {
     "image": "/previews/zooqle.webp",
