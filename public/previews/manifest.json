@@ -1248,6 +1248,15 @@
     "height": 600,
     "bytes": 29630
   },
+  "gallereee": {
+    "image": "/previews/gallereee.webp",
+    "small": "/previews/gallereee-sm.webp",
+    "sourceUrl": "https://www.gallereee.com/",
+    "capturedAt": "2026-07-15T08:04:05.899Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21966
+  },
   "gamma": {
     "image": "/previews/gamma.webp",
     "small": "/previews/gamma-sm.webp",
@@ -2847,6 +2856,15 @@
     "height": 600,
     "bytes": 18644
   },
+  "recent-design": {
+    "image": "/previews/recent-design.webp",
+    "small": "/previews/recent-design-sm.webp",
+    "sourceUrl": "https://recent.design/",
+    "capturedAt": "2026-07-15T08:08:34.412Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23148
+  },
   "reflex": {
     "image": "/previews/reflex.webp",
     "small": "/previews/reflex-sm.webp",
@@ -2983,6 +3001,15 @@
     "width": 960,
     "height": 600,
     "bytes": 28954
+  },
+  "rust-ui": {
+    "image": "/previews/rust-ui.webp",
+    "small": "/previews/rust-ui-sm.webp",
+    "sourceUrl": "https://rust-ui.com/",
+    "capturedAt": "2026-07-15T08:05:58.832Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23594
   },
   "rutracker": {
     "image": "/previews/rutracker.webp",

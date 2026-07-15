@@ -1,0 +1,81 @@
+slug: gallereee
+name: Gallereee - Collection of the Best Portfolios on the Web
+description: >-
+  Gallereee - Collection of the Best Portfolios on the Web bookmarked for
+  inspiration resources.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.gallereee.com/
+docs: https://www.gallereee.com/
+sourceCode: ''
+icon: gallereee
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+atGlance: Collection of the Best Portfolios on the Web
+fullDescription: >-
+  Gallereee is a curated online gallery showcasing the best portfolio websites
+  from independent creators and top-tier design studios. Browse by role (agencies,
+  designers, developers, photographers) or style (minimal, bold, dark, experimental)
+  to find real references and spark new ideas. Updated weekly with fresh submissions.
+coreFeatures:
+  - name: Curated Portfolio Gallery
+    description: >-
+      Handpicked collection of high-quality portfolio websites for design
+      inspiration and reference.
+    icon: check
+  - name: Role & Style Filtering
+    description: Browse by creator role or design aesthetic to find relevant references.
+    icon: check
+additionalFeatures:
+  - name: Weekly Updates
+    description: Fresh portfolio submissions added every week to stay current with trends.
+    icon: check
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
+  - slug: godly
+    name: Godly - Astronomically good web design inspiration
+    description: Godly - Astronomically good web design inspiration bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://godly.website/
+  - slug: landingfolio
+    name: The Best Landing Page Design Inspiration, Templates and More | Landingfolio
+    description: >-
+      The Best Landing Page Design Inspiration, Templates and More | Landingfolio bookmarked for
+      inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.landingfolio.com/

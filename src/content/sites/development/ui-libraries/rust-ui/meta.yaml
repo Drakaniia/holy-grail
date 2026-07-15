@@ -1,0 +1,83 @@
+slug: rust-ui
+name: Rust UI
+description: Copy-paste UI components for building full-stack Leptos applications with Tailwind CSS.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://rust-ui.com/
+docs: https://rust-ui.com/
+sourceCode: ''
+icon: rust-ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - rust
+  - leptos
+atGlance: Copy-paste UI components for the Leptos Rust framework.
+fullDescription: >-
+  Rust UI is a component registry and UI library designed for the Leptos web
+  framework and Rust full-stack applications. It provides a collection of
+  pre-built, reusable UI components following a copy, paste, and customize
+  model — similar to shadcn/ui but for the Leptos ecosystem. Components are
+  styled with Tailwind CSS and cover data display, forms, interactive elements,
+  identity panels, layouts, and more.
+coreFeatures:
+  - name: Leptos Component Registry
+    description: Pre-built UI components covering data display, forms, modals, buttons, profiles, and settings for Leptos applications.
+    icon: check
+  - name: Copy-Paste Model
+    description: Follows the copy, paste, and customize workflow with Tailwind CSS for easy integration into Rust projects.
+    icon: check
+  - name: Application UI Patterns
+    description: Provides practical interface pieces for common full-stack Rust application screens.
+    icon: check
+additionalFeatures:
+  - name: Tailwind CSS Styling
+    description: Components are styled with Tailwind CSS for easy customization and theming.
+    icon: check
+  - name: Light & Dark Mode
+    description: Components ship with CSS variable support for light and dark color schemes.
+    icon: check
+  - name: Common UI Patterns
+    description: Covers tables, forms, modals, buttons, profiles, settings, and more.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: originui
+    name: Origin UI
+    description: Copy-paste Tailwind and React components now surfaced through the Coss UI ecosystem.
+    stars: 10117
+    addedDaysAgo: 0
+    verified: true
+    website: https://originui.com/
+  - slug: motion-primitives
+    name: Motion Primitives
+    description: Composable animated React primitives for building motion-rich product interfaces.
+    stars: 5602
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion-primitives.com/

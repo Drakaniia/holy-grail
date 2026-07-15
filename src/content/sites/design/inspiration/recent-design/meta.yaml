@@ -1,0 +1,84 @@
+slug: recent-design
+name: Recent Design - Curated Design Inspiration & Tools
+description: >-
+  Recent Design - Curated Design Inspiration & Tools bookmarked for inspiration
+  resources.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://recent.design/
+docs: https://recent.design/
+sourceCode: ''
+icon: recent-design
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+atGlance: Curated Design Inspiration & Tools
+fullDescription: >-
+  Recent Design is a curated creative feed that aggregates and highlights
+  exceptional design work from across the internet. Founded in 2023 and operated
+  by the creative studio System, it features galleries for websites, app icons,
+  OG images, and design disciplines including branding, product design,
+  typography, motion, illustration, 3D, and more. Also includes a tools
+  directory and weekly roundups.
+coreFeatures:
+  - name: Curated Inspiration Galleries
+    description: >-
+      Handpicked collection of websites, app icons, OG images, and design
+      discipline showcases.
+    icon: check
+  - name: Tools Directory
+    description: Curated list of recommended design software, AI tools, and website builders.
+    icon: check
+  - name: Weekly Roundups
+    description: Regular newsletter-style updates on the best recent design work discovered on the web.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Quality Over Quantity
+    description: Prioritizes high-quality examples with a focus on diverse design work.
+    icon: check
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
+  - slug: godly
+    name: Godly - Astronomically good web design inspiration
+    description: Godly - Astronomically good web design inspiration bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://godly.website/
+  - slug: maxibestof
+    name: Best website design & fonts inspiration feed
+    description: Best website design & fonts inspiration feed bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://maxibestof.one/
