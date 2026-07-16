@@ -1,0 +1,83 @@
+slug: aitmpl
+name: AI Templates (AITMPL) - Claude Code Component Marketplace
+description: Component marketplace for Anthropic's Claude Code with 1,000+ pre-built agents, slash commands, MCP integrations, hooks, and settings.
+category: AI Agent Skills
+parentCategory: ai
+subcategory: agent-skills
+stars: 29557
+watchers: 262
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+website: https://www.aitmpl.com
+docs: https://docs.aitmpl.com/introduction
+sourceCode: https://github.com/davila7/claude-code-templates
+icon: aitmpl
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ai
+  - agents
+  - skills
+  - cli
+  - agent-skills
+atGlance: Component marketplace for Claude Code with 1,000+ pre-built agents, commands, MCPs, hooks, and settings.
+fullDescription: >-
+  AITMPL (AI Templates) is a component marketplace and configuration library for Anthropic's
+  Claude Code. It provides over 1,000 ready-to-use components including specialized AI agent
+  personas, custom slash commands, Model Context Protocol (MCP) integrations, pre-commit hooks,
+  and performance settings. Install complex stacks with a single npx command and supercharge
+  your Claude Code workflow with battle-tested configurations shared by the community.
+coreFeatures:
+  - name: Agent Skill Discovery
+    description: Browse reusable agents and components for Claude Code, including specialized personas for frontend, security, DevOps, and data science.
+    icon: check
+  - name: CLI Install Flow
+    description: Documentation keeps the npx install workflow close to the catalog for zero-config setup.
+    icon: check
+additionalFeatures:
+  - name: MCP Integrations
+    description: Connect Claude Code with GitHub, AWS, Docker, databases, and other external services.
+    icon: check
+  - name: Interactive Stack Builder
+    description: Browse and select components visually on the website, then get a ready-to-run install command.
+    icon: check
+  - name: Analytics Dashboard
+    description: Track token usage, monitor conversations, and diagnose configuration health.
+    icon: check
+  - name: Community Templates
+    description: Battle-tested configurations shared by the community via an MIT-licensed GitHub repository.
+    icon: check
+similarTools:
+  - slug: skills-sh
+    name: Skills
+    description: Open agent skills directory and leaderboard for reusable AI agent capabilities.
+    stars: 19541
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.skills.sh/
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/
+  - slug: lobehub-skills
+    name: LobeHub Skills Marketplace
+    description: Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.
+    stars: 78234
+    addedDaysAgo: 0
+    verified: true
+    website: https://lobehub.com/skills

@@ -1,0 +1,78 @@
+slug: nosignups
+name: NoSignups - No-Registration Tool Directory
+description: Curated directory of web-based tools that work instantly in your browser without requiring signups, accounts, or tracking.
+category: AI
+parentCategory: ai
+subcategory: others
+stars: 1658
+watchers: 2
+addedDaysAgo: 0
+license: GPL-3.0
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://nosignups.net
+docs: https://nosignups.net
+sourceCode: https://github.com/BraveOPotato/FckSignups
+icon: nosignups
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - tools
+  - directory
+  - privacy
+atGlance: Curated open-source directory of web tools that work immediately without account signups or tracking.
+fullDescription: >-
+  NoSignups (formerly FckSignups) is a curated, open-source directory of web-based tools
+  that can be used instantly in a browser without requiring registration, email signups,
+  accounts, or tracking. Covers categories from development and AI to design, productivity,
+  writing, privacy, utilities, and media. Built with React and TypeScript under a GPL-3.0
+  license, the project champions a zero-bullshit philosophy against registration walls.
+coreFeatures:
+  - name: AI Tools Directory
+    description: Curated collection of AI tools that work without account signups or login walls.
+    icon: check
+  - name: No Registration
+    description: Every tool listed is vetted to ensure it requires no account or sign-up to function.
+    icon: check
+additionalFeatures:
+  - name: Multi-Category Coverage
+    description: Tools across dev, AI, design, productivity, writing, privacy, utilities, and media.
+    icon: check
+  - name: Privacy-First
+    description: Platform itself avoids tracking and analytics — respects user privacy.
+    icon: check
+  - name: Open Source Directory
+    description: Built with React and TypeScript, source available on GitHub under GPL-3.0.
+    icon: check
+similarTools:
+  - slug: everydev
+    name: EveryDev - AI Developer Community and Tools Directory
+    description: Community-driven platform for AI developers to discover tools, share projects, and stay current.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.everydev.ai
+  - slug: agentskill
+    name: AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More
+    description: Agent skill directory and marketplace for AI coding assistants.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://agentskill.sh/
+  - slug: namethatui
+    name: NameThatUI - Visual Dictionary of UI Elements
+    description: Visual reference library for identifying and naming UI elements with precise terminology.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://namethatui.com

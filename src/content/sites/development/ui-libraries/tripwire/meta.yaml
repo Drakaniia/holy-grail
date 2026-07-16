@@ -1,0 +1,81 @@
+slug: tripwire
+name: Dither-Kit by Tripwire
+description: Dependency-free dithered chart components for shadcn/ui with canvas-based rendering and a recharts-style API.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.tripwire.sh/dither-kit
+docs: https://www.tripwire.sh/dither-kit
+sourceCode: ''
+icon: tripwire
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - charts
+atGlance: Dithered chart components for shadcn/ui with canvas rendering and ordered-dither fills.
+fullDescription: >-
+  Dither-Kit is a UI component library hosted on Tripwire that provides dithered chart components
+  for shadcn/ui projects. It includes area, line, bar, pie, and radar charts with a tiny canvas
+  rendering engine — no external charting dependencies required. The components use a recharts-style
+  children-as-config API and feature ordered-dither fills that remain legible in both light and
+  dark modes with built-in entrance animations. Installable via the shadcn CLI registry.
+coreFeatures:
+  - name: Chart Component Library
+    description: Provides dithered area, line, bar, pie, and radar chart components with canvas rendering.
+    icon: check
+  - name: shadcn Registry Install
+    description: Chart components can be added through the shadcn CLI using the Tripwire registry.
+    icon: check
+  - name: Dependency-Free Rendering
+    description: Uses a tiny canvas engine with no external charting library dependencies.
+    icon: check
+additionalFeatures:
+  - name: Ordered-Dither Fills
+    description: Aesthetic dithering patterns that look great in both light and dark modes.
+    icon: check
+  - name: Built-in Animations
+    description: Entrance animations included for each chart component out of the box.
+    icon: check
+  - name: Recharts-Style API
+    description: Familiar children-as-config API pattern for developers using Recharts.
+    icon: check
+similarTools:
+  - slug: evilcharts
+    name: EvilCharts
+    description: Open-source chart components built with shadcn/ui and Recharts.
+    stars: 2539
+    addedDaysAgo: 0
+    verified: true
+    website: https://evilcharts.com/
+  - slug: tremor
+    name: Tremor
+    description: React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.
+    stars: 3425
+    addedDaysAgo: 0
+    verified: true
+    website: https://tremor.so/
+  - slug: bklit-ui
+    name: Backlit UI
+    description: Design engineered charts and components with beautiful, animated data visualizations.
+    stars: 800
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.bklit.com/
