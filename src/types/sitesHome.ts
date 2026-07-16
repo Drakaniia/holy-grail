@@ -1,30 +1,44 @@
-import type { HomePreviewItem } from '@/types/home'
-
 export type SitesHomeGroupKey = 'ai' | 'design' | 'development' | 'watch' | 'downloads'
 
-export interface SitesHomeMetric {
-  label: string
-  value: string
-  accent: string
-}
-
-export interface SitesHomeSubroute {
-  label: string
+/** Homepage tool card model derived from catalog Site entries. */
+export interface SitesHomeTool {
+  id: string
+  name: string
+  slug: string
+  logo: string
+  coverImage: string
+  coverImageSmall: string
+  description: string
+  category: string
+  categoryKey: string
+  verified: boolean
+  featured: boolean
+  trending: boolean
+  library?: string
+  website: string
+  screenshots: string[]
+  features: string[]
+  accentColor: string
   to: string
-  countLabel: string
+  parentCategory: SitesHomeGroupKey | string
+  stars: number
 }
 
-export interface SitesHomeCategorySummary {
+export interface SitesHomeCategoryItem {
   key: SitesHomeGroupKey
   name: string
-  route: string
   description: string
+  count: number
   countLabel: string
   accent: string
-  subroutes: SitesHomeSubroute[]
-  featuredNames: string[]
+  to: string
+  icon: string
 }
 
-export interface SitesHomePreviewItem extends HomePreviewItem {
-  parentCategory: SitesHomeGroupKey | string
+export interface SitesHomeLibraryItem {
+  id: string
+  name: string
+  count: number
+  countLabel: string
+  to: string
 }
