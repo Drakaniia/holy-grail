@@ -277,7 +277,7 @@ watch(totalPages, (pages) => {
 </script>
 
 <template>
-  <div class="bg-[#1f1f1f] text-white">
+  <div class="sites-page bg-[#1f1f1f] text-white">
     <div class="border-b border-gray-800">
       <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
@@ -466,3 +466,78 @@ watch(totalPages, (pages) => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/*
+  Theme tokens inherit into SiteCard and child components.
+  Dark defaults; light values apply when html.light is toggled.
+*/
+.sites-page {
+  --sp-bg: #1a1a1a;
+  --sp-surface: #222222;
+  --sp-surface-hover: #2a2a2a;
+  --sp-border: rgba(255, 255, 255, 0.08);
+  --sp-border-strong: rgba(255, 255, 255, 0.14);
+  --sp-text: #e8e8e8;
+  --sp-text-soft: rgba(255, 255, 255, 0.7);
+  --sp-text-muted: rgba(255, 255, 255, 0.5);
+  --sp-accent: #ff8c1a;
+
+  min-height: 100%;
+  background: var(--sp-bg);
+  color: var(--sp-text);
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+:global(html.light .sites-page) {
+  --sp-bg: var(--mocha-bg);
+  --sp-surface: var(--mocha-surface);
+  --sp-surface-hover: var(--mocha-surface-strong);
+  --sp-border: var(--mocha-border);
+  --sp-border-strong: var(--mocha-border-strong);
+  --sp-text: var(--mocha-text);
+  --sp-text-soft: var(--mocha-text-soft);
+  --sp-text-muted: var(--mocha-muted);
+  --sp-accent: #ff7a00;
+
+  background: var(--mocha-bg);
+  color: var(--mocha-text);
+}
+
+/* Override hardcoded dark-mode Tailwind utilities in light mode */
+:global(html.light .sites-page [class*='bg-\\[\\#1f1f1f\\]']) {
+  background-color: var(--mocha-surface) !important;
+}
+
+:global(html.light .sites-page [class*='text-white']) {
+  color: var(--mocha-text) !important;
+}
+
+:global(html.light .sites-page [class*='border-gray-800']) {
+  border-color: var(--mocha-border) !important;
+}
+
+:global(html.light .sites-page [class*='border-gray-700']) {
+  border-color: var(--mocha-border-strong) !important;
+}
+
+:global(html.light .sites-page [class*='text-gray-300']) {
+  color: var(--mocha-text-soft) !important;
+}
+
+:global(html.light .sites-page [class*='text-gray-400']),
+:global(html.light .sites-page [class*='text-gray-500']),
+:global(html.light .sites-page [class*='text-gray-600']) {
+  color: var(--mocha-muted) !important;
+}
+
+:global(html.light .sites-page [class*='shadow-\\[\\#1f1f1f\\]']) {
+  box-shadow: 0 18px 48px rgba(83, 55, 33, 0.16) !important;
+}
+
+:global(html.light .sites-page [style*='linear-gradient(to right']) {
+  background: var(--mocha-surface) !important;
+}
+</style>
