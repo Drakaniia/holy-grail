@@ -19,13 +19,19 @@ defineProps<{
     </div>
 
     <!-- Error -->
-    <div v-else-if="error" class="rounded-xl border border-gray-800 p-8 text-center text-sm text-gray-500">
+    <div
+      v-else-if="error"
+      class="rounded-xl border border-gray-800 p-8 text-center text-sm text-gray-500"
+    >
       <p>Failed to load SKILL.md content.</p>
       <p class="mt-1 text-gray-600">{{ error }}</p>
     </div>
 
     <!-- Empty -->
-    <div v-else-if="!contentHtml" class="rounded-xl border border-gray-800 p-8 text-center text-sm text-gray-500">
+    <div
+      v-else-if="!contentHtml"
+      class="rounded-xl border border-gray-800 p-8 text-center text-sm text-gray-500"
+    >
       No SKILL.md available.
     </div>
 

@@ -32,11 +32,7 @@ function selectTab(tab: Tab) {
 </script>
 
 <template>
-  <div
-    role="tablist"
-    aria-label="Skill detail sections"
-    class="flex border-b border-gray-800"
-  >
+  <div role="tablist" aria-label="Skill detail sections" class="flex border-b border-gray-800">
     <button
       v-for="tab in tabs"
       :key="tab.id"

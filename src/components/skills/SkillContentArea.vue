@@ -26,7 +26,7 @@ interface RelatedSkill {
   dateAdded: string
 }
 
-const props = defineProps<{
+defineProps<{
   activeTab: string
   skill: SkillInfo | null
   contentHtml: string
@@ -77,11 +77,7 @@ const emit = defineEmits<{
 
     <!-- SKILL.md Tab -->
     <div v-else-if="activeTab === 'skillmd'">
-      <SkillMDTab
-        :content-html="contentHtml"
-        :loading="contentLoading"
-        :error="contentError"
-      />
+      <SkillMDTab :content-html="contentHtml" :loading="contentLoading" :error="contentError" />
     </div>
 
     <!-- Resources Tab -->

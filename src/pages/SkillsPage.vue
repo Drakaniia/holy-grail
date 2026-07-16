@@ -192,7 +192,8 @@ watch(totalPages, (pages) => {
           <!-- Results count -->
           <div class="flex items-center gap-3">
             <span class="font-mono text-xs text-gray-500">
-              [{{ String(pageRangeStart).padStart(2, '0') }}-{{ String(pageRangeEnd).padStart(2, '0')
+              [{{ String(pageRangeStart).padStart(2, '0') }}-{{
+                String(pageRangeEnd).padStart(2, '0')
               }}/{{ displaySkills.length }}]
             </span>
           </div>

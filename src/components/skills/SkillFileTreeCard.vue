@@ -52,7 +52,9 @@ const headings = computed<Heading[]>(() => {
           :key="i"
           @click="emit('scroll-to-heading', h.text)"
           class="flex w-full items-center gap-1 rounded px-2 py-1 text-left text-xs transition-colors hover:bg-gray-800 hover:text-white"
-          :class="h.level === 1 ? 'text-gray-300' : h.level === 2 ? 'text-gray-400' : 'text-gray-500'"
+          :class="
+            h.level === 1 ? 'text-gray-300' : h.level === 2 ? 'text-gray-400' : 'text-gray-500'
+          "
           :style="{ paddingLeft: `${(h.level - 1) * 12 + 8}px` }"
         >
           <ChevronRight class="h-3 w-3 shrink-0" />

@@ -27,10 +27,7 @@ function formatNumber(n: number): string {
   <section>
     <h2 class="mb-4 text-2xl font-semibold text-white">Related Skills</h2>
 
-    <div
-      v-if="skills.length > 0"
-      class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"
-    >
+    <div v-if="skills.length > 0" class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
       <RouterLink
         v-for="s in skills"
         :key="s.slug"
@@ -72,9 +69,7 @@ function formatNumber(n: number): string {
         </div>
 
         <!-- Category badge -->
-        <span
-          class="mt-2 inline-block rounded-md bg-gray-800 px-2 py-0.5 text-xs text-gray-400"
-        >
+        <span class="mt-2 inline-block rounded-md bg-gray-800 px-2 py-0.5 text-xs text-gray-400">
           {{ s.category }}
         </span>
       </RouterLink>
