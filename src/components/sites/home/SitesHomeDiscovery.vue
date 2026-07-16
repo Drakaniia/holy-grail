@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import {
-  Code2,
-  Download,
-  Layers,
-  Palette,
-  Play,
-  Sparkles,
-} from 'lucide-vue-next'
+import { Code2, Download, Layers, Palette, Play, Sparkles } from 'lucide-vue-next'
 import type { Component } from 'vue'
 import SitesHomeSectionHeader from '@/components/sites/home/SitesHomeSectionHeader.vue'
 import type { SitesHomeCategoryItem, SitesHomeLibraryItem } from '@/types/sitesHome'

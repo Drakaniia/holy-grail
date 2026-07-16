@@ -30,7 +30,9 @@ const imageFailed = shallowRef(false)
         class="featured-card__image"
         @error="imageFailed = true"
       />
-      <span v-else class="featured-card__fallback" aria-hidden="true">{{ tool.name.charAt(0) }}</span>
+      <span v-else class="featured-card__fallback" aria-hidden="true">{{
+        tool.name.charAt(0)
+      }}</span>
     </span>
 
     <span class="featured-card__meta">
