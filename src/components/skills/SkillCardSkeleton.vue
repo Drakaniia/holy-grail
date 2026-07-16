@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="relative rounded-xl border border-gray-800 bg-[#1f1f1f]"
-    aria-hidden="true"
-  >
+  <div class="relative rounded-xl border border-gray-800 bg-[#1f1f1f]" aria-hidden="true">
     <div class="p-4">
       <!-- Header row: avatar skeleton + title skeleton -->
       <div class="flex items-center gap-3 pr-8 mb-3">

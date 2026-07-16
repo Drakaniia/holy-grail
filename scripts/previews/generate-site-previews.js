@@ -433,7 +433,11 @@ async function main() {
     JSON.stringify(
       {
         mode: options.dryRun ? 'dry-run' : 'apply',
-        selection: options.all ? 'all matching sites' : options.refresh ? 'existing previews only (refresh)' : 'missing previews only',
+        selection: options.all
+          ? 'all matching sites'
+          : options.refresh
+            ? 'existing previews only (refresh)'
+            : 'missing previews only',
         browserPath,
         candidates: queue.length,
         concurrency: options.concurrency,

@@ -28,7 +28,9 @@ async function copyPrompt() {
     document.body.removeChild(textarea)
   }
   copied.value = true
-  setTimeout(() => { copied.value = false }, 2000)
+  setTimeout(() => {
+    copied.value = false
+  }, 2000)
 }
 
 const instructionText = computed(() =>
@@ -55,14 +57,18 @@ const instructionText = computed(() =>
       <button
         @click="segment = 'agent'"
         class="rounded-md px-3 py-1 text-xs font-medium transition-all"
-        :class="segment === 'agent' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'"
+        :class="
+          segment === 'agent' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'
+        "
       >
         Agent
       </button>
       <button
         @click="segment = 'human'"
         class="rounded-md px-3 py-1 text-xs font-medium transition-all"
-        :class="segment === 'human' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'"
+        :class="
+          segment === 'human' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:text-gray-300'
+        "
       >
         Human
       </button>
@@ -72,7 +78,7 @@ const instructionText = computed(() =>
 
     <pre
       class="mb-3 overflow-x-auto rounded-lg border border-gray-700 bg-gray-900 p-2.5 font-mono text-xs text-gray-300"
-    >{{ installCommand }}</pre>
+      >{{ installCommand }}</pre>
 
     <button
       @click="copyPrompt"

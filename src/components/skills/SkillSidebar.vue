@@ -20,10 +20,7 @@ const emit = defineEmits<{
     <div class="lg:sticky lg:top-24 lg:space-y-4">
       <SkillCTACard :install-command="installCommand" />
 
-      <SkillInstallCard
-        :install-command="installCommand"
-        @view-details="emit('view-details')"
-      />
+      <SkillInstallCard :install-command="installCommand" @view-details="emit('view-details')" />
 
       <SkillFileTreeCard
         :content-html="contentHtml"

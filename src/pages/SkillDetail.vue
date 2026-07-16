@@ -120,13 +120,6 @@ function onScrollToHeading(headingText: string) {
     }
   }
 }
-
-function formatNumber(num: number): string {
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  }
-  return num.toString()
-}
 </script>
 
 <template>
@@ -151,10 +144,7 @@ function formatNumber(num: number): string {
       </div>
 
       <!-- Navigation Tabs -->
-      <SkillNavigationTabs
-        :active-tab="activeTab"
-        @update:active-tab="activeTab = $event"
-      />
+      <SkillNavigationTabs :active-tab="activeTab" @update:active-tab="activeTab = $event" />
 
       <!-- Main Content + Sidebar (two-column) -->
       <div class="mt-6 flex flex-col gap-6 lg:flex-row">
@@ -212,9 +202,7 @@ function formatNumber(num: number): string {
                 </div>
               </div>
               <p class="mb-3 line-clamp-2 text-xs text-gray-400">{{ s.description }}</p>
-              <span
-                class="inline-block rounded-md bg-gray-800 px-2 py-0.5 text-xs text-gray-400"
-              >
+              <span class="inline-block rounded-md bg-gray-800 px-2 py-0.5 text-xs text-gray-400">
                 {{ s.category }}
               </span>
             </router-link>

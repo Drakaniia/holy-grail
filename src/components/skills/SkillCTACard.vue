@@ -23,7 +23,9 @@ async function copyCommand() {
     document.body.removeChild(textarea)
   }
   copied.value = true
-  setTimeout(() => { copied.value = false }, 2000)
+  setTimeout(() => {
+    copied.value = false
+  }, 2000)
 }
 </script>
 

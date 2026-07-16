@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const props = defineProps<{
+defineProps<{
   skill: {
     title: string
     parentCategory?: string
@@ -17,10 +17,7 @@ function handleNavigate(path: string) {
 
 <template>
   <nav v-if="skill" class="mb-6 flex items-center gap-2 text-xs text-gray-500">
-    <button
-      @click="handleNavigate('/skills/skills')"
-      class="transition-colors hover:text-white"
-    >
+    <button @click="handleNavigate('/skills/skills')" class="transition-colors hover:text-white">
       Skills
     </button>
     <template v-if="skill.parentCategory">

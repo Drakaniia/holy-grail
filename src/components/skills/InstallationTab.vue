@@ -24,7 +24,9 @@ async function copyCommand() {
     document.body.removeChild(textarea)
   }
   copied.value = true
-  setTimeout(() => { copied.value = false }, 2000)
+  setTimeout(() => {
+    copied.value = false
+  }, 2000)
 }
 
 const instructionText = computed(() =>
@@ -43,14 +45,18 @@ const instructionText = computed(() =>
       <button
         @click="segment = 'agent'"
         class="rounded-md px-4 py-1.5 text-sm font-medium transition-all"
-        :class="segment === 'agent' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-gray-300'"
+        :class="
+          segment === 'agent' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-gray-300'
+        "
       >
         I'm an Agent
       </button>
       <button
         @click="segment = 'human'"
         class="rounded-md px-4 py-1.5 text-sm font-medium transition-all"
-        :class="segment === 'human' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-gray-300'"
+        :class="
+          segment === 'human' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-gray-300'
+        "
       >
         I'm a Human
       </button>
@@ -63,7 +69,7 @@ const instructionText = computed(() =>
       <div class="flex items-stretch gap-2">
         <pre
           class="flex-1 overflow-x-auto rounded-lg border border-gray-700 bg-gray-900 p-3 font-mono text-sm text-gray-300"
-        >{{ installCommand }}</pre>
+          >{{ installCommand }}</pre>
         <button
           @click="copyCommand"
           class="flex shrink-0 items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-all"
