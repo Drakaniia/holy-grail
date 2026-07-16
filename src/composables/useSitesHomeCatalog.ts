@@ -355,10 +355,7 @@ export function useSitesHomeCatalog(options: {
     if (pool.length === 0) return []
 
     const featured = pool.filter((tool) => tool.featured)
-    const popular = sortSitesForTab(
-      options.sites.value.filter(hasPreview),
-      'popular',
-    )
+    const popular = sortSitesForTab(options.sites.value.filter(hasPreview), 'popular')
       .map((site) => pool.find((tool) => tool.slug === site.slug))
       .filter((tool): tool is SitesHomeTool => Boolean(tool))
 

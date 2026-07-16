@@ -69,7 +69,10 @@ function onPointerCancel() {
     @pointerup="onPointerUp"
     @pointercancel="onPointerCancel"
   >
-    <div v-if="isLoading && tools.length === 0" class="hero-carousel__shell hero-carousel__shell--skeleton">
+    <div
+      v-if="isLoading && tools.length === 0"
+      class="hero-carousel__shell hero-carousel__shell--skeleton"
+    >
       <div class="hero-carousel__col hero-carousel__col--left">
         <span class="hero-carousel__sk hero-carousel__sk--logo hg-skeleton"></span>
         <span class="hero-carousel__sk hero-carousel__sk--title hg-skeleton"></span>
@@ -80,7 +83,11 @@ function onPointerCancel() {
         <span class="hero-carousel__sk hero-carousel__sk--shot hg-skeleton"></span>
       </div>
       <div class="hero-carousel__col hero-carousel__col--right">
-        <span v-for="n in 4" :key="n" class="hero-carousel__sk hero-carousel__sk--feature hg-skeleton"></span>
+        <span
+          v-for="n in 4"
+          :key="n"
+          class="hero-carousel__sk hero-carousel__sk--feature hg-skeleton"
+        ></span>
       </div>
     </div>
 
@@ -102,7 +109,9 @@ function onPointerCancel() {
                 height="56"
                 @error="logoFailed = true"
               />
-              <span v-else class="hero-carousel__logo-fallback">{{ activeTool.name.charAt(0) }}</span>
+              <span v-else class="hero-carousel__logo-fallback">{{
+                activeTool.name.charAt(0)
+              }}</span>
             </div>
 
             <div class="hero-carousel__name-row">
@@ -117,13 +126,15 @@ function onPointerCancel() {
             <p class="hero-carousel__description">{{ activeTool.description }}</p>
             <span class="hero-carousel__category">{{ activeTool.category }}</span>
 
-            <RouterLink :to="activeTool.to" class="hero-carousel__cta">
-              View tool
-            </RouterLink>
+            <RouterLink :to="activeTool.to" class="hero-carousel__cta"> View tool </RouterLink>
           </div>
 
           <div class="hero-carousel__col hero-carousel__col--mid">
-            <RouterLink :to="activeTool.to" class="hero-carousel__preview" :aria-label="`Open ${activeTool.name}`">
+            <RouterLink
+              :to="activeTool.to"
+              class="hero-carousel__preview"
+              :aria-label="`Open ${activeTool.name}`"
+            >
               <img
                 v-if="!imageFailed"
                 :src="activeTool.coverImage"
@@ -143,7 +154,9 @@ function onPointerCancel() {
               :key="`${activeTool.id}-${feature}-${index}`"
               class="hero-carousel__feature"
             >
-              <span class="hero-carousel__feature-index">{{ String(index + 1).padStart(2, '0') }}</span>
+              <span class="hero-carousel__feature-index">{{
+                String(index + 1).padStart(2, '0')
+              }}</span>
               <span class="hero-carousel__feature-label">{{ feature }}</span>
             </div>
           </div>
@@ -328,7 +341,8 @@ function onPointerCancel() {
 
 .hero-carousel__category {
   width: fit-content;
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--sh-border-soft, rgba(255, 255, 255, 0.08)));
+  border: 1px solid
+    color-mix(in srgb, var(--accent) 40%, var(--sh-border-soft, rgba(255, 255, 255, 0.08)));
   border-radius: 9999px;
   background: color-mix(in srgb, var(--accent) 14%, transparent);
   padding: 0.35rem 0.75rem;
