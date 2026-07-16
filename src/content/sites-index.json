@@ -4018,6 +4018,112 @@
     ]
   },
   {
+    "slug": "aitmpl",
+    "name": "AI Templates (AITMPL) - Claude Code Component Marketplace",
+    "description": "Component marketplace for Anthropic's Claude Code with 1,000+ pre-built agents, slash commands, MCP integrations, hooks, and settings.",
+    "category": "AI Agent Skills",
+    "parentCategory": "ai",
+    "subcategory": "agent-skills",
+    "stars": 29557,
+    "watchers": 262,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.aitmpl.com",
+    "docs": "https://docs.aitmpl.com/introduction",
+    "sourceCode": "https://github.com/davila7/claude-code-templates",
+    "icon": "aitmpl",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "agents",
+      "skills",
+      "cli",
+      "agent-skills"
+    ],
+    "atGlance": "Component marketplace for Claude Code with 1,000+ pre-built agents, commands, MCPs, hooks, and settings.",
+    "fullDescription": "AITMPL (AI Templates) is a component marketplace and configuration library for Anthropic's Claude Code. It provides over 1,000 ready-to-use components including specialized AI agent personas, custom slash commands, Model Context Protocol (MCP) integrations, pre-commit hooks, and performance settings. Install complex stacks with a single npx command and supercharge your Claude Code workflow with battle-tested configurations shared by the community.",
+    "coreFeatures": [
+      {
+        "name": "Agent Skill Discovery",
+        "description": "Browse reusable agents and components for Claude Code, including specialized personas for frontend, security, DevOps, and data science.",
+        "icon": "check"
+      },
+      {
+        "name": "CLI Install Flow",
+        "description": "Documentation keeps the npx install workflow close to the catalog for zero-config setup.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "MCP Integrations",
+        "description": "Connect Claude Code with GitHub, AWS, Docker, databases, and other external services.",
+        "icon": "check"
+      },
+      {
+        "name": "Interactive Stack Builder",
+        "description": "Browse and select components visually on the website, then get a ready-to-run install command.",
+        "icon": "check"
+      },
+      {
+        "name": "Analytics Dashboard",
+        "description": "Track token usage, monitor conversations, and diagnose configuration health.",
+        "icon": "check"
+      },
+      {
+        "name": "Community Templates",
+        "description": "Battle-tested configurations shared by the community via an MIT-licensed GitHub repository.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "skills-sh",
+        "name": "Skills",
+        "description": "Open agent skills directory and leaderboard for reusable AI agent capabilities.",
+        "stars": 19541,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.skills.sh/"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      },
+      {
+        "slug": "lobehub-skills",
+        "name": "LobeHub Skills Marketplace",
+        "description": "Agent-first skills marketplace for publishing, browsing, and installing SKILL.md bundles.",
+        "stars": 78234,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lobehub.com/skills"
+      }
+    ]
+  },
+  {
     "slug": "headlessui",
     "name": "Headless UI",
     "description": "Unstyled accessible components from Tailwind Labs for React and Vue interfaces.",
@@ -8896,6 +9002,105 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://chanhdai.com/components"
+      }
+    ]
+  },
+  {
+    "slug": "nosignups",
+    "name": "NoSignups - No-Registration Tool Directory",
+    "description": "Curated directory of web-based tools that work instantly in your browser without requiring signups, accounts, or tracking.",
+    "category": "AI",
+    "parentCategory": "ai",
+    "subcategory": "others",
+    "stars": 1658,
+    "watchers": 2,
+    "addedDaysAgo": 0,
+    "license": "GPL-3.0",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://nosignups.net",
+    "docs": "https://nosignups.net",
+    "sourceCode": "https://github.com/BraveOPotato/FckSignups",
+    "icon": "nosignups",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "tools",
+      "directory",
+      "privacy"
+    ],
+    "atGlance": "Curated open-source directory of web tools that work immediately without account signups or tracking.",
+    "fullDescription": "NoSignups (formerly FckSignups) is a curated, open-source directory of web-based tools that can be used instantly in a browser without requiring registration, email signups, accounts, or tracking. Covers categories from development and AI to design, productivity, writing, privacy, utilities, and media. Built with React and TypeScript under a GPL-3.0 license, the project champions a zero-bullshit philosophy against registration walls.",
+    "coreFeatures": [
+      {
+        "name": "AI Tools Directory",
+        "description": "Curated collection of AI tools that work without account signups or login walls.",
+        "icon": "check"
+      },
+      {
+        "name": "No Registration",
+        "description": "Every tool listed is vetted to ensure it requires no account or sign-up to function.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multi-Category Coverage",
+        "description": "Tools across dev, AI, design, productivity, writing, privacy, utilities, and media.",
+        "icon": "check"
+      },
+      {
+        "name": "Privacy-First",
+        "description": "Platform itself avoids tracking and analytics — respects user privacy.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Directory",
+        "description": "Built with React and TypeScript, source available on GitHub under GPL-3.0.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "everydev",
+        "name": "EveryDev - AI Developer Community and Tools Directory",
+        "description": "Community-driven platform for AI developers to discover tools, share projects, and stay current.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.everydev.ai"
+      },
+      {
+        "slug": "agentskill",
+        "name": "AI Agent Skills Directory & Marketplace - 127,000+ Skills for Claude, Cursor, Copilot & More",
+        "description": "Agent skill directory and marketplace for AI coding assistants.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://agentskill.sh/"
+      },
+      {
+        "slug": "namethatui",
+        "name": "NameThatUI - Visual Dictionary of UI Elements",
+        "description": "Visual reference library for identifying and naming UI elements with precise terminology.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://namethatui.com"
       }
     ]
   },
@@ -17221,6 +17426,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "namethatui",
+    "name": "NameThatUI - Visual Dictionary of UI Elements",
+    "description": "Visual reference library that helps designers, developers, and creators identify and name UI elements with precise, industry-standard terminology.",
+    "category": "AI Prompts",
+    "parentCategory": "ai",
+    "subcategory": "prompts",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://namethatui.com",
+    "docs": "https://namethatui.com",
+    "sourceCode": "",
+    "icon": "namethatui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "prompts",
+      "ui",
+      "design",
+      "reference"
+    ],
+    "atGlance": "Visual dictionary of UI elements with standard terminology for better AI prompting and design communication",
+    "fullDescription": "NameThatUI is a visual dictionary and reference library that helps designers, developers, and creators accurately name UI elements. Instead of vague descriptions like \"that pale pill behind the menu bar icon,\" you get precise industry-standard names like \"scrim,\" \"bento grid,\" or \"hamburger menu.\" Each entry includes cross-platform context, HTML/ARIA roles, and plain-English definitions. Using correct terminology leads to better AI prompting results and clearer technical communication.",
+    "coreFeatures": [
+      {
+        "name": "Visual UI Dictionary",
+        "description": "Browse and search a comprehensive library of UI elements with visual representations and standard names.",
+        "icon": "book"
+      },
+      {
+        "name": "Better AI Prompts",
+        "description": "Use precise UI terminology to get more accurate results from AI coding assistants and generative tools.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Cross-Platform Context",
+        "description": "See differences between web, macOS AppKit, SwiftUI, and other platform implementations.",
+        "icon": "layers"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "UI Vibe Atlas",
+        "description": "Name That Vibe section categorizes visual styles and design aesthetics terminology.",
+        "icon": "palette"
+      },
+      {
+        "name": "Plain-English Definitions",
+        "description": "Each element includes clear, jargon-free explanations of what it is and how it functions.",
+        "icon": "message"
+      },
+      {
+        "name": "Interactive Previews",
+        "description": "Hover and interact with element samples to see real behavior and transitions.",
+        "icon": "eye"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "uiguideline",
+        "name": "UI Guideline",
+        "description": "UI design rules, references, and guidelines bookmarked for design resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://uiguideline.com/"
+      },
+      {
+        "slug": "impeccable",
+        "name": "Impeccable: The missing upgrade to Anthropic's impeccable skill",
+        "description": "The missing upgrade to Anthropic's impeccable skill bookmarked for design skills resources.",
+        "stars": 29019,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://impeccable.style/"
+      },
+      {
+        "slug": "locofy",
+        "name": "Locofy.ai - Design to Code with AI",
+        "description": "AI-powered tool that converts designs into production-ready code, accelerating frontend development.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.locofy.ai/"
       }
     ]
   },
@@ -35718,6 +36028,110 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://motion-primitives.com/"
+      }
+    ]
+  },
+  {
+    "slug": "tripwire",
+    "name": "Dither-Kit by Tripwire",
+    "description": "Dependency-free dithered chart components for shadcn/ui with canvas-based rendering and a recharts-style API.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.tripwire.sh/dither-kit",
+    "docs": "https://www.tripwire.sh/dither-kit",
+    "sourceCode": "",
+    "icon": "tripwire",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "charts"
+    ],
+    "atGlance": "Dithered chart components for shadcn/ui with canvas rendering and ordered-dither fills.",
+    "fullDescription": "Dither-Kit is a UI component library hosted on Tripwire that provides dithered chart components for shadcn/ui projects. It includes area, line, bar, pie, and radar charts with a tiny canvas rendering engine — no external charting dependencies required. The components use a recharts-style children-as-config API and feature ordered-dither fills that remain legible in both light and dark modes with built-in entrance animations. Installable via the shadcn CLI registry.",
+    "coreFeatures": [
+      {
+        "name": "Chart Component Library",
+        "description": "Provides dithered area, line, bar, pie, and radar chart components with canvas rendering.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn Registry Install",
+        "description": "Chart components can be added through the shadcn CLI using the Tripwire registry.",
+        "icon": "check"
+      },
+      {
+        "name": "Dependency-Free Rendering",
+        "description": "Uses a tiny canvas engine with no external charting library dependencies.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Ordered-Dither Fills",
+        "description": "Aesthetic dithering patterns that look great in both light and dark modes.",
+        "icon": "check"
+      },
+      {
+        "name": "Built-in Animations",
+        "description": "Entrance animations included for each chart component out of the box.",
+        "icon": "check"
+      },
+      {
+        "name": "Recharts-Style API",
+        "description": "Familiar children-as-config API pattern for developers using Recharts.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "evilcharts",
+        "name": "EvilCharts",
+        "description": "Open-source chart components built with shadcn/ui and Recharts.",
+        "stars": 2539,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://evilcharts.com/"
+      },
+      {
+        "slug": "tremor",
+        "name": "Tremor",
+        "description": "React and Tailwind components for dashboards, charts, metrics, and data-heavy UIs.",
+        "stars": 3425,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://tremor.so/"
+      },
+      {
+        "slug": "bklit-ui",
+        "name": "Backlit UI",
+        "description": "Design engineered charts and components with beautiful, animated data visualizations.",
+        "stars": 800,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.bklit.com/"
       }
     ]
   },

@@ -127,6 +127,15 @@
     "height": 600,
     "bytes": 6834
   },
+  "aitmpl": {
+    "image": "/previews/aitmpl.webp",
+    "small": "/previews/aitmpl-sm.webp",
+    "sourceUrl": "https://www.aitmpl.com/",
+    "capturedAt": "2026-07-16T00:24:47.322Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 38028
+  },
   "aiven": {
     "image": "/previews/aiven.webp",
     "small": "/previews/aiven-sm.webp",
@@ -2292,6 +2301,15 @@
     "height": 600,
     "bytes": 35418
   },
+  "namethatui": {
+    "image": "/previews/namethatui.webp",
+    "small": "/previews/namethatui-sm.webp",
+    "sourceUrl": "https://namethatui.com/",
+    "capturedAt": "2026-07-16T00:24:44.107Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 22958
+  },
   "napkin": {
     "image": "/previews/napkin.webp",
     "small": "/previews/napkin-sm.webp",
@@ -2429,6 +2447,15 @@
     "width": 960,
     "height": 600,
     "bytes": 21454
+  },
+  "nosignups": {
+    "image": "/previews/nosignups.webp",
+    "small": "/previews/nosignups-sm.webp",
+    "sourceUrl": "https://nosignups.net/",
+    "capturedAt": "2026-07-16T00:24:43.120Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33816
   },
   "nucleoapp": {
     "image": "/previews/nucleoapp.webp",
@@ -3464,6 +3491,15 @@
     "width": 960,
     "height": 600,
     "bytes": 33134
+  },
+  "tripwire": {
+    "image": "/previews/tripwire.webp",
+    "small": "/previews/tripwire-sm.webp",
+    "sourceUrl": "https://www.tripwire.sh/dither-kit",
+    "capturedAt": "2026-07-16T00:24:46.637Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 36058
   },
   "turbosquid": {
     "image": "/previews/turbosquid.webp",

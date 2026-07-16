@@ -1,0 +1,83 @@
+slug: namethatui
+name: NameThatUI - Visual Dictionary of UI Elements
+description: Visual reference library that helps designers, developers, and creators identify and name UI elements with precise, industry-standard terminology.
+category: AI Prompts
+parentCategory: ai
+subcategory: prompts
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://namethatui.com
+docs: https://namethatui.com
+sourceCode: ''
+icon: namethatui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ai
+  - prompts
+  - ui
+  - design
+  - reference
+atGlance: Visual dictionary of UI elements with standard terminology for better AI prompting and design communication
+fullDescription: >-
+  NameThatUI is a visual dictionary and reference library that helps designers, developers, and
+  creators accurately name UI elements. Instead of vague descriptions like "that pale pill behind
+  the menu bar icon," you get precise industry-standard names like "scrim," "bento grid," or
+  "hamburger menu." Each entry includes cross-platform context, HTML/ARIA roles, and plain-English
+  definitions. Using correct terminology leads to better AI prompting results and clearer technical
+  communication.
+coreFeatures:
+  - name: Visual UI Dictionary
+    description: Browse and search a comprehensive library of UI elements with visual representations and standard names.
+    icon: book
+  - name: Better AI Prompts
+    description: Use precise UI terminology to get more accurate results from AI coding assistants and generative tools.
+    icon: sparkles
+  - name: Cross-Platform Context
+    description: See differences between web, macOS AppKit, SwiftUI, and other platform implementations.
+    icon: layers
+additionalFeatures:
+  - name: UI Vibe Atlas
+    description: Name That Vibe section categorizes visual styles and design aesthetics terminology.
+    icon: palette
+  - name: Plain-English Definitions
+    description: Each element includes clear, jargon-free explanations of what it is and how it functions.
+    icon: message
+  - name: Interactive Previews
+    description: Hover and interact with element samples to see real behavior and transitions.
+    icon: eye
+similarTools:
+  - slug: uiguideline
+    name: UI Guideline
+    description: UI design rules, references, and guidelines bookmarked for design resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://uiguideline.com/
+  - slug: impeccable
+    name: "Impeccable: The missing upgrade to Anthropic's impeccable skill"
+    description: The missing upgrade to Anthropic's impeccable skill bookmarked for design skills resources.
+    stars: 29019
+    addedDaysAgo: 0
+    verified: true
+    website: https://impeccable.style/
+  - slug: locofy
+    name: Locofy.ai - Design to Code with AI
+    description: AI-powered tool that converts designs into production-ready code, accelerating frontend development.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.locofy.ai/
