@@ -48,7 +48,7 @@
     "@vitejs/plugin-vue-jsx": "^5.1.6",
     "@vue/test-utils": "^2.4.11",
     "@vue/tsconfig": "^0.9.1",
-    "autoprefixer": "^10.5.2",
+    "autoprefixer": "^10.5.4",
     "eslint": "^10.7.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.73.0",
