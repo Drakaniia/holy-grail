@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/postcss": "^4.3.3",
     "@tsconfig/node22": "^22.0.5",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
