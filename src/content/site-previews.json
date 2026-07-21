@@ -3276,6 +3276,15 @@
     "bytes": 8240,
     "fallback": true
   },
+  "storage-to": {
+    "image": "/previews/storage-to.webp",
+    "small": "/previews/storage-to-sm.webp",
+    "sourceUrl": "https://storage.to/",
+    "capturedAt": "2026-07-19T13:35:49.755Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 10842
+  },
   "storyset": {
     "image": "/previews/storyset.webp",
     "small": "/previews/storyset-sm.webp",

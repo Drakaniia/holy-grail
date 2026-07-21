@@ -32839,6 +32839,115 @@
     ]
   },
   {
+    "slug": "storage-to",
+    "name": "storage.to",
+    "description": "Temporary file hosting and sharing platform for fast, secure, and private file transfers up to 25GB.",
+    "category": "File Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI",
+      "Desktop",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://storage.to",
+    "docs": "https://storage.to/docs",
+    "sourceCode": "",
+    "icon": "storage-to",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "file-hosting",
+      "file-sharing",
+      "storage",
+      "hosting"
+    ],
+    "atGlance": "Fast temporary file sharing up to 25GB with no signup required.",
+    "fullDescription": "storage.to is a fast, private, and secure temporary file hosting service. Upload files up to 25GB without creating an account, get a shareable link, and files auto-expire in 1-7 days. Powered by Cloudflare's global CDN with 300+ edge locations for fast downloads worldwide. Includes CLI tools, a desktop app, ShareX integration, and a REST API for developers.",
+    "coreFeatures": [
+      {
+        "name": "Fast File Sharing",
+        "description": "Upload files up to 25GB and get an instant shareable link — no signup required.",
+        "icon": "upload"
+      },
+      {
+        "name": "Auto-Expiring Links",
+        "description": "Files auto-delete after 1-7 days for privacy, with optional password protection.",
+        "icon": "clock"
+      },
+      {
+        "name": "Privacy First",
+        "description": "No tracking, no intrusive ads, and TLS + AES-256 encryption for all transfers.",
+        "icon": "shield"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "CLI & API",
+        "description": "Upload from the terminal or integrate using the REST API with presigned uploads and multipart support.",
+        "icon": "terminal"
+      },
+      {
+        "name": "Global CDN",
+        "description": "Powered by Cloudflare R2 and delivered through 300+ edge locations worldwide.",
+        "icon": "globe"
+      },
+      {
+        "name": "Unlimited Downloads",
+        "description": "Recipients can download as fast and as often as they want with no throttling.",
+        "icon": "zap"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "streamable",
+        "name": "Streamable",
+        "description": "Video hosting and sharing platform for uploading, editing, embedding, and sharing clips.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://streamable.com/"
+      },
+      {
+        "slug": "railway",
+        "name": "Railway",
+        "description": "Cloud application hosting and deployment platform for web services.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://railway.com/"
+      },
+      {
+        "slug": "vercel",
+        "name": "Vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 15723,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://vercel.com"
+      }
+    ]
+  },
+  {
     "slug": "streamable",
     "name": "Streamable",
     "description": "Video hosting and sharing platform for uploading, editing, embedding, and sharing clips.",
