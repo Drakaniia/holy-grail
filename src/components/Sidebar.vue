@@ -8,6 +8,7 @@ import {
   Download,
   Film,
   Palette,
+  Plug,
   Puzzle,
   Search,
   Sparkles,
@@ -84,14 +85,17 @@ const {
   showSitesSection,
   showSkillsSection,
   showExtensionsSection,
+  showMcpSection,
   visibleSkillsNav,
   visibleExtensionCategories,
+  visibleMcpCategories,
   visibleCompactSiteGroups,
   totalSkillCount,
   getSiteGroupCount,
   getSiteRouteCount,
   getSkillRouteCount,
   getExtensionRouteCount,
+  getMcpRouteCount,
   hasVisibleSidebarTabs,
 } = useSidebarSearch()
 
@@ -436,8 +440,53 @@ onUnmounted(() => {
           </Transition>
         </li>
 
+        <!-- MCP section -->
+        <li
+          v-if="showMcpSection"
+          :class="{ 'mt-6': showSitesSection || showExtensionsSection }"
+        >
+          <div class="flex w-full items-center gap-3 py-2 text-gray-500">
+            <Plug class="h-4 w-4" />
+            <span class="text-xs font-semibold uppercase tracking-wider">MCP</span>
+          </div>
+
+          <ul class="ml-4 space-y-0.5">
+            <li v-for="item in visibleMcpCategories" :key="item.name">
+              <RouterLink
+                :to="item.route"
+                class="group relative flex w-full items-center gap-3 rounded-md px-2 py-1.5 text-xs transition-colors"
+                :class="
+                  isActive(item.route)
+                    ? 'bg-[#1f1f1f] text-white'
+                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
+                "
+              >
+                <div
+                  v-if="isActive(item.route)"
+                  class="absolute bottom-1.5 left-0 top-1.5 w-0.5 bg-white"
+                />
+                <component :is="item.icon" class="h-3.5 w-3.5" />
+                <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
+                <span
+                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
+                  :class="
+                    isActive(item.route)
+                      ? 'text-zinc-300'
+                      : 'text-gray-600 group-hover:text-gray-300'
+                  "
+                >
+                  {{ getMcpRouteCount(item.route) }}
+                </span>
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
         <!-- Skills section -->
-        <li v-if="showSkillsSection" :class="{ 'mt-6': showSitesSection || showExtensionsSection }">
+        <li
+          v-if="showSkillsSection"
+          :class="{ 'mt-6': showSitesSection || showExtensionsSection || showMcpSection }"
+        >
           <div class="w-full flex items-center gap-3 text-gray-500 py-2">
             <Sparkles class="w-4 h-4" />
             <span class="text-xs font-semibold uppercase tracking-wider">Skills</span>

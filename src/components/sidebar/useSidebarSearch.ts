@@ -2,6 +2,7 @@ import { computed, shallowRef } from 'vue'
 import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
+import { useMcpStore } from '@/stores/mcp'
 import {
   aiSubcategories,
   designSubcategories,
@@ -10,6 +11,7 @@ import {
   downloadsSubcategories,
   skillsNav,
   extensionCategories,
+  mcpCategories,
   siteGroupNav,
   siteSubcategoryGroups,
   type SiteGroup,
@@ -19,6 +21,7 @@ export function useSidebarSearch() {
   const sitesStore = useSitesStore()
   const skillsStore = useSkillsStore()
   const extensionsStore = useExtensionsStore()
+  const mcpStore = useMcpStore()
 
   const sidebarSearch = shallowRef('')
 
@@ -241,8 +244,34 @@ export function useSidebarSearch() {
     return extensionRouteCounts.value[route] ?? 0
   }
 
+  const mcpSectionMatches = computed(
+    () => hasSidebarSearch.value && matchesSidebarSearch('MCP'),
+  )
+  const showAllMcpTabs = computed(() => !hasSidebarSearch.value || mcpSectionMatches.value)
+
+  const visibleMcpCategories = computed(() =>
+    filterSidebarItems(mcpCategories, showAllMcpTabs.value, 'MCP'),
+  )
+
+  const showMcpSection = computed(
+    () => showAllMcpTabs.value || visibleMcpCategories.value.length > 0,
+  )
+
+  const mcpRouteCounts = computed<Record<string, number>>(() => {
+    const counts: Record<string, number> = {}
+    for (const cat of mcpCategories) {
+      const key = cat.route.split('/').pop() || ''
+      counts[cat.route] = mcpStore.getServersByParentCategory(key).length
+    }
+    return counts
+  })
+
+  function getMcpRouteCount(route: string) {
+    return mcpRouteCounts.value[route] ?? 0
+  }
+
   const hasVisibleSidebarTabs = computed(
-    () => showSitesSection.value || showExtensionsSection.value || showSkillsSection.value,
+    () => showSitesSection.value || showExtensionsSection.value || showSkillsSection.value || showMcpSection.value,
   )
 
   return {
@@ -275,18 +304,22 @@ export function useSidebarSearch() {
     showSitesSection,
     showSkillsSection,
     showExtensionsSection,
+    showMcpSection,
     visibleSkillsNav,
     visibleExtensionCategories,
+    visibleMcpCategories,
     visibleCompactSiteGroups,
     totalSkillCount,
     siteGroupCounts,
     siteRouteCounts,
     skillRouteCounts,
     extensionRouteCounts,
+    mcpRouteCounts,
     getSiteGroupCount,
     getSiteRouteCount,
     getSkillRouteCount,
     getExtensionRouteCount,
+    getMcpRouteCount,
     hasVisibleSidebarTabs,
   }
 }

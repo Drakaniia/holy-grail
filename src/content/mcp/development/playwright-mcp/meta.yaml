@@ -1,0 +1,30 @@
+slug: playwright-mcp
+name: Playwright MCP
+description: Browser automation via Playwright. Navigate pages, click elements, take screenshots, and scrape content.
+category: Browser Automation
+parentCategory: development
+icon: playwright
+verified: true
+featured: false
+tags:
+  - browser
+  - automation
+  - playwright
+  - testing
+  - mcp
+website: https://playwright.dev/
+docs: https://playwright.dev/docs/intro
+sourceCode: https://github.com/microsoft/playwright-mcp
+installCommand: npx @playwright/mcp
+transport: stdio
+tools:
+  - name: navigate
+    description: Navigate to a URL in the browser
+  - name: click
+    description: Click on an element matching a selector
+  - name: screenshot
+    description: Take a screenshot of the current page
+  - name: extract-text
+    description: Extract text content from the page
+connections:
+  - local-browser

@@ -119,6 +119,13 @@ export const extensionCategories: SidebarNavItem[] = [
   { name: 'Design', icon: Palette, route: '/extensions/design' },
 ]
 
+export const mcpCategories: SidebarNavItem[] = [
+  { name: 'Development', icon: Code2, route: '/mcp/development' },
+  { name: 'Database', icon: Server, route: '/mcp/database' },
+  { name: 'AI', icon: Bot, route: '/mcp/ai' },
+  { name: 'Cloud', icon: Wrench, route: '/mcp/cloud' },
+]
+
 export const siteSubcategoryGroups: { parentCategory: SiteGroup; items: SidebarNavItem[] }[] = [
   { parentCategory: 'ai', items: aiSubcategories },
   { parentCategory: 'design', items: designSubcategories },
