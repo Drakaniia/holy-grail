@@ -1,0 +1,27 @@
+{
+  "name": "grail",
+  "version": "0.1.0",
+  "description": "Holy Grail skill manager — discover, install, and manage AI skills",
+  "bin": {
+    "grail": "dist/grail.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drakaniia/holy-grail.git"
+  },
+  "keywords": ["skills", "ai", "cli", "grail"],
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublish": "npm run build && cargo build --release",
+    "postinstall": "node dist/install.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

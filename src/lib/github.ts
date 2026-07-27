@@ -62,7 +62,7 @@ export async function fetchSkillContent(
   skillPath: string,
   branch = 'main',
 ): Promise<SkillContent> {
-  // Try multiple SKILL.md locations matching npx skills CLI behavior
+  // Try multiple SKILL.md locations matching npx grail CLI behavior
   const candidates = skillPath
     ? [
         `${skillPath}/SKILL.md`,
