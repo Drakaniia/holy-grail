@@ -8,11 +8,15 @@ import SkillMDTab from './SkillMDTab.vue'
 import ResourcesTab from './ResourcesTab.vue'
 import RelatedSkillsTab from './RelatedSkillsTab.vue'
 import VersionHistoryTab from './VersionHistoryTab.vue'
+import SkillPreviewTab from './SkillPreviewTab.vue'
+import SkillUsageTab from './SkillUsageTab.vue'
 
 interface SkillInfo {
   description: string
   repoLink: string
   parentCategory?: string
+  title?: string
+  tags?: string[]
 }
 
 interface RelatedSkill {
@@ -68,6 +72,20 @@ const emit = defineEmits<{
           <RelatedSkillsTab :skills="relatedSkills" />
         </div>
       </div>
+    </div>
+
+    <!-- Preview Tab -->
+    <div v-else-if="activeTab === 'preview'">
+      <SkillPreviewTab :skill="skill" />
+    </div>
+
+    <!-- Usage Tab -->
+    <div v-else-if="activeTab === 'usage'">
+      <SkillUsageTab
+        :content-html="contentHtml"
+        :loading="contentLoading"
+        :error="contentError"
+      />
     </div>
 
     <!-- Installation Tab -->
