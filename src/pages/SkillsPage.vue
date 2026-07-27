@@ -6,6 +6,7 @@ import { useSkillsStore } from '@/stores/skills'
 import PaginationControls from '@/components/PaginationControls.vue'
 import SkillCard from '@/components/skills/SkillCard.vue'
 import SkillCardSkeleton from '@/components/skills/SkillCardSkeleton.vue'
+import TagFilterBar from '@/components/skills/TagFilterBar.vue'
 import { trackSearchQuery } from '@/lib/analytics'
 
 const route = useRoute()
@@ -215,6 +216,18 @@ watch(totalPages, (pages) => {
             {{ filter === 'All' ? '--all' : `--${filter.toLowerCase()}` }}
           </button>
         </div>
+      </div>
+
+      <!-- Tag Filter Bar -->
+      <div v-if="store.allTags.length > 0" class="mb-4">
+        <TagFilterBar
+          :all-tags="store.allTags"
+          :selected-tags="store.selectedTags"
+          :match-mode="store.tagMatchMode"
+          @toggle-tag="store.toggleTag"
+          @set-match-mode="store.setTagMatchMode"
+          @clear-all="store.clearTagFilters"
+        />
       </div>
 
       <!-- Loading State -->

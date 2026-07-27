@@ -48,7 +48,7 @@ const backRoute = computed(() => {
 
 const installCommand = computed(() => {
   if (!skill.value) return ''
-  return `npx skills add ${skill.value.repoLink} --skill ${skill.value.slug}`
+  return `npx grail add ${skill.value.repoLink} --skill ${skill.value.slug}`
 })
 
 // Related skills: same category, excluding current, sorted by views

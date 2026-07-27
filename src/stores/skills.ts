@@ -20,6 +20,10 @@ export interface Skill {
   featured: boolean
   dateAdded: string
   hasLocalContent: boolean
+  /** 'index' | 'project' | 'global' */
+  sourceType?: 'index' | 'project' | 'global'
+  /** Filesystem path to local SKILL.md */
+  localPath?: string
 }
 
 const CACHE_KEY = 'skills-content-cache'
@@ -69,10 +73,57 @@ export const useSkillsStore = defineStore('skills', () => {
   const itemsPerPage = 12
   let loadPromise: Promise<void> | null = null
 
+  // === Tag filter state ===
+  const selectedTags = shallowRef<string[]>([])
+  const tagMatchMode = shallowRef<'and' | 'or'>('or')
+
+  const allTags = computed(() => {
+    const tagSet = new Set<string>()
+    for (const skill of allSkills.value) {
+      for (const tag of skill.tags) {
+        if (tag) tagSet.add(tag)
+      }
+    }
+    return [...tagSet].sort()
+  })
+
+  function toggleTag(tag: string) {
+    const idx = selectedTags.value.indexOf(tag)
+    selectedTags.value =
+      idx >= 0
+        ? [...selectedTags.value.slice(0, idx), ...selectedTags.value.slice(idx + 1)]
+        : [...selectedTags.value, tag]
+  }
+
+  function setTagMatchMode(mode: 'and' | 'or') {
+    tagMatchMode.value = mode
+  }
+
+  function clearTagFilters() {
+    selectedTags.value = []
+  }
+
   const contentCache = ref<Record<string, SkillContent | null>>({})
   const contentLoading = ref<Record<string, boolean>>({})
   const contentError = ref<Record<string, string | null>>({})
 
+  /**
+   * Skill loading strategy (LobeHub-inspired):
+   *
+   * Skills come from THREE sources at runtime — no build step needed:
+   *
+   * 1. /content/skills-registry.json — Community-maintained registry of ALL known
+   *    skills from any repo. Anyone adds entries via PR. Ships with the app.
+   *    No hardcoded repo lists, no GitHub API calls at build time.
+   *
+   * 2. /skills-index.json — Locally installed skills via `grail index`.
+   *    Written by the CLI to public/skills-index.json. May not exist (no CLI).
+   *
+   * 3. .agents/skills/ — Project-level skills (scanned at runtime via sourceType).
+   *
+   * The registry is ALWAYS available (committed to git). The local index is
+   * optional — it adds project-installed skills on top.
+   */
   const loadSkills = async (force = false): Promise<void> => {
     if (loaded.value && !force) return
     if (loadPromise && !force) return loadPromise
@@ -82,16 +133,45 @@ export const useSkillsStore = defineStore('skills', () => {
 
     loadPromise = (async () => {
       try {
-        const response = await fetch('/content/skills-index.json', { cache: 'no-cache' })
-
-        if (!response.ok) {
-          throw new Error(`Failed to load skills index (${response.status})`)
+        // Phase 1: Load community registry (always available, committed to git)
+        let registry: Skill[] = []
+        try {
+          const regResp = await fetch('/content/skills-registry.json', { cache: 'no-cache' })
+          if (regResp.ok) {
+            registry = (await regResp.json()) as Skill[]
+          }
+        } catch {
+          // Registry may not exist in dev — that's fine
         }
 
-        allSkills.value = (await response.json()) as Skill[]
-        loaded.value = true
+        // Phase 2: Load locally installed skills (optional)
+        let local: Skill[] = []
+        try {
+          const localResp = await fetch('/skills-index.json', { cache: 'no-cache' })
+          if (localResp.ok) {
+            local = (await localResp.json()) as Skill[]
+          }
+        } catch {
+          // No local install — fine
+        }
+
+        // Merge: registry first, local overrides by slug
+        const registrySlugs = new Set(registry.map((s) => s.slug))
+        const merged = [
+          ...registry.map((s) => ({ ...s, sourceType: 'index' as const })),
+          ...local
+            .filter((s) => !registrySlugs.has(s.slug))
+            .map((s) => ({ ...s, sourceType: 'global' as const })),
+        ]
+
+        if (merged.length > 0) {
+          allSkills.value = merged
+          loaded.value = true
+        } else {
+          throw new Error('No skills found from any source')
+        }
       } catch (error) {
-        loadError.value = error instanceof Error ? error.message : 'Failed to load skills index'
+        loadError.value = error instanceof Error ? error.message : 'Failed to load skills'
       } finally {
         loading.value = false
         loadPromise = null
@@ -125,6 +205,15 @@ export const useSkillsStore = defineStore('skills', () => {
 
     if (activeCategory.value !== 'All') {
       result = result.filter((s) => s.category === activeCategory.value)
+    }
+
+    // Tag filtering
+    if (selectedTags.value.length > 0) {
+      if (tagMatchMode.value === 'and') {
+        result = result.filter((s) => selectedTags.value.every((t) => s.tags.includes(t)))
+      } else {
+        result = result.filter((s) => selectedTags.value.some((t) => s.tags.includes(t)))
+      }
     }
 
     switch (activeTab.value) {
@@ -257,5 +346,12 @@ export const useSkillsStore = defineStore('skills', () => {
     setCategory,
     setTab,
     setPage,
+    // Tag filter exports
+    allTags,
+    selectedTags,
+    tagMatchMode,
+    toggleTag,
+    setTagMatchMode,
+    clearTagFilters,
   }
 })
