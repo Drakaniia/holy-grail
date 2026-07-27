@@ -1,47 +1,45 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Check, Copy, Share2 } from 'lucide-vue-next'
+import { onMounted } from 'vue'
+import { Share2 } from 'lucide-vue-next'
+import { useSkillInstall } from '@/composables/useSkillInstall'
+import InstallButton from './InstallButton.vue'
 
 const props = defineProps<{
   installCommand: string
 }>()
 
-const copied = ref(false)
+const repoLink = props.installCommand.split(' ')[3] || ''
+const slug = props.installCommand.split('--skill ')[1] || ''
+const { status, isInstalled, command, copyAndInstall, checkInstalled } = useSkillInstall(repoLink, slug)
 
-async function copyCommand() {
-  if (!props.installCommand) return
-  try {
-    await navigator.clipboard.writeText(props.installCommand)
-  } catch {
-    const textarea = document.createElement('textarea')
-    textarea.value = props.installCommand
-    textarea.style.position = 'fixed'
-    textarea.style.opacity = '0'
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand('copy')
-    document.body.removeChild(textarea)
-  }
-  copied.value = true
-  setTimeout(() => {
-    copied.value = false
-  }, 2000)
-}
+onMounted(() => {
+  void checkInstalled()
+})
 </script>
 
 <template>
   <div class="rounded-xl border border-gray-800 bg-[#1f1f1f] p-4">
-    <button
-      @click="copyCommand"
-      class="mb-3 flex w-full items-center justify-center gap-2 rounded-lg bg-gray-900 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
-      :class="copied ? 'bg-green-900 hover:bg-green-900' : ''"
-    >
-      <component :is="copied ? Check : Copy" class="h-4 w-4" />
-      {{ copied ? 'Copied!' : 'Run this Skill' }}
-    </button>
+    <InstallButton
+      :status="status"
+      :is-installed="isInstalled"
+      :command="command"
+      @install="copyAndInstall"
+    />
+
+    <p class="mt-2 text-xs text-gray-500">
+      <template v-if="status === 'copied' && !isInstalled">
+        Command copied! Run it in your terminal to install.
+      </template>
+      <template v-else-if="isInstalled">
+        This skill is already installed locally.
+      </template>
+      <template v-else>
+        Copies the install command to your clipboard.
+      </template>
+    </p>
 
     <button
-      class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-700 py-2 text-sm text-gray-500 transition-colors hover:text-white"
+      class="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-gray-700 py-2 text-sm text-gray-500 transition-colors hover:text-white"
       title="Share"
     >
       <Share2 class="h-4 w-4" />
