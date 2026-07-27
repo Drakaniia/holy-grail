@@ -64,12 +64,12 @@ function formatNumber(n: number): string {
           {{ s.description }}
         </p>
 
-        <div class="flex items-center gap-3 text-xs text-gray-500">
-          <span class="flex items-center gap-1">
+        <div v-if="s.views > 0 || s.uses > 0" class="flex items-center gap-3 text-xs text-gray-500">
+          <span v-if="s.views > 0" class="flex items-center gap-1">
             <Eye class="h-3.5 w-3.5" />
             {{ formatNumber(s.views) }}
           </span>
-          <span class="flex items-center gap-1">
+          <span v-if="s.uses > 0" class="flex items-center gap-1">
             <Code2 class="h-3.5 w-3.5" />
             {{ formatNumber(s.uses) }}
           </span>

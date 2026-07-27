@@ -13,6 +13,7 @@ interface SkillData {
   views: number
   uses: number
   tags: string[]
+  sourceType?: 'index' | 'project' | 'global'
 }
 
 const props = defineProps<{
@@ -35,13 +36,11 @@ function formatNumber(n: number): string {
   return n.toString()
 }
 
-function formatDate(dateStr: string): string {
-  try {
-    const d = new Date(dateStr)
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-  } catch {
-    return dateStr
-  }
+function formatDate(dateStr: string): string | null {
+  if (!dateStr) return null
+  const d = new Date(dateStr)
+  if (Number.isNaN(d.getTime())) return null
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
 }
 
 const initial = computed(() => (props.skill?.title?.charAt(0) ?? 'S').toUpperCase())
@@ -85,6 +84,13 @@ const initial = computed(() => (props.skill?.title?.charAt(0) ?? 'S').toUpperCas
             </svg>
           </span>
           <BookmarkButton v-if="bookmarkResource" :resource="bookmarkResource" variant="detail" />
+          <span
+            v-if="skill.sourceType === 'project'"
+            class="rounded-md bg-amber-900/30 px-2 py-0.5 text-xs text-amber-400"
+            title="Installed locally in this project"
+          >
+            Local
+          </span>
         </div>
 
         <!-- Metadata Row -->
@@ -93,8 +99,8 @@ const initial = computed(() => (props.skill?.title?.charAt(0) ?? 'S').toUpperCas
             <User class="h-3.5 w-3.5" />
             {{ skill.authorName }}
           </span>
-          <span class="text-gray-600">·</span>
-          <span class="flex items-center gap-1">
+          <span v-if="formatDate(skill.dateAdded)" class="text-gray-600">·</span>
+          <span v-if="formatDate(skill.dateAdded)" class="flex items-center gap-1">
             <Calendar class="h-3.5 w-3.5" />
             {{ formatDate(skill.dateAdded) }}
           </span>
@@ -107,13 +113,13 @@ const initial = computed(() => (props.skill?.title?.charAt(0) ?? 'S').toUpperCas
           {{ skill.category }}
         </span>
 
-        <!-- Stats Row -->
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-400">
-          <span class="flex items-center gap-1.5">
+        <!-- Stats Row (hidden when no data) -->
+        <div v-if="skill.views > 0 || skill.uses > 0" class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-400">
+          <span v-if="skill.views > 0" class="flex items-center gap-1.5">
             <Eye class="h-4 w-4" />
             {{ formatNumber(skill.views) }} views
           </span>
-          <span class="flex items-center gap-1.5">
+          <span v-if="skill.uses > 0" class="flex items-center gap-1.5">
             <Code2 class="h-4 w-4" />
             {{ formatNumber(skill.uses) }} uses
           </span>
