@@ -52,3 +52,6 @@ supabase/.temp/
 .vibe/hooks.toml
 .vibe/config.toml
 .env.local
+
+cli/target*
+cli/dist
