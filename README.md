@@ -45,14 +45,14 @@ The app runs without Supabase — auth and submissions are gracefully disabled.
 
 ## Adding Content
 
-Sites, skills, and extensions are each defined as `meta.yaml` files under `src/content/`. After adding an entry, regenerate the relevant index:
+Sites and extensions are defined as `meta.yaml` files under `src/content/`. Skills are managed via the grail CLI.
 
 ```bash
-bun run generate:skills     # after adding a skill
+bun run generate:skills     # regenerate skills index (auto-detects CLI or YAML source)
 bun run generate:previews   # after adding a site (captures screenshot)
 ```
 
-Full guides: [`docs/ADDING-SITES.md`](docs/ADDING-SITES.md) · [`docs/ADDING-SKILLS.md`](docs/ADDING-SKILLS.md) · [`docs/ADDING-EXTENSIONS.md`](docs/ADDING-EXTENSIONS.md)
+Full guides: [`docs/ADDING-SITES.md`](docs/ADDING-SITES.md) · [`docs/GRAIL-CLI.md`](docs/GRAIL-CLI.md) · [`docs/ADDING-EXTENSIONS.md`](docs/ADDING-EXTENSIONS.md)
 
 <br />
 

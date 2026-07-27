@@ -1,92 +1,28 @@
-HOLY GRAIL — Agent Guidelines
+HOLY GRAIL — Docs Knowledge Base
 
-## Stack
-Vue 3 (Composition API + `<script setup>`) · Vite 8 · TypeScript · Tailwind CSS 4 · Pinia · Vue Router 5
+**Root AGENTS.md at project root supersedes this file for project-wide rules.**
 
-## Package Manager
-**Bun only.** Never use npm/yarn/pnpm.
+## What's in docs/
 
-## Commands
-```
-bun install                      # install deps
-bun dev                          # dev server (auto-runs generate scripts first)
-bun run build                    # production build (auto-runs generate scripts + typecheck)
-bun run preview                  # preview production build
-bun run type-check               # vue-tsc --noEmit
-bun lint                         # oxlint --fix then eslint --fix --cache (sequential)
-bun run format                   # prettier --write src/ scripts/ public/content/ supabase/functions/ .github/ + root configs
-bun run format:check             # prettier --check (used in CI)
-bun run generate:skills          # regenerate skills-index.json only
-bun run generate:extensions      # regenerate extensions-index.json only
-bun run import:bookmarks         # import bookmarks via scripts/enrichment/import-bookmarks.js
-bun run generate:previews        # capture missing site previews only
-bun run generate:previews:all    # regenerate every site preview
-```
+| File | Purpose |
+|------|---------|
+| `AGENTS.md` | [This file] Docs-specific knowledge |
+| `DESIGN.md` | Design system, branding, UI tokens |
+| `TODO.md` | Active task list / backlog |
+| `CHANGELOG.md` | Generated release changelog |
+| `ADDING-SITES.md` | Guide for adding sites to the catalog |
+| `ADDING-EXTENSIONS.md` | Guide for adding extensions to the catalog |
+| `GRAIL-CLI.md` | Usage guide for the grail CLI tool |
+| `SUPABASE-SUBMISSIONS.md` | Submission flow via Supabase |
+| `.env.example` | Required env vars template |
+| `RELEASE-v0.1.0.md` | Historical release notes |
+| `skills.md` / `skills-lock.json` | Skills metadata |
+| `superpowers/` | Specs + plans |
 
-## Site Previews — Critical
-After adding a new site, **always generate its preview** or it will show blank in the UI.
+## IMPORTANT
 
-Previews are static `.webp` files — they are NOT fetched at runtime. The script uses a local Chrome/Edge install via Puppeteer.
-
-```
-# Capture only the new site (fastest)
-bun run scripts/previews/generate-site-previews.js --slug <slug>
-
-# Capture all missing previews
-bun run generate:previews
-
-# Regenerate everything
-bun run generate:previews:all
-```
-
-Output files written per site:
-- `public/previews/<slug>.webp` — full size (960×600)
-- `public/previews/<slug>-sm.webp` — thumbnail (480×300)
-- `public/previews/manifest.json` — updated automatically
-- `src/content/site-previews.json` — imported by the app, must be committed
-
-If the live site blocks Puppeteer (timeout/bot protection), the script automatically writes a **fallback SVG preview** so the entry is never blank. Commit the fallback — it's better than nothing.
-
-Chrome/Edge must be installed locally. Set `PREVIEW_BROWSER_PATH` env var to override the auto-detected executable path.
-
-## CI Order (on push/PR to `grail` branch)
-`type-check` → `lint` → `build`
-
-## Build Prerequisites — Critical
-Both `dev` and `build` run three generation scripts **before** Vite starts:
-- `scripts/build/generate-skills-index.js` — reads `src/content/skills/*/meta.yaml` → writes `src/content/skills-index.json`
-- `scripts/build/generate-sites-index.js` — reads `src/content/sites/*/meta.yaml` → writes `src/content/sites-index.json`
-- `scripts/build/generate-extensions-index.js` — reads `src/content/extensions/*/meta.yaml` → writes `src/content/extensions-index.json` and `public/content/extensions-index.json`
-
-These JSON files are imported directly by Pinia stores. If you add/edit a skill, site, or extension, the corresponding `meta.yaml` must exist and the index will be regenerated on next `dev`/`build`.
-
-## Architecture
-- **Entry**: `src/main.ts`
-- **Routes**: `/` → `/sites/platforms` (redirect), `/sites/:category/:subcategory?`, `/sites/:slug`, `/skills` → `/skills/skills` (redirect), `/skills/:category`, `/skills/:slug`, `/extensions` → `/extensions/writing` (redirect), `/extensions/:category/:subcategory?`, `/extensions/:slug`
-- **Stores**: `src/stores/sites.ts`, `src/stores/skills.ts`, and `src/stores/extensions.ts` — all load from generated JSON indexes (not API calls)
-- **Skills store** fetches remote `SKILL.md` content from GitHub repos at runtime with localStorage cache (24h TTL)
-- **`src/stores/counter.ts`** is boilerplate — unused, safe to ignore
-- **Path alias**: `@/` → `./src/`
-- **Deploy**: Vercel SPA, all routes rewrite to `index.html`
-
-## Content Model
-Skills, sites, and extensions are defined as directories under `src/content/skills/`, `src/content/sites/`, and `src/content/extensions/`, each containing a `meta.yaml`.
-
-- **Adding sites**: see `docs/ADDING-SITES.md`
-- **Adding skills**: see `docs/ADDING-SKILLS.md`
-- **Adding extensions**: see `docs/ADDING-EXTENSIONS.md`
-
-## Linting
-- **oxlint** runs first (correctness category = error), then **eslint** (Vue essential rules)
-- ESLint config imports oxlint config via `eslint-plugin-oxlint` — they share rules
-- Prettier config disables conflicting ESLint rules via `eslint-config-prettier`
-- Run `bun lint` after any code change
-
-## TypeScript
-Strict mode with `noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`. Project references: `tsconfig.app.json` (app) + `tsconfig.node.json` (tooling).
-
-## Testing
-No test framework is configured. Do not introduce one without asking.
-
-## Skills
-Available opencode skills: `bun`, `caveman`, `diagnose`, `frontend-design`, `improve-codebase-architecture`, `oxlint`, `supabase`, `supabase-postgres-best-practices`, `tdd`, `to-prd`, `typescript-advanced-types`, `vite`, `vue`, `vue-best-practices`, `vue-debug-guides`, `vue-pinia-best-practices`, `web-design-guidelines`, `write-a-skill`, `zoom-out`. Read relevant skills before implementing.
+- **Preview pipeline is critical** — after adding a site, run `bun run generate:previews --slug <slug>` or it shows blank in UI.
+- **Content generators** run before every `dev` and `build`. Never hand-edit `*-index.json`.
+- **Skills are loaded at runtime** from `skills-registry.json` — no build step needed.
+- See `DESIGN.md` for design tokens, layout rules, and color palette.
+- See `TODO.md` before starting any new feature to check for duplications.
