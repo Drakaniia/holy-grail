@@ -9,6 +9,8 @@ export interface Tab {
 
 const tabs: Tab[] = [
   { id: 'overview', label: 'Overview', enabled: true },
+  { id: 'preview', label: 'Preview', enabled: true },
+  { id: 'usage', label: 'Usage', enabled: true },
   { id: 'installation', label: 'Installation Method', enabled: true },
   { id: 'skillmd', label: 'SKILL.md', enabled: true },
   { id: 'resources', label: 'Resources', enabled: true },
