@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "playwright-mcp",
+    "name": "Playwright MCP",
+    "description": "Browser automation via Playwright. Navigate pages, click elements, take screenshots, and scrape content.",
+    "category": "Browser Automation",
+    "parentCategory": "development",
+    "icon": "playwright",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "browser",
+      "automation",
+      "playwright",
+      "testing",
+      "mcp"
+    ],
+    "website": "https://playwright.dev/",
+    "docs": "https://playwright.dev/docs/intro",
+    "sourceCode": "https://github.com/microsoft/playwright-mcp",
+    "installCommand": "npx @playwright/mcp",
+    "transport": "stdio",
+    "tools": [
+      {
+        "name": "navigate",
+        "description": "Navigate to a URL in the browser"
+      },
+      {
+        "name": "click",
+        "description": "Click on an element matching a selector"
+      },
+      {
+        "name": "screenshot",
+        "description": "Take a screenshot of the current page"
+      },
+      {
+        "name": "extract-text",
+        "description": "Extract text content from the page"
+      }
+    ],
+    "connections": [
+      "local-browser"
+    ]
+  },
+  {
+    "slug": "supabase-mcp",
+    "name": "Supabase MCP",
+    "description": "Query tables, run migrations, manage auth, and interact with your Supabase projects directly from AI agents.",
+    "category": "Database",
+    "parentCategory": "development",
+    "icon": "supabase",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "database",
+      "supabase",
+      "postgres",
+      "mcp"
+    ],
+    "website": "https://supabase.com/docs/guides/mcp",
+    "docs": "https://supabase.com/docs/guides/mcp",
+    "sourceCode": "https://github.com/supabase/mcp-server",
+    "installCommand": "npx @supabase/mcp-server",
+    "transport": "stdio",
+    "tools": [
+      {
+        "name": "query",
+        "description": "Execute SQL queries against your Supabase database"
+      },
+      {
+        "name": "migrate",
+        "description": "Run database migrations"
+      },
+      {
+        "name": "manage-auth",
+        "description": "Manage users and authentication"
+      }
+    ],
+    "connections": [
+      "supabase-project"
+    ]
+  }
+]

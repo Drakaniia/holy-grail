@@ -1,0 +1,27 @@
+slug: supabase-mcp
+name: Supabase MCP
+description: Query tables, run migrations, manage auth, and interact with your Supabase projects directly from AI agents.
+category: Database
+parentCategory: development
+icon: supabase
+verified: true
+featured: false
+tags:
+  - database
+  - supabase
+  - postgres
+  - mcp
+website: https://supabase.com/docs/guides/mcp
+docs: https://supabase.com/docs/guides/mcp
+sourceCode: https://github.com/supabase/mcp-server
+installCommand: npx @supabase/mcp-server
+transport: stdio
+tools:
+  - name: query
+    description: Execute SQL queries against your Supabase database
+  - name: migrate
+    description: Run database migrations
+  - name: manage-auth
+    description: Manage users and authentication
+connections:
+  - supabase-project

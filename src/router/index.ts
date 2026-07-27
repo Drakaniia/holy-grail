@@ -104,6 +104,20 @@ const router = createRouter({
       component: ExtensionDetail,
     },
     {
+      path: '/mcp',
+      redirect: '/mcp/development',
+    },
+    {
+      path: '/mcp/:category/:subcategory?',
+      name: 'mcp-category',
+      component: () => import('@/pages/McpHomePage.vue'),
+    },
+    {
+      path: '/mcp/:slug',
+      name: 'mcp-detail',
+      component: () => import('@/pages/McpDetail.vue'),
+    },
+    {
       path: '/login',
       name: 'login',
       component: AuthPage,
