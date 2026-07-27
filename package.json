@@ -5,8 +5,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun run scripts/build/generate-skills-index.js && bun run scripts/build/generate-sites-index.js && bun run scripts/build/generate-extensions-index.js && vite",
-    "build": "bun run scripts/build/generate-skills-index.js && bun run scripts/build/generate-sites-index.js && bun run scripts/build/generate-extensions-index.js && vue-tsc && vite build",
+    "dev": "bun run scripts/build/generate-sites-index.js && bun run scripts/build/generate-extensions-index.js && bun run scripts/build/generate-mcp-index.js && vite",
+    "build": "bun run scripts/build/generate-sites-index.js && bun run scripts/build/generate-extensions-index.js && bun run scripts/build/generate-mcp-index.js && vue-tsc && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "lint": "bun run lint:oxlint && bun run lint:eslint",
@@ -14,13 +14,16 @@
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/ scripts/ public/content/ supabase/functions/ .github/ vite.config.ts postcss.config.js eslint.config.js",
     "format:check": "prettier --check --experimental-cli src/ scripts/ public/content/ supabase/functions/ .github/ vite.config.ts postcss.config.js eslint.config.js",
-    "generate:skills": "bun run scripts/build/generate-skills-index.js",
+    "update:registry": "bun run scripts/build/update-registry.js",
+    "generate:skills": "echo 'Skills are now loaded dynamically from skills-registry.json at runtime. Use `bun run update:registry` to refresh the community registry from known repos.'",
     "generate:extensions": "bun run scripts/build/generate-extensions-index.js",
+    "generate:mcp": "bun run scripts/build/generate-mcp-index.js",
     "generate:previews": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js",
     "generate:previews:missing": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js",
     "generate:previews:all": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js --all",
     "generate:previews:refresh": "bun run scripts/build/generate-sites-index.js && bun run scripts/previews/generate-site-previews.js --refresh",
     "review:previews": "python scripts/previews/review-site-previews.py",
+    "build:cli": "tsc -p cli/tsconfig.json && cd cli && cargo build --release",
     "import:bookmarks": "bun run scripts/enrichment/import-bookmarks.js"
   },
   "dependencies": {
