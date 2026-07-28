@@ -57,7 +57,7 @@
     "eslint-plugin-oxlint": "~1.76.0",
     "eslint-plugin-vue": "~10.10.0",
     "globals": "^17.8.0",
-    "happy-dom": "^20.11.0",
+    "happy-dom": "^20.11.1",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.76.0",
     "postcss": "^8.5.20",
