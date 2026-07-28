@@ -46,7 +46,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
     "@types/mdx": "^2.0.14",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.1.2",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitejs/plugin-vue-jsx": "^5.1.6",
     "@vue/test-utils": "^2.4.11",
