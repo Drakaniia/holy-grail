@@ -6,6 +6,7 @@
   <br />
   <a href="#getting-started"><strong>Getting Started</strong></a> ·
   <a href="#adding-content"><strong>Adding Content</strong></a> ·
+  <a href="docs/GRAIL-CLI.md"><strong>grail-cli</strong></a> ·
   <a href="docs/DESIGN.md"><strong>Design System</strong></a> ·
   <a href="CHANGELOG.md"><strong>Changelog</strong></a>
 </p>
@@ -40,6 +41,18 @@ bun dev
 ```
 
 The app runs without Supabase — auth and submissions are gracefully disabled.
+
+<br />
+
+## grail-cli (Skill Manager)
+
+Manage AI coding skills from **any computer** with one command:
+
+```bash
+npx grail-cli add Drakaniia/skills --skill audit-codebase
+```
+
+Discover, install, and manage AI skills for any coding assistant. Works on Windows, macOS, and Linux. [Full documentation →](docs/GRAIL-CLI.md)
 
 <br />
 

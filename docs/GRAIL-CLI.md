@@ -1,23 +1,32 @@
-# Grail CLI — Skill Manager
+# grail-cli — AI Skill Manager
 
-> **Replaces** the legacy `meta.yaml`-based skill system.
+**The Holy Grail skill manager** — discover, install, and manage AI skills for your coding assistant. Available as an npm package and as a built-in CLI in the Holy Grail project.
 
-The `grail` CLI is a Rust-based tool for discovering, installing, and managing AI agent skills. Skills follow the open `SKILL.md` convention and are fetched from GitHub repositories.
+```bash
+npx grail-cli add Drakaniia/skills --skill audit-codebase
+```
 
 ## Quick Start
 
-```bash
-# Build the CLI (one-time)
-bun run build:cli
+### From Anywhere (npm)
 
-# Run via the Node.js wrapper
-npx tsx cli/grail.ts --help
+```bash
+npx grail-cli add <owner>/<repo> --skill <skill-name>
 ```
 
-Or use the built binary directly:
+No installation required — `npx` downloads and runs the latest version. On first run, it downloads a prebuilt Rust binary for your platform, or builds from source if Rust is installed.
+
+### From the Holy Grail Repository
 
 ```bash
-cli/target/release/grail --help
+bun run build:cli                              # Build the binary
+cli/target/release/grail add <repo> --skill <name>   # Run directly
+```
+
+Or via the local wrapper:
+
+```bash
+grail add <repo> --skill <name>               # After npm link from cli/
 ```
 
 ## Commands
@@ -27,82 +36,80 @@ cli/target/release/grail --help
 Install a skill from a GitHub repository.
 
 ```bash
-# Install a single-skill repo
-grail add midudev/autoskills --skill vue
+# Install a specific skill from a multi-skill repo
+npx grail-cli add Drakaniia/skills --skill audit-codebase
 
-# Interactive picker for multi-skill repos
-grail add midudev/autoskills
+# Interactive picker for multi-skill repos (no --skill flag)
+npx grail-cli add midudev/autoskills
 
 # Full GitHub URL also works
-grail add https://github.com/midudev/autoskills --skill vue
+npx grail-cli add https://github.com/midudev/autoskills --skill vue
 ```
 
 **Behavior:**
 - If `--skill` is provided, installs that specific skill
 - If omitted and the repo has one skill, installs it automatically
 - If omitted and the repo has multiple skills, shows an interactive picker
-- Installs to `~/.grail/skills/<name>/` (global) and `./.agents/skills/<name>/` (local)
-- Regenerates the index automatically
+- Installs to `~/.grail/skills/<name>/`
+- Regenerates the skills index automatically and writes to Holy Grail `public/content/` when inside the project
 
 ### `grail remove <skill-name>`
 
 Uninstall a skill.
 
 ```bash
-grail remove vue
+npx grail-cli remove vue
 ```
 
-Removes from both global and local directories. Detects foreign skills (installed by `npx skills` or other tools) and warns before removal.
+Detects foreign skills (installed by `npx skills` or `npx openskills`) and warns before removal.
 
-### `grail list [--local|--global]`
+### `grail list`
 
 List installed skills.
 
 ```bash
-grail list          # All installed skills
-grail list --local  # Project-local only (.agents/skills/)
-grail list --global # Global only (~/.grail/skills/)
+npx grail-cli list
 ```
+
+Shows all skills in `~/.grail/skills/` with foreign-tool markers when detected.
 
 ### `grail find [<query>]`
 
-Search installed and discoverable skills.
+Search installed skills by name, description, or content.
 
 ```bash
-grail find              # All known skills
-grail find vue          # Search by name, description, or tags
-grail find typescript   # Finds matching skills
+npx grail-cli find              # All installed skills
+npx grail-cli find vue          # Search by keyword
+npx grail-cli find typescript   # Find TypeScript-related skills
 ```
-
-Shows both installed skills and discoverable (not yet installed) skills from the built-in registry.
-
-### `grail update [<skill-name>]`
-
-Update installed skills to their latest version.
-
-```bash
-grail update            # Update all installed skills
-grail update vue        # Update a specific skill
-```
-
-Re-fetches `SKILL.md` from the remote GitHub repo and replaces the local copy.
 
 ### `grail info <skill-name>`
 
 Show detailed information about an installed skill.
 
 ```bash
-grail info vue
+npx grail-cli info audit-codebase
 ```
 
-Output includes name, slug, description, category, author, repo, tags, featured status, and install date.
+Output includes: name, slug, description, category, author, repo, tags, featured status, install date.
+
+### `grail update [<skill-name>]`
+
+Update installed skills to their latest version.
+
+```bash
+npx grail-cli update            # Update all installed skills
+npx grail-cli update vue        # Update a specific skill
+```
+
+Re-fetches `SKILL.md` from the remote GitHub repo and replaces the local copy.
 
 ### `grail index`
 
 Regenerate the skills index.
 
 ```bash
-grail index
+npx grail-cli index
 ```
 
 Scans `~/.grail/skills/` for installed skills, reads `SKILL.md` frontmatter, and writes:
@@ -111,6 +118,36 @@ Scans `~/.grail/skills/` for installed skills, reads `SKILL.md` frontmatter, and
 
 Run this after manually copying files into `~/.grail/skills/` or to repair a corrupted index.
 
+## What Are Skills?
+
+Skills are reusable, self-contained instruction files (`SKILL.md`) that teach your AI coding assistant how to perform specific tasks. Examples include:
+
+| Skill | Purpose |
+|-------|---------|
+| `audit-codebase` | Scan any codebase for structural health issues |
+| `frontend-design` | Build production-grade frontend interfaces |
+| `git-commit` | Create conventional commits with intelligent staging |
+| `test-driven-development` | Write tests before implementation |
+| `folder-architecture` | Enforce best-practice folder structures |
+
+Each skill is a `SKILL.md` file with YAML frontmatter:
+
+```markdown
+---
+title: audit-codebase
+description: Scan any codebase for structural health issues
+category: code-quality
+tags:
+  - codebase-audit
+  - refactoring
+author: Drakaniia
+---
+
+# Audit Codebase
+
+Instructions for the AI...
+```
+
 ## File System Layout
 
 ### Global Directory (`~/.grail/`)
@@ -118,7 +155,7 @@ Run this after manually copying files into `~/.grail/skills/` or to repair a cor
 ```
 ~/.grail/
 ├── skills/
-│   ├── vue/
+│   ├── audit-codebase/
 │   │   └── SKILL.md
 │   ├── frontend-design/
 │   │   └── SKILL.md
@@ -126,92 +163,76 @@ Run this after manually copying files into `~/.grail/skills/` or to repair a cor
 └── skills-index.json      ← Generated index (consumed by frontend)
 ```
 
-### Project-Local Directory (`./.agents/skills/`)
+### Project Directory (when inside Holy Grail)
 
 ```
 <project>/.agents/skills/
-├── vue/
-│   └── SKILL.md
-├── frontend-design/
+├── audit-codebase/
 │   └── SKILL.md
 └── ...
 ```
 
-## How Skills Work
+## How It Works
 
-A skill is a `SKILL.md` file that follows the open skill convention. The file contains YAML frontmatter with metadata and Markdown content with the skill instructions.
+`grail-cli` is a **hybrid Rust + TypeScript** CLI:
 
-```markdown
----
-title: Vue
-slug: vue
-description: Vue 3 Composition API...
-category: AI
-tags:
-  - autoskills
-  - vue
-author: midudev
-authorName: midudev
-branch: main
-featured: false
----
+1. **TypeScript wrapper** (`cli/grail.ts`) — npm bin entry point, locates and spawns the Rust binary
+2. **Rust binary** (`cli/src/main.rs`) — actual CLI logic using `clap`, `reqwest`, `serde_yaml`
+3. **Postinstall script** (`cli/install.ts`) — on `npm install` or `npx grail-cli`:
+   - Downloads a prebuilt binary from GitHub Releases for your platform, OR
+   - Falls back to `cargo build --release` (requires Rust)
 
-# Skill Instructions
+Skills are fetched from GitHub repositories using the GitHub Contents API, then cached locally.
 
-...
+## Installing from Another Computer
+
+```bash
+# One command — works anywhere with Node.js installed
+npx grail-cli add Drakaniia/skills --skill audit-codebase
 ```
 
-The Holy Grail frontend loads skills from the CLI-generated index and fetches the raw `SKILL.md` content from GitHub at runtime (with 24-hour localStorage caching).
+The postinstall script handles binary installation automatically:
+- ✅ Windows (win32-x64)
+- ✅ macOS Intel (darwin-x64)
+- ✅ macOS Apple Silicon (darwin-arm64)
+- ✅ Linux x64
+- ✅ Linux ARM64
 
-## Global vs Local Install
+## Environment Variables
 
-| Scope | Directory | Purpose |
-|-------|-----------|---------|
-| Global | `~/.grail/skills/` | Skills available to all projects |
-| Local | `<project>/.agents/skills/` | Skills scoped to a specific project |
-
-When you run `grail add`, the skill is installed to both locations (if inside a project directory). When you run `grail list`, both scopes are shown.
+| Variable | Purpose | Default |
+|----------|---------|---------|
+| `GRAIL_HOME` | Override the global skills directory | `~/.grail/` |
+| `GRAIL_GITHUB_API` | Override the GitHub API base URL | `https://api.github.com` |
 
 ## Interop with Other Tools
 
-The CLI detects skills installed by other tools:
+The CLI detects skills installed by other tools to prevent conflicts:
 
 | Tool | Detection Method |
 |------|-----------------|
 | `npx skills` | `.skills-manifest.json` |
 | `npx openskills` | `openskills.json` |
-| Manual install | No marker — detected during `list`/`remove` |
 
-When a foreign skill is detected, grail prints a warning before removal but does not manage foreign skills directly.
-
-## Built-In Registry
-
-The CLI ships with a registry of well-known skill repositories:
-
-| Source | Repo | Skills |
-|--------|------|--------|
-| midudev/autoskills | `midudev/autoskills` | 100+ skills |
-| mattpocock/skills | `mattpocock/skills` | 10+ productivity skills |
-| Imbad0202/academic-research-skills | `Imbad0202/academic-research-skills` | Academic skills |
-| Leonxlnx/taste-skill | `Leonxlnx/taste-skill` | Design/brand skills |
-
-Add any repo following the `SKILL.md` convention via `grail add <other/repo>`.
+When a foreign skill is detected during removal, grail warns before proceeding.
 
 ## Development
 
 ### Prerequisites
 
 - Rust toolchain (rustc + cargo)
-- Node.js + Bun
+- Node.js >= 18
+- Bun (for Holy Grail project commands)
 
 ### Building
 
 ```bash
-# Build TypeScript wrapper and Rust binary
-bun run build:cli
+# From the Holy Grail root
+bun run build:cli        # tsc + cargo build --release
 
-# Or build only the Rust binary
-cd cli && cargo build --release
+# From cli/ directory
+cd cli
+tsc && cargo build --release
 ```
 
 ### Testing
@@ -220,39 +241,16 @@ cd cli && cargo build --release
 cd cli && cargo test
 ```
 
-## Skills Registry (No Build Step)
+### npm Publishing
 
-Skills are now loaded **dynamically at runtime** — no build step needed. The system is modeled after LobeHub's approach:
+```bash
+cd cli
+npm login                                # Authenticate with npm
+npm version patch                        # Bump version
+npm publish                              # Publish to npm registry
+git push grail grail --tags              # Push tag to trigger binary build
+```
 
-| Source | File | How it's populated |
-|--------|------|-------------------|
-| Community Registry | `public/content/skills-registry.json` | PR-driven, committed to git, fetched at runtime |
-| Local CLI Install | `/skills-index.json` | Written by `grail index`, optional |
-| Project-Level | `.agents/skills/` | Scanned at runtime, local only |
+## License
 
-### Updating the Registry
-
-To add new skill sources to the community registry:
-
-1. Add the repo to `REGISTRY_SOURCES` in `scripts/build/update-registry.js`
-2. Run `bun run update:registry`
-3. Commit the updated `public/content/skills-registry.json`
-
-No hardcoded lists, no build-time GitHub API calls in the normal dev/build flow.
-
-## Environment Variables
-
-| Variable | Purpose |
-|----------|---------|
-| `GRAIL_HOME` | Override the global directory (default: `~/.grail/`) |
-| `GRAIL_GITHUB_API` | Override the GitHub API base URL (default: `https://api.github.com`) |
-
-## Exit Codes
-
-| Code | Meaning |
-|------|---------|
-| 0 | Success |
-| 1 | General error (repo not found, network issue) |
-| 2 | Invalid arguments |
-| 3 | Skill not found (for `remove`, `info`, `update`) |
-| 4 | Conflict (skill already installed) |
+MIT — see the Holy Grail repository for details.
