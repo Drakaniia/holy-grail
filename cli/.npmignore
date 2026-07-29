@@ -1,0 +1,10 @@
+# Source (compiled to dist/)
+*.ts
+*.toml
+*.lock
+# Rust build artifacts
+target
+# Test files
+tests
+# Agent docs (published README.md covers this)
+AGENTS.md

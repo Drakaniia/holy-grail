@@ -9,7 +9,56 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  build-binaries:
+    name: Build grail-${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: linux-x64
+            rust-target: x86_64-unknown-linux-gnu
+            ext: ""
+          - os: ubuntu-latest
+            target: linux-arm64
+            rust-target: aarch64-unknown-linux-gnu
+            ext: ""
+          - os: macos-latest
+            target: darwin-x64
+            rust-target: x86_64-apple-darwin
+            ext: ""
+          - os: macos-latest
+            target: darwin-arm64
+            rust-target: aarch64-apple-darwin
+            ext: ""
+          - os: windows-latest
+            target: win32-x64
+            rust-target: x86_64-pc-windows-msvc
+            ext: ".exe"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust-target }}
+
+      - name: Build grail binary (${{ matrix.target }})
+        run: cargo build --release --target ${{ matrix.rust-target }}
+        working-directory: cli
+
+      - name: Rename binary
+        run: |
+          mv cli/target/${{ matrix.rust-target }}/release/grail${{ matrix.ext }} grail-${{ matrix.target }}${{ matrix.ext }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: grail-${{ matrix.target }}
+          path: grail-${{ matrix.target }}${{ matrix.ext }}
+
+  create-release:
+    needs: build-binaries
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,6 +71,18 @@ jobs:
 
       - run: bun run build
 
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: grail-*
+          merge-multiple: true
+
       - uses: softprops/action-gh-release@v2
         with:
+          files: |
+            grail-linux-x64
+            grail-linux-arm64
+            grail-darwin-x64
+            grail-darwin-arm64
+            grail-win32-x64.exe
           generate_release_notes: true
+          fail_on_unmatched_files: false
