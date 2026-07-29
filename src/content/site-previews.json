@@ -3492,6 +3492,16 @@
     "height": 600,
     "bytes": 26374
   },
+  "trigger": {
+    "image": "/previews/trigger.webp",
+    "small": "/previews/trigger-sm.webp",
+    "sourceUrl": "https://trigger.dev/",
+    "capturedAt": "2026-07-28T03:41:01.414Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8488,
+    "fallback": true
+  },
   "tripo3d": {
     "image": "/previews/tripo3d.webp",
     "small": "/previews/tripo3d-sm.webp",

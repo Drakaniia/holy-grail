@@ -1,0 +1,91 @@
+slug: trigger
+name: Trigger.dev
+description: Open-source platform for building background jobs, AI agents, and complex TypeScript workflows with built-in observability.
+category: Tooling
+parentCategory: development
+subcategory: tooling
+stars: 15000
+watchers: 120
+addedDaysAgo: 0
+license: Apache-2.0
+lastCommit: 2 days ago
+lastRelease: 3 days ago
+version: v4.2.0
+contributors: 42
+commitsThisYear: 156
+releases: 36
+platforms:
+  - Web
+  - Node.js
+  - TypeScript
+deployment:
+  - Cloud
+  - Self-hosted
+  - Docker
+website: https://trigger.dev
+docs: https://trigger.dev/docs
+sourceCode: https://github.com/triggerdotdev/trigger.dev
+icon: trigger
+verified: true
+featured: false
+tags:
+  - development
+  - tooling
+  - background-jobs
+  - workflows
+  - ai-agents
+  - typescript
+  - open-source
+atGlance: Write reliable long-running background jobs and AI workflows in TypeScript with automatic retries, queuing, and observability.
+fullDescription: >-
+  Trigger.dev is an open-source platform that lets you write background jobs, AI
+  agents, and complex workflows directly in your TypeScript codebase. It handles
+  the hard parts of asynchronous task execution — automatic retries, dead letter
+  queues, scheduling, rate limiting, and a built-in observability dashboard —
+  so you can focus on writing business logic without managing infrastructure.
+  Designed to work seamlessly with Next.js, AI SDKs, and existing frameworks,
+  it supports long-running tasks that would time out in traditional serverless
+  environments, human-in-the-loop approvals, and wait-for-event patterns.
+  Deploy on their managed cloud or self-host with Docker.
+coreFeatures:
+  - name: TypeScript Workflows
+    description: Write background jobs and workflows as clean, async TypeScript functions with full type safety.
+    icon: sparkles
+  - name: Automatic Retries & Queuing
+    description: Built-in retry logic, dead letter queues, and rate limiting for reliable task execution.
+    icon: shield
+  - name: Observability Dashboard
+    description: Monitor every task run, inspect logs, and debug failures from a built-in dashboard.
+    icon: layers
+additionalFeatures:
+  - name: AI Agent Support
+    description: Purpose-built for AI agents with long-running tasks, tool calling, and human-in-the-loop approvals.
+    icon: robot
+  - name: No Timeouts
+    description: Tasks can run for minutes or hours without hitting serverless execution limits.
+    icon: clock
+  - name: Self-Hostable
+    description: Open-source under Apache 2.0 with Docker-based self-hosting and managed cloud option.
+    icon: server
+similarTools:
+  - slug: n8n
+    name: AI Workflow Automation Platform & Tools - n8n
+    description: AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.
+    stars: 193543
+    addedDaysAgo: 0
+    verified: true
+    website: https://n8n.io/
+  - slug: activepieces
+    name: AI-first automation for every team - Activepieces
+    description: AI-first automation for every team - Activepieces bookmarked for ai automation resources.
+    stars: 22267
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.activepieces.com/
+  - slug: resend
+    name: Resend - Email for developers
+    description: Resend - Email for developers bookmarked for tooling resources.
+    stars: 81
+    addedDaysAgo: 0
+    verified: true
+    website: https://resend.com/
