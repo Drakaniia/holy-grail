@@ -18,23 +18,23 @@ jobs:
           - os: ubuntu-latest
             target: linux-x64
             rust-target: x86_64-unknown-linux-gnu
-            ext: ""
+            ext: ''
           - os: ubuntu-latest
             target: linux-arm64
             rust-target: aarch64-unknown-linux-gnu
-            ext: ""
+            ext: ''
           - os: macos-latest
             target: darwin-x64
             rust-target: x86_64-apple-darwin
-            ext: ""
+            ext: ''
           - os: macos-latest
             target: darwin-arm64
             rust-target: aarch64-apple-darwin
-            ext: ""
+            ext: ''
           - os: windows-latest
             target: win32-x64
             rust-target: x86_64-pc-windows-msvc
-            ext: ".exe"
+            ext: '.exe'
 
     steps:
       - uses: actions/checkout@v4

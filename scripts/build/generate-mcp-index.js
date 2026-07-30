@@ -19,9 +19,13 @@ if (!existsSync(contentDir)) {
 
 const servers = []
 
-for (const catDir of readdirSync(contentDir, { withFileTypes: true }).filter((d) => d.isDirectory())) {
+for (const catDir of readdirSync(contentDir, { withFileTypes: true }).filter((d) =>
+  d.isDirectory(),
+)) {
   const catPath = resolve(contentDir, catDir.name)
-  for (const entry of readdirSync(catPath, { withFileTypes: true }).filter((d) => d.isDirectory())) {
+  for (const entry of readdirSync(catPath, { withFileTypes: true }).filter((d) =>
+    d.isDirectory(),
+  )) {
     const metaPath = resolve(catPath, entry.name, 'meta.yaml')
     if (existsSync(metaPath)) {
       servers.push(parse(readFileSync(metaPath, 'utf-8')))

@@ -10,10 +10,7 @@ const outputPaths = [
   path.resolve(projectRoot, 'public/content/skills-index.json'),
 ]
 
-const CACHE_DIR = path.join(
-  process.env.HOME || process.env.USERPROFILE || '~',
-  '.grail',
-)
+const CACHE_DIR = path.join(process.env.HOME || process.env.USERPROFILE || '~', '.grail')
 const CACHE_FILE = path.join(CACHE_DIR, 'skills-discovery-cache.json')
 const CACHE_TTL_MS = 60 * 60 * 1000 // 1 hour
 
