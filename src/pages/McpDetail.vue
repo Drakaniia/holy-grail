@@ -1,14 +1,7 @@
 <script setup lang="ts">
 import { computed, watchEffect, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import {
-  ArrowLeft,
-  ExternalLink,
-  Globe,
-  Code2,
-  Wrench,
-  X,
-} from 'lucide-vue-next'
+import { ArrowLeft, ExternalLink, Globe, Code2, Wrench, X } from 'lucide-vue-next'
 import { useMcpStore } from '@/stores/mcp'
 import McpHero from '@/components/mcp/McpHero.vue'
 
@@ -69,9 +62,14 @@ const hasDistinctDocs = computed(() =>
       <McpHero :server="server" />
 
       <!-- Install Command -->
-      <div v-if="server.installCommand" class="mb-6 rounded-xl border border-gray-800 bg-[#1f1f1f] p-4">
+      <div
+        v-if="server.installCommand"
+        class="mb-6 rounded-xl border border-gray-800 bg-[#1f1f1f] p-4"
+      >
         <h3 class="mb-2 text-sm font-medium text-gray-400">Install</h3>
-        <pre class="overflow-x-auto rounded-lg border border-gray-700 bg-gray-900 p-3 font-mono text-sm text-gray-300">{{ server.installCommand }}</pre>
+        <pre
+          class="overflow-x-auto rounded-lg border border-gray-700 bg-gray-900 p-3 font-mono text-sm text-gray-300"
+          >{{ server.installCommand }}</pre>
       </div>
 
       <!-- Tools -->

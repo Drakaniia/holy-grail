@@ -244,9 +244,7 @@ export function useSidebarSearch() {
     return extensionRouteCounts.value[route] ?? 0
   }
 
-  const mcpSectionMatches = computed(
-    () => hasSidebarSearch.value && matchesSidebarSearch('MCP'),
-  )
+  const mcpSectionMatches = computed(() => hasSidebarSearch.value && matchesSidebarSearch('MCP'))
   const showAllMcpTabs = computed(() => !hasSidebarSearch.value || mcpSectionMatches.value)
 
   const visibleMcpCategories = computed(() =>
@@ -271,7 +269,11 @@ export function useSidebarSearch() {
   }
 
   const hasVisibleSidebarTabs = computed(
-    () => showSitesSection.value || showExtensionsSection.value || showSkillsSection.value || showMcpSection.value,
+    () =>
+      showSitesSection.value ||
+      showExtensionsSection.value ||
+      showSkillsSection.value ||
+      showMcpSection.value,
   )
 
   return {

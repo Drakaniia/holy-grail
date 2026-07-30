@@ -43,8 +43,15 @@ const servers = computed(() => {
     </div>
 
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
-      <div v-if="store.loading && servers.length === 0" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <div v-for="i in 6" :key="i" class="h-32 animate-pulse rounded-xl border border-gray-800 bg-[#1f1f1f]" />
+      <div
+        v-if="store.loading && servers.length === 0"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          v-for="i in 6"
+          :key="i"
+          class="h-32 animate-pulse rounded-xl border border-gray-800 bg-[#1f1f1f]"
+        />
       </div>
 
       <div
@@ -54,7 +61,10 @@ const servers = computed(() => {
         {{ store.loadError }}
       </div>
 
-      <div v-else-if="servers.length > 0" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        v-else-if="servers.length > 0"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+      >
         <McpCard v-for="server in servers" :key="server.slug" :server="server" />
       </div>
 

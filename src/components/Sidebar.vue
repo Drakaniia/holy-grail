@@ -441,10 +441,7 @@ onUnmounted(() => {
         </li>
 
         <!-- MCP section -->
-        <li
-          v-if="showMcpSection"
-          :class="{ 'mt-6': showSitesSection || showExtensionsSection }"
-        >
+        <li v-if="showMcpSection" :class="{ 'mt-6': showSitesSection || showExtensionsSection }">
           <div class="flex w-full items-center gap-3 py-2 text-gray-500">
             <Plug class="h-4 w-4" />
             <span class="text-xs font-semibold uppercase tracking-wider">MCP</span>
