@@ -13,7 +13,10 @@ const emit = defineEmits<{
 
 const repoLink = props.installCommand.split(' ')[3] || ''
 const slug = props.installCommand.split('--skill ')[1] || ''
-const { status, isInstalled, command, copyAndInstall, checkInstalled } = useSkillInstall(repoLink, slug)
+const { status, isInstalled, command, copyAndInstall, checkInstalled } = useSkillInstall(
+  repoLink,
+  slug,
+)
 
 onMounted(() => {
   void checkInstalled()
@@ -43,12 +46,8 @@ onMounted(() => {
       <template v-if="status === 'copied' && !isInstalled">
         Command copied! Paste it in your terminal.
       </template>
-      <template v-else-if="isInstalled">
-        Already installed locally.
-      </template>
-      <template v-else>
-        Click to copy the grail install command.
-      </template>
+      <template v-else-if="isInstalled"> Already installed locally. </template>
+      <template v-else> Click to copy the grail install command. </template>
     </p>
   </div>
 </template>

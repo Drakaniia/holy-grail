@@ -114,7 +114,10 @@ const initial = computed(() => (props.skill?.title?.charAt(0) ?? 'S').toUpperCas
         </span>
 
         <!-- Stats Row (hidden when no data) -->
-        <div v-if="skill.views > 0 || skill.uses > 0" class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-400">
+        <div
+          v-if="skill.views > 0 || skill.uses > 0"
+          class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-400"
+        >
           <span v-if="skill.views > 0" class="flex items-center gap-1.5">
             <Eye class="h-4 w-4" />
             {{ formatNumber(skill.views) }} views

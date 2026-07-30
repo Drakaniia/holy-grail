@@ -14,9 +14,7 @@ export function useSkillInstall(repoLink: string, slug: string) {
   const isInstalled = ref(false)
   const errorMessage = ref('')
 
-  const command = computed(() =>
-    repoLink && slug ? generateInstallCommand(repoLink, slug) : '',
-  )
+  const command = computed(() => (repoLink && slug ? generateInstallCommand(repoLink, slug) : ''))
 
   async function copyAndInstall() {
     status.value = 'copying'

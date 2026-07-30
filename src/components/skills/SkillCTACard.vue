@@ -10,7 +10,10 @@ const props = defineProps<{
 
 const repoLink = props.installCommand.split(' ')[3] || ''
 const slug = props.installCommand.split('--skill ')[1] || ''
-const { status, isInstalled, command, copyAndInstall, checkInstalled } = useSkillInstall(repoLink, slug)
+const { status, isInstalled, command, copyAndInstall, checkInstalled } = useSkillInstall(
+  repoLink,
+  slug,
+)
 
 onMounted(() => {
   void checkInstalled()
@@ -30,12 +33,8 @@ onMounted(() => {
       <template v-if="status === 'copied' && !isInstalled">
         Command copied! Run it in your terminal to install.
       </template>
-      <template v-else-if="isInstalled">
-        This skill is already installed locally.
-      </template>
-      <template v-else>
-        Copies the install command to your clipboard.
-      </template>
+      <template v-else-if="isInstalled"> This skill is already installed locally. </template>
+      <template v-else> Copies the install command to your clipboard. </template>
     </p>
 
     <button

@@ -25,7 +25,7 @@ const accentColor = computed(() => {
   let hash = 0
   const name = props.skill.authorName
   for (let i = 0; i < name.length; i++) {
-    hash = ((hash << 5) - hash) + name.charCodeAt(i)
+    hash = (hash << 5) - hash + name.charCodeAt(i)
     hash |= 0
   }
   const idx = Math.abs(hash) % palette.length
@@ -34,9 +34,7 @@ const accentColor = computed(() => {
   return { from, to }
 })
 
-const authorInitial = computed(() =>
-  props.skill.authorName.charAt(0).toUpperCase(),
-)
+const authorInitial = computed(() => props.skill.authorName.charAt(0).toUpperCase())
 
 const bookmarkResource = computed(() => ({
   type: 'skill' as const,
@@ -74,7 +72,7 @@ function getAuthorColor(name: string): string {
   ]
   let hash = 0
   for (let i = 0; i < name.length; i++) {
-    hash = ((hash << 5) - hash) + name.charCodeAt(i)
+    hash = (hash << 5) - hash + name.charCodeAt(i)
     hash |= 0
   }
   return colors[Math.abs(hash) % colors.length]
@@ -87,10 +85,7 @@ function getAuthorColor(name: string): string {
     class="group relative block overflow-hidden rounded-xl border border-gray-800 bg-[#1f1f1f] transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-600 hover:shadow-lg hover:shadow-black/20"
   >
     <!-- Colored top accent strip -->
-    <div
-      class="h-0.5 w-full bg-gradient-to-r"
-      :class="[accentColor.from, accentColor.to]"
-    />
+    <div class="h-0.5 w-full bg-gradient-to-r" :class="[accentColor.from, accentColor.to]" />
 
     <div class="absolute right-2.5 top-3.5 z-10">
       <BookmarkButton :resource="bookmarkResource" />
@@ -109,9 +104,7 @@ function getAuthorColor(name: string): string {
           <p class="truncate text-[13px] font-medium leading-none text-gray-300">
             {{ skill.authorName }}
           </p>
-          <p class="mt-0.5 truncate text-[11px] text-gray-600">
-            @{{ skill.author }}
-          </p>
+          <p class="mt-0.5 truncate text-[11px] text-gray-600">@{{ skill.author }}</p>
         </div>
       </div>
 

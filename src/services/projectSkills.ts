@@ -65,11 +65,7 @@ export function parseSkillFrontmatter(content: string): Record<string, unknown> 
 /**
  * Convert raw SKILL.md content + path to a ProjectSkillMeta.
  */
-export function skillMdToMeta(
-  content: string,
-  slug: string,
-  localPath: string,
-): ProjectSkillMeta {
+export function skillMdToMeta(content: string, slug: string, localPath: string): ProjectSkillMeta {
   const fm = parseSkillFrontmatter(content)
   return {
     slug: (fm?.slug as string) || slug,

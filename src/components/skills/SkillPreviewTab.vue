@@ -19,7 +19,8 @@ defineProps<{
             CLI
           </span>
           <code class="flex-1 rounded-md bg-gray-900 px-3 py-1.5 text-sm text-gray-300">
-            npx grail add {{ skill.repoLink }} --skill {{ skill?.title?.toLowerCase().replace(/\s+/g, '-') }}
+            npx grail add {{ skill.repoLink }} --skill
+            {{ skill?.title?.toLowerCase().replace(/\s+/g, '-') }}
           </code>
         </div>
       </div>

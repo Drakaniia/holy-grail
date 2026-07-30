@@ -81,11 +81,7 @@ const emit = defineEmits<{
 
     <!-- Usage Tab -->
     <div v-else-if="activeTab === 'usage'">
-      <SkillUsageTab
-        :content-html="contentHtml"
-        :loading="contentLoading"
-        :error="contentError"
-      />
+      <SkillUsageTab :content-html="contentHtml" :loading="contentLoading" :error="contentError" />
     </div>
 
     <!-- Installation Tab -->

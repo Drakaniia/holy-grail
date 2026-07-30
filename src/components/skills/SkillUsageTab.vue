@@ -20,8 +20,6 @@ defineProps<{
       class="prose prose-invert max-w-none text-sm text-gray-300"
       v-html="contentHtml"
     />
-    <p v-else class="text-sm text-gray-500">
-      Load the SKILL.md content to see usage instructions.
-    </p>
+    <p v-else class="text-sm text-gray-500">Load the SKILL.md content to see usage instructions.</p>
   </div>
 </template>
