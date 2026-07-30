@@ -3,7 +3,7 @@
 **Holy Grail skill manager** — discover, install, and manage AI skills for your coding assistant.
 
 ```bash
-npx grail-cli add owner/repo --skill skill-name
+npx grail add owner/repo --skill skill-name
 ```
 
 ## Usage
@@ -11,7 +11,7 @@ npx grail-cli add owner/repo --skill skill-name
 ### Add a skill
 
 ```bash
-npx grail-cli add Drakaniia/skills --skill audit-codebase
+npx grail add Drakaniia/skills --skill audit-codebase
 ```
 
 This downloads the skill from GitHub and installs it to `~/.grail/skills/`.
@@ -19,38 +19,38 @@ This downloads the skill from GitHub and installs it to `~/.grail/skills/`.
 ### List installed skills
 
 ```bash
-npx grail-cli list
+npx grail list
 ```
 
 ### Remove a skill
 
 ```bash
-npx grail-cli remove skill-name
+npx grail remove skill-name
 ```
 
 ### Find skills
 
 ```bash
-npx grail-cli find query
+npx grail find query
 ```
 
 ### Show skill info
 
 ```bash
-npx grail-cli info skill-name
+npx grail info skill-name
 ```
 
 ### Update skills
 
 ```bash
-npx grail-cli update       # update all
-npx grail-cli update name  # update specific
+npx grail update       # update all
+npx grail update name  # update specific
 ```
 
 ### Regenerate index
 
 ```bash
-npx grail-cli index
+npx grail index
 ```
 
 ## What are skills?
@@ -61,7 +61,7 @@ Each skill lives in a GitHub repo and can be installed with a single command.
 
 ## How it works
 
-`grail-cli` is a thin TypeScript wrapper around a Rust binary. When you run `npx grail-cli`, the postinstall script:
+`grail-cli` is a thin TypeScript wrapper around a Rust binary. When you run `npx grail`, the postinstall script:
 
 1. Downloads a prebuilt binary for your platform from GitHub releases, or
 2. Falls back to building from source via `cargo` (requires Rust)

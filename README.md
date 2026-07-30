@@ -49,7 +49,7 @@ The app runs without Supabase — auth and submissions are gracefully disabled.
 Manage AI coding skills from **any computer** with one command:
 
 ```bash
-npx grail-cli add Drakaniia/skills --skill audit-codebase
+npx grail add Drakaniia/skills --skill audit-codebase
 ```
 
 Discover, install, and manage AI skills for any coding assistant. Works on Windows, macOS, and Linux. [Full documentation →](docs/GRAIL-CLI.md)

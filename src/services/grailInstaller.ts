@@ -21,7 +21,7 @@ export async function copyInstallCommand(command: string): Promise<boolean> {
 }
 
 export function generateInstallCommand(repoLink: string, slug: string): string {
-  return `npx grail-cli add ${repoLink} --skill ${slug}`
+  return `npx grail add ${repoLink} --skill ${slug}`
 }
 
 export async function checkSkillInstalled(slug: string): Promise<boolean> {

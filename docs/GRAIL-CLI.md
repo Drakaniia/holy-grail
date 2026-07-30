@@ -3,7 +3,7 @@
 **The Holy Grail skill manager** — discover, install, and manage AI skills for your coding assistant. Available as an npm package and as a built-in CLI in the Holy Grail project.
 
 ```bash
-npx grail-cli add Drakaniia/skills --skill audit-codebase
+npx grail add Drakaniia/skills --skill audit-codebase
 ```
 
 ## Quick Start
@@ -11,7 +11,7 @@ npx grail-cli add Drakaniia/skills --skill audit-codebase
 ### From Anywhere (npm)
 
 ```bash
-npx grail-cli add <owner>/<repo> --skill <skill-name>
+npx grail add <owner>/<repo> --skill <skill-name>
 ```
 
 No installation required — `npx` downloads and runs the latest version. On first run, it downloads a prebuilt Rust binary for your platform, or builds from source if Rust is installed.
@@ -37,13 +37,13 @@ Install a skill from a GitHub repository.
 
 ```bash
 # Install a specific skill from a multi-skill repo
-npx grail-cli add Drakaniia/skills --skill audit-codebase
+npx grail add Drakaniia/skills --skill audit-codebase
 
 # Interactive picker for multi-skill repos (no --skill flag)
-npx grail-cli add midudev/autoskills
+npx grail add midudev/autoskills
 
 # Full GitHub URL also works
-npx grail-cli add https://github.com/midudev/autoskills --skill vue
+npx grail add https://github.com/midudev/autoskills --skill vue
 ```
 
 **Behavior:**
@@ -58,7 +58,7 @@ npx grail-cli add https://github.com/midudev/autoskills --skill vue
 Uninstall a skill.
 
 ```bash
-npx grail-cli remove vue
+npx grail remove vue
 ```
 
 Detects foreign skills (installed by `npx skills` or `npx openskills`) and warns before removal.
@@ -68,7 +68,7 @@ Detects foreign skills (installed by `npx skills` or `npx openskills`) and warns
 List installed skills.
 
 ```bash
-npx grail-cli list
+npx grail list
 ```
 
 Shows all skills in `~/.grail/skills/` with foreign-tool markers when detected.
@@ -78,9 +78,9 @@ Shows all skills in `~/.grail/skills/` with foreign-tool markers when detected.
 Search installed skills by name, description, or content.
 
 ```bash
-npx grail-cli find              # All installed skills
-npx grail-cli find vue          # Search by keyword
-npx grail-cli find typescript   # Find TypeScript-related skills
+npx grail find              # All installed skills
+npx grail find vue          # Search by keyword
+npx grail find typescript   # Find TypeScript-related skills
 ```
 
 ### `grail info <skill-name>`
@@ -88,7 +88,7 @@ npx grail-cli find typescript   # Find TypeScript-related skills
 Show detailed information about an installed skill.
 
 ```bash
-npx grail-cli info audit-codebase
+npx grail info audit-codebase
 ```
 
 Output includes: name, slug, description, category, author, repo, tags, featured status, install date.
@@ -98,8 +98,8 @@ Output includes: name, slug, description, category, author, repo, tags, featured
 Update installed skills to their latest version.
 
 ```bash
-npx grail-cli update            # Update all installed skills
-npx grail-cli update vue        # Update a specific skill
+npx grail update            # Update all installed skills
+npx grail update vue        # Update a specific skill
 ```
 
 Re-fetches `SKILL.md` from the remote GitHub repo and replaces the local copy.
@@ -109,7 +109,7 @@ Re-fetches `SKILL.md` from the remote GitHub repo and replaces the local copy.
 Regenerate the skills index.
 
 ```bash
-npx grail-cli index
+npx grail index
 ```
 
 Scans `~/.grail/skills/` for installed skills, reads `SKILL.md` frontmatter, and writes:
@@ -178,7 +178,7 @@ Instructions for the AI...
 
 1. **TypeScript wrapper** (`cli/grail.ts`) — npm bin entry point, locates and spawns the Rust binary
 2. **Rust binary** (`cli/src/main.rs`) — actual CLI logic using `clap`, `reqwest`, `serde_yaml`
-3. **Postinstall script** (`cli/install.ts`) — on `npm install` or `npx grail-cli`:
+3. **Postinstall script** (`cli/install.ts`) — on `npm install` or `npx grail`:
    - Downloads a prebuilt binary from GitHub Releases for your platform, OR
    - Falls back to `cargo build --release` (requires Rust)
 
@@ -188,7 +188,7 @@ Skills are fetched from GitHub repositories using the GitHub Contents API, then 
 
 ```bash
 # One command — works anywhere with Node.js installed
-npx grail-cli add Drakaniia/skills --skill audit-codebase
+npx grail add Drakaniia/skills --skill audit-codebase
 ```
 
 The postinstall script handles binary installation automatically:
