@@ -174,6 +174,8 @@ const currentSiteCollectionTrail = computed(() => {
   })
 })
 
+const isHomePage = computed(() => route.path === '/')
+
 const shortcutKey = '⌘'
 const shortcutAriaKey = 'Control+K Meta+K'
 let cancelStarCountLoad: (() => void) | undefined
@@ -321,6 +323,13 @@ onUnmounted(() => {
           </span>
         </template>
       </nav>
+
+      <span
+        v-else-if="isHomePage"
+        class="hidden min-w-0 items-center gap-1.5 rounded-md px-2.5 py-1 text-[11px] font-semibold uppercase tracking-widest text-gray-400 sm:flex"
+      >
+        Browse
+      </span>
     </div>
 
     <div class="flex shrink-0 items-center gap-1.5 sm:gap-3 md:gap-4">
