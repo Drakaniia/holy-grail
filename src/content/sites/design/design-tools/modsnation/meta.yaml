@@ -1,0 +1,79 @@
+slug: modsnation
+name: Mods Nation - 3D Car Configurator & Builds Gallery
+description: AI-powered 3D car configurator with community builds gallery, tuning marketplace, and parts discovery.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: Added Jul 30, 2026
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.modsnation.com/builds
+docs: https://www.modsnation.com/builds
+sourceCode: ''
+icon: modsnation
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - 3d
+  - automotive
+  - configurator
+atGlance: AI-powered 3D car configurator with community builds gallery.
+fullDescription: >-
+  Mods Nation is an AI-powered 3D car configurator and automotive tuning
+  marketplace. The /builds page serves as the community's 3D Mods Lab and Car
+  Builds Gallery, where users showcase custom virtual vehicle builds created
+  using the platform's 3D tools. It also features a parts marketplace and
+  local shop booking integration.
+coreFeatures:
+  - name: 3D Car Configurator
+    description: Design and customize cars with AI-powered 3D visualization tools.
+    icon: check
+  - name: Community Builds Gallery
+    description: Browse and showcase custom car builds in the 3D Mods Lab.
+    icon: check
+additionalFeatures:
+  - name: Parts Marketplace
+    description: Discover real aftermarket parts used in builds with shop integration.
+    icon: check
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Sorted by Discipline
+    description: Grouped under the matching design subcategory.
+    icon: check
+similarTools:
+  - slug: tripo3d
+    name: Tripo 3D
+    description: AI-powered 3D model generation tool.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.tripo3d.ai/
+  - slug: spline
+    name: Spline
+    description: Spline bookmarked for 3d resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://app.spline.design/home
+  - slug: phase
+    name: Phase
+    description: AI-powered motion design tool for animation and interaction.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.phase.com/home

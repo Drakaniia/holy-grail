@@ -1,6 +1,6 @@
-slug: onlyflix
-name: OnlyFlix
-description: Movie watch source bookmark for quick launch.
+slug: dulo-gd
+name: Dulo
+description: Movie and TV show watch source with live TV.
 category: Movies
 parentCategory: watch
 subcategory: movies
@@ -8,7 +8,7 @@ stars: 0
 watchers: 0
 addedDaysAgo: 0
 license: Proprietary
-lastCommit: Added Jun 5, 2026
+lastCommit: Added Jul 30, 2026
 lastRelease: N/A
 version: ''
 contributors: 0
@@ -18,10 +18,10 @@ platforms:
   - Web
 deployment:
   - Cloud
-website: https://onlyflix.to/
-docs: https://onlyflix.to/
+website: https://dulo.gd
+docs: https://dulo.gd
 sourceCode: ''
-icon: onlyflix
+icon: dulo-gd
 verified: false
 featured: false
 tags:
@@ -29,21 +29,22 @@ tags:
   - watch
   - movies
   - streaming
-atGlance: Movie watch bookmark.
-fullDescription: OnlyFlix is kept as a movie watch source in the Watch collection.
+  - live-tv
+atGlance: Movie and TV watch bookmark with live TV.
+fullDescription: Dulo is a comprehensive streaming platform that offers movies, TV series, and live television channels in one place. Formerly dulo.tv, it features a clean, modern interface with minimal ads and an active community for updates.
 coreFeatures:
-  - name: Watch Source
-    description: Cataloged as a saved movie watch bookmark.
+  - name: Movies & TV Shows
+    description: Stream thousands of movies and TV series on demand.
     icon: check
-  - name: Direct Web Launch
-    description: Opens the saved watch source directly from the catalog entry.
+  - name: Live TV Channels
+    description: Watch live television including sports, news, and entertainment channels.
     icon: check
 additionalFeatures:
   - name: Watch Collection
     description: Grouped under Watch for movie and anime sources.
     icon: check
   - name: Catalog Tags
-    description: Tagged for watch, movie, and streaming search.
+    description: Tagged for watch, movie, streaming, and live TV search.
     icon: check
 similarTools:
   - slug: sflix
@@ -53,11 +54,11 @@ similarTools:
     addedDaysAgo: 0
     verified: false
     website: https://sflix.app/home
-  - slug: movies2watch
-    name: Movies2Watch
+  - slug: 123movieslive
+    name: 123MoviesLive
     description: Movie watch source bookmark for quick launch.
     stars: 0
     addedDaysAgo: 0
     verified: false
-    website: https://movies2watch.watch/home/
+    website: https://123movieslive.top/home/
 

@@ -23627,6 +23627,106 @@
     ]
   },
   {
+    "slug": "modsnation",
+    "name": "Mods Nation - 3D Car Configurator & Builds Gallery",
+    "description": "AI-powered 3D car configurator with community builds gallery, tuning marketplace, and parts discovery.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Jul 30, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.modsnation.com/builds",
+    "docs": "https://www.modsnation.com/builds",
+    "sourceCode": "",
+    "icon": "modsnation",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "3d",
+      "automotive",
+      "configurator"
+    ],
+    "atGlance": "AI-powered 3D car configurator with community builds gallery.",
+    "fullDescription": "Mods Nation is an AI-powered 3D car configurator and automotive tuning marketplace. The /builds page serves as the community's 3D Mods Lab and Car Builds Gallery, where users showcase custom virtual vehicle builds created using the platform's 3D tools. It also features a parts marketplace and local shop booking integration.",
+    "coreFeatures": [
+      {
+        "name": "3D Car Configurator",
+        "description": "Design and customize cars with AI-powered 3D visualization tools.",
+        "icon": "check"
+      },
+      {
+        "name": "Community Builds Gallery",
+        "description": "Browse and showcase custom car builds in the 3D Mods Lab.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Parts Marketplace",
+        "description": "Discover real aftermarket parts used in builds with shop integration.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Sorted by Discipline",
+        "description": "Grouped under the matching design subcategory.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "tripo3d",
+        "name": "Tripo 3D",
+        "description": "AI-powered 3D model generation tool.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.tripo3d.ai/"
+      },
+      {
+        "slug": "spline",
+        "name": "Spline",
+        "description": "Spline bookmarked for 3d resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://app.spline.design/home"
+      },
+      {
+        "slug": "phase",
+        "name": "Phase",
+        "description": "AI-powered motion design tool for animation and interaction.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.phase.com/home"
+      }
+    ]
+  },
+  {
     "slug": "navbar",
     "name": "Navbar Gallery - Navigation Design Inspiration",
     "description": "Navbar Gallery - Navigation Design Inspiration bookmarked for design tools resources.",
@@ -41789,6 +41889,91 @@
     ]
   },
   {
+    "slug": "dulo-gd",
+    "name": "Dulo",
+    "description": "Movie and TV show watch source with live TV.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Jul 30, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://dulo.gd",
+    "docs": "https://dulo.gd",
+    "sourceCode": "",
+    "icon": "dulo-gd",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming",
+      "live-tv"
+    ],
+    "atGlance": "Movie and TV watch bookmark with live TV.",
+    "fullDescription": "Dulo is a comprehensive streaming platform that offers movies, TV series, and live television channels in one place. Formerly dulo.tv, it features a clean, modern interface with minimal ads and an active community for updates.",
+    "coreFeatures": [
+      {
+        "name": "Movies & TV Shows",
+        "description": "Stream thousands of movies and TV series on demand.",
+        "icon": "check"
+      },
+      {
+        "name": "Live TV Channels",
+        "description": "Watch live television including sports, news, and entertainment channels.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, streaming, and live TV search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "123movieslive",
+        "name": "123MoviesLive",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://123movieslive.top/home/"
+      }
+    ]
+  },
+  {
     "slug": "khfullhd",
     "name": "KHFullHD",
     "description": "Movie watch source bookmark for quick launch.",
@@ -42289,15 +42474,6 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://movies2watch.watch/home/"
-      },
-      {
-        "slug": "vivaflix",
-        "name": "VivaFlix",
-        "description": "Movie watch source bookmark for quick launch.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://vivaflix.io/home"
       }
     ]
   },
@@ -42475,90 +42651,6 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://movies2watch.watch/home/"
-      }
-    ]
-  },
-  {
-    "slug": "vivaflix",
-    "name": "VivaFlix",
-    "description": "Movie watch source bookmark for quick launch.",
-    "category": "Movies",
-    "parentCategory": "watch",
-    "subcategory": "movies",
-    "stars": 0,
-    "watchers": 0,
-    "addedDaysAgo": 0,
-    "license": "Proprietary",
-    "lastCommit": "Added Jun 1, 2026",
-    "lastRelease": "N/A",
-    "version": "",
-    "contributors": 0,
-    "commitsThisYear": 0,
-    "releases": 0,
-    "platforms": [
-      "Web"
-    ],
-    "deployment": [
-      "Cloud"
-    ],
-    "website": "https://vivaflix.io/home",
-    "docs": "https://vivaflix.io/home",
-    "sourceCode": "",
-    "icon": "vivaflix",
-    "verified": false,
-    "featured": false,
-    "tags": [
-      "bookmark",
-      "watch",
-      "movies",
-      "streaming"
-    ],
-    "atGlance": "Movie watch bookmark.",
-    "fullDescription": "VivaFlix is kept as a movie watch source in the Watch collection.",
-    "coreFeatures": [
-      {
-        "name": "Watch Source",
-        "description": "Cataloged as a saved movie watch bookmark.",
-        "icon": "check"
-      },
-      {
-        "name": "Direct Web Launch",
-        "description": "Opens the saved watch source directly from the catalog entry.",
-        "icon": "check"
-      }
-    ],
-    "additionalFeatures": [
-      {
-        "name": "Watch Collection",
-        "description": "Grouped under Watch for movie and anime sources.",
-        "icon": "check"
-      },
-      {
-        "name": "Catalog Tags",
-        "description": "Tagged for watch, movie, and streaming search.",
-        "icon": "check"
-      }
-    ],
-    "deployCompose": "",
-    "installCommand": "",
-    "similarTools": [
-      {
-        "slug": "sflix",
-        "name": "SFlix",
-        "description": "Movie watch source bookmark for quick launch.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://sflix.app/home"
-      },
-      {
-        "slug": "nextflicks",
-        "name": "NextFlicks",
-        "description": "Movie watch source bookmark for quick launch.",
-        "stars": 0,
-        "addedDaysAgo": 0,
-        "verified": false,
-        "website": "https://nextflicks.link"
       }
     ]
   }
