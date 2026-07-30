@@ -11960,6 +11960,114 @@
     ]
   },
   {
+    "slug": "uisfx",
+    "name": "UI SFX - Open-Source Interface Sound Effects Library",
+    "description": "A complete library of 936 semantic UI sound effects across 12 sonic personalities for web apps, mobile apps, SaaS, education, media, and games.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 102,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "npm"
+    ],
+    "deployment": [
+      "Cloud",
+      "npm"
+    ],
+    "website": "https://uisfx.com",
+    "docs": "https://uisfx.com",
+    "sourceCode": "https://github.com/romainsimon/uisfx",
+    "icon": "uisfx",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "sound",
+      "audio",
+      "sfx",
+      "ui"
+    ],
+    "atGlance": "Open-source semantic UI sound library with 936 sounds in 12 distinct feels.",
+    "fullDescription": "UI SFX is a tiny semantic sound system for web apps, mobile apps, SaaS, education, media, and games. It provides 78 semantic cues across 13 interaction categories, each available in 12 complete sonic personalities — from Minimal and Soft to Sci-fi, Cinematic, and Zen. Call a semantic cue like success, drop, or level-up once, then switch the entire product between personalities without changing interaction code. Ships as a zero-dependency Web Audio runtime (12 kB compressed) with MIT-licensed code and CC0-licensed audio.",
+    "coreFeatures": [
+      {
+        "name": "Semantic Sound Cues",
+        "description": "78 interaction cues mapped to meaningful product states — select, success, error, drop, level-up, and more.",
+        "icon": "check"
+      },
+      {
+        "name": "12 Sonic Personalities",
+        "description": "Switch between Minimal, Soft, Glass, Arcade, Mechanical, Organic, Dreamy, Sci-fi, Rubber, Cinematic, Studio, and Zen packs.",
+        "icon": "layers"
+      },
+      {
+        "name": "Zero Dependencies",
+        "description": "12 kB compressed Web Audio runtime with no external dependencies. Works via npm or direct HTML bindings.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "936 Original Sounds",
+        "description": "Each cue available in every pack as MP3 and Ogg, plus live Web Audio synthesis.",
+        "icon": "check"
+      },
+      {
+        "name": "Portable Audio Files",
+        "description": "Includes standalone MP3 and Ogg files for React Native, Swift, Kotlin, Unity, Godot, and video.",
+        "icon": "check"
+      },
+      {
+        "name": "Accessible by Design",
+        "description": "Respects mute preferences, device volume, and reduced motion — sound reinforces, never replaces, visible feedback.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "lottiefiles",
+        "name": "LottieFiles",
+        "description": "Free lightweight animations for websites and apps.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lottiefiles.com/"
+      },
+      {
+        "slug": "jitter",
+        "name": "Jitter",
+        "description": "Fast and simple motion design tool for creatives.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://jitter.video/"
+      },
+      {
+        "slug": "animos",
+        "name": "Animos",
+        "description": "Browser-based motion design tool for portfolio showcases and animation.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://animos.app"
+      }
+    ]
+  },
+  {
     "slug": "resend",
     "name": "Resend - Email for developers",
     "description": "Resend - Email for developers bookmarked for tooling resources.",
