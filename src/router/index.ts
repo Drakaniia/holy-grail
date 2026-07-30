@@ -9,7 +9,6 @@ const BookmarksPage = () => import('@/pages/BookmarksPage.vue')
 const ChangelogPage = () => import('@/pages/ChangelogPage.vue')
 const DocumentationPage = () => import('@/pages/DocumentationPage.vue')
 const EditProfilePage = () => import('@/pages/EditProfilePage.vue')
-const HomePage = () => import('@/pages/HomePage.vue')
 const NotFoundPage = () => import('@/pages/NotFoundPage.vue')
 const SiteDetail = () => import('@/pages/SiteDetail.vue')
 const SitesPage = () => import('@/pages/SitesPage.vue')
@@ -46,24 +45,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomePage,
-    },
-    {
-      path: '/sites',
-      name: 'sites-home',
       component: SitesHomePage,
     },
     {
-      path: '/sites/platforms',
-      redirect: '/sites',
-    },
-    {
-      path: '/sites/cli-tools',
-      redirect: '/sites/development/cli-tools',
-    },
-    {
-      path: '/sites/ui-libraries',
-      redirect: '/sites/development/ui-libraries',
+      path: '/sites',
+      redirect: '/',
     },
     {
       path: '/sites/:category(ai|design|development|watch|downloads)/:subcategory?',
