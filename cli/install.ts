@@ -84,7 +84,6 @@ async function tryDownloadBinary(): Promise<boolean> {
     }
 
     if (existsSync(binaryPath)) {
-      const stats = spawnSync("ls", ["-lh", binaryPath]);
       console.log(`  ✓ Downloaded to ${binaryPath}`);
       return true;
     }
