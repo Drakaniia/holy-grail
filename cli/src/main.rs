@@ -270,6 +270,37 @@ fn github_api_base() -> String {
         .unwrap_or_else(|_| "https://api.github.com".to_string())
 }
 
+/// Read a GitHub personal access token from environment.
+/// Checks `GITHUB_TOKEN` first, then `GH_TOKEN` (GitHub CLI convention).
+fn github_token() -> Option<String> {
+    std::env::var("GITHUB_TOKEN")
+        .ok()
+        .or_else(|| std::env::var("GH_TOKEN").ok())
+        .filter(|t| !t.is_empty())
+}
+
+/// Build a reqwest blocking client with GitHub API headers.
+/// Includes Authorization if GITHUB_TOKEN or GH_TOKEN is set.
+fn build_github_client() -> reqwest::blocking::Client {
+    let mut headers = reqwest::header::HeaderMap::new();
+    headers.insert(
+        reqwest::header::ACCEPT,
+        reqwest::header::HeaderValue::from_static("application/vnd.github.v3+json"),
+    );
+    if let Some(token) = github_token() {
+        let mut auth_value =
+            reqwest::header::HeaderValue::from_str(&format!("Bearer {}", token))
+                .expect("Invalid GITHUB_TOKEN value (must be ASCII)");
+        auth_value.set_sensitive(true);
+        headers.insert(reqwest::header::AUTHORIZATION, auth_value);
+    }
+    reqwest::blocking::Client::builder()
+        .user_agent("grail-cli/0.1.0")
+        .default_headers(headers)
+        .build()
+        .expect("Failed to build HTTP client")
+}
+
 fn is_local_path(repo: &str) -> bool {
     let path = Path::new(repo);
     path.exists()
@@ -301,27 +332,62 @@ fn parse_github_repo(repo: &str) -> Option<(&str, &str)> {
 
 /// Fetch skill files from a GitHub repo to a temporary directory.
 /// Returns the path to the temp directory containing the downloaded files.
+/// Supports GITHUB_TOKEN / GH_TOKEN for authenticated requests (higher rate limit, private repos).
 fn fetch_github_repo(owner: &str, repo: &str) -> PathBuf {
     let api_base = github_api_base();
-    let client = reqwest::blocking::Client::builder()
-        .user_agent("grail-cli/0.1.0")
-        .build()
-        .expect("Failed to build HTTP client");
+    let client = build_github_client();
+    let has_token = github_token().is_some();
 
     // First, list root contents of the repo
     let root_url = format!("{}/repos/{}/{}/contents/", api_base, owner, repo);
     let root_resp = client.get(&root_url).send().unwrap_or_else(|e| {
-        eprintln!("Error: Failed to fetch repo contents: {}", e);
+        eprintln!("Error: Failed to connect to GitHub: {}", e);
+        eprintln!("Check your network connection or GitHub API status at https://www.githubstatus.com");
         std::process::exit(1);
     });
 
     if !root_resp.status().is_success() {
-        eprintln!(
-            "Error: Repository \"{}/{}\" not found on GitHub (HTTP {}).",
-            owner,
-            repo,
-            root_resp.status()
-        );
+        match root_resp.status().as_u16() {
+            401 => {
+                eprintln!(
+                    "Error: Bad credentials (HTTP 401).\n\
+                     Your GITHUB_TOKEN is invalid or expired.\n\
+                     Generate a new token at https://github.com/settings/tokens\n\
+                     Required scopes: 'repo' (private repos) or 'public_repo' (public repos)."
+                );
+            }
+            403 if has_token => {
+                eprintln!(
+                    "Error: Access denied to \"{}/{}\" (HTTP 403).\n\
+                     The token may lack permissions, or the repository is private.\n\
+                     Ensure your token has the 'repo' scope for private repos.",
+                    owner, repo
+                );
+            }
+            403 => {
+                eprintln!(
+                    "Error: Access denied to \"{}/{}\" (HTTP 403).\n\
+                     This is likely GitHub API rate limiting (60 requests/hour unauthenticated).\n\
+                     Set GITHUB_TOKEN for 5,000 requests/hour:\n\
+                       PowerShell: $env:GITHUB_TOKEN=\"ghp_...\"\n\
+                       bash/zsh:   export GITHUB_TOKEN=\"ghp_...\"",
+                    owner, repo
+                );
+            }
+            404 => {
+                eprintln!(
+                    "Error: Repository \"{}/{}\" not found on GitHub (HTTP 404).\n\
+                     Check that the repository exists and is spelled correctly.",
+                    owner, repo
+                );
+            }
+            code => {
+                eprintln!(
+                    "Error: Failed to fetch \"{}/{}\" (HTTP {}).",
+                    owner, repo, code
+                );
+            }
+        }
         std::process::exit(1);
     }
 
