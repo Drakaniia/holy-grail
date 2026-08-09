@@ -103,6 +103,5 @@ const emit = defineEmits<{
     <div v-else-if="activeTab === 'related'">
       <RelatedSkillsTab :skills="relatedSkills" />
     </div>
-
   </div>
 </template>
