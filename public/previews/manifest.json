@@ -554,6 +554,15 @@
     "height": 600,
     "bytes": 11662
   },
+  "cinehd": {
+    "image": "/previews/cinehd.webp",
+    "small": "/previews/cinehd-sm.webp",
+    "sourceUrl": "https://cinehd.app/home",
+    "capturedAt": "2026-07-31T16:06:57.219Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 48688
+  },
   "claude": {
     "image": "/previews/claude.webp",
     "small": "/previews/claude-sm.webp",
