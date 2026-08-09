@@ -27613,6 +27613,112 @@
     ]
   },
   {
+    "slug": "brandingboard",
+    "name": "Branding Board - Curated brand design inspiration",
+    "description": "Curated gallery of brand identity work, color palettes, and fonts for design inspiration.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://brandingboard.app/",
+    "docs": "https://brandingboard.app/",
+    "sourceCode": "",
+    "icon": "brandingboard",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "branding",
+      "brand-identity",
+      "color-palettes",
+      "fonts"
+    ],
+    "atGlance": "Curated gallery of brand identity, palettes, and type inspiration.",
+    "fullDescription": "Branding Board is a curated web gallery and design inspiration platform for graphic designers, brand managers, and creative professionals. It centralizes a hand-picked library of brand identity work, packaging, and editorial design with links to the original creators. Beyond the gallery, it offers searchable color palettes with one-click code copying and a font book organized by foundry and license type. The platform is the digital home of the @branding.board design community and is free to browse.",
+    "coreFeatures": [
+      {
+        "name": "Curated Design Gallery",
+        "description": "2,300+ hand-picked brand identity, packaging, and editorial works with creator attribution.",
+        "icon": "palette"
+      },
+      {
+        "name": "Color Palette Library",
+        "description": "Browse palettes by hue and style, copy codes in HEX, OKLCH, RGB, and HSL.",
+        "icon": "layers"
+      },
+      {
+        "name": "Font Book",
+        "description": "Discover the typefaces behind great brand design, sorted by foundry and license.",
+        "icon": "type"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Community Driven",
+        "description": "Home of the @branding.board design community with a regularly updated archive.",
+        "icon": "check"
+      },
+      {
+        "name": "Searchable References",
+        "description": "Find direction on typography, color, and layout for brand projects.",
+        "icon": "search"
+      },
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "dribbble",
+        "name": "Dribbble",
+        "description": "Community platform for showcasing and discovering design work.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://dribbble.com/"
+      },
+      {
+        "slug": "mobbin",
+        "name": "Mobbin - UI & UX design inspiration for mobile & web apps",
+        "description": "Curated library of real-world UI and UX design patterns.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mobbin.com/"
+      },
+      {
+        "slug": "godly",
+        "name": "Godly - Astronomically good web design inspiration",
+        "description": "Curated gallery of outstanding web design examples.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://godly.website/"
+      }
+    ]
+  },
+  {
     "slug": "craftwork",
     "name": "Curated Inspiration",
     "description": "Curated Inspiration bookmarked for inspiration resources.",
