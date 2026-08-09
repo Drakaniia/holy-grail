@@ -5633,6 +5633,107 @@
     ]
   },
   {
+    "slug": "convex",
+    "name": "Convex - Realtime backend platform with database and TypeScript functions",
+    "description": "Reactive backend platform with realtime database, TypeScript functions, and file storage.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 12335,
+    "watchers": 791,
+    "addedDaysAgo": 0,
+    "license": "FSL-1.1",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://convex.dev",
+    "docs": "https://docs.convex.dev",
+    "sourceCode": "https://github.com/get-convex/convex-backend",
+    "icon": "convex",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "backend",
+      "realtime",
+      "database"
+    ],
+    "atGlance": "Reactive backend platform with realtime database and TypeScript functions.",
+    "fullDescription": "Convex is a reactive backend-as-a-service platform that bundles a realtime transactional database, TypeScript backend functions, file storage, and vector search into a single system. Queries automatically subscribe to the data they read, so UI state stays in sync over WebSockets without manual polling or extra infrastructure. It is kept as a backend and hosting resource for cloud hosting, deployment, or backend infrastructure work.",
+    "coreFeatures": [
+      {
+        "name": "Cloud Service",
+        "description": "Convex is tracked for cloud hosting, deployment, or backend infrastructure work.",
+        "icon": "check"
+      },
+      {
+        "name": "Hosted Access",
+        "description": "The primary service is available through the website link.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Documentation Path",
+        "description": "Docs are linked when available for setup details.",
+        "icon": "check"
+      },
+      {
+        "name": "Deployment Context",
+        "description": "Deployment type is recorded in the metadata.",
+        "icon": "check"
+      },
+      {
+        "name": "Developer Workflow",
+        "description": "Grouped under Development with related cloud and hosting resources.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 104640,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "neon",
+        "name": "Neon",
+        "description": "Serverless Postgres platform for developer workflows.",
+        "stars": 22320,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://neon.tech/"
+      },
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs",
+        "stars": 56000,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      }
+    ]
+  },
+  {
     "slug": "nitro",
     "name": "Nitro",
     "description": "Runtime-agnostic server toolkit for full-stack Vite applications.",
