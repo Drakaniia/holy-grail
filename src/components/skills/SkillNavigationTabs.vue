@@ -15,7 +15,6 @@ const tabs: Tab[] = [
   { id: 'skillmd', label: 'SKILL.md', enabled: true },
   { id: 'resources', label: 'Resources', enabled: true },
   { id: 'related', label: 'Related Skills', enabled: true },
-  { id: 'history', label: 'Version History', enabled: false },
 ]
 
 defineProps<{

@@ -7,7 +7,7 @@ import InstallationTab from './InstallationTab.vue'
 import SkillMDTab from './SkillMDTab.vue'
 import ResourcesTab from './ResourcesTab.vue'
 import RelatedSkillsTab from './RelatedSkillsTab.vue'
-import VersionHistoryTab from './VersionHistoryTab.vue'
+
 import SkillPreviewTab from './SkillPreviewTab.vue'
 import SkillUsageTab from './SkillUsageTab.vue'
 
@@ -104,9 +104,5 @@ const emit = defineEmits<{
       <RelatedSkillsTab :skills="relatedSkills" />
     </div>
 
-    <!-- Version History Tab -->
-    <div v-else-if="activeTab === 'history'">
-      <VersionHistoryTab />
-    </div>
   </div>
 </template>
