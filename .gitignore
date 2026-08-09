@@ -55,3 +55,7 @@ supabase/.temp/
 
 cli/target*
 cli/dist
+# Local tool state
+.freebuff/
+.omo/
+public/skills-index.json
