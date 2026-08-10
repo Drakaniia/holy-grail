@@ -10,6 +10,7 @@ const props = defineProps<{
   active?: boolean
 }>()
 
+const imageLoaded = shallowRef(false)
 const imageError = shallowRef(false)
 
 const fallbackIcon = computed(() => {
@@ -26,63 +27,83 @@ const fallbackIcon = computed(() => {
 })
 
 const shouldShowImage = computed(() => Boolean(props.logoUrl) && !imageError.value)
+
 const fallbackInitial = computed(() => props.title.charAt(0).toUpperCase())
 
+// Reset state when logo URL changes
 watch(
   () => props.logoUrl,
   () => {
+    imageLoaded.value = false
     imageError.value = false
   },
 )
+
+function onImageLoad() {
+  imageLoaded.value = true
+}
+
+function onImageError() {
+  imageError.value = true
+}
 </script>
 
 <template>
   <span
-    class="result-logo mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-md border border-gray-800 bg-[#1f1f1f] text-gray-400 transition-colors group-hover:border-gray-700 group-hover:text-accent-300"
-    :class="active ? 'result-logo--active border-accent-600/70 text-accent-300' : ''"
+    class="cp-logo mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border text-sm transition-colors duration-75"
+    :class="
+      active
+        ? 'cp-logo--active border-orange-500/40 bg-orange-500/10 text-orange-300'
+        : 'border-white/[0.06] bg-white/[0.03] text-white/30 group-hover:border-white/[0.1] group-hover:text-white/50'
+    "
   >
+    <!-- Favicon image with fade-in -->
     <img
       v-if="shouldShowImage"
       :src="logoUrl || ''"
       :alt="`${title} logo`"
-      class="h-7 w-7 object-contain"
+      class="h-5 w-5 object-contain transition-opacity duration-200"
+      :class="imageLoaded ? 'opacity-100' : 'opacity-0'"
       loading="lazy"
       decoding="async"
-      @error="imageError = true"
+      @load="onImageLoad"
+      @error="onImageError"
     />
+    <!-- Fallback icon for collections -->
     <component
       :is="fallbackIcon"
       v-else-if="kind === 'collection'"
-      class="h-5 w-5"
+      class="h-4.5 w-4.5"
       aria-hidden="true"
     />
-    <span v-else class="text-sm font-bold text-white">
+    <!-- Fallback initial for sites/skills -->
+    <span v-else class="text-xs font-semibold">
       {{ fallbackInitial }}
     </span>
   </span>
 </template>
 
 <style scoped>
-.result-logo {
+.cp-logo {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-:global(html.light .result-logo) {
-  border-color: rgba(203, 182, 162, 0.82) !important;
-  background: rgba(255, 245, 232, 0.82) !important;
-  color: var(--mocha-muted) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+/* Light mode */
+:global(html.light .cp-logo) {
+  border-color: rgba(180, 160, 140, 0.5);
+  background: rgba(200, 180, 150, 0.2);
+  color: rgba(61, 50, 38, 0.45);
 }
 
-:global(html.light .group:hover .result-logo) {
-  border-color: rgba(255, 140, 26, 0.38) !important;
-  background: rgba(255, 140, 26, 0.1) !important;
-  color: #9a4f00 !important;
+:global(html.light .group:hover .cp-logo) {
+  border-color: rgba(255, 140, 26, 0.3);
+  background: rgba(255, 140, 26, 0.1);
+  color: #b85a00;
 }
 
-:global(html.light .result-logo--active) {
-  border-color: rgba(255, 140, 26, 0.42) !important;
-  background: rgba(255, 140, 26, 0.14) !important;
-  color: #9a4f00 !important;
+:global(html.light .cp-logo--active) {
+  border-color: rgba(255, 140, 26, 0.35);
+  background: rgba(255, 140, 26, 0.12);
+  color: #b85a00;
 }
 </style>
