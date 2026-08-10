@@ -6515,5 +6515,43 @@
     "featured": false,
     "dateAdded": "",
     "hasLocalContent": false
+  },
+  {
+    "slug": "wait-what",
+    "title": "wait-what",
+    "description": "Stop. That last message did not land — re-pitch it.",
+    "category": "AI",
+    "parentCategory": "skills",
+    "tags": [],
+    "views": 0,
+    "uses": 0,
+    "author": "mattpocock",
+    "authorName": "mattpocock",
+    "repoLink": "mattpocock/skills",
+    "skillPath": "skills/productivity/wait-what",
+    "branch": "main",
+    "addedBy": "",
+    "featured": false,
+    "dateAdded": "",
+    "hasLocalContent": false
+  },
+  {
+    "slug": "writing-for-agents",
+    "title": "writing-for-agents",
+    "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+    "category": "AI",
+    "parentCategory": "skills",
+    "tags": [],
+    "views": 0,
+    "uses": 0,
+    "author": "mattpocock",
+    "authorName": "mattpocock",
+    "repoLink": "mattpocock/skills",
+    "skillPath": "skills/productivity/writing-for-agents",
+    "branch": "main",
+    "addedBy": "",
+    "featured": false,
+    "dateAdded": "",
+    "hasLocalContent": false
   }
 ]
