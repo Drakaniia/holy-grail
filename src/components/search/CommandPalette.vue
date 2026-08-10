@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onUnmounted, shallowRef, useTemplateRef, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { ArrowUpDown, Command, CornerDownLeft, Search, X } from 'lucide-vue-next'
+import { ArrowUpDown, CornerDownLeft, Search } from 'lucide-vue-next'
 import SearchResultLogo from '@/components/search/SearchResultLogo.vue'
 import { useSmartSearch, type SmartSearchResult } from '@/composables/useSmartSearch'
 import { trackSearchQuery } from '@/lib/analytics'
@@ -12,7 +12,7 @@ const query = shallowRef('')
 const activeIndex = shallowRef(0)
 const searchInput = useTemplateRef<HTMLInputElement>('searchInput')
 
-const { hasQuery, results } = useSmartSearch(query)
+const { hasQuery, results, searchTerms } = useSmartSearch(query)
 
 const visibleResults = computed(() => results.value)
 const activeResult = computed(() => visibleResults.value[activeIndex.value])
@@ -20,18 +20,96 @@ const resultHeading = computed(() => (hasQuery.value ? 'Best matches' : 'Feature
 
 let previousBodyOverflow: string | null = null
 
+// ---- Highlight matching terms ----
+
+type TextSegment = { text: string; match: boolean }
+
+const highlightCache = new Map<string, TextSegment[]>()
+const MAX_HIGHLIGHT_CACHE = 200
+
+function highlightText(raw: string): TextSegment[] {
+  const terms = searchTerms.value
+  if (!terms.length || !raw) return [{ text: raw, match: false }]
+
+  const cacheKey = `${raw}|||${terms.join(',')}`
+  const cached = highlightCache.get(cacheKey)
+  if (cached) return cached
+
+  const lower = raw.toLowerCase()
+  // Collect all match ranges
+  const ranges: { start: number; end: number }[] = []
+  for (const term of terms) {
+    let pos = 0
+    while (pos < lower.length) {
+      const idx = lower.indexOf(term, pos)
+      if (idx === -1) break
+      ranges.push({ start: idx, end: idx + term.length })
+      pos = idx + 1
+    }
+  }
+
+  if (!ranges.length) {
+    const result = [{ text: raw, match: false }]
+    highlightCache.set(cacheKey, result)
+    return result
+  }
+
+  // Merge overlapping ranges
+  ranges.sort((a, b) => a.start - b.start)
+  const merged: typeof ranges = []
+  for (const r of ranges) {
+    const last = merged[merged.length - 1]
+    if (last && r.start <= last.end) {
+      last.end = Math.max(last.end, r.end)
+    } else {
+      merged.push({ ...r })
+    }
+  }
+
+  // Build segments
+  const segments: TextSegment[] = []
+  let cursor = 0
+  for (const r of merged) {
+    if (r.start > cursor) {
+      segments.push({ text: raw.slice(cursor, r.start), match: false })
+    }
+    segments.push({ text: raw.slice(r.start, r.end), match: true })
+    cursor = r.end
+  }
+  if (cursor < raw.length) {
+    segments.push({ text: raw.slice(cursor), match: false })
+  }
+
+  // Cache management
+  if (highlightCache.size >= MAX_HIGHLIGHT_CACHE) {
+    const firstKey = highlightCache.keys().next().value
+    if (firstKey) highlightCache.delete(firstKey)
+  }
+  highlightCache.set(cacheKey, segments)
+  return segments
+}
+
+// Pre-compute highlighted versions of visible results
+const highlightedResults = computed(() =>
+  visibleResults.value.map((r) => ({
+    ...r,
+    titleHighlights: highlightText(r.title),
+    descriptionHighlights: highlightText(r.description),
+  })),
+)
+
+// ---- Body scroll lock ----
+
 watch(
   isOpen,
   async (open) => {
     if (typeof document === 'undefined') return
-
     if (open) {
       previousBodyOverflow ??= document.body.style.overflow
       document.body.style.overflow = 'hidden'
       await focusSearchInput()
       return
     }
-
     restoreBodyOverflow()
   },
   { immediate: true },
@@ -54,7 +132,6 @@ onUnmounted(() => {
 
 function restoreBodyOverflow() {
   if (typeof document === 'undefined' || previousBodyOverflow === null) return
-
   document.body.style.overflow = previousBodyOverflow
   previousBodyOverflow = null
 }
@@ -70,13 +147,11 @@ function closeDialog() {
 
 function selectNextResult() {
   if (visibleResults.value.length === 0) return
-
   activeIndex.value = (activeIndex.value + 1) % visibleResults.value.length
 }
 
 function selectPreviousResult() {
   if (visibleResults.value.length === 0) return
-
   activeIndex.value =
     (activeIndex.value - 1 + visibleResults.value.length) % visibleResults.value.length
 }
@@ -87,11 +162,9 @@ function openActiveResult() {
 
 function openResult(result: SmartSearchResult | undefined) {
   if (!result) return
-
-  const targetRoute = result.to
   query.value = ''
   closeDialog()
-  void router.push(targetRoute)
+  void router.push(result.to)
 }
 </script>
 
@@ -100,84 +173,73 @@ function openResult(result: SmartSearchResult | undefined) {
     <Transition name="command-palette">
       <div
         v-if="isOpen"
-        class="command-palette-shell fixed inset-0 z-[90] flex items-center justify-center overflow-hidden px-3 py-4 text-white sm:py-6"
+        class="cp-shell fixed inset-0 z-[90] flex items-start justify-center overflow-hidden px-4 pb-4 pt-[15vh] sm:pt-[18vh]"
         @keydown.esc.prevent="closeDialog"
       >
+        <!-- Backdrop -->
         <button
           type="button"
-          class="command-palette-backdrop fixed inset-0 bg-[#1f1f1f]/70 backdrop-blur-[2px]"
+          class="cp-backdrop fixed inset-0 bg-black/60 backdrop-blur-[1px]"
           aria-label="Close search"
           @click="closeDialog"
-        ></button>
+        />
 
+        <!-- Panel -->
         <section
-          class="command-palette-panel relative flex w-full max-w-2xl flex-col overflow-hidden rounded-lg border border-gray-800 shadow-[0_30px_90px_rgba(0,0,0,0.72)]"
+          class="cp-panel relative flex w-full max-w-xl flex-col overflow-hidden rounded-xl border shadow-2xl"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="command-palette-title"
+          aria-labelledby="cp-title"
         >
-          <div class="command-palette-grid pointer-events-none absolute inset-0"></div>
-
-          <div
-            class="command-palette-search-row relative flex h-16 items-center gap-3 border-b border-gray-800 px-4"
-          >
-            <Search class="h-5 w-5 shrink-0 text-accent-400" />
-            <label id="command-palette-title" class="sr-only" for="command-palette-input">
-              Search Holy Grail
-            </label>
+          <!-- Search row -->
+          <div class="flex h-14 items-center gap-3 border-b border-white/[0.07] px-4">
+            <Search class="h-4.5 w-4.5 shrink-0 text-orange-400" />
+            <label id="cp-title" class="sr-only" for="cp-input">Search Holy Grail</label>
             <input
-              id="command-palette-input"
+              id="cp-input"
               ref="searchInput"
               v-model="query"
               type="text"
               autocomplete="off"
               spellcheck="false"
-              placeholder="Search sites, domains, skills..."
-              class="command-palette-input h-full min-w-0 flex-1 bg-transparent text-base text-white placeholder:text-gray-600 focus:outline-none"
+              placeholder="Search sites, skills, collections..."
+              class="h-full min-w-0 flex-1 bg-transparent text-[15px] text-white placeholder:text-white/25 focus:outline-none"
               @keydown.down.prevent="selectNextResult"
               @keydown.up.prevent="selectPreviousResult"
               @keydown.enter.prevent="openActiveResult"
             />
-            <button
-              type="button"
-              class="command-palette-close-button inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-gray-500 transition-colors hover:bg-white/[0.06] hover:text-white"
-              aria-label="Close search"
-              @click="closeDialog"
+            <kbd
+              class="hidden h-6 items-center gap-0.5 rounded-md border border-white/[0.08] bg-white/[0.04] px-1.5 text-[10px] text-white/30 sm:flex"
             >
-              <X class="h-4 w-4" />
-            </button>
+              <span class="text-[11px] leading-none">esc</span>
+            </kbd>
           </div>
 
-          <div
-            class="command-palette-meta-row relative flex items-center justify-between border-b border-gray-800 px-4 py-2"
-          >
-            <div class="flex min-w-0 items-center gap-2">
-              <Command class="h-3.5 w-3.5 shrink-0 text-gray-500" />
-              <p
-                class="command-palette-meta-label truncate text-xs font-medium uppercase tracking-widest text-gray-500"
-              >
-                {{ resultHeading }}
-              </p>
-            </div>
-            <p class="command-palette-result-count shrink-0 text-xs text-gray-600">
-              {{ visibleResults.length }} results
+          <!-- Meta row -->
+          <div class="flex items-center justify-between border-b border-white/[0.06] px-4 py-2">
+            <p class="text-[11px] font-semibold uppercase tracking-wider text-white/30">
+              {{ resultHeading }}
+            </p>
+            <p class="text-[11px] text-white/20">
+              {{ visibleResults.length }} result{{ visibleResults.length !== 1 ? 's' : '' }}
             </p>
           </div>
 
+          <!-- Results list -->
           <div
-            class="relative min-h-0 flex-1 overflow-y-auto p-2"
+            class="min-h-0 flex-1 overflow-y-auto overscroll-contain p-1.5"
             role="listbox"
-            aria-label="Smart search results"
+            aria-label="Search results"
           >
             <button
-              v-for="(result, index) in visibleResults"
+              v-for="(result, index) in highlightedResults"
               :key="result.id"
               type="button"
-              class="command-palette-result group flex w-full items-start gap-3 rounded-md border border-transparent px-3 py-3 text-left transition-colors"
+              class="cp-result group flex w-full items-start gap-3 rounded-lg border border-transparent px-3 py-2.5 text-left transition-colors duration-75"
               :class="
                 index === activeIndex
-                  ? 'command-palette-result--active border-gray-700 bg-white/[0.07] text-white'
-                  : 'command-palette-result--idle text-gray-300 hover:bg-white/[0.045]'
+                  ? 'cp-result--active border-white/[0.08] bg-white/[0.08]'
+                  : 'cp-result--idle hover:bg-white/[0.04]'
               "
               role="option"
               :aria-selected="index === activeIndex"
@@ -192,61 +254,94 @@ function openResult(result: SmartSearchResult | undefined) {
               />
 
               <span class="min-w-0 flex-1">
-                <span class="flex min-w-0 items-center gap-2">
-                  <span
-                    class="command-palette-result-title truncate text-sm font-semibold text-white"
-                  >
-                    {{ result.title }}
+                <!-- Title with match highlighting -->
+                <span class="flex items-center gap-2">
+                  <span class="truncate text-sm font-medium">
+                    <template v-for="(seg, si) in result.titleHighlights" :key="si">
+                      <mark
+                        v-if="seg.match"
+                        class="cp-mark rounded-sm bg-orange-500/25 text-orange-200"
+                        >{{ seg.text }}</mark
+                      >
+                      <span v-else class="text-white">{{ seg.text }}</span>
+                    </template>
                   </span>
                   <span
                     v-if="hasQuery"
-                    class="command-palette-match-pill shrink-0 rounded border border-gray-800 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-gray-500"
+                    class="shrink-0 rounded border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide"
+                    :class="
+                      result.matchStrength === 'Direct'
+                        ? 'border-green-500/30 bg-green-500/10 text-green-400'
+                        : result.matchStrength === 'Close'
+                          ? 'border-yellow-500/30 bg-yellow-500/10 text-yellow-400'
+                          : 'border-white/[0.08] bg-white/[0.04] text-white/30'
+                    "
                   >
                     {{ result.matchStrength }}
                   </span>
                 </span>
-                <span
-                  class="command-palette-result-description mt-1 block line-clamp-2 text-xs leading-5 text-gray-500"
-                >
-                  {{ result.description }}
-                </span>
-                <span class="mt-2 flex min-w-0 flex-wrap items-center gap-1.5">
+
+                <!-- Description with match highlighting -->
+                <p class="mt-0.5 line-clamp-2 text-xs leading-relaxed">
+                  <template v-for="(seg, si) in result.descriptionHighlights" :key="si">
+                    <mark
+                      v-if="seg.match"
+                      class="cp-mark rounded-sm bg-orange-500/20 text-orange-200/80"
+                      >{{ seg.text }}</mark
+                    >
+                    <span v-else class="text-white/40">{{ seg.text }}</span>
+                  </template>
+                </p>
+
+                <!-- Chips row -->
+                <span class="mt-1.5 flex flex-wrap items-center gap-1">
                   <span
                     v-if="result.domainLabel"
-                    class="command-palette-domain-chip rounded bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-gray-500"
+                    class="rounded bg-white/[0.05] px-1.5 py-0.5 text-[10px] text-white/35"
                   >
                     {{ result.domainLabel }}
                   </span>
                   <span
-                    class="command-palette-chip rounded border border-gray-800 px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-gray-500"
+                    class="rounded border border-white/[0.06] bg-white/[0.03] px-1.5 py-0.5 text-[10px] tracking-wide text-white/35"
                   >
                     {{ result.eyebrow }}
                   </span>
                   <span
                     v-for="tag in result.tags.slice(0, 2)"
                     :key="`${result.id}-${tag}`"
-                    class="command-palette-tag rounded bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-gray-500"
+                    class="rounded bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-white/30"
                   >
                     {{ tag }}
                   </span>
                 </span>
               </span>
             </button>
+
+            <!-- Empty state -->
+            <div
+              v-if="visibleResults.length === 0 && hasQuery"
+              class="flex flex-col items-center justify-center gap-2 py-14 text-center"
+            >
+              <Search class="h-8 w-8 text-white/10" />
+              <p class="text-sm text-white/30">No results for "{{ query }}"</p>
+              <p class="text-xs text-white/15">Try a different search term</p>
+            </div>
           </div>
 
+          <!-- Footer -->
           <div
-            class="command-palette-footer relative flex flex-wrap items-center justify-between gap-3 border-t border-gray-800 px-4 py-3 text-xs text-gray-600"
+            class="flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.06] px-4 py-2.5 text-[11px] text-white/25"
           >
-            <span class="min-w-0 truncate">
-              {{ hasQuery ? 'Showing closest ranked results' : 'Start typing for fuzzy matching' }}
+            <span class="truncate">
+              {{ hasQuery ? 'Showing best matches' : 'Start typing to search' }}
             </span>
             <span class="flex shrink-0 items-center gap-3">
               <span class="inline-flex items-center gap-1">
-                <ArrowUpDown class="h-3.5 w-3.5" />
-                Move
+                <ArrowUpDown class="h-3 w-3" />
+                Navigate
               </span>
               <span class="inline-flex items-center gap-1">
-                <CornerDownLeft class="h-3.5 w-3.5" />
+                <CornerDownLeft class="h-3 w-3" />
                 Open
               </span>
             </span>
@@ -258,39 +353,36 @@ function openResult(result: SmartSearchResult | undefined) {
 </template>
 
 <style scoped>
-.command-palette-panel {
-  max-height: min(660px, calc(100dvh - 2rem));
+/* ---- Panel ----
+   Single gradient background without the expensive grid overlay.
+   The old .command-palette-grid painted a repeating pattern on every frame.
+*/
+
+.cp-panel {
+  max-height: min(540px, calc(100dvh - 20vh - 2rem));
   background:
-    linear-gradient(180deg, rgba(255, 122, 0, 0.08), transparent 42%),
-    linear-gradient(135deg, rgba(20, 184, 166, 0.06), transparent 34%), #1f1f1f;
+    linear-gradient(180deg, rgba(255, 122, 0, 0.06), transparent 40%),
+    linear-gradient(135deg, rgba(20, 184, 166, 0.04), transparent 30%), #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 24px 80px rgba(0, 0, 0, 0.6);
 }
 
-.command-palette-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 72%);
-  opacity: 0.42;
-}
-
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+/* ---- Transitions ----
+   Faster, leaner transitions with will-change hints.
+*/
 
 .command-palette-enter-active,
 .command-palette-leave-active {
-  transition: opacity 180ms ease;
+  transition: opacity 120ms ease;
 }
 
-.command-palette-enter-active .command-palette-panel,
-.command-palette-leave-active .command-palette-panel {
+.command-palette-enter-active .cp-panel,
+.command-palette-leave-active .cp-panel {
   transition:
-    opacity 180ms ease,
-    transform 200ms ease;
+    opacity 120ms ease,
+    transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .command-palette-enter-from,
@@ -298,95 +390,96 @@ function openResult(result: SmartSearchResult | undefined) {
   opacity: 0;
 }
 
-.command-palette-enter-from .command-palette-panel,
-.command-palette-leave-to .command-palette-panel {
+.command-palette-enter-from .cp-panel,
+.command-palette-leave-to .cp-panel {
   opacity: 0;
-  transform: translateY(-10px) scale(0.985);
+  transform: translateY(-6px) scale(0.99);
 }
 
-:global(html.light .command-palette-panel) {
+/* ---- Light mode ----
+   Clean custom properties approach instead of !important spam.
+*/
+
+:global(html.light .cp-panel) {
   background:
-    linear-gradient(180deg, rgba(255, 122, 0, 0.16), transparent 44%),
-    linear-gradient(135deg, rgba(20, 184, 166, 0.1), transparent 36%), var(--mocha-surface);
-  border-color: rgba(203, 182, 162, 0.9);
-  color: var(--mocha-text);
+    linear-gradient(180deg, rgba(255, 122, 0, 0.1), transparent 44%),
+    linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent 36%), #faf6f0;
+  border-color: rgba(180, 160, 140, 0.7);
   box-shadow:
-    0 30px 90px rgba(75, 49, 28, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.62);
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 24px 80px rgba(60, 40, 20, 0.2);
 }
 
-:global(html.light .command-palette-grid) {
-  background-image:
-    linear-gradient(rgba(45, 33, 25, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45, 33, 25, 0.06) 1px, transparent 1px);
-  opacity: 0.32;
+:global(html.light .cp-backdrop) {
+  background: rgba(40, 30, 20, 0.3);
 }
 
-:global(html.light .command-palette-backdrop) {
-  background: rgba(45, 33, 25, 0.34);
+:global(html.light .cp-shell input) {
+  color: #3d3226;
 }
 
-:global(html.light .command-palette-search-row),
-:global(html.light .command-palette-meta-row),
-:global(html.light .command-palette-footer) {
-  border-color: rgba(203, 182, 162, 0.78) !important;
+:global(html.light .cp-shell input::placeholder) {
+  color: rgba(61, 50, 38, 0.3);
 }
 
-:global(html.light .command-palette-input) {
-  color: var(--mocha-text) !important;
+:global(html.light .cp-shell .border-white\/\[0\.07\]),
+:global(html.light .cp-shell .border-white\/\[0\.06\]),
+:global(html.light .cp-shell .border-white\/\[0\.08\]) {
+  border-color: rgba(180, 160, 140, 0.5);
 }
 
-:global(html.light .command-palette-input::placeholder) {
-  color: var(--mocha-muted) !important;
+:global(html.light .cp-result--active) {
+  border-color: rgba(255, 140, 26, 0.3);
+  background: rgba(255, 140, 26, 0.1);
 }
 
-:global(html.light .command-palette-close-button) {
-  color: var(--mocha-muted) !important;
+:global(html.light .cp-result--idle:hover) {
+  background: rgba(255, 140, 26, 0.06);
 }
 
-:global(html.light .command-palette-close-button:hover) {
-  background: rgba(255, 140, 26, 0.12) !important;
-  color: var(--mocha-text) !important;
+:global(html.light .text-white\/30),
+:global(html.light .text-white\/25),
+:global(html.light .text-white\/20),
+:global(html.light .text-white\/35) {
+  color: rgba(61, 50, 38, 0.45);
 }
 
-:global(html.light .command-palette-meta-label),
-:global(html.light .command-palette-result-count),
-:global(html.light .command-palette-footer) {
-  color: var(--mocha-muted) !important;
+:global(html.light .text-white\/40) {
+  color: rgba(61, 50, 38, 0.55);
 }
 
-:global(html.light .command-palette-result) {
-  color: var(--mocha-text-soft) !important;
+:global(html.light .bg-white\/\[0\.04\]),
+:global(html.light .bg-white\/\[0\.03\]),
+:global(html.light .bg-white\/\[0\.05\]),
+:global(html.light .bg-white\/\[0\.08\]) {
+  background: rgba(180, 160, 140, 0.15);
 }
 
-:global(html.light .command-palette-result--idle:hover) {
-  background: rgba(255, 140, 26, 0.09) !important;
+/* Match highlight */
+.cp-mark {
+  padding: 0 1px;
 }
 
-:global(html.light .command-palette-result--active) {
-  border-color: rgba(255, 140, 26, 0.34) !important;
-  background: rgba(255, 140, 26, 0.13) !important;
-  color: var(--mocha-text) !important;
+:global(html.light .cp-mark) {
+  background: rgba(255, 140, 20, 0.22);
+  color: #7a3a00;
 }
 
-:global(html.light .command-palette-result-title) {
-  color: var(--mocha-text) !important;
+/* Line clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-:global(html.light .command-palette-result-description) {
-  color: var(--mocha-muted) !important;
-}
-
-:global(html.light .command-palette-match-pill),
-:global(html.light .command-palette-chip) {
-  border-color: rgba(203, 182, 162, 0.82) !important;
-  background: rgba(255, 250, 243, 0.52);
-  color: var(--mocha-muted) !important;
-}
-
-:global(html.light .command-palette-tag),
-:global(html.light .command-palette-domain-chip) {
-  background: rgba(45, 33, 25, 0.06) !important;
-  color: var(--mocha-muted) !important;
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .command-palette-enter-active,
+  .command-palette-leave-active,
+  .command-palette-enter-active .cp-panel,
+  .command-palette-leave-active .cp-panel {
+    transition: none;
+  }
 }
 </style>
