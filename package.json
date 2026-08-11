@@ -59,7 +59,7 @@
     "globals": "^17.8.0",
     "happy-dom": "^20.11.1",
     "npm-run-all2": "^9.0.3",
-    "oxlint": "~1.76.0",
+    "oxlint": "~1.77.0",
     "postcss": "^8.5.25",
     "prettier": "3.9.6",
     "puppeteer-core": "^25.4.0",
