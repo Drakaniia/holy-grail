@@ -1,0 +1,85 @@
+slug: agencygallery
+name: Agency Gallery - The Best Agency Websites In The World
+description: >-
+  Curated gallery of the best creative agency websites in the world for web design
+  inspiration and portfolio reference.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://agencygallery.com
+docs: https://agencygallery.com
+sourceCode: ''
+icon: agencygallery
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - agency
+  - portfolio
+  - web-design
+atGlance: The best and highly curated agency websites in the world.
+fullDescription: >-
+  Agency Gallery is a curated showcase of the best agency websites in the world, maintained
+  regularly by Velox Themes. It highlights standout work across branding, web design, AI,
+  product design, architecture, and ecommerce, with filters by industry, vibe, and tech stack.
+  Kept as an inspiration resource for design reference and portfolio benchmarking.
+coreFeatures:
+  - name: Curated Showcase
+    description: Highly curated collection of top agency websites updated regularly.
+    icon: check
+  - name: Browse by Category
+    description: Filter agencies by industry, vibe, and tech stack.
+    icon: layers
+  - name: Design Reference
+    description: Useful as inspiration for web design, branding, and portfolio work.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: Submit Your Agency
+    description: Agencies can submit their site for inclusion in the gallery.
+    icon: rocket
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
+  - slug: godly
+    name: Godly - Astronomically good web design inspiration
+    description: Godly - Astronomically good web design inspiration bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://godly.website/
+  - slug: landingfolio
+    name: The Best Landing Page Design Inspiration, Templates and More | Landingfolio
+    description: >-
+      The Best Landing Page Design Inspiration, Templates and More | Landingfolio bookmarked for
+      inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.landingfolio.com/
