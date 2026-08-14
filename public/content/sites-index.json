@@ -25126,6 +25126,112 @@
     ]
   },
   {
+    "slug": "shotbase",
+    "name": "Shotbase - AI Screen Capture Workspace for macOS",
+    "description": "AI-powered screen capture workspace for macOS to capture, organize, edit, and share screenshots and recordings.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Desktop"
+    ],
+    "deployment": [
+      "Desktop"
+    ],
+    "website": "https://shotbase.com",
+    "docs": "https://shotbase.com",
+    "sourceCode": "",
+    "icon": "shotbase",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "screenshot",
+      "screen-capture",
+      "macos",
+      "recording"
+    ],
+    "atGlance": "AI-powered screen capture, organize, and share workspace for macOS.",
+    "fullDescription": "Shotbase is a modern, AI-powered screen capture workspace for macOS designed for creating, editing, and sharing screenshots and recordings faster. It combines capture, recording, and an organized library so screenshots become searchable, revisit-worthy moments instead of desktop clutter. Built for designers, creators, and anyone who lives in screenshots and needs a faster capture-to-share workflow.",
+    "coreFeatures": [
+      {
+        "name": "Screen Capture",
+        "description": "Fast screenshot capture with a streamlined capture-to-share workflow.",
+        "icon": "check"
+      },
+      {
+        "name": "Organized Library",
+        "description": "Keeps screenshots organized and searchable so nothing gets lost.",
+        "icon": "layers"
+      },
+      {
+        "name": "Recording",
+        "description": "Record screen activity alongside stills for full coverage.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "AI-Powered Workflow",
+        "description": "AI assists with organizing, editing, and retrieving captures.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Quick Sharing",
+        "description": "Share screenshots and recordings without breaking your flow.",
+        "icon": "rocket"
+      },
+      {
+        "name": "macOS Native",
+        "description": "Native desktop app built specifically for macOS workflows.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "postspark",
+        "name": "PostSpark",
+        "description": "Screenshot editor for mockups, annotations, browser frames, and social visuals.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://postspark.app/"
+      },
+      {
+        "slug": "screenshot-studio",
+        "name": "Screenshot Studio - Free Screenshot Editor Online | Create Stunning Graphics",
+        "description": "Free online screenshot editor for creating stunning graphics.",
+        "stars": 708,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.screenshot-studio.com/"
+      },
+      {
+        "slug": "rotato",
+        "name": "Mockup Generator & Animator 3D | Rotato",
+        "description": "3D mockup generator and animator for product visuals.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://rotato.app/"
+      }
+    ]
+  },
+  {
     "slug": "shutterstock",
     "name": "Stock Video Footage, Royalty-Free HD, 4K Video Clips | Shutterstock",
     "description": "Stock Video Footage, Royalty-Free HD, 4K Video Clips | Shutterstock bookmarked for design tools resources.",
@@ -27480,6 +27586,217 @@
       {
         "name": "Reusable Reference",
         "description": "Kept with design, inspiration, animation, UI, and UX tags for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "mobbin",
+        "name": "Mobbin - UI & UX design inspiration for mobile & web apps",
+        "description": "Mobbin - UI & UX design inspiration for mobile & web apps bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mobbin.com/"
+      },
+      {
+        "slug": "designspells",
+        "name": "Design Spells - Design details that feel like magic",
+        "description": "Design Spells - Design details that feel like magic bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.designspells.com/"
+      },
+      {
+        "slug": "siteinspire",
+        "name": "Best Website Design Inspiration | Siteinspire",
+        "description": "Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.siteinspire.com/"
+      }
+    ]
+  },
+  {
+    "slug": "agencygallery",
+    "name": "Agency Gallery - The Best Agency Websites In The World",
+    "description": "Curated gallery of the best creative agency websites in the world for web design inspiration and portfolio reference.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://agencygallery.com",
+    "docs": "https://agencygallery.com",
+    "sourceCode": "",
+    "icon": "agencygallery",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "agency",
+      "portfolio",
+      "web-design"
+    ],
+    "atGlance": "The best and highly curated agency websites in the world.",
+    "fullDescription": "Agency Gallery is a curated showcase of the best agency websites in the world, maintained regularly by Velox Themes. It highlights standout work across branding, web design, AI, product design, architecture, and ecommerce, with filters by industry, vibe, and tech stack. Kept as an inspiration resource for design reference and portfolio benchmarking.",
+    "coreFeatures": [
+      {
+        "name": "Curated Showcase",
+        "description": "Highly curated collection of top agency websites updated regularly.",
+        "icon": "check"
+      },
+      {
+        "name": "Browse by Category",
+        "description": "Filter agencies by industry, vibe, and tech stack.",
+        "icon": "layers"
+      },
+      {
+        "name": "Design Reference",
+        "description": "Useful as inspiration for web design, branding, and portfolio work.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "Submit Your Agency",
+        "description": "Agencies can submit their site for inclusion in the gallery.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "siteinspire",
+        "name": "Best Website Design Inspiration | Siteinspire",
+        "description": "Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.siteinspire.com/"
+      },
+      {
+        "slug": "godly",
+        "name": "Godly - Astronomically good web design inspiration",
+        "description": "Godly - Astronomically good web design inspiration bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://godly.website/"
+      },
+      {
+        "slug": "landingfolio",
+        "name": "The Best Landing Page Design Inspiration, Templates and More | Landingfolio",
+        "description": "The Best Landing Page Design Inspiration, Templates and More | Landingfolio bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.landingfolio.com/"
+      }
+    ]
+  },
+  {
+    "slug": "before-click",
+    "name": "Before Click - App Store Screenshot Design Inspiration",
+    "description": "Curated gallery of the best App Store screenshot designs from top iOS apps to help you design screenshots that convert downloads.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://before.click",
+    "docs": "https://before.click",
+    "sourceCode": "",
+    "icon": "before-click",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "app-store",
+      "screenshots",
+      "mobile",
+      "ios"
+    ],
+    "atGlance": "Curated gallery of the best App Store screenshot designs.",
+    "fullDescription": "Before Click is a curated gallery of the best App Store screenshot designs, showcasing real examples from top iOS apps. It helps designers study effective screenshot layouts, copy, and visual hierarchy so they can create store screenshots that convert downloads. Kept as an inspiration resource for mobile app marketing and ASO design reference.",
+    "coreFeatures": [
+      {
+        "name": "Curated Gallery",
+        "description": "Hand-picked App Store screenshot designs from top iOS apps.",
+        "icon": "check"
+      },
+      {
+        "name": "Conversion-Focused",
+        "description": "Examples aimed at designing screenshots that convert downloads.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Design Reference",
+        "description": "Useful for studying layout, copy, and visual hierarchy.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Browser Workflow",
+        "description": "Works from the saved site link with no local install required.",
+        "icon": "check"
+      },
+      {
+        "name": "ASO Inspiration",
+        "description": "Reference for app store optimization and marketing design.",
+        "icon": "layers"
+      },
+      {
+        "name": "Reusable Reference",
+        "description": "Kept with tags and metadata for repeat use.",
         "icon": "check"
       }
     ],

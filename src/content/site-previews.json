@@ -73,6 +73,15 @@
     "bytes": 13162,
     "fallback": true
   },
+  "agencygallery": {
+    "image": "/previews/agencygallery.webp",
+    "small": "/previews/agencygallery-sm.webp",
+    "sourceUrl": "https://agencygallery.com/",
+    "capturedAt": "2026-08-14T03:24:00.708Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 32722
+  },
   "agentskill": {
     "image": "/previews/agentskill.webp",
     "small": "/previews/agentskill-sm.webp",
@@ -344,6 +353,15 @@
     "width": 960,
     "height": 600,
     "bytes": 10984
+  },
+  "before-click": {
+    "image": "/previews/before-click.webp",
+    "small": "/previews/before-click-sm.webp",
+    "sourceUrl": "https://before.click/",
+    "capturedAt": "2026-08-14T03:28:12.085Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 52494
   },
   "behance": {
     "image": "/previews/behance.webp",
@@ -3200,6 +3218,15 @@
     "width": 960,
     "height": 600,
     "bytes": 32820
+  },
+  "shotbase": {
+    "image": "/previews/shotbase.webp",
+    "small": "/previews/shotbase-sm.webp",
+    "sourceUrl": "https://shotbase.com/",
+    "capturedAt": "2026-08-14T03:21:17.636Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20438
   },
   "shutterstock": {
     "image": "/previews/shutterstock.webp",
