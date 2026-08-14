@@ -1,0 +1,85 @@
+slug: before-click
+name: Before Click - App Store Screenshot Design Inspiration
+description: >-
+  Curated gallery of the best App Store screenshot designs from top iOS apps to
+  help you design screenshots that convert downloads.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://before.click
+docs: https://before.click
+sourceCode: ''
+icon: before-click
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - app-store
+  - screenshots
+  - mobile
+  - ios
+atGlance: Curated gallery of the best App Store screenshot designs.
+fullDescription: >-
+  Before Click is a curated gallery of the best App Store screenshot designs,
+  showcasing real examples from top iOS apps. It helps designers study effective
+  screenshot layouts, copy, and visual hierarchy so they can create store
+  screenshots that convert downloads. Kept as an inspiration resource for mobile
+  app marketing and ASO design reference.
+coreFeatures:
+  - name: Curated Gallery
+    description: Hand-picked App Store screenshot designs from top iOS apps.
+    icon: check
+  - name: Conversion-Focused
+    description: Examples aimed at designing screenshots that convert downloads.
+    icon: rocket
+  - name: Design Reference
+    description: Useful for studying layout, copy, and visual hierarchy.
+    icon: check
+additionalFeatures:
+  - name: Browser Workflow
+    description: Works from the saved site link with no local install required.
+    icon: check
+  - name: ASO Inspiration
+    description: Reference for app store optimization and marketing design.
+    icon: layers
+  - name: Reusable Reference
+    description: Kept with tags and metadata for repeat use.
+    icon: check
+similarTools:
+  - slug: mobbin
+    name: Mobbin - UI & UX design inspiration for mobile & web apps
+    description: Mobbin - UI & UX design inspiration for mobile & web apps bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://mobbin.com/
+  - slug: designspells
+    name: Design Spells - Design details that feel like magic
+    description: Design Spells - Design details that feel like magic bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.designspells.com/
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/
