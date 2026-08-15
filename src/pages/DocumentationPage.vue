@@ -98,7 +98,8 @@ const artifactRows = [
   { file: 'public/content/skills-index.json', purpose: 'Runtime copy fetched by the browser.' },
   {
     file: 'public/previews/manifest.json',
-    purpose: 'Static preview manifest written by the preview generator (lives in the holy-grail-assets submodule).',
+    purpose:
+      'Static preview manifest written by the preview generator (lives in the holy-grail-assets submodule).',
   },
   { file: 'src/content/site-previews.json', purpose: 'Preview lookup imported by the app.' },
 ]

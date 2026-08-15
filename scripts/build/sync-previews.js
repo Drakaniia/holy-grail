@@ -10,7 +10,12 @@ const submodulePath = path.relative(projectRoot, submoduleDir).split(path.sep).j
 // Unset them so each call resolves its repo from `cwd` (the submodule worktree or
 // the project root), not from the environment of the caller.
 const gitEnv = Object.fromEntries(
-  Object.entries(process.env).filter(([key]) => !/^GIT_(DIR|WORK_TREE|INDEX_FILE|OBJECT_DIRECTORY|ALTERNATE_OBJECT_DIRECTORIES|PREFIX|COMMON_DIR|CEILING_DIRECTORIES)$/.test(key)),
+  Object.entries(process.env).filter(
+    ([key]) =>
+      !/^GIT_(DIR|WORK_TREE|INDEX_FILE|OBJECT_DIRECTORY|ALTERNATE_OBJECT_DIRECTORIES|PREFIX|COMMON_DIR|CEILING_DIRECTORIES)$/.test(
+        key,
+      ),
+  ),
 )
 
 function runGit(args, cwd, { allowFail = false } = {}) {
@@ -19,7 +24,7 @@ function runGit(args, cwd, { allowFail = false } = {}) {
   } catch (error) {
     if (allowFail) return ''
     const stderr = error.stderr?.toString().trim() || error.message
-    throw new Error(`git ${args.join(' ')} failed:\n${stderr}`)
+    throw new Error(`git ${args.join(' ')} failed:\n${stderr}`, { cause: error })
   }
 }
 

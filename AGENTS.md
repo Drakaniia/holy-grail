@@ -1,7 +1,7 @@
 # HOLY GRAIL — Project Knowledge Base
 
-**Generated:** 2026-07-27
-**Commit:** c15cbd9
+**Generated:** 2026-08-15
+**Commit:** 2a9049c
 **Branch:** grail
 
 ## OVERVIEW
@@ -15,7 +15,9 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 ├── cli/              # Rust+TS CLI tool ("grail") — separate publishable package
 ├── scripts/          # Build generators, preview pipeline (Bun + Python)
 ├── supabase/         # Edge Functions + DB migrations
-├── public/           # Static assets + generated previews
+├── public/           # Static assets + runtime JSON; previews mount here as a submodule
+├── .gitmodules       # Registers public/previews → Drakaniia/holy-grail-assets (public repo)
+├── .githooks/        # Committed pre-commit hook (runs `bun run sync:previews`)
 ├── tests/            # Vitest tests (orphaned — not in CI or package.json scripts)
 ├── docs/             # Documentation + AGENTS.md
 ├── .github/          # CI workflows (type-check → lint → build → format:check)
@@ -28,7 +30,7 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 
 | Task | Location | Notes |
 |------|----------|-------|
-| Add a site | `src/content/sites/<category>/<slug>/meta.yaml` | Run generator + preview after |
+| Add a site | `src/content/sites/<category>/<slug>/meta.yaml` | Run generator + preview after (preview lands in the submodule) |
 | Add an extension | `src/content/extensions/<category>/<slug>/meta.yaml` | Run generator after |
 | Add MCP server | `src/content/mcp/<slug>/meta.yaml` | Run generator after |
 | Modify UI component | `src/components/<feature>/` | Feature-grouped |
@@ -38,7 +40,8 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 | Modify CI | `.github/workflows/` | 4 workflows |
 | Modify deploy config | `vercel.json` | Vercel SPA |
 | Edit CLI behavior | `cli/src/main.rs` | Rust source |
-| Add site preview | `bun run generate:previews --slug <slug>` | Puppeteer → WebP |
+| Add site preview | `bun run generate:previews --slug <slug>` | Puppeteer → WebP into `public/previews/` (submodule worktree) |
+| Fresh clone setup | `bun run setup` | Init previews submodule + install pre-commit hook |
 
 ## CODE MAP
 
@@ -62,7 +65,8 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 - **`@/` path alias** → `./src/`.
 - **Content as YAML**: sites/extensions/mcp defined as `meta.yaml` files, flat-indexed to JSON at build.
 - **3 generators run before every dev/build**: sites-index, extensions-index, mcp-index.
-- **Previews are static .webp** — not fetched at runtime. Generate after adding a site.
+- **Previews are static .webp in a git submodule** — `public/previews` mounts the public `Drakaniia/holy-grail-assets` repo. Generate after adding a site; the pre-commit hook commits + pushes the submodule and stages the gitlink.
+- **Fresh clones must run `bun run setup`** (or clone with `--recurse-submodules`), or previews render as placeholders until the submodule is fetched.
 - **Lint order**: oxlint (correctness) → eslint (Vue/TS rules).
 - **TypeScript strict mode** with `noUnusedLocals`, `noUnusedParameters`.
 - **Conventional commits** on `grail` branch.
@@ -73,6 +77,8 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 - **Do not use npm/yarn/pnpm.** Bun only.
 - **Do not edit `*-index.json` by hand.** Run the generator.
 - **Do not skip preview generation** after adding a site — blank in UI otherwise.
+- **Do not hand-edit files under `public/previews/`** — submodule content; regenerate via the preview generator.
+- **Do not commit with `--no-verify` while previews are dirty** — the parent commit would reference an unpushed submodule SHA and break clones/Vercel.
 - **`src/stores/counter.ts`** is dead boilerplate. Safe to ignore/delete.
 
 ## COMMANDS
@@ -84,8 +90,13 @@ bun run build                             # production build (generators + typec
 bun run type-check                        # vue-tsc --noEmit
 bun lint                                  # oxlint --fix → eslint --fix
 bun run format                            # prettier --write
-bun run generate:previews --slug <slug>    # single site preview
+bun run setup                             # git submodule update --init + git config core.hooksPath .githooks
+bun run sync:previews                     # commit + push previews submodule, stage gitlink (runs in pre-commit hook)
+bun run generate:previews --slug <slug>   # single site preview (writes into submodule worktree)
 bun run build:cli                         # tsc + cargo build --release
+
+# Commit order: `git commit` first (hook pushes the submodule), then `git push` (parent only).
+# Never edit *-index.json by hand and never commit preview .webp files directly into the parent.
 ```
 
 ## NOTES
@@ -95,4 +106,5 @@ bun run build:cli                         # tsc + cargo build --release
 - Skills are NOT committed — loaded at runtime from `skills-registry.json`.
 - The `cli/` is a separate publishable npm package (`grail`) wrapping a Rust binary.
 - Content under `public/content/` and `public/previews/` is noindexed via Vercel headers.
+- Preview images (~19 MB, ~900 files) live in the separate public `holy-grail-assets` repo — they are NOT in main repo history, so `.git` no longer grows with binary assets.
 - Project AGENTS.md was previously at `docs/AGENTS.md` — root supersedes.
