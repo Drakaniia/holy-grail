@@ -1,0 +1,82 @@
+slug: useanimations
+name: useAnimations - Micro Animations Library
+description: Free micro-animation library of animated icons in Lottie and SVG formats for apps and websites.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 1236
+watchers: 11
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 2 years ago
+lastRelease: No releases
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://useanimations.com/
+docs: https://useanimations.com/
+sourceCode: https://github.com/useAnimations/react-useanimations
+icon: useanimations
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - lottie
+  - animations
+atGlance: Free animated icons in Lottie and SVG for apps and websites.
+fullDescription: >-
+  useAnimations is a micro-animations library of animated icons created in the
+  Lottie framework for immediate implementation in applications or websites.
+  Built on the Feather icon set, it ships free SVG and Lottie files on a 32px
+  grid with lossless responsive scaling, plus a companion open-source React
+  library for developers.
+coreFeatures:
+  - name: Animated Icons
+    description: Micro-animations built on the Feather icon set for immediate use.
+    icon: sparkles
+  - name: Lottie and SVG
+    description: Free downloads in both editable Lottie JSON and SVG formats.
+    icon: layers
+  - name: Responsive Grid
+    description: Icons built on a 32px grid scale losslessly across device sizes.
+    icon: check
+additionalFeatures:
+  - name: Multi-Platform
+    description: Works across websites, Android, and iOS.
+    icon: check
+  - name: React Library
+    description: Open-source react-useanimations package for React.js projects.
+    icon: check
+  - name: Free to Use
+    description: Download animated icons for free with no licensing fees.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.
+    stars: 23613
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/
+  - slug: lucide-animated
+    name: lucide-animated
+    description: Free animated React icons library for dynamic interfaces.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lucide-animated.com/
+  - slug: lottiefiles
+    name: LottieFiles
+    description: Free lightweight animations for websites and apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lottiefiles.com/

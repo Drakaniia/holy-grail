@@ -1,0 +1,79 @@
+slug: watermelon
+name: Watermelon UI
+description: Premium React components, dashboards, and UI blocks for copy-paste into modern apps.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 82
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: 13 days ago
+lastRelease: No releases
+version: ''
+contributors: 10
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://ui.watermelon.sh/
+docs: https://ui.watermelon.sh/
+sourceCode: https://github.com/WatermelonCorp/watermellon-registry
+icon: watermelon
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Studio-quality React components, dashboards, and blocks you can copy and paste.
+fullDescription: >-
+  Watermelon UI is a collection of high-quality React components, dashboards, and UI blocks
+  built with Tailwind CSS and Radix. It offers 600+ premium components covering everything from
+  simple buttons to complex interactive widgets, all designed to be copied into your project
+  and customized directly.
+coreFeatures:
+  - name: 600+ Components
+    description: Exhaustive library of premium UI elements, from buttons to complex widgets.
+    icon: check
+  - name: Dashboards and Blocks
+    description: Ready-made dashboard layouts and UI blocks for shipping production screens.
+    icon: layers
+  - name: Copy-Paste Workflow
+    description: Components are designed to be copied into projects and owned directly.
+    icon: check
+additionalFeatures:
+  - name: Tailwind and Radix
+    description: Built on Tailwind CSS styling with Radix primitives underneath.
+    icon: check
+  - name: Animated Components
+    description: Includes motion-rich components for polished interactions.
+    icon: check
+  - name: Open Source Registry
+    description: The component registry is publicly available on GitHub.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: heroui
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/

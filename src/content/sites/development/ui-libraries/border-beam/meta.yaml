@@ -1,0 +1,79 @@
+slug: border-beam
+name: Border Beam
+description: Lightweight React component for animated glowing border beam effects with theme variants.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 1959
+watchers: 4
+addedDaysAgo: 0
+license: MIT
+lastCommit: 4 days ago
+lastRelease: 4 days ago
+version: v1.3.0
+contributors: 0
+commitsThisYear: 0
+releases: 1
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://beam.jakubantalik.com/
+docs: https://beam.jakubantalik.com/
+sourceCode: https://github.com/Jakubantalik/Libraries
+icon: border-beam
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Animated border beam and glow effects for cards, buttons, inputs, and search bars.
+fullDescription: >-
+  Border Beam is a lightweight React component library that renders a traveling or breathing glow
+  animation around any element, from cards and buttons to inputs and search bars. It supports
+  multiple beam types and color variants with dark and light mode theming, and is ready to drop
+  into any React project.
+coreFeatures:
+  - name: Animated Border Beam
+    description: Traveling or breathing glow animation around any element.
+    icon: sparkles
+  - name: Variants and Colors
+    description: Multiple beam types and color variants for flexible styling.
+    icon: check
+  - name: Theme Support
+    description: Built-in dark and light mode compatibility.
+    icon: check
+additionalFeatures:
+  - name: Lightweight
+    description: Small, dependency-light React component.
+    icon: check
+  - name: Easy Integration
+    description: Copy-paste ready for cards, buttons, inputs, and search bars.
+    icon: check
+  - name: Open Source
+    description: MIT-licensed source available on GitHub.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: smoothui
+    name: SmoothUI
+    description: Animated shadcn-style React components powered by Motion and Tailwind.
+    stars: 825
+    addedDaysAgo: 0
+    verified: true
+    website: https://smoothui.dev/

@@ -55,6 +55,10 @@ supabase/.temp/
 
 cli/target*
 cli/dist
+
+# Preview images live in the holy-grail-assets submodule
+public/previews/
+
 # Local tool state
 .freebuff/
 .omo/

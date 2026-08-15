@@ -1,0 +1,78 @@
+slug: originkit
+name: Originkit
+description: Free animated component library for React, Framer, and AI tools via MCP.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.originkit.dev/
+docs: https://www.originkit.dev/intro
+sourceCode: ''
+icon: originkit
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Large free library of animated components for React, Framer, and AI workflows.
+fullDescription: >-
+  Originkit is a free animated component library for building modern websites, offering copy-paste
+  components for React and Framer projects. It integrates with AI tools through a custom MCP
+  connector for Claude, ChatGPT, Lovable, and Bolt, and also works with IDEs via a CLI.
+coreFeatures:
+  - name: Animated Components
+    description: Large collection of ready-made animated UI components.
+    icon: sparkles
+  - name: Framer Support
+    description: Components can be pasted directly into Framer projects.
+    icon: check
+  - name: MCP Integration
+    description: Connect AI agents like Claude and ChatGPT via custom MCP connector.
+    icon: check
+additionalFeatures:
+  - name: Copy Code
+    description: Copy any component and drop it straight into your project.
+    icon: check
+  - name: AI Agent Ready
+    description: Works with Claude, ChatGPT, Lovable, Bolt, and IDE agents.
+    icon: layers
+  - name: CLI Tooling
+    description: Install and use components through the Originkit CLI.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: smoothui
+    name: SmoothUI
+    description: Animated shadcn-style React components powered by Motion and Tailwind.
+    stars: 825
+    addedDaysAgo: 0
+    verified: true
+    website: https://smoothui.dev/

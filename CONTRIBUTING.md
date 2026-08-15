@@ -41,12 +41,20 @@ cd holy-grail
 # Install dependencies
 bun install
 
+# Fetch the previews submodule + install the pre-commit hook
+bun run setup
+
 # Copy environment variables (optional — only needed for Supabase features)
 cp docs/.env.example .env.local
 
 # Start the dev server
 bun dev
 ```
+
+`bun run setup` runs `git submodule update --init --recursive` (populates the
+`holy-grail-assets` submodule at `public/previews`) and sets `core.hooksPath` so the
+committed pre-commit hook keeps the submodule in sync with every commit. You can also
+clone once with `git clone --recurse-submodules` to skip the `setup` fetch step.
 
 The dev server runs at `http://localhost:5173` by default.
 

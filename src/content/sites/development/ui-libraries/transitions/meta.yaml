@@ -1,0 +1,79 @@
+slug: transitions
+name: Transitions.dev
+description: Essential UI transitions for web apps, copy-paste ready and packaged as an agent skill.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 2718
+watchers: 6
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 1 day ago
+lastRelease: No releases
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://transitions.dev/
+docs: https://transitions.dev/skill.html
+sourceCode: https://github.com/Jakubantalik/transitions.dev
+icon: transitions
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Interactive collection of production-ready CSS transitions for web apps.
+fullDescription: >-
+  Transitions.dev is an interactive collection of reusable CSS transitions for web applications.
+  Each card demonstrates a different interaction pattern such as cards, modals, dropdowns, panels,
+  and page transitions, and ships as drop-in copy-paste snippets. It also packages a skill that
+  teaches AI agents about product motion, working with Claude Code, Cursor, and GitHub Copilot.
+coreFeatures:
+  - name: Essential Transitions
+    description: 27+ production-ready CSS transition patterns for web apps.
+    icon: sparkles
+  - name: Copy-Paste Snippets
+    description: Drop-in code for cards, modals, dropdowns, panels, and pages.
+    icon: check
+  - name: Agent Skill
+    description: Teach AI coding agents product motion patterns via a packaged skill.
+    icon: check
+additionalFeatures:
+  - name: Interactive Demos
+    description: Every pattern is demonstrated live on the index page.
+    icon: check
+  - name: Agent Compatibility
+    description: Works with Claude Code, Cursor, GitHub Copilot, Codex, and Gemini CLI.
+    icon: layers
+  - name: Open Source
+    description: Public repository on GitHub with active contributions.
+    icon: check
+similarTools:
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: smoothui
+    name: SmoothUI
+    description: Animated shadcn-style React components powered by Motion and Tailwind.
+    stars: 825
+    addedDaysAgo: 0
+    verified: true
+    website: https://smoothui.dev/
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/

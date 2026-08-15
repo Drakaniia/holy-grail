@@ -7273,6 +7273,109 @@
     ]
   },
   {
+    "slug": "cult-ui",
+    "name": "Cult UI",
+    "description": "Open-source shadcn UI components, animated blocks, and templates for TypeScript projects.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 6045,
+    "watchers": 12,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "24 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 7,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.cult-ui.com/",
+    "docs": "https://www.cult-ui.com/docs/installation",
+    "sourceCode": "https://github.com/nolly-studio/cult-ui",
+    "icon": "cult-ui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Animated shadcn-compatible components crafted for design engineers.",
+    "fullDescription": "Cult UI is an open-source library of components crafted for design engineers, built with React, TypeScript, and Tailwind CSS v4 plus Motion. It is fully compatible with shadcn/ui, so components can be copied and pasted directly into any TypeScript or Next.js project, including animated blocks and full templates.",
+    "coreFeatures": [
+      {
+        "name": "shadcn Compatible",
+        "description": "Components drop straight into existing shadcn/ui projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Animated Blocks",
+        "description": "Motion-powered components and complete page sections included.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Copy-Paste Workflow",
+        "description": "Grab a component and paste it into your codebase with full ownership.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Tailwind v4 Styling",
+        "description": "Styled with Tailwind CSS v4 and Motion for refined interactions.",
+        "icon": "check"
+      },
+      {
+        "name": "Templates",
+        "description": "Full template layouts beyond isolated components.",
+        "icon": "layers"
+      },
+      {
+        "name": "Open Source",
+        "description": "MIT-licensed public repository with active community.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated copy-paste React components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      }
+    ]
+  },
+  {
     "slug": "motion-primitives",
     "name": "Motion Primitives",
     "description": "Composable animated React primitives for building motion-rich product interfaces.",
@@ -7785,6 +7888,109 @@
     ]
   },
   {
+    "slug": "canvas-ui",
+    "name": "Canvas UI",
+    "description": "Creative html-in-canvas and WebGL component library for React, Vue, Svelte, and vanilla JS.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 3957,
+    "watchers": 11,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "1 day ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 18,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://canvasui.dev/",
+    "docs": "https://canvasui.dev/docs",
+    "sourceCode": "https://github.com/DavidHDev/canvas-ui",
+    "icon": "canvas-ui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Open-source creative canvas and WebGL effects over real, interactive UI.",
+    "fullDescription": "Canvas UI is a free, open-source component library of creative html-in-canvas and WebGL effects. It renders real HTML with shaders running over it, supporting React, Solid, Preact, Vue, Svelte, and vanilla JavaScript. Effects include liquid, glass, shatter, and force components that add striking visuals to interactive interfaces.",
+    "coreFeatures": [
+      {
+        "name": "Canvas Effects",
+        "description": "Creative html-in-canvas and WebGL effects for striking visuals.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Framework Agnostic",
+        "description": "Works with React, Solid, Preact, Vue, Svelte, and vanilla JS.",
+        "icon": "layers"
+      },
+      {
+        "name": "Real Interactive UI",
+        "description": "Shaders run over real, interactive HTML rather than simulated DOM.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Growing Library",
+        "description": "30+ components and counting, from liquid to glass to shatter.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Components",
+        "description": "Grab components and integrate them directly into your app.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "Public repository on GitHub with active development.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated copy-paste React components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
     "slug": "kiro-cli",
     "name": "Kiro (AWS)",
     "description": "Kiro (AWS) CLI setup reference for AI-assisted terminal coding workflows.",
@@ -8281,6 +8487,109 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://impeccable.style/"
+      }
+    ]
+  },
+  {
+    "slug": "transitions",
+    "name": "Transitions.dev",
+    "description": "Essential UI transitions for web apps, copy-paste ready and packaged as an agent skill.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 2718,
+    "watchers": 6,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "1 day ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://transitions.dev/",
+    "docs": "https://transitions.dev/skill.html",
+    "sourceCode": "https://github.com/Jakubantalik/transitions.dev",
+    "icon": "transitions",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Interactive collection of production-ready CSS transitions for web apps.",
+    "fullDescription": "Transitions.dev is an interactive collection of reusable CSS transitions for web applications. Each card demonstrates a different interaction pattern such as cards, modals, dropdowns, panels, and page transitions, and ships as drop-in copy-paste snippets. It also packages a skill that teaches AI agents about product motion, working with Claude Code, Cursor, and GitHub Copilot.",
+    "coreFeatures": [
+      {
+        "name": "Essential Transitions",
+        "description": "27+ production-ready CSS transition patterns for web apps.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Copy-Paste Snippets",
+        "description": "Drop-in code for cards, modals, dropdowns, panels, and pages.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Skill",
+        "description": "Teach AI coding agents product motion patterns via a packaged skill.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Interactive Demos",
+        "description": "Every pattern is demonstrated live on the index page.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Compatibility",
+        "description": "Works with Claude Code, Cursor, GitHub Copilot, Codex, and Gemini CLI.",
+        "icon": "layers"
+      },
+      {
+        "name": "Open Source",
+        "description": "Public repository on GitHub with active contributions.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "smoothui",
+        "name": "SmoothUI",
+        "description": "Animated shadcn-style React components powered by Motion and Tailwind.",
+        "stars": 825,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://smoothui.dev/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated copy-paste React components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
       }
     ]
   },
@@ -9110,6 +9419,109 @@
     ]
   },
   {
+    "slug": "border-beam",
+    "name": "Border Beam",
+    "description": "Lightweight React component for animated glowing border beam effects with theme variants.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 1959,
+    "watchers": 4,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "4 days ago",
+    "lastRelease": "4 days ago",
+    "version": "v1.3.0",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 1,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://beam.jakubantalik.com/",
+    "docs": "https://beam.jakubantalik.com/",
+    "sourceCode": "https://github.com/Jakubantalik/Libraries",
+    "icon": "border-beam",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Animated border beam and glow effects for cards, buttons, inputs, and search bars.",
+    "fullDescription": "Border Beam is a lightweight React component library that renders a traveling or breathing glow animation around any element, from cards and buttons to inputs and search bars. It supports multiple beam types and color variants with dark and light mode theming, and is ready to drop into any React project.",
+    "coreFeatures": [
+      {
+        "name": "Animated Border Beam",
+        "description": "Traveling or breathing glow animation around any element.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Variants and Colors",
+        "description": "Multiple beam types and color variants for flexible styling.",
+        "icon": "check"
+      },
+      {
+        "name": "Theme Support",
+        "description": "Built-in dark and light mode compatibility.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Lightweight",
+        "description": "Small, dependency-light React component.",
+        "icon": "check"
+      },
+      {
+        "name": "Easy Integration",
+        "description": "Copy-paste ready for cards, buttons, inputs, and search bars.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "MIT-licensed source available on GitHub.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated copy-paste React components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "smoothui",
+        "name": "SmoothUI",
+        "description": "Animated shadcn-style React components powered by Motion and Tailwind.",
+        "stars": 825,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://smoothui.dev/"
+      }
+    ]
+  },
+  {
     "slug": "8bitcn",
     "name": "8bitcn/ui",
     "description": "Retro-styled 8-bit components and blocks for copy-paste UI work.",
@@ -9614,6 +10026,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "useanimations",
+    "name": "useAnimations - Micro Animations Library",
+    "description": "Free micro-animation library of animated icons in Lottie and SVG formats for apps and websites.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 1236,
+    "watchers": 11,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "2 years ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://useanimations.com/",
+    "docs": "https://useanimations.com/",
+    "sourceCode": "https://github.com/useAnimations/react-useanimations",
+    "icon": "useanimations",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "lottie",
+      "animations"
+    ],
+    "atGlance": "Free animated icons in Lottie and SVG for apps and websites.",
+    "fullDescription": "useAnimations is a micro-animations library of animated icons created in the Lottie framework for immediate implementation in applications or websites. Built on the Feather icon set, it ships free SVG and Lottie files on a 32px grid with lossless responsive scaling, plus a companion open-source React library for developers.",
+    "coreFeatures": [
+      {
+        "name": "Animated Icons",
+        "description": "Micro-animations built on the Feather icon set for immediate use.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Lottie and SVG",
+        "description": "Free downloads in both editable Lottie JSON and SVG formats.",
+        "icon": "layers"
+      },
+      {
+        "name": "Responsive Grid",
+        "description": "Icons built on a 32px grid scale losslessly across device sizes.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multi-Platform",
+        "description": "Works across websites, Android, and iOS.",
+        "icon": "check"
+      },
+      {
+        "name": "React Library",
+        "description": "Open-source react-useanimations package for React.js projects.",
+        "icon": "check"
+      },
+      {
+        "name": "Free to Use",
+        "description": "Download animated icons for free with no licensing fees.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.",
+        "stars": 23613,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/"
+      },
+      {
+        "slug": "lucide-animated",
+        "name": "lucide-animated",
+        "description": "Free animated React icons library for dynamic interfaces.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lucide-animated.com/"
+      },
+      {
+        "slug": "lottiefiles",
+        "name": "LottieFiles",
+        "description": "Free lightweight animations for websites and apps.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lottiefiles.com/"
       }
     ]
   },
@@ -12165,6 +12682,109 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://animos.app"
+      }
+    ]
+  },
+  {
+    "slug": "watermelon",
+    "name": "Watermelon UI",
+    "description": "Premium React components, dashboards, and UI blocks for copy-paste into modern apps.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 82,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "13 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 10,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://ui.watermelon.sh/",
+    "docs": "https://ui.watermelon.sh/",
+    "sourceCode": "https://github.com/WatermelonCorp/watermellon-registry",
+    "icon": "watermelon",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Studio-quality React components, dashboards, and blocks you can copy and paste.",
+    "fullDescription": "Watermelon UI is a collection of high-quality React components, dashboards, and UI blocks built with Tailwind CSS and Radix. It offers 600+ premium components covering everything from simple buttons to complex interactive widgets, all designed to be copied into your project and customized directly.",
+    "coreFeatures": [
+      {
+        "name": "600+ Components",
+        "description": "Exhaustive library of premium UI elements, from buttons to complex widgets.",
+        "icon": "check"
+      },
+      {
+        "name": "Dashboards and Blocks",
+        "description": "Ready-made dashboard layouts and UI blocks for shipping production screens.",
+        "icon": "layers"
+      },
+      {
+        "name": "Copy-Paste Workflow",
+        "description": "Components are designed to be copied into projects and owned directly.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Tailwind and Radix",
+        "description": "Built on Tailwind CSS styling with Radix primitives underneath.",
+        "icon": "check"
+      },
+      {
+        "name": "Animated Components",
+        "description": "Includes motion-rich components for polished interactions.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source Registry",
+        "description": "The component registry is publicly available on GitHub.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated copy-paste React components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
       }
     ]
   },
@@ -26914,6 +27534,111 @@
     ]
   },
   {
+    "slug": "lottieflow",
+    "name": "Lottieflow - Lottie Icon Animations for Webflow",
+    "description": "Free library of customizable Lottie icon animations for Webflow sites, made by Finsweet.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://finsweet.com/lottieflow",
+    "docs": "https://finsweet.com/lottieflow",
+    "sourceCode": "",
+    "icon": "lottieflow",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "lottie",
+      "animations"
+    ],
+    "atGlance": "Free customizable Lottie icon animations for Webflow.",
+    "fullDescription": "Lottieflow by Finsweet is a free, browser-based library of Lottie animation files built for common Webflow UI patterns like hamburger menus, scroll prompts, loading states, and CTAs. Pick an icon, change its hex color, choose between ease-y and linear easing, then download the lightweight JSON file for use with Webflow Interactions.",
+    "coreFeatures": [
+      {
+        "name": "Lottie Icon Library",
+        "description": "Hundreds of free Lottie files across 20+ categories like menus, loading, and scroll.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Customizable Downloads",
+        "description": "Change hex color and easing before downloading the JSON file.",
+        "icon": "palette"
+      },
+      {
+        "name": "Webflow Ready",
+        "description": "Lightweight files optimized for Webflow Interactions.",
+        "icon": "wind"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Free Forever",
+        "description": "Sign up once and use icons forever at no cost.",
+        "icon": "check"
+      },
+      {
+        "name": "Category Browsing",
+        "description": "Explore curated packs from 404s to social media icons.",
+        "icon": "layers"
+      },
+      {
+        "name": "Made by Finsweet",
+        "description": "Built by the Finsweet team behind popular Webflow attributes.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.",
+        "stars": 23613,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams with free icons.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
+      },
+      {
+        "slug": "lottiefiles",
+        "name": "LottieFiles",
+        "description": "Free lightweight animations for websites and apps.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lottiefiles.com/"
+      }
+    ]
+  },
+  {
     "slug": "lucide-animated",
     "name": "lucide-animated | Free Animated React Icons Library",
     "description": "lucide-animated | Free Animated React Icons Library bookmarked for icons/svg resources.",
@@ -36874,6 +37599,109 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "originkit",
+    "name": "Originkit",
+    "description": "Free animated component library for React, Framer, and AI tools via MCP.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.originkit.dev/",
+    "docs": "https://www.originkit.dev/intro",
+    "sourceCode": "",
+    "icon": "originkit",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library"
+    ],
+    "atGlance": "Large free library of animated components for React, Framer, and AI workflows.",
+    "fullDescription": "Originkit is a free animated component library for building modern websites, offering copy-paste components for React and Framer projects. It integrates with AI tools through a custom MCP connector for Claude, ChatGPT, Lovable, and Bolt, and also works with IDEs via a CLI.",
+    "coreFeatures": [
+      {
+        "name": "Animated Components",
+        "description": "Large collection of ready-made animated UI components.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Framer Support",
+        "description": "Components can be pasted directly into Framer projects.",
+        "icon": "check"
+      },
+      {
+        "name": "MCP Integration",
+        "description": "Connect AI agents like Claude and ChatGPT via custom MCP connector.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Copy Code",
+        "description": "Copy any component and drop it straight into your project.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Agent Ready",
+        "description": "Works with Claude, ChatGPT, Lovable, Bolt, and IDE agents.",
+        "icon": "layers"
+      },
+      {
+        "name": "CLI Tooling",
+        "description": "Install and use components through the Originkit CLI.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated copy-paste React components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "smoothui",
+        "name": "SmoothUI",
+        "description": "Animated shadcn-style React components powered by Motion and Tailwind.",
+        "stars": 825,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://smoothui.dev/"
       }
     ]
   },

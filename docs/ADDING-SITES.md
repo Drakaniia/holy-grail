@@ -159,6 +159,15 @@ production build when previews have changed. The generated images live under
 `public/`, so Vercel serves them as static assets with no screenshot API call at
 runtime.
 
+The image files live in the `holy-grail-assets` git submodule mounted at
+`public/previews` — they are not tracked in this repo's history. New clones must run
+`bun run setup` (or `git clone --recurse-submodules`) once to fetch them. When you
+commit, the pre-commit hook runs `bun run sync:previews`, which commits and pushes any
+changed previews to the submodule repo and stages the updated gitlink, so previews
+stay in sync with the parent automatically. If you prefer to skip the hook for a
+commit, `git commit --no-verify` is available — but only do this when previews are
+unchanged.
+
 Favicons use `https://www.google.com/s2/favicons?domain=DOMAIN&sz=64` and fall
 back gracefully when loading fails.
 

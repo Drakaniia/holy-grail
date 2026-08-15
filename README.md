@@ -36,9 +36,15 @@ Built with Vue 3, Vite 8, TypeScript, Tailwind CSS 4, Pinia, and Supabase.
 
 ```bash
 bun install
+bun run setup             # fetch the previews submodule + install the pre-commit hook
 cp docs/.env.example .env.local  # add your Supabase keys
 bun dev
 ```
+
+Site preview images live in the public `holy-grail-assets` submodule (mounted at
+`public/previews`). `bun run setup` initializes it and enables the pre-commit hook
+that keeps it in sync. A plain `git clone` without `--recurse-submodules` still works
+— previews fall back to a placeholder until `bun run setup` is run.
 
 The app runs without Supabase — auth and submissions are gracefully disabled.
 
@@ -62,7 +68,11 @@ Sites and extensions are defined as `meta.yaml` files under `src/content/`. Skil
 
 ```bash
 bun run generate:skills     # regenerate skills index (auto-detects CLI or YAML source)
-bun run generate:previews   # after adding a site (captures screenshot)
+bun run generate:previews   # after adding a site (captures screenshot, writes into the previews submodule)
+
+Previews are committed automatically by the pre-commit hook (`bun run sync:previews`
+commits + pushes `public/previews` to the `holy-grail-assets` submodule repo and stages
+the gitlink).
 ```
 
 Full guides: [`docs/ADDING-SITES.md`](docs/ADDING-SITES.md) · [`docs/GRAIL-CLI.md`](docs/GRAIL-CLI.md) · [`docs/ADDING-EXTENSIONS.md`](docs/ADDING-EXTENSIONS.md)

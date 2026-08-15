@@ -1,0 +1,82 @@
+slug: lottieflow
+name: Lottieflow - Lottie Icon Animations for Webflow
+description: Free library of customizable Lottie icon animations for Webflow sites, made by Finsweet.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://finsweet.com/lottieflow
+docs: https://finsweet.com/lottieflow
+sourceCode: ''
+icon: lottieflow
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - lottie
+  - animations
+atGlance: Free customizable Lottie icon animations for Webflow.
+fullDescription: >-
+  Lottieflow by Finsweet is a free, browser-based library of Lottie animation
+  files built for common Webflow UI patterns like hamburger menus, scroll prompts,
+  loading states, and CTAs. Pick an icon, change its hex color, choose between
+  ease-y and linear easing, then download the lightweight JSON file for use with
+  Webflow Interactions.
+coreFeatures:
+  - name: Lottie Icon Library
+    description: Hundreds of free Lottie files across 20+ categories like menus, loading, and scroll.
+    icon: sparkles
+  - name: Customizable Downloads
+    description: Change hex color and easing before downloading the JSON file.
+    icon: palette
+  - name: Webflow Ready
+    description: Lightweight files optimized for Webflow Interactions.
+    icon: wind
+additionalFeatures:
+  - name: Free Forever
+    description: Sign up once and use icons forever at no cost.
+    icon: check
+  - name: Category Browsing
+    description: Explore curated packs from 404s to social media icons.
+    icon: layers
+  - name: Made by Finsweet
+    description: Built by the Finsweet team behind popular Webflow attributes.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.
+    stars: 23613
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams with free icons.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/
+  - slug: lottiefiles
+    name: LottieFiles
+    description: Free lightweight animations for websites and apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lottiefiles.com/

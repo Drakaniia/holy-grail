@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Keep the previews submodule in sync with the parent repo.
+# If previews changed, commit+push them (see scripts/build/sync-previews.js),
+# then stage the gitlink so this commit records the new submodule revision.
+bun run sync:previews || { echo "pre-commit: preview sync failed — commit aborted" >&2; exit 1; }

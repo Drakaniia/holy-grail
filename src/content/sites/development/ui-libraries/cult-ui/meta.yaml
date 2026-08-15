@@ -1,0 +1,79 @@
+slug: cult-ui
+name: Cult UI
+description: Open-source shadcn UI components, animated blocks, and templates for TypeScript projects.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 6045
+watchers: 12
+addedDaysAgo: 0
+license: MIT
+lastCommit: 24 days ago
+lastRelease: No releases
+version: ''
+contributors: 7
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.cult-ui.com/
+docs: https://www.cult-ui.com/docs/installation
+sourceCode: https://github.com/nolly-studio/cult-ui
+icon: cult-ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Animated shadcn-compatible components crafted for design engineers.
+fullDescription: >-
+  Cult UI is an open-source library of components crafted for design engineers, built with
+  React, TypeScript, and Tailwind CSS v4 plus Motion. It is fully compatible with shadcn/ui,
+  so components can be copied and pasted directly into any TypeScript or Next.js project,
+  including animated blocks and full templates.
+coreFeatures:
+  - name: shadcn Compatible
+    description: Components drop straight into existing shadcn/ui projects.
+    icon: check
+  - name: Animated Blocks
+    description: Motion-powered components and complete page sections included.
+    icon: sparkles
+  - name: Copy-Paste Workflow
+    description: Grab a component and paste it into your codebase with full ownership.
+    icon: check
+additionalFeatures:
+  - name: Tailwind v4 Styling
+    description: Styled with Tailwind CSS v4 and Motion for refined interactions.
+    icon: check
+  - name: Templates
+    description: Full template layouts beyond isolated components.
+    icon: layers
+  - name: Open Source
+    description: MIT-licensed public repository with active community.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/

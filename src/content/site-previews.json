@@ -426,6 +426,15 @@
     "height": 600,
     "bytes": 22590
   },
+  "border-beam": {
+    "image": "/previews/border-beam.webp",
+    "small": "/previews/border-beam-sm.webp",
+    "sourceUrl": "https://beam.jakubantalik.com/",
+    "capturedAt": "2026-08-15T06:41:47.446Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 4330
+  },
   "brandingboard": {
     "image": "/previews/brandingboard.webp",
     "small": "/previews/brandingboard-sm.webp",
@@ -471,6 +480,15 @@
     "width": 960,
     "height": 600,
     "bytes": 6476
+  },
+  "canvas-ui": {
+    "image": "/previews/canvas-ui.webp",
+    "small": "/previews/canvas-ui-sm.webp",
+    "sourceUrl": "https://canvasui.dev/",
+    "capturedAt": "2026-08-15T06:41:50.645Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 89202
   },
   "caramell": {
     "image": "/previews/caramell.webp",
@@ -807,6 +825,15 @@
     "width": 960,
     "height": 600,
     "bytes": 44674
+  },
+  "cult-ui": {
+    "image": "/previews/cult-ui.webp",
+    "small": "/previews/cult-ui-sm.webp",
+    "sourceUrl": "https://www.cult-ui.com/",
+    "capturedAt": "2026-08-15T06:41:52.574Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 19272
   },
   "cursor-cli": {
     "image": "/previews/cursor-cli.webp",
@@ -2057,6 +2084,15 @@
     "height": 600,
     "bytes": 29072
   },
+  "lottieflow": {
+    "image": "/previews/lottieflow.webp",
+    "small": "/previews/lottieflow-sm.webp",
+    "sourceUrl": "https://finsweet.com/lottieflow",
+    "capturedAt": "2026-08-15T06:56:50.964Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 32064
+  },
   "lovable": {
     "image": "/previews/lovable.webp",
     "small": "/previews/lovable-sm.webp",
@@ -2628,6 +2664,15 @@
     "width": 960,
     "height": 600,
     "bytes": 16134
+  },
+  "originkit": {
+    "image": "/previews/originkit.webp",
+    "small": "/previews/originkit-sm.webp",
+    "sourceUrl": "https://www.originkit.dev/",
+    "capturedAt": "2026-08-15T06:41:56.551Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 44320
   },
   "originui": {
     "image": "/previews/originui.webp",
@@ -3555,6 +3600,15 @@
     "height": 600,
     "bytes": 63126
   },
+  "transitions": {
+    "image": "/previews/transitions.webp",
+    "small": "/previews/transitions-sm.webp",
+    "sourceUrl": "https://transitions.dev/",
+    "capturedAt": "2026-08-15T06:41:43.327Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 12936
+  },
   "tremor": {
     "image": "/previews/tremor.webp",
     "small": "/previews/tremor-sm.webp",
@@ -3718,6 +3772,15 @@
     "height": 600,
     "bytes": 23254
   },
+  "useanimations": {
+    "image": "/previews/useanimations.webp",
+    "small": "/previews/useanimations-sm.webp",
+    "sourceUrl": "https://useanimations.com/",
+    "capturedAt": "2026-08-15T06:56:49.854Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 15370
+  },
   "usersdrive": {
     "image": "/previews/usersdrive.webp",
     "small": "/previews/usersdrive-sm.webp",
@@ -3852,6 +3915,15 @@
     "width": 960,
     "height": 600,
     "bytes": 24496
+  },
+  "watermelon": {
+    "image": "/previews/watermelon.webp",
+    "small": "/previews/watermelon-sm.webp",
+    "sourceUrl": "https://ui.watermelon.sh/",
+    "capturedAt": "2026-08-15T06:41:55.005Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 35196
   },
   "web-tor": {
     "image": "/previews/web-tor.webp",

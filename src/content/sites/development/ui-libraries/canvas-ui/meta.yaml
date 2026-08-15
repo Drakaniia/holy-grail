@@ -1,0 +1,79 @@
+slug: canvas-ui
+name: Canvas UI
+description: Creative html-in-canvas and WebGL component library for React, Vue, Svelte, and vanilla JS.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 3957
+watchers: 11
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 1 day ago
+lastRelease: No releases
+version: ''
+contributors: 18
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://canvasui.dev/
+docs: https://canvasui.dev/docs
+sourceCode: https://github.com/DavidHDev/canvas-ui
+icon: canvas-ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+atGlance: Open-source creative canvas and WebGL effects over real, interactive UI.
+fullDescription: >-
+  Canvas UI is a free, open-source component library of creative html-in-canvas and WebGL effects.
+  It renders real HTML with shaders running over it, supporting React, Solid, Preact, Vue, Svelte,
+  and vanilla JavaScript. Effects include liquid, glass, shatter, and force components that add
+  striking visuals to interactive interfaces.
+coreFeatures:
+  - name: Canvas Effects
+    description: Creative html-in-canvas and WebGL effects for striking visuals.
+    icon: sparkles
+  - name: Framework Agnostic
+    description: Works with React, Solid, Preact, Vue, Svelte, and vanilla JS.
+    icon: layers
+  - name: Real Interactive UI
+    description: Shaders run over real, interactive HTML rather than simulated DOM.
+    icon: check
+additionalFeatures:
+  - name: Growing Library
+    description: 30+ components and counting, from liquid to glass to shatter.
+    icon: check
+  - name: Copy-Paste Components
+    description: Grab components and integrate them directly into your app.
+    icon: check
+  - name: Open Source
+    description: Public repository on GitHub with active development.
+    icon: check
+similarTools:
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: heroui
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/
