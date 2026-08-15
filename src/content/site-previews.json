@@ -444,6 +444,15 @@
     "height": 600,
     "bytes": 50984
   },
+  "brevo": {
+    "image": "/previews/brevo.webp",
+    "small": "/previews/brevo-sm.webp",
+    "sourceUrl": "https://www.brevo.com/",
+    "capturedAt": "2026-08-15T09:39:04.056Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 36506
+  },
   "brilliant": {
     "image": "/previews/brilliant.webp",
     "small": "/previews/brilliant-sm.webp",
