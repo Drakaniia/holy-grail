@@ -62,7 +62,7 @@
     "happy-dom": "^20.11.2",
     "npm-run-all2": "^9.0.3",
     "oxlint": "~1.77.0",
-    "postcss": "^8.5.25",
+    "postcss": "^8.5.26",
     "prettier": "3.9.6",
     "puppeteer-core": "^25.5.0",
     "sharp": "^0.35.3",
