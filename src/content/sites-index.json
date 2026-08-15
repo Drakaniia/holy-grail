@@ -14128,6 +14128,113 @@
     ]
   },
   {
+    "slug": "brevo",
+    "name": "Brevo - Email Marketing & CRM Platform",
+    "description": "All-in-one customer engagement platform for email and SMS marketing, automation, CRM, and transactional email.",
+    "category": "AI Automation",
+    "parentCategory": "ai",
+    "subcategory": "automation",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.brevo.com/",
+    "docs": "https://developers.brevo.com/",
+    "sourceCode": "",
+    "icon": "brevo",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "ai",
+      "automation",
+      "marketing",
+      "email",
+      "sms",
+      "crm",
+      "transactional-email"
+    ],
+    "atGlance": "Email and SMS marketing platform with automation workflows, CRM, live chat, and transactional email APIs.",
+    "fullDescription": "Brevo (formerly Sendinblue) is an all-in-one customer engagement platform combining email and SMS marketing, marketing automation, CRM, live chat, and transactional email. It includes a drag-and-drop campaign builder, AI-powered content generation, audience segmentation, and automation workflows for lead nurturing and post-purchase journeys. Developers can send transactional email and SMS through its REST API and SMTP relay.",
+    "coreFeatures": [
+      {
+        "name": "Email & SMS Campaigns",
+        "description": "Design, send, and analyze email and SMS campaigns with drag-and-drop tools.",
+        "icon": "check"
+      },
+      {
+        "name": "Marketing Automation",
+        "description": "Build multi-step workflows for onboarding, lead nurturing, and abandoned carts.",
+        "icon": "workflow"
+      },
+      {
+        "name": "Built-in CRM",
+        "description": "Manage contacts, deal pipelines, and sales sequences in one platform.",
+        "icon": "users"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "AI Content Tools",
+        "description": "AI-assisted subject lines, copy generation, and predictive sending features.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Transactional Email API",
+        "description": "REST API and SMTP relay for sending transactional email and SMS programmatically.",
+        "icon": "plug"
+      },
+      {
+        "name": "Live Chat",
+        "description": "Chat widget and conversation inbox for engaging website visitors in real time.",
+        "icon": "message"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "n8n",
+        "name": "AI Workflow Automation Platform & Tools - n8n",
+        "description": "AI Workflow Automation Platform & Tools - n8n bookmarked for ai automation resources.",
+        "stars": 193543,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://n8n.io/"
+      },
+      {
+        "slug": "activepieces",
+        "name": "AI-first automation for every team - Activepieces",
+        "description": "AI-first automation for every team - Activepieces bookmarked for ai automation resources.",
+        "stars": 22907,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.activepieces.com/"
+      },
+      {
+        "slug": "relay",
+        "name": "Relay.app: Create AI agents that work for you",
+        "description": "Relay.app: Create AI agents that work for you bookmarked for ai automation resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.relay.app/"
+      }
+    ]
+  },
+  {
     "slug": "gumloop",
     "name": "Gumloop | AI Automation Framework",
     "description": "Gumloop | AI Automation Framework bookmarked for ai automation resources.",
