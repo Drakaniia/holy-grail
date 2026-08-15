@@ -33390,6 +33390,113 @@
     ]
   },
   {
+    "slug": "formspree",
+    "name": "Formspree - Form Backend for Developers",
+    "description": "Form backend, API, and email service that handles HTML and JavaScript form submissions without writing server code.",
+    "category": "Backend",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://formspree.io/",
+    "docs": "https://formspree.io/",
+    "sourceCode": "",
+    "icon": "formspree",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "development",
+      "cloud-hosting",
+      "backend",
+      "forms",
+      "api",
+      "email",
+      "jamstack"
+    ],
+    "atGlance": "Form backend service for static and dynamic sites, with spam protection, file uploads, and integrations.",
+    "fullDescription": "Formspree is a form backend, API, and email service for HTML and JavaScript forms. It lets developers embed working forms on static or dynamic websites by pointing form actions at a hosted endpoint, with no server code to maintain. Submissions are delivered by email and stored in a dashboard, and the service includes spam filtering, file uploads, custom validation, workflows, and integrations with tools like Zapier, Slack, and Stripe.",
+    "coreFeatures": [
+      {
+        "name": "Hosted Form Endpoints",
+        "description": "Point any form action at a Formspree URL to start receiving submissions instantly.",
+        "icon": "check"
+      },
+      {
+        "name": "No Server Code",
+        "description": "Add working forms to static sites, JAMstack apps, and prototypes without a backend.",
+        "icon": "check"
+      },
+      {
+        "name": "Email Delivery",
+        "description": "Every submission is forwarded to your inbox and stored in the Formspree dashboard.",
+        "icon": "mail"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Spam Protection",
+        "description": "Built-in honeypot, Akismet, and custom spam filters to keep inboxes clean.",
+        "icon": "shield"
+      },
+      {
+        "name": "File Uploads",
+        "description": "Accept file attachments directly through form submissions.",
+        "icon": "upload"
+      },
+      {
+        "name": "API & Integrations",
+        "description": "REST API plus Zapier, Slack, Stripe, and webhook integrations for workflow automation.",
+        "icon": "plug"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "appwrite",
+        "name": "appwrite",
+        "description": "A backend platform providing authentication, databases, storage, and realtime APIs.",
+        "stars": 56377,
+        "addedDaysAgo": 5,
+        "verified": true,
+        "website": "https://appwrite.io"
+      },
+      {
+        "slug": "supabase",
+        "name": "Supabase | The Postgres Development Platform.",
+        "description": "Supabase | The Postgres Development Platform. bookmarked for hosting resources.",
+        "stars": 104640,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://supabase.com/"
+      },
+      {
+        "slug": "buildship",
+        "name": "BuildShip",
+        "description": "AI-powered visual backend builder for APIs, workflows, and cloud functions.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://app.buildship.com/"
+      }
+    ]
+  },
+  {
     "slug": "google",
     "name": "Cloud Run | Google Cloud",
     "description": "Cloud Run | Google Cloud bookmarked for hosting resources.",

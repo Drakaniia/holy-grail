@@ -1293,6 +1293,15 @@
     "height": 600,
     "bytes": 39432
   },
+  "formspree": {
+    "image": "/previews/formspree.webp",
+    "small": "/previews/formspree-sm.webp",
+    "sourceUrl": "https://formspree.io/",
+    "capturedAt": "2026-08-15T09:38:57.930Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27962
+  },
   "free-mockup": {
     "image": "/previews/free-mockup.webp",
     "small": "/previews/free-mockup-sm.webp",
