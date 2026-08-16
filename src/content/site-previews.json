@@ -644,6 +644,15 @@
     "height": 600,
     "bytes": 26778
   },
+  "cloudflare-pages": {
+    "image": "/previews/cloudflare-pages.webp",
+    "small": "/previews/cloudflare-pages-sm.webp",
+    "sourceUrl": "https://pages.cloudflare.com/",
+    "capturedAt": "2026-08-16T15:04:53.158Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 24494
+  },
   "cockroachlabs": {
     "image": "/previews/cockroachlabs.webp",
     "small": "/previews/cockroachlabs-sm.webp",
@@ -1601,6 +1610,15 @@
     "height": 600,
     "bytes": 21032
   },
+  "heroku": {
+    "image": "/previews/heroku.webp",
+    "small": "/previews/heroku-sm.webp",
+    "sourceUrl": "https://www.heroku.com/",
+    "capturedAt": "2026-08-16T15:04:51.832Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 56436
+  },
   "heroui": {
     "image": "/previews/heroui.webp",
     "small": "/previews/heroui-sm.webp",
@@ -1673,6 +1691,24 @@
     "width": 960,
     "height": 600,
     "bytes": 26716
+  },
+  "hostinger": {
+    "image": "/previews/hostinger.webp",
+    "small": "/previews/hostinger-sm.webp",
+    "sourceUrl": "https://www.hostinger.com/",
+    "capturedAt": "2026-08-16T15:02:15.347Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 29674
+  },
+  "hugeicons": {
+    "image": "/previews/hugeicons.webp",
+    "small": "/previews/hugeicons-sm.webp",
+    "sourceUrl": "https://hugeicons.com/",
+    "capturedAt": "2026-08-16T14:58:49.450Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21738
   },
   "huggingface": {
     "image": "/previews/huggingface.webp",
@@ -1956,6 +1992,15 @@
     "height": 600,
     "bytes": 7838,
     "fallback": true
+  },
+  "koyeb": {
+    "image": "/previews/koyeb.webp",
+    "small": "/previews/koyeb-sm.webp",
+    "sourceUrl": "https://www.koyeb.com/",
+    "capturedAt": "2026-08-16T15:04:39.535Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27584
   },
   "kubeflow": {
     "image": "/previews/kubeflow.webp",
@@ -2946,6 +2991,15 @@
     "height": 600,
     "bytes": 33216
   },
+  "qqflix": {
+    "image": "/previews/qqflix.webp",
+    "small": "/previews/qqflix-sm.webp",
+    "sourceUrl": "https://qqflix.ru/",
+    "capturedAt": "2026-08-15T10:11:20.630Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 29892
+  },
   "quillbot": {
     "image": "/previews/quillbot.webp",
     "small": "/previews/quillbot-sm.webp",
@@ -2972,6 +3026,15 @@
     "width": 960,
     "height": 600,
     "bytes": 28192
+  },
+  "raylight": {
+    "image": "/previews/raylight.webp",
+    "small": "/previews/raylight-sm.webp",
+    "sourceUrl": "https://www.raylight.app/",
+    "capturedAt": "2026-08-16T14:58:40.667Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 12788
   },
   "reactbits": {
     "image": "/previews/reactbits.webp",
@@ -4071,6 +4134,15 @@
     "width": 960,
     "height": 600,
     "bytes": 34114
+  },
+  "zeabur": {
+    "image": "/previews/zeabur.webp",
+    "small": "/previews/zeabur-sm.webp",
+    "sourceUrl": "https://zeabur.com/",
+    "capturedAt": "2026-08-16T15:04:50.383Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13776
   },
   "zooqle": {
     "image": "/previews/zooqle.webp",

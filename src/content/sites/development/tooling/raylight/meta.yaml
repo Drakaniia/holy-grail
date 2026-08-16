@@ -1,0 +1,81 @@
+slug: raylight
+name: Raylight
+description: Turn screenshots and screen recordings into cinematic product videos in minutes.
+category: Tooling
+parentCategory: development
+subcategory: tooling
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.raylight.app/
+docs: https://www.raylight.app/academy/getting-started
+sourceCode: ''
+icon: raylight
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - tooling
+  - video
+  - product-demo
+  - motion
+atGlance: Build cinematic product videos from screenshots and recordings.
+fullDescription: >-
+  Raylight turns screenshots, shapes, and screen recordings into cinematic product videos
+  without any motion design skills. Drop in a design or recording, wrap it in a 3D device
+  frame, animate it on a timeline with adjustable easing, and export a polished demo video
+  in minutes. Popular with founders and developers showcasing apps and products.
+coreFeatures:
+  - name: Product Video Builder
+    description: Turn static frames and screen recordings into animated product videos.
+    icon: clapperboard
+  - name: Timeline Animation
+    description: Animate on a timeline with fine control over easing and motion.
+    icon: check
+  - name: 3D Device Frames
+    description: Wrap app designs and recordings in realistic 3D device mockups.
+    icon: check
+additionalFeatures:
+  - name: No Motion Skills Required
+    description: High-end motion looks without learning motion design software.
+    icon: sparkles
+  - name: Template Library
+    description: Customizable motion graphics templates with swappable logos and assets.
+    icon: layers
+  - name: Cinematic Output
+    description: Export polished demo videos for launch posts and marketing.
+    icon: rocket
+similarTools:
+  - slug: jitter
+    name: Jitter - Fast and simple motion design tool.
+    description: Fast and simple motion design tool for animated interfaces.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: posthog
+    name: PostHog - How developers build successful products
+    description: Product analytics and tooling for developers building successful products.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://posthog.com/
+  - slug: reflex
+    name: Reflex - The platform to build and scale enterprise apps
+    description: Python framework and platform for building and scaling web apps.
+    stars: 28581
+    addedDaysAgo: 0
+    verified: true
+    website: https://reflex.dev/
