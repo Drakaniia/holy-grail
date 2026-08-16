@@ -1,0 +1,83 @@
+slug: hugeicons
+name: Hugeicons - Free & Pro Icon Library
+description: 59,000+ handcrafted icons in 10 styles and 59 categories for designers and developers.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Figma
+deployment:
+  - Cloud
+website: https://hugeicons.com/
+docs: https://hugeicons.com/
+sourceCode: ''
+icon: hugeicons
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - figma
+  - react
+atGlance: 59,000+ icons across 10 styles and 59 categories.
+fullDescription: >-
+  Hugeicons is one of the largest icon libraries available, offering over 59,000 handcrafted
+  icons across 10 distinct styles and 59 categories. It serves UI/UX designers and developers
+  with searchable web access, a native Figma plugin, and free open-source React packages such
+  as @hugeicons/react with thousands of stroke-rounded icons for modern apps.
+coreFeatures:
+  - name: Massive Library
+    description: Browse and download 59,000+ icons in 10 styles and 59 categories.
+    icon: layers
+  - name: Developer Packages
+    description: Free open-source React icon packages installable via npm.
+    icon: check
+  - name: Figma Plugin
+    description: Native plugin places icons directly onto the canvas without leaving Figma.
+    icon: check
+additionalFeatures:
+  - name: Multiple Styles
+    description: Stroke, solid, duotone, and other styles to match any workflow.
+    icon: palette
+  - name: Multiple Export Formats
+    description: Export icons as SVG, PNG, JSX, TSX, and more.
+    icon: check
+  - name: Searchable Web Access
+    description: Full icon search and download straight from the browser.
+    icon: check
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Hand-crafted SVG icons by the Tailwind CSS team.
+    stars: 23613
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/solid
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/
+  - slug: nucleoapp
+    name: Your next-level icon library | Nucleo
+    description: Premium icon library with app and Figma workflows.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://nucleoapp.com/premium-icons

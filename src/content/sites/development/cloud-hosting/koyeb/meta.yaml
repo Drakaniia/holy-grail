@@ -1,0 +1,85 @@
+slug: koyeb
+name: Koyeb
+description: Global serverless platform to deploy apps, containers, and AI models across 50+ locations.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+  - Edge
+website: https://www.koyeb.com/
+docs: https://www.koyeb.com/docs
+sourceCode: ''
+icon: koyeb
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - deployment
+  - serverless
+  - edge
+  - ai
+atGlance: Global serverless platform for apps, containers, and AI workloads.
+fullDescription: >-
+  Koyeb is a developer-friendly serverless platform that deploys and scales applications,
+  containers, APIs, and machine learning models across a global edge network with more than
+  250 locations. It supports Git-based deploys, Docker containers, functions, GPU-backed
+  inference, automatic HTTPS and load balancing, and a CLI for terminal-based workflows.
+coreFeatures:
+  - name: Global Deployments
+    description: Run apps and services across 50+ locations on a global edge network.
+    icon: check
+  - name: Git and Container Deploys
+    description: Deploy from a Git push, Docker image, or prebuilt function.
+    icon: check
+  - name: AI and GPU Support
+    description: Deploy inference endpoints and AI workloads on GPUs and accelerators.
+    icon: sparkles
+additionalFeatures:
+  - name: Koyeb CLI
+    description: Deploy and manage applications directly from the terminal.
+    icon: terminal
+  - name: Automatic TLS and Routing
+    description: Built-in HTTPS, load balancing, and global traffic routing.
+    icon: check
+  - name: Scale to Zero
+    description: Serverless scaling that shuts down idle instances to save cost.
+    icon: check
+similarTools:
+  - slug: render
+    name: Render
+    description: Unified cloud to build and run apps and websites with free TLS.
+    stars: 2
+    addedDaysAgo: 0
+    verified: true
+    website: https://render.com/
+  - slug: fly
+    name: Fly.io
+    description: Deploy app servers close to users on a global edge network.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://fly.io/
+  - slug: qovery
+    name: Qovery - Agentic Infrastructure Platform
+    description: Platform for deploying and scaling full-stack apps in the cloud.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.qovery.com/

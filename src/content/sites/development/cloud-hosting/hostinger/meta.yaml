@@ -1,0 +1,84 @@
+slug: hostinger
+name: Hostinger - Affordable Web Hosting
+description: Fast, secure web hosting with free domain, SSL, email, and an AI website builder.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+website: https://www.hostinger.com/
+docs: https://www.hostinger.com/tutorials/
+sourceCode: ''
+icon: hostinger
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - deployment
+  - wordpress
+  - domain
+atGlance: Fast, affordable web hosting with AI builder and free domain.
+fullDescription: >-
+  Hostinger is an affordable web hosting provider offering shared, cloud, and managed WordPress
+  hosting with NVMe storage, LiteSpeed servers, free SSL, free email, and a free domain on longer
+  plans. It includes an AI-powered website builder, easy-to-use hPanel control panel, 24/7 support,
+  daily backups, and a 30-day money-back guarantee. Popular with developers and small businesses
+  for launching sites quickly on a budget.
+coreFeatures:
+  - name: Fast Hosting
+    description: NVMe storage and LiteSpeed servers deliver fast page loads on budget plans.
+    icon: zap
+  - name: AI Website Builder
+    description: Drag-and-drop builder with AI-assisted site creation and content writing.
+    icon: sparkles
+  - name: Managed WordPress
+    description: WordPress-optimized hosting with caching, staging, and auto-updates.
+    icon: check
+additionalFeatures:
+  - name: Free Extras
+    description: Free domain, SSL certificate, email, CDN, and daily backups included.
+    icon: gift
+  - name: hPanel Control
+    description: Simple custom control panel for domains, files, databases, and email.
+    icon: check
+  - name: 24/7 Support
+    description: Around-the-clock live chat and knowledge base help.
+    icon: check
+similarTools:
+  - slug: infinityfree
+    name: Free Website Hosting - InfinityFree
+    description: Free hosting platform with PHP and MySQL support.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.infinityfree.com/
+  - slug: awardspace
+    name: Home - AwardSpace.com
+    description: Free web hosting and domain service provider.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.awardspace.com/
+  - slug: vercel
+    name: vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 15723
+    addedDaysAgo: 0
+    verified: true
+    website: https://vercel.com

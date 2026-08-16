@@ -1,0 +1,86 @@
+slug: cloudflare-pages
+name: Cloudflare Pages
+description: Fast static and full-stack hosting on Cloudflare's global edge network with free tier.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+  - Edge
+website: https://pages.cloudflare.com/
+docs: https://developers.cloudflare.com/pages/
+sourceCode: ''
+icon: cloudflare-pages
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - deployment
+  - jamstack
+  - edge
+  - serverless
+atGlance: Fast static and full-stack hosting on Cloudflare's global edge network.
+fullDescription: >-
+  Cloudflare Pages is a JAMstack and full-stack hosting platform built on Cloudflare's global
+  edge network. It offers Git-integrated CI/CD with preview deployments for every pull request,
+  unlimited free bandwidth, and support for popular frameworks like React, Vue, and Next.js.
+  Full-stack features come via Cloudflare Functions and Workers, letting developers add APIs and
+  server-side logic without managing servers.
+coreFeatures:
+  - name: Git-Integrated CI/CD
+    description: Automatic builds and preview deployments for every push and pull request.
+    icon: check
+  - name: Global Edge Network
+    description: Serves sites from Cloudflare's 300+ edge locations with unlimited bandwidth.
+    icon: check
+  - name: Full-Stack Support
+    description: Add server-side logic with Cloudflare Functions and Workers.
+    icon: check
+additionalFeatures:
+  - name: Generous Free Tier
+    description: Free hosting with unlimited bandwidth and no credit card required.
+    icon: gift
+  - name: Framework Presets
+    description: Built-in build presets for React, Vue, Next.js, Astro, and more.
+    icon: layers
+  - name: Wrangler CLI
+    description: Deploy and manage projects from the command line with Wrangler.
+    icon: terminal
+similarTools:
+  - slug: vercel
+    name: vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 15723
+    addedDaysAgo: 0
+    verified: true
+    website: https://vercel.com
+  - slug: netlify
+    name: Netlify - Web Development Platform
+    description: All-in-one platform for building, deploying, and scaling modern web applications.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.netlify.com/
+  - slug: fly
+    name: Fly.io
+    description: Deploy app servers close to users on a global edge network.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://fly.io/

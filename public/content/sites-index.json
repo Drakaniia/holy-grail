@@ -27241,6 +27241,113 @@
     ]
   },
   {
+    "slug": "hugeicons",
+    "name": "Hugeicons - Free & Pro Icon Library",
+    "description": "59,000+ handcrafted icons in 10 styles and 59 categories for designers and developers.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Figma"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://hugeicons.com/",
+    "docs": "https://hugeicons.com/",
+    "sourceCode": "",
+    "icon": "hugeicons",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "figma",
+      "react"
+    ],
+    "atGlance": "59,000+ icons across 10 styles and 59 categories.",
+    "fullDescription": "Hugeicons is one of the largest icon libraries available, offering over 59,000 handcrafted icons across 10 distinct styles and 59 categories. It serves UI/UX designers and developers with searchable web access, a native Figma plugin, and free open-source React packages such as @hugeicons/react with thousands of stroke-rounded icons for modern apps.",
+    "coreFeatures": [
+      {
+        "name": "Massive Library",
+        "description": "Browse and download 59,000+ icons in 10 styles and 59 categories.",
+        "icon": "layers"
+      },
+      {
+        "name": "Developer Packages",
+        "description": "Free open-source React icon packages installable via npm.",
+        "icon": "check"
+      },
+      {
+        "name": "Figma Plugin",
+        "description": "Native plugin places icons directly onto the canvas without leaving Figma.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multiple Styles",
+        "description": "Stroke, solid, duotone, and other styles to match any workflow.",
+        "icon": "palette"
+      },
+      {
+        "name": "Multiple Export Formats",
+        "description": "Export icons as SVG, PNG, JSX, TSX, and more.",
+        "icon": "check"
+      },
+      {
+        "name": "Searchable Web Access",
+        "description": "Full icon search and download straight from the browser.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Hand-crafted SVG icons by the Tailwind CSS team.",
+        "stars": 23613,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/solid"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
+      },
+      {
+        "slug": "nucleoapp",
+        "name": "Your next-level icon library | Nucleo",
+        "description": "Premium icon library with app and Figma workflows.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nucleoapp.com/premium-icons"
+      }
+    ]
+  },
+  {
     "slug": "iconinspo",
     "name": "Iconinspo - App Icon Inspiration Gallery",
     "description": "Curated gallery of 60,000+ App Store icons for design inspiration and reference.",
@@ -33092,6 +33199,115 @@
     ]
   },
   {
+    "slug": "cloudflare-pages",
+    "name": "Cloudflare Pages",
+    "description": "Fast static and full-stack hosting on Cloudflare's global edge network with free tier.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud",
+      "Edge"
+    ],
+    "website": "https://pages.cloudflare.com/",
+    "docs": "https://developers.cloudflare.com/pages/",
+    "sourceCode": "",
+    "icon": "cloudflare-pages",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "deployment",
+      "jamstack",
+      "edge",
+      "serverless"
+    ],
+    "atGlance": "Fast static and full-stack hosting on Cloudflare's global edge network.",
+    "fullDescription": "Cloudflare Pages is a JAMstack and full-stack hosting platform built on Cloudflare's global edge network. It offers Git-integrated CI/CD with preview deployments for every pull request, unlimited free bandwidth, and support for popular frameworks like React, Vue, and Next.js. Full-stack features come via Cloudflare Functions and Workers, letting developers add APIs and server-side logic without managing servers.",
+    "coreFeatures": [
+      {
+        "name": "Git-Integrated CI/CD",
+        "description": "Automatic builds and preview deployments for every push and pull request.",
+        "icon": "check"
+      },
+      {
+        "name": "Global Edge Network",
+        "description": "Serves sites from Cloudflare's 300+ edge locations with unlimited bandwidth.",
+        "icon": "check"
+      },
+      {
+        "name": "Full-Stack Support",
+        "description": "Add server-side logic with Cloudflare Functions and Workers.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Generous Free Tier",
+        "description": "Free hosting with unlimited bandwidth and no credit card required.",
+        "icon": "gift"
+      },
+      {
+        "name": "Framework Presets",
+        "description": "Built-in build presets for React, Vue, Next.js, Astro, and more.",
+        "icon": "layers"
+      },
+      {
+        "name": "Wrangler CLI",
+        "description": "Deploy and manage projects from the command line with Wrangler.",
+        "icon": "terminal"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "vercel",
+        "name": "vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 15723,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://vercel.com"
+      },
+      {
+        "slug": "netlify",
+        "name": "Netlify - Web Development Platform",
+        "description": "All-in-one platform for building, deploying, and scaling modern web applications.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.netlify.com/"
+      },
+      {
+        "slug": "fly",
+        "name": "Fly.io",
+        "description": "Deploy app servers close to users on a global edge network.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://fly.io/"
+      }
+    ]
+  },
+  {
     "slug": "cyclic",
     "name": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds",
     "description": "Cyclic.sh - Fullstack Javascript Apps - Deploy and Host in Seconds bookmarked for hosting resources.",
@@ -33702,6 +33918,219 @@
     ]
   },
   {
+    "slug": "heroku",
+    "name": "Heroku",
+    "description": "Cloud platform for deploying and scaling apps with Git push and managed add-ons.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.heroku.com/",
+    "docs": "https://devcenter.heroku.com/",
+    "sourceCode": "",
+    "icon": "heroku",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "deployment",
+      "paas"
+    ],
+    "atGlance": "Classic PaaS for deploying apps with a simple Git push.",
+    "fullDescription": "Heroku is a cloud platform-as-a-service that lets developers deploy, manage, and scale applications with a simple Git push. It supports Ruby, Node.js, Python, Java, PHP, Go, and more, with managed add-ons for PostgreSQL, Redis, and other services. Heroku's dyno model handles the underlying infrastructure so teams can focus on shipping code.",
+    "coreFeatures": [
+      {
+        "name": "Git Push Deploys",
+        "description": "Deploy apps by pushing code to a Git remote — no servers to manage.",
+        "icon": "check"
+      },
+      {
+        "name": "Language Support",
+        "description": "Runs Ruby, Node.js, Python, Java, PHP, Go, and other runtimes.",
+        "icon": "layers"
+      },
+      {
+        "name": "Managed Add-ons",
+        "description": "One-click add-ons for PostgreSQL, Redis, logging, and more.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Heroku CLI",
+        "description": "Full command-line control over apps, dynos, logs, and releases.",
+        "icon": "terminal"
+      },
+      {
+        "name": "Horizontal Scaling",
+        "description": "Scale dynos up or down to handle traffic changes.",
+        "icon": "check"
+      },
+      {
+        "name": "Heroku Postgres",
+        "description": "Managed, production-ready PostgreSQL database service.",
+        "icon": "database"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "render",
+        "name": "Render",
+        "description": "Unified cloud to build and run apps and websites with free TLS.",
+        "stars": 2,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://render.com/"
+      },
+      {
+        "slug": "railway",
+        "name": "Railway",
+        "description": "Deploy and scale apps and databases with zero-config templates.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://railway.com/"
+      },
+      {
+        "slug": "fly",
+        "name": "Fly.io",
+        "description": "Deploy app servers close to users on a global edge network.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://fly.io/"
+      }
+    ]
+  },
+  {
+    "slug": "hostinger",
+    "name": "Hostinger - Affordable Web Hosting",
+    "description": "Fast, secure web hosting with free domain, SSL, email, and an AI website builder.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.hostinger.com/",
+    "docs": "https://www.hostinger.com/tutorials/",
+    "sourceCode": "",
+    "icon": "hostinger",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "deployment",
+      "wordpress",
+      "domain"
+    ],
+    "atGlance": "Fast, affordable web hosting with AI builder and free domain.",
+    "fullDescription": "Hostinger is an affordable web hosting provider offering shared, cloud, and managed WordPress hosting with NVMe storage, LiteSpeed servers, free SSL, free email, and a free domain on longer plans. It includes an AI-powered website builder, easy-to-use hPanel control panel, 24/7 support, daily backups, and a 30-day money-back guarantee. Popular with developers and small businesses for launching sites quickly on a budget.",
+    "coreFeatures": [
+      {
+        "name": "Fast Hosting",
+        "description": "NVMe storage and LiteSpeed servers deliver fast page loads on budget plans.",
+        "icon": "zap"
+      },
+      {
+        "name": "AI Website Builder",
+        "description": "Drag-and-drop builder with AI-assisted site creation and content writing.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Managed WordPress",
+        "description": "WordPress-optimized hosting with caching, staging, and auto-updates.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Free Extras",
+        "description": "Free domain, SSL certificate, email, CDN, and daily backups included.",
+        "icon": "gift"
+      },
+      {
+        "name": "hPanel Control",
+        "description": "Simple custom control panel for domains, files, databases, and email.",
+        "icon": "check"
+      },
+      {
+        "name": "24/7 Support",
+        "description": "Around-the-clock live chat and knowledge base help.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "infinityfree",
+        "name": "Free Website Hosting - InfinityFree",
+        "description": "Free hosting platform with PHP and MySQL support.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.infinityfree.com/"
+      },
+      {
+        "slug": "awardspace",
+        "name": "Home - AwardSpace.com",
+        "description": "Free web hosting and domain service provider.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.awardspace.com/"
+      },
+      {
+        "slug": "vercel",
+        "name": "vercel",
+        "description": "Develop, preview, and ship web applications with the fastest global edge network.",
+        "stars": 15723,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://vercel.com"
+      }
+    ]
+  },
+  {
     "slug": "infinityfree",
     "name": "Free Website Hosting - InfinityFree",
     "description": "Free Website Hosting - InfinityFree bookmarked for hosting resources.",
@@ -33796,6 +34225,115 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://coolify.io/"
+      }
+    ]
+  },
+  {
+    "slug": "koyeb",
+    "name": "Koyeb",
+    "description": "Global serverless platform to deploy apps, containers, and AI models across 50+ locations.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud",
+      "Edge"
+    ],
+    "website": "https://www.koyeb.com/",
+    "docs": "https://www.koyeb.com/docs",
+    "sourceCode": "",
+    "icon": "koyeb",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "deployment",
+      "serverless",
+      "edge",
+      "ai"
+    ],
+    "atGlance": "Global serverless platform for apps, containers, and AI workloads.",
+    "fullDescription": "Koyeb is a developer-friendly serverless platform that deploys and scales applications, containers, APIs, and machine learning models across a global edge network with more than 250 locations. It supports Git-based deploys, Docker containers, functions, GPU-backed inference, automatic HTTPS and load balancing, and a CLI for terminal-based workflows.",
+    "coreFeatures": [
+      {
+        "name": "Global Deployments",
+        "description": "Run apps and services across 50+ locations on a global edge network.",
+        "icon": "check"
+      },
+      {
+        "name": "Git and Container Deploys",
+        "description": "Deploy from a Git push, Docker image, or prebuilt function.",
+        "icon": "check"
+      },
+      {
+        "name": "AI and GPU Support",
+        "description": "Deploy inference endpoints and AI workloads on GPUs and accelerators.",
+        "icon": "sparkles"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Koyeb CLI",
+        "description": "Deploy and manage applications directly from the terminal.",
+        "icon": "terminal"
+      },
+      {
+        "name": "Automatic TLS and Routing",
+        "description": "Built-in HTTPS, load balancing, and global traffic routing.",
+        "icon": "check"
+      },
+      {
+        "name": "Scale to Zero",
+        "description": "Serverless scaling that shuts down idle instances to save cost.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "render",
+        "name": "Render",
+        "description": "Unified cloud to build and run apps and websites with free TLS.",
+        "stars": 2,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://render.com/"
+      },
+      {
+        "slug": "fly",
+        "name": "Fly.io",
+        "description": "Deploy app servers close to users on a global edge network.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://fly.io/"
+      },
+      {
+        "slug": "qovery",
+        "name": "Qovery - Agentic Infrastructure Platform",
+        "description": "Platform for deploying and scaling full-stack apps in the cloud.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.qovery.com/"
       }
     ]
   },
@@ -34831,6 +35369,113 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://www.infinityfree.com/"
+      }
+    ]
+  },
+  {
+    "slug": "zeabur",
+    "name": "Zeabur",
+    "description": "One-click PaaS that deploys services from GitHub in any language or framework.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://zeabur.com/",
+    "docs": "https://zeabur.com/docs",
+    "sourceCode": "",
+    "icon": "zeabur",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "deployment",
+      "paas",
+      "ai"
+    ],
+    "atGlance": "One-click PaaS for painless deployment from GitHub repos.",
+    "fullDescription": "Zeabur is a platform-as-a-service that deploys services from GitHub repositories with one click, supporting any programming language or framework. It acts as an all-in-one hub for frontends, backends, and databases in a single project, with a user-friendly interface, built-in CI/CD, custom domains, and monitoring. Its AI DevOps agent turns natural language prompts into infrastructure actions like deploying services and managing configs.",
+    "coreFeatures": [
+      {
+        "name": "One-Click Deploy",
+        "description": "Deploy any service from a GitHub repo without configuration.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Any Language or Framework",
+        "description": "Supports frontends, backends, and databases in one project.",
+        "icon": "layers"
+      },
+      {
+        "name": "AI DevOps Agent",
+        "description": "Natural language prompts to deploy services and manage infrastructure.",
+        "icon": "sparkles"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Built-in CI/CD",
+        "description": "Automatic builds and pipelines for every deployment.",
+        "icon": "check"
+      },
+      {
+        "name": "Custom Domains",
+        "description": "Connect custom domains with automatic HTTPS certificates.",
+        "icon": "check"
+      },
+      {
+        "name": "Monitoring Built In",
+        "description": "Track deployments, logs, and resource usage from the dashboard.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "railway",
+        "name": "Railway",
+        "description": "Deploy and scale apps and databases with zero-config templates.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://railway.com/"
+      },
+      {
+        "slug": "render",
+        "name": "Render",
+        "description": "Unified cloud to build and run apps and websites with free TLS.",
+        "stars": 2,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://render.com/"
+      },
+      {
+        "slug": "fly",
+        "name": "Fly.io",
+        "description": "Deploy app servers close to users on a global edge network.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://fly.io/"
       }
     ]
   },
@@ -37100,6 +37745,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "raylight",
+    "name": "Raylight",
+    "description": "Turn screenshots and screen recordings into cinematic product videos in minutes.",
+    "category": "Tooling",
+    "parentCategory": "development",
+    "subcategory": "tooling",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.raylight.app/",
+    "docs": "https://www.raylight.app/academy/getting-started",
+    "sourceCode": "",
+    "icon": "raylight",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "tooling",
+      "video",
+      "product-demo",
+      "motion"
+    ],
+    "atGlance": "Build cinematic product videos from screenshots and recordings.",
+    "fullDescription": "Raylight turns screenshots, shapes, and screen recordings into cinematic product videos without any motion design skills. Drop in a design or recording, wrap it in a 3D device frame, animate it on a timeline with adjustable easing, and export a polished demo video in minutes. Popular with founders and developers showcasing apps and products.",
+    "coreFeatures": [
+      {
+        "name": "Product Video Builder",
+        "description": "Turn static frames and screen recordings into animated product videos.",
+        "icon": "clapperboard"
+      },
+      {
+        "name": "Timeline Animation",
+        "description": "Animate on a timeline with fine control over easing and motion.",
+        "icon": "check"
+      },
+      {
+        "name": "3D Device Frames",
+        "description": "Wrap app designs and recordings in realistic 3D device mockups.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "No Motion Skills Required",
+        "description": "High-end motion looks without learning motion design software.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Template Library",
+        "description": "Customizable motion graphics templates with swappable logos and assets.",
+        "icon": "layers"
+      },
+      {
+        "name": "Cinematic Output",
+        "description": "Export polished demo videos for launch posts and marketing.",
+        "icon": "rocket"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "jitter",
+        "name": "Jitter - Fast and simple motion design tool.",
+        "description": "Fast and simple motion design tool for animated interfaces.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://jitter.video/"
+      },
+      {
+        "slug": "posthog",
+        "name": "PostHog - How developers build successful products",
+        "description": "Product analytics and tooling for developers building successful products.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://posthog.com/"
+      },
+      {
+        "slug": "reflex",
+        "name": "Reflex - The platform to build and scale enterprise apps",
+        "description": "Python framework and platform for building and scaling web apps.",
+        "stars": 28581,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reflex.dev/"
       }
     ]
   },
@@ -44241,6 +44991,99 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://movies2watch.watch/home/"
+      }
+    ]
+  },
+  {
+    "slug": "qqflix",
+    "name": "QQFlix",
+    "description": "Movie watch source bookmark for quick launch.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "Added Aug 15, 2026",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://qqflix.ru/",
+    "docs": "https://qqflix.ru/",
+    "sourceCode": "",
+    "icon": "qqflix",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming"
+    ],
+    "atGlance": "Movie watch bookmark.",
+    "fullDescription": "QQFlix is kept as a movie watch source in the Watch collection.",
+    "coreFeatures": [
+      {
+        "name": "Watch Source",
+        "description": "Cataloged as a saved movie watch bookmark.",
+        "icon": "check"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Opens the saved watch source directly from the catalog entry.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Watch Collection",
+        "description": "Grouped under Watch for movie and anime sources.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged for watch, movie, and streaming search.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
+      },
+      {
+        "slug": "nextflicks",
+        "name": "NextFlicks",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nextflicks.link"
       }
     ]
   },

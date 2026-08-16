@@ -1,0 +1,84 @@
+slug: zeabur
+name: Zeabur
+description: One-click PaaS that deploys services from GitHub in any language or framework.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+website: https://zeabur.com/
+docs: https://zeabur.com/docs
+sourceCode: ''
+icon: zeabur
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - deployment
+  - paas
+  - ai
+atGlance: One-click PaaS for painless deployment from GitHub repos.
+fullDescription: >-
+  Zeabur is a platform-as-a-service that deploys services from GitHub repositories with one
+  click, supporting any programming language or framework. It acts as an all-in-one hub for
+  frontends, backends, and databases in a single project, with a user-friendly interface,
+  built-in CI/CD, custom domains, and monitoring. Its AI DevOps agent turns natural language
+  prompts into infrastructure actions like deploying services and managing configs.
+coreFeatures:
+  - name: One-Click Deploy
+    description: Deploy any service from a GitHub repo without configuration.
+    icon: rocket
+  - name: Any Language or Framework
+    description: Supports frontends, backends, and databases in one project.
+    icon: layers
+  - name: AI DevOps Agent
+    description: Natural language prompts to deploy services and manage infrastructure.
+    icon: sparkles
+additionalFeatures:
+  - name: Built-in CI/CD
+    description: Automatic builds and pipelines for every deployment.
+    icon: check
+  - name: Custom Domains
+    description: Connect custom domains with automatic HTTPS certificates.
+    icon: check
+  - name: Monitoring Built In
+    description: Track deployments, logs, and resource usage from the dashboard.
+    icon: check
+similarTools:
+  - slug: railway
+    name: Railway
+    description: Deploy and scale apps and databases with zero-config templates.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://railway.com/
+  - slug: render
+    name: Render
+    description: Unified cloud to build and run apps and websites with free TLS.
+    stars: 2
+    addedDaysAgo: 0
+    verified: true
+    website: https://render.com/
+  - slug: fly
+    name: Fly.io
+    description: Deploy app servers close to users on a global edge network.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://fly.io/

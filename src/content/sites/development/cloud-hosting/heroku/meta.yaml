@@ -1,0 +1,82 @@
+slug: heroku
+name: Heroku
+description: Cloud platform for deploying and scaling apps with Git push and managed add-ons.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+website: https://www.heroku.com/
+docs: https://devcenter.heroku.com/
+sourceCode: ''
+icon: heroku
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - deployment
+  - paas
+atGlance: Classic PaaS for deploying apps with a simple Git push.
+fullDescription: >-
+  Heroku is a cloud platform-as-a-service that lets developers deploy, manage, and scale
+  applications with a simple Git push. It supports Ruby, Node.js, Python, Java, PHP, Go, and
+  more, with managed add-ons for PostgreSQL, Redis, and other services. Heroku's dyno model
+  handles the underlying infrastructure so teams can focus on shipping code.
+coreFeatures:
+  - name: Git Push Deploys
+    description: Deploy apps by pushing code to a Git remote — no servers to manage.
+    icon: check
+  - name: Language Support
+    description: Runs Ruby, Node.js, Python, Java, PHP, Go, and other runtimes.
+    icon: layers
+  - name: Managed Add-ons
+    description: One-click add-ons for PostgreSQL, Redis, logging, and more.
+    icon: check
+additionalFeatures:
+  - name: Heroku CLI
+    description: Full command-line control over apps, dynos, logs, and releases.
+    icon: terminal
+  - name: Horizontal Scaling
+    description: Scale dynos up or down to handle traffic changes.
+    icon: check
+  - name: Heroku Postgres
+    description: Managed, production-ready PostgreSQL database service.
+    icon: database
+similarTools:
+  - slug: render
+    name: Render
+    description: Unified cloud to build and run apps and websites with free TLS.
+    stars: 2
+    addedDaysAgo: 0
+    verified: true
+    website: https://render.com/
+  - slug: railway
+    name: Railway
+    description: Deploy and scale apps and databases with zero-config templates.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://railway.com/
+  - slug: fly
+    name: Fly.io
+    description: Deploy app servers close to users on a global edge network.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://fly.io/
