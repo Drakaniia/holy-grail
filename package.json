@@ -37,7 +37,7 @@
     "lucide-vue-next": "^1.0.0",
     "markdown-it": "^14.3.0",
     "pinia": "^3.0.4",
-    "posthog-js": "^1.414.0",
+    "posthog-js": "^1.417.1",
     "vue": "^3.5.41",
     "vue-router": "^5.2.0"
   },
