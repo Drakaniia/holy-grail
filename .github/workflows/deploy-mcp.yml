@@ -39,6 +39,7 @@ jobs:
         run: bun run build
       - name: Pull Vercel project settings + env
         if: ${{ env.VERCEL_TOKEN != '' }}
+        working-directory: packages/web
         run: npx --yes vercel@latest pull --yes --environment=production --token=$VERCEL_TOKEN
       - name: Write production env for the Vite build
         if: ${{ env.VERCEL_TOKEN != '' }}
@@ -49,25 +50,28 @@ jobs:
           VITE_POSTHOG_PROJECT_TOKEN: ${{ secrets.VITE_POSTHOG_PROJECT_TOKEN }}
           VITE_PUBLIC_SITE_URL: ${{ secrets.VITE_PUBLIC_SITE_URL }}
         run: |
-          # vercel pull writes [SECRET] placeholders into .vercel/.env.production.local,
-          # and vercel build injects them into process.env where they override vite's
-          # env files (vite: process.env wins). Remove the placeholders and write the
-          # real values from GitHub secrets to the repo root for vite to load.
-          rm -f .vercel/.env.production.local
-          : > .env.production.local
+          # vercel pull writes [SECRET] placeholders into
+          # packages/web/.vercel/.env.production.local, and vercel build injects
+          # them into process.env where they override vite's env files (vite:
+          # process.env wins). Remove the placeholders and write the real values
+          # from GitHub secrets to the web package root for vite to load.
+          rm -f packages/web/.vercel/.env.production.local
+          : > packages/web/.env.production.local
           for v in VITE_SUPABASE_URL VITE_SUPABASE_PUBLISHABLE_KEY VITE_POSTHOG_HOST VITE_POSTHOG_PROJECT_TOKEN VITE_PUBLIC_SITE_URL; do
-            if [ -n "${!v}" ]; then printf '%s=%s\n' "$v" "${!v}" >> .env.production.local; fi
+            if [ -n "${!v}" ]; then printf '%s=%s\n' "$v" "${!v}" >> packages/web/.env.production.local; fi
           done
-          if ! grep -q '^VITE_SUPABASE_URL=' .env.production.local; then
+          if ! grep -q '^VITE_SUPABASE_URL=' packages/web/.env.production.local; then
             echo "::error::VITE_SUPABASE_URL secret is required — add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to repo secrets" >&2
             exit 1
           fi
       - name: Build output (includes api function + mcp snapshot)
         if: ${{ env.VERCEL_TOKEN != '' }}
+        working-directory: packages/web
         run: npx --yes vercel@latest build --yes --prod --token=$VERCEL_TOKEN
       - name: Deploy to production
         if: ${{ env.VERCEL_TOKEN != '' }}
+        working-directory: packages/web
         run: npx --yes vercel@latest deploy --prebuilt --prod --yes --token=$VERCEL_TOKEN
       - name: Verify the deployed MCP endpoint
         if: ${{ env.VERCEL_TOKEN != '' }}
-        run: bun mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp
+        run: bun packages/mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp

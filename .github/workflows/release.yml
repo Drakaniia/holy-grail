@@ -46,11 +46,11 @@ jobs:
 
       - name: Build grail binary (${{ matrix.target }})
         run: cargo build --release --target ${{ matrix.rust-target }}
-        working-directory: cli
+        working-directory: packages/cli
 
       - name: Rename binary
         run: |
-          mv cli/target/${{ matrix.rust-target }}/release/grail${{ matrix.ext }} grail-${{ matrix.target }}${{ matrix.ext }}
+          mv packages/cli/target/${{ matrix.rust-target }}/release/grail${{ matrix.ext }} grail-${{ matrix.target }}${{ matrix.ext }}
 
       - uses: actions/upload-artifact@v4
         with:
