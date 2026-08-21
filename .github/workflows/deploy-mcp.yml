@@ -6,8 +6,9 @@
 # the local build output contains .vercel/output/functions/api/mcp.func and the
 # ordered rewrite ^/mcp$ -> /api/mcp.
 #
-# Requires repo secrets: VERCEL_TOKEN (and VERCEL_ORG_ID / VERCEL_PROJECT_ID).
-# The job is skipped entirely when the token is not configured.
+# Requires repo secrets: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID.
+# Steps are skipped when the token is not configured (secrets cannot appear in
+# job-level `if` for push/dispatch events, so the gate lives on each step).
 
 name: Deploy MCP
 
@@ -18,8 +19,11 @@ on:
 
 jobs:
   deploy-and-verify:
-    if: ${{ secrets.VERCEL_TOKEN != '' }}
     runs-on: ubuntu-latest
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -27,22 +31,21 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - run: bun install
-      - run: bun run build
+      - name: Install dependencies
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: bun install
+      - name: Build (SPA + mcp dist + data snapshot)
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: bun run build
       - name: Pull Vercel project settings + env
-        run: npx --yes vercel@latest pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: npx --yes vercel@latest pull --yes --environment=production --token=$VERCEL_TOKEN
       - name: Build output (includes api function + mcp snapshot)
-        run: npx --yes vercel@latest build --yes --token=${{ secrets.VERCEL_TOKEN }}
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: npx --yes vercel@latest build --yes --prod --token=$VERCEL_TOKEN
       - name: Deploy to production
-        run: npx --yes vercel@latest deploy --prebuilt --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: npx --yes vercel@latest deploy --prebuilt --prod --yes --token=$VERCEL_TOKEN
       - name: Verify the deployed MCP endpoint
+        if: ${{ env.VERCEL_TOKEN != '' }}
         run: bun mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp
