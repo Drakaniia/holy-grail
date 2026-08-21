@@ -1,0 +1,21 @@
+{
+  "note": "Pinned search corpus. Top-1 expectations were validated against the live SPA search behavior (useSmartSearch) during implementation on 2026-08-21; rows whose draft expectations differed were adjusted to observed behavior. Extension/MCP rows have no SPA counterpart (the port is the reference). Drift in either direction fails evals/search-corpus.test.ts or tests/mcp-search-mirror.test.ts.",
+  "queries": [
+    { "query": "browser automation", "expected_top1": "playwright-mcp", "kind": "mcp" },
+    { "query": "postgres database", "expected_top1": "planetscale", "kind": "site" },
+    { "query": "backend platform", "expected_top1": "pocketbase", "kind": "site" },
+    { "query": "workflow automation", "expected_top1": "n8n", "kind": "site" },
+    { "query": "full page screenshot", "expected_top1": "gofullpage", "kind": "extension" },
+    { "query": "ad blocker", "expected_top1": "ublock-origin", "kind": "extension" },
+    { "query": "markdown webpage", "expected_top1": "md-this-page", "kind": "extension" },
+    { "query": "codebase audit", "expected_top1": "audit-codebase", "kind": "skill" },
+    { "query": "machine learning", "expected_top1": "scikit-learn", "kind": "site" },
+    { "query": "deployment platform", "expected_top1": "render", "kind": "site" },
+    { "query": "opencode", "expected_top1": "opencode-cli", "kind": "site" },
+    {
+      "query": "download video",
+      "expected_top1": "video-downloader-professional",
+      "kind": "extension"
+    }
+  ]
+}

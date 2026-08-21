@@ -71,6 +71,10 @@
   ],
   "rewrites": [
     {
+      "source": "/mcp",
+      "destination": "/api/mcp"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -1,5 +1,72 @@
 [
   {
+    "slug": "holy-grail-mcp",
+    "name": "Holy Grail MCP",
+    "description": "Official MCP server for the Holy Grail catalog. Search sites, Chrome extensions, MCP servers, and AI skills; fetch full entries by slug; list by category; read entry resources.",
+    "category": "Development",
+    "parentCategory": "development",
+    "icon": "holy-grail",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "mcp",
+      "catalog",
+      "search",
+      "holy-grail",
+      "agents",
+      "tools",
+      "resources"
+    ],
+    "website": "https://github.com/Drakaniia/holy-grail",
+    "docs": "https://github.com/Drakaniia/holy-grail/tree/grail/mcp",
+    "sourceCode": "https://github.com/Drakaniia/holy-grail",
+    "installCommand": "bunx @holy-grail/mcp",
+    "transport": "stdio",
+    "tools": [
+      {
+        "name": "search",
+        "description": "Cross-entity search of sites, extensions, MCP servers, and skills"
+      },
+      {
+        "name": "get_site",
+        "description": "Fetch a full site record by slug, including preview URLs"
+      },
+      {
+        "name": "get_extension",
+        "description": "Fetch a full Chrome extension record by slug"
+      },
+      {
+        "name": "get_mcp_server",
+        "description": "Fetch a full MCP server record by slug, including its tools"
+      },
+      {
+        "name": "get_skill",
+        "description": "Fetch a full skill record by slug, including the install command"
+      },
+      {
+        "name": "list_sites",
+        "description": "Paged site list with optional category filters, sorted by stars"
+      },
+      {
+        "name": "list_extensions",
+        "description": "Paged Chrome extension list with optional category filters"
+      },
+      {
+        "name": "list_mcp_servers",
+        "description": "Paged MCP server list with category and transport filters"
+      },
+      {
+        "name": "list_skills",
+        "description": "Paged skill list with optional category filters"
+      },
+      {
+        "name": "get_stats",
+        "description": "Catalog counts per entity kind and per parent category"
+      }
+    ],
+    "connections": []
+  },
+  {
     "slug": "playwright-mcp",
     "name": "Playwright MCP",
     "description": "Browser automation via Playwright. Navigate pages, click elements, take screenshots, and scrape content.",
