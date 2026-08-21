@@ -49,8 +49,8 @@ Chrome extensions, MCP servers, and skills; fetch full entries by slug; list by
 category; read entry resources. Same search quality as the site.
 
 ```bash
-bunx @holy-grail/mcp                 # stdio (Claude Code, opencode, Cursor, Windsurf)
-TRANSPORT=http bunx @holy-grail/mcp  # streamable HTTP on http://127.0.0.1:3000/mcp
+bunx holy-grail-mcp                 # stdio (Claude Code, opencode, Cursor, Windsurf)
+TRANSPORT=http bunx holy-grail-mcp  # streamable HTTP on http://127.0.0.1:3000/mcp
 ```
 
 Remote endpoint (streamable HTTP, stateless): `https://holygrail.dev/mcp` — deployed

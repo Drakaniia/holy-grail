@@ -20,7 +20,7 @@
     "website": "https://github.com/Drakaniia/holy-grail",
     "docs": "https://github.com/Drakaniia/holy-grail/tree/grail/mcp",
     "sourceCode": "https://github.com/Drakaniia/holy-grail",
-    "installCommand": "bunx @holy-grail/mcp",
+    "installCommand": "bunx holy-grail-mcp",
     "transport": "stdio",
     "tools": [
       {

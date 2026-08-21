@@ -12,11 +12,11 @@ is ever mutated.
 
 ```bash
 # stdio (default — Claude Code, opencode, MCP Inspector, Cursor, Windsurf)
-bunx @holy-grail/mcp
+bunx holy-grail-mcp
 
 # streamable HTTP on http://127.0.0.1:3000/mcp
-TRANSPORT=http bunx @holy-grail/mcp
-PORT=3000 HOST=127.0.0.1 TRANSPORT=http bunx @holy-grail/mcp
+TRANSPORT=http bunx holy-grail-mcp
+PORT=3000 HOST=127.0.0.1 TRANSPORT=http bunx holy-grail-mcp
 ```
 
 From this repo (dev mode):
@@ -38,7 +38,7 @@ Claude Code (`~/.claude.json` or project `.mcp.json`):
   "mcpServers": {
     "holy-grail": {
       "command": "bunx",
-      "args": ["@holy-grail/mcp"]
+      "args": ["holy-grail-mcp"]
     }
   }
 }
@@ -51,7 +51,7 @@ opencode (`opencode.json`):
   "mcp": {
     "holy-grail": {
       "type": "local",
-      "command": ["bunx", "@holy-grail/mcp"]
+      "command": ["bunx", "holy-grail-mcp"]
     }
   }
 }
@@ -148,8 +148,9 @@ Repo scripts: `bun run build:mcp`, `bun run test:mcp-search`,
 
 ```bash
 bun run build:mcp          # build + snapshot data
-cd mcp && npm publish      # publishes @holy-grail/mcp (bin: holy-grail-mcp)
+cd mcp && npm publish      # publishes holy-grail-mcp (bin: holy-grail-mcp)
 ```
 
-The `prepublishOnly` hook re-runs build + snapshot. Requires the `@holy-grail`
-npm scope (fallback: publish unscoped `holy-grail-mcp`).
+The `prepublishOnly` hook re-runs build + snapshot. Published unscoped (the
+`@holy-grail` npm scope is unclaimed); switch to a scoped name once the org
+exists.

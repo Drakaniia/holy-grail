@@ -1,5 +1,5 @@
 {
-  "name": "@holy-grail/mcp",
+  "name": "holy-grail-mcp",
   "version": "1.0.0",
   "description": "MCP server exposing the Holy Grail catalog — sites, Chrome extensions, MCP servers, and AI skills — as read-only tools and resources",
   "type": "module",

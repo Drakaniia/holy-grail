@@ -13,7 +13,7 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 ```
 ├── src/              # Vue 3 SPA (components, pages, stores, composables, content)
 ├── cli/              # Rust+TS CLI tool ("grail") — separate publishable package
-├── mcp/              # MCP server (@holy-grail/mcp) — read-only catalog tools + resources
+├── mcp/              # MCP server (holy-grail-mcp) — read-only catalog tools + resources
 ├── scripts/          # Build generators, preview pipeline (Bun + Python)
 ├── supabase/         # Edge Functions + DB migrations
 ├── public/           # Static assets + runtime JSON; previews mount here as a submodule
