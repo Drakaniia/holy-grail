@@ -63,3 +63,6 @@ public/previews/
 .freebuff/
 .omo/
 public/skills-index.json
+
+# npm pack artifacts
+*.tgz
