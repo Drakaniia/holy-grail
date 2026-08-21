@@ -1,0 +1,48 @@
+# Deploys the Holy Grail MCP endpoint via the Vercel CLI and verifies it.
+#
+# Why: the Vercel GitHub integration's production builds were not including the
+# `api/` function (POST /api/mcp → 404, /mcp fell through to the SPA). The CLI
+# `vercel build`/`deploy --prebuilt` path deterministically ships the function:
+# the local build output contains .vercel/output/functions/api/mcp.func and the
+# ordered rewrite ^/mcp$ -> /api/mcp.
+#
+# Requires repo secrets: VERCEL_TOKEN (and VERCEL_ORG_ID / VERCEL_PROJECT_ID).
+# The job is skipped entirely when the token is not configured.
+
+name: Deploy MCP
+
+on:
+  push:
+    branches: [grail]
+  workflow_dispatch:
+
+jobs:
+  deploy-and-verify:
+    if: ${{ secrets.VERCEL_TOKEN != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: recursive
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun run build
+      - name: Pull Vercel project settings + env
+        run: npx --yes vercel@latest pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      - name: Build output (includes api function + mcp snapshot)
+        run: npx --yes vercel@latest build --yes --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      - name: Deploy to production
+        run: npx --yes vercel@latest deploy --prebuilt --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      - name: Verify the deployed MCP endpoint
+        run: bun mcp/scripts/verify-remote.mjs https://holygrail.dev/mcp
