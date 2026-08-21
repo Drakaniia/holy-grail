@@ -4,7 +4,7 @@
 <p align="center">
   <a href="holy-grail-eta.vercel.app/sites"><strong>Visit the site »</strong></a>
   <br />
-  <a href="#getting-started"><strong>Getting Started</strong></a> ·
+  <a href="#holy-grail-mcp"><strong>Holy Grail MCP</strong></a> ·
   <a href="#adding-content"><strong>Adding Content</strong></a> ·
   <a href="docs/GRAIL-CLI.md"><strong>grail-cli</strong></a> ·
   <a href="docs/DESIGN.md"><strong>Design System</strong></a> ·
@@ -32,24 +32,6 @@ Built with Vue 3, Vite 8, TypeScript, Tailwind CSS 4, Pinia, and Supabase.
 
 <br />
 
-## Getting Started
-
-```bash
-bun install
-bun run setup             # fetch the previews submodule + install the pre-commit hook
-cp docs/.env.example .env.local  # add your Supabase keys
-bun dev
-```
-
-Site preview images live in the public `holy-grail-assets` submodule (mounted at
-`public/previews`). `bun run setup` initializes it and enables the pre-commit hook
-that keeps it in sync. A plain `git clone` without `--recurse-submodules` still works
-— previews fall back to a placeholder until `bun run setup` is run.
-
-The app runs without Supabase — auth and submissions are gracefully disabled.
-
-<br />
-
 ## grail-cli (Skill Manager)
 
 Manage AI coding skills from **any computer** with one command:
@@ -58,7 +40,23 @@ Manage AI coding skills from **any computer** with one command:
 npx grail add Drakaniia/skills --skill audit-codebase
 ```
 
-Discover, install, and manage AI skills for any coding assistant. Works on Windows, macOS, and Linux. [Full documentation →](docs/GRAIL-CLI.md)
+<br />
+
+## Holy Grail MCP
+
+Expose the catalog to AI agents as read-only tools and resources — search sites,
+Chrome extensions, MCP servers, and skills; fetch full entries by slug; list by
+category; read entry resources. Same search quality as the site.
+
+```bash
+bunx @holy-grail/mcp                 # stdio (Claude Code, opencode, Cursor, Windsurf)
+TRANSPORT=http bunx @holy-grail/mcp  # streamable HTTP on http://127.0.0.1:3000/mcp
+```
+
+Remote endpoint (streamable HTTP, stateless): `https://holygrail.dev/mcp` — deployed
+with the site. No auth, public read-only.
+
+Full docs: [`mcp/README.md`](mcp/README.md)
 
 <br />
 
