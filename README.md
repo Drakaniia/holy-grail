@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="src/assets/readme.png" alt="Holy Grail" width="100%" />
+  <img src="packages/web/src/assets/readme.png" alt="Holy Grail" width="100%" />
 </p>
 <p align="center">
   <a href="holy-grail-eta.vercel.app/sites"><strong>Visit the site »</strong></a>
   <br />
   <a href="#holy-grail-mcp"><strong>Holy Grail MCP</strong></a> ·
-  <a href="docs/MCP-INTEGRATION.md"><strong>Integrations</strong></a> ·
+  <a href="packages/docs/MCP-INTEGRATION.md"><strong>Integrations</strong></a> ·
   <a href="#adding-content"><strong>Adding Content</strong></a> ·
-  <a href="docs/GRAIL-CLI.md"><strong>grail-cli</strong></a> ·
-  <a href="docs/DESIGN.md"><strong>Design System</strong></a> ·
-  <a href="CHANGELOG.md"><strong>Changelog</strong></a>
+  <a href="packages/docs/GRAIL-CLI.md"><strong>grail-cli</strong></a> ·
+  <a href="packages/docs/DESIGN.md"><strong>Design System</strong></a> ·
+  <a href="packages/web/CHANGELOG.md"><strong>Changelog</strong></a>
 </p>
 
 <p align="center">
@@ -57,25 +57,25 @@ TRANSPORT=http bunx holy-grail-mcp  # streamable HTTP on http://127.0.0.1:3000/m
 Remote endpoint (streamable HTTP, stateless): `https://holy-grail-eta.vercel.app/mcp` — deployed
 with the site. No auth, public read-only.
 
-Full docs: [`mcp/README.md`](mcp/README.md) · Client setup for Claude Code, Cursor,
-Windsurf, opencode, and Claude Desktop: [`docs/MCP-INTEGRATION.md`](docs/MCP-INTEGRATION.md)
+Full docs: [`packages/mcp/README.md`](packages/mcp/README.md) · Client setup for Claude Code, Cursor,
+Windsurf, opencode, and Claude Desktop: [`packages/docs/MCP-INTEGRATION.md`](packages/docs/MCP-INTEGRATION.md)
 
 <br />
 
 ## Adding Content
 
-Sites and extensions are defined as `meta.yaml` files under `src/content/`. Skills are managed via the grail CLI.
+Sites and extensions are defined as `meta.yaml` files under `packages/web/src/content/`. Skills are managed via the grail CLI.
 
 ```bash
 bun run generate:skills     # regenerate skills index (auto-detects CLI or YAML source)
 bun run generate:previews   # after adding a site (captures screenshot, writes into the previews submodule)
 
 Previews are committed automatically by the pre-commit hook (`bun run sync:previews`
-commits + pushes `public/previews` to the `holy-grail-assets` submodule repo and stages
+commits + pushes `packages/web/public/previews` to the `holy-grail-assets` submodule repo and stages
 the gitlink).
 ```
 
-Full guides: [`docs/ADDING-SITES.md`](docs/ADDING-SITES.md) · [`docs/GRAIL-CLI.md`](docs/GRAIL-CLI.md) · [`docs/ADDING-EXTENSIONS.md`](docs/ADDING-EXTENSIONS.md)
+Full guides: [`packages/docs/ADDING-SITES.md`](packages/docs/ADDING-SITES.md) · [`packages/docs/GRAIL-CLI.md`](packages/docs/GRAIL-CLI.md) · [`packages/docs/ADDING-EXTENSIONS.md`](packages/docs/ADDING-EXTENSIONS.md)
 
 <br />
 
