@@ -5,6 +5,7 @@
   <a href="holy-grail-eta.vercel.app/sites"><strong>Visit the site »</strong></a>
   <br />
   <a href="#holy-grail-mcp"><strong>Holy Grail MCP</strong></a> ·
+  <a href="docs/MCP-INTEGRATION.md"><strong>Integrations</strong></a> ·
   <a href="#adding-content"><strong>Adding Content</strong></a> ·
   <a href="docs/GRAIL-CLI.md"><strong>grail-cli</strong></a> ·
   <a href="docs/DESIGN.md"><strong>Design System</strong></a> ·
@@ -56,7 +57,8 @@ TRANSPORT=http bunx holy-grail-mcp  # streamable HTTP on http://127.0.0.1:3000/m
 Remote endpoint (streamable HTTP, stateless): `https://holy-grail-eta.vercel.app/mcp` — deployed
 with the site. No auth, public read-only.
 
-Full docs: [`mcp/README.md`](mcp/README.md)
+Full docs: [`mcp/README.md`](mcp/README.md) · Client setup for Claude Code, Cursor,
+Windsurf, opencode, and Claude Desktop: [`docs/MCP-INTEGRATION.md`](docs/MCP-INTEGRATION.md)
 
 <br />
 

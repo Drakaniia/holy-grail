@@ -75,6 +75,9 @@ with the official TS SDK client and MCP Inspector. Claude web Custom Connectors
 may expect OAuth — the endpoint is intentionally unauthenticated, so verify
 manually before relying on it.
 
+Per-client setup (Claude Code, Cursor, Windsurf, opencode, Claude Desktop, MCP
+Inspector): [docs/MCP-INTEGRATION.md](https://github.com/Drakaniia/holy-grail/blob/grail/docs/MCP-INTEGRATION.md).
+
 ## Tools
 
 | Tool | Description |
