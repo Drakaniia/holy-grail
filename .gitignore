@@ -58,9 +58,6 @@ packages/cli/target*
 packages/cli/dist
 packages/cli/bin/
 
-# Preview images live in the holy-grail-assets submodule
-packages/web/public/previews/
-
 # Local tool state
 .freebuff/
 .omo/
