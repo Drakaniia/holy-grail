@@ -1,6 +1,6 @@
 # Holy Grail MCP
 
-MCP server exposing the [Holy Grail](https://holygrail.dev) catalog — sites,
+MCP server exposing the [Holy Grail](https://holy-grail-eta.vercel.app) catalog — sites,
 Chrome extensions, MCP servers, and AI skills — to AI agents as read-only tools
 and resources. Same search quality as the SPA (the scoring engine is a verbatim
 port of `useSmartSearch`).
@@ -64,7 +64,7 @@ Remote (streamable HTTP, no sessions — each POST is independent):
   "mcp": {
     "holy-grail": {
       "type": "remote",
-      "url": "https://holygrail.dev/mcp"
+      "url": "https://holy-grail-eta.vercel.app/mcp"
     }
   }
 }
@@ -127,7 +127,7 @@ Preview URLs are absolute when `HOLY_GRAIL_BASE_URL` is set, else relative paths
 - `Mcp-Method` / `Mcp-Name` are validated when present (forward-compat with the
   2026-07-28 spec revision; the official SDK client does not emit them).
 - Origin allowlist (DNS-rebinding protection): absent Origin → allow; unknown
-  Origin → `403`. Defaults to `https://holygrail.dev` + localhost; override with
+  Origin → `403`. Defaults to `https://holy-grail-eta.vercel.app` + localhost; override with
   `HOLY_GRAIL_ALLOWED_ORIGINS` (comma-separated, `*` to allow all).
 - Unknown RPC methods → `404` JSON-RPC `-32601`; non-POST → `405`.
 

@@ -53,7 +53,7 @@ bunx holy-grail-mcp                 # stdio (Claude Code, opencode, Cursor, Wind
 TRANSPORT=http bunx holy-grail-mcp  # streamable HTTP on http://127.0.0.1:3000/mcp
 ```
 
-Remote endpoint (streamable HTTP, stateless): `https://holygrail.dev/mcp` — deployed
+Remote endpoint (streamable HTTP, stateless): `https://holy-grail-eta.vercel.app/mcp` — deployed
 with the site. No auth, public read-only.
 
 Full docs: [`mcp/README.md`](mcp/README.md)

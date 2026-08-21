@@ -45,4 +45,4 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       - name: Verify the deployed MCP endpoint
-        run: bun mcp/scripts/verify-remote.mjs https://holygrail.dev/mcp
+        run: bun mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp

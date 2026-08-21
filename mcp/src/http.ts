@@ -14,7 +14,8 @@ import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/
 import { SUPPORTED_PROTOCOL_VERSIONS } from '@modelcontextprotocol/sdk/types.js'
 import { createServer } from './server.js'
 
-const DEFAULT_ALLOWED_ORIGINS = 'https://holygrail.dev,https://www.holygrail.dev'
+const DEFAULT_ALLOWED_ORIGINS =
+  'https://holy-grail-eta.vercel.app,https://holy-grail-drakaniias-projects.vercel.app'
 const ALLOWED_ORIGINS = (process.env.HOLY_GRAIL_ALLOWED_ORIGINS ?? DEFAULT_ALLOWED_ORIGINS)
   .split(',')
   .map((s) => s.trim())
