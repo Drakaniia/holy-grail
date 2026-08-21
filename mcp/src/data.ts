@@ -41,6 +41,7 @@ function readIndex<T>(kind: keyof typeof INDEX_FILES): T[] {
   } catch (error) {
     throw new Error(
       `Failed to load ${kind} index from ${file}: ${error instanceof Error ? error.message : String(error)}`,
+      { cause: error },
     )
   }
   if (!Array.isArray(parsed)) {
@@ -105,6 +106,7 @@ export function loadPreviews(): Record<string, Preview> {
     } catch (error) {
       throw new Error(
         `Failed to load previews index from ${file}: ${error instanceof Error ? error.message : String(error)}`,
+        { cause: error },
       )
     }
     if (parsed === null || typeof parsed !== 'object' || Array.isArray(parsed)) {

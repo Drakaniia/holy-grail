@@ -13,6 +13,7 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 ```
 ├── src/              # Vue 3 SPA (components, pages, stores, composables, content)
 ├── cli/              # Rust+TS CLI tool ("grail") — separate publishable package
+├── mcp/              # MCP server (@holy-grail/mcp) — read-only catalog tools + resources
 ├── scripts/          # Build generators, preview pipeline (Bun + Python)
 ├── supabase/         # Edge Functions + DB migrations
 ├── public/           # Static assets + runtime JSON; previews mount here as a submodule
@@ -40,6 +41,7 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 | Modify CI | `.github/workflows/` | 4 workflows |
 | Modify deploy config | `vercel.json` | Vercel SPA |
 | Edit CLI behavior | `cli/src/main.rs` | Rust source |
+| Edit MCP server | `mcp/src/` | `bun run build:mcp` (tsc → dist + data snapshot) |
 | Add site preview | `bun run generate:previews --slug <slug>` | Puppeteer → WebP into `public/previews/` (submodule worktree) |
 | Fresh clone setup | `bun run setup` | Init previews submodule + install pre-commit hook |
 
@@ -56,6 +58,8 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 | `Site` | type | `src/stores/sites.ts` | Core domain model (24 callers) |
 | `useSmartSearch` | composable | `src/composables/useSmartSearch.ts` | Cross-entity search |
 | `generateSitePreviews` | script | `scripts/previews/` | Puppeteer screenshot pipeline |
+| `createServer` | MCP | `mcp/src/server.ts` | Registers all 10 tools + resources |
+| `searchCatalog` | MCP | `mcp/src/search.ts` | Ported SPA scoring (mirrors `useSmartSearch`) |
 | `grail` | CLI | `cli/src/main.rs` | Rust skill-management binary |
 
 ## CONVENTIONS
@@ -75,6 +79,7 @@ Curated directory of developer tools, AI platforms, browser extensions, and lear
 
 - **Do not introduce a test framework** without asking. (Existing Vitest tests are orphaned.)
 - **Do not use npm/yarn/pnpm.** Bun only.
+- **Do not hand-edit `mcp/data/`** — generated snapshot; regenerate via `bun run build:mcp`.
 - **Do not edit `*-index.json` by hand.** Run the generator.
 - **Do not skip preview generation** after adding a site — blank in UI otherwise.
 - **Do not hand-edit files under `public/previews/`** — submodule content; regenerate via the preview generator.
@@ -93,7 +98,11 @@ bun run format                            # prettier --write
 bun run setup                             # git submodule update --init + git config core.hooksPath .githooks
 bun run sync:previews                     # commit + push previews submodule, stage gitlink (runs in pre-commit hook)
 bun run generate:previews --slug <slug>   # single site preview (writes into submodule worktree)
-bun run build:cli                         # tsc + cargo build --release
+bun run build:cli        # tsc + cargo build --release
+bun run build:mcp        # bun install --cwd mcp + tsc + snapshot indexes into mcp/data
+bun run test:mcp-search  # pinned search corpus (ported scorer fidelity)
+bun run test:mcp-mirror  # SPA useSmartSearch vs ported scorer parity
+bun run test:mcp-evals   # 10-question read-only eval suite (stdio)
 
 # Commit order: `git commit` first (hook pushes the submodule), then `git push` (parent only).
 # Never edit *-index.json by hand and never commit preview .webp files directly into the parent.
