@@ -49,7 +49,7 @@ Monorepo: **Bun workspaces** (`packages/*`) with a single lockfile, orchestrated
 | Modify CI | `.github/workflows/` | 4 workflows |
 | Modify deploy config | `packages/web/vercel.json` | Vercel SPA (deploys run from `packages/web`) |
 | Edit CLI behavior | `packages/cli/src/main.rs` | Rust source |
-| Edit MCP server | `packages/mcp/src/` | `bun run build:mcp` (tsc → dist + data snapshot) |
+| Edit MCP server | `packages/mcp/src/` | `bun run build:mcp` (tsc → dist + data snapshot + Vercel function bundle) |
 | Add site preview | `bun run generate:previews --slug <slug>` | Puppeteer → WebP into `packages/web/public/previews/` (submodule worktree) |
 | Fresh clone setup | `bun run setup` | Init previews submodule + install pre-commit hook |
 
@@ -110,7 +110,7 @@ bun run setup                             # git submodule update --init + git co
 bun run sync:previews                     # commit + push previews submodule, stage gitlink (runs in pre-commit hook)
 bun run generate:previews --slug <slug>   # single site preview (writes into submodule worktree)
 bun run build:cli                         # packages/cli: tsc + cargo build --release
-bun run build:mcp                         # packages/mcp: tsc + snapshot indexes into mcp/data
+bun run build:mcp                         # packages/mcp: tsc + snapshot indexes + Vercel function bundle
 turbo run build --filter=holy-grail-mcp   # build only the mcp package
 bun run test:mcp-search  # pinned search corpus (ported scorer fidelity)
 bun run test:mcp-mirror  # SPA useSmartSearch vs ported scorer parity

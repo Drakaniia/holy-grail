@@ -1,23 +1,18 @@
 // Vercel Function (Node runtime) exposing the Holy Grail MCP endpoint at
 // /api/mcp (aliased to /mcp via vercel.json).
 //
-// Plain ESM on purpose: Vercel's function builder transpiles api/*.ts with a
-// bare tsc that neither compiles the ../../mcp/src dependency graph nor rewrites
-// .js specifiers to .ts, and Node ESM rejects un-attributed JSON imports
-// (ERR_IMPORT_ATTRIBUTE_MISSING). A .mjs entry runs as-is:
-//   - JSON snapshot imports carry `with { type: 'json' }` attributes and are
-//     statically traced into the lambda (no filesystem reads at runtime);
-//   - server code is imported from ../../mcp/dist (compiled by build:mcp), which
-//     is real JS and resolves normally.
-import extensions from '../../mcp/data/extensions-index.json' with { type: 'json' }
-import mcpServers from '../../mcp/data/mcp-index.json' with { type: 'json' }
-import previews from '../../mcp/data/site-previews.json' with { type: 'json' }
-import sites from '../../mcp/data/sites-index.json' with { type: 'json' }
-import skills from '../../mcp/data/skills-registry.json' with { type: 'json' }
-import { setIndexSnapshot } from '../../mcp/dist/data.js'
-import { handleNodeRequest } from '../../mcp/dist/http.js'
-
-setIndexSnapshot({ sites, extensions, mcp: mcpServers, skills, previews })
+// Delegates to the self-contained bundle built by `bun run build:mcp`
+// (packages/mcp/dist/http-bundle.mjs): esbuild inlines the MCP SDK, the
+// compiled server, and the catalog snapshot JSON into one module, so the
+// function trace contains no node_modules paths.
+//
+// A plain import of ../../mcp/dist/*.js used to make the trace record bun's
+// per-package SDK symlink (packages/mcp/node_modules/@modelcontextprotocol/sdk)
+// in the lambda's filePathMap. `vercel deploy --prebuilt` validates every
+// filePathMap entry against the repo root at deploy time, and that symlink
+// only exists in some bun install layouts — breaking deploys with
+// "File does not exist: ...". Bundling removes that dependency entirely.
+import { handleNodeRequest } from '../../mcp/dist/http-bundle.mjs'
 
 export default async function handler(req, res) {
   await handleNodeRequest(req, res)
