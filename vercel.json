@@ -4,6 +4,9 @@
   "outputDirectory": "dist",
   "installCommand": "bun install",
   "framework": "vite",
+  "git": {
+    "deploymentEnabled": false
+  },
   "headers": [
     {
       "source": "/(.*)",
