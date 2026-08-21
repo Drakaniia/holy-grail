@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Read-only evaluation set for the Holy Grail MCP server.
+  Each question is answerable using only the server's tools; answers are
+  single verifiable values that are stable against the pinned catalog
+  (2026-08-21). Any drift fails evals/run-evals.ts.
+-->
+<evaluation>
+  <qa_pair>
+    <id>1-browser-testing-mcp</id>
+    <question>Which MCP server in the catalog automates browser testing?</question>
+    <answer>playwright-mcp</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>2-supabase-sql</id>
+    <question>Which MCP server exposes a tool named "query" for running SQL against Supabase projects?</question>
+    <answer>supabase-mcp</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>3-bsd-backend-site</id>
+    <question>Name the site in the Backend category that is licensed under BSD-3-Clause.</question>
+    <answer>appwrite</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>4-markdown-extension</id>
+    <question>Which Chrome extension converts webpages into clean, LLM-ready Markdown?</question>
+    <answer>md-this-page</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>5-drakaniia-skill-count</id>
+    <question>How many skills in the catalog are authored by Drakaniia? Answer with a number only.</question>
+    <answer>4</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>6-ai-site-count</id>
+    <question>How many sites are in the "ai" parent category? Answer with a number only.</question>
+    <answer>99</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>7-skill-install-command</id>
+    <question>What is the exact install command for the audit-codebase skill?</question>
+    <answer>npx grail add Drakaniia/skills --skill audit-codebase</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>8-top-deployment-site</id>
+    <question>Which site in the Deployment category has the most stars?</question>
+    <answer>digitalplat-freedomain</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>9-efficient-blocker</id>
+    <question>Which extension's description begins with "Finally, an efficient blocker"?</question>
+    <answer>ublock-origin</answer>
+  </qa_pair>
+  <qa_pair>
+    <id>10-most-extensions-parent</id>
+    <question>Which parent category contains the most Chrome extensions?</question>
+    <answer>productivity</answer>
+  </qa_pair>
+</evaluation>
