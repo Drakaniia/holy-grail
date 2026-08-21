@@ -31,7 +31,7 @@
     "build:release": "tsc -p tsconfig.json && cargo build --release",
     "type-check": "tsc -p tsconfig.json --noEmit",
     "prepublish": "npm run build",
-    "postinstall": "node dist/install.js"
+    "postinstall": "node -e \"import('./dist/install.js').catch(() => {})\""
   },
   "devDependencies": {
     "@types/node": "^22",
