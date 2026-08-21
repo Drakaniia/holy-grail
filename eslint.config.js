@@ -33,7 +33,15 @@ export default defineConfig([
 
   {
     name: 'app/node-globals',
-    files: ['*.config.js', '**/*.cjs', 'scripts/**/*.js'],
+    files: [
+      '*.config.js',
+      '**/*.cjs',
+      'scripts/**/*.js',
+      'scripts/**/*.mjs',
+      'mcp/scripts/**/*.{js,mjs}',
+      'mcp/evals/**/*.{js,mjs}',
+      'api/**/*.{js,mjs}',
+    ],
     languageOptions: {
       globals: {
         ...globals.node,
