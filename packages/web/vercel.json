@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "bun run build",
+  "buildCommand": "bun run generate && vue-tsc && vite build",
   "outputDirectory": "dist",
-  "installCommand": "bun install",
+  "installCommand": "cd ../.. && bun install",
   "framework": "vite",
   "git": {
     "deploymentEnabled": false
