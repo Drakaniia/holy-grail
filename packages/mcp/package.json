@@ -1,0 +1,46 @@
+{
+  "name": "holy-grail-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing the Holy Grail catalog — sites, Chrome extensions, MCP servers, and AI skills — as read-only tools and resources",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "holy-grail-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "data/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drakaniia/holy-grail.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "catalog",
+    "ai",
+    "agents",
+    "holy-grail"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && bun run snapshot",
+    "type-check": "tsc -p tsconfig.json --noEmit",
+    "snapshot": "node scripts/copy-data.mjs",
+    "prepublishOnly": "bun run build",
+    "test:search": "bun test evals/search-corpus.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5"
+  }
+}
