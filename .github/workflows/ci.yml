@@ -20,4 +20,10 @@ jobs:
       - run: bun run type-check
       - run: bun lint
       - run: bun run build
+      - name: MCP search corpus test
+        run: bun run test:mcp-search
+      - name: MCP search mirror test (SPA parity)
+        run: bun run test:mcp-mirror
+      - name: MCP eval suite
+        run: bun run test:mcp-evals
       - run: bun run format:check

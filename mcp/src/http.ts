@@ -110,10 +110,9 @@ export async function handleWebRequest(request: Request): Promise<Response> {
 
   // Parse the body once and hand it to the transport as parsedBody, so both
   // middleware (initialize version negotiation) and transport see the same JSON.
-  let bodyText = ''
   let parsedBody: unknown
   try {
-    bodyText = await request.text()
+    const bodyText = await request.text()
     parsedBody = bodyText ? JSON.parse(bodyText) : undefined
   } catch {
     return jsonError(400, 'Parse error: invalid JSON-RPC message', request)
