@@ -43,7 +43,9 @@ try {
 
 const rawText = await raw.text()
 if (raw.status === 401 && rawText.includes('Protected deployment')) {
-  console.log(`SKIP ${url}: deployment is protected (Vercel Authentication) — not publicly probeable`)
+  console.log(
+    `SKIP ${url}: deployment is protected (Vercel Authentication) — not publicly probeable`,
+  )
   process.exit(0)
 }
 if (raw.status !== 200) {
@@ -85,4 +87,6 @@ const resources = await client.listResources()
 if (!resources.resources?.length) fail('resources/list returned nothing')
 
 await client.close()
-console.log(`OK ${url}: 10 tools, search top-1 playwright-mcp, stats ${JSON.stringify(counts)}, ${resources.resources.length} resources`)
+console.log(
+  `OK ${url}: 10 tools, search top-1 playwright-mcp, stats ${JSON.stringify(counts)}, ${resources.resources.length} resources`,
+)
