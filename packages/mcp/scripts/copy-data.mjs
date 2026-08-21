@@ -6,7 +6,7 @@ import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const repoRoot = resolve(__dirname, '../..')
+const repoRoot = resolve(__dirname, '../../web')
 const outDir = resolve(__dirname, '../data')
 
 const sources = [

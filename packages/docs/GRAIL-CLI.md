@@ -20,13 +20,13 @@ No installation required — `npx` downloads and runs the latest version. On fir
 
 ```bash
 bun run build:cli                              # Build the binary
-cli/target/release/grail add <repo> --skill <name>   # Run directly
+packages/cli/target/release/grail add <repo> --skill <name>   # Run directly
 ```
 
 Or via the local wrapper:
 
 ```bash
-grail add <repo> --skill <name>               # After npm link from cli/
+grail add <repo> --skill <name>               # After npm link from packages/cli/
 ```
 
 ## Commands
@@ -51,7 +51,7 @@ npx grail add https://github.com/midudev/autoskills --skill vue
 - If omitted and the repo has one skill, installs it automatically
 - If omitted and the repo has multiple skills, shows an interactive picker
 - Installs to `~/.grail/skills/<name>/`
-- Regenerates the skills index automatically and writes to Holy Grail `public/content/` when inside the project
+- Regenerates the skills index automatically and writes to Holy Grail `packages/web/public/content/` when inside the project
 
 ### `grail remove <skill-name>`
 
@@ -114,7 +114,7 @@ npx grail index
 
 Scans `~/.grail/skills/` for installed skills, reads `SKILL.md` frontmatter, and writes:
 - `~/.grail/skills-index.json` (global index)
-- `public/content/skills-index.json` (project index, when run inside a Holy Grail project)
+- `packages/web/public/content/skills-index.json` (project index, when run inside a Holy Grail project)
 
 Run this after manually copying files into `~/.grail/skills/` or to repair a corrupted index.
 
@@ -176,9 +176,9 @@ Instructions for the AI...
 
 `grail-cli` is a **hybrid Rust + TypeScript** CLI:
 
-1. **TypeScript wrapper** (`cli/grail.ts`) — npm bin entry point, locates and spawns the Rust binary
-2. **Rust binary** (`cli/src/main.rs`) — actual CLI logic using `clap`, `reqwest`, `serde_yaml`
-3. **Postinstall script** (`cli/install.ts`) — on `npm install` or `npx grail`:
+1. **TypeScript wrapper** (`packages/cli/grail.ts`) — npm bin entry point, locates and spawns the Rust binary
+2. **Rust binary** (`packages/cli/src/main.rs`) — actual CLI logic using `clap`, `reqwest`, `serde_yaml`
+3. **Postinstall script** (`packages/cli/install.ts`) — on `npm install` or `npx grail`:
    - Downloads a prebuilt binary from GitHub Releases for your platform, OR
    - Falls back to `cargo build --release` (requires Rust)
 
@@ -230,21 +230,21 @@ When a foreign skill is detected during removal, grail warns before proceeding.
 # From the Holy Grail root
 bun run build:cli        # tsc + cargo build --release
 
-# From cli/ directory
-cd cli
+# From packages/cli/
+cd packages/cli
 tsc && cargo build --release
 ```
 
 ### Testing
 
 ```bash
-cd cli && cargo test
+cd packages/cli && cargo test
 ```
 
 ### npm Publishing
 
 ```bash
-cd cli
+cd packages/cli
 npm login                                # Authenticate with npm
 npm version patch                        # Bump version
 npm publish                              # Publish to npm registry

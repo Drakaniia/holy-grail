@@ -21,7 +21,7 @@ This is a dogfooding play: the project catalogs MCP servers, so it ships one.
 |---|---|
 | Meaning | MCP server exposing Holy Grail's catalog data |
 | Audience | Both — our own agents (Claude Code / opencode) and public developers |
-| Location | New package in this repo, sibling to `cli/` → `mcp/` |
+| Location | New package in this repo, sibling to `packages/cli/` → `packages/mcp/` |
 | Stack | TypeScript + official MCP SDK (`@modelcontextprotocol/sdk`), run under **Bun** (repo convention: Bun only, Node 24) |
 | Transport | **Both** — stdio (local) and streamable HTTP (remote) |
 | Capability surface | Tools + resources |
@@ -39,16 +39,16 @@ This is a dogfooding play: the project catalogs MCP servers, so it ships one.
 ## 3. Data Sources (read-only, generated JSON)
 
 All indexes are flat JSON generated from `meta.yaml` before every `dev`/`build`
-(`scripts/build/generate-{sites,extensions,mcp}-index.js`). The MCP server reads
+(`packages/web/scripts/build/generate-{sites,extensions,mcp}-index.js`). The MCP server reads
 these — never parses YAML at runtime.
 
 | Index | Location | Record shape (relevant fields) |
 |---|---|---|
-| Sites | `src/content/sites-index.json` | `slug, name, description, category, parentCategory, subcategory, stars, watchers, addedDaysAgo, license, lastCommit, lastRelease, version, contributors, commitsThisYear, releases, platforms, deployment, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription, coreFeatures, additionalFeatures, deployCompose, installCommand, similarTools` |
-| Extensions | `src/content/extensions-index.json` | `slug, name, description, category, parentCategory, subcategory, version, addedDaysAgo, license, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription` |
-| MCP servers | `src/content/mcp-index.json` | `slug, name, description, category, parentCategory, icon, verified, featured, tags, website, docs, sourceCode, installCommand, transport ('stdio'\|'http'\|'websocket'), tools[{name,description}], connections` |
-| Skills | `public/content/skills-registry.json` | `slug, title, description, category, parentCategory, tags, views, uses, author, authorName, repoLink, skillPath, branch, addedBy, featured, dateAdded, hasLocalContent` |
-| Previews | `src/content/site-previews.json` | `slug → { image, small, sourceUrl, capturedAt, width, height }` (paths like `/previews/needmcp.webp`) |
+| Sites | `packages/web/src/content/sites-index.json` | `slug, name, description, category, parentCategory, subcategory, stars, watchers, addedDaysAgo, license, lastCommit, lastRelease, version, contributors, commitsThisYear, releases, platforms, deployment, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription, coreFeatures, additionalFeatures, deployCompose, installCommand, similarTools` |
+| Extensions | `packages/web/src/content/extensions-index.json` | `slug, name, description, category, parentCategory, subcategory, version, addedDaysAgo, license, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription` |
+| MCP servers | `packages/web/src/content/mcp-index.json` | `slug, name, description, category, parentCategory, icon, verified, featured, tags, website, docs, sourceCode, installCommand, transport ('stdio'\|'http'\|'websocket'), tools[{name,description}], connections` |
+| Skills | `packages/web/public/content/skills-registry.json` | `slug, title, description, category, parentCategory, tags, views, uses, author, authorName, repoLink, skillPath, branch, addedBy, featured, dateAdded, hasLocalContent` |
+| Previews | `packages/web/src/content/site-previews.json` | `slug → { image, small, sourceUrl, capturedAt, width, height }` (paths like `/previews/needmcp.webp`) |
 
 **Loader resolution order** (`src/data.ts`):
 1. `HOLY_GRAIL_DATA_DIR` env var (explicit override).
@@ -58,10 +58,10 @@ these — never parses YAML at runtime.
 **Payload note:** `sites-index.json` is large and includes `deployCompose`
 (full docker-compose YAML strings). Apply `CHARACTER_LIMIT` truncation (see §5.4).
 
-## 4. Package Layout (`mcp/`)
+## 4. Package Layout (`packages/mcp/`)
 
 ```
-mcp/
+packages/mcp/
 ├── package.json          # name @holy-grail/mcp, type: module, bin { "holy-grail-mcp": "dist/index.js" }
 ├── tsconfig.json         # strict, module/moduleResolution Node16, outDir dist
 ├── README.md             # install, transport config, tool list, client examples
@@ -138,7 +138,7 @@ URI scheme: `holygrail://{kind}/{slug}` where kind ∈ `sites | extensions | mcp
 
 ## 6. Search Port (`useSmartSearch` → `search.ts`)
 
-Port only the **pure** functions from `src/composables/useSmartSearch.ts`:
+Port only the **pure** functions from `packages/web/src/composables/useSmartSearch.ts`:
 
 - `normalizeText`, `tokenize`, `compactText`
 - `scoreSearchItem`, `getExactTokenBoost`, `getTextSimilarity`, `getTextSimilarityCompact`
@@ -149,8 +149,8 @@ Port only the **pure** functions from `src/composables/useSmartSearch.ts`:
 `createNavigationItem`, favicon helpers, cache — replace the cache with a simple
 module-level `Map` keyed `query → slug → score`, cleared when data reloads).
 
-**Coupling decision:** `mcp/` is a standalone publishable package; do **not** import
-from `src/` (SPA code). Port the functions verbatim into `mcp/src/search.ts` and add
+**Coupling decision:** `packages/mcp/` is a standalone publishable package; do **not** import
+from `packages/web/src/` (SPA code). Port the functions verbatim into `mcp/src/search.ts` and add
 a mirrored-behavior test comparing a fixed corpus of queries against expected SPA
 results to catch drift. A shared `shared/` package is over-engineering for now —
 revisit only if the SPA search changes materially.
@@ -242,7 +242,7 @@ server code must be runtime-agnostic (the TS SDK is).
 
 ### 7.3 Vercel function shape (decision)
 
-- `api/mcp.ts` — Vercel Function (Node runtime) exporting the MCP endpoint at
+- `packages/web/api/mcp.mjs` — Vercel Function (Node runtime) exporting the MCP endpoint at
   `/api/mcp` via `StreamableHTTPServerTransport`.
 - Optional friendly path: add rewrite `{ "source": "/mcp", "destination": "/api/mcp" }`
   BEFORE the existing `/(.*)` catch-all in `vercel.json`. Functions resolve before
@@ -276,7 +276,7 @@ our own agents.
 
 ### 8.1 npm publish
 
-- Package `@holy-grail/mcp`, publishable like `cli/` (which already publishes a
+- Package `@holy-grail/mcp`, publishable like `packages/cli/` (which already publishes a
   package wrapping the Rust binary).
 - **Name availability (verified 2026-08-21):** `@holy-grail/mcp` and the fallback
   `holy-grail-mcp` are both unclaimed on npmjs (registry returns 404 for both).
@@ -291,7 +291,7 @@ our own agents.
 
 ### 8.2 Catalog entry (dogfood)
 
-New file `src/content/mcp/development/holy-grail-mcp/meta.yaml` following the
+New file `packages/web/src/content/mcp/development/holy-grail-mcp/meta.yaml` following the
 existing entry schema (see `playwright-mcp/meta.yaml`):
 
 - `slug: holy-grail-mcp`, `name: Holy Grail MCP`, `category: Development`,

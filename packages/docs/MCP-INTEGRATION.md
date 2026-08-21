@@ -168,7 +168,7 @@ bunx holy-grail-mcp                       # blocks on stdio — drive with a cli
 npx @modelcontextprotocol/inspector       # GUI verification, both transports
 
 # remote endpoint
-bun mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp
+bun packages/mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp
 ```
 
 ---

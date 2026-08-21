@@ -1,4 +1,4 @@
-# cli/ — "grail" CLI Tool
+# packages/cli — "grail" CLI Tool
 
 Hybrid Rust+TypeScript CLI for skill management. Rust binary does the work; TypeScript shim wraps it for npm distribution.
 
@@ -43,5 +43,5 @@ The package.json `postinstall` hook runs `node dist/install.js` which builds the
 - **Edit behavior**: `src/main.rs` — this is the actual CLI implementation.
 - **Edit install flow**: `install.ts` — postinstall hook.
 - **Edit bin entry**: `grail.ts` — only if binary location or spawn logic changes.
-- Run `cargo test` in `cli/` for Rust unit tests.
+- Run `cargo test` in `packages/cli/` for Rust unit tests.
 - Build with `--release` for production — debug builds are slow.

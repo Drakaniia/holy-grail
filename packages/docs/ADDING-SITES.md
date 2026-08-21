@@ -1,13 +1,13 @@
 # Adding Sites
 
-Sites are stored as `meta.yaml` files under `src/content/sites/`. The generated
-`src/content/sites-index.json` is imported directly by the Pinia sites store, so
+Sites are stored as `meta.yaml` files under `packages/web/src/content/sites/`. The generated
+`packages/web/src/content/sites-index.json` is imported directly by the Pinia sites store, so
 metadata must be complete before committing content changes.
 
 ## Directory Structure
 
 ```txt
-src/content/sites/
+packages/web/src/content/sites/
 +-- development/
 |   +-- cloud-hosting/
 |       +-- vercel/
@@ -27,7 +27,7 @@ src/content/sites/
 2. Add `meta.yaml` using the schema below.
 3. Include `coreFeatures`, `additionalFeatures`, and `similarTools` so the detail
    page is complete.
-4. Run `bun run scripts/build/generate-sites-index.js`.
+4. Run `bun run --cwd packages/web scripts/build/generate-sites-index.js`.
 5. Run `bun run type-check`, `bun lint`, and `bun run build` before finishing.
 
 ## Bookmark Import Flow
@@ -36,10 +36,10 @@ Imported bookmark entries start with lightweight metadata. After importing, run
 the enrichment scripts before regenerating the index:
 
 ```bash
-bun run scripts/enrichment/import-bookmarks.js
-bun run scripts/enrichment/enrich-site-metadata.js --apply
-bun run scripts/enrichment/fill-site-detail-sections.js --apply
-bun run scripts/build/generate-sites-index.js
+bun run --cwd packages/web scripts/enrichment/import-bookmarks.js
+bun run --cwd packages/web scripts/enrichment/enrich-site-metadata.js --apply
+bun run --cwd packages/web scripts/enrichment/fill-site-detail-sections.js --apply
+bun run --cwd packages/web scripts/build/generate-sites-index.js
 ```
 
 `enrich-site-metadata.js` looks for public GitHub repos from the site/docs pages
@@ -47,9 +47,9 @@ and fills repo-backed fields such as stars, contributors, commits this year,
 releases, latest release, and source code. It accepts:
 
 ```bash
-bun run scripts/enrichment/enrich-site-metadata.js             # dry run, imported sites only
-bun run scripts/enrichment/enrich-site-metadata.js --apply     # write changes
-bun run scripts/enrichment/enrich-site-metadata.js --all       # include older entries
+bun run --cwd packages/web scripts/enrichment/enrich-site-metadata.js             # dry run, imported sites only
+bun run --cwd packages/web scripts/enrichment/enrich-site-metadata.js --apply     # write changes
+bun run --cwd packages/web scripts/enrichment/enrich-site-metadata.js --all       # include older entries
 ```
 
 `fill-site-detail-sections.js` fills `coreFeatures`, `additionalFeatures`, and
@@ -148,19 +148,19 @@ bun run review:previews           # audit missing, broken, stale, or fallback pr
 The generator writes:
 
 ```txt
-public/previews/{slug}.webp
-public/previews/{slug}-sm.webp
-public/previews/manifest.json
-src/content/site-previews.json
+packages/web/public/previews/{slug}.webp
+packages/web/public/previews/{slug}-sm.webp
+packages/web/public/previews/manifest.json
+packages/web/src/content/site-previews.json
 ```
 
-The app imports `src/content/site-previews.json`, so run the generator before a
+The app imports `packages/web/src/content/site-previews.json`, so run the generator before a
 production build when previews have changed. The generated images live under
-`public/`, so Vercel serves them as static assets with no screenshot API call at
+`packages/web/public/`, so Vercel serves them as static assets with no screenshot API call at
 runtime.
 
 The image files live in the `holy-grail-assets` git submodule mounted at
-`public/previews` — they are not tracked in this repo's history. New clones must run
+`packages/web/public/previews` — they are not tracked in this repo's history. New clones must run
 `bun run setup` (or `git clone --recurse-submodules`) once to fetch them. When you
 commit, the pre-commit hook runs `bun run sync:previews`, which commits and pushes any
 changed previews to the submodule repo and stages the updated gitlink, so previews
@@ -251,7 +251,7 @@ Sites are sorted by:
 manually:
 
 ```bash
-bun run scripts/build/generate-sites-index.js
+bun run --cwd packages/web scripts/build/generate-sites-index.js
 ```
 
-Output: `src/content/sites-index.json`.
+Output: `packages/web/src/content/sites-index.json`.

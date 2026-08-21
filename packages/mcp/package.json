@@ -25,14 +25,14 @@
     "holy-grail"
   ],
   "license": "MIT",
-  "type": "module",
   "engines": {
     "node": ">=18"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && bun run snapshot",
+    "type-check": "tsc -p tsconfig.json --noEmit",
     "snapshot": "node scripts/copy-data.mjs",
-    "prepublishOnly": "bun run build && bun run snapshot",
+    "prepublishOnly": "bun run build",
     "test:search": "bun test evals/search-corpus.test.ts"
   },
   "dependencies": {

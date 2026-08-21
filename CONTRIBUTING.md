@@ -45,14 +45,14 @@ bun install
 bun run setup
 
 # Copy environment variables (optional — only needed for Supabase features)
-cp docs/.env.example .env.local
+cp packages/docs/.env.example packages/web/.env.local
 
 # Start the dev server
 bun dev
 ```
 
 `bun run setup` runs `git submodule update --init --recursive` (populates the
-`holy-grail-assets` submodule at `public/previews`) and sets `core.hooksPath` so the
+`holy-grail-assets` submodule at `packages/web/public/previews`) and sets `core.hooksPath` so the
 committed pre-commit hook keeps the submodule in sync with every commit. You can also
 clone once with `git clone --recurse-submodules` to skip the `setup` fetch step.
 
@@ -63,27 +63,34 @@ The dev server runs at `http://localhost:5173` by default.
 ## Project Structure
 
 ```txt
-src/
-├── assets/              # Static assets (images, fonts)
-├── components/          # Vue 3 components
-├── composables/         # Shared Vue composables
-├── content/             # Content definitions (sites, skills, extensions)
-│   ├── sites/           #   meta.yaml files for each site
-│   ├── skills/          #   meta.yaml files for each skill
-│   └── extensions/      #   meta.yaml files for each extension
-├── router/              # Vue Router configuration
-├── stores/              # Pinia stores
-├── utils/               # Utility functions
-├── views/               # Page-level Vue components
-└── App.vue              # Root component
+packages/
+├── web/                 # Vue 3 SPA (vite root — src, public, api, scripts, tests)
+│   ├── src/
+│   │   ├── assets/      # Static assets (images, fonts)
+│   │   ├── components/  # Vue 3 components
+│   │   ├── composables/ # Shared Vue composables
+│   │   ├── content/     # Content definitions (sites, skills, extensions)
+│   │   │   ├── sites/   #   meta.yaml files for each site
+│   │   │   ├── skills/  #   meta.yaml files for each skill
+│   │   │   └── extensions/  #   meta.yaml files for each extension
+│   │   ├── router/      # Vue Router configuration
+│   │   ├── stores/      # Pinia stores
+│   │   ├── utils/       # Utility functions
+│   │   ├── views/       # Page-level Vue components
+│   │   └── App.vue      # Root component
+│   ├── scripts/
+│   │   ├── build/       # Index generation scripts
+│   │   ├── enrichment/  # Metadata enrichment scripts
+│   │   └── previews/    # Screenshot generation scripts
+│   ├── api/             # Vercel serverless functions
+│   └── tests/           # Vitest tests
+├── mcp/                 # holy-grail-mcp (publishable npm package)
+├── cli/                 # grail-cli (publishable npm package, Rust + TS)
+├── supabase/            # Edge Functions (Deno) + DB migrations
+└── docs/                # Documentation (adding content, design, etc.)
 
-scripts/
-├── build/               # Index generation scripts
-├── enrichment/          # Metadata enrichment scripts
-└── previews/            # Screenshot generation scripts
-
-docs/                    # Documentation (adding content, design, etc.)
 .github/                 # CI workflows, issue/PR templates
+turbo.json               # Monorepo task graph
 ```
 
 <br/>
@@ -138,9 +145,9 @@ The project has three content types, each defined as `meta.yaml` files:
 
 | Content Type | Location | Index Command |
 |---|---|---|
-| Sites | `src/content/sites/<category>/<slug>/meta.yaml` | `bun run generate:previews` |
-| Skills | `src/content/skills/<slug>/meta.yaml` | `bun run generate:skills` |
-| Extensions | `src/content/extensions/<category>/<slug>/meta.yaml` | `bun run generate:extensions` |
+| Sites | `packages/web/src/content/sites/<category>/<slug>/meta.yaml` | `bun run generate:previews` |
+| Skills | `packages/web/src/content/skills/<slug>/meta.yaml` | `bun run generate:skills` |
+| Extensions | `packages/web/src/content/extensions/<category>/<slug>/meta.yaml` | `bun run generate:extensions` |
 
 For detailed instructions, see the dedicated guides:
 
@@ -191,12 +198,12 @@ bun run type-check
 
 ### Tests
 
-Tests use [Vitest](https://vitest.dev/) with [happy-dom](https://github.com/capricorn86/happy-dom):
+The SPA has a Vitest suite under `packages/web/tests/` (run from the web package):
 
 ```bash
-bun test                # run all tests
-bun test --run          # single run (no watch)
-bun test --coverage     # with coverage report
+bun run --cwd packages/web test:mcp-mirror   # SPA search vs ported MCP scorer parity
+bun test packages/mcp/evals/search-corpus.test.ts   # pinned search corpus
+bun packages/mcp/evals/run-evals.ts          # 10-question read-only eval suite
 ```
 
 ### Vue Conventions

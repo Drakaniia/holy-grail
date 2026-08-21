@@ -17,7 +17,7 @@ export default defineConfig([
     '**/dist/**',
     '**/dist-ssr/**',
     '**/coverage/**',
-    'supabase/functions/**',
+    'packages/supabase/functions/**',
     'parse*.js',
     'parse*.cjs',
   ]),
@@ -36,11 +36,11 @@ export default defineConfig([
     files: [
       '*.config.js',
       '**/*.cjs',
-      'scripts/**/*.js',
-      'scripts/**/*.mjs',
-      'mcp/scripts/**/*.{js,mjs}',
-      'mcp/evals/**/*.{js,mjs}',
-      'api/**/*.{js,mjs}',
+      'packages/web/scripts/**/*.js',
+      'packages/web/scripts/**/*.mjs',
+      'packages/mcp/scripts/**/*.{js,mjs}',
+      'packages/mcp/evals/**/*.{js,mjs}',
+      'packages/web/api/**/*.{js,mjs}',
     ],
     languageOptions: {
       globals: {

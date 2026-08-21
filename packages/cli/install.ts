@@ -12,12 +12,22 @@
  */
 
 import { existsSync, mkdirSync, createWriteStream, readFileSync, copyFileSync } from "node:fs";
-import { resolve, dirname } from "node:path";
+import { resolve, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { get } from "node:https";
 
 const scriptPath = fileURLToPath(import.meta.url);
+
+// Monorepo checkout (dist/ lives at packages/cli/dist, outside node_modules):
+// the binary is built via `bun run build:cli` (cargo). Skip the npm
+// download/bootstrap flow so a workspace `bun install` never hits the
+// network or requires Rust. npm consumers keep the bootstrap (their copy
+// resolves inside node_modules).
+if (!scriptPath.includes(`${sep}node_modules${sep}`)) {
+  console.log("grail-cli: monorepo checkout — skipping postinstall bootstrap (use `bun run build:cli`)")
+  process.exit(0)
+}
 const scriptDir = dirname(scriptPath);
 const pkgDir = scriptDir.endsWith("dist") ? dirname(scriptDir) : scriptDir;
 

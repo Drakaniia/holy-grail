@@ -1,3 +1,3 @@
 [submodule "public/previews"]
-	path = public/previews
+	path = packages/web/public/previews
 	url = https://github.com/Drakaniia/holy-grail-assets.git

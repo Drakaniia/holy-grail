@@ -9,7 +9,7 @@ HOLY GRAIL — Docs Knowledge Base
 | `AGENTS.md` | [This file] Docs-specific knowledge |
 | `DESIGN.md` | Design system, branding, UI tokens |
 | `TODO.md` | Active task list / backlog |
-| `CHANGELOG.md` | Generated release changelog |
+| `packages/web/CHANGELOG.md` | Generated release changelog |
 | `ADDING-SITES.md` | Guide for adding sites to the catalog |
 | `ADDING-EXTENSIONS.md` | Guide for adding extensions to the catalog |
 | `GRAIL-CLI.md` | Usage guide for the grail CLI tool |

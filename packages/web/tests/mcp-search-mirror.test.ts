@@ -15,8 +15,8 @@ import { ref } from 'vue'
 import { useSmartSearch } from '../src/composables/useSmartSearch'
 import { useSitesStore } from '../src/stores/sites'
 import { useSkillsStore } from '../src/stores/skills'
-import corpus from '../mcp/evals/search-corpus.json'
-import { searchCatalog } from '../mcp/src/search'
+import corpus from '../../mcp/evals/search-corpus.json'
+import { searchCatalog } from '../../mcp/src/search'
 
 const fixtures: Record<string, unknown> = {
   '/content/sites-index.json': JSON.parse(

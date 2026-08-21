@@ -27,7 +27,7 @@ yarn.lock
 pnpm-lock.yaml
 
 # Project specific
-supabase/.temp/
+packages/supabase/.temp/
 .opencode/
 .gemini/
 .claude/
@@ -37,13 +37,13 @@ supabase/.temp/
 .agents/
 
 # Documentation and root level files (currently not in format script scope)
-docs/
+packages/docs/
 *.md
-index.html
+packages/web/index.html
 
 # Generated or static assets that shouldn't be formatted
-public/previews/
-public/content/*-index.json
-src/content/*-index.json
-src/content/sites/
-mcp/data/
+packages/web/public/previews/
+packages/web/public/content/*-index.json
+packages/web/src/content/*-index.json
+packages/web/src/content/sites/
+packages/mcp/data/

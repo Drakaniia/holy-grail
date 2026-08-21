@@ -23,8 +23,8 @@ From this repo (dev mode):
 
 ```bash
 bun run build:mcp          # tsc build + snapshot the generated indexes
-bun mcp/dist/index.js              # stdio
-TRANSPORT=http bun mcp/dist/index.js  # HTTP on :3000
+bun packages/mcp/dist/index.js              # stdio
+TRANSPORT=http bun packages/mcp/dist/index.js  # HTTP on :3000
 ```
 
 No auth, no API key — public read-only data, same stance as the site.
@@ -76,7 +76,7 @@ may expect OAuth — the endpoint is intentionally unauthenticated, so verify
 manually before relying on it.
 
 Per-client setup (Claude Code, Cursor, Windsurf, opencode, Claude Desktop, MCP
-Inspector): [docs/MCP-INTEGRATION.md](https://github.com/Drakaniia/holy-grail/blob/grail/docs/MCP-INTEGRATION.md).
+Inspector): [packages/docs/MCP-INTEGRATION.md](https://github.com/Drakaniia/holy-grail/blob/grail/packages/docs/MCP-INTEGRATION.md).
 
 ## Tools
 
@@ -137,11 +137,11 @@ Preview URLs are absolute when `HOLY_GRAIL_BASE_URL` is set, else relative paths
 ## Development
 
 ```bash
-bun run --cwd mcp build        # tsc → dist/
-bun run --cwd mcp snapshot     # copy generated indexes into data/
-bun test mcp/evals/search-corpus.test.ts   # pinned search corpus (port fidelity)
-bunx vitest run tests/mcp-search-mirror.test.ts  # SPA useSmartSearch vs port parity
-bun mcp/evals/run-evals.ts     # 10-question read-only eval suite
+bun run --cwd packages/mcp build        # tsc → dist/
+bun run --cwd packages/mcp snapshot     # copy generated indexes into data/
+bun test packages/mcp/evals/search-corpus.test.ts   # pinned search corpus (port fidelity)
+bun run --cwd packages/web test:mcp-mirror          # SPA useSmartSearch vs port parity
+bun packages/mcp/evals/run-evals.ts     # 10-question read-only eval suite
 ```
 
 Repo scripts: `bun run build:mcp`, `bun run test:mcp-search`,
@@ -151,7 +151,7 @@ Repo scripts: `bun run build:mcp`, `bun run test:mcp-search`,
 
 ```bash
 bun run build:mcp          # build + snapshot data
-cd mcp && npm publish      # publishes holy-grail-mcp (bin: holy-grail-mcp)
+cd packages/mcp && npm publish      # publishes holy-grail-mcp (bin: holy-grail-mcp)
 ```
 
 The `prepublishOnly` hook re-runs build + snapshot. Published unscoped (the

@@ -1,17 +1,17 @@
 # Adding Extensions
 
 Extensions (Chrome extensions) are stored as `meta.yaml` files under
-`src/content/extensions/`. The generated `src/content/extensions-index.json` is
+`packages/web/src/content/extensions/`. The generated `packages/web/src/content/extensions-index.json` is
 imported directly by the Pinia extensions store, so metadata must be complete
 before committing content changes.
 
-The same JSON is also written to `public/content/extensions-index.json` so the
+The same JSON is also written to `packages/web/public/content/extensions-index.json` so the
 app can fetch it at runtime.
 
 ## Directory Structure
 
 ```txt
-src/content/extensions/
+packages/web/src/content/extensions/
 +-- writing/
 |   +-- scribbr-citation-generator/
 |       +-- meta.yaml
@@ -28,7 +28,7 @@ The first-level directory (`writing`, `productivity`, etc.) becomes the
 add a second-level directory:
 
 ```txt
-src/content/extensions/
+packages/web/src/content/extensions/
 +-- writing/
     +-- citation/
         +-- your-extension/
@@ -203,5 +203,5 @@ bun run generate:extensions
 
 Output:
 
-- `src/content/extensions-index.json` — imported by the Pinia store
-- `public/content/extensions-index.json` — fetched at runtime by the app
+- `packages/web/src/content/extensions-index.json` — imported by the Pinia store
+- `packages/web/public/content/extensions-index.json` — fetched at runtime by the app
