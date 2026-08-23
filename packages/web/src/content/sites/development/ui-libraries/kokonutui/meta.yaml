@@ -1,0 +1,80 @@
+slug: kokonutui
+name: Kokonut UI
+description: Free open-source React and Tailwind CSS component library with 100+ copy-paste UI components.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 2100
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://kokonutui.com
+docs: https://kokonutui.com
+sourceCode: https://github.com/dorianbaffier/kokonutui
+icon: kokonutui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - react
+  - tailwind
+  - components
+atGlance: 100+ free React components with live previews and shadcn CLI install.
+fullDescription: >-
+  Kokonut UI is a collection of 100+ open-source React components built with
+  Tailwind CSS and Motion. It features live previews, copy-paste source, and
+  one-command install via the shadcn CLI. Includes templates and MCP registry
+  support for AI coding agents.
+coreFeatures:
+  - name: 100+ Components
+    description: Extensive library of React and Tailwind CSS UI components.
+    icon: layers
+  - name: Live Previews
+    description: Interactive demos for every component before you install.
+    icon: check
+  - name: shadcn CLI Install
+    description: One command adds any component directly to your project.
+    icon: rocket
+additionalFeatures:
+  - name: MCP Registry
+    description: Machine-readable registry for AI coding agents like Claude and Cursor.
+    icon: sparkles
+  - name: Templates
+    description: Professional starter templates built with React, Next.js, and Tailwind.
+    icon: check
+  - name: Motion Animations
+    description: Components include built-in Framer Motion animations.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: heroui
+    name: HeroUI
+    description: Modern React component library with accessible primitives, themes, and polished defaults.
+    stars: 29324
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/
