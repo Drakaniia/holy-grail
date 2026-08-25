@@ -1,0 +1,84 @@
+slug: dokploy
+name: Dokploy
+description: Open-source self-hostable PaaS for deploying apps, databases and Docker Compose with multi-server support.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 36800
+watchers: 109
+addedDaysAgo: 0
+license: Apache-2.0
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Docker
+  - CLI
+deployment:
+  - Self-hosted
+  - Cloud
+  - Docker Compose
+website: https://dokploy.com
+docs: https://docs.dokploy.com/docs/core
+sourceCode: https://github.com/dokploy/dokploy
+icon: dokploy
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - paas
+  - docker
+  - deployment
+  - self-hosted
+atGlance: Self-hostable PaaS to deploy any app, database or Docker Compose stack.
+fullDescription: >-
+  Dokploy is a free, open-source Platform as a Service that simplifies deployment and management of applications and databases. Deploy any stack via Nixpacks, Heroku Buildpacks or Dockerfile, with native Docker Compose, Docker Swarm multi-node clustering, multi-server orchestration and Traefik routing. Includes managed MySQL, PostgreSQL, MongoDB, MariaDB, Redis with automated backups, real-time monitoring, templates for Supabase/Cal.com/PocketBase, and full CLI/API access. Self-host on any VPS with one curl install or use Dokploy Cloud.
+coreFeatures:
+  - name: Any Stack Deployment
+    description: Deploy Node.js, Python, Go, PHP, Ruby via Nixpacks, Buildpacks or Dockerfile.
+    icon: layers
+  - name: Docker Compose Native
+    description: Full Docker Compose support for complex multi-service orchestration.
+    icon: container
+  - name: Multi-Server & Swarm
+    description: Deploy to remote servers and scale across Docker Swarm clusters.
+    icon: server
+additionalFeatures:
+  - name: Database & Backups
+    description: Manage MySQL, Postgres, MongoDB, MariaDB, Redis with automated backups.
+    icon: database
+  - name: Traefik & Monitoring
+    description: Automatic Traefik routing plus real-time CPU, memory and network monitoring.
+    icon: activity
+  - name: Templates & API
+    description: One-click open-source templates and full CLI/API for custom workflows.
+    icon: rocket
+similarTools:
+  - slug: coolify
+    name: Coolify
+    description: Open-source self-hostable PaaS for deploying apps and databases.
+    stars: 57271
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/
+  - slug: railway
+    name: Railway
+    description: Infrastructure platform to provision and deploy apps and databases instantly.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://railway.app/
+  - slug: render
+    name: Render
+    description: Cloud platform to build, deploy and scale apps with managed databases.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://render.com/

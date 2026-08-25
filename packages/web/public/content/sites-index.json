@@ -3501,6 +3501,117 @@
     ]
   },
   {
+    "slug": "dokploy",
+    "name": "Dokploy",
+    "description": "Open-source self-hostable PaaS for deploying apps, databases and Docker Compose with multi-server support.",
+    "category": "Hosting",
+    "parentCategory": "development",
+    "subcategory": "cloud-hosting",
+    "stars": 36800,
+    "watchers": 109,
+    "addedDaysAgo": 0,
+    "license": "Apache-2.0",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Docker",
+      "CLI"
+    ],
+    "deployment": [
+      "Self-hosted",
+      "Cloud",
+      "Docker Compose"
+    ],
+    "website": "https://dokploy.com",
+    "docs": "https://docs.dokploy.com/docs/core",
+    "sourceCode": "https://github.com/dokploy/dokploy",
+    "icon": "dokploy",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "cloud-hosting",
+      "hosting",
+      "paas",
+      "docker",
+      "deployment",
+      "self-hosted"
+    ],
+    "atGlance": "Self-hostable PaaS to deploy any app, database or Docker Compose stack.",
+    "fullDescription": "Dokploy is a free, open-source Platform as a Service that simplifies deployment and management of applications and databases. Deploy any stack via Nixpacks, Heroku Buildpacks or Dockerfile, with native Docker Compose, Docker Swarm multi-node clustering, multi-server orchestration and Traefik routing. Includes managed MySQL, PostgreSQL, MongoDB, MariaDB, Redis with automated backups, real-time monitoring, templates for Supabase/Cal.com/PocketBase, and full CLI/API access. Self-host on any VPS with one curl install or use Dokploy Cloud.",
+    "coreFeatures": [
+      {
+        "name": "Any Stack Deployment",
+        "description": "Deploy Node.js, Python, Go, PHP, Ruby via Nixpacks, Buildpacks or Dockerfile.",
+        "icon": "layers"
+      },
+      {
+        "name": "Docker Compose Native",
+        "description": "Full Docker Compose support for complex multi-service orchestration.",
+        "icon": "container"
+      },
+      {
+        "name": "Multi-Server & Swarm",
+        "description": "Deploy to remote servers and scale across Docker Swarm clusters.",
+        "icon": "server"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Database & Backups",
+        "description": "Manage MySQL, Postgres, MongoDB, MariaDB, Redis with automated backups.",
+        "icon": "database"
+      },
+      {
+        "name": "Traefik & Monitoring",
+        "description": "Automatic Traefik routing plus real-time CPU, memory and network monitoring.",
+        "icon": "activity"
+      },
+      {
+        "name": "Templates & API",
+        "description": "One-click open-source templates and full CLI/API for custom workflows.",
+        "icon": "rocket"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "coolify",
+        "name": "Coolify",
+        "description": "Open-source self-hostable PaaS for deploying apps and databases.",
+        "stars": 57271,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://coolify.io/"
+      },
+      {
+        "slug": "railway",
+        "name": "Railway",
+        "description": "Infrastructure platform to provision and deploy apps and databases instantly.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://railway.app/"
+      },
+      {
+        "slug": "render",
+        "name": "Render",
+        "description": "Cloud platform to build, deploy and scale apps with managed databases.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://render.com/"
+      }
+    ]
+  },
+  {
     "slug": "orm",
     "name": "Drizzle ORM - next gen TypeScript ORM.",
     "description": "Drizzle ORM - next gen TypeScript ORM. bookmarked for tooling resources.",
@@ -18969,6 +19080,111 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://runwayml.com/"
+      }
+    ]
+  },
+  {
+    "slug": "allvideoai",
+    "name": "AllVideoAI",
+    "description": "All-in-one AI video generator for text, image and video-to-video creation with 12+ leading models in one workspace.",
+    "category": "AI Video",
+    "parentCategory": "ai",
+    "subcategory": "video",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://allvideoai.com/",
+    "docs": "https://allvideoai.com/",
+    "sourceCode": "",
+    "icon": "allvideoai",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ai",
+      "video",
+      "video-generation",
+      "text-to-video",
+      "image-to-video"
+    ],
+    "atGlance": "Create AI videos from text, images or source video with 12+ models in one workspace.",
+    "fullDescription": "AllVideoAI is a private, cloud-based AI video generation workspace that unifies multiple leading models — Kling 3.0/O3/2.6, Veo 3.1, Wan 2.7/2.6/2.5, Sora 2, Hailuo 2.3, Vidu Q3 and more — for text-to-video, image-to-video and video-to-video workflows. Configure prompt, duration (3–15s), aspect ratio (16:9/9:16/1:1) and outputs, then generate from a single dashboard with reusable generations and example gallery.",
+    "coreFeatures": [
+      {
+        "name": "Text / Image / Video-to-Video",
+        "description": "Generate from a prompt, animate a still image, or transform a source video.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "12+ Leading Models",
+        "description": "Kling 3.0/O3, Veo 3.1, Sora 2, Wan, Hailuo, Vidu and more in one workspace.",
+        "icon": "layers"
+      },
+      {
+        "name": "Flexible Controls",
+        "description": "Adjust duration, aspect ratio, outputs and advanced model settings per generation.",
+        "icon": "sliders"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Private Generations",
+        "description": "All creations kept in a personal workspace with history and example gallery.",
+        "icon": "check"
+      },
+      {
+        "name": "Cloud Workspace",
+        "description": "No install required — create and manage videos entirely in the browser.",
+        "icon": "check"
+      },
+      {
+        "name": "Multi-Model Hub",
+        "description": "Compare outputs across models without juggling multiple subscriptions.",
+        "icon": "refresh-cw"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "runwayml",
+        "name": "Runway | AI Image and Video Generator",
+        "description": "Runway | AI Image and Video Generator bookmarked for ai video resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://runwayml.com/"
+      },
+      {
+        "slug": "vidu",
+        "name": "Reference to Video | Vidu AI",
+        "description": "Reference to Video | Vidu AI bookmarked for ai video resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.vidu.com/create/character2video"
+      },
+      {
+        "slug": "aistudio-veo-3-google-ai-studio",
+        "name": "Veo 3 | Google AI Studio",
+        "description": "Veo 3 | Google AI Studio bookmarked for ai video resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://aistudio.google.com/models/veo-3"
       }
     ]
   },
