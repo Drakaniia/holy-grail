@@ -164,6 +164,15 @@
     "height": 600,
     "bytes": 42612
   },
+  "allvideoai": {
+    "image": "/previews/allvideoai.webp",
+    "small": "/previews/allvideoai-sm.webp",
+    "sourceUrl": "https://allvideoai.com/",
+    "capturedAt": "2026-08-25T08:13:57.494Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 60834
+  },
   "amp": {
     "image": "/previews/amp.webp",
     "small": "/previews/amp-sm.webp",
@@ -648,10 +657,10 @@
     "image": "/previews/cloudflare-pages.webp",
     "small": "/previews/cloudflare-pages-sm.webp",
     "sourceUrl": "https://pages.cloudflare.com/",
-    "capturedAt": "2026-08-16T15:04:53.158Z",
+    "capturedAt": "2026-08-25T08:14:11.120Z",
     "width": 960,
     "height": 600,
-    "bytes": 24494
+    "bytes": 31994
   },
   "cockroachlabs": {
     "image": "/previews/cockroachlabs.webp",
@@ -1036,6 +1045,15 @@
     "width": 960,
     "height": 600,
     "bytes": 43688
+  },
+  "dokploy": {
+    "image": "/previews/dokploy.webp",
+    "small": "/previews/dokploy-sm.webp",
+    "sourceUrl": "https://dokploy.com/",
+    "capturedAt": "2026-08-25T08:13:58.108Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 18020
   },
   "dora": {
     "image": "/previews/dora.webp",
@@ -1614,10 +1632,10 @@
     "image": "/previews/heroku.webp",
     "small": "/previews/heroku-sm.webp",
     "sourceUrl": "https://www.heroku.com/",
-    "capturedAt": "2026-08-16T15:04:51.832Z",
+    "capturedAt": "2026-08-25T08:14:14.834Z",
     "width": 960,
     "height": 600,
-    "bytes": 56436
+    "bytes": 38612
   },
   "heroui": {
     "image": "/previews/heroui.webp",
@@ -1696,19 +1714,19 @@
     "image": "/previews/hostinger.webp",
     "small": "/previews/hostinger-sm.webp",
     "sourceUrl": "https://www.hostinger.com/",
-    "capturedAt": "2026-08-16T15:02:15.347Z",
+    "capturedAt": "2026-08-25T08:14:16.036Z",
     "width": 960,
     "height": 600,
-    "bytes": 29674
+    "bytes": 28708
   },
   "hugeicons": {
     "image": "/previews/hugeicons.webp",
     "small": "/previews/hugeicons-sm.webp",
     "sourceUrl": "https://hugeicons.com/",
-    "capturedAt": "2026-08-16T14:58:49.450Z",
+    "capturedAt": "2026-08-25T08:13:58.280Z",
     "width": 960,
     "height": 600,
-    "bytes": 21738
+    "bytes": 23278
   },
   "huggingface": {
     "image": "/previews/huggingface.webp",
@@ -1997,10 +2015,10 @@
     "image": "/previews/koyeb.webp",
     "small": "/previews/koyeb-sm.webp",
     "sourceUrl": "https://www.koyeb.com/",
-    "capturedAt": "2026-08-16T15:04:39.535Z",
+    "capturedAt": "2026-08-25T08:14:23.639Z",
     "width": 960,
     "height": 600,
-    "bytes": 27584
+    "bytes": 20320
   },
   "kubeflow": {
     "image": "/previews/kubeflow.webp",
@@ -2995,10 +3013,10 @@
     "image": "/previews/qqflix.webp",
     "small": "/previews/qqflix-sm.webp",
     "sourceUrl": "https://qqflix.ru/",
-    "capturedAt": "2026-08-15T10:11:20.630Z",
+    "capturedAt": "2026-08-25T08:14:31.872Z",
     "width": 960,
     "height": 600,
-    "bytes": 29892
+    "bytes": 28334
   },
   "quillbot": {
     "image": "/previews/quillbot.webp",
@@ -3031,7 +3049,7 @@
     "image": "/previews/raylight.webp",
     "small": "/previews/raylight-sm.webp",
     "sourceUrl": "https://www.raylight.app/",
-    "capturedAt": "2026-08-16T14:58:40.667Z",
+    "capturedAt": "2026-08-25T08:14:22.073Z",
     "width": 960,
     "height": 600,
     "bytes": 12788
@@ -4139,10 +4157,10 @@
     "image": "/previews/zeabur.webp",
     "small": "/previews/zeabur-sm.webp",
     "sourceUrl": "https://zeabur.com/",
-    "capturedAt": "2026-08-16T15:04:50.383Z",
+    "capturedAt": "2026-08-25T08:14:29.928Z",
     "width": 960,
     "height": 600,
-    "bytes": 13776
+    "bytes": 4118
   },
   "zooqle": {
     "image": "/previews/zooqle.webp",
