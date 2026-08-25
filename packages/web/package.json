@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
-    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/node22": "^22.0.6",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.2.0",
     "@types/mdx": "^2.0.14",
