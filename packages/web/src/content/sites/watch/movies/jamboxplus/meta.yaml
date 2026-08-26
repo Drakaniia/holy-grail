@@ -1,0 +1,69 @@
+slug: jamboxplus
+name: JamBox+
+description: Movie and TV show streaming site for watching content online.
+category: Movies
+parentCategory: watch
+subcategory: movies
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://jamboxplusph.dpdns.org
+docs: https://jamboxplusph.dpdns.org
+sourceCode: ""
+icon: jamboxplus
+verified: false
+featured: false
+tags:
+  - bookmark
+  - watch
+  - movies
+  - streaming
+atGlance: Movie and TV show streaming site.
+fullDescription: JamBox+ is a web-based movie and TV show streaming site kept as a watch source in the catalog.
+coreFeatures:
+  - name: Watch Source
+    description: Cataloged as a saved movie and TV streaming bookmark.
+    icon: check
+  - name: Direct Web Launch
+    description: Opens the streaming site directly from the catalog entry.
+    icon: check
+additionalFeatures:
+  - name: Watch Collection
+    description: Grouped under Watch for movie and anime sources.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged for watch, movies, and streaming search.
+    icon: check
+similarTools:
+  - slug: sflix
+    name: SFlix
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://sflix.app/home
+  - slug: movies2watch
+    name: Movies2Watch
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://movies2watch.watch/home/
+  - slug: nextflicks
+    name: NextFlicks
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://nextflicks.link
