@@ -25386,6 +25386,108 @@
     ]
   },
   {
+    "slug": "oneworks-avatar",
+    "name": "OneWorks Avatar",
+    "description": "Free browser-based 3D geometric avatar creator with export as SVG PNG and animated GIF.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "6 days ago",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://oneworks.cloud/avatar/",
+    "docs": "https://oneworks.cloud/avatar/",
+    "sourceCode": "https://github.com/oneworks-ai/avatar",
+    "icon": "oneworks-avatar",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "avatar",
+      "3d",
+      "animation",
+      "svg",
+      "geometric"
+    ],
+    "atGlance": "Free browser-based 3D geometric avatar creator with SVG PNG and GIF export.",
+    "fullDescription": "OneWorks Avatar is a free open-source avatar builder that runs entirely in the browser. Choose from a library of geometric 3D avatar models and customize their pose materials face and camera. Export as SVG PNG or animated GIF with optional transparent backgrounds.",
+    "coreFeatures": [
+      {
+        "name": "3D Avatar Models",
+        "description": "Library of geometric 3D avatar models ready to customize.",
+        "icon": "check"
+      },
+      {
+        "name": "Browser-Based Editor",
+        "description": "Full editing experience runs entirely in the browser with no install.",
+        "icon": "check"
+      },
+      {
+        "name": "Multiple Export Formats",
+        "description": "Export avatars as SVG PNG or animated GIF with transparency support.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Pose and Camera Controls",
+        "description": "Adjust avatar pose materials face and camera angle for perfect shots.",
+        "icon": "check"
+      },
+      {
+        "name": "Open Source",
+        "description": "GitHub repository with complete source code for self-hosting or contribution.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "rotato",
+        "name": "Rotato",
+        "description": "3D mockup and motion design tool for product showcases.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://rotato.app/"
+      },
+      {
+        "slug": "magic-animator",
+        "name": "Magic Animator",
+        "description": "AI-powered animation tool that brings designs to life in seconds.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://magicanimator.com/"
+      },
+      {
+        "slug": "lottiefiles",
+        "name": "LottieFiles",
+        "description": "Free lightweight animations for websites and apps.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://lottiefiles.com/"
+      }
+    ]
+  },
+  {
     "slug": "pacdora",
     "name": "Free & Download 3D iPhone Mockups |Pacdora",
     "description": "Free & Download 3D iPhone Mockups |Pacdora bookmarked for design tools resources.",

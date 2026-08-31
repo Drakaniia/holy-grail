@@ -2728,6 +2728,15 @@
     "height": 600,
     "bytes": 32656
   },
+  "oneworks-avatar": {
+    "image": "/previews/oneworks-avatar.webp",
+    "small": "/previews/oneworks-avatar-sm.webp",
+    "sourceUrl": "https://oneworks.cloud/avatar/",
+    "capturedAt": "2026-08-31T13:04:45.372Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20182
+  },
   "onlyflix": {
     "image": "/previews/onlyflix.webp",
     "small": "/previews/onlyflix-sm.webp",
