@@ -1,0 +1,81 @@
+slug: magic-animator
+name: Magic Animator
+description: AI-powered animation tool that brings designs to life in seconds from Figma Canva and Adobe Express.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Desktop
+deployment:
+  - Cloud
+website: https://magicanimator.com/
+docs: https://magicanimator.com/
+sourceCode: ''
+icon: magic-animator
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - animation
+  - ai
+  - motion
+  - figma
+  - lottie
+atGlance: AI-powered tool to animate designs in seconds from Figma Canva or Adobe Express.
+fullDescription: >-
+  Magic Animator by Lottielab is an AI-powered animation tool that transforms
+  static designs from Figma Canva or Adobe Express into polished motion graphics
+  with a single click. Export as MP4 GIF or Lottie for websites apps and social
+  media content.
+coreFeatures:
+  - name: AI Animation Generation
+    description: Generate animations from static designs with a single click using AI.
+    icon: sparkles
+  - name: Multi-Platform Import
+    description: Import designs from Figma Canva Adobe Express and other design tools.
+    icon: check
+  - name: Multiple Export Formats
+    description: Export as MP4 GIF or Lottie for websites apps and social media.
+    icon: check
+additionalFeatures:
+  - name: Animation Assistant
+    description: Chat-based assistant to generate custom animations from prompts.
+    icon: check
+  - name: Use Case Templates
+    description: Pre-built templates for logos social media UI and icon animations.
+    icon: check
+similarTools:
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: lottiefiles
+    name: LottieFiles
+    description: Free lightweight animations for websites and apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lottiefiles.com/
+  - slug: animos
+    name: Animos - Motion Design Tool for Creatives
+    description: Browser-based motion design tool for portfolio showcases and animated graphics.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://animos.app
