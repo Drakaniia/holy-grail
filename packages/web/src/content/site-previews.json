@@ -1854,6 +1854,15 @@
     "height": 600,
     "bytes": 19222
   },
+  "interior": {
+    "image": "/previews/interior.webp",
+    "small": "/previews/interior-sm.webp",
+    "sourceUrl": "https://www.interior.dev/",
+    "capturedAt": "2026-08-31T13:02:09.739Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 13506
+  },
   "intro-hd": {
     "image": "/previews/intro-hd.webp",
     "small": "/previews/intro-hd-sm.webp",
