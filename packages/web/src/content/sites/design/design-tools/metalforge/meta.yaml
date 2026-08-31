@@ -1,0 +1,80 @@
+slug: metalforge
+name: MetalForge
+description: Visual editor to generate SwiftUI Metal shaders by tweaking sliders with no MSL required.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://metalforge.xyz/
+docs: https://metalforge.xyz/
+sourceCode: ''
+icon: metalforge
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - swiftui
+  - metal
+  - shaders
+  - ios
+  - react-native
+atGlance: Visual editor to generate SwiftUI Metal shaders with no shader code required.
+fullDescription: >-
+  MetalForge is a visual editor that generates SwiftUI Metal shaders by tweaking
+  sliders. No Metal Shading Language knowledge required. Pick from 55 plus
+  effects adjust parameters and export a real .metal file plus SwiftUI view
+  for iOS 17+ or a React Native Skia shader. Free to explore Pro to export.
+coreFeatures:
+  - name: Visual Shader Editor
+    description: Tweak sliders to generate Metal shaders without writing MSL code.
+    icon: check
+  - name: SwiftUI Export
+    description: Exports real .metal files and SwiftUI views using the stitchable signature.
+    icon: check
+  - name: 55 Plus Effects
+    description: Library of ready-made shader effects including color distortion and layer effects.
+    icon: check
+additionalFeatures:
+  - name: React Native Support
+    description: Export shaders for React Native Skia when the effect supports it.
+    icon: check
+  - name: Xcode and Expo Projects
+    description: Runnable starter projects included with Pro exports for quick integration.
+    icon: check
+similarTools:
+  - slug: rotato
+    name: Rotato
+    description: 3D mockup and motion design tool for product showcases.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://rotato.app/
+  - slug: lottiefiles
+    name: LottieFiles
+    description: Free lightweight animations for websites and apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://lottiefiles.com/
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/

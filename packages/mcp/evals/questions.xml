@@ -34,7 +34,7 @@
   <qa_pair>
     <id>6-ai-site-count</id>
     <question>How many sites are in the "ai" parent category? Answer with a number only.</question>
-    <answer>99</answer>
+    <answer>100</answer>
   </qa_pair>
   <qa_pair>
     <id>7-skill-install-command</id>
