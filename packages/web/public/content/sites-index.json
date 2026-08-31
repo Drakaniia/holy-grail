@@ -44117,6 +44117,106 @@
     ]
   },
   {
+    "slug": "animekai",
+    "name": "AnimeKai",
+    "description": "Free anime streaming platform with HD subs and dubs and regular schedule updates.",
+    "category": "Anime",
+    "parentCategory": "watch",
+    "subcategory": "anime",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://animekai.be/",
+    "docs": "https://animekai.be/",
+    "sourceCode": "",
+    "icon": "animekai",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "anime",
+      "streaming",
+      "subs",
+      "dubs"
+    ],
+    "atGlance": "Free anime streaming platform with HD subs and dubs.",
+    "fullDescription": "AnimeKai is a popular free anime streaming platform offering HD anime series and movies with both subbed and dubbed options. Known for regular schedule updates and a large catalog of classic and current anime titles.",
+    "coreFeatures": [
+      {
+        "name": "HD Streaming",
+        "description": "Watch anime series and movies in high definition quality.",
+        "icon": "check"
+      },
+      {
+        "name": "Subs and Dubs",
+        "description": "Supports both subtitled and dubbed versions of anime.",
+        "icon": "check"
+      },
+      {
+        "name": "Large Catalog",
+        "description": "Wide selection of classic and currently airing anime titles.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Regular Updates",
+        "description": "Follows seasonal anime schedule with timely episode additions.",
+        "icon": "check"
+      },
+      {
+        "name": "Multiple Domains",
+        "description": "Accessible across several mirror domains for availability.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "hianime-ad",
+        "name": "HiAnime AD",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://hianime.ad/home"
+      },
+      {
+        "slug": "miruro",
+        "name": "Miruro",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://miruro.ro/"
+      },
+      {
+        "slug": "animewave",
+        "name": "AnimeWave",
+        "description": "Anime watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://animewave.to/home"
+      }
+    ]
+  },
+  {
     "slug": "animewave",
     "name": "AnimeWave",
     "description": "Anime watch source bookmark for quick launch.",
