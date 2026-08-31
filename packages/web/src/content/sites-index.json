@@ -7999,6 +7999,110 @@
     ]
   },
   {
+    "slug": "threeui",
+    "name": "ThreeUI",
+    "description": "Open-source Three.js component library with 160 plus interactive 3D components and templates.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 4500,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "4 days ago",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud",
+      "npm"
+    ],
+    "website": "https://threeui.com/",
+    "docs": "https://threeui.com/",
+    "sourceCode": "https://github.com/MengTo/threeui",
+    "icon": "threeui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "threejs",
+      "3d",
+      "webgl",
+      "components",
+      "templates"
+    ],
+    "atGlance": "Open-source Three.js component library with 160 plus ready-to-use 3D components.",
+    "fullDescription": "ThreeUI by Meng To is an open-source library of Three.js components templates and interactive shaders. Features 160 plus free copy-ready components including WebGL backgrounds hero sections and UI effects. Installable via npm as @designcodeio/threeui with live interactive previews on the website.",
+    "coreFeatures": [
+      {
+        "name": "Three.js Components",
+        "description": "160 plus copy-ready Three.js components with interactive 3D scenes and variants.",
+        "icon": "check"
+      },
+      {
+        "name": "Copy-Paste Source",
+        "description": "Each component includes complete source code ready to drop into projects.",
+        "icon": "check"
+      },
+      {
+        "name": "npm Package",
+        "description": "Installable via npm as @designcodeio/threeui with subpath imports.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Live Previews",
+        "description": "Interactive demos on threeui.com with customizable controls and themes.",
+        "icon": "check"
+      },
+      {
+        "name": "Website Templates",
+        "description": "Complete landing page templates with Three.js backgrounds and hero sections.",
+        "icon": "layers"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React JavaScript Vue and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives themes and polished defaults.",
+        "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "canvas-ui",
     "name": "Canvas UI",
     "description": "Creative html-in-canvas and WebGL component library for React, Vue, Svelte, and vanilla JS.",
