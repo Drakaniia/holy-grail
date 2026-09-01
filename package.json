@@ -41,7 +41,7 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.9.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-oxlint": "~1.79.0",
+    "eslint-plugin-oxlint": "~1.80.0",
     "eslint-plugin-vue": "~10.10.0",
     "globals": "^17.11.0",
     "oxlint": "~1.80.0",
