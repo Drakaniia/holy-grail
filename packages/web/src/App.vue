@@ -5,11 +5,15 @@ import AppToast from './components/AppToast.vue'
 import AuthDialogRoot from './components/auth/AuthDialogRoot.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import { useAutoAuthPrompt } from '@/composables/useAutoAuthPrompt'
+import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 
 const CommandPalette = defineAsyncComponent(() => import('./components/search/CommandPalette.vue'))
 const Sidebar = defineAsyncComponent(() => import('./components/Sidebar.vue'))
 const SIDEBAR_COLLAPSED_STORAGE_KEY = 'holy-grail-sidebar-collapsed'
 const route = useRoute()
+const { isAuthenticated } = useDeferredAuthStatus()
+useAutoAuthPrompt({ isAuthenticated })
 const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
 const isAuthCallbackRoute = computed(() => route.name === 'auth-callback')
 const isStandaloneRoute = computed(
