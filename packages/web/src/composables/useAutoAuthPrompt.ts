@@ -17,9 +17,17 @@ function isAuthRouteName(name: unknown): boolean {
 }
 
 function isAuthPath(path: string): boolean {
-  return path === '/login' || path.startsWith('/login?') || path.startsWith('/login#')
-    || path === '/signup' || path.startsWith('/signup?') || path.startsWith('/signup#')
-    || path === '/auth/callback' || path.startsWith('/auth/callback?') || path.startsWith('/auth/callback#')
+  return (
+    path === '/login' ||
+    path.startsWith('/login?') ||
+    path.startsWith('/login#') ||
+    path === '/signup' ||
+    path.startsWith('/signup?') ||
+    path.startsWith('/signup#') ||
+    path === '/auth/callback' ||
+    path.startsWith('/auth/callback?') ||
+    path.startsWith('/auth/callback#')
+  )
 }
 
 const pageVisitedCount = shallowRef(0)
