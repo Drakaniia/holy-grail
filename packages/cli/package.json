@@ -34,7 +34,7 @@
     "postinstall": "node -e \"import('./dist/install.js').catch(() => {})\""
   },
   "devDependencies": {
-    "@types/node": "^22",
+    "@types/node": "^26",
     "typescript": "^5"
   },
   "engines": {
