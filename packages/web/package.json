@@ -52,7 +52,7 @@
     "happy-dom": "^20.14.0",
     "npm-run-all2": "^9.0.3",
     "postcss": "^8.5.28",
-    "puppeteer-core": "^25.9.0",
+    "puppeteer-core": "^25.10.0",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
