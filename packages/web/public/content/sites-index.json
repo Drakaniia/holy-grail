@@ -8307,6 +8307,110 @@
     ]
   },
   {
+    "slug": "reui",
+    "name": "ReUI",
+    "description": "Free shadcn/ui component library with 1,000+ patterns, in-house primitives, and MCP server.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 3500,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://reui.io/",
+    "docs": "https://reui.io/docs",
+    "sourceCode": "https://github.com/keenthemes/reui",
+    "icon": "reui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "shadcn"
+    ],
+    "atGlance": "Design-forward shadcn kit with 1,000+ free components and in-house primitives.",
+    "fullDescription": "ReUI is a free, open-source component library for the shadcn/ui ecosystem. It provides 1,000+ production-ready components across 71 categories, 19 in-house primitives not found in base shadcn/ui (Data Grid, Event Calendar, Gantt, Kanban, and more), and dual Radix UI and Base UI support. Includes a hosted MCP server for coding agents.",
+    "coreFeatures": [
+      {
+        "name": "1,000+ Registry Components",
+        "description": "Production-ready, copy-paste examples composed from shadcn/ui primitives into real-world product flows.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "19 In-House Primitives",
+        "description": "Custom components not in base shadcn/ui — Data Grid, Event Calendar, Gantt, Kanban, Stepper, Tree, and more.",
+        "icon": "check"
+      },
+      {
+        "name": "Dual Component API",
+        "description": "Radix UI and Base UI versions for all in-house components.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "MCP Server",
+        "description": "Hosted MCP server so coding agents can discover and use ReUI components.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Copy-and-Own Model",
+        "description": "No npm package or lock-in — own the source code directly in your repo.",
+        "icon": "check"
+      },
+      {
+        "name": "Theme Compatible",
+        "description": "Works with all shadcn/ui themes and color token customizations.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29676,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Collection of animated React components, hooks, and utilities for modern web interfaces.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.reactbits.dev/"
+      }
+    ]
+  },
+  {
     "slug": "vercel-geist-font",
     "name": "Geist Font",
     "description": "Geist Font bookmarked for fonts resources.",
@@ -11459,6 +11563,112 @@
     ]
   },
   {
+    "slug": "orbkit",
+    "name": "Orbkit",
+    "description": "WebGL shader orbs for React agent states, installed through a shadcn registry.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 584,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://orbkit.zzzzshawn.cloud/",
+    "docs": "https://orbkit.zzzzshawn.cloud/getting-started/introduction",
+    "sourceCode": "https://github.com/zzzzshawn/orbkit",
+    "icon": "orbkit",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "webgl",
+      "shader",
+      "ai"
+    ],
+    "atGlance": "WebGL shader orbs for AI and voice agent states, distributed via shadcn registry.",
+    "fullDescription": "Orbkit is a React component library of WebGL shader orbs designed for AI and voice agent states. Install an orb, keep the source, tune every uniform. Distributed through a shadcn registry with 33 unique orbs including Hydrogen, Corona, Nimbus, and more. Free for non-commercial use with attribution; MIT for the runtime and non-ported orbs.",
+    "coreFeatures": [
+      {
+        "name": "WebGL Shader Orbs",
+        "description": "33 unique WebGL shader orbs for visual agent states — Hydrogen, Corona, Nimbus, and more.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "shadcn Registry",
+        "description": "Install orbs directly via npx shadcn add with no setup required.",
+        "icon": "check"
+      },
+      {
+        "name": "Customizable Uniforms",
+        "description": "Keep the source and tune every shader uniform for your specific use case.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Agent-Ready",
+        "description": "Designed specifically for AI and voice agent state visualization.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "MIT Runtime",
+        "description": "The runtime and non-ported orbs are MIT licensed for broad reuse.",
+        "icon": "check"
+      },
+      {
+        "name": "Source Ownership",
+        "description": "Components live as local source files — no vendor lock-in.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion-primitives",
+        "name": "Motion Primitives",
+        "description": "Beautiful motion components for React with Tailwind CSS and Framer Motion.",
+        "stars": 5602,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.motion-primitives.com/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Collection of animated React components, hooks, and utilities for modern web interfaces.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.reactbits.dev/"
+      }
+    ]
+  },
+  {
     "slug": "11ty",
     "name": "Getting Started - Eleventy",
     "description": "Getting Started - Eleventy bookmarked for references resources.",
@@ -12289,6 +12499,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "unlumen-ui",
+    "name": "unlumen UI",
+    "description": "Animated React components and primitives built for shadcn projects with Motion.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 200,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://ui.unlumen.com/",
+    "docs": "https://ui.unlumen.com/docs",
+    "sourceCode": "https://github.com/leovvx/unlumen-ui-docs",
+    "icon": "unlumen-ui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "shadcn",
+      "animation"
+    ],
+    "atGlance": "Animated React components and primitives for modern shadcn-based interfaces.",
+    "fullDescription": "Unlumen UI is a curated collection of animated React components and primitives built with TypeScript, Tailwind CSS, and Motion (Framer Motion). Designed for shadcn projects, it installs via the shadcn CLI with free and Pro tiers. Recognized with an Awwwards Honorable Mention for its design quality.",
+    "coreFeatures": [
+      {
+        "name": "Animated Components",
+        "description": "35+ motion-rich React components including animations, navigation, and backgrounds.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "shadcn Registry",
+        "description": "Install components directly via the shadcn CLI as local source code.",
+        "icon": "check"
+      },
+      {
+        "name": "TypeScript and Tailwind",
+        "description": "Built with TypeScript and Tailwind CSS for type-safe, customizable styling.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Free and Pro Tiers",
+        "description": "Free tier for core components with Pro tier for advanced patterns.",
+        "icon": "check"
+      },
+      {
+        "name": "Motion Integration",
+        "description": "Uses Framer Motion for smooth, production-ready animations.",
+        "icon": "check"
+      },
+      {
+        "name": "Primitives and Patterns",
+        "description": "Includes reusable primitives beyond isolated component demos.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "motion-primitives",
+        "name": "Motion Primitives",
+        "description": "Beautiful motion components for React with Tailwind CSS and Framer Motion.",
+        "stars": 5602,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.motion-primitives.com/"
+      },
+      {
+        "slug": "kokonutui",
+        "name": "Kokonut UI",
+        "description": "Open-source collection of animated and customizable React components.",
+        "stars": 2100,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://kokonutui.com/"
       }
     ]
   },
@@ -39388,6 +39703,111 @@
         "name": "HeroUI",
         "description": "Modern React component library with accessible primitives themes and polished defaults.",
         "stars": 29324,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "kobra",
+    "name": "Kobra",
+    "description": "72+ React components with UI sound design, motion skills, and MCP server.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://kobra.systems/",
+    "docs": "https://kobra.systems/",
+    "sourceCode": "",
+    "icon": "kobra",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "sound-design"
+    ],
+    "atGlance": "72+ accessible React components with UI sound, motion, and AI agent integration.",
+    "fullDescription": "Kobra is a React component library with 72+ screen-reader-tested, accessible components built with Tailwind CSS and Base UI. It stands out with synthesized interface sound design, per-component motion tuning, AI skills for migration, and an MCP server for coding agents. Ships with a free Figma kit and a one-time purchase license.",
+    "coreFeatures": [
+      {
+        "name": "72+ Accessible Components",
+        "description": "Screen reader tested components accessible to WCAG 2.1 AA, built on Base UI primitives.",
+        "icon": "check"
+      },
+      {
+        "name": "UI Sound Design",
+        "description": "Synthesized sound layer with short, quiet cues from a single installable layer.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "MCP Server",
+        "description": "An MCP server so coding agents can discover and use Kobra components correctly.",
+        "icon": "sparkles"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Motion Tuned Per Component",
+        "description": "Every component ships with hand-tuned animation values.",
+        "icon": "check"
+      },
+      {
+        "name": "Figma Kit",
+        "description": "Free Figma kit drawn on the same design tokens as the code.",
+        "icon": "check"
+      },
+      {
+        "name": "AI Skills",
+        "description": "AI skills for motion, sound, and migration built from the source.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "base-ui",
+        "name": "Base UI",
+        "description": "Unstyled UI components for accessible design systems built with React.",
+        "stars": 10025,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://base-ui.com/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives, themes, and polished defaults.",
+        "stars": 29676,
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
