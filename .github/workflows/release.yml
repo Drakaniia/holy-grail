@@ -5,6 +5,12 @@ on:
     tags:
       - 'v*'
       - 'packages/*/v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to release'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -21,7 +27,8 @@ jobs:
       - name: Detect package from tag
         id: detect
         run: |
-          TAG="${GITHUB_REF_NAME}"
+          # Use input tag if triggered manually, otherwise use GITHUB_REF_NAME
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
           echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
 
           if [[ "$TAG" == packages/cli/* ]]; then
