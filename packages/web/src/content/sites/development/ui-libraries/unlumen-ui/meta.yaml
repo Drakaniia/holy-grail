@@ -1,0 +1,81 @@
+slug: unlumen-ui
+name: unlumen UI
+description: Animated React components and primitives built for shadcn projects with Motion.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 200
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://ui.unlumen.com/
+docs: https://ui.unlumen.com/docs
+sourceCode: https://github.com/leovvx/unlumen-ui-docs
+icon: unlumen-ui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - shadcn
+  - animation
+atGlance: Animated React components and primitives for modern shadcn-based interfaces.
+fullDescription: >-
+  Unlumen UI is a curated collection of animated React components and primitives built with
+  TypeScript, Tailwind CSS, and Motion (Framer Motion). Designed for shadcn projects, it
+  installs via the shadcn CLI with free and Pro tiers. Recognized with an Awwwards
+  Honorable Mention for its design quality.
+coreFeatures:
+  - name: Animated Components
+    description: 35+ motion-rich React components including animations, navigation, and backgrounds.
+    icon: sparkles
+  - name: shadcn Registry
+    description: Install components directly via the shadcn CLI as local source code.
+    icon: check
+  - name: TypeScript and Tailwind
+    description: Built with TypeScript and Tailwind CSS for type-safe, customizable styling.
+    icon: check
+additionalFeatures:
+  - name: Free and Pro Tiers
+    description: Free tier for core components with Pro tier for advanced patterns.
+    icon: check
+  - name: Motion Integration
+    description: Uses Framer Motion for smooth, production-ready animations.
+    icon: check
+  - name: Primitives and Patterns
+    description: Includes reusable primitives beyond isolated component demos.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: motion-primitives
+    name: Motion Primitives
+    description: Beautiful motion components for React with Tailwind CSS and Framer Motion.
+    stars: 5602
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.motion-primitives.com/
+  - slug: kokonutui
+    name: Kokonut UI
+    description: Open-source collection of animated and customizable React components.
+    stars: 2100
+    addedDaysAgo: 0
+    verified: true
+    website: https://kokonutui.com/

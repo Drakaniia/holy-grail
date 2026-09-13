@@ -1,0 +1,82 @@
+slug: orbkit
+name: Orbkit
+description: WebGL shader orbs for React agent states, installed through a shadcn registry.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 584
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://orbkit.zzzzshawn.cloud/
+docs: https://orbkit.zzzzshawn.cloud/getting-started/introduction
+sourceCode: https://github.com/zzzzshawn/orbkit
+icon: orbkit
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - webgl
+  - shader
+  - ai
+atGlance: WebGL shader orbs for AI and voice agent states, distributed via shadcn registry.
+fullDescription: >-
+  Orbkit is a React component library of WebGL shader orbs designed for AI and voice agent
+  states. Install an orb, keep the source, tune every uniform. Distributed through a shadcn
+  registry with 33 unique orbs including Hydrogen, Corona, Nimbus, and more. Free for
+  non-commercial use with attribution; MIT for the runtime and non-ported orbs.
+coreFeatures:
+  - name: WebGL Shader Orbs
+    description: 33 unique WebGL shader orbs for visual agent states — Hydrogen, Corona, Nimbus, and more.
+    icon: sparkles
+  - name: shadcn Registry
+    description: Install orbs directly via npx shadcn add with no setup required.
+    icon: check
+  - name: Customizable Uniforms
+    description: Keep the source and tune every shader uniform for your specific use case.
+    icon: check
+additionalFeatures:
+  - name: Agent-Ready
+    description: Designed specifically for AI and voice agent state visualization.
+    icon: sparkles
+  - name: MIT Runtime
+    description: The runtime and non-ported orbs are MIT licensed for broad reuse.
+    icon: check
+  - name: Source Ownership
+    description: Components live as local source files — no vendor lock-in.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion-primitives
+    name: Motion Primitives
+    description: Beautiful motion components for React with Tailwind CSS and Framer Motion.
+    stars: 5602
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.motion-primitives.com/
+  - slug: reactbits
+    name: React Bits
+    description: Collection of animated React components, hooks, and utilities for modern web interfaces.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.reactbits.dev/
