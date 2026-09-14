@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
+import { computed, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { Search, TrendingUp, Clock, Sparkles } from 'lucide-vue-next'
 import { useSkillsStore } from '@/stores/skills'
@@ -11,6 +11,7 @@ import { trackSearchQuery } from '@/lib/analytics'
 
 const route = useRoute()
 const store = useSkillsStore()
+const showNewlyAdded = shallowRef(false)
 void store.loadSkills()
 
 const category = computed(() => route.params.category as string)
@@ -58,6 +59,10 @@ const displaySkills = computed(() => {
     result = result.filter((skill) => skill.category === store.activeCategory)
   }
 
+  if (showNewlyAdded.value) {
+    result = result.filter((skill) => skill.addedDaysAgo <= 7)
+  }
+
   switch (store.activeTab) {
     case 'popular':
       result.sort((a, b) => b.views - a.views)
@@ -96,11 +101,13 @@ function setPage(page: number) {
 function clearFilters() {
   store.setSearchQuery('')
   store.setCategory('All')
+  showNewlyAdded.value = false
 }
 
 watch(category, () => {
   store.setCategory('All')
   store.setPage(1)
+  showNewlyAdded.value = false
 })
 
 watch(
@@ -190,6 +197,20 @@ watch(totalPages, (pages) => {
             </button>
           </div>
 
+          <!-- Newly Added toggle -->
+          <button
+            type="button"
+            @click="showNewlyAdded = !showNewlyAdded"
+            class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+            :class="
+              showNewlyAdded
+                ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
+                : 'border-gray-800 bg-[#1f1f1f] text-gray-400 hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white'
+            "
+          >
+            Newly Added
+          </button>
+
           <!-- Results count -->
           <div class="flex items-center gap-3">
             <span class="font-mono text-xs text-gray-500">
@@ -258,7 +279,9 @@ watch(totalPages, (pages) => {
 
       <!-- Empty State -->
       <div v-else class="py-16 text-center">
-        <p class="text-lg text-gray-500">No skills found matching your search.</p>
+        <p class="text-lg text-gray-500">
+          {{ showNewlyAdded ? 'No newly added skills found.' : 'No skills found matching your search.' }}
+        </p>
         <button @click="clearFilters" class="mt-4 text-sm text-accent-400 hover:text-accent-300">
           Clear filters
         </button>
