@@ -1,43 +1,29 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "include-v-in-tag": true,
+  "include-component-in-tag": true,
   "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "holy-grail",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "changelog-path": "CHANGELOG.md"
+    },
     "packages/cli": {
       "release-type": "node",
       "package-name": "grail-cli",
       "bump-minor-pre-major": true,
       "bump-patch-for-minor-pre-major": true,
-      "changelog-sections": [
-        { "type": "feat", "section": "Features" },
-        { "type": "fix", "section": "Bug Fixes" },
-        { "type": "perf", "section": "Performance Improvements" },
-        { "type": "docs", "section": "Documentation" },
-        { "type": "chore", "section": "Miscellaneous" },
-        { "type": "refactor", "section": "Code Refactoring", "hidden": true },
-        { "type": "test", "section": "Tests", "hidden": true }
-      ],
-      "extra-files": [
-        "Cargo.toml"
-      ]
+      "extra-files": ["Cargo.toml"]
     },
     "packages/mcp": {
       "release-type": "node",
       "package-name": "holy-grail-mcp",
       "bump-minor-pre-major": true,
-      "bump-patch-for-minor-pre-major": true,
-      "changelog-sections": [
-        { "type": "feat", "section": "Features" },
-        { "type": "fix", "section": "Bug Fixes" },
-        { "type": "perf", "section": "Performance Improvements" },
-        { "type": "docs", "section": "Documentation" },
-        { "type": "chore", "section": "Miscellaneous" },
-        { "type": "refactor", "section": "Code Refactoring", "hidden": true },
-        { "type": "test", "section": "Tests", "hidden": true }
-      ],
-      "extra-files": []
+      "bump-patch-for-minor-pre-major": true
     }
   },
   "separate-pull-requests": true,
-  "draft": true,
-  "prerelease": false,
-  "sequential-calls": false
+  "prerelease": false
 }
