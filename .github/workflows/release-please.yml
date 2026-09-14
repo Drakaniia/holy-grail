@@ -2,7 +2,7 @@ name: Release Please
 
 on:
   push:
-    branches: [grail]
+    branches: [main, grail]
 
 permissions:
   contents: write
@@ -11,19 +11,8 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    # Skip if this is a release PR merge to avoid race condition
-    # Release PR merges have commit messages like "chore(grail): release holy-grail-mcp 1.1.0"
-    if: "!contains(github.event.head_commit.message, 'release holy-grail')"
     steps:
       - uses: googleapis/release-please-action@v4
-        id: release
         with:
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    outputs:
-      releases_created: ${{ steps.release.outputs.releases_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
-      paths_released: ${{ steps.release.outputs.paths_released }}
