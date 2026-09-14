@@ -14,6 +14,7 @@ export interface ProjectSkillMeta {
   skillPath: string
   branch: string
   dateAdded: string
+  addedDaysAgo: number
   featured: boolean
   localPath: string
 }
@@ -80,6 +81,9 @@ export function skillMdToMeta(content: string, slug: string, localPath: string):
     skillPath: (fm?.skillPath as string) || '',
     branch: (fm?.branch as string) || 'main',
     dateAdded: (fm?.dateAdded as string) || new Date().toISOString(),
+    addedDaysAgo: (fm?.dateAdded as string)
+      ? Math.floor((Date.now() - new Date(fm.dateAdded as string).getTime()) / 86400000)
+      : 0,
     featured: (fm?.featured as boolean) || false,
     localPath,
   }
