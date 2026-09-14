@@ -29,6 +29,7 @@ const store = useSitesStore()
 void store.loadSites()
 
 const activeTimeRange = shallowRef<SiteTimeRange>('all')
+const showNewlyAdded = shallowRef(false)
 const isTimeRangeMenuOpen = shallowRef(false)
 const timeRangeMenu = useTemplateRef<HTMLDivElement>('timeRangeMenu')
 
@@ -185,6 +186,10 @@ const displaySites = computed(() => {
     result = result.filter((site) => site.category === store.activeCategory)
   }
 
+  if (showNewlyAdded.value) {
+    result = result.filter((site) => site.addedDaysAgo <= 7)
+  }
+
   return sortSitesForTab(result, store.activeTab)
 })
 
@@ -202,6 +207,7 @@ function setPage(page: number) {
 function clearFilters() {
   store.setSearchQuery('')
   store.setCategory('All')
+  showNewlyAdded.value = false
 }
 
 function getSortButtonClass(tab: SiteSortTab) {
@@ -220,6 +226,7 @@ function selectTimeRange(range: SiteTimeRange) {
 
   if (range === 'trending') {
     store.setTab('trending')
+    showNewlyAdded.value = false
     return
   }
 
@@ -260,6 +267,7 @@ watch([category, subcategory], () => {
   store.setCategory('All')
   store.setPage(1)
   activeTimeRange.value = 'all'
+  showNewlyAdded.value = false
 })
 
 watch(
@@ -341,6 +349,19 @@ watch(totalPages, (pages) => {
             >
               <List class="h-3.5 w-3.5" />
               Popular
+            </button>
+
+            <button
+              type="button"
+              @click="showNewlyAdded = !showNewlyAdded"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              :class="
+                showNewlyAdded
+                  ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
+                  : 'border-gray-800 bg-[#1f1f1f] text-gray-400 hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white'
+              "
+            >
+              Newly Added
             </button>
 
             <div ref="timeRangeMenu" class="relative shrink-0">
@@ -452,7 +473,9 @@ watch(totalPages, (pages) => {
       </div>
 
       <div v-else class="text-center py-16">
-        <p class="text-gray-500 text-lg">No sites found matching your search.</p>
+        <p class="text-gray-500 text-lg">
+          {{ showNewlyAdded ? 'No newly added sites found.' : 'No sites found matching your search.' }}
+        </p>
         <button @click="clearFilters" class="mt-4 text-accent-400 hover:text-accent-300 text-sm">
           Clear filters
         </button>
