@@ -1,0 +1,84 @@
+slug: vgpu
+name: vgpu
+description: WebGPU library designed for agents — typed shader imports, composable GPU API, and cross-runtime execution.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - CLI
+deployment:
+  - Cloud
+  - Local CLI
+website: https://vgpu.sh/
+docs: https://vgpu.sh/docs
+sourceCode: https://github.com/vercel-labs/vgpu
+icon: vgpu
+verified: false
+featured: false
+tags:
+  - webgpu
+  - shader
+  - gpu
+  - agent
+  - typescript
+  - cli
+  - mcp
+atGlance: WebGPU library designed for agents — typed shader imports and cross-runtime GPU API.
+fullDescription: >-
+  vgpu is a TypeScript library for WebGPU that provides typed WGSL imports, a composable GPU-first API,
+  and runs the same code across the browser, headless Node.js (Dawn-backed), and deterministic mock
+  environments. Built by Vercel Labs and designed to be agent-operable, it ships CLI tools, MCP servers,
+  and agent-ready documentation for LLM consumption.
+coreFeatures:
+  - name: Typed WGSL Imports
+    description: .wgsl files import and export like TypeScript modules with automatic binding reflection.
+    icon: sparkles
+  - name: Cross-Runtime Execution
+    description: Same API runs in browser, headless Node, and test/mock environments.
+    icon: layers
+  - name: Agent-Ready
+    description: Ships CLI, MCP server, agents.md, and llms.txt for coding agent consumption.
+    icon: bot
+additionalFeatures:
+  - name: Composable GPU API
+    description: Single Gpu context with explicit frame, pass, and effect primitives — no hidden state.
+    icon: check
+  - name: Small Bundle
+    description: Unused declarations pruned before minification — 25 KB gzipped for a fullscreen effect.
+    icon: rocket
+  - name: CLI and MCP
+    description: npx vgpu for docs, examples, and shader validation; public MCP endpoint at vgpu.sh/api/mcp.
+    icon: terminal
+similarTools:
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: orbkit
+    name: OrbKit
+    description: GPU-accelerated graphics toolkit for building 3D web experiences.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://orbkit.dev/
+  - slug: threeui
+    name: ThreeUI
+    description: Three.js-based UI components for immersive web interfaces.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://threeui.com/
