@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [grail]
+    branches: [main, grail]
   pull_request:
-    branches: [grail]
+    branches: [main, grail]
 
 jobs:
   ci:

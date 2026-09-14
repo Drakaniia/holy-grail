@@ -14,7 +14,7 @@ name: Deploy MCP
 
 on:
   push:
-    branches: [grail]
+    branches: [main, grail]
   workflow_dispatch:
 
 jobs:
