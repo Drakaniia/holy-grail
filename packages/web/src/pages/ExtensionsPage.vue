@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useExtensionsStore } from '@/stores/extensions'
-import { Star, Users } from 'lucide-vue-next'
+import { Star, Users, Sparkles } from 'lucide-vue-next'
 
 const route = useRoute()
 const store = useExtensionsStore()
 
 const parentCategory = computed(() => route.params.category as string)
 const subcategory = computed(() => route.params.subcategory as string | undefined)
+
+const showNewlyAdded = shallowRef(false)
 
 onMounted(() => {
   void store.loadExtensions()
@@ -37,10 +39,23 @@ const pageDescription = computed(() => {
 })
 
 const extensions = computed(() => {
-  if (subcategory.value) {
-    return store.getExtensionsBySubcategory(parentCategory.value, subcategory.value)
+  let result = subcategory.value
+    ? store.getExtensionsBySubcategory(parentCategory.value, subcategory.value)
+    : store.getExtensionsByParentCategory(parentCategory.value)
+
+  if (showNewlyAdded.value) {
+    result = result.filter((ext) => ext.addedDaysAgo <= 7)
   }
-  return store.getExtensionsByParentCategory(parentCategory.value)
+
+  return result
+})
+
+function clearFilters() {
+  showNewlyAdded.value = false
+}
+
+watch(parentCategory, () => {
+  showNewlyAdded.value = false
 })
 
 function formatNumber(num: number): string {
@@ -67,7 +82,24 @@ function formatNumber(num: number): string {
     </div>
 
     <div class="max-w-7xl mx-auto px-4 py-5 sm:px-6 sm:py-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="mb-4 flex items-center gap-3">
+        <button
+          type="button"
+          @click="showNewlyAdded = !showNewlyAdded"
+          class="flex items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+          :class="
+            showNewlyAdded
+              ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
+              : 'border-gray-800 bg-[#1f1f1f] text-gray-400 hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white'
+          "
+        >
+          <Sparkles class="h-3.5 w-3.5" />
+          Newly Added
+        </button>
+        <span class="text-xs text-gray-500">{{ extensions.length }} extensions</span>
+      </div>
+
+      <div v-if="extensions.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <RouterLink
           v-for="extension in extensions"
           :key="extension.slug"
@@ -100,6 +132,15 @@ function formatNumber(num: number): string {
             </div>
           </div>
         </RouterLink>
+      </div>
+
+      <div v-else class="text-center py-16">
+        <p class="text-gray-500 text-lg">
+          {{ showNewlyAdded ? 'No newly added extensions found.' : 'No extensions found.' }}
+        </p>
+        <button @click="clearFilters" class="mt-4 text-accent-400 hover:text-accent-300 text-sm">
+          Clear filters
+        </button>
       </div>
     </div>
   </div>
