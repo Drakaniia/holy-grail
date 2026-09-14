@@ -99,7 +99,10 @@ function formatNumber(num: number): string {
         <span class="text-xs text-gray-500">{{ extensions.length }} extensions</span>
       </div>
 
-      <div v-if="extensions.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div
+        v-if="extensions.length > 0"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
         <RouterLink
           v-for="extension in extensions"
           :key="extension.slug"

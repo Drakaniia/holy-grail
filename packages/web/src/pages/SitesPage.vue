@@ -474,7 +474,9 @@ watch(totalPages, (pages) => {
 
       <div v-else class="text-center py-16">
         <p class="text-gray-500 text-lg">
-          {{ showNewlyAdded ? 'No newly added sites found.' : 'No sites found matching your search.' }}
+          {{
+            showNewlyAdded ? 'No newly added sites found.' : 'No sites found matching your search.'
+          }}
         </p>
         <button @click="clearFilters" class="mt-4 text-accent-400 hover:text-accent-300 text-sm">
           Clear filters
