@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Drakaniia/holy-grail/compare/holy-grail-mcp-v1.2.0...holy-grail-mcp-v1.3.0) (2026-09-14)
+
+
+### Features
+
+* **skills:** add `addedDaysAgo` field to skill data model and build generators ([1fa8ada](https://github.com/Drakaniia/holy-grail/commit/1fa8adac60a64cd29b205d7d90277165ec4e891c))
+
 ## [1.2.0](https://github.com/Drakaniia/holy-grail/compare/holy-grail-mcp-v1.1.0...holy-grail-mcp-v1.2.0) (2026-09-13)
 
 
