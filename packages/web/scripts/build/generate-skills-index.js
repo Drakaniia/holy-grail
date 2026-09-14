@@ -157,6 +157,9 @@ async function discoverSkills(owner, repo) {
       addedBy: fm.addedBy || '',
       featured: Boolean(fm.featured),
       dateAdded: fm.dateAdded || '',
+      addedDaysAgo: fm.dateAdded
+        ? Math.floor((Date.now() - new Date(fm.dateAdded).getTime()) / 86400000)
+        : 0,
       hasLocalContent: false,
     })
   }

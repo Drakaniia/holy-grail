@@ -123,6 +123,7 @@ export interface Skill {
   addedBy: string
   featured: boolean
   dateAdded: string
+  addedDaysAgo: number
   hasLocalContent: boolean
 }
 

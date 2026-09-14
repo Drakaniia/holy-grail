@@ -19,6 +19,7 @@ export interface Skill {
   addedBy: string
   featured: boolean
   dateAdded: string
+  addedDaysAgo: number
   hasLocalContent: boolean
   /** 'index' | 'project' | 'global' */
   sourceType?: 'index' | 'project' | 'global'
