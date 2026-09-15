@@ -43,7 +43,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "~1.80.0",
     "eslint-plugin-vue": "~10.11.0",
-    "globals": "^17.11.0",
+    "globals": "^17.12.0",
     "oxlint": "~1.82.0",
     "prettier": "3.9.6",
     "turbo": "^2",
