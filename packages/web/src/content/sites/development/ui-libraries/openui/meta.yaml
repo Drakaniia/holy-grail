@@ -1,0 +1,82 @@
+slug: openui
+name: OpenUI - The Open Standard for Generative UI
+description: Open standard for generative UI that lets AI agents stream interactive React components with 67% fewer tokens.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 7016
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.openui.com
+docs: https://www.openui.com/docs
+sourceCode: https://github.com/thesysdev/openui
+icon: openui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - ui-libraries
+  - generative-ui
+  - ai
+  - react
+atGlance: Generative UI framework for AI agents with streaming interactive components.
+fullDescription: >-
+  OpenUI is the open standard for generative UI by Thesys. It lets AI agents compose and stream
+  interactive interfaces — charts, forms, tables, dashboards, and cards — instead of plain markdown,
+  with 67% fewer tokens and 3x faster rendering than JSON. Features a compact line-oriented language,
+  React/Vue/Svelte/React Native runtimes, live data via MCP/tools, and Cloud Gateway plus Observability
+  for production reliability.
+coreFeatures:
+  - name: Generative UI Language
+    description: Compact streaming-first language that renders components progressively as the model responds.
+    icon: sparkles
+  - name: Cross-Platform Rendering
+    description: One response renders natively in React, Vue, Svelte, React Native, and email.
+    icon: layers
+  - name: Live Data Integration
+    description: Interfaces query MCP servers and tools at runtime so data stays current.
+    icon: database
+additionalFeatures:
+  - name: Token Efficient
+    description: Up to 67% fewer tokens than JSON with 3x faster render times.
+    icon: rocket
+  - name: Safe by Default
+    description: Model composes only your predefined components and never runs arbitrary code.
+    icon: check
+  - name: Production Cloud
+    description: Gateway validates and repairs output mid-stream with provider fallbacks and analytics.
+    icon: check
+similarTools:
+  - slug: heroui
+    name: HeroUI
+    description: Modern React component library with accessible primitives and themes.
+    stars: 29676
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, and Vue.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/

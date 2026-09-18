@@ -1,0 +1,82 @@
+slug: boardui
+name: BoardUI - React Design System for Dashboards
+description: React and Tailwind CSS v4 design system with 72 components, 17 chart cards, and agentic chat UI for dashboards.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.boardui.com
+docs: https://www.boardui.com/installation
+sourceCode: ""
+icon: boardui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - ui-libraries
+  - react
+  - dashboard
+  - tailwind
+atGlance: Dashboard and agentic UI design system with 72 components you own as source.
+fullDescription: >-
+  BoardUI is a React and Tailwind CSS v4 design system with 72 components, 17 chart cards,
+  8 full-page templates, and 400+ design tokens, crafted in Figma. Components ship as source
+  you own — not a runtime package — via npx boardui add. Includes agentic interface parts
+  like composer with attachments, streaming task lists, thinking indicators, and token meters,
+  plus MCP server, agent skill, and shadcn CLI compatibility.
+coreFeatures:
+  - name: Dashboard Components
+    description: 72 components, 17 chart cards, and 8 templates for data-heavy apps.
+    icon: layout
+  - name: Source You Own
+    description: Installs .tsx source into your project — editable code, not a locked package.
+    icon: check
+  - name: Agentic Interfaces
+    description: Composer, streaming tasks, thinking indicators, and token meters for AI chat.
+    icon: sparkles
+additionalFeatures:
+  - name: MCP Server
+    description: Read-only HTTP and stdio MCP with tools for listing and installing components.
+    icon: check
+  - name: Agent Skill
+    description: SKILL.md with full catalog, theming, and page patterns for coding agents.
+    icon: check
+  - name: shadcn Compatible
+    description: Registry follows shadcn schema — install via shadcn CLI with registry URLs.
+    icon: rocket
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: heroui
+    name: HeroUI
+    description: Modern React component library with accessible primitives and themes.
+    stars: 29676
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/
+  - slug: chakra-ui
+    name: Chakra UI
+    description: Modular React component library with accessible primitives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://chakra-ui.com/

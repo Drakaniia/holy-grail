@@ -1,0 +1,81 @@
+slug: bencho
+name: Bencho - UI Interactive Blocks
+description: Library of interactive UI blocks you can explore, tweak, tune, and take straight into your projects.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://bencho.dev
+docs: https://bencho.dev
+sourceCode: ""
+icon: bencho
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - ui-libraries
+  - ui
+  - blocks
+  - interactive
+atGlance: Interactive UI blocks you can tune, bench, and copy into your projects.
+fullDescription: >-
+  Bencho is a library of interactive UI blocks — magnetic selects, dragging balls, carousels,
+  liquid toggles, tilt cards, and more — that are live, not mocked. Explore, tweak parameters,
+  bench variations, and take the code straight into your projects. New blocks ship weekly with
+  dark mode, sound support, and a shareable bench for collaboration.
+coreFeatures:
+  - name: Live Interactive Blocks
+    description: Every block is live and tweakable — not static screenshots or mocks.
+    icon: sparkles
+  - name: Tune and Bench
+    description: Adjust parameters, tune behavior, and bench variations before copying.
+    icon: palette
+  - name: Copy to Project
+    description: Take tuned blocks straight into your codebase with ready-to-use code.
+    icon: rocket
+additionalFeatures:
+  - name: Weekly Drops
+    description: New interactive blocks added every week to the growing catalog.
+    icon: check
+  - name: Dark Mode
+    description: Supports light and dark themes with sound toggle for playful feedback.
+    icon: check
+  - name: Shareable Bench
+    description: Bench and share block configurations with your team.
+    icon: check
+similarTools:
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, and Vue.
+    stars: 32012
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 114722
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: heroui
+    name: HeroUI
+    description: Modern React component library with accessible primitives and themes.
+    stars: 29676
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/

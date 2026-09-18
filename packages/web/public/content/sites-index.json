@@ -6984,6 +6984,111 @@
     ]
   },
   {
+    "slug": "openui",
+    "name": "OpenUI - The Open Standard for Generative UI",
+    "description": "Open standard for generative UI that lets AI agents stream interactive React components with 67% fewer tokens.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 7016,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.openui.com",
+    "docs": "https://www.openui.com/docs",
+    "sourceCode": "https://github.com/thesysdev/openui",
+    "icon": "openui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "ui-libraries",
+      "generative-ui",
+      "ai",
+      "react"
+    ],
+    "atGlance": "Generative UI framework for AI agents with streaming interactive components.",
+    "fullDescription": "OpenUI is the open standard for generative UI by Thesys. It lets AI agents compose and stream interactive interfaces — charts, forms, tables, dashboards, and cards — instead of plain markdown, with 67% fewer tokens and 3x faster rendering than JSON. Features a compact line-oriented language, React/Vue/Svelte/React Native runtimes, live data via MCP/tools, and Cloud Gateway plus Observability for production reliability.",
+    "coreFeatures": [
+      {
+        "name": "Generative UI Language",
+        "description": "Compact streaming-first language that renders components progressively as the model responds.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Cross-Platform Rendering",
+        "description": "One response renders natively in React, Vue, Svelte, React Native, and email.",
+        "icon": "layers"
+      },
+      {
+        "name": "Live Data Integration",
+        "description": "Interfaces query MCP servers and tools at runtime so data stays current.",
+        "icon": "database"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Token Efficient",
+        "description": "Up to 67% fewer tokens than JSON with 3x faster render times.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Safe by Default",
+        "description": "Model composes only your predefined components and never runs arbitrary code.",
+        "icon": "check"
+      },
+      {
+        "name": "Production Cloud",
+        "description": "Gateway validates and repairs output mid-stream with provider fallbacks and analytics.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives and themes.",
+        "stars": 29676,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, and Vue.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      }
+    ]
+  },
+  {
     "slug": "prisma",
     "name": "Prisma",
     "description": "Prisma bookmarked for tooling resources.",
@@ -23042,6 +23147,111 @@
     ]
   },
   {
+    "slug": "appthetics",
+    "name": "Appthetics - AI Mobile UI Generator",
+    "description": "AI-powered mobile UI generator that turns text prompts into editable high-fidelity app screens and App Store screenshots.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.appthetics.com",
+    "docs": "https://www.appthetics.com",
+    "sourceCode": "",
+    "icon": "appthetics",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "ai",
+      "mobile-ui",
+      "figma"
+    ],
+    "atGlance": "Prompt-to-mobile UI generator with editable high-fidelity screens.",
+    "fullDescription": "Appthetics is an AI-powered mobile UI/UX design tool that generates professional high-fidelity app screens from natural language prompts. Edit text, layout, colors, spacing, and imagery, then export to Figma as editable layers, to code, or to AI coding tools like Claude, Codex, and v0. Includes an App Store Screenshot Maker, commercial usage rights, and priority support.",
+    "coreFeatures": [
+      {
+        "name": "Prompt to Mobile UI",
+        "description": "Describe your app idea and generate high-fidelity mobile screens instantly.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Editable Designs",
+        "description": "Tweak text, layout, colors, spacing, and imagery after generation.",
+        "icon": "palette"
+      },
+      {
+        "name": "App Store Screenshot Maker",
+        "description": "Create polished App Store screenshots from your generated designs.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Export to Anything",
+        "description": "Export to Figma, ready-to-use code, Claude, Codex, and v0.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Figma Export",
+        "description": "Export designs as fully editable Figma layers for handoff.",
+        "icon": "layers"
+      },
+      {
+        "name": "Commercial Usage",
+        "description": "Single subscription includes commercial rights and priority support.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "holygrid-studio",
+        "name": "Holy Grid Studio - Framer Templates for Creatives",
+        "description": "Premium and free Framer website templates for portfolios and landing pages.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://holygrid.studio"
+      },
+      {
+        "slug": "jitter",
+        "name": "Jitter",
+        "description": "Fast and simple motion design tool for creatives.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://jitter.video/"
+      },
+      {
+        "slug": "flowbase",
+        "name": "Flowbase",
+        "description": "Webflow templates and design resources for builders.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.flowbase.co/"
+      }
+    ]
+  },
+  {
     "slug": "artlist",
     "name": "Infographics by CB Sounddesign | SFX - Artlist",
     "description": "Infographics by CB Sounddesign | SFX - Artlist bookmarked for design tools resources.",
@@ -26797,6 +27007,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://impeccable.style/"
+      }
+    ]
+  },
+  {
+    "slug": "scrolltide",
+    "name": "Scrolltide - Cinematic Website Prompts & Templates",
+    "description": "Curated library of 79+ scroll-driven templates, prompts, and shaders for cinematic websites that move like the tide.",
+    "category": "Design Tools",
+    "parentCategory": "design",
+    "subcategory": "design-tools",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.scrolltide.co",
+    "docs": "https://www.scrolltide.co",
+    "sourceCode": "",
+    "icon": "scrolltide",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "design-tools",
+      "templates",
+      "prompts",
+      "scroll"
+    ],
+    "atGlance": "79 scroll-driven website prompts and templates for cinematic, AI-ready sites.",
+    "fullDescription": "Scrolltide is a curated library of scroll-driven website prompts, templates, components, shaders, sections, and UI screens for building cinematic sites with React, Vite, Next.js, Tailwind, Framer Motion, GSAP, Three.js, WebGL, and Lenis. Copy a prompt, paste it into Claude, Cursor, or v0, and launch a production-ready Next.js site the same day. Features 79 templates, 16 components, 55 shaders, and weekly fresh drops for 3,100+ builders.",
+    "coreFeatures": [
+      {
+        "name": "Prompt Library",
+        "description": "79 cinematic templates and curated prompts engineered for Claude, Cursor, and v0.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "GPU Shaders",
+        "description": "55 animated gradient, halftone, swirl, and flame shaders rendered on the GPU.",
+        "icon": "palette"
+      },
+      {
+        "name": "Copy Paste Launch",
+        "description": "Pick a prompt, paste into your AI, and ship a production-ready Next.js site same day.",
+        "icon": "rocket"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Modular Building Blocks",
+        "description": "16 components, 18 sections, and 14 UI screens to drop into existing pages.",
+        "icon": "layers"
+      },
+      {
+        "name": "Fresh Drops Weekly",
+        "description": "New prompts and templates added every Friday with personal and client usage rights.",
+        "icon": "check"
+      },
+      {
+        "name": "Production Ready",
+        "description": "Real motion with Framer Motion, GSAP, Three.js, and Lenis — no AI tells.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "holygrid-studio",
+        "name": "Holy Grid Studio - Framer Templates for Creatives",
+        "description": "Premium and free Framer website templates for portfolios and landing pages.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://holygrid.studio"
+      },
+      {
+        "slug": "flowbase",
+        "name": "Flowbase",
+        "description": "Webflow templates and design resources for builders.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.flowbase.co/"
+      },
+      {
+        "slug": "jitter",
+        "name": "Jitter",
+        "description": "Fast and simple motion design tool for creatives.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://jitter.video/"
       }
     ]
   },
@@ -39297,6 +39612,111 @@
     ]
   },
   {
+    "slug": "bencho",
+    "name": "Bencho - UI Interactive Blocks",
+    "description": "Library of interactive UI blocks you can explore, tweak, tune, and take straight into your projects.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://bencho.dev",
+    "docs": "https://bencho.dev",
+    "sourceCode": "",
+    "icon": "bencho",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "ui-libraries",
+      "ui",
+      "blocks",
+      "interactive"
+    ],
+    "atGlance": "Interactive UI blocks you can tune, bench, and copy into your projects.",
+    "fullDescription": "Bencho is a library of interactive UI blocks — magnetic selects, dragging balls, carousels, liquid toggles, tilt cards, and more — that are live, not mocked. Explore, tweak parameters, bench variations, and take the code straight into your projects. New blocks ship weekly with dark mode, sound support, and a shareable bench for collaboration.",
+    "coreFeatures": [
+      {
+        "name": "Live Interactive Blocks",
+        "description": "Every block is live and tweakable — not static screenshots or mocks.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Tune and Bench",
+        "description": "Adjust parameters, tune behavior, and bench variations before copying.",
+        "icon": "palette"
+      },
+      {
+        "name": "Copy to Project",
+        "description": "Take tuned blocks straight into your codebase with ready-to-use code.",
+        "icon": "rocket"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Weekly Drops",
+        "description": "New interactive blocks added every week to the growing catalog.",
+        "icon": "check"
+      },
+      {
+        "name": "Dark Mode",
+        "description": "Supports light and dark themes with sound toggle for playful feedback.",
+        "icon": "check"
+      },
+      {
+        "name": "Shareable Bench",
+        "description": "Bench and share block configurations with your team.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, and Vue.",
+        "stars": 32012,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives and themes.",
+        "stars": 29676,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
     "slug": "blockus",
     "name": "blockus",
     "description": "Production-ready React blocks for shadcn/ui.",
@@ -39399,6 +39819,111 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
+    "slug": "boardui",
+    "name": "BoardUI - React Design System for Dashboards",
+    "description": "React and Tailwind CSS v4 design system with 72 components, 17 chart cards, and agentic chat UI for dashboards.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.boardui.com",
+    "docs": "https://www.boardui.com/installation",
+    "sourceCode": "",
+    "icon": "boardui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "ui-libraries",
+      "react",
+      "dashboard",
+      "tailwind"
+    ],
+    "atGlance": "Dashboard and agentic UI design system with 72 components you own as source.",
+    "fullDescription": "BoardUI is a React and Tailwind CSS v4 design system with 72 components, 17 chart cards, 8 full-page templates, and 400+ design tokens, crafted in Figma. Components ship as source you own — not a runtime package — via npx boardui add. Includes agentic interface parts like composer with attachments, streaming task lists, thinking indicators, and token meters, plus MCP server, agent skill, and shadcn CLI compatibility.",
+    "coreFeatures": [
+      {
+        "name": "Dashboard Components",
+        "description": "72 components, 17 chart cards, and 8 templates for data-heavy apps.",
+        "icon": "layout"
+      },
+      {
+        "name": "Source You Own",
+        "description": "Installs .tsx source into your project — editable code, not a locked package.",
+        "icon": "check"
+      },
+      {
+        "name": "Agentic Interfaces",
+        "description": "Composer, streaming tasks, thinking indicators, and token meters for AI chat.",
+        "icon": "sparkles"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "MCP Server",
+        "description": "Read-only HTTP and stdio MCP with tools for listing and installing components.",
+        "icon": "check"
+      },
+      {
+        "name": "Agent Skill",
+        "description": "SKILL.md with full catalog, theming, and page patterns for coding agents.",
+        "icon": "check"
+      },
+      {
+        "name": "shadcn Compatible",
+        "description": "Registry follows shadcn schema — install via shadcn CLI with registry URLs.",
+        "icon": "rocket"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 114722,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "heroui",
+        "name": "HeroUI",
+        "description": "Modern React component library with accessible primitives and themes.",
+        "stars": 29676,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.heroui.com/"
+      },
+      {
+        "slug": "chakra-ui",
+        "name": "Chakra UI",
+        "description": "Modular React component library with accessible primitives.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://chakra-ui.com/"
       }
     ]
   },

@@ -1,0 +1,82 @@
+slug: scrolltide
+name: Scrolltide - Cinematic Website Prompts & Templates
+description: Curated library of 79+ scroll-driven templates, prompts, and shaders for cinematic websites that move like the tide.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.scrolltide.co
+docs: https://www.scrolltide.co
+sourceCode: ""
+icon: scrolltide
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - templates
+  - prompts
+  - scroll
+atGlance: 79 scroll-driven website prompts and templates for cinematic, AI-ready sites.
+fullDescription: >-
+  Scrolltide is a curated library of scroll-driven website prompts, templates, components, shaders,
+  sections, and UI screens for building cinematic sites with React, Vite, Next.js, Tailwind, Framer
+  Motion, GSAP, Three.js, WebGL, and Lenis. Copy a prompt, paste it into Claude, Cursor, or v0,
+  and launch a production-ready Next.js site the same day. Features 79 templates, 16 components,
+  55 shaders, and weekly fresh drops for 3,100+ builders.
+coreFeatures:
+  - name: Prompt Library
+    description: 79 cinematic templates and curated prompts engineered for Claude, Cursor, and v0.
+    icon: sparkles
+  - name: GPU Shaders
+    description: 55 animated gradient, halftone, swirl, and flame shaders rendered on the GPU.
+    icon: palette
+  - name: Copy Paste Launch
+    description: Pick a prompt, paste into your AI, and ship a production-ready Next.js site same day.
+    icon: rocket
+additionalFeatures:
+  - name: Modular Building Blocks
+    description: 16 components, 18 sections, and 14 UI screens to drop into existing pages.
+    icon: layers
+  - name: Fresh Drops Weekly
+    description: New prompts and templates added every Friday with personal and client usage rights.
+    icon: check
+  - name: Production Ready
+    description: Real motion with Framer Motion, GSAP, Three.js, and Lenis — no AI tells.
+    icon: check
+similarTools:
+  - slug: holygrid-studio
+    name: Holy Grid Studio - Framer Templates for Creatives
+    description: Premium and free Framer website templates for portfolios and landing pages.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://holygrid.studio
+  - slug: flowbase
+    name: Flowbase
+    description: Webflow templates and design resources for builders.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.flowbase.co/
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/

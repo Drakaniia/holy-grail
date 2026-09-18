@@ -1,0 +1,81 @@
+slug: appthetics
+name: Appthetics - AI Mobile UI Generator
+description: AI-powered mobile UI generator that turns text prompts into editable high-fidelity app screens and App Store screenshots.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.appthetics.com
+docs: https://www.appthetics.com
+sourceCode: ""
+icon: appthetics
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - ai
+  - mobile-ui
+  - figma
+atGlance: Prompt-to-mobile UI generator with editable high-fidelity screens.
+fullDescription: >-
+  Appthetics is an AI-powered mobile UI/UX design tool that generates professional high-fidelity
+  app screens from natural language prompts. Edit text, layout, colors, spacing, and imagery, then
+  export to Figma as editable layers, to code, or to AI coding tools like Claude, Codex, and v0.
+  Includes an App Store Screenshot Maker, commercial usage rights, and priority support.
+coreFeatures:
+  - name: Prompt to Mobile UI
+    description: Describe your app idea and generate high-fidelity mobile screens instantly.
+    icon: sparkles
+  - name: Editable Designs
+    description: Tweak text, layout, colors, spacing, and imagery after generation.
+    icon: palette
+  - name: App Store Screenshot Maker
+    description: Create polished App Store screenshots from your generated designs.
+    icon: check
+additionalFeatures:
+  - name: Export to Anything
+    description: Export to Figma, ready-to-use code, Claude, Codex, and v0.
+    icon: rocket
+  - name: Figma Export
+    description: Export designs as fully editable Figma layers for handoff.
+    icon: layers
+  - name: Commercial Usage
+    description: Single subscription includes commercial rights and priority support.
+    icon: check
+similarTools:
+  - slug: holygrid-studio
+    name: Holy Grid Studio - Framer Templates for Creatives
+    description: Premium and free Framer website templates for portfolios and landing pages.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://holygrid.studio
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: flowbase
+    name: Flowbase
+    description: Webflow templates and design resources for builders.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.flowbase.co/
