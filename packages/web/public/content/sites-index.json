@@ -31806,6 +31806,112 @@
     ]
   },
   {
+    "slug": "uiinspoo",
+    "name": "Uiinspoo - Daily Curated UI Design Inspiration",
+    "description": "Daily curated gallery of UI designs, motion interactions, and product interfaces from top designers.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://uiinspoo.com",
+    "docs": "https://uiinspoo.com",
+    "sourceCode": "",
+    "icon": "uiinspoo",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "ui",
+      "ui-design",
+      "interface",
+      "motion"
+    ],
+    "atGlance": "Daily curated UI inspiration with designer profiles and interaction details.",
+    "fullDescription": "Uiinspoo is a daily curated UI design inspiration gallery showcasing polished product interfaces, micro-interactions, and motion UI from real designers. Browse hundreds of hand-picked shots across mobile apps, buttons, sidebars, chat layouts, and cards, filter by categories or explore designer profiles with avatar and shot collections. Includes Best on X curation, saved collections, and searchable discovery to collect ideas for your next build.",
+    "coreFeatures": [
+      {
+        "name": "Curated UI Gallery",
+        "description": "Daily hand-picked interface shots across mobile, web, and motion interaction styles.",
+        "icon": "palette"
+      },
+      {
+        "name": "Designer Profiles",
+        "description": "Explore creators with avatar, shot counts, and grouped collections by component.",
+        "icon": "users"
+      },
+      {
+        "name": "Categories & Discovery",
+        "description": "Filter by categories, Best on X, and component types like Button, Card, and Chat.",
+        "icon": "layers"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Saved Collections",
+        "description": "Save favorite inspirations and revisit them in your personal saved gallery.",
+        "icon": "bookmark"
+      },
+      {
+        "name": "Motion & Micro UI",
+        "description": "Study polished interactions, micro-animations, and interface transitions.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Daily Updates",
+        "description": "Fresh UI inspiration added daily for your next product or landing page.",
+        "icon": "refresh-cw"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "godly",
+        "name": "Godly - Astronomically good web design inspiration",
+        "description": "Curated gallery of outstanding web design examples.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://godly.website/"
+      },
+      {
+        "slug": "mobbin",
+        "name": "Mobbin - UI & UX design inspiration for mobile & web apps",
+        "description": "Curated library of real-world UI and UX design patterns.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mobbin.com/"
+      },
+      {
+        "slug": "siteinspire",
+        "name": "Best Website Design Inspiration | Siteinspire",
+        "description": "Best Website Design Inspiration | Siteinspire bookmarked for inspiration resources.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://www.siteinspire.com/"
+      }
+    ]
+  },
+  {
     "slug": "aura-design-md-systems-for-ai-web-design-aura",
     "name": "DESIGN.md Systems for AI Web Design | Aura",
     "description": "DESIGN.md Systems for AI Web Design | Aura bookmarked for design md resources.",
