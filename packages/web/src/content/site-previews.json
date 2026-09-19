@@ -245,6 +245,16 @@
     "height": 600,
     "bytes": 37658
   },
+  "appthetics": {
+    "image": "/previews/appthetics.webp",
+    "small": "/previews/appthetics-sm.webp",
+    "sourceUrl": "https://www.appthetics.com/",
+    "capturedAt": "2026-09-19T09:31:02.045Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 11048,
+    "fallback": true
+  },
   "appwrite": {
     "image": "/previews/appwrite.webp",
     "small": "/previews/appwrite-sm.webp",
@@ -390,6 +400,15 @@
     "height": 600,
     "bytes": 47542
   },
+  "bencho": {
+    "image": "/previews/bencho.webp",
+    "small": "/previews/bencho-sm.webp",
+    "sourceUrl": "https://bencho.dev/",
+    "capturedAt": "2026-09-19T09:30:58.919Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 10044
+  },
   "better-t-stack": {
     "image": "/previews/better-t-stack.webp",
     "small": "/previews/better-t-stack-sm.webp",
@@ -434,6 +453,15 @@
     "width": 960,
     "height": 600,
     "bytes": 18830
+  },
+  "boardui": {
+    "image": "/previews/boardui.webp",
+    "small": "/previews/boardui-sm.webp",
+    "sourceUrl": "https://www.boardui.com/",
+    "capturedAt": "2026-09-19T09:31:02.435Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 35962
   },
   "bolt": {
     "image": "/previews/bolt.webp",
@@ -2809,6 +2837,15 @@
     "height": 600,
     "bytes": 32562
   },
+  "openui": {
+    "image": "/previews/openui.webp",
+    "small": "/previews/openui-sm.webp",
+    "sourceUrl": "https://www.openui.com/",
+    "capturedAt": "2026-09-19T09:30:53.162Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 10248
+  },
   "orbkit": {
     "image": "/previews/orbkit.webp",
     "small": "/previews/orbkit-sm.webp",
@@ -3381,6 +3418,15 @@
     "height": 600,
     "bytes": 37120
   },
+  "scrolltide": {
+    "image": "/previews/scrolltide.webp",
+    "small": "/previews/scrolltide-sm.webp",
+    "sourceUrl": "https://www.scrolltide.co/",
+    "capturedAt": "2026-09-19T09:30:52.002Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34552
+  },
   "seesaw": {
     "image": "/previews/seesaw.webp",
     "small": "/previews/seesaw-sm.webp",
@@ -3934,6 +3980,15 @@
     "height": 600,
     "bytes": 21196
   },
+  "uiinspoo": {
+    "image": "/previews/uiinspoo.webp",
+    "small": "/previews/uiinspoo-sm.webp",
+    "sourceUrl": "https://uiinspoo.com/",
+    "capturedAt": "2026-09-19T09:30:30.535Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33744
+  },
   "uisfx": {
     "image": "/previews/uisfx.webp",
     "small": "/previews/uisfx-sm.webp",
@@ -4095,6 +4150,15 @@
     "width": 960,
     "height": 600,
     "bytes": 33110
+  },
+  "vgpu": {
+    "image": "/previews/vgpu.webp",
+    "small": "/previews/vgpu-sm.webp",
+    "sourceUrl": "https://vgpu.sh/",
+    "capturedAt": "2026-09-19T09:31:02.924Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 8622
   },
   "vibeui": {
     "image": "/previews/vibeui.webp",
