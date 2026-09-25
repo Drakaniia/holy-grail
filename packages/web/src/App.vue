@@ -28,6 +28,7 @@ const isSidebarContentCollapsed = shallowRef(storedSidebarCollapsed)
 const shouldReserveCollapsedRail = shallowRef(false)
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
+const isCommandPaletteInstant = shallowRef(false)
 const isDesktopShell = shallowRef(
   typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches,
 )
@@ -68,9 +69,10 @@ function toggleMobileSidebar() {
   isMobileSidebarOpen.value = !isMobileSidebarOpen.value
 }
 
-function openCommandPalette() {
+function openCommandPalette(instant = false) {
   if (!shouldRenderAppShell.value) return
 
+  isCommandPaletteInstant.value = instant
   isCommandPaletteOpen.value = true
 }
 
@@ -157,7 +159,8 @@ function handleGlobalShortcut(event: KeyboardEvent) {
 
   if ((event.ctrlKey || event.metaKey) && key === 'k') {
     event.preventDefault()
-    openCommandPalette()
+    // Keyboard-initiated opens skip the transition entirely — this path runs hundreds of times a day.
+    openCommandPalette(true)
   }
 }
 
@@ -271,7 +274,11 @@ onUnmounted(() => {
       </main>
     </div>
 
-    <CommandPalette v-if="isCommandPaletteOpen" v-model:open="isCommandPaletteOpen" />
+    <CommandPalette
+      v-if="isCommandPaletteOpen"
+      v-model:open="isCommandPaletteOpen"
+      :instant="isCommandPaletteInstant"
+    />
   </div>
 
   <AuthDialogRoot />
@@ -365,6 +372,19 @@ onUnmounted(() => {
   .desktop-sidebar-panel {
     animation: none;
     transition: none;
+  }
+
+  /* The mobile drawer fades in place instead of sliding across the viewport. */
+  .mobile-sidebar-enter-active,
+  .mobile-sidebar-leave-active,
+  .mobile-sidebar-enter-active > div,
+  .mobile-sidebar-leave-active > div {
+    transition: opacity 160ms ease;
+  }
+
+  .mobile-sidebar-enter-from > div,
+  .mobile-sidebar-leave-to > div {
+    transform: none;
   }
 }
 </style>

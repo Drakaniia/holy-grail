@@ -290,7 +290,7 @@ function renderStars(rating: number): string {
             v-for="tool in extension.similarTools"
             :key="tool.slug"
             :to="`/extensions/${tool.slug}`"
-            class="ext-detail-card border rounded-xl p-4 hover:border-gray-700 transition-all group block"
+            class="ext-detail-card border rounded-xl p-4 hover:border-gray-700 transition-[border-color,transform] duration-150 ease-out-quint active:scale-[0.98] group block"
           >
             <div class="flex items-start gap-3 mb-3">
               <div class="flex-1 min-w-0">

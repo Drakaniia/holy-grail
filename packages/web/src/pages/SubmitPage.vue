@@ -638,11 +638,19 @@ function resetForm() {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* Cross-fade between steps instead of sliding them 28px sideways. */
   .publish-slide-forward-enter-active,
   .publish-slide-forward-leave-active,
   .publish-slide-back-enter-active,
   .publish-slide-back-leave-active {
-    transition: none;
+    transition: opacity 180ms ease;
+  }
+
+  .publish-slide-forward-enter-from,
+  .publish-slide-forward-leave-to,
+  .publish-slide-back-enter-from,
+  .publish-slide-back-leave-to {
+    transform: none;
   }
 }
 </style>

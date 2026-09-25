@@ -7,6 +7,17 @@ import { useSmartSearch, type SmartSearchResult } from '@/composables/useSmartSe
 import { trackSearchQuery } from '@/lib/analytics'
 
 const isOpen = defineModel<boolean>('open', { default: false })
+
+const props = withDefaults(
+  defineProps<{
+    /** Skip the enter/leave transition for keyboard-initiated opens (⌘K). */
+    instant?: boolean
+  }>(),
+  {
+    instant: false,
+  },
+)
+
 const router = useRouter()
 const query = shallowRef('')
 const activeIndex = shallowRef(0)
@@ -174,6 +185,7 @@ function openResult(result: SmartSearchResult | undefined) {
       <div
         v-if="isOpen"
         class="cp-shell fixed inset-0 z-[90] flex items-start justify-center overflow-hidden px-4 pb-4 pt-[15vh] sm:pt-[18vh]"
+        :class="{ 'cp-shell--instant': props.instant }"
         @keydown.esc.prevent="closeDialog"
       >
         <!-- Backdrop -->
@@ -396,6 +408,30 @@ function openResult(result: SmartSearchResult | undefined) {
   transform: translateY(-6px) scale(0.99);
 }
 
+/* ---- Instant opens ----
+   ⌘K is pressed hundreds of times a day, so that path gets no animation at all —
+   a 150ms transition is latency on the most-repeated action in the app.
+   The enter-from/leave-to states are also neutralised, otherwise the panel still
+   paints one frame in its hidden state before the transition-less swap lands.
+*/
+
+.cp-shell--instant.command-palette-enter-active,
+.cp-shell--instant.command-palette-leave-active,
+.cp-shell--instant .cp-panel,
+.cp-shell--instant .cp-backdrop,
+.cp-shell--instant.command-palette-enter-active .cp-panel,
+.cp-shell--instant.command-palette-leave-active .cp-panel {
+  transition: none;
+}
+
+.cp-shell--instant.command-palette-enter-from,
+.cp-shell--instant.command-palette-leave-to,
+.cp-shell--instant.command-palette-enter-from .cp-panel,
+.cp-shell--instant.command-palette-leave-to .cp-panel {
+  opacity: 1;
+  transform: none;
+}
+
 /* ---- Light mode ----
    Clean custom properties approach instead of !important spam.
 */
@@ -473,13 +509,18 @@ function openResult(result: SmartSearchResult | undefined) {
   overflow: hidden;
 }
 
-/* Reduce motion */
+/* Reduce motion: keep the cross-fade, drop the movement. */
 @media (prefers-reduced-motion: reduce) {
   .command-palette-enter-active,
   .command-palette-leave-active,
   .command-palette-enter-active .cp-panel,
   .command-palette-leave-active .cp-panel {
-    transition: none;
+    transition: opacity 120ms ease;
+  }
+
+  .command-palette-enter-from .cp-panel,
+  .command-palette-leave-to .cp-panel {
+    transform: none;
   }
 }
 </style>

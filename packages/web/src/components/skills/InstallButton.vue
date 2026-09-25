@@ -39,7 +39,7 @@ const icon = computed(() => {
 <template>
   <button
     :disabled="isInstalled || status === 'installing' || status === 'copying'"
-    class="inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all"
+    class="inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-[color,background-color,border-color,transform] duration-150 ease-out-quint active:scale-[0.98]"
     :class="
       isInstalled
         ? 'border border-green-800 bg-green-900/20 text-green-400'

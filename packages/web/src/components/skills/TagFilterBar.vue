@@ -22,7 +22,7 @@ const showClear = computed(() => props.selectedTags.length > 0)
     <button
       v-for="tag in allTags"
       :key="tag"
-      class="rounded-full px-3 py-1 text-xs font-medium transition-all"
+      class="rounded-full px-3 py-1 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
       :class="
         selectedTags.includes(tag)
           ? 'bg-accent-600/20 text-accent-400 ring-1 ring-accent-500/50'

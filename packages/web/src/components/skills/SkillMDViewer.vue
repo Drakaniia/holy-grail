@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, shallowRef, useTemplateRef } from 'vue'
 import { ChevronDown, ChevronUp } from 'lucide-vue-next'
 
-defineProps<{
+const props = defineProps<{
   contentHtml: string
   expanded: boolean
   loading: boolean
@@ -11,6 +12,45 @@ defineProps<{
 const emit = defineEmits<{
   'toggle-expand': []
 }>()
+
+/** The collapsed preview height, matching the previous `max-h-96` clamp. */
+const COLLAPSED_HEIGHT_PX = 384
+
+const contentInner = useTemplateRef<HTMLElement>('contentInner')
+const contentHeight = shallowRef<number | null>(null)
+let resizeObserver: ResizeObserver | undefined
+
+/**
+ * `max-height: none` is not interpolable, so expanding to it snapped regardless of the
+ * transition duration. Measuring the content instead gives the browser two concrete
+ * pixel values to interpolate — and a short SKILL.md (or the loading/error states) no
+ * longer gets padded out to the collapsed clamp.
+ */
+function measureContentHeight() {
+  const inner = contentInner.value
+  contentHeight.value = inner ? Math.ceil(inner.getBoundingClientRect().height) : null
+}
+
+const viewportStyle = computed(() => {
+  const expandedHeight = props.expanded ? contentHeight.value : null
+
+  return { maxHeight: `${expandedHeight ?? COLLAPSED_HEIGHT_PX}px` }
+})
+
+onMounted(() => {
+  measureContentHeight()
+
+  if (typeof ResizeObserver === 'undefined') return
+
+  resizeObserver = new ResizeObserver(measureContentHeight)
+
+  if (contentInner.value) resizeObserver.observe(contentInner.value)
+})
+
+onBeforeUnmount(() => {
+  resizeObserver?.disconnect()
+  resizeObserver = undefined
+})
 </script>
 
 <template>
@@ -29,11 +69,8 @@ const emit = defineEmits<{
     </div>
 
     <!-- Content -->
-    <div
-      class="overflow-hidden transition-all duration-300"
-      :class="expanded ? 'max-h-none' : 'max-h-96'"
-    >
-      <div class="border-t border-gray-800 px-6 py-4">
+    <div class="skill-md-viewport" :style="viewportStyle">
+      <div ref="contentInner" class="border-t border-gray-800 px-6 py-4">
         <!-- Loading -->
         <div v-if="loading" class="space-y-3 py-8">
           <div class="h-4 w-3/5 rounded bg-gray-800" />
@@ -138,5 +175,17 @@ const emit = defineEmits<{
 /* Collapsed gradient container */
 .skill-content-wrapper {
   position: relative;
+}
+
+/* Collapsed preview → full content, animated between two measured pixel values. */
+.skill-md-viewport {
+  overflow: hidden;
+  transition: max-height 300ms var(--ease-out-quint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-md-viewport {
+    transition: none;
+  }
 }
 </style>

@@ -58,6 +58,43 @@ watch(
   },
 )
 
+const panelEl = useTemplateRef<HTMLElement>('panelEl')
+const PANEL_MORPH_MS = 300
+const PANEL_MORPH_EASING = 'cubic-bezier(0.23, 1, 0.32, 1)'
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
+let panelMorphAnimation: Animation | undefined
+
+/**
+ * The panel swaps between a content-sized login box and a fixed 580px two-column signup
+ * layout. `height: auto → 580px` is not interpolable, so only the width used to animate
+ * while the box snapped vertically. Measure both ends and animate the height ourselves.
+ */
+async function morphPanelHeight() {
+  const panel = panelEl.value
+
+  if (!panel || typeof window === 'undefined') return
+  if (window.matchMedia(REDUCED_MOTION_QUERY).matches) return
+
+  // Read the outgoing height before Vue patches in the next mode's classes.
+  const from = panel.offsetHeight
+
+  await nextTick()
+
+  const target = panelEl.value
+  const to = target?.offsetHeight
+
+  // Below the md breakpoint the panel is a fixed 100dvh box, so there is nothing to morph.
+  if (!target || !from || !to || from === to) return
+
+  panelMorphAnimation?.cancel()
+  panelMorphAnimation = target.animate([{ height: `${from}px` }, { height: `${to}px` }], {
+    duration: PANEL_MORPH_MS,
+    easing: PANEL_MORPH_EASING,
+  })
+}
+
+watch(() => props.mode, morphPanelHeight)
+
 // Body scroll lock
 watch(
   () => true,
@@ -83,6 +120,8 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  panelMorphAnimation?.cancel()
+
   if (typeof document === 'undefined' || previousBodyOverflow === null) return
   document.body.style.overflow = previousBodyOverflow
   previousBodyOverflow = null
@@ -127,7 +166,8 @@ function handlePasswordReset() {
 
       <!-- Panel Shell -->
       <section
-        class="auth-dialog-panel relative flex w-full flex-col overflow-hidden bg-[#181616] border border-zinc-800/80 shadow-[0_30px_90px_rgba(0,0,0,0.85)] transition-all duration-300 rounded-3xl"
+        ref="panelEl"
+        class="auth-dialog-panel relative flex w-full flex-col overflow-hidden bg-[#181616] border border-zinc-800/80 shadow-[0_30px_90px_rgba(0,0,0,0.85)] rounded-3xl"
         :class="[
           isSignup
             ? 'max-w-[440px] md:max-w-[860px] md:grid md:grid-cols-2 md:h-[580px]'
@@ -390,6 +430,14 @@ function handlePasswordReset() {
 }
 .auth-dialog-panel {
   max-height: min(640px, calc(100dvh - 2rem));
+  /* Only the width morphs here — the height is measured and animated in morphPanelHeight. */
+  transition: max-width 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-dialog-panel {
+    transition: none;
+  }
 }
 
 @media (max-width: 767px) {

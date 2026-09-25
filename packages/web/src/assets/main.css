@@ -3,6 +3,9 @@
 @theme {
   --font-sans: 'Geist Sans', 'sans-serif';
 
+  /* Strong ease-out for UI interactions — the built-in `ease-out` is too weak to read as intentional */
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+
   --color-accent-50: #fff7ed;
   --color-accent-100: #ffeed5;
   --color-accent-200: #ffd9b3;
@@ -111,6 +114,12 @@ html.light .hg-skeleton::after {
 
 @media (prefers-reduced-motion: reduce) {
   .hg-skeleton::after {
+    animation: none;
+  }
+
+  /* Freeze the looping skeleton pulse — a static block still reads as loading,
+     and this is a perpetual oscillation on every loading route. */
+  .animate-pulse {
     animation: none;
   }
 }
@@ -317,17 +326,6 @@ html.light .nav-icon-button--light-white:hover {
   border-color: var(--mocha-border-strong) !important;
   background: var(--mocha-surface-strong) !important;
   color: var(--mocha-text) !important;
-}
-
-html.light .github-stars {
-  border: 1px solid var(--mocha-border) !important;
-  background: var(--mocha-surface) !important;
-  color: var(--mocha-text) !important;
-}
-
-html.light .github-stars:hover {
-  border-color: var(--mocha-border-strong) !important;
-  background: var(--mocha-surface-strong) !important;
 }
 
 html.light .navbar-search__input {

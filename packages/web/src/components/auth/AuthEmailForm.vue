@@ -145,7 +145,7 @@ function handleForgotPassword() {
         </div>
         <div class="h-1 w-full bg-zinc-800 rounded-full overflow-hidden">
           <div
-            class="h-full transition-all duration-300"
+            class="h-full transition-[width] duration-300"
             :class="passwordStrength.className"
             :style="{ width: passwordStrength.width }"
           ></div>

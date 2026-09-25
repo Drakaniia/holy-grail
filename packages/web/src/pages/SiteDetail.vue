@@ -570,7 +570,7 @@ async function copyInstallCommand() {
             v-for="tool in site.similarTools"
             :key="tool.slug"
             :to="`/sites/${tool.slug}`"
-            class="border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all group block"
+            class="border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-[border-color,transform] duration-150 ease-out-quint active:scale-[0.98] group block"
             style="background: linear-gradient(to right, #1f1f1f 0%, #1f1f1f 100%)"
           >
             <div class="flex items-start gap-3 mb-3">

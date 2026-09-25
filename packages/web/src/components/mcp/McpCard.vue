@@ -19,7 +19,7 @@ const transportColor: Record<string, string> = {
 <template>
   <RouterLink
     :to="`/mcp/${server.slug}`"
-    class="group relative block rounded-xl border border-gray-800 bg-[#1f1f1f] p-4 transition-all hover:border-gray-700"
+    class="group relative block rounded-xl border border-gray-800 bg-[#1f1f1f] p-4 transition-[border-color,transform] duration-150 ease-out-quint hover:border-gray-700 active:scale-[0.98]"
   >
     <div class="flex items-start gap-3">
       <div class="flex-1 min-w-0">

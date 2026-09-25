@@ -44,7 +44,7 @@ const instructionText = computed(() =>
     <div class="mb-6 inline-flex rounded-lg border border-gray-700 bg-[#1f1f1f] p-0.5">
       <button
         @click="segment = 'agent'"
-        class="rounded-md px-4 py-1.5 text-sm font-medium transition-all"
+        class="rounded-md px-4 py-1.5 text-sm font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
         :class="
           segment === 'agent' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-gray-300'
         "
@@ -53,7 +53,7 @@ const instructionText = computed(() =>
       </button>
       <button
         @click="segment = 'human'"
-        class="rounded-md px-4 py-1.5 text-sm font-medium transition-all"
+        class="rounded-md px-4 py-1.5 text-sm font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
         :class="
           segment === 'human' ? 'bg-gray-700 text-white' : 'text-gray-400 hover:text-gray-300'
         "
@@ -72,7 +72,7 @@ const instructionText = computed(() =>
           >{{ installCommand }}</pre>
         <button
           @click="copyCommand"
-          class="flex shrink-0 items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-all"
+          class="flex shrink-0 items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-out-quint active:scale-[0.98]"
           :class="
             copied
               ? 'border-green-800 text-green-400'

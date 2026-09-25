@@ -27,7 +27,7 @@ function formatNumber(num: number): string {
 </script>
 
 <template>
-  <article class="site-card group relative overflow-hidden rounded-xl border transition-all">
+  <article class="site-card group relative overflow-hidden rounded-xl border">
     <div class="absolute right-4 top-4 z-10">
       <BookmarkButton :resource="bookmarkResource" />
     </div>
@@ -89,10 +89,17 @@ function formatNumber(num: number): string {
   border-color: #1f2937;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f;
+  transition:
+    border-color 160ms var(--ease-out-quint),
+    transform 160ms var(--ease-out-quint);
 }
 
 .site-card:hover {
   border-color: #374151;
+}
+
+.site-card:active {
+  transform: scale(0.98);
 }
 
 .site-card__title {

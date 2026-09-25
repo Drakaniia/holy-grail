@@ -118,7 +118,7 @@ function formatNumber(num: number): string {
             v-for="cat in categorySummaries"
             :key="cat.key"
             :to="`/extensions/${cat.key}`"
-            class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
+            class="ext-card group relative overflow-hidden rounded-xl border p-5"
           >
             <div class="flex items-start justify-between mb-3">
               <h3
@@ -159,7 +159,7 @@ function formatNumber(num: number): string {
               v-for="extension in featuredExtensions"
               :key="extension.slug"
               :to="`/extensions/${extension.slug}`"
-              class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
+              class="ext-card group relative overflow-hidden rounded-xl border p-5"
             >
               <div class="flex min-w-0 items-start gap-3">
                 <div class="flex-1 min-w-0">
@@ -200,7 +200,7 @@ function formatNumber(num: number): string {
               v-for="extension in extensions"
               :key="extension.slug"
               :to="`/extensions/${extension.slug}`"
-              class="ext-card group relative overflow-hidden rounded-xl border p-5 transition-all"
+              class="ext-card group relative overflow-hidden rounded-xl border p-5"
             >
               <div class="flex min-w-0 items-start gap-3">
                 <div class="flex-1 min-w-0">
@@ -240,10 +240,17 @@ function formatNumber(num: number): string {
   border-color: #1f2937;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.025) 100%), #1f1f1f;
+  transition:
+    border-color 160ms var(--ease-out-quint),
+    transform 160ms var(--ease-out-quint);
 }
 
 .ext-card:hover {
   border-color: #374151;
+}
+
+.ext-card:active {
+  transform: scale(0.98);
 }
 
 .ext-card-skeleton {

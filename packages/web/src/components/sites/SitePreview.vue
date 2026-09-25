@@ -70,7 +70,7 @@ watch(
           class="site-preview-overlay absolute inset-0 flex items-end justify-end p-4 transition-colors"
         >
           <span
-            class="site-preview-visit-button btn-primary inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-lg transition-all"
+            class="site-preview-visit-button btn-primary inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-lg transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-out-quint active:scale-[0.97]"
           >
             <ExternalLink class="w-3.5 h-3.5" />
             Visit site
@@ -90,7 +90,7 @@ watch(
           <ImageOff class="w-12 h-12 mx-auto mb-3 text-gray-700" />
           <p class="text-sm">Preview will appear after running the screenshot generator.</p>
           <span
-            class="site-preview-visit-button btn-primary mt-4 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-all"
+            class="site-preview-visit-button btn-primary mt-4 inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-out-quint active:scale-[0.97]"
           >
             <ExternalLink class="w-3.5 h-3.5" />
             Visit site
@@ -145,5 +145,11 @@ watch(
   background-color: var(--color-accent-500) !important;
   color: white !important;
   transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html.light .group:hover .site-preview-visit-button) {
+    transform: none;
+  }
 }
 </style>

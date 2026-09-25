@@ -55,7 +55,7 @@ function selectPage(page: number) {
     <button
       type="button"
       :disabled="currentPage === 1"
-      class="h-8 rounded-lg border border-gray-800 bg-[#1f1f1f] px-2 text-xs font-medium text-gray-400 transition-all hover:border-accent-700 hover:text-accent-300 disabled:cursor-not-allowed disabled:opacity-50 sm:h-10 sm:px-3 sm:text-sm"
+      class="h-8 rounded-lg border border-gray-800 bg-[#1f1f1f] px-2 text-xs font-medium text-gray-400 transition-[color,border-color,background-color,transform] duration-150 ease-out-quint active:scale-[0.96] hover:border-accent-700 hover:text-accent-300 disabled:cursor-not-allowed disabled:opacity-50 sm:h-10 sm:px-3 sm:text-sm"
       @click="selectPage(currentPage - 1)"
     >
       <span class="sm:hidden">Prev</span>
@@ -66,7 +66,7 @@ function selectPage(page: number) {
       <button
         v-if="typeof page === 'number'"
         type="button"
-        class="h-8 w-8 rounded-lg text-xs font-medium transition-all sm:h-10 sm:w-10 sm:text-sm"
+        class="h-8 w-8 rounded-lg text-xs font-medium transition-[color,border-color,background-color,transform] duration-150 ease-out-quint active:scale-[0.96] sm:h-10 sm:w-10 sm:text-sm"
         :class="
           currentPage === page
             ? 'bg-accent-600 text-white shadow-[0_0_18px_rgba(255,122,0,0.22)]'
@@ -89,7 +89,7 @@ function selectPage(page: number) {
     <button
       type="button"
       :disabled="currentPage === totalPages"
-      class="h-8 rounded-lg border border-gray-800 bg-[#1f1f1f] px-2 text-xs font-medium text-gray-400 transition-all hover:border-accent-700 hover:text-accent-300 disabled:cursor-not-allowed disabled:opacity-50 sm:h-10 sm:px-3 sm:text-sm"
+      class="h-8 rounded-lg border border-gray-800 bg-[#1f1f1f] px-2 text-xs font-medium text-gray-400 transition-[color,border-color,background-color,transform] duration-150 ease-out-quint active:scale-[0.96] hover:border-accent-700 hover:text-accent-300 disabled:cursor-not-allowed disabled:opacity-50 sm:h-10 sm:px-3 sm:text-sm"
       @click="selectPage(currentPage + 1)"
     >
       Next

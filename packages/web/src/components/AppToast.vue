@@ -77,4 +77,17 @@ function iconClasses(tone: ToastTone) {
   opacity: 0;
   transform: translateY(-0.5rem);
 }
+
+/* Reduced motion keeps the fade (it aids comprehension) and drops the travel. */
+@media (prefers-reduced-motion: reduce) {
+  .toast-enter-active,
+  .toast-leave-active {
+    transition: opacity 180ms ease;
+  }
+
+  .toast-enter-from,
+  .toast-leave-to {
+    transform: none;
+  }
+}
 </style>

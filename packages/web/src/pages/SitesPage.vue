@@ -336,7 +336,7 @@ watch(totalPages, (pages) => {
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
               placeholder="Search sites by name or category"
-              class="w-full bg-[#1f1f1f] border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-all"
+              class="w-full bg-[#1f1f1f] border border-gray-700 rounded-lg py-2.5 pl-10 pr-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
             />
           </div>
 
@@ -344,7 +344,7 @@ watch(totalPages, (pages) => {
             <button
               type="button"
               @click="store.setTab('popular')"
-              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="getSortButtonClass('popular')"
             >
               <List class="h-3.5 w-3.5" />
@@ -354,7 +354,7 @@ watch(totalPages, (pages) => {
             <button
               type="button"
               @click="showNewlyAdded = !showNewlyAdded"
-              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="
                 showNewlyAdded
                   ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
@@ -367,7 +367,7 @@ watch(totalPages, (pages) => {
             <div ref="timeRangeMenu" class="relative shrink-0">
               <button
                 type="button"
-                class="flex items-center gap-2 rounded-md border border-gray-800 bg-[#1f1f1f] px-3 py-2 text-xs font-medium text-gray-300 transition-all hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white"
+                class="flex items-center gap-2 rounded-md border border-gray-800 bg-[#1f1f1f] px-3 py-2 text-xs font-medium text-gray-300 transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint hover:border-gray-700 hover:bg-[#1f1f1f] hover:text-white"
                 :aria-expanded="isTimeRangeMenuOpen"
                 aria-haspopup="menu"
                 @click="toggleTimeRangeMenu"
@@ -405,7 +405,7 @@ watch(totalPages, (pages) => {
             <button
               type="button"
               @click="store.setTab('trending')"
-              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="getSortButtonClass('trending')"
             >
               <Shuffle class="h-3.5 w-3.5" />
@@ -415,7 +415,7 @@ watch(totalPages, (pages) => {
             <button
               type="button"
               @click="store.setTab('newest')"
-              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="getSortButtonClass('newest')"
             >
               <Calendar class="h-3.5 w-3.5" />
@@ -424,7 +424,7 @@ watch(totalPages, (pages) => {
 
             <RouterLink
               to="/publish"
-              class="flex shrink-0 items-center gap-1.5 rounded-md bg-accent-600 px-3 py-2 text-xs font-semibold text-white transition-all hover:bg-accent-500"
+              class="flex shrink-0 items-center gap-1.5 rounded-md bg-accent-600 px-3 py-2 text-xs font-semibold text-white transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-out-quint hover:bg-accent-500 active:scale-[0.96]"
             >
               <Send class="h-3.5 w-3.5" />
               Publish
@@ -437,7 +437,7 @@ watch(totalPages, (pages) => {
             v-for="filter in categoryFilters"
             :key="filter"
             @click="store.setCategory(filter)"
-            class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all"
+            class="px-3 py-1.5 rounded-lg text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
             :class="
               store.activeCategory === filter
                 ? 'bg-accent-600 text-white'

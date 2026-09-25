@@ -82,7 +82,7 @@ function getAuthorColor(name: string): string {
 <template>
   <RouterLink
     :to="`/skills/${skill.slug}`"
-    class="group relative block overflow-hidden rounded-xl border border-gray-800 bg-[#1f1f1f] transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-600 hover:shadow-lg hover:shadow-black/20"
+    class="group relative block overflow-hidden rounded-xl border border-gray-800 bg-[#1f1f1f] transition-[border-color,background-color,box-shadow,translate,scale] duration-300 ease-out-quint hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 hover:border-gray-600 hover:shadow-lg hover:shadow-black/20 active:scale-[0.98]"
   >
     <!-- Colored top accent strip -->
     <div class="h-0.5 w-full bg-gradient-to-r" :class="[accentColor.from, accentColor.to]" />

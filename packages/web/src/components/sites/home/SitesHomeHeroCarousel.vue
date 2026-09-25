@@ -642,10 +642,21 @@ function onPointerCancel() {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* Cross-fade instead of sliding: keep the opacity swap, drop the 18px travel. */
   .hero-slide-next-enter-active,
   .hero-slide-next-leave-active,
   .hero-slide-prev-enter-active,
-  .hero-slide-prev-leave-active,
+  .hero-slide-prev-leave-active {
+    transition: opacity 200ms ease;
+  }
+
+  .hero-slide-next-enter-from,
+  .hero-slide-next-leave-to,
+  .hero-slide-prev-enter-from,
+  .hero-slide-prev-leave-to {
+    transform: none;
+  }
+
   .hero-carousel__cta,
   .hero-carousel__preview,
   .hero-carousel__indicator {

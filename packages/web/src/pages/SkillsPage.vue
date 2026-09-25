@@ -157,7 +157,7 @@ watch(totalPages, (pages) => {
               @input="store.setSearchQuery(store.searchQuery)"
               type="text"
               placeholder="Search skills..."
-              class="w-full rounded-lg border border-gray-700 bg-[#1f1f1f] py-2.5 pl-12 pr-4 text-sm text-white placeholder-gray-500 transition-all focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500"
+              class="w-full rounded-lg border border-gray-700 bg-[#1f1f1f] py-2.5 pl-12 pr-4 text-sm text-white placeholder-gray-500 transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500"
             />
           </div>
 
@@ -167,7 +167,7 @@ watch(totalPages, (pages) => {
           >
             <button
               @click="store.setTab('popular')"
-              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="
                 store.activeTab === 'popular' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
               "
@@ -177,7 +177,7 @@ watch(totalPages, (pages) => {
             </button>
             <button
               @click="store.setTab('trending')"
-              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="
                 store.activeTab === 'trending' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
               "
@@ -187,7 +187,7 @@ watch(totalPages, (pages) => {
             </button>
             <button
               @click="store.setTab('recent')"
-              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all"
+              class="flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
               :class="
                 store.activeTab === 'recent' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
               "
@@ -201,7 +201,7 @@ watch(totalPages, (pages) => {
           <button
             type="button"
             @click="showNewlyAdded = !showNewlyAdded"
-            class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all"
+            class="flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
             :class="
               showNewlyAdded
                 ? 'border-zinc-600 bg-[#1f1f1f] text-white shadow-sm shadow-[#1f1f1f]/40'
@@ -227,7 +227,7 @@ watch(totalPages, (pages) => {
             v-for="filter in categoryFilters"
             :key="filter"
             @click="store.setCategory(filter)"
-            class="rounded-lg px-3 py-1.5 text-xs font-medium transition-all"
+            class="rounded-lg px-3 py-1.5 text-xs font-medium transition-[color,background-color,border-color,box-shadow] duration-150 ease-out-quint"
             :class="
               store.activeCategory === filter
                 ? 'bg-accent-600 text-white'

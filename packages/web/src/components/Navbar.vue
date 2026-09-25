@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import {
-  computed,
-  defineAsyncComponent,
-  nextTick,
-  onMounted,
-  onUnmounted,
-  shallowRef,
-  watch,
-} from 'vue'
+import { computed, defineAsyncComponent, shallowRef } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Menu, Moon, Search, Sparkles, SunMedium, UserRound, X } from 'lucide-vue-next'
 import { useSitesStore, type Site } from '@/stores/sites'
@@ -17,7 +9,6 @@ import { useTheme } from '@/composables/useTheme'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import { useAuthDialog } from '@/composables/useAuthDialog'
 import GitHubMark from '@/components/icons/GitHubMark.vue'
-import { scheduleIdleTask } from '@/lib/idle'
 import holyGrailLogo from '@/assets/holy-grail.png'
 
 const props = withDefaults(
@@ -44,57 +35,32 @@ const route = useRoute()
 const router = useRouter()
 const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
 const GITHUB_REPO_URL = 'https://github.com/Drakaniia/holy-grail'
-const GITHUB_REPO_API_URL = 'https://api.github.com/repos/Drakaniia/holy-grail'
-const starCount = shallowRef<number | null>(null)
-const isStarCountLoading = shallowRef(false)
-const animatedCount = shallowRef(0)
-const hasCountAnimated = shallowRef(false)
-const isCountAnimating = shallowRef(false)
+const TOOLTIP_WARM_DELAY_MS = 400
+const isTooltipWarm = shallowRef(false)
+let tooltipWarmTimer: number | undefined
 
-function springOut(t: number): number {
-  const c1 = 1.70158
-  const c3 = c1 + 1
-  return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2)
+function clearTooltipWarmTimer() {
+  if (typeof window !== 'undefined' && tooltipWarmTimer !== undefined) {
+    window.clearTimeout(tooltipWarmTimer)
+    tooltipWarmTimer = undefined
+  }
 }
 
-function animateCount(from: number, to: number, duration: number) {
-  return new Promise<void>((resolve) => {
-    const start = performance.now()
-    isCountAnimating.value = true
+function scheduleTooltipWarm() {
+  clearTooltipWarmTimer()
 
-    function frame(now: number) {
-      const elapsed = now - start
-      const progress = Math.min(elapsed / duration, 1)
-      const eased = springOut(progress)
-      const current = Math.round(from + (to - from) * eased)
-      animatedCount.value = current
+  if (typeof window === 'undefined') return
 
-      if (progress < 1) {
-        requestAnimationFrame(frame)
-      } else {
-        animatedCount.value = to
-        isCountAnimating.value = false
-        resolve()
-      }
-    }
-
-    requestAnimationFrame(frame)
-  })
+  tooltipWarmTimer = window.setTimeout(() => {
+    tooltipWarmTimer = undefined
+    isTooltipWarm.value = true
+  }, TOOLTIP_WARM_DELAY_MS)
 }
 
-watch(
-  starCount,
-  (newVal) => {
-    if (newVal === null || newVal === undefined) return
-    if (hasCountAnimated.value) return
-    hasCountAnimated.value = true
-
-    nextTick(() => {
-      void animateCount(0, newVal, 2000)
-    })
-  },
-  { once: true },
-)
+function resetTooltipWarm() {
+  clearTooltipWarmTimer()
+  isTooltipWarm.value = false
+}
 
 const collectionLabels: Record<string, string> = {
   '3d': '3D',
@@ -178,11 +144,6 @@ const isHomePage = computed(() => route.path === '/')
 
 const shortcutKey = '⌘'
 const shortcutAriaKey = 'Control+K Meta+K'
-let cancelStarCountLoad: (() => void) | undefined
-
-interface GitHubRepositoryResponse {
-  stargazers_count?: number
-}
 
 function getRandomIndex(length: number) {
   return Math.floor(Math.random() * length)
@@ -227,47 +188,6 @@ async function openRandomSite() {
   await router.push({ name: 'site-detail', params: { slug: randomSite.slug } })
 }
 
-async function loadStarCount() {
-  isStarCountLoading.value = true
-
-  try {
-    const response = await fetch(GITHUB_REPO_API_URL, {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        'X-GitHub-Api-Version': '2022-11-28',
-      },
-      cache: 'no-store',
-    })
-
-    if (!response.ok) return
-
-    const data = (await response.json()) as GitHubRepositoryResponse
-
-    if (typeof data.stargazers_count === 'number') {
-      starCount.value = data.stargazers_count
-    }
-  } catch {
-    starCount.value = null
-  } finally {
-    isStarCountLoading.value = false
-  }
-}
-
-onMounted(() => {
-  cancelStarCountLoad = scheduleIdleTask(
-    () => {
-      void loadStarCount()
-    },
-    {
-      delay: 4500,
-      timeout: 9000,
-    },
-  )
-})
-
-onUnmounted(() => {
-  cancelStarCountLoad?.()
-})
 </script>
 
 <template>
@@ -277,7 +197,7 @@ onUnmounted(() => {
     <div class="flex min-w-0 flex-1 items-center gap-2">
       <button
         type="button"
-        class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-gray-800 bg-[#1f1f1f] text-gray-300 transition-colors hover:border-gray-700 hover:text-white md:hidden"
+        class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-gray-800 bg-[#1f1f1f] text-gray-300 transition-[color,background-color,border-color,transform] duration-150 ease-out-quint hover:border-gray-700 hover:text-white active:scale-[0.96] md:hidden"
         :aria-expanded="props.mobileMenuOpen"
         aria-controls="mobile-sidebar"
         :aria-label="props.mobileMenuOpen ? 'Close navigation' : 'Open navigation'"
@@ -332,7 +252,12 @@ onUnmounted(() => {
       </span>
     </div>
 
-    <div class="flex shrink-0 items-center gap-1.5 sm:gap-3 md:gap-4">
+    <div
+      class="navbar-actions flex shrink-0 items-center gap-1.5 sm:gap-3 md:gap-4"
+      :data-tooltip-warm="isTooltipWarm"
+      @pointerenter="scheduleTooltipWarm"
+      @pointerleave="resetTooltipWarm"
+    >
       <div class="navbar-search hidden md:flex" role="search">
         <Search class="navbar-search__icon" />
         <input
@@ -405,7 +330,7 @@ onUnmounted(() => {
       <template v-else>
         <button
           type="button"
-          class="inline-flex h-8 items-center gap-2 rounded-lg border border-gray-700 px-2 text-sm font-semibold transition-colors hover:bg-[#1f1f1f] sm:px-3"
+          class="inline-flex h-8 items-center gap-2 rounded-lg border border-gray-700 px-2 text-sm font-semibold transition-[color,background-color,border-color,transform] duration-150 ease-out-quint hover:bg-[#1f1f1f] active:scale-[0.96] sm:px-3"
           @click="openAuthDialog('login')"
         >
           <UserRound class="h-4 w-4 text-gray-400" />
@@ -413,7 +338,7 @@ onUnmounted(() => {
         </button>
         <button
           type="button"
-          class="inline-flex h-8 items-center gap-2 rounded-lg border border-accent-500/40 bg-accent-500/10 px-2 text-sm font-semibold text-accent-200 transition-colors hover:bg-accent-500/20 sm:px-3"
+          class="inline-flex h-8 items-center gap-2 rounded-lg border border-accent-500/40 bg-accent-500/10 px-2 text-sm font-semibold text-accent-200 transition-[color,background-color,border-color,transform] duration-150 ease-out-quint hover:bg-accent-500/20 active:scale-[0.96] sm:px-3"
           @click="openAuthDialog('signup')"
         >
           <UserRound class="h-4 w-4 text-accent-300" />
@@ -437,16 +362,20 @@ onUnmounted(() => {
   background: #272727;
   color: #b7bcc4;
   transition:
-    border-color 160ms ease,
-    background-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
+    border-color 160ms var(--ease-out-quint),
+    background-color 160ms var(--ease-out-quint),
+    color 160ms var(--ease-out-quint),
+    transform 160ms var(--ease-out-quint);
 }
 
 .nav-icon-button:hover {
   border-color: #4b5563;
   background: #303030;
   color: #ffffff;
+}
+
+.nav-icon-button:active {
+  transform: scale(0.96);
 }
 
 .navbar-search {
@@ -557,8 +486,8 @@ onUnmounted(() => {
   opacity: 0;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
   transition:
-    opacity 140ms ease,
-    transform 140ms ease;
+    opacity 140ms var(--ease-out-quint),
+    transform 140ms var(--ease-out-quint);
 }
 
 .tooltip-shell:hover .tooltip-bubble,
@@ -567,93 +496,20 @@ onUnmounted(() => {
   transform: translate(-50%, 0);
 }
 
-.github-stars:hover .star-icon-wrapper {
-  animation: star-pop 720ms ease both;
+/* Hold the first tooltip back so it can't fire by accident on the way to something else. */
+.tooltip-shell:hover .tooltip-bubble {
+  transition-delay: 400ms, 400ms;
+}/* Once one tooltip has been open, the rest are instant while the pointer stays in the toolbar. */
+.navbar-actions[data-tooltip-warm] .tooltip-shell:hover .tooltip-bubble {
+  transition-delay: 0ms, 0ms;
+  transition-duration: 0ms, 0ms;
 }
 
-.github-star-count-skeleton {
-  display: inline-block;
-  height: 0.875rem;
-  width: 2.5rem;
-  border-radius: 9999px;
-}
-
-.github-star-count {
-  position: relative;
-}
-
-.digit-roller-group {
-  display: inline-flex;
-  align-items: center;
-  gap: 1px;
-}
-
-.digit-roller {
-  display: inline-block;
-  height: 1.2rem;
-  overflow: hidden;
-  vertical-align: middle;
-  line-height: 1.2rem;
-  font-variant-numeric: tabular-nums;
-}
-
-.digit-strip {
-  display: block;
-  transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-  will-change: transform;
-}
-
-.digit-strip > span {
-  display: block;
-  height: 1.2rem;
-  line-height: 1.2rem;
-  text-align: center;
-}
-
-.star-icon-wrapper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  animation: star-breathe 2.2s ease-in-out infinite;
-  transform-origin: center;
-}
-
-.star-fill-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.github-star-icon {
-  display: block;
-}
-
-@keyframes star-breathe {
-  0%,
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-
-  50% {
-    transform: scale(1.12) rotate(8deg);
-  }
-}
-
-@keyframes star-pop {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-
-  45% {
-    transform: scale(1.28) rotate(16deg);
-  }
-
-  100% {
-    transform: scale(1) rotate(0deg);
+@media (prefers-reduced-motion: reduce) {
+  /* Tooltips fade in place rather than sliding down from the button. */
+  .tooltip-bubble {
+    transform: translate(-50%, 0);
+    transition: opacity 140ms ease;
   }
 }
 </style>

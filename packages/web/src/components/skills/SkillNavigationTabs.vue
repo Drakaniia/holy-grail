@@ -56,7 +56,7 @@ function selectTab(tab: Tab) {
       <!-- Active indicator -->
       <span
         v-if="activeTab === tab.id"
-        class="absolute inset-x-0 bottom-0 h-0.5 bg-accent-500 transition-all duration-200"
+        class="absolute inset-x-0 bottom-0 h-0.5 bg-accent-500"
       />
     </button>
   </div>
