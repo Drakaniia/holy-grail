@@ -1,0 +1,80 @@
+slug: yts-vg
+name: YTS - YIFY Movie Torrent Download Mirror (yts.vg)
+description: YIFY movie torrent and magnet download mirror for browsing films by quality, genre, and year.
+category: Movies
+parentCategory: downloads
+subcategory: movies
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://yts.vg
+docs: https://yts.vg
+sourceCode: ""
+icon: yts-vg
+verified: false
+featured: false
+tags:
+  - bookmark
+  - downloads
+  - movies
+  - torrents
+  - yify
+atGlance: YIFY movie torrent mirror for grabbing films in 720p and 1080p.
+fullDescription: >-
+  YTS at yts.vg is a mirror of the YIFY movie catalogue, offering torrent and magnet links for films
+  with details on runtime, genre, rating, and synopsis. Listings include 720p and 1080p encodes and
+  can be browsed by quality, genre, rating, and year, which makes it a fallback mirror when the
+  primary YTS domain is unreachable.
+coreFeatures:
+  - name: Movie Torrent Listings
+    description: Browse films with genre, rating, runtime, and synopsis details.
+    icon: clapperboard
+  - name: Torrent and Magnet Links
+    description: Grab 720p and 1080p encodes directly from each movie page.
+    icon: hard-drive
+  - name: Browse Filters
+    description: Filter the catalogue by quality, genre, rating, and release year.
+    icon: search
+additionalFeatures:
+  - name: Mirror Domain
+    description: Alternative YTS domain to use when the primary site is blocked.
+    icon: globe
+  - name: Direct Web Launch
+    description: Open the saved source directly from the catalog entry.
+    icon: check
+  - name: Catalog Tags
+    description: Tagged under the downloads collection for search and filtering.
+    icon: check
+similarTools:
+  - slug: yts-download-all-yify-movies-torrents-yts
+    name: Download all YIFY Movies Torrents - YTS
+    description: Browse the full YIFY movie catalogue and download torrents by quality.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://yts.bz/browse-movies/0/all/all/0/downloads/0/all
+  - slug: yts
+    name: The Official Home of YIFY Movies Torrent Download - YTS
+    description: The primary YTS site for YIFY movie torrent downloads.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://yts.mx/
+  - slug: dodi-repacks
+    name: Backup Site - DODI Repacks
+    description: Backup mirror for DODI repacks and download links.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dodi-repacks.site/ddos-attack/

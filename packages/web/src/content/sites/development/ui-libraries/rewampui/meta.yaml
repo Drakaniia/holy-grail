@@ -1,0 +1,83 @@
+slug: rewampui
+name: RewampUI - Open Source Animated Component Library
+description: Open-source library of 70+ ready-to-use animated components, shaders, and blocks for modern websites.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 169
+watchers: 1
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 3 days ago
+lastRelease: No releases
+version: ""
+contributors: 1
+commitsThisYear: 105
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.rewampui.com
+docs: https://www.rewampui.com
+sourceCode: https://github.com/palakonweb/Rewamp-UI
+icon: rewampui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - react
+  - animation
+  - shaders
+  - components
+atGlance: 70+ open-source animated components, shaders, and site blocks.
+fullDescription: >-
+  RewampUI is an open-source component library offering more than 70 ready-to-use components built
+  for modern websites. It covers everything from animated navbars and hero sections to shader-driven
+  visuals and interaction effects, presented through a component showcase dashboard with live
+  previews and copy-ready source for React and Tailwind CSS projects.
+coreFeatures:
+  - name: 70+ Components
+    description: A broad set of ready-to-use components for modern marketing and product sites.
+    icon: layers
+  - name: Shaders and Animation
+    description: Shader effects and animation-heavy pieces for distinctive visual sections.
+    icon: sparkles
+  - name: Showcase Dashboard
+    description: Browse and preview every component in a searchable showcase interface.
+    icon: layout
+additionalFeatures:
+  - name: Open Source
+    description: The full component source is published on GitHub for free use.
+    icon: code-2
+  - name: Navbars and Blocks
+    description: Includes navigation bars, heroes, and larger composed blocks beyond single controls.
+    icon: check
+  - name: Modern Web Stack
+    description: Built for current React and Tailwind CSS workflows.
+    icon: wind
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: reactbits
+    name: React Bits
+    description: Animated, interactive React components for building memorable landing pages and websites.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/
+  - slug: lightswind
+    name: Lightswind UI
+    description: Open-source animated React component library for modern interfaces.
+    stars: 690
+    addedDaysAgo: 0
+    verified: true
+    website: https://lightswind.com/

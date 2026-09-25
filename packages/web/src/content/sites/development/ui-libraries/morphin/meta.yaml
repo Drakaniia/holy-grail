@@ -1,0 +1,84 @@
+slug: morphin
+name: Morphin - Premium Animated React Components & Motion UI Library
+description: Production-ready animated React components, micro-interactions, and motion UI patterns for modern products.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://morphin.dev
+docs: https://morphin.dev
+sourceCode: ""
+icon: morphin
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - react
+  - motion
+  - animation
+  - inspiration
+atGlance: Motion UI patterns and animated React components for product interfaces.
+fullDescription: >-
+  Morphin is a curated library of animated React components and motion UI patterns for modern
+  product flows. It catalogs micro-interactions, page transitions, loaders, charts, hero sections,
+  pricing blocks, and bento grids built with React, Tailwind CSS, and Motion or GSAP, each with a
+  live demo and source. A Pro tier unlocks the full component set alongside the free previews, and
+  the catalog doubles as a reference for designers looking for motion inspiration.
+coreFeatures:
+  - name: Animated React Components
+    description: Production-ready motion components covering text, buttons, sliders, and cards.
+    icon: sparkles
+  - name: Motion UI Patterns
+    description: Micro-interactions, page transitions, and loaders documented with live demos.
+    icon: refresh-cw
+  - name: Design Reference Catalog
+    description: Browse animated layouts and dashboards for motion and interaction inspiration.
+    icon: palette
+additionalFeatures:
+  - name: Framework Coverage
+    description: Components span React, Tailwind CSS, Motion, and GSAP implementations.
+    icon: layers
+  - name: Free and Pro Tiers
+    description: A subset of components is free while Pro unlocks the full animated catalog.
+    icon: package
+  - name: Product-Flow Blocks
+    description: Includes larger dashboards, hero, pricing, and bento grid sections.
+    icon: layout
+similarTools:
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: reactbits
+    name: React Bits
+    description: Animated, interactive React components for building memorable landing pages and websites.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/

@@ -1,0 +1,86 @@
+slug: beui
+name: beUI - Animated Components for React and Next.js
+description: Open-source animated React and Next.js components built with Motion and Tailwind CSS, installable through the shadcn CLI.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 1680
+watchers: 5
+addedDaysAgo: 0
+license: MIT
+lastCommit: 21 hours ago
+lastRelease: 3 months ago
+version: v0.2.0
+contributors: 16
+commitsThisYear: 441
+releases: 1
+platforms:
+  - Web
+deployment:
+  - Cloud
+  - npm
+website: https://beui.dev
+docs: https://beui.dev
+sourceCode: https://github.com/starc007/ui-components
+icon: beui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - react
+  - nextjs
+  - motion
+  - tailwind
+  - shadcn
+atGlance: Motion-first React components that install with the shadcn CLI.
+fullDescription: >-
+  beUI is a free, open-source motion component library for React and Next.js product interfaces.
+  Every component ships with a live preview, usage example, source code, and a shadcn install
+  command, so the code lives in your app rather than behind a package. Components are built with
+  Motion and Tailwind CSS and cover theme toggles, toast stacks, and other animated interaction
+  patterns, with a paid Pro tier for full blocks and landing page templates.
+coreFeatures:
+  - name: Animated Components
+    description: Motion-driven React components for polished product interfaces and interactions.
+    icon: sparkles
+  - name: shadcn Registry Install
+    description: Add any component with the shadcn CLI from the @beui namespace or a direct URL.
+    icon: terminal
+  - name: Copy and Own the Source
+    description: Component code is meant to live in your project, not behind a package dependency.
+    icon: check
+additionalFeatures:
+  - name: AI-Agent Friendly
+    description: Static llms.txt and registry endpoints let coding agents read components without scraping.
+    icon: bot
+  - name: Motion and Tailwind Stack
+    description: Built on Motion and Tailwind CSS v4 with TypeScript and React 19 support.
+    icon: wind
+  - name: beUI Pro Blocks
+    description: Premium animated sections and Next.js templates with editable source as an upgrade.
+    icon: layers
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/

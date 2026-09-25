@@ -1,0 +1,85 @@
+slug: rareui
+name: Rare UI - Rare Animated React Components
+description: Free, open-source shadcn registry of rare animated React components built with Tailwind CSS and Motion.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 1455
+watchers: 0
+addedDaysAgo: 0
+license: Unknown
+lastCommit: 3 hours ago
+lastRelease: No releases
+version: ""
+contributors: 7
+commitsThisYear: 308
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+  - npm
+website: https://www.rareui.com
+docs: https://www.rareui.com/components
+sourceCode: https://github.com/swamimalode07/rare-ui
+icon: rareui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - react
+  - motion
+  - shadcn
+  - animation
+atGlance: A shadcn registry of uncommon animated React components you own.
+fullDescription: >-
+  Rare UI is a free, open-source registry of rare, ready-to-use UI components and animations for
+  React projects. Every entry is animated with Motion, honors prefers-reduced-motion, and installs
+  straight into your codebase through the shadcn CLI, so there is no package to depend on and any
+  component can be restyled. Components live in components/ui and are meant to be dropped into
+  product interfaces that need something less generic than stock controls.
+coreFeatures:
+  - name: Rare Animated Components
+    description: A registry of unusual, memorable animated components rather than standard controls.
+    icon: sparkles
+  - name: shadcn CLI Install
+    description: Add components with a single shadcn command straight into your own codebase.
+    icon: terminal
+  - name: Accessible Motion
+    description: Animations respect prefers-reduced-motion and ship with documented props.
+    icon: shield
+additionalFeatures:
+  - name: One File Per Component
+    description: Each component is self-contained and can be restyled or extended freely.
+    icon: copy
+  - name: Tailwind and TypeScript
+    description: Built with Next.js, Tailwind CSS, and TypeScript for modern React stacks.
+    icon: wind
+  - name: Sponsorship Backed
+    description: Kept free and open source through a public sponsorship program.
+    icon: gift
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: cult-ui
+    name: Cult UI
+    description: Copy-paste React components and blocks with motion-heavy, production-ready patterns.
+    stars: 6045
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.cult-ui.com/
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/

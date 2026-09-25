@@ -427,6 +427,15 @@
     "height": 600,
     "bytes": 25274
   },
+  "beui": {
+    "image": "/previews/beui.webp",
+    "small": "/previews/beui-sm.webp",
+    "sourceUrl": "https://beui.dev/",
+    "capturedAt": "2026-09-25T11:42:04.516Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 16958
+  },
   "billingsdk": {
     "image": "/previews/billingsdk.webp",
     "small": "/previews/billingsdk-sm.webp",
@@ -807,6 +816,24 @@
     "width": 960,
     "height": 600,
     "bytes": 43590
+  },
+  "collectui": {
+    "image": "/previews/collectui.webp",
+    "small": "/previews/collectui-sm.webp",
+    "sourceUrl": "https://collectui.com/",
+    "capturedAt": "2026-09-25T11:42:10.112Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27052
+  },
+  "collectui-2": {
+    "image": "/previews/collectui-2.webp",
+    "small": "/previews/collectui-2-sm.webp",
+    "sourceUrl": "https://collectui.com/",
+    "capturedAt": "2026-09-25T11:46:01.434Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 29930
   },
   "continue-cli": {
     "image": "/previews/continue-cli.webp",
@@ -2508,6 +2535,15 @@
     "height": 600,
     "bytes": 65696
   },
+  "morphin": {
+    "image": "/previews/morphin.webp",
+    "small": "/previews/morphin-sm.webp",
+    "sourceUrl": "https://morphin.dev/",
+    "capturedAt": "2026-09-25T11:42:11.674Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 21758
+  },
   "motion": {
     "image": "/previews/motion.webp",
     "small": "/previews/motion-sm.webp",
@@ -2736,6 +2772,15 @@
     "width": 960,
     "height": 600,
     "bytes": 19948
+  },
+  "obsidianui": {
+    "image": "/previews/obsidianui.webp",
+    "small": "/previews/obsidianui-sm.webp",
+    "sourceUrl": "https://www.obsidianui.dev/",
+    "capturedAt": "2026-09-25T11:42:09.434Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 16288
   },
   "oceanofgames": {
     "image": "/previews/oceanofgames.webp",
@@ -3163,6 +3208,15 @@
     "height": 600,
     "bytes": 28192
   },
+  "rareui": {
+    "image": "/previews/rareui.webp",
+    "small": "/previews/rareui-sm.webp",
+    "sourceUrl": "https://www.rareui.com/",
+    "capturedAt": "2026-09-25T11:42:04.333Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 3612
+  },
   "raylight": {
     "image": "/previews/raylight.webp",
     "small": "/previews/raylight-sm.webp",
@@ -3297,6 +3351,15 @@
     "width": 960,
     "height": 600,
     "bytes": 27448
+  },
+  "rewampui": {
+    "image": "/previews/rewampui.webp",
+    "small": "/previews/rewampui-sm.webp",
+    "sourceUrl": "https://www.rewampui.com/",
+    "capturedAt": "2026-09-25T11:42:05.664Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 9968
   },
   "rivervisual": {
     "image": "/previews/rivervisual.webp",
@@ -4315,6 +4378,15 @@
     "width": 960,
     "height": 600,
     "bytes": 7528
+  },
+  "yts-vg": {
+    "image": "/previews/yts-vg.webp",
+    "small": "/previews/yts-vg-sm.webp",
+    "sourceUrl": "https://yts.vg/",
+    "capturedAt": "2026-09-25T11:42:12.962Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33740
   },
   "z": {
     "image": "/previews/z.webp",

@@ -1,0 +1,84 @@
+slug: obsidianui
+name: ObsidianUI - React & Tailwind CSS Components Library
+description: React and Tailwind CSS component library with animated components, blocks, landing pages, and templates.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.obsidianui.dev
+docs: https://www.obsidianui.dev
+sourceCode: ""
+icon: obsidianui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - library
+  - react
+  - tailwind
+  - motion
+  - components
+atGlance: Animated React and Tailwind components, blocks, and page templates.
+fullDescription: >-
+  ObsidianUI is a React and Tailwind CSS component library offering dozens of animated components,
+  larger blocks, landing page sections, and full page templates. Components are built with Motion
+  and Tailwind CSS and are designed to be copied into a project rather than locked behind a package.
+  The project is currently being rebuilt around a new direction with an AI-first component
+  workflow, so expect the catalog and templates to keep expanding.
+coreFeatures:
+  - name: Component Library
+    description: Animated React and Tailwind components with copy-ready source.
+    icon: sparkles
+  - name: Blocks and Sections
+    description: Larger composed sections for hero, feature, and pricing areas.
+    icon: layout
+  - name: Landing Page Templates
+    description: Full page templates for shipping marketing sites quickly.
+    icon: rocket
+additionalFeatures:
+  - name: Motion Built In
+    description: Components rely on Motion for polished interaction and enter animations.
+    icon: refresh-cw
+  - name: Tailwind Styling
+    description: Utility-first styling that matches modern React and Next.js stacks.
+    icon: wind
+  - name: Evolving Catalog
+    description: The library is being taken in a new direction with more components planned.
+    icon: zap
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated React, Tailwind, and Framer Motion components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: reactbits
+    name: React Bits
+    description: Animated, interactive React components for building memorable landing pages and websites.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/

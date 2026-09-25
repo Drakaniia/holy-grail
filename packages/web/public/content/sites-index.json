@@ -10157,6 +10157,115 @@
     ]
   },
   {
+    "slug": "beui",
+    "name": "beUI - Animated Components for React and Next.js",
+    "description": "Open-source animated React and Next.js components built with Motion and Tailwind CSS, installable through the shadcn CLI.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 1680,
+    "watchers": 5,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "21 hours ago",
+    "lastRelease": "3 months ago",
+    "version": "v0.2.0",
+    "contributors": 16,
+    "commitsThisYear": 441,
+    "releases": 1,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud",
+      "npm"
+    ],
+    "website": "https://beui.dev",
+    "docs": "https://beui.dev",
+    "sourceCode": "https://github.com/starc007/ui-components",
+    "icon": "beui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "nextjs",
+      "motion",
+      "tailwind",
+      "shadcn"
+    ],
+    "atGlance": "Motion-first React components that install with the shadcn CLI.",
+    "fullDescription": "beUI is a free, open-source motion component library for React and Next.js product interfaces. Every component ships with a live preview, usage example, source code, and a shadcn install command, so the code lives in your app rather than behind a package. Components are built with Motion and Tailwind CSS and cover theme toggles, toast stacks, and other animated interaction patterns, with a paid Pro tier for full blocks and landing page templates.",
+    "coreFeatures": [
+      {
+        "name": "Animated Components",
+        "description": "Motion-driven React components for polished product interfaces and interactions.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "shadcn Registry Install",
+        "description": "Add any component with the shadcn CLI from the @beui namespace or a direct URL.",
+        "icon": "terminal"
+      },
+      {
+        "name": "Copy and Own the Source",
+        "description": "Component code is meant to live in your project, not behind a package dependency.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "AI-Agent Friendly",
+        "description": "Static llms.txt and registry endpoints let coding agents read components without scraping.",
+        "icon": "bot"
+      },
+      {
+        "name": "Motion and Tailwind Stack",
+        "description": "Built on Motion and Tailwind CSS v4 with TypeScript and React 19 support.",
+        "icon": "wind"
+      },
+      {
+        "name": "beUI Pro Blocks",
+        "description": "Premium animated sections and Next.js templates with editable source as an upgrade.",
+        "icon": "layers"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      }
+    ]
+  },
+  {
     "slug": "nosignups",
     "name": "NoSignups - No-Registration Tool Directory",
     "description": "Curated directory of web-based tools that work instantly in your browser without requiring signups, accounts, or tracking.",
@@ -10456,6 +10565,114 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.codebuff.com/"
+      }
+    ]
+  },
+  {
+    "slug": "rareui",
+    "name": "Rare UI - Rare Animated React Components",
+    "description": "Free, open-source shadcn registry of rare animated React components built with Tailwind CSS and Motion.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 1455,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "3 hours ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 7,
+    "commitsThisYear": 308,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud",
+      "npm"
+    ],
+    "website": "https://www.rareui.com",
+    "docs": "https://www.rareui.com/components",
+    "sourceCode": "https://github.com/swamimalode07/rare-ui",
+    "icon": "rareui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "motion",
+      "shadcn",
+      "animation"
+    ],
+    "atGlance": "A shadcn registry of uncommon animated React components you own.",
+    "fullDescription": "Rare UI is a free, open-source registry of rare, ready-to-use UI components and animations for React projects. Every entry is animated with Motion, honors prefers-reduced-motion, and installs straight into your codebase through the shadcn CLI, so there is no package to depend on and any component can be restyled. Components live in components/ui and are meant to be dropped into product interfaces that need something less generic than stock controls.",
+    "coreFeatures": [
+      {
+        "name": "Rare Animated Components",
+        "description": "A registry of unusual, memorable animated components rather than standard controls.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "shadcn CLI Install",
+        "description": "Add components with a single shadcn command straight into your own codebase.",
+        "icon": "terminal"
+      },
+      {
+        "name": "Accessible Motion",
+        "description": "Animations respect prefers-reduced-motion and ship with documented props.",
+        "icon": "shield"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "One File Per Component",
+        "description": "Each component is self-contained and can be restyled or extended freely.",
+        "icon": "copy"
+      },
+      {
+        "name": "Tailwind and TypeScript",
+        "description": "Built with Next.js, Tailwind CSS, and TypeScript for modern React stacks.",
+        "icon": "wind"
+      },
+      {
+        "name": "Sponsorship Backed",
+        "description": "Kept free and open source through a public sponsorship program.",
+        "icon": "gift"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "cult-ui",
+        "name": "Cult UI",
+        "description": "Copy-paste React components and blocks with motion-heavy, production-ready patterns.",
+        "stars": 6045,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.cult-ui.com/"
+      },
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
       }
     ]
   },
@@ -12808,6 +13025,113 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://github.com/charmbracelet/crush"
+      }
+    ]
+  },
+  {
+    "slug": "rewampui",
+    "name": "RewampUI - Open Source Animated Component Library",
+    "description": "Open-source library of 70+ ready-to-use animated components, shaders, and blocks for modern websites.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 169,
+    "watchers": 1,
+    "addedDaysAgo": 0,
+    "license": "Unknown",
+    "lastCommit": "3 days ago",
+    "lastRelease": "No releases",
+    "version": "",
+    "contributors": 1,
+    "commitsThisYear": 105,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.rewampui.com",
+    "docs": "https://www.rewampui.com",
+    "sourceCode": "https://github.com/palakonweb/Rewamp-UI",
+    "icon": "rewampui",
+    "verified": true,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "animation",
+      "shaders",
+      "components"
+    ],
+    "atGlance": "70+ open-source animated components, shaders, and site blocks.",
+    "fullDescription": "RewampUI is an open-source component library offering more than 70 ready-to-use components built for modern websites. It covers everything from animated navbars and hero sections to shader-driven visuals and interaction effects, presented through a component showcase dashboard with live previews and copy-ready source for React and Tailwind CSS projects.",
+    "coreFeatures": [
+      {
+        "name": "70+ Components",
+        "description": "A broad set of ready-to-use components for modern marketing and product sites.",
+        "icon": "layers"
+      },
+      {
+        "name": "Shaders and Animation",
+        "description": "Shader effects and animation-heavy pieces for distinctive visual sections.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Showcase Dashboard",
+        "description": "Browse and preview every component in a searchable showcase interface.",
+        "icon": "layout"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Open Source",
+        "description": "The full component source is published on GitHub for free use.",
+        "icon": "code-2"
+      },
+      {
+        "name": "Navbars and Blocks",
+        "description": "Includes navigation bars, heroes, and larger composed blocks beyond single controls.",
+        "icon": "check"
+      },
+      {
+        "name": "Modern Web Stack",
+        "description": "Built for current React and Tailwind CSS workflows.",
+        "icon": "wind"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Animated, interactive React components for building memorable landing pages and websites.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
+      },
+      {
+        "slug": "lightswind",
+        "name": "Lightswind UI",
+        "description": "Open-source animated React component library for modern interfaces.",
+        "stars": 690,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://lightswind.com/"
       }
     ]
   },
@@ -30336,6 +30660,112 @@
     ]
   },
   {
+    "slug": "collectui",
+    "name": "CollectUI - Daily UI Design Inspiration",
+    "description": "Daily curated UI design inspiration hand-picked from Dribbble shots and the daily UI archive.",
+    "category": "Inspiration",
+    "parentCategory": "design",
+    "subcategory": "inspiration",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://collectui.com",
+    "docs": "https://collectui.com",
+    "sourceCode": "",
+    "icon": "collectui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "inspiration",
+      "ui",
+      "ui-design",
+      "interface",
+      "gallery"
+    ],
+    "atGlance": "Daily hand-picked UI design inspiration, sourced from Dribbble.",
+    "fullDescription": "CollectUI is a long-running daily UI inspiration gallery that curates interface designs from Dribbble shots and the daily UI archive, hand-picked and categorised every day. Designs are organised into practical screen categories such as landing pages, log in screens, onboarding flows, illustrations, and dashboards, making it a fast starting point for UI and UX research. It also runs a design network directory and newsletter for discovering related tools.",
+    "coreFeatures": [
+      {
+        "name": "Daily Curated Shots",
+        "description": "Fresh UI designs hand-picked from Dribbble and the daily UI archive each day.",
+        "icon": "palette"
+      },
+      {
+        "name": "Screen Categories",
+        "description": "Browse by landing pages, log in, onboarding, illustrations, and more.",
+        "icon": "layers"
+      },
+      {
+        "name": "UI/UX Research Source",
+        "description": "A quick reference for layout and component patterns before starting a design.",
+        "icon": "search"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Design Network Directory",
+        "description": "Discover related design tools, galleries, and creator sites in one list.",
+        "icon": "users"
+      },
+      {
+        "name": "Newsletter",
+        "description": "Subscribe to receive hand-picked websites and interfaces delivered daily.",
+        "icon": "mail"
+      },
+      {
+        "name": "Sponsor Listings",
+        "description": "Tools can be listed in the network for exposure to a design-focused audience.",
+        "icon": "gift"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "uiinspoo",
+        "name": "Uiinspoo - Daily Curated UI Design Inspiration",
+        "description": "Daily curated gallery of UI designs, motion interactions, and product interfaces.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://uiinspoo.com"
+      },
+      {
+        "slug": "dribbble",
+        "name": "Dribbble",
+        "description": "Design community showcase of shots, concepts, and interface explorations.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://dribbble.com/"
+      },
+      {
+        "slug": "mobbin",
+        "name": "Mobbin - UI & UX design inspiration for mobile & web apps",
+        "description": "Curated library of real-world UI and UX design patterns.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://mobbin.com/"
+      }
+    ]
+  },
+  {
     "slug": "craftwork",
     "name": "Curated Inspiration",
     "description": "Curated Inspiration bookmarked for inspiration resources.",
@@ -40034,6 +40464,112 @@
     ]
   },
   {
+    "slug": "collectui-2",
+    "name": "CollectUI - UI Component & Pattern Reference",
+    "description": "Catalogued UI shots organised by component type, useful as a reference for buttons, cards, navigation, and forms.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://collectui.com",
+    "docs": "https://collectui.com",
+    "sourceCode": "",
+    "icon": "collectui-2",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "components",
+      "patterns",
+      "reference",
+      "inspiration"
+    ],
+    "atGlance": "A browsable reference of UI components and screen patterns.",
+    "fullDescription": "CollectUI doubles as a component and pattern reference because its curated shots are grouped by the interface element they show, covering buttons, cards, navigation, forms, tables, modals, and full screen flows. Use it alongside a component library to compare how real designers solve a control or layout before building it, and to sanity-check interaction and visual conventions. It is a design reference rather than an installable code library, so components are studied and adapted rather than copied.",
+    "coreFeatures": [
+      {
+        "name": "Component-Type Browsing",
+        "description": "Shots are grouped by element such as buttons, cards, navigation, and forms.",
+        "icon": "layers"
+      },
+      {
+        "name": "Pattern Reference",
+        "description": "Compare how real designers solve a control or flow before implementing it.",
+        "icon": "search"
+      },
+      {
+        "name": "Screen Flow Examples",
+        "description": "Includes onboarding, dashboards, and multi-step flows as full screens.",
+        "icon": "layout"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Design-Only Source",
+        "description": "A visual reference rather than installable code, so patterns are adapted not copied.",
+        "icon": "eye"
+      },
+      {
+        "name": "Daily Additions",
+        "description": "New hand-picked designs are added every day for ongoing reference.",
+        "icon": "refresh-cw"
+      },
+      {
+        "name": "Complements a Library",
+        "description": "Useful next to a component library when choosing the right pattern.",
+        "icon": "puzzle"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "originui",
+        "name": "Origin UI",
+        "description": "Collection of copy-paste React components and patterns built with Tailwind CSS.",
+        "stars": 10117,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://originui.com/"
+      },
+      {
+        "slug": "cult-ui",
+        "name": "Cult UI",
+        "description": "Copy-paste React components and blocks with motion-heavy, production-ready patterns.",
+        "stars": 6045,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://www.cult-ui.com/"
+      },
+      {
+        "slug": "collectui",
+        "name": "CollectUI - Daily UI Design Inspiration",
+        "description": "Daily curated UI design inspiration hand-picked from Dribbble shots and the daily UI archive.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://collectui.com"
+      }
+    ]
+  },
+  {
     "slug": "designsystem",
     "name": "LINE Design System",
     "description": "Official LINE design system component reference for product UI patterns and standards.",
@@ -40446,6 +40982,113 @@
     ]
   },
   {
+    "slug": "morphin",
+    "name": "Morphin - Premium Animated React Components & Motion UI Library",
+    "description": "Production-ready animated React components, micro-interactions, and motion UI patterns for modern products.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://morphin.dev",
+    "docs": "https://morphin.dev",
+    "sourceCode": "",
+    "icon": "morphin",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "motion",
+      "animation",
+      "inspiration"
+    ],
+    "atGlance": "Motion UI patterns and animated React components for product interfaces.",
+    "fullDescription": "Morphin is a curated library of animated React components and motion UI patterns for modern product flows. It catalogs micro-interactions, page transitions, loaders, charts, hero sections, pricing blocks, and bento grids built with React, Tailwind CSS, and Motion or GSAP, each with a live demo and source. A Pro tier unlocks the full component set alongside the free previews, and the catalog doubles as a reference for designers looking for motion inspiration.",
+    "coreFeatures": [
+      {
+        "name": "Animated React Components",
+        "description": "Production-ready motion components covering text, buttons, sliders, and cards.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Motion UI Patterns",
+        "description": "Micro-interactions, page transitions, and loaders documented with live demos.",
+        "icon": "refresh-cw"
+      },
+      {
+        "name": "Design Reference Catalog",
+        "description": "Browse animated layouts and dashboards for motion and interaction inspiration.",
+        "icon": "palette"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Framework Coverage",
+        "description": "Components span React, Tailwind CSS, Motion, and GSAP implementations.",
+        "icon": "layers"
+      },
+      {
+        "name": "Free and Pro Tiers",
+        "description": "A subset of components is free while Pro unlocks the full animated catalog.",
+        "icon": "package"
+      },
+      {
+        "name": "Product-Flow Blocks",
+        "description": "Includes larger dashboards, hero, pricing, and bento grid sections.",
+        "icon": "layout"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, Vue, and motion-driven web interfaces.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Animated, interactive React components for building memorable landing pages and websites.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      }
+    ]
+  },
+  {
     "slug": "needmcp",
     "name": "NeedMCP",
     "description": "MCP-powered UI component access for AI coding assistants and generated interfaces.",
@@ -40545,6 +41188,113 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://www.heroui.com/"
+      }
+    ]
+  },
+  {
+    "slug": "obsidianui",
+    "name": "ObsidianUI - React & Tailwind CSS Components Library",
+    "description": "React and Tailwind CSS component library with animated components, blocks, landing pages, and templates.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://www.obsidianui.dev",
+    "docs": "https://www.obsidianui.dev",
+    "sourceCode": "",
+    "icon": "obsidianui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "ui-libraries",
+      "ui",
+      "library",
+      "react",
+      "tailwind",
+      "motion",
+      "components"
+    ],
+    "atGlance": "Animated React and Tailwind components, blocks, and page templates.",
+    "fullDescription": "ObsidianUI is a React and Tailwind CSS component library offering dozens of animated components, larger blocks, landing page sections, and full page templates. Components are built with Motion and Tailwind CSS and are designed to be copied into a project rather than locked behind a package. The project is currently being rebuilt around a new direction with an AI-first component workflow, so expect the catalog and templates to keep expanding.",
+    "coreFeatures": [
+      {
+        "name": "Component Library",
+        "description": "Animated React and Tailwind components with copy-ready source.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "Blocks and Sections",
+        "description": "Larger composed sections for hero, feature, and pricing areas.",
+        "icon": "layout"
+      },
+      {
+        "name": "Landing Page Templates",
+        "description": "Full page templates for shipping marketing sites quickly.",
+        "icon": "rocket"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Motion Built In",
+        "description": "Components rely on Motion for polished interaction and enter animations.",
+        "icon": "refresh-cw"
+      },
+      {
+        "name": "Tailwind Styling",
+        "description": "Utility-first styling that matches modern React and Next.js stacks.",
+        "icon": "wind"
+      },
+      {
+        "name": "Evolving Catalog",
+        "description": "The library is being taken in a new direction with more components planned.",
+        "icon": "zap"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "magicui",
+        "name": "Magic UI",
+        "description": "Animated React, Tailwind, and Framer Motion components for landing pages and product UI.",
+        "stars": 21334,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://magicui.design/"
+      },
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Animated, interactive React components for building memorable landing pages and websites.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
       }
     ]
   },
@@ -41660,6 +42410,110 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://cgdownload.ru/"
+      }
+    ]
+  },
+  {
+    "slug": "yts-vg",
+    "name": "YTS - YIFY Movie Torrent Download Mirror (yts.vg)",
+    "description": "YIFY movie torrent and magnet download mirror for browsing films by quality, genre, and year.",
+    "category": "Movies",
+    "parentCategory": "downloads",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://yts.vg",
+    "docs": "https://yts.vg",
+    "sourceCode": "",
+    "icon": "yts-vg",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "downloads",
+      "movies",
+      "torrents",
+      "yify"
+    ],
+    "atGlance": "YIFY movie torrent mirror for grabbing films in 720p and 1080p.",
+    "fullDescription": "YTS at yts.vg is a mirror of the YIFY movie catalogue, offering torrent and magnet links for films with details on runtime, genre, rating, and synopsis. Listings include 720p and 1080p encodes and can be browsed by quality, genre, rating, and year, which makes it a fallback mirror when the primary YTS domain is unreachable.",
+    "coreFeatures": [
+      {
+        "name": "Movie Torrent Listings",
+        "description": "Browse films with genre, rating, runtime, and synopsis details.",
+        "icon": "clapperboard"
+      },
+      {
+        "name": "Torrent and Magnet Links",
+        "description": "Grab 720p and 1080p encodes directly from each movie page.",
+        "icon": "hard-drive"
+      },
+      {
+        "name": "Browse Filters",
+        "description": "Filter the catalogue by quality, genre, rating, and release year.",
+        "icon": "search"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Mirror Domain",
+        "description": "Alternative YTS domain to use when the primary site is blocked.",
+        "icon": "globe"
+      },
+      {
+        "name": "Direct Web Launch",
+        "description": "Open the saved source directly from the catalog entry.",
+        "icon": "check"
+      },
+      {
+        "name": "Catalog Tags",
+        "description": "Tagged under the downloads collection for search and filtering.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "yts-download-all-yify-movies-torrents-yts",
+        "name": "Download all YIFY Movies Torrents - YTS",
+        "description": "Browse the full YIFY movie catalogue and download torrents by quality.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://yts.bz/browse-movies/0/all/all/0/downloads/0/all"
+      },
+      {
+        "slug": "yts",
+        "name": "The Official Home of YIFY Movies Torrent Download - YTS",
+        "description": "The primary YTS site for YIFY movie torrent downloads.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://yts.mx/"
+      },
+      {
+        "slug": "dodi-repacks",
+        "name": "Backup Site - DODI Repacks",
+        "description": "Backup mirror for DODI repacks and download links.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://dodi-repacks.site/ddos-attack/"
       }
     ]
   },

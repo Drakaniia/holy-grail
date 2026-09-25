@@ -1,0 +1,83 @@
+slug: collectui
+name: CollectUI - Daily UI Design Inspiration
+description: Daily curated UI design inspiration hand-picked from Dribbble shots and the daily UI archive.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://collectui.com
+docs: https://collectui.com
+sourceCode: ""
+icon: collectui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - ui
+  - ui-design
+  - interface
+  - gallery
+atGlance: Daily hand-picked UI design inspiration, sourced from Dribbble.
+fullDescription: >-
+  CollectUI is a long-running daily UI inspiration gallery that curates interface designs from
+  Dribbble shots and the daily UI archive, hand-picked and categorised every day. Designs are
+  organised into practical screen categories such as landing pages, log in screens, onboarding
+  flows, illustrations, and dashboards, making it a fast starting point for UI and UX research. It
+  also runs a design network directory and newsletter for discovering related tools.
+coreFeatures:
+  - name: Daily Curated Shots
+    description: Fresh UI designs hand-picked from Dribbble and the daily UI archive each day.
+    icon: palette
+  - name: Screen Categories
+    description: Browse by landing pages, log in, onboarding, illustrations, and more.
+    icon: layers
+  - name: UI/UX Research Source
+    description: A quick reference for layout and component patterns before starting a design.
+    icon: search
+additionalFeatures:
+  - name: Design Network Directory
+    description: Discover related design tools, galleries, and creator sites in one list.
+    icon: users
+  - name: Newsletter
+    description: Subscribe to receive hand-picked websites and interfaces delivered daily.
+    icon: mail
+  - name: Sponsor Listings
+    description: Tools can be listed in the network for exposure to a design-focused audience.
+    icon: gift
+similarTools:
+  - slug: uiinspoo
+    name: Uiinspoo - Daily Curated UI Design Inspiration
+    description: Daily curated gallery of UI designs, motion interactions, and product interfaces.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://uiinspoo.com
+  - slug: dribbble
+    name: Dribbble
+    description: Design community showcase of shots, concepts, and interface explorations.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dribbble.com/
+  - slug: mobbin
+    name: Mobbin - UI & UX design inspiration for mobile & web apps
+    description: Curated library of real-world UI and UX design patterns.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://mobbin.com/

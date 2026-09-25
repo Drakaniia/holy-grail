@@ -1,0 +1,84 @@
+slug: collectui-2
+name: CollectUI - UI Component & Pattern Reference
+description: Catalogued UI shots organised by component type, useful as a reference for buttons, cards, navigation, and forms.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://collectui.com
+docs: https://collectui.com
+sourceCode: ""
+icon: collectui-2
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - components
+  - patterns
+  - reference
+  - inspiration
+atGlance: A browsable reference of UI components and screen patterns.
+fullDescription: >-
+  CollectUI doubles as a component and pattern reference because its curated shots are grouped by
+  the interface element they show, covering buttons, cards, navigation, forms, tables, modals, and
+  full screen flows. Use it alongside a component library to compare how real designers solve a
+  control or layout before building it, and to sanity-check interaction and visual conventions.
+  It is a design reference rather than an installable code library, so components are studied and
+  adapted rather than copied.
+coreFeatures:
+  - name: Component-Type Browsing
+    description: Shots are grouped by element such as buttons, cards, navigation, and forms.
+    icon: layers
+  - name: Pattern Reference
+    description: Compare how real designers solve a control or flow before implementing it.
+    icon: search
+  - name: Screen Flow Examples
+    description: Includes onboarding, dashboards, and multi-step flows as full screens.
+    icon: layout
+additionalFeatures:
+  - name: Design-Only Source
+    description: A visual reference rather than installable code, so patterns are adapted not copied.
+    icon: eye
+  - name: Daily Additions
+    description: New hand-picked designs are added every day for ongoing reference.
+    icon: refresh-cw
+  - name: Complements a Library
+    description: Useful next to a component library when choosing the right pattern.
+    icon: puzzle
+similarTools:
+  - slug: originui
+    name: Origin UI
+    description: Collection of copy-paste React components and patterns built with Tailwind CSS.
+    stars: 10117
+    addedDaysAgo: 0
+    verified: true
+    website: https://originui.com/
+  - slug: cult-ui
+    name: Cult UI
+    description: Copy-paste React components and blocks with motion-heavy, production-ready patterns.
+    stars: 6045
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.cult-ui.com/
+  - slug: collectui
+    name: CollectUI - Daily UI Design Inspiration
+    description: Daily curated UI design inspiration hand-picked from Dribbble shots and the daily UI archive.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://collectui.com
