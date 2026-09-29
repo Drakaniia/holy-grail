@@ -24,6 +24,14 @@ function formatNumber(num: number): string {
   }
   return num.toString()
 }
+
+function formatAddedAge(days: number): string {
+  if (days <= 0) return 'Added today'
+  if (days === 1) return 'Added yesterday'
+  if (days < 30) return `Added ${days}d ago`
+  if (days < 365) return `Added ${Math.round(days / 30)}mo ago`
+  return `Added ${Math.floor(days / 365)}y ago`
+}
 </script>
 
 <template>
@@ -67,7 +75,7 @@ function formatNumber(num: number): string {
           <Eye class="w-3.5 h-3.5" />
           <span>{{ formatNumber(site.watchers) }}</span>
         </div>
-        <span class="site-card__added">Added {{ site.addedDaysAgo }}mo ago</span>
+        <span class="site-card__added">{{ formatAddedAge(site.addedDaysAgo) }}</span>
       </div>
 
       <!-- Tags -->

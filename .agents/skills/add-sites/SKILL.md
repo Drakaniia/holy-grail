@@ -171,6 +171,10 @@ tags:
   - bookmark
 ```
 
+> `addedDaysAgo: 0` is just a placeholder — `generate-sites-index.js` derives the real value from
+the commit that first added the site (git). Only set `dateAdded: YYYY-MM-DD` when a site must show a
+specific "added" date, and never hand-maintain `addedDaysAgo`.
+
 ### Core features and additional features:
 
 Write 2-3 `coreFeatures` and 2-3 `additionalFeatures`. Each feature has:

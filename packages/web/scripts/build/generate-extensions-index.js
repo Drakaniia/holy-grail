@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
+import { loadCatalogAddedDates, resolveAddedDaysAgo } from './catalog-added-dates.js'
 
 const extensionsDir = path.resolve('src/content/extensions')
 const outputPaths = [
@@ -32,22 +33,27 @@ function findMetaYamlFiles(dir, parentCategory = '', subcategory = '') {
 function buildExtensionsIndex() {
   const extensions = []
   const metaFiles = findMetaYamlFiles(extensionsDir)
+  const addedDates = loadCatalogAddedDates({
+    kind: 'extensions',
+    pathspecs: ['packages/web/src/content/extensions', 'src/content/extensions'],
+  })
 
   for (const { yamlPath, parentCategory, subcategory } of metaFiles) {
     const content = fs.readFileSync(yamlPath, 'utf-8')
     const meta = yaml.load(content) || {}
+    const slug = meta.slug || path.basename(path.dirname(yamlPath))
 
     const ext = meta.extensionSpecific || {}
 
     extensions.push({
-      slug: meta.slug || path.basename(path.dirname(yamlPath)),
+      slug,
       name: meta.name || '',
       description: meta.description || '',
       category: meta.category || 'Uncategorized',
       parentCategory: meta.parentCategory || parentCategory,
       subcategory: meta.subcategory !== undefined ? meta.subcategory : subcategory || null,
       version: meta.version || '',
-      addedDaysAgo: meta.addedDaysAgo || 0,
+      addedDaysAgo: resolveAddedDaysAgo(meta, slug, addedDates),
       license: meta.license || '',
       website: meta.website || '',
       docs: meta.docs || '',

@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
+import { loadCatalogAddedDates, resolveAddedDaysAgo } from './catalog-added-dates.js'
 
 const sitesDir = path.resolve('src/content/sites')
 const outputPaths = [
@@ -32,13 +33,18 @@ function findMetaYamlFiles(dir, parentCategory = '', subcategory = '') {
 function buildSitesIndex() {
   const sites = []
   const metaFiles = findMetaYamlFiles(sitesDir)
+  const addedDates = loadCatalogAddedDates({
+    kind: 'sites',
+    pathspecs: ['packages/web/src/content/sites', 'src/content/sites'],
+  })
 
   for (const { yamlPath, parentCategory, subcategory } of metaFiles) {
     const content = fs.readFileSync(yamlPath, 'utf-8')
     const meta = yaml.load(content) || {}
+    const slug = meta.slug || path.basename(path.dirname(yamlPath))
 
     sites.push({
-      slug: meta.slug || path.basename(path.dirname(yamlPath)),
+      slug,
       name: meta.name || '',
       description: meta.description || '',
       category: meta.category || 'Uncategorized',
@@ -46,7 +52,7 @@ function buildSitesIndex() {
       subcategory: meta.subcategory !== undefined ? meta.subcategory : subcategory || null,
       stars: meta.stars || 0,
       watchers: meta.watchers || 0,
-      addedDaysAgo: meta.addedDaysAgo || 0,
+      addedDaysAgo: resolveAddedDaysAgo(meta, slug, addedDates),
       license: meta.license || '',
       lastCommit: meta.lastCommit || '',
       lastRelease: meta.lastRelease || '',
