@@ -4,6 +4,7 @@ import SitesHomeDiscovery from '@/components/sites/home/SitesHomeDiscovery.vue'
 import SitesHomeFeaturedTools from '@/components/sites/home/SitesHomeFeaturedTools.vue'
 import SitesHomeHeroCarousel from '@/components/sites/home/SitesHomeHeroCarousel.vue'
 import SitesHomeTrendingTools from '@/components/sites/home/SitesHomeTrendingTools.vue'
+import SitesHomeTrendingUiLibraries from '@/components/sites/home/SitesHomeTrendingUiLibraries.vue'
 import { useSitesHomeCatalog } from '@/composables/useSitesHomeCatalog'
 import { useSitesStore } from '@/stores/sites'
 
@@ -19,11 +20,12 @@ const previewsLoaded = shallowRef(false)
 const sites = computed(() => store.allSites)
 const loaded = computed(() => store.loaded)
 
-const { heroTools, featuredTools, trendingTools, categories, libraries } = useSitesHomeCatalog({
-  sites,
-  previews,
-  loaded,
-})
+const { heroTools, featuredTools, trendingTools, trendingUiLibraries, categories, libraries } =
+  useSitesHomeCatalog({
+    sites,
+    previews,
+    loaded,
+  })
 
 const isLoading = computed(
   () => (store.loading || !previewsLoaded.value) && heroTools.value.length === 0,
@@ -53,6 +55,8 @@ onMounted(() => {
         <SitesHomeFeaturedTools :tools="featuredTools" :is-loading="isLoading" />
 
         <SitesHomeTrendingTools :tools="trendingTools" :is-loading="isLoading" />
+
+        <SitesHomeTrendingUiLibraries :tools="trendingUiLibraries" :is-loading="isLoading" />
 
         <SitesHomeDiscovery
           :categories="categories"

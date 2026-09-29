@@ -13,7 +13,7 @@ defineProps<{
         <slot name="icon" />
         <span>{{ title }}</span>
       </h2>
-      <span v-if="hint" class="sites-section-header__hint" :title="hint" aria-label="Section info">
+      <span v-if="hint" class="sites-section-header__hint" :title="hint" :aria-label="hint">
         i
       </span>
     </div>

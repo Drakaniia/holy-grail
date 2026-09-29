@@ -162,14 +162,6 @@ const GENERIC_FEATURE_TAGS = new Set([
   'watch',
 ])
 
-function shuffleInPlace<T>(items: T[], random: () => number = Math.random) {
-  for (let index = items.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(random() * (index + 1))
-    ;[items[index], items[swapIndex]] = [items[swapIndex]!, items[index]!]
-  }
-  return items
-}
-
 function formatCount(value: number) {
   return Intl.NumberFormat('en', {
     notation: value >= 1000 ? 'compact' : 'standard',
@@ -246,25 +238,15 @@ function siteHaystack(site: Site) {
     .toLowerCase()
 }
 
+function isUiLibrary(site: Site) {
+  return site.subcategory === 'ui-libraries' || site.category.toLowerCase() === 'ui library'
+}
+
 export function useSitesHomeCatalog(options: {
   sites: Ref<Site[]>
   previews: Ref<Record<string, SitePreviewEntry>>
   loaded: Ref<boolean>
 }) {
-  const sessionSeed = Math.random().toString(36).slice(2)
-
-  function seededScore(slug: string) {
-    const input = `${sessionSeed}:${slug}`
-    let hash = 2166136261
-
-    for (let index = 0; index < input.length; index += 1) {
-      hash ^= input.charCodeAt(index)
-      hash = Math.imul(hash, 16777619)
-    }
-
-    return hash >>> 0
-  }
-
   function hasPreview(site: Site) {
     return Boolean(options.previews.value[site.slug]?.image)
   }
@@ -326,28 +308,14 @@ export function useSitesHomeCatalog(options: {
     const selected: SitesHomeTool[] = []
     const seen = new Set<string>()
 
-    for (const tool of shuffleInPlace([...featured])) {
+    for (const tool of [...featured, ...verifiedPopular]) {
       if (selected.length >= 6) break
       if (seen.has(tool.slug)) continue
       selected.push(tool)
       seen.add(tool.slug)
     }
 
-    const remainder = verifiedPopular
-      .filter((tool) => !seen.has(tool.slug))
-      .sort((a, b) => seededScore(a.slug) - seededScore(b.slug))
-
-    for (const tool of remainder) {
-      if (selected.length >= 6) break
-      selected.push(tool)
-      seen.add(tool.slug)
-    }
-
-    if (selected.length === 0) {
-      return pool.slice(0, Math.min(6, pool.length))
-    }
-
-    return selected
+    return selected.length > 0 ? selected : pool.slice(0, Math.min(6, pool.length))
   })
 
   const featuredTools = computed(() => {
@@ -374,6 +342,16 @@ export function useSitesHomeCatalog(options: {
 
   const trendingTools = computed(() => {
     return sortSitesForTab(options.sites.value.filter(hasPreview), 'trending')
+      .map((site) => tools.value.find((tool) => tool.slug === site.slug))
+      .filter((tool): tool is SitesHomeTool => Boolean(tool))
+      .slice(0, 8)
+  })
+
+  const trendingUiLibraries = computed(() => {
+    return sortSitesForTab(
+      options.sites.value.filter((site) => isUiLibrary(site) && hasPreview(site)),
+      'trending',
+    )
       .map((site) => tools.value.find((tool) => tool.slug === site.slug))
       .filter((tool): tool is SitesHomeTool => Boolean(tool))
       .slice(0, 8)
@@ -421,6 +399,7 @@ export function useSitesHomeCatalog(options: {
     heroTools,
     featuredTools,
     trendingTools,
+    trendingUiLibraries,
     categories,
     libraries,
     formatCount,
