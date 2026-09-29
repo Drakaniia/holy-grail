@@ -35,6 +35,7 @@ const isDismissed = shallowRef(false)
 const isShowing = shallowRef(false)
 
 let timer: ReturnType<typeof setTimeout> | null = null
+let onWindowLoad: (() => void) | null = null
 let autoTriggered = false
 let isWatching = false
 
@@ -43,6 +44,27 @@ function clearTimer() {
     clearTimeout(timer)
     timer = null
   }
+
+  if (onWindowLoad !== null) {
+    window.removeEventListener('load', onWindowLoad)
+    onWindowLoad = null
+  }
+}
+
+/** Anchor the countdown to "page fully loaded" so assets never compete with the dialog. */
+function whenPageLoaded(run: () => void) {
+  if (typeof window === 'undefined') return
+
+  if (document.readyState === 'complete') {
+    run()
+    return
+  }
+
+  onWindowLoad = () => {
+    onWindowLoad = null
+    run()
+  }
+  window.addEventListener('load', onWindowLoad, { once: true })
 }
 
 export function resetAutoAuthPromptForTest() {
@@ -57,8 +79,8 @@ export function resetAutoAuthPromptForTest() {
 export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
   const route = useRoute()
   const { authDialogState, openAuthDialog } = useAuthDialog()
-  const threshold = options.pageCountThreshold ?? 3
-  const delayMs = options.delayMs ?? 5000
+  const threshold = options.pageCountThreshold ?? 1
+  const delayMs = options.delayMs ?? 2000
   const isAuthenticated = options.isAuthenticated
 
   function isCurrentAuthRoute(): boolean {
@@ -90,7 +112,10 @@ export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
     if (isDismissed.value) return
     if (isAuthenticated?.value) return
     if (autoTriggered) return
-    timer = setTimeout(handleTrigger, delayMs)
+    whenPageLoaded(() => {
+      if (isDismissed.value || autoTriggered) return
+      timer = setTimeout(handleTrigger, delayMs)
+    })
   }
 
   function dismiss() {
@@ -126,6 +151,7 @@ export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
           scheduleTrigger()
         }
       },
+      { immediate: true },
     )
 
     if (isAuthenticated) {
