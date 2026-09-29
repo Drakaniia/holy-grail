@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, shallowRef } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { Menu, Moon, Search, Sparkles, SunMedium, UserRound, X } from 'lucide-vue-next'
-import { useSitesStore, type Site } from '@/stores/sites'
+import { useRoute } from 'vue-router'
+import { Bookmark, Menu, UserRound, X } from 'lucide-vue-next'
+import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
-import { useTheme } from '@/composables/useTheme'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import { useAuthDialog } from '@/composables/useAuthDialog'
-import GitHubMark from '@/components/icons/GitHubMark.vue'
 import holyGrailLogo from '@/assets/holy-grail.png'
 
 const props = withDefaults(
@@ -22,7 +20,6 @@ const props = withDefaults(
 
 const emit = defineEmits<{
   toggleMobileMenu: []
-  openSearch: []
 }>()
 
 const UserProfilePill = defineAsyncComponent(() => import('@/components/auth/UserProfilePill.vue'))
@@ -32,9 +29,6 @@ const sites = useSitesStore()
 const skills = useSkillsStore()
 const extensions = useExtensionsStore()
 const route = useRoute()
-const router = useRouter()
-const { isLightMode, themeToggleLabel, toggleTheme } = useTheme()
-const GITHUB_REPO_URL = 'https://github.com/Drakaniia/holy-grail'
 const TOOLTIP_WARM_DELAY_MS = 400
 const isTooltipWarm = shallowRef(false)
 let tooltipWarmTimer: number | undefined
@@ -142,29 +136,6 @@ const currentSiteCollectionTrail = computed(() => {
 
 const isHomePage = computed(() => route.path === '/')
 
-const shortcutKey = '⌘'
-const shortcutAriaKey = 'Control+K Meta+K'
-
-function getRandomIndex(length: number) {
-  return Math.floor(Math.random() * length)
-}
-
-function getRandomSite(candidates: Site[]) {
-  if (candidates.length === 0) return null
-  return candidates[getRandomIndex(candidates.length)]
-}
-
-function getRandomSiteCandidates() {
-  const currentSlug = typeof route.params.slug === 'string' ? route.params.slug : ''
-  const otherSites = sites.allSites.filter((site) => site.slug !== currentSlug)
-
-  if (otherSites.length > 0) {
-    return otherSites
-  }
-
-  return sites.allSites
-}
-
 function formatCollectionLabel(value: string): string {
   return (
     collectionLabels[value] ??
@@ -174,18 +145,6 @@ function formatCollectionLabel(value: string): string {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
   )
-}
-
-async function openRandomSite() {
-  if (!sites.loaded) {
-    await sites.loadSites()
-  }
-
-  const randomSite = getRandomSite(getRandomSiteCandidates())
-
-  if (!randomSite) return
-
-  await router.push({ name: 'site-detail', params: { slug: randomSite.slug } })
 }
 </script>
 
@@ -257,71 +216,16 @@ async function openRandomSite() {
       @pointerenter="scheduleTooltipWarm"
       @pointerleave="resetTooltipWarm"
     >
-      <div class="navbar-search hidden md:flex" role="search">
-        <Search class="navbar-search__icon" />
-        <input
-          type="search"
-          readonly
-          class="navbar-search__input"
-          placeholder="Search sites, skills, docs..."
-          aria-label="Open smart search"
-          :aria-keyshortcuts="shortcutAriaKey"
-          @click="emit('openSearch')"
-          @focus="emit('openSearch')"
-          @keydown.enter.prevent="emit('openSearch')"
-        />
-        <span class="navbar-search__shortcut" aria-hidden="true">
-          <kbd>{{ shortcutKey }}<span class="font-bold">K</span></kbd>
-        </span>
-      </div>
-
-      <button
-        type="button"
-        class="nav-icon-button tooltip-shell inline-flex md:hidden"
-        aria-label="Open smart search"
-        @click="emit('openSearch')"
-      >
-        <Search class="h-4 w-4" />
-        <span class="tooltip-bubble">Search</span>
-      </button>
-
-      <button
-        type="button"
-        class="nav-icon-button nav-icon-button--light-white tooltip-shell hidden sm:inline-flex"
-        aria-label="Open random Grail"
-        @click="openRandomSite"
-      >
-        <Sparkles class="h-4 w-4" />
-        <span class="tooltip-bubble">Open random Grail</span>
-      </button>
-
-      <span class="tooltip-shell hidden sm:inline-flex">
-        <a
-          :href="GITHUB_REPO_URL"
-          target="_blank"
-          rel="noreferrer"
+      <span class="tooltip-shell">
+        <RouterLink
+          to="/bookmarks"
           class="nav-icon-button nav-icon-button--light-white inline-flex"
-          aria-label="Open GitHub repository"
+          aria-label="Saved items"
         >
-          <GitHubMark class="h-4 w-4" />
-        </a>
-        <span class="tooltip-bubble">GitHub</span>
+          <Bookmark class="h-4 w-4" />
+        </RouterLink>
+        <span class="tooltip-bubble">Saved items</span>
       </span>
-
-      <button
-        type="button"
-        class="theme-toggle nav-icon-button tooltip-shell inline-flex"
-        :aria-label="themeToggleLabel"
-        :title="themeToggleLabel"
-        @click="toggleTheme"
-      >
-        <component
-          :is="isLightMode ? SunMedium : Moon"
-          class="h-4 w-4 transition-transform duration-200"
-          :class="isLightMode ? 'rotate-0 text-accent-600' : '-rotate-12 text-gray-300'"
-        />
-        <span class="tooltip-bubble">{{ themeToggleLabel }}</span>
-      </button>
 
       <template v-if="isAuthenticated">
         <UserProfilePill />
@@ -375,89 +279,6 @@ async function openRandomSite() {
 
 .nav-icon-button:active {
   transform: scale(0.96);
-}
-
-.navbar-search {
-  position: relative;
-  height: 2.25rem;
-  width: min(22rem, 34vw);
-  align-items: center;
-}
-
-.navbar-search__icon {
-  pointer-events: none;
-  position: absolute;
-  left: 0.875rem;
-  top: 50%;
-  height: 0.875rem;
-  width: 0.875rem;
-  transform: translateY(-50%);
-  color: #8b929d;
-  transition: color 160ms ease;
-}
-
-.navbar-search__input {
-  height: 100%;
-  width: 100%;
-  cursor: text;
-  border-radius: 0.5rem;
-  border: 1px solid #3a3a3a;
-  background: #272727;
-  padding: 0 4.7rem 0 2.35rem;
-  color: #e5e7eb;
-  font-size: 0.875rem;
-  font-weight: 500;
-  outline: none;
-  transition:
-    border-color 160ms ease,
-    background-color 160ms ease,
-    color 160ms ease;
-}
-
-.navbar-search__input::placeholder {
-  color: #8b929d;
-}
-
-.navbar-search:hover .navbar-search__input,
-.navbar-search__input:focus-visible {
-  border-color: #4b5563;
-  background: #303030;
-}
-
-.navbar-search:hover .navbar-search__icon,
-.navbar-search:focus-within .navbar-search__icon {
-  color: #ff8c1a;
-}
-
-.navbar-search__shortcut {
-  pointer-events: none;
-  position: absolute;
-  right: 0.625rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  color: #9ca3af;
-}
-
-.navbar-search__shortcut kbd {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.375rem;
-  background: #303030;
-  padding: 0.125rem 0.375rem;
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.25rem;
-  color: #c0c5cc;
 }
 
 .tooltip-shell {

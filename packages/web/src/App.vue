@@ -5,15 +5,25 @@ import AppToast from './components/AppToast.vue'
 import AuthDialogRoot from './components/auth/AuthDialogRoot.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import MobileCategoryChips from './components/mobile/MobileCategoryChips.vue'
+import MobileTabBar from './components/mobile/MobileTabBar.vue'
 import { useAutoAuthPrompt } from '@/composables/useAutoAuthPrompt'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 
 const CommandPalette = defineAsyncComponent(() => import('./components/search/CommandPalette.vue'))
 const Sidebar = defineAsyncComponent(() => import('./components/Sidebar.vue'))
+
 const SIDEBAR_COLLAPSED_STORAGE_KEY = 'holy-grail-sidebar-collapsed'
+const SIDEBAR_WIDTH_STORAGE_KEY = 'holy-grail-sidebar-width'
+const SIDEBAR_DEFAULT_WIDTH_PX = 240
+const SIDEBAR_MIN_WIDTH_PX = 200
+/** The column may never eat into this much of the content area. */
+const SIDEBAR_CONTENT_GUTTER_PX = 360
+
 const route = useRoute()
 const { isAuthenticated } = useDeferredAuthStatus()
 useAutoAuthPrompt({ isAuthenticated })
+
 const isAuthRoute = computed(() => route.name === 'login' || route.name === 'signup')
 const isAuthCallbackRoute = computed(() => route.name === 'auth-callback')
 const isStandaloneRoute = computed(
@@ -22,27 +32,19 @@ const isStandaloneRoute = computed(
 const shouldRenderAppShell = computed(
   () => !isAuthCallbackRoute.value && !isStandaloneRoute.value && route.matched.length > 0,
 )
-const storedSidebarCollapsed = getStoredSidebarCollapsed()
-const isSidebarCollapsed = shallowRef(storedSidebarCollapsed)
-const isSidebarContentCollapsed = shallowRef(storedSidebarCollapsed)
-const shouldReserveCollapsedRail = shallowRef(false)
+
+const isSidebarCollapsed = shallowRef(getStoredSidebarCollapsed())
+const sidebarWidth = shallowRef(getStoredSidebarWidth())
+const isResizingSidebar = shallowRef(false)
 const isMobileSidebarOpen = shallowRef(false)
 const isCommandPaletteOpen = shallowRef(false)
 const isCommandPaletteInstant = shallowRef(false)
-const isDesktopShell = shallowRef(
-  typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches,
-)
-const COLLAPSED_RAIL_WIDTH_PX = 72
-const COLLAPSED_RAIL_COLLISION_BUFFER_PX = 4
-const SIDEBAR_WIPE_DURATION_MS = 220
-let removeDesktopShellListener: (() => void) | undefined
-let collapsedRailReservationFrame: number | undefined
-let sidebarContentCollapseTimer: number | undefined
+
+let resizeStartX = 0
+let resizeStartWidth = 0
 
 function getStoredSidebarCollapsed() {
-  if (typeof window === 'undefined') {
-    return false
-  }
+  if (typeof window === 'undefined') return false
 
   try {
     return window.localStorage.getItem(SIDEBAR_COLLAPSED_STORAGE_KEY) === 'true'
@@ -51,14 +53,89 @@ function getStoredSidebarCollapsed() {
   }
 }
 
-function persistSidebarCollapsed(collapsed: boolean) {
-  if (typeof window === 'undefined') {
-    return
+function getStoredSidebarWidth() {
+  if (typeof window === 'undefined') return SIDEBAR_DEFAULT_WIDTH_PX
+
+  try {
+    const stored = Number(window.localStorage.getItem(SIDEBAR_WIDTH_STORAGE_KEY))
+    return Number.isFinite(stored) && stored > 0 ? stored : SIDEBAR_DEFAULT_WIDTH_PX
+  } catch {
+    return SIDEBAR_DEFAULT_WIDTH_PX
   }
+}
+
+function persistSidebarCollapsed(collapsed: boolean) {
+  if (typeof window === 'undefined') return
 
   try {
     window.localStorage.setItem(SIDEBAR_COLLAPSED_STORAGE_KEY, String(collapsed))
   } catch {}
+}
+
+function persistSidebarWidth(width: number) {
+  if (typeof window === 'undefined') return
+
+  try {
+    window.localStorage.setItem(SIDEBAR_WIDTH_STORAGE_KEY, String(Math.round(width)))
+  } catch {}
+}
+
+function getMaxSidebarWidth() {
+  if (typeof window === 'undefined') return SIDEBAR_DEFAULT_WIDTH_PX
+
+  return Math.max(SIDEBAR_MIN_WIDTH_PX, window.innerWidth - SIDEBAR_CONTENT_GUTTER_PX)
+}
+
+function setSidebarCollapsed(collapsed: boolean) {
+  isSidebarCollapsed.value = collapsed
+}
+
+function toggleSidebar() {
+  setSidebarCollapsed(!isSidebarCollapsed.value)
+}
+
+/** The only way back in when the column is retracted: a 16px invisible strip on the left edge. */
+function revealSidebarFromEdge() {
+  if (!isSidebarCollapsed.value) return
+
+  setSidebarCollapsed(false)
+}
+
+function startSidebarResize(event: PointerEvent) {
+  if (event.button !== 0) return
+
+  event.preventDefault()
+  resizeStartX = event.clientX
+  resizeStartWidth = sidebarWidth.value
+  isResizingSidebar.value = true
+
+  window.addEventListener('pointermove', handleSidebarResize)
+  window.addEventListener('pointerup', endSidebarResize, { once: true })
+  document.body.style.cursor = 'col-resize'
+  document.body.style.userSelect = 'none'
+}
+
+function handleSidebarResize(event: PointerEvent) {
+  const next = resizeStartWidth + (event.clientX - resizeStartX)
+  sidebarWidth.value = Math.min(
+    getMaxSidebarWidth(),
+    Math.max(SIDEBAR_MIN_WIDTH_PX, Math.round(next)),
+  )
+}
+
+function endSidebarResize() {
+  if (!isResizingSidebar.value) return
+
+  isResizingSidebar.value = false
+  window.removeEventListener('pointermove', handleSidebarResize)
+  document.body.style.cursor = ''
+  document.body.style.userSelect = ''
+  persistSidebarWidth(sidebarWidth.value)
+}
+
+function resetSidebarWidth() {
+  sidebarWidth.value = SIDEBAR_DEFAULT_WIDTH_PX
+  persistSidebarWidth(SIDEBAR_DEFAULT_WIDTH_PX)
 }
 
 function closeMobileSidebar() {
@@ -76,125 +153,55 @@ function openCommandPalette(instant = false) {
   isCommandPaletteOpen.value = true
 }
 
-function getFirstVisibleSiteCard() {
-  if (typeof document === 'undefined') {
-    return null
-  }
-
-  return (
-    Array.from(document.querySelectorAll<HTMLElement>('.site-card')).find((card) => {
-      const rect = card.getBoundingClientRect()
-
-      return rect.width > 0 && rect.height > 0
-    }) ?? null
-  )
-}
-
-function updateCollapsedRailReservation() {
-  if (typeof window === 'undefined' || !isDesktopShell.value || !isSidebarCollapsed.value) {
-    shouldReserveCollapsedRail.value = false
-    return
-  }
-
-  if (collapsedRailReservationFrame !== undefined) {
-    window.cancelAnimationFrame(collapsedRailReservationFrame)
-  }
-
-  collapsedRailReservationFrame = window.requestAnimationFrame(() => {
-    collapsedRailReservationFrame = undefined
-    const firstVisibleCard = getFirstVisibleSiteCard()
-
-    shouldReserveCollapsedRail.value = firstVisibleCard
-      ? firstVisibleCard.getBoundingClientRect().left <
-        COLLAPSED_RAIL_WIDTH_PX + COLLAPSED_RAIL_COLLISION_BUFFER_PX
-      : false
-  })
-}
-
-function clearCollapsedRailReservation() {
-  if (typeof window !== 'undefined' && collapsedRailReservationFrame !== undefined) {
-    window.cancelAnimationFrame(collapsedRailReservationFrame)
-    collapsedRailReservationFrame = undefined
-  }
-
-  shouldReserveCollapsedRail.value = false
-}
-
-function clearSidebarContentCollapseTimer() {
-  if (typeof window !== 'undefined' && sidebarContentCollapseTimer !== undefined) {
-    window.clearTimeout(sidebarContentCollapseTimer)
-    sidebarContentCollapseTimer = undefined
-  }
-}
-
-function setSidebarCollapsed(collapsed: boolean) {
-  clearSidebarContentCollapseTimer()
-
-  if (collapsed) {
-    isSidebarCollapsed.value = true
-
-    if (typeof window === 'undefined') {
-      isSidebarContentCollapsed.value = true
-      return
-    }
-
-    sidebarContentCollapseTimer = window.setTimeout(() => {
-      isSidebarContentCollapsed.value = true
-      sidebarContentCollapseTimer = undefined
-    }, SIDEBAR_WIPE_DURATION_MS)
-    return
-  }
-
-  isSidebarContentCollapsed.value = false
-  isSidebarCollapsed.value = false
-  clearCollapsedRailReservation()
-}
-
-function toggleSidebarCollapsed() {
-  setSidebarCollapsed(!isSidebarCollapsed.value)
-}
-
 function handleGlobalShortcut(event: KeyboardEvent) {
   const key = event.key.toLowerCase()
 
-  if ((event.ctrlKey || event.metaKey) && key === 'k') {
+  if (!(event.ctrlKey || event.metaKey) || event.altKey) return
+
+  if (key === 'k') {
     event.preventDefault()
     // Keyboard-initiated opens skip the transition entirely — this path runs hundreds of times a day.
     openCommandPalette(true)
+    return
+  }
+
+  if (key === 'b' && shouldRenderAppShell.value) {
+    event.preventDefault()
+    // Below md there is no docked column, so the same chord drives the drawer instead of doing nothing.
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      toggleSidebar()
+    } else {
+      toggleMobileSidebar()
+    }
   }
 }
 
-watch(isSidebarCollapsed, persistSidebarCollapsed)
+const sidebarShellStyle = computed(() => ({
+  width: isSidebarCollapsed.value ? '0px' : `${sidebarWidth.value}px`,
+  opacity: isSidebarCollapsed.value ? '0' : '1',
+}))
+
+watch(isSidebarCollapsed, (collapsed) => {
+  persistSidebarCollapsed(collapsed)
+})
 
 watch(
   () => route.fullPath,
   () => {
     closeMobileSidebar()
-    clearCollapsedRailReservation()
     isCommandPaletteOpen.value = false
   },
 )
 
 onMounted(() => {
   window.addEventListener('keydown', handleGlobalShortcut)
-
-  const desktopShellQuery = window.matchMedia('(min-width: 768px)')
-  const updateDesktopShell = (event: MediaQueryListEvent) => {
-    isDesktopShell.value = event.matches
-  }
-
-  isDesktopShell.value = desktopShellQuery.matches
-  desktopShellQuery.addEventListener('change', updateDesktopShell)
-  removeDesktopShellListener = () => {
-    desktopShellQuery.removeEventListener('change', updateDesktopShell)
-  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('keydown', handleGlobalShortcut)
-  clearCollapsedRailReservation()
-  clearSidebarContentCollapseTimer()
-  removeDesktopShellListener?.()
+  window.removeEventListener('pointermove', handleSidebarResize)
+  document.body.style.cursor = ''
+  document.body.style.userSelect = ''
 })
 </script>
 
@@ -205,35 +212,44 @@ onUnmounted(() => {
     v-else-if="shouldRenderAppShell || isAuthRoute"
     class="flex h-[100dvh] overflow-hidden bg-[#1f1f1f] text-white"
   >
+    <!-- Left-edge reveal zone: the column is gone, this strip is how it comes back. -->
     <div
-      v-if="isDesktopShell"
-      class="desktop-sidebar-shell group relative z-[70] hidden h-full min-w-0 shrink-0 md:block"
+      v-if="isSidebarCollapsed"
+      class="fixed top-0 left-0 z-50 hidden h-full w-4 md:block"
+      aria-hidden="true"
+      @pointerenter="revealSidebarFromEdge"
+    ></div>
+
+    <aside
+      class="desktop-sidebar-shell relative z-[70] hidden h-full min-w-0 shrink-0 md:block"
       :class="{
         'desktop-sidebar-shell--collapsed': isSidebarCollapsed,
-        'desktop-sidebar-shell--rail-ready': isSidebarContentCollapsed,
-        'desktop-sidebar-shell--reserve': shouldReserveCollapsedRail,
+        'pointer-events-none': isSidebarCollapsed,
       }"
+      :style="sidebarShellStyle"
       aria-label="Main navigation"
-      @pointerenter="updateCollapsedRailReservation"
-      @pointerleave="clearCollapsedRailReservation"
-      @focusin="updateCollapsedRailReservation"
-      @focusout="clearCollapsedRailReservation"
     >
+      <Sidebar :collapsed="isSidebarCollapsed" @collapse="setSidebarCollapsed(true)" />
+
+      <!-- Resize: an 8px hit area plus a 4px grip, both col-resize; double-click resets. -->
       <div
-        v-if="isSidebarCollapsed"
-        class="sidebar-edge-hitbox absolute inset-y-0 left-0 z-[72] w-3"
+        class="absolute inset-y-0 right-0 z-10 hidden w-2 cursor-col-resize md:block"
+        aria-hidden="true"
+        @pointerdown="startSidebarResize"
       ></div>
       <div
-        class="desktop-sidebar-panel relative z-[80] h-full"
-        :class="{ 'desktop-sidebar-panel--rail': isSidebarContentCollapsed }"
-      >
-        <Sidebar
-          :collapsed="isSidebarContentCollapsed"
-          @toggle-collapsed="toggleSidebarCollapsed"
-          @open-search="openCommandPalette"
-        />
-      </div>
-    </div>
+        class="absolute inset-y-0 right-0 z-10 hidden w-1 cursor-col-resize transition-colors md:block"
+        :class="
+          isResizingSidebar
+            ? 'bg-accent-500/40'
+            : 'bg-transparent hover:bg-sidebar-border active:bg-accent-500/40'
+        "
+        title="Drag to resize · double-click to reset"
+        aria-hidden="true"
+        @pointerdown="startSidebarResize"
+        @dblclick="resetSidebarWidth"
+      ></div>
+    </aside>
 
     <Transition name="mobile-sidebar">
       <div
@@ -253,17 +269,16 @@ onUnmounted(() => {
           id="mobile-sidebar"
           class="relative h-full w-64 max-w-[calc(100vw-3rem)] shadow-2xl shadow-[#1f1f1f]/60"
         >
-          <Sidebar />
+          <Sidebar :collapsible="false" />
         </div>
       </div>
     </Transition>
 
-    <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
-      <Navbar
-        :mobile-menu-open="isMobileSidebarOpen"
-        @toggle-mobile-menu="toggleMobileSidebar"
-        @open-search="openCommandPalette"
-      />
+    <div
+      class="flex min-w-0 flex-1 flex-col overflow-hidden pb-[calc(3.5rem+env(safe-area-inset-bottom))] md:pb-0"
+    >
+      <Navbar :mobile-menu-open="isMobileSidebarOpen" @toggle-mobile-menu="toggleMobileSidebar" />
+      <MobileCategoryChips />
       <main class="min-h-0 min-w-0 flex-1 overflow-y-auto">
         <div class="flex min-h-full min-w-0 flex-col">
           <div class="min-w-0 flex-1">
@@ -273,6 +288,8 @@ onUnmounted(() => {
         </div>
       </main>
     </div>
+
+    <MobileTabBar @open-search="openCommandPalette" />
 
     <CommandPalette
       v-if="isCommandPaletteOpen"
@@ -307,70 +324,16 @@ onUnmounted(() => {
 }
 
 .desktop-sidebar-shell {
-  width: 16rem;
+  max-width: calc(100% - 360px);
   overflow: hidden;
-  transition: width 220ms ease;
-}
-
-.desktop-sidebar-shell--collapsed {
-  width: 0.75rem;
-}
-
-.desktop-sidebar-panel {
-  width: 16rem;
-  max-width: 16rem;
-}
-
-.desktop-sidebar-panel--rail {
-  width: 4.5rem;
-  max-width: 4.5rem;
-}
-
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready .desktop-sidebar-panel {
-  pointer-events: none;
-  transform: translateX(calc(-100% + 0.75rem));
-  transition: transform 180ms ease;
-  will-change: transform;
-}
-
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:hover,
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:has(:focus-visible) {
-  overflow: visible;
-}
-
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:hover .desktop-sidebar-panel,
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready:has(:focus-visible)
-  .desktop-sidebar-panel {
-  animation: sidebar-rail-wipe-in 180ms ease both;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready.desktop-sidebar-shell--reserve:hover,
-.desktop-sidebar-shell--collapsed.desktop-sidebar-shell--rail-ready.desktop-sidebar-shell--reserve:has(
-    :focus-visible
-  ) {
-  width: 4.5rem;
-}
-
-.sidebar-edge-hitbox {
-  background: transparent;
-}
-
-@keyframes sidebar-rail-wipe-in {
-  from {
-    transform: translateX(calc(-100% + 0.75rem));
-  }
-
-  to {
-    transform: translateX(0);
-  }
+  /* Explicit properties only: `transition: all` would animate max-width and the hairline border. */
+  transition:
+    width 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .desktop-sidebar-shell,
-  .desktop-sidebar-panel {
-    animation: none;
+  .desktop-sidebar-shell {
     transition: none;
   }
 

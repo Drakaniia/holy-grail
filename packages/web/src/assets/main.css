@@ -16,6 +16,18 @@
   --color-accent-700: #cc6100;
   --color-accent-800: #994900;
   --color-accent-900: #663100;
+
+  /* Sidebar shell: the column sits on a surface one step off the #1f1f1f canvas and is
+     separated by a hairline (0.5px) instead of a 1px gray border. Every hover/press surface
+     is derived from the foreground so both themes stay tint-agnostic. */
+  --color-sidebar: #262628;
+  --color-sidebar-raised: #303033;
+  --color-sidebar-border: #3a3a3e;
+  --color-sidebar-foreground: #f4f4f5;
+  --color-sidebar-muted-foreground: #8f8f99;
+  --color-sidebar-hover: color-mix(in oklab, var(--color-sidebar-foreground) 6%, transparent);
+  --color-sidebar-press: color-mix(in oklab, var(--color-sidebar-foreground) 10%, transparent);
+  --color-sidebar-ring: #ff8c1a;
 }
 
 @layer base {
@@ -38,6 +50,15 @@
     --scrollbar-thumb: #cbb6a2;
     --scrollbar-thumb-hover: #a87955;
     background: var(--mocha-bg);
+
+    /* Light mode inverts the relationship: the column is a shade *darker* than the surface,
+       matching 21st.dev's #f4f4f4-on-white palette. */
+    --color-sidebar: var(--mocha-bg);
+    --color-sidebar-raised: var(--mocha-surface-muted);
+    --color-sidebar-border: var(--mocha-border);
+    --color-sidebar-foreground: var(--mocha-text);
+    --color-sidebar-muted-foreground: var(--mocha-muted);
+    --color-sidebar-ring: #cc6100;
   }
 
   * {
@@ -213,59 +234,6 @@ html.light .hover\:border-gray-700:hover {
 
 html.light .border-transparent.theme-toggle {
   border-color: var(--mocha-border) !important;
-}
-
-html.light .app-sidebar,
-html.light .app-sidebar [class*='border-gray-'],
-html.light .app-sidebar [class*='border-zinc-'] {
-  border-color: transparent !important;
-}
-
-html.light .app-sidebar {
-  border-right-color: var(--mocha-border) !important;
-}
-
-html.light .app-sidebar #sidebar-tab-search {
-  border-color: var(--mocha-border) !important;
-}
-
-html.light .app-sidebar,
-html.light .app-sidebar .sidebar-rail-flyout,
-html.light .app-sidebar .sidebar-rail-tooltip {
-  background: var(--mocha-surface) !important;
-  color: var(--mocha-text) !important;
-}
-
-html.light .app-sidebar .sidebar-rail-flyout,
-html.light .app-sidebar .sidebar-rail-tooltip {
-  border-color: transparent !important;
-  box-shadow: 0 18px 48px rgba(83, 55, 33, 0.16) !important;
-}
-
-html.light .app-sidebar .sidebar-collapse-button {
-  border-color: transparent !important;
-  background: transparent !important;
-  color: var(--mocha-muted) !important;
-}
-
-html.light .app-sidebar .sidebar-collapse-button:hover,
-html.light .app-sidebar .sidebar-collapse-button:focus-visible,
-html.light .app-sidebar .sidebar-rail-group:hover > .sidebar-rail-button,
-html.light .app-sidebar .sidebar-rail-group:has(:focus-visible) > .sidebar-rail-button,
-html.light .app-sidebar .sidebar-rail-button:hover,
-html.light .app-sidebar .sidebar-rail-button:focus-visible {
-  background: rgba(255, 140, 26, 0.12) !important;
-  color: var(--mocha-text) !important;
-}
-
-html.light .app-sidebar .sidebar-flyout-link:hover,
-html.light .app-sidebar .sidebar-flyout-link:focus-visible {
-  background: rgba(255, 140, 26, 0.12) !important;
-  color: var(--mocha-text) !important;
-}
-
-html.light .app-sidebar .bg-white {
-  background-color: var(--mocha-text) !important;
 }
 
 html.light .theme-toggle {

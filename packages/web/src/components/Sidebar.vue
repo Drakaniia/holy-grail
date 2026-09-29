@@ -1,49 +1,51 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, reactive, shallowRef, watch } from 'vue'
+import { computed, onMounted, onUnmounted, shallowRef, useTemplateRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import {
-  Bot,
-  ChevronRight,
-  Code2,
-  Download,
-  Film,
-  Palette,
-  Plug,
-  Puzzle,
-  Search,
-  Sparkles,
-  X,
-} from 'lucide-vue-next'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import { scheduleIdleTask } from '@/lib/idle'
 import { useSitesStore } from '@/stores/sites'
 import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
+import { useMcpStore } from '@/stores/mcp'
 import type { useAdminStore } from '@/stores/admin'
 import {
   SidebarHeader,
-  SidebarRail,
+  SidebarMenuPanel,
+  SidebarSectionPanel,
+  SidebarSearchPanel,
   SidebarFooter,
-  SidebarExpandedGroup,
   useSidebarSearch,
-  isSiteGroupRoute,
-  type SiteGroup,
+  sidebarSections,
+  type SidebarSectionKey,
 } from '@/components/sidebar'
 
 type AdminStore = ReturnType<typeof useAdminStore>
 
+interface SidebarHeaderExposed {
+  isFocused: boolean
+  focusSearch: () => void
+  blurSearch: () => void
+}
+
+/** The three views the column can show. The stack is flat on purpose: one push, one pop. */
+type SidebarView = 'menu' | 'section' | 'search'
+
 const route = useRoute()
 const props = withDefaults(
   defineProps<{
+    /** The shell has retracted the column: keep it mounted (scroll survives) but inert. */
     collapsed?: boolean
+    /** Docked in the layout (desktop) vs. rendered inside the mobile drawer. */
+    collapsible?: boolean
   }>(),
   {
     collapsed: false,
+    collapsible: true,
   },
 )
+
 const emit = defineEmits<{
-  toggleCollapsed: []
-  openSearch: []
+  collapse: []
 }>()
 
 const { isAuthenticated } = useDeferredAuthStatus()
@@ -51,120 +53,90 @@ const admin = shallowRef<AdminStore | null>(null)
 const sitesStore = useSitesStore()
 const skillsStore = useSkillsStore()
 const extensionsStore = useExtensionsStore()
+const mcpStore = useMcpStore()
+
+const headerRef = useTemplateRef<SidebarHeaderExposed>('headerRef')
+
+const view = shallowRef<SidebarView>('menu')
+/** Which way the last transition moved, so the panels slide the way the reader expects. */
+const direction = shallowRef<'forward' | 'back'>('forward')
+const activeSection = shallowRef<SidebarSectionKey>('sites')
+/** Where `Esc` should land: search sits on top of whichever view it interrupted. */
+const viewBeforeSearch = shallowRef<'menu' | 'section'>('menu')
+
+const {
+  query,
+  scope,
+  sort,
+  hasQuery,
+  resultCount,
+  resultGroups,
+  scopeOptions,
+  sortOptions,
+  clearSearch,
+} = useSidebarSearch()
+
+const isSearchMode = computed(() => (headerRef.value?.isFocused ?? false) || hasQuery.value)
+
+const viewTitle = computed(
+  () => sidebarSections.find((section) => section.key === activeSection.value)?.name ?? 'Browse',
+)
+
+const canGoBack = computed(() => view.value !== 'menu' && view.value !== 'search')
+
+/**
+ * One rule drives every panel: 0 is the live view, and an off-stack view sits one step to the left
+ * when we pushed forward into it, or to the right when we are on the way back out.
+ */
+function panelOffset(name: SidebarView) {
+  if (view.value === name) return 0
+
+  return direction.value === 'forward' ? -1 : 1
+}
+
+function panelClass(name: SidebarView) {
+  const offset = panelOffset(name)
+  if (offset === 0) return 'translate-x-0 opacity-100 blur-0'
+
+  return `pointer-events-none ${offset < 0 ? '-translate-x-2' : 'translate-x-2'} opacity-0 blur-[2px]`
+}
+
+function panelHidden(name: SidebarView) {
+  return panelOffset(name) !== 0
+}
+
+function openSection(section: SidebarSectionKey) {
+  activeSection.value = section
+  direction.value = 'forward'
+  view.value = 'section'
+}
+
+function backToMenu() {
+  direction.value = 'back'
+  view.value = 'menu'
+}
+
+const isAdmin = computed(() => admin.value?.isAdmin ?? false)
+const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
 
 void sitesStore.loadSites()
 let cancelSkillsLoad: (() => void) | undefined
 let cancelAdminLoad: (() => void) | undefined
 
-const isCollapsed = computed(() => props.collapsed)
+function handleShortcut(event: KeyboardEvent) {
+  if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return
 
-const expandedGroups = reactive<Record<SiteGroup, boolean>>({
-  ai: true,
-  design: true,
-  development: true,
-  watch: true,
-  downloads: true,
-})
+  const target = event.target instanceof HTMLElement ? event.target : null
+  if (target?.closest('input, textarea, select, [contenteditable="true"]')) return
 
-const isExtensionsExpanded = shallowRef(true)
-
-const {
-  sidebarSearch,
-  hasSidebarSearch,
-  clearSidebarSearch,
-  visibleAiSubcategories,
-  visibleDesignSubcategories,
-  visibleDevelopmentSubcategories,
-  visibleWatchSubcategories,
-  visibleDownloadsSubcategories,
-  showAiGroup,
-  showDesignGroup,
-  showDevelopmentGroup,
-  showWatchGroup,
-  showDownloadsGroup,
-  showSitesSection,
-  showSkillsSection,
-  showExtensionsSection,
-  showMcpSection,
-  visibleSkillsNav,
-  visibleExtensionCategories,
-  visibleMcpCategories,
-  visibleCompactSiteGroups,
-  totalSkillCount,
-  getSiteGroupCount,
-  getSiteRouteCount,
-  getSkillRouteCount,
-  getExtensionRouteCount,
-  getMcpRouteCount,
-  hasVisibleSidebarTabs,
-} = useSidebarSearch()
-
-const toggleGroup = (group: SiteGroup) => {
-  expandedGroups[group] = !expandedGroups[group]
+  event.preventDefault()
+  headerRef.value?.focusSearch()
 }
 
-function toggleExtensions() {
-  isExtensionsExpanded.value = !isExtensionsExpanded.value
+function handleSearchClear() {
+  clearSearch()
+  headerRef.value?.blurSearch()
 }
-
-const isActive = (path: string, exact = true) => {
-  return exact ? route.path === path : route.path === path || route.path.startsWith(`${path}/`)
-}
-
-watch(
-  () => route.path,
-  (path) => {
-    const groups: SiteGroup[] = ['ai', 'design', 'development', 'watch', 'downloads']
-    for (const group of groups) {
-      if (isSiteGroupRoute(path, group)) {
-        expandedGroups[group] = true
-      }
-    }
-  },
-  { immediate: true },
-)
-
-const isAiExpanded = computed(() => expandedGroups.ai)
-const isDesignExpanded = computed(() => expandedGroups.design)
-const isDevelopmentExpanded = computed(() => expandedGroups.development)
-const isWatchExpanded = computed(() => expandedGroups.watch)
-const isDownloadsExpanded = computed(() => expandedGroups.downloads)
-
-const isAiVisibleExpanded = computed(
-  () => showAiGroup.value && (isAiExpanded.value || hasSidebarSearch.value),
-)
-const isDesignVisibleExpanded = computed(
-  () => showDesignGroup.value && (isDesignExpanded.value || hasSidebarSearch.value),
-)
-const isDevelopmentVisibleExpanded = computed(
-  () => showDevelopmentGroup.value && (isDevelopmentExpanded.value || hasSidebarSearch.value),
-)
-const isWatchVisibleExpanded = computed(
-  () => showWatchGroup.value && (isWatchExpanded.value || hasSidebarSearch.value),
-)
-const isDownloadsVisibleExpanded = computed(
-  () => showDownloadsGroup.value && (isDownloadsExpanded.value || hasSidebarSearch.value),
-)
-
-const isAdmin = computed(() => admin.value?.isAdmin ?? false)
-const pendingAdminCount = computed(() => admin.value?.pendingCount ?? 0)
-
-function toggleSidebarCollapsed() {
-  emit('toggleCollapsed')
-}
-
-function openSearchFromRail() {
-  emit('openSearch')
-}
-
-watch(
-  () => props.collapsed,
-  (collapsed) => {
-    if (collapsed) {
-      clearSidebarSearch()
-    }
-  },
-)
 
 function loadSkillsCounts() {
   void skillsStore.loadSkills()
@@ -211,7 +183,35 @@ watch(isAuthenticated, (authenticated) => {
   )
 })
 
+watch(
+  () => props.collapsed,
+  (collapsed) => {
+    if (collapsed) {
+      handleSearchClear()
+    }
+  },
+)
+
+// Search rides the same stack, so entering it slides forward and `Esc` slides back to where it was.
+watch(isSearchMode, (searching) => {
+  if (searching) {
+    if (view.value === 'search') return
+
+    viewBeforeSearch.value = view.value === 'section' ? 'section' : 'menu'
+    direction.value = 'forward'
+    view.value = 'search'
+    return
+  }
+
+  if (view.value !== 'search') return
+
+  direction.value = 'back'
+  view.value = viewBeforeSearch.value
+})
+
 onMounted(() => {
+  window.addEventListener('keydown', handleShortcut)
+
   if (route.path.startsWith('/skills')) {
     loadSkillsCounts()
   } else {
@@ -229,9 +229,19 @@ onMounted(() => {
       timeout: 10000,
     })
   }
+
+  if (route.path.startsWith('/mcp')) {
+    void mcpStore.loadServers()
+  } else {
+    void scheduleIdleTask(() => mcpStore.loadServers(), {
+      delay: 7000,
+      timeout: 11000,
+    })
+  }
 })
 
 onUnmounted(() => {
+  window.removeEventListener('keydown', handleShortcut)
   cancelAdminLoad?.()
   cancelSkillsLoad?.()
 })
@@ -239,360 +249,83 @@ onUnmounted(() => {
 
 <template>
   <aside
-    class="app-sidebar flex h-full w-full select-none flex-col overflow-visible border-r border-gray-800 bg-[#1f1f1f]"
-    :class="{ 'app-sidebar--collapsed': isCollapsed }"
+    class="app-sidebar group/sidebar flex h-full w-full min-w-0 flex-col select-none bg-sidebar"
+    :class="{ 'app-sidebar--docked': props.collapsible }"
+    :inert="props.collapsed ? true : undefined"
+    :aria-hidden="props.collapsed ? true : undefined"
+    data-sidebar="content"
   >
-    <!-- Header -->
     <SidebarHeader
-      :collapsed="isCollapsed"
+      ref="headerRef"
+      v-model:query="query"
+      :title="viewTitle"
+      :search-mode="isSearchMode"
+      :collapsible="props.collapsible"
       :is-authenticated="isAuthenticated"
-      @toggle-collapsed="toggleSidebarCollapsed"
+      :can-go-back="canGoBack"
+      @back="backToMenu"
+      @collapse="emit('collapse')"
+      @clear="handleSearchClear"
     />
 
-    <!-- Search bar (expanded only) -->
-    <div v-if="!isCollapsed" class="shrink-0 border-b border-gray-800 px-3 py-3">
-      <label class="sr-only" for="sidebar-tab-search">Search sidebar tabs</label>
-      <div class="relative">
-        <Search
-          class="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-500"
+    <!--
+      The view stack. Three stacked absolute panels, one transition rule: the live view sits at
+      translate-x-0, an off-stack view sits one step left when we pushed into it and one step right
+      when we are on the way back. Off-stack panels stay mounted but inert, so each keeps its scroll.
+    -->
+    <div class="relative min-h-0 flex-1 overflow-hidden">
+      <div
+        class="absolute inset-0 transition-[translate,opacity,filter] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none"
+        :class="panelClass('menu')"
+        :inert="panelHidden('menu') ? true : undefined"
+        :aria-hidden="panelHidden('menu') ? true : undefined"
+      >
+        <SidebarMenuPanel @select="openSection" />
+      </div>
+
+      <div
+        class="absolute inset-0 transition-[translate,opacity,filter] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none"
+        :class="panelClass('section')"
+        :inert="panelHidden('section') ? true : undefined"
+        :aria-hidden="panelHidden('section') ? true : undefined"
+      >
+        <SidebarSectionPanel :key="activeSection" :section-key="activeSection" />
+      </div>
+
+      <div
+        class="absolute inset-0 transition-[translate,opacity,filter] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none"
+        :class="panelClass('search')"
+        :inert="panelHidden('search') ? true : undefined"
+        :aria-hidden="panelHidden('search') ? true : undefined"
+      >
+        <SidebarSearchPanel
+          :query="query"
+          :scope="scope"
+          :sort="sort"
+          :result-groups="resultGroups"
+          :result-count="resultCount"
+          :has-query="hasQuery"
+          :scope-options="scopeOptions"
+          :sort-options="sortOptions"
+          @update:scope="scope = $event"
+          @update:sort="sort = $event"
         />
-        <input
-          id="sidebar-tab-search"
-          v-model="sidebarSearch"
-          type="search"
-          autocomplete="off"
-          spellcheck="false"
-          placeholder="Search tabs"
-          class="h-8 w-full rounded-md border border-gray-800 bg-[#1f1f1f] px-8 text-xs font-medium text-white outline-none transition-colors placeholder:text-gray-600 focus:border-gray-600 focus:bg-[#1f1f1f]"
-          @keydown.esc="clearSidebarSearch"
-        />
-        <button
-          v-if="hasSidebarSearch"
-          type="button"
-          class="absolute right-2 top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded text-gray-500 transition-colors hover:bg-[#1f1f1f] hover:text-white"
-          aria-label="Clear sidebar search"
-          @click="clearSidebarSearch"
-        >
-          <X class="h-3 w-3" />
-        </button>
       </div>
     </div>
 
-    <!-- Collapsed rail view -->
-    <SidebarRail
-      v-if="isCollapsed"
-      :groups="visibleCompactSiteGroups"
-      :is-active="isActive"
-      :get-group-count="getSiteGroupCount"
-      :get-item-count="getSiteRouteCount"
-      :show-extensions-section="showExtensionsSection"
-      :show-skills-section="showSkillsSection"
-      :extension-categories="visibleExtensionCategories"
-      :skills-nav="visibleSkillsNav"
-      :total-skill-count="totalSkillCount"
-      @open-search="openSearchFromRail"
-    />
-
-    <!-- Expanded tree view -->
-    <nav v-else class="custom-scrollbar min-h-0 flex-1 overflow-y-auto pb-4 pt-1">
-      <ul class="space-y-0.5 px-4">
-        <template v-if="showSitesSection">
-          <SidebarExpandedGroup
-            :icon="Bot"
-            name="AI"
-            route="/sites/ai"
-            group="ai"
-            :is-expanded="isAiVisibleExpanded"
-            :is-group-active="isActive('/sites/ai', false)"
-            :visible-items="visibleAiSubcategories"
-            :show-group="showAiGroup"
-            :get-group-count="getSiteGroupCount"
-            :get-item-count="getSiteRouteCount"
-            :is-item-active="(r: string) => isActive(r)"
-            @toggle="toggleGroup('ai')"
-          />
-
-          <SidebarExpandedGroup
-            :icon="Palette"
-            name="Design"
-            route="/sites/design"
-            group="design"
-            :is-expanded="isDesignVisibleExpanded"
-            :is-group-active="isActive('/sites/design', false)"
-            :visible-items="visibleDesignSubcategories"
-            :show-group="showDesignGroup"
-            :get-group-count="getSiteGroupCount"
-            :get-item-count="getSiteRouteCount"
-            :is-item-active="(r: string) => isActive(r)"
-            @toggle="toggleGroup('design')"
-          />
-
-          <SidebarExpandedGroup
-            :icon="Code2"
-            name="Development"
-            route="/sites/development"
-            group="development"
-            :is-expanded="isDevelopmentVisibleExpanded"
-            :is-group-active="isActive('/sites/development', false)"
-            :visible-items="visibleDevelopmentSubcategories"
-            :show-group="showDevelopmentGroup"
-            :get-group-count="getSiteGroupCount"
-            :get-item-count="getSiteRouteCount"
-            :is-item-active="(r: string) => isActive(r)"
-            @toggle="toggleGroup('development')"
-          />
-
-          <SidebarExpandedGroup
-            :icon="Film"
-            name="Watch"
-            route="/sites/watch"
-            group="watch"
-            :is-expanded="isWatchVisibleExpanded"
-            :is-group-active="isActive('/sites/watch', false)"
-            :visible-items="visibleWatchSubcategories"
-            :show-group="showWatchGroup"
-            :get-group-count="getSiteGroupCount"
-            :get-item-count="getSiteRouteCount"
-            :is-item-active="(r: string) => isActive(r)"
-            @toggle="toggleGroup('watch')"
-          />
-
-          <SidebarExpandedGroup
-            :icon="Download"
-            name="Downloads"
-            route="/sites/downloads"
-            group="downloads"
-            :is-expanded="isDownloadsVisibleExpanded"
-            :is-group-active="isActive('/sites/downloads', false)"
-            :visible-items="visibleDownloadsSubcategories"
-            :show-group="showDownloadsGroup"
-            :get-group-count="getSiteGroupCount"
-            :get-item-count="getSiteRouteCount"
-            :is-item-active="(r: string) => isActive(r)"
-            @toggle="toggleGroup('downloads')"
-          />
-        </template>
-
-        <!-- Extensions section -->
-        <li v-if="showExtensionsSection" :class="{ 'mt-6': showSitesSection }">
-          <button
-            type="button"
-            class="w-full flex items-center rounded-md text-left transition-colors group text-xs"
-            :class="
-              isActive('/extensions', false)
-                ? 'bg-[#1f1f1f] text-white'
-                : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-            "
-            :aria-expanded="isExtensionsExpanded"
-            aria-controls="sidebar-extensions-branch"
-            aria-label="Toggle extensions"
-            @click="toggleExtensions"
-          >
-            <span class="min-w-0 flex-1 flex items-center gap-3 px-2 py-1.5">
-              <Puzzle class="w-3.5 h-3.5 flex-shrink-0" />
-              <span class="min-w-0 flex-1 truncate font-semibold uppercase tracking-wider"
-                >Extensions</span
-              >
-            </span>
-            <ChevronRight
-              class="mr-2 w-3 h-3 text-gray-600 transition-transform duration-200 ease-out group-hover:text-gray-300"
-              :class="{ 'rotate-90': isExtensionsExpanded }"
-            />
-          </button>
-
-          <Transition name="sidebar-group">
-            <li
-              v-if="isExtensionsExpanded && visibleExtensionCategories.length > 0"
-              id="sidebar-extensions-branch"
-              class="sidebar-group-shell"
-            >
-              <ul class="sidebar-group-inner ml-4 space-y-0.5">
-                <li v-for="item in visibleExtensionCategories" :key="item.name">
-                  <RouterLink
-                    :to="item.route"
-                    class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                    :class="
-                      isActive(item.route)
-                        ? 'bg-[#1f1f1f] text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                    "
-                  >
-                    <div
-                      v-if="isActive(item.route)"
-                      class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                    ></div>
-                    <component :is="item.icon" class="w-3.5 h-3.5" />
-                    <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                    <span
-                      class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                      :class="
-                        isActive(item.route)
-                          ? 'text-zinc-300'
-                          : 'text-gray-600 group-hover:text-gray-300'
-                      "
-                    >
-                      {{ getExtensionRouteCount(item.route) }}
-                    </span>
-                  </RouterLink>
-                </li>
-              </ul>
-            </li>
-          </Transition>
-        </li>
-
-        <!-- MCP section -->
-        <li v-if="showMcpSection" :class="{ 'mt-6': showSitesSection || showExtensionsSection }">
-          <div class="flex w-full items-center gap-3 py-2 text-gray-500">
-            <Plug class="h-4 w-4" />
-            <span class="text-xs font-semibold uppercase tracking-wider">MCP</span>
-          </div>
-
-          <ul class="ml-4 space-y-0.5">
-            <li v-for="item in visibleMcpCategories" :key="item.name">
-              <RouterLink
-                :to="item.route"
-                class="group relative flex w-full items-center gap-3 rounded-md px-2 py-1.5 text-xs transition-colors"
-                :class="
-                  isActive(item.route)
-                    ? 'bg-[#1f1f1f] text-white'
-                    : 'text-gray-400 hover:bg-accent-500/10 hover:text-white'
-                "
-              >
-                <div
-                  v-if="isActive(item.route)"
-                  class="absolute bottom-1.5 left-0 top-1.5 w-0.5 bg-white"
-                />
-                <component :is="item.icon" class="h-3.5 w-3.5" />
-                <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                <span
-                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive(item.route)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getMcpRouteCount(item.route) }}
-                </span>
-              </RouterLink>
-            </li>
-          </ul>
-        </li>
-
-        <!-- Skills section -->
-        <li
-          v-if="showSkillsSection"
-          :class="{ 'mt-6': showSitesSection || showExtensionsSection || showMcpSection }"
-        >
-          <div class="w-full flex items-center gap-3 text-gray-500 py-2">
-            <Sparkles class="w-4 h-4" />
-            <span class="text-xs font-semibold uppercase tracking-wider">Skills</span>
-          </div>
-
-          <ul class="ml-4 space-y-0.5">
-            <li v-for="item in visibleSkillsNav" :key="item.name">
-              <RouterLink
-                :to="item.route"
-                class="w-full flex items-center gap-3 px-2 py-1.5 rounded-md transition-colors group relative text-xs"
-                :class="
-                  isActive(item.route)
-                    ? 'bg-[#1f1f1f] text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-accent-500/10'
-                "
-              >
-                <div
-                  v-if="isActive(item.route)"
-                  class="absolute left-0 top-1.5 bottom-1.5 w-0.5 bg-white"
-                ></div>
-                <component :is="item.icon" class="w-3.5 h-3.5" />
-                <span class="min-w-0 flex-1 truncate font-medium">{{ item.name }}</span>
-                <span
-                  class="ml-auto shrink-0 rounded px-1.5 text-[10px] font-semibold tabular-nums"
-                  :class="
-                    isActive(item.route)
-                      ? 'text-zinc-300'
-                      : 'text-gray-600 group-hover:text-gray-300'
-                  "
-                >
-                  {{ getSkillRouteCount(item.route) }}
-                </span>
-              </RouterLink>
-            </li>
-          </ul>
-        </li>
-
-        <!-- Empty state -->
-        <li v-if="!hasVisibleSidebarTabs" class="px-2 py-6 text-center">
-          <p class="text-xs font-medium text-gray-500">No tabs match "{{ sidebarSearch }}".</p>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Footer -->
-    <SidebarFooter
-      :collapsed="isCollapsed"
-      :is-active="isActive"
-      :is-admin="isAdmin"
-      :pending-admin-count="pendingAdminCount"
-    />
+    <SidebarFooter :is-admin="isAdmin" :pending-admin-count="pendingAdminCount" />
   </aside>
 </template>
 
 <style scoped>
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #1f1f1f;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #374151;
-}
-
-.sidebar-group-shell {
-  display: grid;
-  grid-template-rows: 1fr;
-  overflow: hidden;
-}
-
-.sidebar-group-inner {
-  min-height: 0;
-  overflow: hidden;
-}
-
-.sidebar-group-enter-active,
-.sidebar-group-leave-active {
-  transition:
-    grid-template-rows 180ms ease,
-    opacity 160ms ease,
-    transform 180ms ease;
-}
-
-.sidebar-group-enter-from,
-.sidebar-group-leave-to {
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transform: translateY(-4px);
-}
-
-.sidebar-group-enter-to,
-.sidebar-group-leave-from {
-  grid-template-rows: 1fr;
-  opacity: 1;
-  transform: translateY(0);
+.app-sidebar--docked {
+  /* Half-pixel hairline: at 1x DPR this reads as a seam, not a divider. */
+  border-right: 0.5px solid var(--color-sidebar-border);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sidebar-group-enter-active,
-  .sidebar-group-leave-active {
-    transition: none;
+  .app-sidebar :deep(*) {
+    scroll-behavior: auto;
   }
 }
 </style>
