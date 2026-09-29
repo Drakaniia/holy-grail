@@ -54,10 +54,7 @@ function selectTab(tab: Tab) {
       {{ tab.label }}
       <AlertCircle v-if="!tab.enabled" class="h-3.5 w-3.5" />
       <!-- Active indicator -->
-      <span
-        v-if="activeTab === tab.id"
-        class="absolute inset-x-0 bottom-0 h-0.5 bg-accent-500"
-      />
+      <span v-if="activeTab === tab.id" class="absolute inset-x-0 bottom-0 h-0.5 bg-accent-500" />
     </button>
   </div>
 </template>

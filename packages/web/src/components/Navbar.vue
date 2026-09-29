@@ -187,7 +187,6 @@ async function openRandomSite() {
 
   await router.push({ name: 'site-detail', params: { slug: randomSite.slug } })
 }
-
 </script>
 
 <template>
@@ -499,7 +498,7 @@ async function openRandomSite() {
 /* Hold the first tooltip back so it can't fire by accident on the way to something else. */
 .tooltip-shell:hover .tooltip-bubble {
   transition-delay: 400ms, 400ms;
-}/* Once one tooltip has been open, the rest are instant while the pointer stays in the toolbar. */
+} /* Once one tooltip has been open, the rest are instant while the pointer stays in the toolbar. */
 .navbar-actions[data-tooltip-warm] .tooltip-shell:hover .tooltip-bubble {
   transition-delay: 0ms, 0ms;
   transition-duration: 0ms, 0ms;
