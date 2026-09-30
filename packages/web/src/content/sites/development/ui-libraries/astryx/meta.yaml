@@ -1,0 +1,84 @@
+slug: astryx
+name: Astryx - Meta's Open Source Design System
+description: Meta's open source design system with 170+ React 19 components, StyleX theming, and agent-ready MCP.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: N/A
+lastRelease: v0.6.0
+version: v0.6.0
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+  - npm
+website: https://astryx.atmeta.com
+docs: https://astryx.atmeta.com/docs/getting-started
+sourceCode: https://github.com/facebook/astryx
+icon: astryx
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - ui-libraries
+  - design-system
+  - react
+  - stylex
+  - mcp
+atGlance: Meta's open source design system — 170+ components, themes, and agent tooling.
+fullDescription: >-
+  Astryx is Meta's open source design system, currently in beta, built on React 19 and
+  StyleX. It offers over 170 accessible, themeable components plus production-ready templates
+  and a playground for tuning themes to match your brand. A CLI and MCP server let agents
+  scaffold projects, browse templates, and generate themes. The system powers over 13,000
+  internal apps and has been shaped by eight years of Meta engineering and design work.
+coreFeatures:
+  - name: 170+ Components
+    description: Accessible React components with built-in spacing and dark mode.
+    icon: layers
+  - name: Customizable Themes
+    description: Fully themeable foundations you adapt to your brand, not the reverse.
+    icon: palette
+  - name: Ready-Made Templates
+    description: Production-ready page templates you can drop content straight into.
+    icon: layout
+additionalFeatures:
+  - name: Agent Ready
+    description: CLI and MCP server for scaffolding, browsing, theming, and agent docs.
+    icon: sparkles
+  - name: StyleX Powered
+    description: Built on StyleX for zero-runtime styling with React 19.
+    icon: wind
+  - name: Open Source
+    description: MIT licensed and developed in the open on GitHub.
+    icon: check
+similarTools:
+  - slug: base-ui
+    name: Base UI
+    description: Unstyled, accessible React primitives that adapt to your design system.
+    stars: 10025
+    addedDaysAgo: 0
+    verified: true
+    website: https://base-ui.com/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, and Vue.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
+  - slug: reactbits
+    name: React Bits
+    description: Copy-paste animated React components for interfaces and landing pages.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/

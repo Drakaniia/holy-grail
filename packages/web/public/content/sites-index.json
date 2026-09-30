@@ -3723,7 +3723,7 @@
     "subcategory": "cloud-hosting",
     "stars": 36800,
     "watchers": 109,
-    "addedDaysAgo": 35,
+    "addedDaysAgo": 36,
     "license": "Apache-2.0",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -6793,7 +6793,7 @@
     "subcategory": "ui-libraries",
     "stars": 9809,
     "watchers": 36,
-    "addedDaysAgo": 123,
+    "addedDaysAgo": 124,
     "license": "MIT",
     "lastCommit": "19 hours ago",
     "lastRelease": "No releases",
@@ -8326,7 +8326,7 @@
     "subcategory": "ui-libraries",
     "stars": 4500,
     "watchers": 0,
-    "addedDaysAgo": 29,
+    "addedDaysAgo": 30,
     "license": "MIT",
     "lastCommit": "4 days ago",
     "lastRelease": "N/A",
@@ -9645,7 +9645,7 @@
     "subcategory": "ui-libraries",
     "stars": 2324,
     "watchers": 10,
-    "addedDaysAgo": 123,
+    "addedDaysAgo": 124,
     "license": "MIT",
     "lastCommit": "2 months ago",
     "lastRelease": "1 year ago",
@@ -10379,7 +10379,7 @@
     "subcategory": "ui-libraries",
     "stars": 1680,
     "watchers": 5,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "MIT",
     "lastCommit": "21 hours ago",
     "lastRelease": "3 months ago",
@@ -10791,7 +10791,7 @@
     "subcategory": "ui-libraries",
     "stars": 1455,
     "watchers": 0,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Unknown",
     "lastCommit": "3 hours ago",
     "lastRelease": "No releases",
@@ -11403,7 +11403,7 @@
     "subcategory": "ui-libraries",
     "stars": 879,
     "watchers": 5,
-    "addedDaysAgo": 83,
+    "addedDaysAgo": 84,
     "license": "Unknown",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -13251,7 +13251,7 @@
     "subcategory": "ui-libraries",
     "stars": 169,
     "watchers": 1,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Unknown",
     "lastCommit": "3 days ago",
     "lastRelease": "No releases",
@@ -13358,7 +13358,7 @@
     "subcategory": "ui-libraries",
     "stars": 152,
     "watchers": 2,
-    "addedDaysAgo": 123,
+    "addedDaysAgo": 124,
     "license": "MIT",
     "lastCommit": "17 days ago",
     "lastRelease": "No releases",
@@ -20258,7 +20258,7 @@
     "subcategory": "video",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 35,
+    "addedDaysAgo": 36,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -25960,7 +25960,7 @@
     "subcategory": "design-tools",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 29,
+    "addedDaysAgo": 30,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -26063,7 +26063,7 @@
     "subcategory": "design-tools",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 29,
+    "addedDaysAgo": 30,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -26559,7 +26559,7 @@
     "subcategory": "design-tools",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 29,
+    "addedDaysAgo": 30,
     "license": "Unknown",
     "lastCommit": "6 days ago",
     "lastRelease": "N/A",
@@ -27059,7 +27059,7 @@
     "subcategory": "design-tools",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 123,
+    "addedDaysAgo": 124,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -27964,7 +27964,7 @@
     "subcategory": "design-tools",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 83,
+    "addedDaysAgo": 84,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -29037,6 +29037,113 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://svglogo.co/"
+      }
+    ]
+  },
+  {
+    "slug": "amicons",
+    "name": "Amicons - Friendly Icon Set for Product Teams",
+    "description": "760 hand-crafted icons in 3,040 variants on a 24px grid, with 43 categories and Figma plus SVG exports.",
+    "category": "Icons/SVG",
+    "parentCategory": "design",
+    "subcategory": "icons-svg",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Figma"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://amicons.design",
+    "docs": "https://amicons.design",
+    "sourceCode": "",
+    "icon": "amicons",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "design",
+      "icons-svg",
+      "icons",
+      "svg",
+      "figma",
+      "ui"
+    ],
+    "atGlance": "760 friendly icons across 3,040 variants, built on a 24px grid.",
+    "fullDescription": "Amicons is a hand-crafted icon set designed for modern product interfaces, with 760 icons across 3,040 variants. Every icon ships in mono, fill, and sharp styles so you can mix friendly and professional personalities per context. A free 300-icon tier is available, and a one-time Pro purchase unlocks the full set with lifetime updates.",
+    "coreFeatures": [
+      {
+        "name": "3,040 Variants",
+        "description": "Every icon in mono, fill, and sharp styles to fit different contexts.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "43 Categories",
+        "description": "Thoughtfully sorted so you stop hunting through random icon dumps.",
+        "icon": "layers"
+      },
+      {
+        "name": "24px Grid",
+        "description": "Drawn on a 24px grid with 2px strokes for consistent optical weight.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Figma and SVG",
+        "description": "Designed in Figma and exported as optimized SVGs.",
+        "icon": "palette"
+      },
+      {
+        "name": "Free Tier",
+        "description": "300 icons in 1,200 variants free of charge to test before buying.",
+        "icon": "check"
+      },
+      {
+        "name": "Lifetime Updates",
+        "description": "Pro licenses include every future icon added to the set.",
+        "icon": "refresh-cw"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "heroicons",
+        "name": "Heroicons",
+        "description": "Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.",
+        "stars": 23613,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://heroicons.com/solid"
+      },
+      {
+        "slug": "iconly",
+        "name": "Iconly Pro",
+        "description": "Flat, 3D, and animated icon library for product teams.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://iconly.pro/"
+      },
+      {
+        "slug": "pikaicons",
+        "name": "Pikaicons",
+        "description": "Free, open-source icon library with a playful hand-drawn feel.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://pikaicons.com/"
       }
     ]
   },
@@ -30882,7 +30989,7 @@
     "subcategory": "inspiration",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -40266,7 +40373,7 @@
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 83,
+    "addedDaysAgo": 84,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -40354,6 +40461,113 @@
         "slug": "reactbits",
         "name": "React Bits",
         "description": "Animated, interactive React components for building memorable landing pages and websites.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
+      }
+    ]
+  },
+  {
+    "slug": "astryx",
+    "name": "Astryx - Meta's Open Source Design System",
+    "description": "Meta's open source design system with 170+ React 19 components, StyleX theming, and agent-ready MCP.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "MIT",
+    "lastCommit": "N/A",
+    "lastRelease": "v0.6.0",
+    "version": "v0.6.0",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud",
+      "npm"
+    ],
+    "website": "https://astryx.atmeta.com",
+    "docs": "https://astryx.atmeta.com/docs/getting-started",
+    "sourceCode": "https://github.com/facebook/astryx",
+    "icon": "astryx",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "ui-libraries",
+      "design-system",
+      "react",
+      "stylex",
+      "mcp"
+    ],
+    "atGlance": "Meta's open source design system — 170+ components, themes, and agent tooling.",
+    "fullDescription": "Astryx is Meta's open source design system, currently in beta, built on React 19 and StyleX. It offers over 170 accessible, themeable components plus production-ready templates and a playground for tuning themes to match your brand. A CLI and MCP server let agents scaffold projects, browse templates, and generate themes. The system powers over 13,000 internal apps and has been shaped by eight years of Meta engineering and design work.",
+    "coreFeatures": [
+      {
+        "name": "170+ Components",
+        "description": "Accessible React components with built-in spacing and dark mode.",
+        "icon": "layers"
+      },
+      {
+        "name": "Customizable Themes",
+        "description": "Fully themeable foundations you adapt to your brand, not the reverse.",
+        "icon": "palette"
+      },
+      {
+        "name": "Ready-Made Templates",
+        "description": "Production-ready page templates you can drop content straight into.",
+        "icon": "layout"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Agent Ready",
+        "description": "CLI and MCP server for scaffolding, browsing, theming, and agent docs.",
+        "icon": "sparkles"
+      },
+      {
+        "name": "StyleX Powered",
+        "description": "Built on StyleX for zero-runtime styling with React 19.",
+        "icon": "wind"
+      },
+      {
+        "name": "Open Source",
+        "description": "MIT licensed and developed in the open on GitHub.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "base-ui",
+        "name": "Base UI",
+        "description": "Unstyled, accessible React primitives that adapt to your design system.",
+        "stars": 10025,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://base-ui.com/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, and Vue.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Copy-paste animated React components for interfaces and landing pages.",
         "stars": 41632,
         "addedDaysAgo": 0,
         "verified": true,
@@ -40475,7 +40689,7 @@
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 128,
+    "addedDaysAgo": 129,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -40686,7 +40900,7 @@
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -40998,7 +41212,7 @@
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 29,
+    "addedDaysAgo": 30,
     "license": "Unknown",
     "lastCommit": "31 Jul 2026",
     "lastRelease": "N/A",
@@ -41204,7 +41418,7 @@
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -41414,7 +41628,7 @@
     "subcategory": "ui-libraries",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -41612,6 +41826,115 @@
         "addedDaysAgo": 0,
         "verified": true,
         "website": "https://smoothui.dev/"
+      }
+    ]
+  },
+  {
+    "slug": "paceui",
+    "name": "PaceUI - React Blocks, Templates and MCP Toolkit",
+    "description": "350+ blocks, 100+ components, motion crafts, templates, and starters for React, Next.js, and TanStack Start.",
+    "category": "UI Library",
+    "parentCategory": "development",
+    "subcategory": "ui-libraries",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web"
+    ],
+    "deployment": [
+      "Cloud",
+      "npm"
+    ],
+    "website": "https://paceui.com",
+    "docs": "https://paceui.com/docs",
+    "sourceCode": "https://github.com/paceui/community",
+    "icon": "paceui",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "development",
+      "ui-libraries",
+      "react",
+      "nextjs",
+      "tanstack",
+      "shadcn",
+      "mcp",
+      "motion"
+    ],
+    "atGlance": "Production React blocks, templates, and starters built on shadcn and Base UI.",
+    "fullDescription": "PaceUI is a paid toolkit for shipping production React UI fast, built on shadcn and Base UI and engineered for Next.js and TanStack Start. It bundles 350+ blocks, 100+ component variants, 25+ motion crafts, full templates, and a full-stack starter with auth, payments, AI, and database integrations. A PaceUI MCP server wires the catalog into your IDE agent, and a free tier covers 25 components, 30 blocks, and 2 templates.",
+    "coreFeatures": [
+      {
+        "name": "350+ Blocks and Components",
+        "description": "Copy-paste layouts, component variants, and motion crafts for React apps.",
+        "icon": "layers"
+      },
+      {
+        "name": "Full Templates and Starters",
+        "description": "Dashboards, AI SaaS landings, and a starter with auth, payments, and DB.",
+        "icon": "rocket"
+      },
+      {
+        "name": "PaceUI MCP",
+        "description": "Connect your IDE agent to prompt, explore, and drop code from the catalog.",
+        "icon": "sparkles"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "shadcn and Base UI",
+        "description": "Every block builds on shadcn/ui and Base UI, so you own the code.",
+        "icon": "check"
+      },
+      {
+        "name": "Next.js and TanStack Start",
+        "description": "Optimized for both modern React meta-frameworks and their data patterns.",
+        "icon": "wind"
+      },
+      {
+        "name": "One-Time Pricing",
+        "description": "Pay once, own the code forever, with lifetime updates and commercial use.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "ui-the-foundation-for-your-design-system-shadcn-ui",
+        "name": "shadcn/ui",
+        "description": "Copy-paste component system for building design systems with Radix UI and Tailwind CSS.",
+        "stars": 117109,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://ui.shadcn.com/"
+      },
+      {
+        "slug": "reactbits",
+        "name": "React Bits",
+        "description": "Copy-paste animated React components for interfaces and landing pages.",
+        "stars": 41632,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://reactbits.dev/"
+      },
+      {
+        "slug": "motion",
+        "name": "Motion",
+        "description": "Production animation library for React, JavaScript, and Vue.",
+        "stars": 32451,
+        "addedDaysAgo": 0,
+        "verified": true,
+        "website": "https://motion.dev/"
       }
     ]
   },
@@ -42636,7 +42959,7 @@
     "subcategory": "movies",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 4,
+    "addedDaysAgo": 5,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -46864,7 +47187,7 @@
     "subcategory": "anime",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 29,
+    "addedDaysAgo": 30,
     "license": "Proprietary",
     "lastCommit": "N/A",
     "lastRelease": "N/A",
@@ -48540,7 +48863,7 @@
     "subcategory": "movies",
     "stars": 0,
     "watchers": 0,
-    "addedDaysAgo": 118,
+    "addedDaysAgo": 119,
     "license": "Proprietary",
     "lastCommit": "Added Jun 3, 2026",
     "lastRelease": "N/A",
@@ -48603,6 +48926,112 @@
         "addedDaysAgo": 0,
         "verified": false,
         "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "movies2watch",
+        "name": "Movies2Watch",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://movies2watch.watch/home/"
+      }
+    ]
+  },
+  {
+    "slug": "yumeflix",
+    "name": "Yumeflix - Free Movies, Series, Anime and K-Drama",
+    "description": "Free HD streaming of movies, series, anime, and K-drama with no signup, watchlist, and PWA support.",
+    "category": "Movies",
+    "parentCategory": "watch",
+    "subcategory": "movies",
+    "stars": 0,
+    "watchers": 0,
+    "addedDaysAgo": 0,
+    "license": "Proprietary",
+    "lastCommit": "N/A",
+    "lastRelease": "N/A",
+    "version": "",
+    "contributors": 0,
+    "commitsThisYear": 0,
+    "releases": 0,
+    "platforms": [
+      "Web",
+      "Mobile"
+    ],
+    "deployment": [
+      "Cloud"
+    ],
+    "website": "https://yumeflix.site",
+    "docs": "https://yumeflix.site",
+    "sourceCode": "",
+    "icon": "yumeflix",
+    "verified": false,
+    "featured": false,
+    "tags": [
+      "bookmark",
+      "watch",
+      "movies",
+      "streaming",
+      "anime",
+      "kdrama"
+    ],
+    "atGlance": "Free HD streaming for movies, series, anime, and K-drama — no signup.",
+    "fullDescription": "Yumeflix is a free streaming app for movies, TV series, anime, and K-drama with no subscription, credit card, or account required. It ships daily-updated trending rows, a watchlist with continue-watching, and multiple playback sources per title as a backup. Installable as a PWA on Android, iPhone, iPad, and desktop.",
+    "coreFeatures": [
+      {
+        "name": "No Signup Streaming",
+        "description": "Watch in HD with no account, email, or credit card required.",
+        "icon": "rocket"
+      },
+      {
+        "name": "Daily Trending Rows",
+        "description": "Top 10 and trending picks refresh every day.",
+        "icon": "refresh-cw"
+      },
+      {
+        "name": "Watchlist and Resume",
+        "description": "Save titles and pick up exactly where you stopped watching.",
+        "icon": "check"
+      }
+    ],
+    "additionalFeatures": [
+      {
+        "name": "Multiple Sources",
+        "description": "Several players per title so there is always a backup.",
+        "icon": "layers"
+      },
+      {
+        "name": "Anime and K-Drama Lanes",
+        "description": "Dedicated subbed and dubbed rows for anime, K-, J-, C-, and Thai drama.",
+        "icon": "check"
+      },
+      {
+        "name": "Installable PWA",
+        "description": "Full-screen app-like playback on mobile and desktop browsers.",
+        "icon": "check"
+      }
+    ],
+    "deployCompose": "",
+    "installCommand": "",
+    "similarTools": [
+      {
+        "slug": "sflix",
+        "name": "SFlix",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://sflix.app/home"
+      },
+      {
+        "slug": "nextflicks",
+        "name": "NextFlicks",
+        "description": "Movie watch source bookmark for quick launch.",
+        "stars": 0,
+        "addedDaysAgo": 0,
+        "verified": false,
+        "website": "https://nextflicks.link"
       },
       {
         "slug": "movies2watch",

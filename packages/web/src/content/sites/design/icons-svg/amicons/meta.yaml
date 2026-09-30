@@ -1,0 +1,83 @@
+slug: amicons
+name: Amicons - Friendly Icon Set for Product Teams
+description: 760 hand-crafted icons in 3,040 variants on a 24px grid, with 43 categories and Figma plus SVG exports.
+category: Icons/SVG
+parentCategory: design
+subcategory: icons-svg
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Figma
+deployment:
+  - Cloud
+website: https://amicons.design
+docs: https://amicons.design
+sourceCode: ''
+icon: amicons
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - icons-svg
+  - icons
+  - svg
+  - figma
+  - ui
+atGlance: 760 friendly icons across 3,040 variants, built on a 24px grid.
+fullDescription: >-
+  Amicons is a hand-crafted icon set designed for modern product interfaces, with 760 icons
+  across 3,040 variants. Every icon ships in mono, fill, and sharp styles so you can mix
+  friendly and professional personalities per context. A free 300-icon tier is available,
+  and a one-time Pro purchase unlocks the full set with lifetime updates.
+coreFeatures:
+  - name: 3,040 Variants
+    description: Every icon in mono, fill, and sharp styles to fit different contexts.
+    icon: sparkles
+  - name: 43 Categories
+    description: Thoughtfully sorted so you stop hunting through random icon dumps.
+    icon: layers
+  - name: 24px Grid
+    description: Drawn on a 24px grid with 2px strokes for consistent optical weight.
+    icon: check
+additionalFeatures:
+  - name: Figma and SVG
+    description: Designed in Figma and exported as optimized SVGs.
+    icon: palette
+  - name: Free Tier
+    description: 300 icons in 1,200 variants free of charge to test before buying.
+    icon: check
+  - name: Lifetime Updates
+    description: Pro licenses include every future icon added to the set.
+    icon: refresh-cw
+similarTools:
+  - slug: heroicons
+    name: Heroicons
+    description: Beautiful hand-crafted SVG icons by the makers of Tailwind CSS.
+    stars: 23613
+    addedDaysAgo: 0
+    verified: true
+    website: https://heroicons.com/solid
+  - slug: iconly
+    name: Iconly Pro
+    description: Flat, 3D, and animated icon library for product teams.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://iconly.pro/
+  - slug: pikaicons
+    name: Pikaicons
+    description: Free, open-source icon library with a playful hand-drawn feel.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://pikaicons.com/

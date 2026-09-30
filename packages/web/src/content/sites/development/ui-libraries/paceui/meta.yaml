@@ -1,0 +1,86 @@
+slug: paceui
+name: PaceUI - React Blocks, Templates and MCP Toolkit
+description: 350+ blocks, 100+ components, motion crafts, templates, and starters for React, Next.js, and TanStack Start.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+  - npm
+website: https://paceui.com
+docs: https://paceui.com/docs
+sourceCode: https://github.com/paceui/community
+icon: paceui
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - ui-libraries
+  - react
+  - nextjs
+  - tanstack
+  - shadcn
+  - mcp
+  - motion
+atGlance: Production React blocks, templates, and starters built on shadcn and Base UI.
+fullDescription: >-
+  PaceUI is a paid toolkit for shipping production React UI fast, built on shadcn and Base UI
+  and engineered for Next.js and TanStack Start. It bundles 350+ blocks, 100+ component
+  variants, 25+ motion crafts, full templates, and a full-stack starter with auth, payments,
+  AI, and database integrations. A PaceUI MCP server wires the catalog into your IDE agent,
+  and a free tier covers 25 components, 30 blocks, and 2 templates.
+coreFeatures:
+  - name: 350+ Blocks and Components
+    description: Copy-paste layouts, component variants, and motion crafts for React apps.
+    icon: layers
+  - name: Full Templates and Starters
+    description: Dashboards, AI SaaS landings, and a starter with auth, payments, and DB.
+    icon: rocket
+  - name: PaceUI MCP
+    description: Connect your IDE agent to prompt, explore, and drop code from the catalog.
+    icon: sparkles
+additionalFeatures:
+  - name: shadcn and Base UI
+    description: Every block builds on shadcn/ui and Base UI, so you own the code.
+    icon: check
+  - name: Next.js and TanStack Start
+    description: Optimized for both modern React meta-frameworks and their data patterns.
+    icon: wind
+  - name: One-Time Pricing
+    description: Pay once, own the code forever, with lifetime updates and commercial use.
+    icon: check
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Radix UI and Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: reactbits
+    name: React Bits
+    description: Copy-paste animated React components for interfaces and landing pages.
+    stars: 41632
+    addedDaysAgo: 0
+    verified: true
+    website: https://reactbits.dev/
+  - slug: motion
+    name: Motion
+    description: Production animation library for React, JavaScript, and Vue.
+    stars: 32451
+    addedDaysAgo: 0
+    verified: true
+    website: https://motion.dev/
