@@ -1,0 +1,85 @@
+slug: oh-my-openagent
+name: OmO (oh-my-openagent)
+description: Open-source agent orchestration CLI for graph-engineering multi-model workflows with a memory system and CodeMode.
+category: AI CLI
+parentCategory: development
+subcategory: cli-tools
+stars: 69666
+watchers: 236
+addedDaysAgo: 0
+license: SUL-1.0
+lastCommit: 49 minutes ago
+lastRelease: 49 minutes ago
+version: v5.1.5
+contributors: 30
+commitsThisYear: 18218
+releases: 30
+platforms:
+  - CLI
+deployment:
+  - Local CLI
+website: https://omo.dev
+docs: https://omo.dev/docs
+sourceCode: https://github.com/code-yeongyu/oh-my-openagent
+icon: oh-my-openagent
+verified: true
+featured: false
+tags:
+  - cli-tools
+  - ai
+  - cli
+  - coding-agent
+  - terminal
+  - orchestration
+  - multi-model
+  - oh-my-openagent
+atGlance: Agent orchestration CLI for graph-engineering multi-model workflows.
+fullDescription: >-
+  oh-my-openagent (OmO) is a TypeScript terminal agent built around graph engineering: you describe
+  work as a prompt and it orchestrates multiple models, roles, and agents to execute it. Version 5 is
+  "Oh My Pi"-style with a persistent memory system, CodeMode, and Anthropic subscription support, so
+  long-running projects keep context across sessions. It runs as a TUI and is installable with a
+  single curl script.
+coreFeatures:
+  - name: Graph Engineering
+    description: Prompts compile into workflow graphs with parallel branches and dependencies.
+    icon: layers
+  - name: Multi-Model Orchestration
+    description: Routes work across Anthropic, OpenAI, Gemini, Codex, and Cursor backends.
+    icon: sparkles
+  - name: Memory System
+    description: Persistent memory keeps project context across sessions.
+    icon: database
+additionalFeatures:
+  - name: CodeMode
+    description: Programmable execution mode for handling complex, multi-step tasks.
+    icon: check
+  - name: Anthropic Subscriptions
+    description: Works with Claude subscriptions, not just API keys.
+    icon: wind
+  - name: Terminal UI
+    description: TUI with live workflow DAG and Herdr side pane.
+    icon: layout
+installCommand: curl -fsSL https://get.omo.dev/install.sh | bash
+similarTools:
+  - slug: oh-my-pi
+    name: Oh My Pi
+    description: Oh My Pi is another supported AI coding CLI.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://omp.sh
+  - slug: opencode-cli
+    name: OpenCode
+    description: OpenCode is another supported AI coding CLI.
+    stars: 177077
+    addedDaysAgo: 0
+    verified: true
+    website: https://opencode.ai/docs/cli/
+  - slug: claude-code
+    name: Claude Code
+    description: Claude Code is another supported AI coding CLI.
+    stars: 133648
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.anthropic.com/claude/docs/claude-code

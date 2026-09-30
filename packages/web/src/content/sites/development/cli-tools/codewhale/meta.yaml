@@ -1,0 +1,84 @@
+slug: codewhale
+name: Codewhale
+description: Open-source Rust coding agent CLI that reads your project, edits files, runs commands, and orchestrates multi-model subagents.
+category: AI CLI
+parentCategory: development
+subcategory: cli-tools
+stars: 41042
+watchers: 166
+addedDaysAgo: 0
+license: MIT
+lastCommit: 4 minutes ago
+lastRelease: 8 days ago
+version: v0.10.0
+contributors: 30
+commitsThisYear: 11535
+releases: 30
+platforms:
+  - CLI
+deployment:
+  - Local CLI
+website: https://codewhale.net/
+docs: https://github.com/Hmbown/Codewhale#install
+sourceCode: https://github.com/Hmbown/Codewhale
+icon: codewhale
+verified: true
+featured: false
+tags:
+  - cli-tools
+  - ai
+  - cli
+  - coding-agent
+  - terminal
+  - rust
+  - multi-agent
+  - codewhale
+atGlance: Open-source Rust coding agent CLI with multi-model subagent orchestration.
+fullDescription: >-
+  Codewhale is an open-source terminal coding agent built in Rust. It reads your project, edits
+  files, runs commands, and checks its own work using a hosted or local model of your choice. For
+  larger jobs it splits work across subagents with different models and roles, and it ships with a
+  TUI, MCP support, and local-first project state. Ships via GitHub releases, crates.io, and npm.
+coreFeatures:
+  - name: Autonomous Code Editing
+    description: Reads the project, edits files, runs commands, and verifies its own results.
+    icon: check
+  - name: Multi-Agent Orchestration
+    description: Splits large tasks across subagents with different models and roles.
+    icon: sparkles
+  - name: Terminal UI
+    description: Rust TUI for running, watching, and steering agent sessions from the terminal.
+    icon: layers
+additionalFeatures:
+  - name: Model Choice
+    description: Works with hosted providers or local models of your choice.
+    icon: wind
+  - name: MCP Support
+    description: Connect MCP servers to extend the agent with external tools.
+    icon: database
+  - name: Local First
+    description: Project state stays on your machine across sessions.
+    icon: check
+installCommand: curl -fsSL https://codewhale.net/install.sh | sh
+similarTools:
+  - slug: openhands
+    name: CLI - OpenHands Docs
+    description: OpenHands is another supported AI coding CLI.
+    stars: 77956
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode
+  - slug: goose-cli
+    name: Goose
+    description: Goose is another supported AI coding CLI.
+    stars: 50001
+    addedDaysAgo: 0
+    verified: true
+    website: https://block.github.io/goose/docs/category/getting-started/
+  - slug: cline-cli
+    name: Cline
+    description: Cline is another supported AI coding CLI.
+    stars: 63628
+    addedDaysAgo: 0
+    verified: true
+    website: https://docs.cline.bot/cline-cli/overview

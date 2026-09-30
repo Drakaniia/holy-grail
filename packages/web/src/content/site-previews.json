@@ -771,6 +771,15 @@
     "height": 600,
     "bytes": 61452
   },
+  "codewhale": {
+    "image": "/previews/codewhale.webp",
+    "small": "/previews/codewhale-sm.webp",
+    "sourceUrl": "https://codewhale.net/",
+    "capturedAt": "2026-09-30T11:31:21.719Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 31770
+  },
   "codex": {
     "image": "/previews/codex.webp",
     "small": "/previews/codex-sm.webp",
@@ -2791,6 +2800,15 @@
     "height": 600,
     "bytes": 9894,
     "fallback": true
+  },
+  "oh-my-openagent": {
+    "image": "/previews/oh-my-openagent.webp",
+    "small": "/previews/oh-my-openagent-sm.webp",
+    "sourceUrl": "https://omo.dev/",
+    "capturedAt": "2026-09-30T11:31:37.306Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33634
   },
   "oh-my-pi": {
     "image": "/previews/oh-my-pi.webp",
