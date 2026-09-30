@@ -1,0 +1,82 @@
+slug: yumeflix
+name: Yumeflix - Free Movies, Series, Anime and K-Drama
+description: Free HD streaming of movies, series, anime, and K-drama with no signup, watchlist, and PWA support.
+category: Movies
+parentCategory: watch
+subcategory: movies
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Mobile
+deployment:
+  - Cloud
+website: https://yumeflix.site
+docs: https://yumeflix.site
+sourceCode: ''
+icon: yumeflix
+verified: false
+featured: false
+tags:
+  - bookmark
+  - watch
+  - movies
+  - streaming
+  - anime
+  - kdrama
+atGlance: Free HD streaming for movies, series, anime, and K-drama — no signup.
+fullDescription: >-
+  Yumeflix is a free streaming app for movies, TV series, anime, and K-drama with no
+  subscription, credit card, or account required. It ships daily-updated trending rows,
+  a watchlist with continue-watching, and multiple playback sources per title as a backup.
+  Installable as a PWA on Android, iPhone, iPad, and desktop.
+coreFeatures:
+  - name: No Signup Streaming
+    description: Watch in HD with no account, email, or credit card required.
+    icon: rocket
+  - name: Daily Trending Rows
+    description: Top 10 and trending picks refresh every day.
+    icon: refresh-cw
+  - name: Watchlist and Resume
+    description: Save titles and pick up exactly where you stopped watching.
+    icon: check
+additionalFeatures:
+  - name: Multiple Sources
+    description: Several players per title so there is always a backup.
+    icon: layers
+  - name: Anime and K-Drama Lanes
+    description: Dedicated subbed and dubbed rows for anime, K-, J-, C-, and Thai drama.
+    icon: check
+  - name: Installable PWA
+    description: Full-screen app-like playback on mobile and desktop browsers.
+    icon: check
+similarTools:
+  - slug: sflix
+    name: SFlix
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://sflix.app/home
+  - slug: nextflicks
+    name: NextFlicks
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://nextflicks.link
+  - slug: movies2watch
+    name: Movies2Watch
+    description: Movie watch source bookmark for quick launch.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://movies2watch.watch/home/
