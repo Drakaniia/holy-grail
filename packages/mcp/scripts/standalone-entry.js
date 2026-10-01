@@ -19,9 +19,19 @@ import mcpServers from '../data/mcp-index.json' with { type: 'json' }
 import previews from '../data/site-previews.json' with { type: 'json' }
 import sites from '../data/sites-index.json' with { type: 'json' }
 import skills from '../data/skills-registry.json' with { type: 'json' }
+import { SNAPSHOT } from './data-files.mjs'
 import { setIndexSnapshot } from '../dist/data.js'
 import { handleNodeRequest } from '../dist/http.js'
 
-setIndexSnapshot({ sites, extensions, mcp: mcpServers, skills, previews })
+const imported = { extensions, mcp: mcpServers, previews, sites, skills }
+for (const [, fileName, key] of SNAPSHOT) {
+  if (!(key in imported)) {
+    throw new Error(
+      `data-files.mjs expects ${fileName} as "${key}", but this entry does not import it`,
+    )
+  }
+}
+
+setIndexSnapshot(imported)
 
 export { handleNodeRequest }
