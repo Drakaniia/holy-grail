@@ -1,5 +1,12 @@
 # grail-cli Changelog
 
+## [0.1.1](https://github.com/Drakaniia/holy-grail/compare/grail-cli-v0.1.0...grail-cli-v0.1.1) (2026-10-01)
+
+
+### Bug Fixes
+
+* **cli:** make the postinstall hook no-op when dist is absent ([aa38b06](https://github.com/Drakaniia/holy-grail/commit/aa38b0698be114f842d66c36110a7da5fc607872))
+
 ## v0.1.0 (2026-07-29)
 
 **Initial npm release** — the Holy Grail skill manager now available via `npx grail-cli`.
