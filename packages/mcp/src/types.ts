@@ -1,13 +1,13 @@
 // Domain types mirroring the generated catalog indexes. Shapes follow the
 // records in src/content/*-index.json and public/content/skills-registry.json.
 
-export interface SiteFeature {
+interface SiteFeature {
   name: string
   description: string
   icon: string
 }
 
-export interface SimilarTool {
+interface SimilarTool {
   slug: string
   name: string
   description: string
@@ -82,7 +82,7 @@ export interface Extension {
   installButtonBehavior?: string
 }
 
-export interface McpTool {
+interface McpTool {
   name: string
   description: string
 }
@@ -134,8 +134,6 @@ export interface Preview {
   capturedAt: string
   width: number
   height: number
-  bytes?: number
-  fallback?: boolean
 }
 
 export type CatalogKind = 'site' | 'extension' | 'mcp' | 'skill'

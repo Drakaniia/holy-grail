@@ -7,7 +7,7 @@ import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server
 import { ResourceTemplate } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { ErrorCode, McpError } from '@modelcontextprotocol/sdk/types.js'
 import { loadExtensions, loadMcpServers, loadPreviews, loadSites, loadSkills } from './data.js'
-import { previewToPayload } from './format.js'
+import { installHint, previewToPayload } from './format.js'
 import type { CatalogKind } from './types.js'
 
 function entityPayload(kind: CatalogKind, slug: string): unknown | null {
@@ -26,7 +26,7 @@ function entityPayload(kind: CatalogKind, slug: string): unknown | null {
   }
   const skill = loadSkills().find((s) => s.slug === slug)
   if (!skill) return null
-  return { ...skill, installHint: `npx grail add ${skill.repoLink} --skill ${skill.slug}` }
+  return { ...skill, installHint: installHint(skill) }
 }
 
 interface ResourceSpec {

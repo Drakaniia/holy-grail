@@ -1,25 +1,22 @@
 // Markdown / JSON response formatting + CHARACTER_LIMIT truncation.
 // Markdown is compact (headers, bullet lists, verbose fields omitted); JSON is
-// the complete record. Truncation reports `truncated: true` and points at
-// offset/filters.
+// the complete record. Truncation appends a pointer to offset/filters.
 
 import { CHARACTER_LIMIT, absolutizeUrl } from './constants.js'
 import type { SearchCatalogPage } from './search.js'
 import type { Extension, McpServer, Preview, Site, Skill } from './types.js'
 
-export interface Truncation {
-  text: string
-  truncated: boolean
-  truncation_message?: string
+export function truncate(text: string): string {
+  if (text.length <= CHARACTER_LIMIT) return text
+  const message =
+    `\n\n[Response truncated at ${CHARACTER_LIMIT.toLocaleString()} characters. ` +
+    `Use 'offset' / filters or a smaller 'limit' to narrow results.]`
+  return text.slice(0, Math.max(1, CHARACTER_LIMIT - message.length)) + message
 }
 
-export function applyTruncation(text: string, limit: number = CHARACTER_LIMIT): Truncation {
-  if (text.length <= limit) return { text, truncated: false }
-  const message =
-    `\n\n[Response truncated at ${limit.toLocaleString()} characters. ` +
-    `Use 'offset' / filters or a smaller 'limit' to narrow results.]`
-  const cut = text.slice(0, Math.max(1, limit - message.length))
-  return { text: cut + message, truncated: true, truncation_message: message }
+/** The one install command for a skill, used by the get_skill tool and the skill resource. */
+export function installHint(skill: Pick<Skill, 'repoLink' | 'slug'>): string {
+  return `npx grail add ${skill.repoLink} --skill ${skill.slug}`
 }
 
 // ---- Shared helpers ----
@@ -206,7 +203,7 @@ export function formatSkill(skill: Skill): string {
     )
   }
   lines.push(tagLine(skill.tags).trim() || '')
-  lines.push(`**Install:** \`npx grail add ${skill.repoLink} --skill ${skill.slug}\``)
+  lines.push(`**Install:** \`${installHint(skill)}\``)
   return lines
     .join('\n')
     .replace(/\n{3,}/g, '\n\n')
@@ -220,17 +217,11 @@ function truncateDescription(text: string, max = 500): string {
 
 // ---- Search + list markdown ----
 
-export function formatSearchResults(
-  query: string,
-  page: SearchCatalogPage,
-  kindFilter?: string,
-): string {
+export function formatSearchResults(query: string, page: SearchCatalogPage): string {
   const lines = [
     `# Search results for "${query}"`,
     '',
-    `Found ${page.total.toLocaleString()} matches (showing ${page.count}, offset ${page.offset})${
-      kindFilter ? ` for kind '${kindFilter}'` : ''
-    }`,
+    `Found ${page.total.toLocaleString()} matches (showing ${page.count}, offset ${page.offset})`,
     '',
   ]
   if (page.results.length === 0) {
