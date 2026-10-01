@@ -4,9 +4,9 @@ import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server
 import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
 import { loadSkills } from '../data.js'
-import { formatSkill, formatSkillList } from '../format.js'
+import { formatSkill, formatSkillList, installHint } from '../format.js'
 import type { Skill } from '../types.js'
-import { buildResponse, notFound } from './common.js'
+import { buildResponse, notFound, page } from './common.js'
 
 const GetSkillInputSchema = z
   .object({
@@ -48,10 +48,7 @@ const ListSkillsInputSchema = z
   .strict()
 
 function withInstallHint(skill: Skill) {
-  return {
-    ...skill,
-    installHint: `npx grail add ${skill.repoLink} --skill ${skill.slug}`,
-  }
+  return { ...skill, installHint: installHint(skill) }
 }
 
 export function registerSkillTools(server: SdkMcpServer): void {
@@ -126,18 +123,11 @@ Examples:
         skills = skills.filter((s) => s.parentCategory.toLowerCase() === lowerParent)
       }
       const sorted = [...skills].sort((a, b) => a.title.localeCompare(b.title))
-      const page = sorted.slice(params.offset, params.offset + params.limit)
-      const meta = {
-        total: sorted.length,
-        count: page.length,
-        offset: params.offset,
-        has_more: sorted.length > params.offset + page.length,
-        next_offset:
-          sorted.length > params.offset + page.length ? params.offset + page.length : null,
-      }
-      const items = page.map((s) => ({ slug: s.slug, title: s.title, category: s.category }))
+      const rows = sorted.slice(params.offset, params.offset + params.limit)
+      const meta = page(sorted, params.offset, params.limit)
+      const items = rows.map((s) => ({ slug: s.slug, title: s.title, category: s.category }))
       const payload = { ...meta, items }
-      const markdown = formatSkillList(page, meta, {
+      const markdown = formatSkillList(rows, meta, {
         category: params.category,
         parentCategory: params.parentCategory,
       })

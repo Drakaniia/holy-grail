@@ -5,7 +5,7 @@ import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
 import { loadPreviews, loadSites } from '../data.js'
 import { formatSite, formatSiteList, previewToPayload } from '../format.js'
-import { buildResponse, notFound } from './common.js'
+import { buildResponse, notFound, page } from './common.js'
 
 const GetSiteInputSchema = z
   .object({
@@ -117,23 +117,16 @@ Examples:
       if (lowerParent) sites = sites.filter((s) => s.parentCategory.toLowerCase() === lowerParent)
       if (lowerCategory) sites = sites.filter((s) => s.category.toLowerCase() === lowerCategory)
       const sorted = [...sites].sort((a, b) => b.stars - a.stars || a.name.localeCompare(b.name))
-      const page = sorted.slice(params.offset, params.offset + params.limit)
-      const meta = {
-        total: sorted.length,
-        count: page.length,
-        offset: params.offset,
-        has_more: sorted.length > params.offset + page.length,
-        next_offset:
-          sorted.length > params.offset + page.length ? params.offset + page.length : null,
-      }
-      const items = page.map((s) => ({
+      const rows = sorted.slice(params.offset, params.offset + params.limit)
+      const meta = page(sorted, params.offset, params.limit)
+      const items = rows.map((s) => ({
         slug: s.slug,
         name: s.name,
         category: s.category,
         stars: s.stars,
       }))
       const payload = { ...meta, items }
-      const markdown = formatSiteList(page, meta, {
+      const markdown = formatSiteList(rows, meta, {
         parentCategory: params.parentCategory,
         category: params.category,
       })

@@ -3,11 +3,11 @@
 
 import type { CallToolResult } from '@modelcontextprotocol/sdk/types.js'
 import { CHARACTER_LIMIT } from '../constants.js'
-import { applyTruncation } from '../format.js'
+import { truncate, type PageMeta } from '../format.js'
 
-export type ResponseFormat = 'markdown' | 'json'
+type ResponseFormat = 'markdown' | 'json'
 
-export function ok(text: string, structuredContent?: unknown): CallToolResult {
+function ok(text: string, structuredContent?: unknown): CallToolResult {
   const result: CallToolResult = { content: [{ type: 'text', text }] }
   if (structuredContent !== undefined) {
     result.structuredContent = structuredContent as Record<string, unknown>
@@ -15,43 +15,47 @@ export function ok(text: string, structuredContent?: unknown): CallToolResult {
   return result
 }
 
-export function fail(message: string): CallToolResult {
+function fail(message: string): CallToolResult {
   return { isError: true, content: [{ type: 'text', text: message }] }
 }
 
-export type KindLabel = 'site' | 'extension' | 'MCP server' | 'skill'
+type KindLabel = 'site' | 'extension' | 'MCP server' | 'skill'
+
+const LIST_TOOL: Record<KindLabel, string> = {
+  site: 'list_sites',
+  extension: 'list_extensions',
+  'MCP server': 'list_mcp_servers',
+  skill: 'list_skills',
+}
 
 export function notFound(kind: KindLabel, slug: string): CallToolResult {
-  const listTool =
-    kind === 'site'
-      ? 'list_sites'
-      : kind === 'extension'
-        ? 'list_extensions'
-        : kind === 'MCP server'
-          ? 'list_mcp_servers'
-          : 'list_skills'
-  return fail(`No ${kind} with slug '${slug}'. Use search or ${listTool} to find valid slugs.`)
+  return fail(
+    `No ${kind} with slug '${slug}'. Use search or ${LIST_TOOL[kind]} to find valid slugs.`,
+  )
+}
+
+/** Pagination metadata for one page of `sorted`, windowed at `offset`/`limit`. */
+export function page<T>(sorted: T[], offset: number, limit: number): PageMeta {
+  const count = Math.min(limit, Math.max(0, sorted.length - offset))
+  const hasMore = offset + count < sorted.length
+  return {
+    total: sorted.length,
+    count,
+    offset,
+    has_more: hasMore,
+    next_offset: hasMore ? offset + count : null,
+  }
 }
 
 /** Drops verbose fields (deployCompose, fullDescription) so JSON stays valid and bounded. */
-function slimPayload(payload: unknown): unknown {
-  if (Array.isArray(payload)) return payload.map(slimPayload)
-  if (payload !== null && typeof payload === 'object') {
-    const out: Record<string, unknown> = {}
-    for (const [key, value] of Object.entries(payload as Record<string, unknown>)) {
-      if (key === 'deployCompose' || key === 'fullDescription') continue
-      out[key] = slimPayload(value)
-    }
-    return out
-  }
-  return payload
-}
+const SLIM_REPLACER = (key: string, value: unknown): unknown =>
+  key === 'deployCompose' || key === 'fullDescription' ? undefined : value
 
-export function buildJsonResponse(payload: unknown): CallToolResult {
+function buildJsonResponse(payload: unknown): CallToolResult {
   let text = JSON.stringify(payload, null, 2)
   let trimmed = payload
   if (text.length > CHARACTER_LIMIT) {
-    trimmed = slimPayload(payload)
+    trimmed = JSON.parse(JSON.stringify(payload, SLIM_REPLACER))
     text = JSON.stringify(trimmed, null, 2)
   }
   return ok(text, trimmed)
@@ -64,5 +68,5 @@ export function buildResponse(
   payload: unknown,
 ): CallToolResult {
   if (format === 'json') return buildJsonResponse(payload)
-  return ok(applyTruncation(markdownText).text, payload)
+  return ok(truncate(markdownText), payload)
 }

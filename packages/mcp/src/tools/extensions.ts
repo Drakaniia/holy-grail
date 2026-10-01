@@ -5,7 +5,7 @@ import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
 import { loadExtensions } from '../data.js'
 import { formatExtension, formatExtensionList } from '../format.js'
-import { buildResponse, notFound } from './common.js'
+import { buildResponse, notFound, page } from './common.js'
 
 const GetExtensionInputSchema = z
   .object({
@@ -118,18 +118,11 @@ Examples:
         extensions = extensions.filter((e) => e.category.toLowerCase() === lowerCategory)
       }
       const sorted = [...extensions].sort((a, b) => a.name.localeCompare(b.name))
-      const page = sorted.slice(params.offset, params.offset + params.limit)
-      const meta = {
-        total: sorted.length,
-        count: page.length,
-        offset: params.offset,
-        has_more: sorted.length > params.offset + page.length,
-        next_offset:
-          sorted.length > params.offset + page.length ? params.offset + page.length : null,
-      }
-      const items = page.map((e) => ({ slug: e.slug, name: e.name, category: e.category }))
+      const rows = sorted.slice(params.offset, params.offset + params.limit)
+      const meta = page(sorted, params.offset, params.limit)
+      const items = rows.map((e) => ({ slug: e.slug, name: e.name, category: e.category }))
       const payload = { ...meta, items }
-      const markdown = formatExtensionList(page, meta, {
+      const markdown = formatExtensionList(rows, meta, {
         parentCategory: params.parentCategory,
         category: params.category,
       })

@@ -5,7 +5,7 @@ import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
 import { loadMcpServers } from '../data.js'
 import { formatMcpServer, formatMcpServerList } from '../format.js'
-import { buildResponse, notFound } from './common.js'
+import { buildResponse, notFound, page } from './common.js'
 
 const GetMcpServerInputSchema = z
   .object({
@@ -121,16 +121,9 @@ Examples:
         servers = servers.filter((m) => m.transport.toLowerCase() === lowerTransport)
       }
       const sorted = [...servers].sort((a, b) => a.name.localeCompare(b.name))
-      const page = sorted.slice(params.offset, params.offset + params.limit)
-      const meta = {
-        total: sorted.length,
-        count: page.length,
-        offset: params.offset,
-        has_more: sorted.length > params.offset + page.length,
-        next_offset:
-          sorted.length > params.offset + page.length ? params.offset + page.length : null,
-      }
-      const items = page.map((m) => ({
+      const rows = sorted.slice(params.offset, params.offset + params.limit)
+      const meta = page(sorted, params.offset, params.limit)
+      const items = rows.map((m) => ({
         slug: m.slug,
         name: m.name,
         category: m.category,
@@ -138,7 +131,7 @@ Examples:
         tools_count: m.tools.length,
       }))
       const payload = { ...meta, items }
-      const markdown = formatMcpServerList(page, meta, {
+      const markdown = formatMcpServerList(rows, meta, {
         category: params.category,
         transport: params.transport,
       })

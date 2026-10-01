@@ -13,7 +13,7 @@ import { formatSearchResults } from '../format.js'
 import { searchCatalog } from '../search.js'
 import { buildResponse } from './common.js'
 
-export const SearchInputSchema = z
+const SearchInputSchema = z
   .object({
     query: z
       .string()
