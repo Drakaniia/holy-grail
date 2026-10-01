@@ -1,26 +1,15 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { execFileSync } from 'node:child_process'
-import yaml from 'js-yaml'
+import { parse, stringify } from 'yaml'
+import { walkMetaFiles } from '../lib/catalog.js'
 
 const sitesDir = path.resolve('src/content/sites')
 const applyChanges = process.argv.includes('--apply')
-const useSearch = process.argv.includes('--search-github')
 const onlyNew = !process.argv.includes('--all')
 const currentYear = new Date().getUTCFullYear()
 const yearStart = `${currentYear}-01-01T00:00:00Z`
-const concurrency = Number(process.env.ENRICH_CONCURRENCY || (useSearch ? 2 : 8))
-
-function readOption(name) {
-  const inline = process.argv.find((arg) => arg.startsWith(`${name}=`))
-  if (inline) return inline.slice(name.length + 1)
-
-  const index = process.argv.indexOf(name)
-  return index >= 0 ? process.argv[index + 1] : ''
-}
-
-const parentFilter = readOption('--parent')
-const subcategoryFilter = readOption('--subcategory')
+const concurrency = Number(process.env.ENRICH_CONCURRENCY || 8)
 
 const ignoredOwners = new Set([
   'about',
@@ -85,19 +74,6 @@ function getGithubToken() {
 }
 
 const githubToken = getGithubToken()
-
-function walkMetaFiles(dir) {
-  const files = []
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const fullPath = path.join(dir, entry.name)
-    if (entry.isDirectory()) {
-      files.push(...walkMetaFiles(fullPath))
-    } else if (entry.name === 'meta.yaml') {
-      files.push(fullPath)
-    }
-  }
-  return files
-}
 
 function cleanRepoName(value) {
   return value.replace(/\.git$/i, '').replace(/[^a-zA-Z0-9._-].*$/, '')
@@ -283,33 +259,6 @@ async function githubCount(url) {
   return countFromLinkHeader(response.headers.get('link'), Array.isArray(rows) ? rows.length : 0)
 }
 
-async function searchGithubRepo(meta) {
-  if (!useSearch) return null
-
-  const base = domainBase(meta.website)
-  const name = normalizeText(meta.name)
-    .split(/\s+/)
-    .filter((token) => token.length > 2)
-    .slice(0, 4)
-    .join(' ')
-  const query = encodeURIComponent(`${base || meta.slug} ${name} in:name,description`)
-  const data = await githubJson(
-    `https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&per_page=5`,
-  )
-  const items = data?.items || []
-  if (!items.length) return null
-
-  const ranked = items
-    .map((item) => ({
-      repo: item.full_name,
-      score: scoreCandidate(item.full_name, meta),
-      stars: item.stargazers_count || 0,
-    }))
-    .sort((a, b) => b.score - a.score || b.stars - a.stars)
-
-  return ranked[0]?.score >= 4 ? ranked[0].repo : null
-}
-
 async function getRepoStats(fullName) {
   const repo = await githubJson(`https://api.github.com/repos/${fullName}`)
   if (!repo || repo.fork) return null
@@ -406,11 +355,9 @@ async function main() {
   const rows = metaFiles
     .map((filePath) => ({
       filePath,
-      meta: yaml.load(fs.readFileSync(filePath, 'utf8')) || {},
+      meta: parse(fs.readFileSync(filePath, 'utf8')) || {},
     }))
     .filter((row) => !onlyNew || row.meta.addedDaysAgo === 0)
-    .filter((row) => !parentFilter || row.meta.parentCategory === parentFilter)
-    .filter((row) => !subcategoryFilter || (row.meta.subcategory || '') === subcategoryFilter)
 
   let found = 0
   let updated = 0
@@ -425,10 +372,7 @@ async function main() {
       const existing = parseGithubRepoUrl(row.meta.sourceCode || '')
       const discovered = noRepoOverrides.has(slug)
         ? null
-        : repoOverrides.get(slug) ||
-          existing ||
-          (await discoverRepoFromPages(row.meta)) ||
-          (await searchGithubRepo(row.meta))
+        : repoOverrides.get(slug) || existing || (await discoverRepoFromPages(row.meta))
       let stats = null
 
       if (discovered) {
@@ -438,12 +382,7 @@ async function main() {
 
       const nextMeta = orderedMeta(row.meta, stats)
       const before = fs.readFileSync(row.filePath, 'utf8')
-      const after = yaml.dump(nextMeta, {
-        lineWidth: 100,
-        noRefs: true,
-        quotingType: '"',
-        sortKeys: false,
-      })
+      const after = stringify(nextMeta, { lineWidth: 100, aliasDuplicateObjects: false })
 
       if (before !== after) {
         updated += 1

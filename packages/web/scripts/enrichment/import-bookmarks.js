@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import yaml from 'js-yaml'
+import { parse, stringify } from 'yaml'
 
 const sitesDir = path.resolve('src/content/sites')
 
@@ -510,7 +510,7 @@ function readExistingSites() {
 
   for (const metaPath of findExistingMetaFiles(sitesDir)) {
     const content = fs.readFileSync(metaPath, 'utf8')
-    const meta = yaml.load(content) || {}
+    const meta = parse(content) || {}
     if (meta.slug) slugs.add(meta.slug)
     if (meta.website) urls.add(canonicalUrl(meta.website))
   }
@@ -848,10 +848,9 @@ for (const originalRow of bookmarks) {
   fs.mkdirSync(outputDir, { recursive: true })
   fs.writeFileSync(
     outputPath,
-    `${yaml.dump(metadataFor(row, config, slug), {
+    `${stringify(metadataFor(row, config, slug), {
       lineWidth: 100,
-      noRefs: true,
-      quotingType: '"',
+      aliasDuplicateObjects: false,
     })}`,
   )
   urls.add(canonical)

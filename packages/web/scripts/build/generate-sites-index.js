@@ -1,34 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import yaml from 'js-yaml'
+import { parse } from 'yaml'
 import { loadCatalogAddedDates, resolveAddedDaysAgo } from './catalog-added-dates.js'
+import { findMetaYamlFiles } from '../lib/catalog.js'
 
 const sitesDir = path.resolve('src/content/sites')
-const outputPaths = [
-  path.resolve('src/content/sites-index.json'),
-  path.resolve('public/content/sites-index.json'),
-]
-
-function findMetaYamlFiles(dir, parentCategory = '', subcategory = '') {
-  const results = []
-  const entries = fs.readdirSync(dir, { withFileTypes: true })
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name)
-
-    if (entry.isDirectory()) {
-      const yamlPath = path.join(fullPath, 'meta.yaml')
-      if (fs.existsSync(yamlPath)) {
-        results.push({ yamlPath, parentCategory, subcategory: subcategory || null })
-      } else {
-        const nested = findMetaYamlFiles(fullPath, parentCategory || entry.name, entry.name)
-        results.push(...nested)
-      }
-    }
-  }
-
-  return results
-}
+const outputPath = path.resolve('public/content/sites-index.json')
 
 function buildSitesIndex() {
   const sites = []
@@ -40,7 +17,7 @@ function buildSitesIndex() {
 
   for (const { yamlPath, parentCategory, subcategory } of metaFiles) {
     const content = fs.readFileSync(yamlPath, 'utf-8')
-    const meta = yaml.load(content) || {}
+    const meta = parse(content) || {}
     const slug = meta.slug || path.basename(path.dirname(yamlPath))
 
     sites.push({
@@ -93,10 +70,8 @@ function buildSitesIndex() {
     return b.stars - a.stars
   })
 
-  for (const outputPath of outputPaths) {
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
-    fs.writeFileSync(outputPath, JSON.stringify(sites, null, 2))
-  }
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+  fs.writeFileSync(outputPath, JSON.stringify(sites, null, 2))
 
   console.log(`Generated sites index with ${sites.length} sites`)
 }

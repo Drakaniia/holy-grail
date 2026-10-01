@@ -24,6 +24,7 @@ DEFAULT_SMALL_SIZE = (480, 300)
 DEFAULT_MAX_AGE_DAYS = 15
 DEFAULT_MIN_FULL_BYTES = 6500
 DEFAULT_MIN_SMALL_BYTES = 2500
+DEFAULT_SHOW_COUNT = 40
 
 REGENERATE_CODES = {
     "bad_preview_dimensions",
@@ -40,23 +41,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Review generated site preview images for broken or placeholder captures."
     )
-    parser.add_argument("--sites-index", default="src/content/sites-index.json")
+    parser.add_argument("--sites-index", default="public/content/sites-index.json")
     parser.add_argument("--manifest", default="src/content/site-previews.json")
     parser.add_argument("--public-manifest", default="public/previews/manifest.json")
     parser.add_argument("--previews-dir", default="public/previews")
     parser.add_argument("--report", help="Write a full JSON report to this path.")
-    parser.add_argument("--format", choices=("text", "json"), default="text")
     parser.add_argument("--fail-on", choices=("none", "error", "warning"), default="none")
-    parser.add_argument("--show", type=int, default=40, help="Number of text issues to show.")
-    parser.add_argument("--slug", action="append", default=[], help="Limit review to one slug.")
-    parser.add_argument(
-        "--max-age-days",
-        type=int,
-        default=DEFAULT_MAX_AGE_DAYS,
-        help="Warn when capturedAt is older than this many days. Use 0 to disable.",
-    )
-    parser.add_argument("--min-full-bytes", type=int, default=DEFAULT_MIN_FULL_BYTES)
-    parser.add_argument("--min-small-bytes", type=int, default=DEFAULT_MIN_SMALL_BYTES)
     return parser.parse_args()
 
 
@@ -98,16 +88,6 @@ def issue(
     if details:
         item["details"] = details
     issues.append(item)
-
-
-def normalize_slug_filters(values: list[str]) -> set[str]:
-    slugs: set[str] = set()
-    for value in values:
-        for slug in value.split(","):
-            cleaned = slug.strip()
-            if cleaned:
-                slugs.add(cleaned)
-    return slugs
 
 
 def parse_size(value: tuple[int, int] | None) -> dict[str, int] | None:
@@ -316,7 +296,6 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
     previews_dir = (root / args.previews_dir).resolve()
 
     issues: list[dict[str, Any]] = []
-    slug_filters = normalize_slug_filters(args.slug)
 
     sites = read_json(sites_index_path, [])
     manifest = read_json(manifest_path, {})
@@ -337,8 +316,6 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
         if not isinstance(slug, str) or not slug:
             issue(issues, "error", "invalid_site_slug", "A site entry has no slug.")
             continue
-        if slug_filters and slug not in slug_filters:
-            continue
         if slug in site_by_slug:
             issue(issues, "error", "duplicate_site_slug", "Duplicate site slug in site index.", slug=slug)
         site_by_slug[slug] = site
@@ -352,8 +329,6 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
     selected_slugs = set(site_by_slug)
 
     for slug in sorted((manifest_slugs | public_manifest_slugs) - selected_slugs):
-        if slug_filters and slug not in slug_filters:
-            continue
         issue(
             issues,
             "warning",
@@ -426,9 +401,9 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
                 slug=slug,
                 details={"capturedAt": entry.get("capturedAt")},
             )
-        elif args.max_age_days > 0:
+        elif DEFAULT_MAX_AGE_DAYS > 0:
             age_days = (now - captured_at).total_seconds() / 86400
-            if age_days > args.max_age_days:
+            if age_days > DEFAULT_MAX_AGE_DAYS:
                 issue(
                     issues,
                     "warning",
@@ -438,7 +413,7 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
                     details={
                         "capturedAt": entry.get("capturedAt"),
                         "ageDays": round(age_days, 1),
-                        "maxAgeDays": args.max_age_days,
+                        "maxAgeDays": DEFAULT_MAX_AGE_DAYS,
                     },
                 )
 
@@ -452,7 +427,7 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
                 slug=slug,
                 label="full",
                 expected_size=DEFAULT_FULL_SIZE,
-                min_bytes=args.min_full_bytes,
+                min_bytes=DEFAULT_MIN_FULL_BYTES,
                 issues=issues,
             )
             if full_result:
@@ -477,7 +452,7 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
                 slug=slug,
                 label="small",
                 expected_size=DEFAULT_SMALL_SIZE,
-                min_bytes=args.min_small_bytes,
+                min_bytes=DEFAULT_MIN_SMALL_BYTES,
                 issues=issues,
             )
 
@@ -528,7 +503,7 @@ def review(args: argparse.Namespace) -> dict[str, Any]:
     }
 
 
-def text_report(report: dict[str, Any], show_count: int) -> str:
+def text_report(report: dict[str, Any]) -> str:
     summary = report["summary"]
     issues = report["issues"]
     regenerate_slugs = report["regenerateSlugs"]
@@ -549,16 +524,16 @@ def text_report(report: dict[str, Any], show_count: int) -> str:
         return "\n".join(lines)
 
     lines.append("")
-    lines.append(f"Showing first {min(show_count, len(issues))} of {len(issues)} issues:")
-    for item in issues[:show_count]:
+    lines.append(f"Showing first {min(DEFAULT_SHOW_COUNT, len(issues))} of {len(issues)} issues:")
+    for item in issues[:DEFAULT_SHOW_COUNT]:
         slug = f"{item['slug']} " if item.get("slug") else ""
         path = f" ({item['path']})" if item.get("path") else ""
         lines.append(
             f"- [{item['severity']}] {slug}{item['code']}: {item['message']}{path}"
         )
 
-    if len(issues) > show_count:
-        lines.append(f"- ... {len(issues) - show_count} more issues hidden.")
+    if len(issues) > DEFAULT_SHOW_COUNT:
+        lines.append(f"- ... {len(issues) - DEFAULT_SHOW_COUNT} more issues hidden.")
 
     if regenerate_slugs:
         shown_slugs = regenerate_slugs[:20]
@@ -590,10 +565,7 @@ def main() -> int:
     if args.report:
         write_json(Path(args.report), report)
 
-    if args.format == "json":
-        print(json.dumps(report, indent=2, ensure_ascii=False))
-    else:
-        print(text_report(report, max(args.show, 0)))
+    print(text_report(report))
 
     return exit_code(report, args.fail_on)
 

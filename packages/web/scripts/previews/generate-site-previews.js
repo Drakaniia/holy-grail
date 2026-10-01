@@ -5,7 +5,7 @@ import process from 'node:process'
 import sharp from 'sharp'
 import puppeteer from 'puppeteer-core'
 
-const sitesIndexPath = path.resolve('src/content/sites-index.json')
+const sitesIndexPath = path.resolve('public/content/sites-index.json')
 const publicPreviewsDir = path.resolve('public/previews')
 const publicManifestPath = path.join(publicPreviewsDir, 'manifest.json')
 const publicReportPath = path.join(publicPreviewsDir, 'report.json')
@@ -27,11 +27,7 @@ function parseArgs(argv) {
   const options = {
     all: false,
     refresh: false,
-    dryRun: false,
-    limit: 0,
     slugs: new Set(),
-    concurrency: defaults.concurrency,
-    timeout: defaults.timeout,
   }
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -39,21 +35,8 @@ function parseArgs(argv) {
     const [key, inlineValue] = arg.split('=')
     const nextValue = inlineValue ?? argv[index + 1]
 
-    if (arg === '--all' || arg === '--force') options.all = true
+    if (arg === '--all') options.all = true
     if (arg === '--refresh') options.refresh = true
-    if (arg === '--dry-run') options.dryRun = true
-    if (key === '--limit' && nextValue) {
-      options.limit = Number(nextValue)
-      if (!inlineValue) index += 1
-    }
-    if (key === '--concurrency' && nextValue) {
-      options.concurrency = Number(nextValue)
-      if (!inlineValue) index += 1
-    }
-    if (key === '--timeout' && nextValue) {
-      options.timeout = Number(nextValue)
-      if (!inlineValue) index += 1
-    }
     if (key === '--slug' && nextValue) {
       for (const slug of nextValue
         .split(',')
@@ -65,16 +48,7 @@ function parseArgs(argv) {
     }
   }
 
-  return {
-    ...options,
-    concurrency:
-      Number.isFinite(options.concurrency) && options.concurrency > 0
-        ? Math.min(options.concurrency, 6)
-        : defaults.concurrency,
-    timeout:
-      Number.isFinite(options.timeout) && options.timeout > 0 ? options.timeout : defaults.timeout,
-    limit: Number.isFinite(options.limit) && options.limit > 0 ? options.limit : 0,
-  }
+  return options
 }
 
 function readJson(filePath, fallback) {
@@ -229,7 +203,7 @@ async function assertVisualDetail(buffer) {
   }
 }
 
-async function captureSite(browser, site, options) {
+async function captureSite(browser, site) {
   const page = await browser.newPage()
   const normalizedUrl = normalizeUrl(site.website)
 
@@ -242,9 +216,9 @@ async function captureSite(browser, site, options) {
     await preparePage(page)
     await page.goto(normalizedUrl, {
       waitUntil: 'domcontentloaded',
-      timeout: options.timeout,
+      timeout: defaults.timeout,
     })
-    await settlePage(page, options.timeout)
+    await settlePage(page, defaults.timeout)
 
     const screenshot = await page.screenshot({
       type: 'png',
@@ -272,11 +246,9 @@ async function captureSite(browser, site, options) {
     const imagePath = path.join(publicPreviewsDir, `${site.slug}.webp`)
     const smallPath = path.join(publicPreviewsDir, `${site.slug}-sm.webp`)
 
-    if (!options.dryRun) {
-      fs.mkdirSync(publicPreviewsDir, { recursive: true })
-      fs.writeFileSync(imagePath, image)
-      fs.writeFileSync(smallPath, small)
-    }
+    fs.mkdirSync(publicPreviewsDir, { recursive: true })
+    fs.writeFileSync(imagePath, image)
+    fs.writeFileSync(smallPath, small)
 
     return {
       image: `/previews/${site.slug}.webp`,
@@ -308,7 +280,7 @@ function hostnameFor(value) {
   }
 }
 
-async function createFallbackPreview(site, options, reason) {
+async function createFallbackPreview(site, reason) {
   const safeName = escapeSvgText(site.name || site.slug)
   const safeHost = escapeSvgText(hostnameFor(site.website))
   const safeReason = escapeSvgText(reason)
@@ -346,11 +318,9 @@ async function createFallbackPreview(site, options, reason) {
     .webp({ quality: defaults.quality, effort: 4 })
     .toBuffer()
 
-  if (!options.dryRun) {
-    fs.mkdirSync(publicPreviewsDir, { recursive: true })
-    fs.writeFileSync(path.join(publicPreviewsDir, `${site.slug}.webp`), image)
-    fs.writeFileSync(path.join(publicPreviewsDir, `${site.slug}-sm.webp`), small)
-  }
+  fs.mkdirSync(publicPreviewsDir, { recursive: true })
+  fs.writeFileSync(path.join(publicPreviewsDir, `${site.slug}.webp`), image)
+  fs.writeFileSync(path.join(publicPreviewsDir, `${site.slug}-sm.webp`), small)
 
   return {
     image: `/previews/${site.slug}.webp`,
@@ -381,10 +351,10 @@ function eligibleSites(sites, manifest, options) {
     return !manifest[site.slug] || !fileExists(imagePath) || !fileExists(smallPath)
   })
 
-  return options.limit ? filtered.slice(0, options.limit) : filtered
+  return filtered
 }
 
-async function runWorker(workerId, browser, queue, manifest, failures, options) {
+async function runWorker(workerId, browser, queue, manifest, failures) {
   while (queue.length) {
     const site = queue.shift()
     if (!site) return
@@ -392,12 +362,12 @@ async function runWorker(workerId, browser, queue, manifest, failures, options) 
     const prefix = `[${workerId}] ${site.slug}`
     try {
       console.log(`${prefix} capturing ${site.website}`)
-      manifest[site.slug] = await captureSite(browser, site, options)
+      manifest[site.slug] = await captureSite(browser, site)
       console.log(`${prefix} saved ${manifest[site.slug].bytes} bytes`)
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error)
       try {
-        manifest[site.slug] = await createFallbackPreview(site, options, message)
+        manifest[site.slug] = await createFallbackPreview(site, message)
         console.warn(`${prefix} fallback saved after capture failure: ${message}`)
       } catch (fallbackError) {
         const fallbackMessage =
@@ -432,7 +402,6 @@ async function main() {
   console.log(
     JSON.stringify(
       {
-        mode: options.dryRun ? 'dry-run' : 'apply',
         selection: options.all
           ? 'all matching sites'
           : options.refresh
@@ -440,8 +409,8 @@ async function main() {
             : 'missing previews only',
         browserPath,
         candidates: queue.length,
-        concurrency: options.concurrency,
-        timeout: options.timeout,
+        concurrency: defaults.concurrency,
+        timeout: defaults.timeout,
       },
       null,
       2,
@@ -449,11 +418,9 @@ async function main() {
   )
 
   if (!queue.length) {
-    if (!options.dryRun) {
-      writeJson(publicManifestPath, sortManifest(manifest))
-      writeJson(srcManifestPath, sortManifest(manifest))
-      writeJson(publicReportPath, { captured: 0, failed: 0, failures })
-    }
+    writeJson(publicManifestPath, sortManifest(manifest))
+    writeJson(srcManifestPath, sortManifest(manifest))
+    writeJson(publicReportPath, { captured: 0, failed: 0, failures })
     return
   }
 
@@ -472,8 +439,8 @@ async function main() {
 
   try {
     await Promise.all(
-      Array.from({ length: options.concurrency }, (_, index) =>
-        runWorker(index + 1, browser, queue, manifest, failures, options),
+      Array.from({ length: defaults.concurrency }, (_, index) =>
+        runWorker(index + 1, browser, queue, manifest, failures),
       ),
     )
   } finally {
@@ -481,15 +448,13 @@ async function main() {
   }
 
   const sortedManifest = sortManifest(manifest)
-  if (!options.dryRun) {
-    writeJson(publicManifestPath, sortedManifest)
-    writeJson(srcManifestPath, sortedManifest)
-    writeJson(publicReportPath, {
-      captured: Object.keys(sortedManifest).length,
-      failed: failures.length,
-      failures,
-    })
-  }
+  writeJson(publicManifestPath, sortedManifest)
+  writeJson(srcManifestPath, sortedManifest)
+  writeJson(publicReportPath, {
+    captured: Object.keys(sortedManifest).length,
+    failed: failures.length,
+    failures,
+  })
 
   console.log(
     JSON.stringify(
