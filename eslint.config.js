@@ -18,8 +18,6 @@ export default defineConfig([
     '**/dist-ssr/**',
     '**/coverage/**',
     'packages/supabase/functions/**',
-    'parse*.js',
-    'parse*.cjs',
   ]),
 
   {
