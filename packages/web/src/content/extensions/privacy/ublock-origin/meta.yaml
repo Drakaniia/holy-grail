@@ -64,4 +64,3 @@ extensionSpecific:
     - tabs
     - unlimitedStorage
   manifestVersion: 2
-  installButtonBehavior: redirect-to-chrome-web-store

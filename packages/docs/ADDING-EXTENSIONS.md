@@ -97,7 +97,6 @@ extensionSpecific:
   permissions:                 # Required — list of Chrome API permissions
     - <string>
   manifestVersion: <number>    # Required — typically 3
-  installButtonBehavior: <string>  # Optional — defaults to "redirect-to-chrome-web-store"
 ```
 
 ## Feature Objects
@@ -182,7 +181,6 @@ extensionSpecific:
     - scripting
     - storage
   manifestVersion: 3
-  installButtonBehavior: redirect-to-chrome-web-store
 ```
 
 ## Sorting
