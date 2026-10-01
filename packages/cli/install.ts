@@ -11,11 +11,10 @@
  * 3. Fall back to `cargo build` if Rust is available
  */
 
-import { existsSync, mkdirSync, createWriteStream, readFileSync, copyFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync, readFileSync, copyFileSync } from "node:fs";
 import { resolve, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
-import { get } from "node:https";
 
 const scriptPath = fileURLToPath(import.meta.url);
 
@@ -48,32 +47,13 @@ function getPackageVersion(): string {
   }
 }
 
-/** Download a file from a URL to a local path */
-function downloadFile(url: string, dest: string): Promise<void> {
-  return new Promise((resolveFn, reject) => {
-    const file = createWriteStream(dest);
-    get(url, (response) => {
-      if (response.statusCode === 302 || response.statusCode === 301) {
-        // Follow redirect
-        file.close();
-        downloadFile(response.headers.location!, dest).then(resolveFn, reject);
-        return;
-      }
-      if (response.statusCode !== 200) {
-        file.close();
-        reject(new Error(`HTTP ${response.statusCode}: ${response.statusMessage}`));
-        return;
-      }
-      response.pipe(file);
-      file.on("finish", () => {
-        file.close();
-        resolveFn();
-      });
-    }).on("error", (err) => {
-      file.close();
-      reject(err);
-    });
-  });
+/** Download a file from a URL to a local path. `fetch` follows redirects itself. */
+async function downloadFile(url: string, dest: string): Promise<void> {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  }
+  writeFileSync(dest, Buffer.from(await response.arrayBuffer()));
 }
 
 async function tryDownloadBinary(): Promise<boolean> {
