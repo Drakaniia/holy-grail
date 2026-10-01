@@ -12,7 +12,6 @@ import {
 export function useSkillInstall(repoLink: string, slug: string) {
   const status = ref<InstallStatus>('idle')
   const isInstalled = ref(false)
-  const errorMessage = ref('')
 
   const command = computed(() => (repoLink && slug ? generateInstallCommand(repoLink, slug) : ''))
 
@@ -26,7 +25,6 @@ export function useSkillInstall(repoLink: string, slug: string) {
       }, 3000)
     } else {
       status.value = 'error'
-      errorMessage.value = 'Failed to copy command'
     }
   }
 
@@ -37,7 +35,6 @@ export function useSkillInstall(repoLink: string, slug: string) {
   return {
     status,
     isInstalled,
-    errorMessage,
     command,
     copyAndInstall,
     checkInstalled,
