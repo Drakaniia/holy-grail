@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { Eye, Code2, User, Calendar } from 'lucide-vue-next'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
+import { formatNumber } from '@/lib/format'
 
 interface SkillData {
   slug: string
@@ -31,11 +32,6 @@ const bookmarkResource = computed(() => {
   }
 })
 
-function formatNumber(n: number): string {
-  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  return n.toString()
-}
-
 function formatDate(dateStr: string): string | null {
   if (!dateStr) return null
   const d = new Date(dateStr)
@@ -64,10 +60,6 @@ const initial = computed(() => (props.skill?.title?.charAt(0) ?? 'S').toUpperCas
           <h1 class="min-w-0 break-words text-4xl font-bold text-white">
             {{ skill.title }}
           </h1>
-          <!-- Version badge -- TODO: show when skill.version available -->
-          <span class="rounded-md border border-gray-700 px-2 py-0.5 text-sm text-gray-500">
-            v1.0.0
-          </span>
           <!-- Verified badge -- TODO: show when skill.verified available -->
           <span class="text-green-500" title="Verified">
             <svg

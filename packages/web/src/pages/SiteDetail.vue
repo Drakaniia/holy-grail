@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watchEffect, onUnmounted } from 'vue'
+import type { Ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   ArrowLeft,
@@ -29,6 +30,8 @@ import SiteIssueReport from '@/components/sites/SiteIssueReport.vue'
 import SiteFavicon from '@/components/sites/SiteFavicon.vue'
 import SitePreview from '@/components/sites/SitePreview.vue'
 import SiteDetailSkeleton from '@/components/sites/SiteDetailSkeleton.vue'
+import { formatNumber } from '@/lib/format'
+import { copyInstallCommand as copyToClipboard } from '@/services/grailInstaller'
 
 const route = useRoute()
 const router = useRouter()
@@ -108,70 +111,28 @@ const backRoute = computed(() => {
 const copied = ref(false)
 const copiedInstallCommand = ref(false)
 
-function formatNumber(num: number): string {
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  }
-  return num.toString()
-}
-
-function formatCommits(num: number): string {
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  }
-  return num.toString()
-}
-
 function formatAddedMonths(months: number): string {
   return months === 0 ? 'Added recently' : `Added ${months}mo ago`
 }
 
+/** Flash the copied state for 2s after the shared clipboard helper (with its execCommand fallback). */
+function flashCopied(target: Ref<boolean>) {
+  target.value = true
+  setTimeout(() => {
+    target.value = false
+  }, 2000)
+}
+
 async function copyCompose() {
   if (!site.value?.deployCompose) return
-  try {
-    await navigator.clipboard.writeText(site.value.deployCompose)
-    copied.value = true
-    setTimeout(() => {
-      copied.value = false
-    }, 2000)
-  } catch {
-    const textarea = document.createElement('textarea')
-    textarea.value = site.value.deployCompose || ''
-    textarea.style.position = 'fixed'
-    textarea.style.opacity = '0'
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand('copy')
-    document.body.removeChild(textarea)
-    copied.value = true
-    setTimeout(() => {
-      copied.value = false
-    }, 2000)
-  }
+  await copyToClipboard(site.value.deployCompose)
+  flashCopied(copied)
 }
 
 async function copyInstallCommand() {
   if (!installCommand.value) return
-  try {
-    await navigator.clipboard.writeText(installCommand.value)
-    copiedInstallCommand.value = true
-    setTimeout(() => {
-      copiedInstallCommand.value = false
-    }, 2000)
-  } catch {
-    const textarea = document.createElement('textarea')
-    textarea.value = installCommand.value
-    textarea.style.position = 'fixed'
-    textarea.style.opacity = '0'
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand('copy')
-    document.body.removeChild(textarea)
-    copiedInstallCommand.value = true
-    setTimeout(() => {
-      copiedInstallCommand.value = false
-    }, 2000)
-  }
+  await copyToClipboard(installCommand.value)
+  flashCopied(copiedInstallCommand)
 }
 </script>
 
@@ -286,7 +247,7 @@ async function copyInstallCommand() {
                 </span>
                 <span v-if="site.commitsThisYear > 0" class="flex items-center gap-1">
                   <GitCommit class="w-4 h-4" />
-                  {{ formatCommits(site.commitsThisYear) }} commits this year
+                  {{ formatNumber(site.commitsThisYear) }} commits this year
                 </span>
                 <span v-if="site.releases > 0" class="flex items-center gap-1">
                   <Package class="w-4 h-4" />

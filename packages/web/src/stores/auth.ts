@@ -5,6 +5,7 @@ import posthog from 'posthog-js'
 import { hasSupabaseConfig, supabase } from '@/lib/supabase'
 import { getAuthRedirectOrigin } from '@/lib/publicUrl'
 import { getSupabaseFunctionErrorMessage } from '@/lib/supabaseErrors'
+import { getRedirectPath } from '@/lib/redirectPath'
 import type { AuthCredentials, AuthProvider } from '@/types/auth'
 
 interface AuthActionResult {
@@ -38,7 +39,7 @@ function getProviderLabel(provider: AuthProvider) {
   return provider === 'github' ? 'GitHub' : 'Google'
 }
 
-function getAuthErrorCode(error: unknown): string | undefined {
+export function getAuthErrorCode(error: unknown): string | undefined {
   if (!error || typeof error !== 'object' || !('code' in error)) {
     return undefined
   }
@@ -76,14 +77,6 @@ function getOAuthErrorMessage(error: unknown, provider: AuthProvider): string {
   }
 
   return message
-}
-
-function getRedirectPath(path: string) {
-  if (!path.startsWith('/') || path.startsWith('//')) {
-    return '/account'
-  }
-
-  return path
 }
 
 function getRedirectUrl(path = '/account') {

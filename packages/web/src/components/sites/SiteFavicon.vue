@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { faviconUrl as buildFaviconUrl } from '@/lib/format'
 
 const props = withDefaults(
   defineProps<{
@@ -14,11 +15,7 @@ const props = withDefaults(
 
 const imageError = ref(false)
 
-const faviconUrl = computed(() => {
-  if (!props.website) return ''
-  const domain = props.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '')
-  return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
-})
+const faviconUrl = computed(() => buildFaviconUrl(props.website))
 
 const sizeClasses = computed(() => {
   switch (props.size) {

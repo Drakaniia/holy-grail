@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { Check, Copy } from 'lucide-vue-next'
+import { copyInstallCommand } from '@/services/grailInstaller'
 
 const props = defineProps<{
   installCommand: string
@@ -11,18 +12,7 @@ const copied = ref(false)
 
 async function copyCommand() {
   if (!props.installCommand) return
-  try {
-    await navigator.clipboard.writeText(props.installCommand)
-  } catch {
-    const textarea = document.createElement('textarea')
-    textarea.value = props.installCommand
-    textarea.style.position = 'fixed'
-    textarea.style.opacity = '0'
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand('copy')
-    document.body.removeChild(textarea)
-  }
+  await copyInstallCommand(props.installCommand)
   copied.value = true
   setTimeout(() => {
     copied.value = false

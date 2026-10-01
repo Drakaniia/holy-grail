@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SitesHomePage from '@/pages/SitesHomePage.vue'
+import { getRedirectPath } from '@/lib/redirectPath'
 
 const AccountPage = () => import('@/pages/AccountPage.vue')
 const AdminPage = () => import('@/pages/AdminPage.vue')
@@ -29,14 +30,6 @@ function hasOAuthCallbackQuery(query: Record<string, unknown>) {
     hasStringQueryValue(query.error) ||
     hasStringQueryValue(query.error_description)
   )
-}
-
-function getSafeNextPath(value: unknown) {
-  if (typeof value === 'string' && value.startsWith('/') && !value.startsWith('//')) {
-    return value
-  }
-
-  return '/account'
 }
 
 const router = createRouter({
@@ -184,7 +177,7 @@ router.beforeEach(async (to) => {
       name: 'auth-callback',
       query: {
         ...to.query,
-        next: getSafeNextPath(to.query.next),
+        next: getRedirectPath(to.query.next),
       },
       replace: true,
     }

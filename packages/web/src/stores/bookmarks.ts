@@ -2,7 +2,8 @@ import { defineStore } from 'pinia'
 import { computed, ref, shallowRef } from 'vue'
 import { trackBookmark } from '@/lib/analytics'
 import { supabase } from '@/lib/supabase'
-import { useAuthStore } from '@/stores/auth'
+import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
+import { useAuthStore, getAuthErrorCode } from '@/stores/auth'
 
 export type BookmarkResourceType = 'site' | 'skill'
 
@@ -38,20 +39,8 @@ function getBookmarkKey(type: BookmarkResourceType, slug: string) {
   return `${type}:${slug}`
 }
 
-function getBookmarkErrorMessage(error: unknown) {
-  if (error instanceof Error && error.message) {
-    return error.message
-  }
-
-  if (error && typeof error === 'object' && 'message' in error) {
-    const message = (error as { message?: unknown }).message
-    if (typeof message === 'string' && message) {
-      return message
-    }
-  }
-
-  return 'Bookmark request failed.'
-}
+const getBookmarkErrorMessage = (error: unknown) =>
+  getSupabaseErrorMessage(error, 'Bookmark request failed.')
 
 export const useBookmarksStore = defineStore('bookmarks', () => {
   const bookmarks = ref<UserBookmark[]>([])
@@ -196,8 +185,7 @@ export const useBookmarksStore = defineStore('bookmarks', () => {
         .single()
 
       if (error) {
-        const code = 'code' in error ? error.code : undefined
-        if (code === '23505') {
+        if (getAuthErrorCode(error) === '23505') {
           await loadBookmarks(true)
           return { ok: true }
         }
