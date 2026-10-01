@@ -173,6 +173,15 @@
     "height": 600,
     "bytes": 60834
   },
+  "amicons": {
+    "image": "/previews/amicons.webp",
+    "small": "/previews/amicons-sm.webp",
+    "sourceUrl": "https://amicons.design/",
+    "capturedAt": "2026-09-30T14:31:18.241Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 47938
+  },
   "amp": {
     "image": "/previews/amp.webp",
     "small": "/previews/amp-sm.webp",
@@ -272,6 +281,15 @@
     "width": 960,
     "height": 600,
     "bytes": 19738
+  },
+  "astryx": {
+    "image": "/previews/astryx.webp",
+    "small": "/previews/astryx-sm.webp",
+    "sourceUrl": "https://astryx.atmeta.com/",
+    "capturedAt": "2026-09-30T14:31:45.150Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23370
   },
   "auggie": {
     "image": "/previews/auggie.webp",
@@ -770,6 +788,15 @@
     "width": 960,
     "height": 600,
     "bytes": 61452
+  },
+  "codewhale": {
+    "image": "/previews/codewhale.webp",
+    "small": "/previews/codewhale-sm.webp",
+    "sourceUrl": "https://codewhale.net/",
+    "capturedAt": "2026-09-30T11:31:21.719Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 31770
   },
   "codex": {
     "image": "/previews/codex.webp",
@@ -2792,6 +2819,15 @@
     "bytes": 9894,
     "fallback": true
   },
+  "oh-my-openagent": {
+    "image": "/previews/oh-my-openagent.webp",
+    "small": "/previews/oh-my-openagent-sm.webp",
+    "sourceUrl": "https://omo.dev/",
+    "capturedAt": "2026-09-30T11:31:37.306Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 33634
+  },
   "oh-my-pi": {
     "image": "/previews/oh-my-pi.webp",
     "small": "/previews/oh-my-pi-sm.webp",
@@ -2953,6 +2989,15 @@
     "width": 960,
     "height": 600,
     "bytes": 27780
+  },
+  "paceui": {
+    "image": "/previews/paceui.webp",
+    "small": "/previews/paceui-sm.webp",
+    "sourceUrl": "https://paceui.com/",
+    "capturedAt": "2026-09-30T14:31:56.776Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 35664
   },
   "park-ui": {
     "image": "/previews/park-ui.webp",
@@ -4387,6 +4432,15 @@
     "width": 960,
     "height": 600,
     "bytes": 33740
+  },
+  "yumeflix": {
+    "image": "/previews/yumeflix.webp",
+    "small": "/previews/yumeflix-sm.webp",
+    "sourceUrl": "https://yumeflix.site/",
+    "capturedAt": "2026-09-30T14:31:28.963Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 20194
   },
   "z": {
     "image": "/previews/z.webp",

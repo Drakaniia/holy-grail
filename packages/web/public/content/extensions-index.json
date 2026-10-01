@@ -7,7 +7,7 @@
     "parentCategory": "developer-tools",
     "subcategory": "developer-tools",
     "version": "1.0.0",
-    "addedDaysAgo": 104,
+    "addedDaysAgo": 105,
     "license": "MIT",
     "website": "https://chromewebstore.google.com/detail/md-this-page/banfcmclfmmlbkhionmemhibbjedhikm",
     "docs": "https://github.com/Ademking/MD-This-Page",
@@ -67,8 +67,7 @@
       "contextMenus",
       "storage"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "ublock-origin",
@@ -78,7 +77,7 @@
     "parentCategory": "privacy",
     "subcategory": "privacy",
     "version": "1.71.0",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "GPL-3.0",
     "website": "https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
     "docs": "https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm",
@@ -140,8 +139,7 @@
       "tabs",
       "unlimitedStorage"
     ],
-    "manifestVersion": 2,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 2
   },
   {
     "slug": "scribbr-citation-generator",
@@ -151,7 +149,7 @@
     "parentCategory": "writing",
     "subcategory": "writing",
     "version": "43.22",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/scribbr-citation-generato/epbobagokhieoonfplomdklollconnkl",
     "docs": "https://chromewebstore.google.com/detail/scribbr-citation-generato/epbobagokhieoonfplomdklollconnkl",
@@ -215,8 +213,7 @@
       "scripting",
       "storage"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "eye-dropper",
@@ -226,7 +223,7 @@
     "parentCategory": "design",
     "subcategory": "design",
     "version": "4.10.3.15",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka",
     "docs": "https://chromewebstore.google.com/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka",
@@ -280,8 +277,7 @@
       "scripting",
       "storage"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "ublock-origin-lite",
@@ -291,7 +287,7 @@
     "parentCategory": "privacy",
     "subcategory": "privacy",
     "version": "2026.607.1724",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "GPL-3.0",
     "website": "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh",
     "docs": "https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh",
@@ -345,8 +341,7 @@
       "storage",
       "scripting"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "gofullpage",
@@ -356,7 +351,7 @@
     "parentCategory": "productivity",
     "subcategory": "productivity",
     "version": "8.6",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
     "docs": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
@@ -410,8 +405,7 @@
       "scripting",
       "storage"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "whatfont",
@@ -421,7 +415,7 @@
     "parentCategory": "design",
     "subcategory": "design",
     "version": "3.2.0",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm",
     "docs": "https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm",
@@ -474,8 +468,7 @@
       "activeTab",
       "scripting"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "clear-cache",
@@ -485,7 +478,7 @@
     "parentCategory": "developer-tools",
     "subcategory": "developer-tools",
     "version": "2.4.2-build.0",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn",
     "docs": "https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn",
@@ -539,8 +532,7 @@
       "browsingData",
       "notifications"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "imageye-image-downloader",
@@ -550,7 +542,7 @@
     "parentCategory": "productivity",
     "subcategory": "productivity",
     "version": "5.30.1",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm",
     "docs": "https://chromewebstore.google.com/detail/imageye-image-downloader/agionbommeaifngbhincahgmoflcikhm",
@@ -604,8 +596,7 @@
       "scripting",
       "download"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "video-download-helper",
@@ -682,8 +673,7 @@
       "download",
       "webRequestBlocking"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "video-downloader-professional",
@@ -693,7 +683,7 @@
     "parentCategory": "productivity",
     "subcategory": "productivity",
     "version": "2.1.7",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil",
     "docs": "https://chromewebstore.google.com/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil",
@@ -748,8 +738,7 @@
       "download",
       "webRequest"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   },
   {
     "slug": "3d-mview-extractor",
@@ -759,7 +748,7 @@
     "parentCategory": "developer-tools",
     "subcategory": "developer-tools",
     "version": "1.0",
-    "addedDaysAgo": 108,
+    "addedDaysAgo": 109,
     "license": "Proprietary",
     "website": "https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh",
     "docs": "https://chromewebstore.google.com/detail/3d-mview-extractor/lmmcjebneeokfgaobecnijjhgjokmbeh",
@@ -808,7 +797,6 @@
       "scripting",
       "download"
     ],
-    "manifestVersion": 3,
-    "installButtonBehavior": "redirect-to-chrome-web-store"
+    "manifestVersion": 3
   }
 ]
