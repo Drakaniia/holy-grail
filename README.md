@@ -67,7 +67,7 @@ Windsurf, opencode, and Claude Desktop: [`packages/docs/MCP-INTEGRATION.md`](pac
 Sites and extensions are defined as `meta.yaml` files under `packages/web/src/content/`. Skills are managed via the grail CLI.
 
 ```bash
-bun run generate:skills     # regenerate skills index (auto-detects CLI or YAML source)
+bun run update:registry     # refresh the skills registry (skills are runtime data, not YAML content)
 bun run generate:previews   # after adding a site (captures screenshot, writes into the previews submodule)
 
 Previews are committed automatically by the pre-commit hook (`bun run sync:previews`
@@ -83,7 +83,7 @@ Full guides: [`packages/docs/ADDING-SITES.md`](packages/docs/ADDING-SITES.md) ·
 
 Pull requests are welcome. For larger changes, open an issue first.
 
-CI runs `type-check → lint → test → build` on every push to `grail`.
+CI runs `type-check → lint → build → mcp tests → format:check` on every push to `grail`.
 
 <br />
 

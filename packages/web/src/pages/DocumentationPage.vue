@@ -87,15 +87,22 @@ const routeRows = [
 
 const artifactRows = [
   {
-    file: 'src/content/sites-index.json',
-    purpose: 'Generated sites catalog consumed by the sites store.',
+    file: 'public/content/sites-index.json',
+    purpose: 'Generated sites catalog, fetched at runtime by the sites store.',
   },
-  { file: 'public/content/sites-index.json', purpose: 'Runtime copy fetched by the browser.' },
   {
-    file: 'src/content/skills-index.json',
-    purpose: 'Generated skills catalog consumed by the skills store.',
+    file: 'public/content/extensions-index.json',
+    purpose: 'Generated extensions catalog, fetched at runtime by the extensions store.',
   },
-  { file: 'public/content/skills-index.json', purpose: 'Runtime copy fetched by the browser.' },
+  {
+    file: 'public/content/mcp-index.json',
+    purpose: 'Generated MCP server catalog, fetched at runtime by the MCP store.',
+  },
+  {
+    file: 'public/content/skills-registry.json',
+    purpose:
+      'Skills catalog. Checked in and refreshed by the maintainer script `update:registry`, not by the build.',
+  },
   {
     file: 'public/previews/manifest.json',
     purpose:
@@ -375,16 +382,17 @@ onUnmounted(() => {
         <section id="skills-catalog" class="docs-section">
           <h2>Skills catalog</h2>
           <p>
-            Skills are cataloged from <code>src/content/skills/&lt;slug&gt;/meta.yaml</code>. The
-            local metadata powers browsing, while the actual <code>SKILL.md</code>
-            content is fetched from the linked GitHub repository at runtime.
+            Skills are not <code>meta.yaml</code> content. The catalog is
+            <code>public/content/skills-registry.json</code>, a checked-in registry of community
+            <code>SKILL.md</code> files. The metadata powers browsing, while the actual
+            <code>SKILL.md</code> content is fetched from the linked GitHub repository at runtime.
           </p>
           <DocsCodeBlock label="Minimal skill metadata" :code="skillYamlExample" />
           <p>
             Skill content is cached in localStorage for 24 hours to keep detail pages fast without
             bundling remote markdown into the app.
           </p>
-          <DocsCodeBlock label="Regenerate skills" code="bun run generate:skills" />
+          <DocsCodeBlock label="Refresh the skills registry" code="bun run update:registry" />
         </section>
 
         <section id="publish-flow" class="docs-section">
@@ -478,6 +486,10 @@ onUnmounted(() => {
             protected path to create broken, legacy, wrong-URL, and other issue rows for the admin
             dashboard. The <code>delete-account</code> function performs signed-in account deletion
             with server-side confirmation.
+          </p>
+          <p>
+            Shared behaviour — CORS/origin checks, service credentials, and rate limiting — lives in
+            <code>packages/supabase/functions/_shared/</code> and is imported by each function.
           </p>
         </section>
 

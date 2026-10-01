@@ -1,8 +1,8 @@
 # Adding Sites
 
-Sites are stored as `meta.yaml` files under `packages/web/src/content/sites/`. The generated
-`packages/web/src/content/sites-index.json` is imported directly by the Pinia sites store, so
-metadata must be complete before committing content changes.
+Sites are stored as `meta.yaml` files under `packages/web/src/content/sites/`. The generator writes
+`packages/web/public/content/sites-index.json`, which the Pinia sites store `fetch`es over HTTP at
+runtime, so metadata must be complete before committing content changes.
 
 ## Directory Structure
 
@@ -139,10 +139,10 @@ Do not add placeholder Compose YAML just to make the section appear.
 Production previews are static files generated from the site index:
 
 ```bash
-bun run generate:previews         # capture missing previews only
-bun run generate:previews:missing # explicit missing-only alias
-bun run generate:previews:all     # regenerate every public preview
-bun run review:previews           # audit missing, broken, stale, or fallback previews
+bun run generate:previews          # capture missing previews only
+bun run generate:previews:all      # regenerate every public preview
+bun run generate:previews:refresh  # re-capture previews already present
+bun run review:previews            # audit missing, broken, stale, or fallback previews
 ```
 
 The generator writes:
@@ -254,4 +254,5 @@ manually:
 bun run --cwd packages/web scripts/build/generate-sites-index.js
 ```
 
-Output: `packages/web/src/content/sites-index.json`.
+Output: `packages/web/public/content/sites-index.json` — the only generated copy, fetched by the
+sites store at runtime.

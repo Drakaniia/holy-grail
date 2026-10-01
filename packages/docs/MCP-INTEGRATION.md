@@ -180,4 +180,4 @@ bun packages/mcp/scripts/verify-remote.mjs https://holy-grail-eta.vercel.app/mcp
 | `404` on `bunx @holy-grail/mcp` | The `@holy-grail` npm scope is unclaimed. Use `npx -y holy-grail-mcp` (unscoped). |
 | No tools in Claude Code | Server died — check with `/mcp` and run the command manually; Bun/Node ≥ 18 required. |
 | `403 Forbidden: unknown Origin` | Browser client sending an Origin outside the allowlist (custom domain). Set `HOLY_GRAIL_ALLOWED_ORIGINS` or use a non-browser client. |
-| Stale data | npm copy carries a snapshot taken at publish time. Repo/dev mode and `HOLY_GRAIL_DATA_DIR` read live indexes. |
+| Stale data | npm copy carries a snapshot taken at publish time. Repo/dev mode reads the live generated indexes from `packages/web/public/content/`. |

@@ -21,8 +21,8 @@ An item is "newly added" if its `addedDaysAgo` field is **≤ 7**. This field re
 - **Extensions:** `addedDaysAgo` already exists on the `Extension` interface (`stores/extensions.ts`). No change needed.
 - **Skills:** `addedDaysAgo` does NOT currently exist. The `Skill` interface has `dateAdded` (ISO string). **Action required:**
   1. Add `addedDaysAgo: number` to the `Skill` interface in `stores/skills.ts`
-  2. Compute `addedDaysAgo` from `dateAdded` in the skill index generator (in `packages/web/scripts/build/`) at build time
-  3. The field is emitted alongside `dateAdded` in the generated `skills-index.json` / `skills-registry.json`
+  2. Compute `addedDaysAgo` at build time — `scripts/build/catalog-added-dates.js` already resolves add dates for the sites and extensions indexes; skills need the same treatment against `public/content/skills-registry.json`
+  3. The field is emitted alongside `dateAdded` in the generated `public/content/skills-registry.json`
 
 ## UI Design
 
@@ -107,7 +107,7 @@ Each page manages its own `showNewlyAdded` state locally in the page component (
 | File | Change |
 |------|--------|
 | `packages/web/src/stores/skills.ts` | Add `addedDaysAgo: number` to `Skill` interface |
-| `packages/web/scripts/build/skills-index.ts` (or generator) | Compute and emit `addedDaysAgo` from `dateAdded` |
+| `packages/web/scripts/build/catalog-added-dates.js` | Resolve the real add date (git history) and emit `addedDaysAgo` |
 | `packages/web/src/pages/SitesPage.vue` | Add toggle + filter logic + reset watcher |
 | `packages/web/src/pages/ExtensionsPage.vue` | Add toggle + filter logic + reset watcher |
 | `packages/web/src/pages/SkillsPage.vue` | Add toggle + filter logic + reset watcher |

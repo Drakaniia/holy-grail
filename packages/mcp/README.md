@@ -112,12 +112,11 @@ images are URLs only — never binary blobs.
 
 The server reads generated flat JSON — never YAML at runtime. Resolution order:
 
-1. `HOLY_GRAIL_DATA_DIR` env var (explicit override)
-2. Repo content dirs relative to the package (dev/monorepo mode)
-3. Bundled snapshot (`data/*.json`) copied at publish time
+1. Repo content dirs relative to the package — `../public/content/` (dev/monorepo mode)
+2. Bundled snapshot (`data/*.json`) copied at publish time
 
 The npm-distributed copy lags the live site until the next publish; repo/dev
-mode and `HOLY_GRAIL_DATA_DIR` always read the current generated indexes.
+mode always reads the current generated indexes.
 Preview URLs are absolute when `HOLY_GRAIL_BASE_URL` is set, else relative paths.
 
 ## HTTP transport details
@@ -137,8 +136,8 @@ Preview URLs are absolute when `HOLY_GRAIL_BASE_URL` is set, else relative paths
 ## Development
 
 ```bash
-bun run --cwd packages/mcp build        # tsc → dist/
-bun run --cwd packages/mcp snapshot     # copy generated indexes into data/
+bun run --cwd packages/mcp build        # tsc → dist/ + data snapshot + bundles
+bun run --cwd packages/mcp snapshot     # copy generated indexes into data/ (needs dist/)
 bun test packages/mcp/evals/search-corpus.test.ts   # pinned search corpus (port fidelity)
 bun run --cwd packages/web test:mcp-mirror          # SPA useSmartSearch vs port parity
 bun packages/mcp/evals/run-evals.ts     # 10-question read-only eval suite

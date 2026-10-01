@@ -1,12 +1,9 @@
 # Adding Extensions
 
 Extensions (Chrome extensions) are stored as `meta.yaml` files under
-`packages/web/src/content/extensions/`. The generated `packages/web/src/content/extensions-index.json` is
-imported directly by the Pinia extensions store, so metadata must be complete
-before committing content changes.
-
-The same JSON is also written to `packages/web/public/content/extensions-index.json` so the
-app can fetch it at runtime.
+`packages/web/src/content/extensions/`. The generator writes
+`packages/web/public/content/extensions-index.json`, which the Pinia extensions store `fetch`es
+over HTTP at runtime, so metadata must be complete before committing content changes.
 
 ## Directory Structure
 
@@ -18,9 +15,7 @@ packages/web/src/content/extensions/
 +-- productivity/
 +-- developer-tools/
 +-- privacy/
-+-- research/
 +-- design/
-+-- automation/
 ```
 
 The first-level directory (`writing`, `productivity`, etc.) becomes the
@@ -45,7 +40,7 @@ Without a second-level directory, `subcategory` is set to the same value as
 - `/extensions/:slug` — extension detail page
 
 Supported top-level categories (from the router): `writing`, `productivity`,
-`developer-tools`, `privacy`, `research`, `design`, `automation`.
+`developer-tools`, `privacy`, `design`.
 
 ## Manual Add Flow
 
@@ -196,10 +191,10 @@ Extensions are sorted by:
 manually:
 
 ```bash
-bun run generate:extensions
+bun run --cwd packages/web scripts/build/generate-extensions-index.js
 ```
 
-Output:
+(`bun run generate:extensions` from the repo root works too — same script.)
 
-- `packages/web/src/content/extensions-index.json` — imported by the Pinia store
-- `packages/web/public/content/extensions-index.json` — fetched at runtime by the app
+Output: `packages/web/public/content/extensions-index.json` — the only generated copy, fetched
+at runtime by the app.

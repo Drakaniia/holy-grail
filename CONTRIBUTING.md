@@ -69,9 +69,9 @@ packages/
 │   │   ├── assets/      # Static assets (images, fonts)
 │   │   ├── components/  # Vue 3 components
 │   │   ├── composables/ # Shared Vue composables
-│   │   ├── content/     # Content definitions (sites, skills, extensions)
+│   │   ├── content/     # Content definitions (sites, mcp, extensions)
 │   │   │   ├── sites/   #   meta.yaml files for each site
-│   │   │   ├── skills/  #   meta.yaml files for each skill
+│   │   │   ├── mcp/     #   meta.yaml files for each MCP server
 │   │   │   └── extensions/  #   meta.yaml files for each extension
 │   │   ├── router/      # Vue Router configuration
 │   │   ├── stores/      # Pinia stores
@@ -85,6 +85,7 @@ packages/
 │   ├── api/             # Vercel serverless functions
 │   └── tests/           # Vitest tests
 ├── mcp/                 # holy-grail-mcp (publishable npm package)
+├── core/                # @holy-grail/core (private — shared search scorer)
 ├── cli/                 # grail-cli (publishable npm package, Rust + TS)
 ├── supabase/            # Edge Functions (Deno) + DB migrations
 └── docs/                # Documentation (adding content, design, etc.)
@@ -125,7 +126,7 @@ chore: bump dependencies
 Every push and pull request to `grail` runs:
 
 ```
-type-check → lint → build → format:check
+type-check → lint → build → test:mcp-search → test:mcp-mirror → test:mcp-evals → format:check
 ```
 
 Make sure all steps pass before requesting a review:
@@ -146,14 +147,14 @@ The project has three content types, each defined as `meta.yaml` files:
 | Content Type | Location | Index Command |
 |---|---|---|
 | Sites | `packages/web/src/content/sites/<category>/<slug>/meta.yaml` | `bun run generate:previews` |
-| Skills | `packages/web/src/content/skills/<slug>/meta.yaml` | `bun run generate:skills` |
+| Skills | `packages/web/public/content/skills-registry.json` (runtime data, not `meta.yaml`) | `bun run update:registry` |
 | Extensions | `packages/web/src/content/extensions/<category>/<slug>/meta.yaml` | `bun run generate:extensions` |
 
 For detailed instructions, see the dedicated guides:
 
-- [Adding Sites](docs/ADDING-SITES.md) — Covers manual add flow, bookmark import, meta.yaml schema, feature objects, similar tools, images/previews, and enrichment scripts.
-- [Adding Skills](docs/ADDING-SKILLS.md) — Covers directory structure, meta.yaml schema, and how skills are fetched from remote GitHub repos.
-- [Adding Extensions](docs/ADDING-EXTENSIONS.md) — Covers directory structure, meta.yaml schema, extension-specific fields (Chrome Web Store metadata), routes, and the manual add flow.
+- [Adding Sites](packages/docs/ADDING-SITES.md) — Covers manual add flow, bookmark import, meta.yaml schema, feature objects, similar tools, images/previews, and enrichment scripts.
+- [Managing Skills](packages/docs/GRAIL-CLI.md) — Covers the `grail` CLI for installing and indexing skills.
+- [Adding Extensions](packages/docs/ADDING-EXTENSIONS.md) — Covers directory structure, meta.yaml schema, extension-specific fields (Chrome Web Store metadata), routes, and the manual add flow.
 
 ### Quick Checklist for Content Contributors
 
@@ -161,7 +162,7 @@ For detailed instructions, see the dedicated guides:
 - [ ] `meta.yaml` follows the schema (all required fields present)
 - [ ] `coreFeatures` and `additionalFeatures` are populated
 - [ ] `similarTools` references existing entries from the same category
-- [ ] Index regenerated (`bun run generate:previews`, `generate:skills`, or `generate:extensions`)
+- [ ] Index regenerated (`bun run generate:previews`, `generate:extensions`, or `generate:mcp`)
 - [ ] `bun run type-check` and `bun lint` pass
 - [ ] `bun run build` succeeds
 

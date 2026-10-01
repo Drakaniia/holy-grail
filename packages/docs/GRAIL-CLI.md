@@ -114,7 +114,7 @@ npx grail index
 
 Scans `~/.grail/skills/` for installed skills, reads `SKILL.md` frontmatter, and writes:
 - `~/.grail/skills-index.json` (global index)
-- `packages/web/public/content/skills-index.json` (project index, when run inside a Holy Grail project)
+- `packages/web/public/skills-index.json` (project index, only when run inside a Holy Grail project)
 
 Run this after manually copying files into `~/.grail/skills/` or to repair a corrupted index.
 
@@ -160,7 +160,7 @@ Instructions for the AI...
 │   ├── frontend-design/
 │   │   └── SKILL.md
 │   └── ...
-└── skills-index.json      ← Generated index (consumed by frontend)
+└── skills-index.json      ← Generated index (read by the CLI itself; the SPA never loads it)
 ```
 
 ### Project Directory (when inside Holy Grail)

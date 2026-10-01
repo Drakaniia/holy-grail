@@ -25,11 +25,12 @@ content/
 │   └── writing/
 ├── mcp/             # MCP server entries
 │   └── development/
-├── sites-index.json      # GENERATED — do not hand-edit
-├── extensions-index.json # GENERATED — do not hand-edit
-├── mcp-index.json        # GENERATED — do not hand-edit
-└── site-previews.json    # GENERATED — do not hand-edit
+└── site-previews.json    # GENERATED — do not hand-edit (see below)
 ```
+
+The three catalog indexes are **not** written here. `sites-index.json`,
+`extensions-index.json`, and `mcp-index.json` land in
+`packages/web/public/content/` only, because the stores `fetch` them over HTTP.
 
 ## CONTENT MODEL
 
@@ -37,9 +38,9 @@ Each entry = `<category>/<subcategory>/<slug>/meta.yaml`. Required fields per ty
 
 ## INDEX GENERATION
 
-- `scripts/build/generate-sites-index.js` → `sites-index.json`
-- `scripts/build/generate-extensions-index.js` → `extensions-index.json`
-- `scripts/build/generate-mcp-index.js` → `mcp-index.json`
+- `scripts/build/generate-sites-index.js` → `public/content/sites-index.json`
+- `scripts/build/generate-extensions-index.js` → `public/content/extensions-index.json`
+- `scripts/build/generate-mcp-index.js` → `public/content/mcp-index.json`
 - Indexes run before every `dev` and `build` — always up to date.
 - **Never edit `*-index.json` by hand.** Edit `meta.yaml` and re-run the generator.
 
