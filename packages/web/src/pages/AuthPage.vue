@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// AuthPage is rendered within the app shell on /login or /signup routes.
-// The actual auth dialog is handled by AuthDialogRoot in App.vue.
-// This page serves as a minimal placeholder in the RouterView area.
+// The auth dialog itself is rendered by AuthDialogRoot, which watches this route. This component
+// only needs to give the /login and /signup routes something to render inside the app shell.
 </script>
 
 <template>

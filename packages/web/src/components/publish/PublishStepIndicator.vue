@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Check } from 'lucide-vue-next'
 
-export interface PublishStepItem {
+interface PublishStepItem {
   id: string
   label: string
   description: string
