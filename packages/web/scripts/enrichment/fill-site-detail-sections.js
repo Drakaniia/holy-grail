@@ -1,37 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import yaml from 'js-yaml'
+import { parse, stringify } from 'yaml'
+import { walkMetaFiles } from '../lib/catalog.js'
 
 const sitesDir = path.resolve('src/content/sites')
 const applyChanges = process.argv.includes('--apply')
 const onlyNew = !process.argv.includes('--all')
-const refreshSimilar = process.argv.includes('--refresh-similar')
-const refreshDescriptions = process.argv.includes('--refresh-descriptions')
-const refreshFeatures = process.argv.includes('--refresh-features')
-
-function readOption(name) {
-  const inline = process.argv.find((arg) => arg.startsWith(`${name}=`))
-  if (inline) return inline.slice(name.length + 1)
-
-  const index = process.argv.indexOf(name)
-  return index >= 0 ? process.argv[index + 1] : ''
-}
-
-const parentFilter = readOption('--parent')
-const subcategoryFilter = readOption('--subcategory')
-
-function walkMetaFiles(dir) {
-  const files = []
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const fullPath = path.join(dir, entry.name)
-    if (entry.isDirectory()) {
-      files.push(...walkMetaFiles(fullPath))
-    } else if (entry.name === 'meta.yaml') {
-      files.push(fullPath)
-    }
-  }
-  return files
-}
 
 function compactName(name) {
   return String(name || 'This site')
@@ -359,12 +333,6 @@ function fullDescriptionFor(meta) {
 }
 
 function orderedMeta(meta, details) {
-  const shouldRefreshDescription =
-    refreshDescriptions || !meta.fullDescription || isImportDescription(meta.fullDescription)
-  const shouldRefreshCoreFeatures = refreshFeatures || hasImportFeature(meta.coreFeatures)
-  const shouldRefreshAdditionalFeatures =
-    refreshFeatures || hasImportFeature(meta.additionalFeatures)
-
   return {
     slug: meta.slug || '',
     name: meta.name || '',
@@ -392,24 +360,26 @@ function orderedMeta(meta, details) {
     featured: Boolean(meta.featured),
     tags: meta.tags || [],
     atGlance: meta.atGlance || '',
-    fullDescription: shouldRefreshDescription ? fullDescriptionFor(meta) : meta.fullDescription,
+    fullDescription:
+      !meta.fullDescription || isImportDescription(meta.fullDescription)
+        ? fullDescriptionFor(meta)
+        : meta.fullDescription,
     coreFeatures:
-      !shouldRefreshCoreFeatures && meta.coreFeatures?.length
+      !hasImportFeature(meta.coreFeatures) && meta.coreFeatures?.length
         ? meta.coreFeatures
         : details.coreFeatures,
     additionalFeatures:
-      !shouldRefreshAdditionalFeatures && meta.additionalFeatures?.length
+      !hasImportFeature(meta.additionalFeatures) && meta.additionalFeatures?.length
         ? meta.additionalFeatures
         : details.additionalFeatures,
     ...(meta.deployCompose ? { deployCompose: meta.deployCompose } : {}),
-    similarTools:
-      !refreshSimilar && meta.similarTools?.length ? meta.similarTools : details.similarTools,
+    similarTools: meta.similarTools?.length ? meta.similarTools : details.similarTools,
   }
 }
 
 const sites = walkMetaFiles(sitesDir).map((filePath) => ({
   filePath,
-  meta: yaml.load(fs.readFileSync(filePath, 'utf8')) || {},
+  meta: parse(fs.readFileSync(filePath, 'utf8')) || {},
 }))
 
 let changed = 0
@@ -417,8 +387,6 @@ let scanned = 0
 
 for (const site of sites) {
   if (onlyNew && site.meta.addedDaysAgo !== 0) continue
-  if (parentFilter && site.meta.parentCategory !== parentFilter) continue
-  if (subcategoryFilter && (site.meta.subcategory || '') !== subcategoryFilter) continue
   scanned += 1
 
   const details = context(site.meta)
@@ -429,12 +397,7 @@ for (const site of sites) {
   })
 
   const before = fs.readFileSync(site.filePath, 'utf8')
-  const after = yaml.dump(nextMeta, {
-    lineWidth: 100,
-    noRefs: true,
-    quotingType: '"',
-    sortKeys: false,
-  })
+  const after = stringify(nextMeta, { lineWidth: 100, aliasDuplicateObjects: false })
 
   if (before !== after) {
     changed += 1

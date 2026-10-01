@@ -1,34 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import yaml from 'js-yaml'
+import { parse } from 'yaml'
 import { loadCatalogAddedDates, resolveAddedDaysAgo } from './catalog-added-dates.js'
+import { findMetaYamlFiles } from '../lib/catalog.js'
 
 const extensionsDir = path.resolve('src/content/extensions')
-const outputPaths = [
-  path.resolve('src/content/extensions-index.json'),
-  path.resolve('public/content/extensions-index.json'),
-]
-
-function findMetaYamlFiles(dir, parentCategory = '', subcategory = '') {
-  const results = []
-  const entries = fs.readdirSync(dir, { withFileTypes: true })
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name)
-
-    if (entry.isDirectory()) {
-      const yamlPath = path.join(fullPath, 'meta.yaml')
-      if (fs.existsSync(yamlPath)) {
-        results.push({ yamlPath, parentCategory, subcategory: subcategory || null })
-      } else {
-        const nested = findMetaYamlFiles(fullPath, parentCategory || entry.name, entry.name)
-        results.push(...nested)
-      }
-    }
-  }
-
-  return results
-}
+const outputPath = path.resolve('public/content/extensions-index.json')
 
 function buildExtensionsIndex() {
   const extensions = []
@@ -40,7 +17,7 @@ function buildExtensionsIndex() {
 
   for (const { yamlPath, parentCategory, subcategory } of metaFiles) {
     const content = fs.readFileSync(yamlPath, 'utf-8')
-    const meta = yaml.load(content) || {}
+    const meta = parse(content) || {}
     const slug = meta.slug || path.basename(path.dirname(yamlPath))
 
     const ext = meta.extensionSpecific || {}
@@ -80,7 +57,6 @@ function buildExtensionsIndex() {
       userCount: ext.userCount || 0,
       permissions: ext.permissions || [],
       manifestVersion: ext.manifestVersion || 3,
-      installButtonBehavior: ext.installButtonBehavior || 'redirect-to-chrome-web-store',
     })
   }
 
@@ -90,10 +66,8 @@ function buildExtensionsIndex() {
     return (b.chromeWebStoreRating || 0) - (a.chromeWebStoreRating || 0)
   })
 
-  for (const outputPath of outputPaths) {
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
-    fs.writeFileSync(outputPath, JSON.stringify(extensions, null, 2))
-  }
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+  fs.writeFileSync(outputPath, JSON.stringify(extensions, null, 2))
 
   console.log(`Generated extensions index with ${extensions.length} extensions`)
 }
