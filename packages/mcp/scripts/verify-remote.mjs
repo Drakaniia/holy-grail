@@ -20,6 +20,9 @@ if (!url) {
   process.exit(2)
 }
 
+// Must match the number of tools registered in src/server.ts.
+const EXPECTED_TOOL_COUNT = 10
+
 function fail(message) {
   console.error(`FAIL ${url}: ${message}`)
   process.exit(1)
@@ -58,19 +61,18 @@ try {
   fail(`non-JSON response (${rawText.slice(0, 120)}) — SPA fallback serving this route`)
 }
 const rawTools = json?.result?.tools ?? []
-if (rawTools.length !== 10) {
-  fail(`tools/list returned ${rawTools.length} tools (expected 10)`)
+if (rawTools.length !== EXPECTED_TOOL_COUNT) {
+  fail(`tools/list returned ${rawTools.length} tools (expected ${EXPECTED_TOOL_COUNT})`)
 }
 
-// 2. Full battery through the official SDK client (initialize handshake).
+// 2. Full battery through the official SDK client (initialize handshake). The
+// tool count is not re-checked here — the raw POST above already asserted it
+// against the same endpoint.
 const transport = new StreamableHTTPClientTransport(new URL(url), {
   requestInit: { headers: { accept: 'application/json, text/event-stream' } },
 })
 const client = new Client({ name: 'ci-verify-remote', version: '1.0.0' })
 await client.connect(transport)
-
-const tools = await client.listTools()
-if (tools.tools.length !== 10) fail(`SDK tools/list → ${tools.tools.length} (expected 10)`)
 
 const search = await client.callTool({
   name: 'search',
@@ -88,5 +90,5 @@ if (!resources.resources?.length) fail('resources/list returned nothing')
 
 await client.close()
 console.log(
-  `OK ${url}: 10 tools, search top-1 playwright-mcp, stats ${JSON.stringify(counts)}, ${resources.resources.length} resources`,
+  `OK ${url}: ${EXPECTED_TOOL_COUNT} tools, search top-1 playwright-mcp, stats ${JSON.stringify(counts)}, ${resources.resources.length} resources`,
 )
