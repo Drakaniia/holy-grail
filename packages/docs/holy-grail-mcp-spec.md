@@ -44,16 +44,19 @@ these — never parses YAML at runtime.
 
 | Index | Location | Record shape (relevant fields) |
 |---|---|---|
-| Sites | `packages/web/src/content/sites-index.json` | `slug, name, description, category, parentCategory, subcategory, stars, watchers, addedDaysAgo, license, lastCommit, lastRelease, version, contributors, commitsThisYear, releases, platforms, deployment, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription, coreFeatures, additionalFeatures, deployCompose, installCommand, similarTools` |
-| Extensions | `packages/web/src/content/extensions-index.json` | `slug, name, description, category, parentCategory, subcategory, version, addedDaysAgo, license, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription` |
-| MCP servers | `packages/web/src/content/mcp-index.json` | `slug, name, description, category, parentCategory, icon, verified, featured, tags, website, docs, sourceCode, installCommand, transport ('stdio'\|'http'\|'websocket'), tools[{name,description}], connections` |
+| Sites | `packages/web/public/content/sites-index.json` | `slug, name, description, category, parentCategory, subcategory, stars, watchers, addedDaysAgo, license, lastCommit, lastRelease, version, contributors, commitsThisYear, releases, platforms, deployment, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription, coreFeatures, additionalFeatures, deployCompose, installCommand, similarTools` |
+| Extensions | `packages/web/public/content/extensions-index.json` | `slug, name, description, category, parentCategory, subcategory, version, addedDaysAgo, license, website, docs, sourceCode, icon, verified, featured, tags, atGlance, fullDescription` |
+| MCP servers | `packages/web/public/content/mcp-index.json` | `slug, name, description, category, parentCategory, icon, verified, featured, tags, website, docs, sourceCode, installCommand, transport ('stdio'\|'http'\|'websocket'), tools[{name,description}], connections` |
 | Skills | `packages/web/public/content/skills-registry.json` | `slug, title, description, category, parentCategory, tags, views, uses, author, authorName, repoLink, skillPath, branch, addedBy, featured, dateAdded, hasLocalContent` |
 | Previews | `packages/web/src/content/site-previews.json` | `slug → { image, small, sourceUrl, capturedAt, width, height }` (paths like `/previews/needmcp.webp`) |
 
 **Loader resolution order** (`src/data.ts`):
-1. `HOLY_GRAIL_DATA_DIR` env var (explicit override).
-2. Repo content dir relative to package location (dev/monorepo mode).
-3. Bundled snapshot copied into the package at publish time (see §8 staleness tradeoff).
+1. Repo content dir relative to package location (dev/monorepo mode) —
+   `packages/web/public/content/` for every index except `site-previews.json`,
+   which stays in `packages/web/src/content/` because the SPA imports it directly.
+2. Bundled snapshot copied into the package at publish time (see §8 staleness tradeoff).
+
+No env-var override; the index filenames come from `INDEX_FILES` in `src/constants.ts`.
 
 **Payload note:** `sites-index.json` is large and includes `deployCompose`
 (full docker-compose YAML strings). Apply `CHARACTER_LIMIT` truncation (see §5.4).
@@ -69,14 +72,14 @@ packages/mcp/
 │   ├── index.ts          # entry — picks transport (stdio default; TRANSPORT=http or --http)
 │   ├── server.ts         # McpServer init; registers tools + resources
 │   ├── data.ts           # index loaders (resolution order above)
-│   ├── search.ts         # ported pure scoring functions (from useSmartSearch)
+│   ├── search.ts         # MCP corpus + searchCatalog entry (scoring comes from @holy-grail/core)
 │   ├── types.ts          # Site, Extension, McpServer, Skill, Preview interfaces
 │   ├── format.ts         # markdown/json formatting, CHARACTER_LIMIT truncation
 │   ├── constants.ts      # data dirs, API URLs, limits
 │   ├── tools/            # search.ts, sites.ts, extensions.ts, mcp.ts, skills.ts, stats.ts
 │   └── resources/        # resource registration + URI handlers
 └── evals/
-    ├── questions.xml     # 10 read-only QA pairs
+    ├── questions.json    # 10 read-only QA pairs
     └── run-evals.ts      # runner (spawns server, calls tools, compares answers)
 ```
 
@@ -128,8 +131,9 @@ URI scheme: `holygrail://{kind}/{slug}` where kind ∈ `sites | extensions | mcp
 
 ### 5.4 Formatting & limits
 
-- `CHARACTER_LIMIT = 25000` in `constants.ts`; oversized responses truncate with
-  `truncated: true` + message directing to `offset`/filters.
+- `CHARACTER_LIMIT = 25000` in `constants.ts`; oversized markdown responses are
+  cut at the limit and a pointer to `offset`/filters is appended to the text.
+  No `truncated` flag on the response shape.
 - Markdown format: compact human-readable (headers, bullet lists, omit verbose
   fields like `deployCompose`, `fullDescription` truncated). JSON format: complete
   record. `response_format` defaults to markdown for agent context efficiency.
@@ -286,8 +290,8 @@ our own agents.
 - Pre-publish step (`bun run build:mcp` → tsc, then a copy step bundling the current
   generated indexes into the package as `data/*.json` snapshot — satisfies the
   loader's fallback path). Staleness of the snapshot vs. live site is a documented
-  tradeoff: npm-distributed copy lags until the next publish; repo/dev mode and
-  `HOLY_GRAIL_DATA_DIR` always read live generated indexes.
+  tradeoff: npm-distributed copy lags until the next publish; repo/dev mode always
+  reads the live generated indexes from `packages/web/public/content/`.
 
 ### 8.2 Catalog entry (dogfood)
 
@@ -299,7 +303,7 @@ existing entry schema (see `playwright-mcp/meta.yaml`):
 - `installCommand: bunx @holy-grail/mcp`, `transport: stdio`
 - `sourceCode` → repo URL; `website`/`docs` → repo README
 - `tools:` list mirroring §5.2 (name + one-line description each)
-- Then run `bun run generate:mcp` (regenerates `mcp-index.json` + public mirror).
+- Then run `bun run generate:mcp` (regenerates `public/content/mcp-index.json`).
   No preview generation — previews are site-only.
 
 ### 8.3 Repo hygiene
@@ -311,7 +315,7 @@ existing entry schema (see `playwright-mcp/meta.yaml`):
 
 ## 9. Evaluations (mcp-builder Phase 4)
 
-- `evals/questions.xml`: 10 QA pairs, each — independent, read-only, requires
+- `evals/questions.json`: 10 QA pairs, each — independent, read-only, requires
   multiple tool calls / deep exploration, realistic, single verifiable answer,
   stable over time. Examples: "Which MCP server in the catalog automates browser
   testing?" → playwright-mcp; "Find a site whose license is BSD-3-Clause and

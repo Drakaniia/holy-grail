@@ -6,11 +6,11 @@ Hybrid Rust+TypeScript CLI for skill management. Rust binary does the work; Type
 
 ```
 cli/
-├── src/main.rs        # Rust binary (clap + reqwest + serde_yaml + dialoguer)
-├── Cargo.toml         # Rust crate definition
+├── src/main.rs        # Rust binary (clap + reqwest + serde_yaml + serde_json + dirs + fs-err)
+├── Cargo.toml         # Rust crate definition (crate name: "grail")
 ├── grail.ts           # Node bin entry — finds + spawns Rust binary
-├── install.ts         # postinstall script — builds Rust from source
-├── package.json       # Publishable npm package (name: "grail")
+├── install.ts         # postinstall script — prebuilt binary download, cargo fallback
+├── package.json       # Publishable npm package (name: "grail-cli")
 ├── tsconfig.json      # TypeScript config (ES2022, NodeNext resolution)
 ├── dist/              # Compiled JS output
 ├── tests/             # Rust tests
@@ -20,23 +20,33 @@ cli/
 ## COMMANDS
 
 ```
-grail add <repo>       # Add a skill from a GitHub repo
-grail remove <slug>    # Remove an installed skill
-grail update <slug>    # Update a skill
-grail index            # Re-index installed skills
+grail list              # List installed skills
+grail add <repo>        # Add a skill from a GitHub repo
+grail remove <slug>     # Remove an installed skill
+grail index             # Re-index installed skills
+grail find [query]      # Search installed skills
+grail info <slug>       # Show details for one skill
+grail update [slug]     # Update a skill (all if omitted)
 ```
+
+`interactive_select` in `src/main.rs` is hand-rolled — the crate takes no
+`dialoguer` or `indicatif` dependency.
 
 ## BUILD
 
 ```bash
 # From root:
-bun run build:cli        # tsc + cargo build --release
+bun run build:cli        # → packages/cli build:release (tsc + cargo build --release)
 
 # From cli/:
-tsc && cargo build --release
+bun run build            # tsc only — JS shim, no Rust binary
+bun run build:release    # tsc + cargo build --release
 ```
 
-The package.json `postinstall` hook runs `node dist/install.js` which builds the Rust binary if no prebuilt binary is cached.
+The `postinstall` hook is plain `node dist/install.js`: it skips bootstrap in a
+monorepo checkout, otherwise downloads the prebuilt binary and falls back to
+`cargo build`. npm packaging is controlled by the `files` array in
+`package.json` — there is no `.npmignore`.
 
 ## DEVELOPMENT
 

@@ -9,15 +9,17 @@ HOLY GRAIL — Docs Knowledge Base
 | `AGENTS.md` | [This file] Docs-specific knowledge |
 | `DESIGN.md` | Design system, branding, UI tokens |
 | `TODO.md` | Active task list / backlog |
-| `packages/web/CHANGELOG.md` | Generated release changelog |
 | `ADDING-SITES.md` | Guide for adding sites to the catalog |
 | `ADDING-EXTENSIONS.md` | Guide for adding extensions to the catalog |
 | `GRAIL-CLI.md` | Usage guide for the grail CLI tool |
-| `SUPABASE-SUBMISSIONS.md` | Submission flow via Supabase |
+| `MCP-INTEGRATION.md` | MCP client setup + transport/troubleshooting |
+| `holy-grail-mcp-spec.md` | Design spec for the MCP server package |
+| `21ST-DEV-SIDEBAR.md` | Sidebar 21st.dev design notes |
 | `.env.example` | Required env vars template |
-| `RELEASE-v0.1.0.md` | Historical release notes |
-| `skills.md` / `skills-lock.json` | Skills metadata |
-| `superpowers/` | Specs + plans |
+| `skills.md` / `skills-lock.json` | Local agent skills metadata |
+
+Release changelogs live outside this directory: `CHANGELOG.md` (repo root) and
+`packages/web/CHANGELOG.md`.
 
 ## IMPORTANT
 
