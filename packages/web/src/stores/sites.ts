@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { computed, shallowRef } from 'vue'
+import { shallowRef } from 'vue'
 
 export interface SiteFeature {
   name: string
@@ -182,11 +182,6 @@ export const useSitesStore = defineStore('sites', () => {
     return loadPromise
   }
 
-  const categories = computed(() => {
-    const cats = new Set(allSites.value.map((s) => s.category))
-    return ['All', ...Array.from(cats).sort()]
-  })
-
   const getSitesByParentCategory = (parentCategory: string) => {
     return allSites.value.filter((s) => s.parentCategory === parentCategory)
   }
@@ -196,34 +191,6 @@ export const useSitesStore = defineStore('sites', () => {
       (s) => s.parentCategory === parentCategory && s.subcategory === subcategory,
     )
   }
-
-  const filteredSites = computed(() => {
-    let result = [...allSites.value]
-
-    if (searchQuery.value) {
-      const query = searchQuery.value.toLowerCase()
-      result = result.filter(
-        (s) =>
-          s.name.toLowerCase().includes(query) ||
-          s.description.toLowerCase().includes(query) ||
-          s.category.toLowerCase().includes(query) ||
-          (s.tags && s.tags.some((t) => t.toLowerCase().includes(query))),
-      )
-    }
-
-    if (activeCategory.value !== 'All') {
-      result = result.filter((s) => s.category === activeCategory.value)
-    }
-
-    return sortSitesForTab(result, activeTab.value)
-  })
-
-  const paginatedSites = computed(() => {
-    const start = (currentPage.value - 1) * itemsPerPage
-    return filteredSites.value.slice(start, start + itemsPerPage)
-  })
-
-  const totalPages = computed(() => Math.ceil(filteredSites.value.length / itemsPerPage))
 
   const getSiteBySlug = (slug: string) => {
     return allSites.value.find((s) => s.slug === slug)
@@ -258,10 +225,6 @@ export const useSitesStore = defineStore('sites', () => {
     activeTab,
     currentPage,
     itemsPerPage,
-    categories,
-    filteredSites,
-    paginatedSites,
-    totalPages,
     loadSites,
     getSiteBySlug,
     getSitesByParentCategory,

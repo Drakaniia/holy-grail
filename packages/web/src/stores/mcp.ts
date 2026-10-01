@@ -1,4 +1,4 @@
-import { computed, shallowRef } from 'vue'
+import { shallowRef } from 'vue'
 import { defineStore } from 'pinia'
 
 export interface McpTool {
@@ -30,8 +30,6 @@ export const useMcpStore = defineStore('mcp', () => {
   const loading = shallowRef(false)
   const loaded = shallowRef(false)
   const loadError = shallowRef<string | null>(null)
-  const searchQuery = shallowRef('')
-  const activeCategory = shallowRef('All')
   let loadPromise: Promise<void> | null = null
 
   async function loadServers(force = false) {
@@ -58,31 +56,6 @@ export const useMcpStore = defineStore('mcp', () => {
     return loadPromise
   }
 
-  const categories = computed(() => {
-    const cats = new Set(allServers.value.map((s) => s.category))
-    return ['All', ...Array.from(cats).sort()]
-  })
-
-  const filteredServers = computed(() => {
-    let result = [...allServers.value]
-
-    if (searchQuery.value) {
-      const q = searchQuery.value.toLowerCase()
-      result = result.filter(
-        (s) =>
-          s.name.toLowerCase().includes(q) ||
-          s.description.toLowerCase().includes(q) ||
-          s.tags.some((t) => t.toLowerCase().includes(q)),
-      )
-    }
-
-    if (activeCategory.value !== 'All') {
-      result = result.filter((s) => s.category === activeCategory.value)
-    }
-
-    return result
-  })
-
   function getServerBySlug(slug: string) {
     return allServers.value.find((s) => s.slug === slug)
   }
@@ -96,10 +69,6 @@ export const useMcpStore = defineStore('mcp', () => {
     loading,
     loaded,
     loadError,
-    searchQuery,
-    activeCategory,
-    categories,
-    filteredServers,
     loadServers,
     getServerBySlug,
     getServersByParentCategory,

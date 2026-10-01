@@ -182,62 +182,9 @@ export const useSkillsStore = defineStore('skills', () => {
     return loadPromise
   }
 
-  const categories = computed(() => {
-    const cats = new Set(allSkills.value.map((s) => s.category))
-    return ['All', ...Array.from(cats).sort()]
-  })
-
   const getSkillsByParentCategory = (parentCategory: string) => {
     return allSkills.value.filter((s) => s.parentCategory === parentCategory)
   }
-
-  const filteredSkills = computed(() => {
-    let result = [...allSkills.value]
-
-    if (searchQuery.value) {
-      const query = searchQuery.value.toLowerCase()
-      result = result.filter(
-        (s) =>
-          s.title.toLowerCase().includes(query) ||
-          s.description.toLowerCase().includes(query) ||
-          s.tags.some((t) => t.toLowerCase().includes(query)),
-      )
-    }
-
-    if (activeCategory.value !== 'All') {
-      result = result.filter((s) => s.category === activeCategory.value)
-    }
-
-    // Tag filtering
-    if (selectedTags.value.length > 0) {
-      if (tagMatchMode.value === 'and') {
-        result = result.filter((s) => selectedTags.value.every((t) => s.tags.includes(t)))
-      } else {
-        result = result.filter((s) => selectedTags.value.some((t) => s.tags.includes(t)))
-      }
-    }
-
-    switch (activeTab.value) {
-      case 'popular':
-        result.sort((a, b) => b.views - a.views)
-        break
-      case 'trending':
-        result.sort((a, b) => b.uses - a.uses)
-        break
-      case 'recent':
-        result.sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime())
-        break
-    }
-
-    return result
-  })
-
-  const paginatedSkills = computed(() => {
-    const start = (currentPage.value - 1) * itemsPerPage
-    return filteredSkills.value.slice(start, start + itemsPerPage)
-  })
-
-  const totalPages = computed(() => Math.ceil(filteredSkills.value.length / itemsPerPage))
 
   const getSkillBySlug = (slug: string) => {
     return allSkills.value.find((s) => s.slug === slug)
@@ -333,10 +280,6 @@ export const useSkillsStore = defineStore('skills', () => {
     activeTab,
     currentPage,
     itemsPerPage,
-    categories,
-    filteredSkills,
-    paginatedSkills,
-    totalPages,
     loadSkills,
     getSkillBySlug,
     getSkillsByParentCategory,
