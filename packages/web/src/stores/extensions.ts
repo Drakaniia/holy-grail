@@ -1,21 +1,6 @@
-import { computed, shallowRef } from 'vue'
+import { shallowRef } from 'vue'
 import { defineStore } from 'pinia'
-
-export interface ExtensionFeature {
-  name: string
-  description: string
-  icon: string
-}
-
-export interface SimilarTool {
-  slug: string
-  name: string
-  description: string
-  stars: number
-  addedDaysAgo: number
-  verified: boolean
-  website?: string
-}
+import type { SiteFeature, SimilarTool } from '@/stores/sites'
 
 export interface Extension {
   slug: string
@@ -36,44 +21,21 @@ export interface Extension {
   tags?: string[]
   atGlance?: string
   fullDescription?: string
-  coreFeatures?: ExtensionFeature[]
-  additionalFeatures?: ExtensionFeature[]
+  coreFeatures?: SiteFeature[]
+  additionalFeatures?: SiteFeature[]
   similarTools?: SimilarTool[]
   chromeWebStoreId: string
   chromeWebStoreRating: number
   userCount: number
   permissions: string[]
   manifestVersion: number
-  installButtonBehavior: string
-}
-
-export type ExtensionSortTab = 'trending' | 'newest' | 'popular'
-
-export function sortExtensionsForTab(extensions: Extension[], tab: ExtensionSortTab) {
-  return [...extensions].sort((a, b) => {
-    if (tab === 'trending') {
-      return (
-        (b.chromeWebStoreRating || 0) - (a.chromeWebStoreRating || 0) ||
-        b.addedDaysAgo - a.addedDaysAgo
-      )
-    }
-    if (tab === 'newest') {
-      return a.addedDaysAgo - b.addedDaysAgo
-    }
-    return (b.chromeWebStoreRating || 0) - (a.chromeWebStoreRating || 0)
-  })
 }
 
 export const useExtensionsStore = defineStore('extensions', () => {
   const allExtensions = shallowRef<Extension[]>([])
-  const searchQuery = shallowRef('')
-  const activeCategory = shallowRef('All')
-  const activeTab = shallowRef<ExtensionSortTab>('popular')
-  const currentPage = shallowRef(1)
   const loading = shallowRef(false)
   const loaded = shallowRef(false)
   const loadError = shallowRef<string | null>(null)
-  const itemsPerPage = 12
   let loadPromise: Promise<void> | null = null
 
   async function loadExtensions(force = false) {
@@ -100,11 +62,6 @@ export const useExtensionsStore = defineStore('extensions', () => {
     return loadPromise
   }
 
-  const categories = computed(() => {
-    const cats = new Set(allExtensions.value.map((e) => e.category))
-    return ['All', ...Array.from(cats).sort()]
-  })
-
   const getExtensionsByParentCategory = (parentCategory: string) =>
     allExtensions.value.filter((e) => e.parentCategory === parentCategory)
 
@@ -115,82 +72,14 @@ export const useExtensionsStore = defineStore('extensions', () => {
 
   const getExtensionBySlug = (slug: string) => allExtensions.value.find((e) => e.slug === slug)
 
-  const filteredExtensions = computed(() => {
-    let result = [...allExtensions.value]
-
-    if (searchQuery.value) {
-      const query = searchQuery.value.toLowerCase()
-      result = result.filter(
-        (e) =>
-          e.name.toLowerCase().includes(query) ||
-          e.description.toLowerCase().includes(query) ||
-          e.category.toLowerCase().includes(query) ||
-          e.tags?.some((tag) => tag.toLowerCase().includes(query)),
-      )
-    }
-
-    if (activeCategory.value !== 'All') {
-      result = result.filter((e) => e.category === activeCategory.value)
-    }
-
-    return sortExtensionsForTab(result, activeTab.value)
-  })
-
-  const paginatedExtensions = computed(() => {
-    const start = (currentPage.value - 1) * itemsPerPage
-    return filteredExtensions.value.slice(start, start + itemsPerPage)
-  })
-
-  const totalPages = computed(() => Math.ceil(filteredExtensions.value.length / itemsPerPage))
-
-  function setSearchQuery(query: string) {
-    searchQuery.value = query
-    currentPage.value = 1
-  }
-
-  function setCategory(category: string) {
-    activeCategory.value = category
-    currentPage.value = 1
-  }
-
-  function setTab(tab: ExtensionSortTab) {
-    activeTab.value = tab
-    currentPage.value = 1
-  }
-
-  function setPage(page: number) {
-    currentPage.value = Math.max(1, Math.floor(page))
-  }
-
-  function reset() {
-    searchQuery.value = ''
-    activeCategory.value = 'All'
-    activeTab.value = 'popular'
-    currentPage.value = 1
-  }
-
   return {
     allExtensions,
     loading,
     loaded,
     loadError,
-    searchQuery,
-    activeCategory,
-    activeTab,
-    currentPage,
-    itemsPerPage,
-    categories,
-    filteredExtensions,
-    paginatedExtensions,
-    totalPages,
     loadExtensions,
     getExtensionBySlug,
     getExtensionsByParentCategory,
     getExtensionsBySubcategory,
-    setSearchQuery,
-    setCategory,
-    setTab,
-    setPage,
-    reset,
   }
 })
