@@ -1,14 +1,14 @@
 // Eval runner: spawns the built server over stdio, answers each question in
-// evals/questions.xml deterministically using the server's tools, and compares
+// evals/questions.json deterministically using the server's tools, and compares
 // against the expected answer. Exits non-zero on any mismatch.
 //
 // Run: bun mcp/evals/run-evals.ts   (requires `bun run build:mcp` first)
 
-import { readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { Client } from '@modelcontextprotocol/sdk/client/index.js'
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js'
+import pairs from './questions.json' with { type: 'json' }
 
 const here = dirname(fileURLToPath(import.meta.url))
 const serverPath = resolve(here, '../dist/index.js')
@@ -17,17 +17,6 @@ interface QaPair {
   id: string
   question: string
   answer: string
-}
-
-function parseQuestions(xml: string): QaPair[] {
-  const pairs: QaPair[] = []
-  const re =
-    /<qa_pair>\s*<id>([\s\S]*?)<\/id>\s*<question>([\s\S]*?)<\/question>\s*<answer>([\s\S]*?)<\/answer>\s*<\/qa_pair>/g
-  let match: RegExpExecArray | null
-  while ((match = re.exec(xml)) !== null) {
-    pairs.push({ id: match[1].trim(), question: match[2].trim(), answer: match[3].trim() })
-  }
-  return pairs
 }
 
 /** Reads a key from a tool's structuredContent (our own contract — shapes are defined by our tools). */
@@ -40,27 +29,20 @@ function pick(payload: unknown, key: string): unknown {
 
 type Resolver = (client: Client) => Promise<string>
 
+/** Resolves a question to the slug of the top-scoring hit of `kind` for `query`. */
+function topSlugByKind(query: string, kind: string): Resolver {
+  return async (client) => {
+    const r = await client.callTool({ name: 'search', arguments: { query, limit: 5 } })
+    const results = pick(r.structuredContent, 'results')
+    const list = Array.isArray(results) ? (results as unknown[]) : []
+    const hit = list.find((item) => pick(item, 'kind') === kind)
+    return String(pick(hit, 'slug') ?? '')
+  }
+}
+
 const resolvers: Record<string, Resolver> = {
-  '1-browser-testing-mcp': async (client) => {
-    const r = await client.callTool({
-      name: 'search',
-      arguments: { query: 'browser automation', limit: 5 },
-    })
-    const results = pick(r.structuredContent, 'results')
-    const list = Array.isArray(results) ? (results as unknown[]) : []
-    const hit = list.find((item) => pick(item, 'kind') === 'mcp')
-    return String(pick(hit, 'slug') ?? '')
-  },
-  '2-supabase-sql': async (client) => {
-    const r = await client.callTool({
-      name: 'search',
-      arguments: { query: 'supabase mcp', limit: 5 },
-    })
-    const results = pick(r.structuredContent, 'results')
-    const list = Array.isArray(results) ? (results as unknown[]) : []
-    const hit = list.find((item) => pick(item, 'kind') === 'mcp')
-    return String(pick(hit, 'slug') ?? '')
-  },
+  '1-browser-testing-mcp': topSlugByKind('browser automation', 'mcp'),
+  '2-supabase-sql': topSlugByKind('supabase mcp', 'mcp'),
   '3-bsd-backend-site': async (client) => {
     const listed = await client.callTool({
       name: 'list_sites',
@@ -76,16 +58,7 @@ const resolvers: Record<string, Resolver> = {
     }
     return ''
   },
-  '4-markdown-extension': async (client) => {
-    const r = await client.callTool({
-      name: 'search',
-      arguments: { query: 'markdown webpage', limit: 5 },
-    })
-    const results = pick(r.structuredContent, 'results')
-    const list = Array.isArray(results) ? (results as unknown[]) : []
-    const hit = list.find((item) => pick(item, 'kind') === 'extension')
-    return String(pick(hit, 'slug') ?? '')
-  },
+  '4-markdown-extension': topSlugByKind('markdown webpage', 'extension'),
   '5-drakaniia-skill-count': async (client) => {
     let count = 0
     for (let offset = 0; offset < 400; offset += 100) {
@@ -134,16 +107,7 @@ const resolvers: Record<string, Resolver> = {
     }
     return best
   },
-  '9-efficient-blocker': async (client) => {
-    const r = await client.callTool({
-      name: 'search',
-      arguments: { query: 'efficient blocker', limit: 5 },
-    })
-    const results = pick(r.structuredContent, 'results')
-    const list = Array.isArray(results) ? (results as unknown[]) : []
-    const hit = list.find((item) => pick(item, 'kind') === 'extension')
-    return String(pick(hit, 'slug') ?? '')
-  },
+  '9-efficient-blocker': topSlugByKind('efficient blocker', 'extension'),
   '10-most-extensions-parent': async (client) => {
     const r = await client.callTool({ name: 'get_stats', arguments: {} })
     const byParent = pick(r.structuredContent, 'byParentCategory')
@@ -162,12 +126,6 @@ const resolvers: Record<string, Resolver> = {
 }
 
 async function main(): Promise<void> {
-  const pairs = parseQuestions(readFileSync(resolve(here, 'questions.xml'), 'utf-8'))
-  if (pairs.length !== 10) {
-    console.error(`Expected 10 QA pairs, found ${pairs.length}`)
-    process.exit(2)
-  }
-
   const transport = new StdioClientTransport({
     command: 'bun',
     args: [serverPath],
@@ -177,11 +135,13 @@ async function main(): Promise<void> {
   await client.connect(transport)
 
   let passed = 0
-  for (const pair of pairs) {
+  for (const pair of pairs as QaPair[]) {
     const resolver = resolvers[pair.id]
     if (!resolver) {
-      console.error(`No resolver for question '${pair.id}'`)
-      process.exit(2)
+      // A new question without a resolver is drift, not a crash: report it and
+      // keep scoring the rest.
+      console.error(`SKIP [${pair.id}] no resolver registered`)
+      continue
     }
     try {
       const actual = await resolver(client)

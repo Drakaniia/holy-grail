@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1-browser-testing-mcp",
+    "question": "Which MCP server in the catalog automates browser testing?",
+    "answer": "playwright-mcp"
+  },
+  {
+    "id": "2-supabase-sql",
+    "question": "Which MCP server exposes a tool named \"query\" for running SQL against Supabase projects?",
+    "answer": "supabase-mcp"
+  },
+  {
+    "id": "3-bsd-backend-site",
+    "question": "Name the site in the Backend category that is licensed under BSD-3-Clause.",
+    "answer": "appwrite"
+  },
+  {
+    "id": "4-markdown-extension",
+    "question": "Which Chrome extension converts webpages into clean, LLM-ready Markdown?",
+    "answer": "md-this-page"
+  },
+  {
+    "id": "5-drakaniia-skill-count",
+    "question": "How many skills in the catalog are authored by Drakaniia? Answer with a number only.",
+    "answer": "4"
+  },
+  {
+    "id": "6-ai-site-count",
+    "question": "How many sites are in the \"ai\" parent category? Answer with a number only.",
+    "answer": "100"
+  },
+  {
+    "id": "7-skill-install-command",
+    "question": "What is the exact install command for the audit-codebase skill?",
+    "answer": "npx grail add Drakaniia/skills --skill audit-codebase"
+  },
+  {
+    "id": "8-top-deployment-site",
+    "question": "Which site in the Deployment category has the most stars?",
+    "answer": "digitalplat-freedomain"
+  },
+  {
+    "id": "9-efficient-blocker",
+    "question": "Which extension's description begins with \"Finally, an efficient blocker\"?",
+    "answer": "ublock-origin"
+  },
+  {
+    "id": "10-most-extensions-parent",
+    "question": "Which parent category contains the most Chrome extensions?",
+    "answer": "productivity"
+  }
+]
