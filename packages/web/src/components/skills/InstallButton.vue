@@ -20,8 +20,6 @@ const label = computed(() => {
       return 'Copying...'
     case 'copied':
       return 'Copied!'
-    case 'installing':
-      return 'Installing...'
     case 'error':
       return 'Try Again'
     default:
@@ -31,14 +29,14 @@ const label = computed(() => {
 
 const icon = computed(() => {
   if (props.isInstalled || props.status === 'copied') return Check
-  if (props.status === 'copying' || props.status === 'installing') return Loader2
+  if (props.status === 'copying') return Loader2
   return Copy
 })
 </script>
 
 <template>
   <button
-    :disabled="isInstalled || status === 'installing' || status === 'copying'"
+    :disabled="isInstalled || status === 'copying'"
     class="inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-[color,background-color,border-color,transform] duration-150 ease-out-quint active:scale-[0.98]"
     :class="
       isInstalled
@@ -47,11 +45,7 @@ const icon = computed(() => {
     "
     @click="emit('install')"
   >
-    <component
-      :is="icon"
-      class="h-4 w-4"
-      :class="{ 'animate-spin': status === 'copying' || status === 'installing' }"
-    />
+    <component :is="icon" class="h-4 w-4" :class="{ 'animate-spin': status === 'copying' }" />
     {{ label }}
   </button>
 </template>

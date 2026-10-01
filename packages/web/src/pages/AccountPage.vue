@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, shallowRef } from 'vue'
 import { AlertCircle, Bookmark, Code2, Globe2 } from 'lucide-vue-next'
-import ProfileBookmarkCardSkeleton from '@/components/profile/ProfileBookmarkCardSkeleton.vue'
+import BookmarkCardSkeleton from '@/components/bookmarks/BookmarkCardSkeleton.vue'
 import ProfileBookmarkCard from '@/components/profile/ProfileBookmarkCard.vue'
 import ProfileEmptyState from '@/components/profile/ProfileEmptyState.vue'
 import ProfileHeader from '@/components/profile/ProfileHeader.vue'
@@ -134,7 +134,7 @@ async function removeBookmark(id: string) {
           aria-busy="true"
           aria-label="Loading bookmarks"
         >
-          <ProfileBookmarkCardSkeleton v-for="index in 4" :key="index" />
+          <BookmarkCardSkeleton v-for="index in 4" :key="index" tone="zinc" />
         </div>
 
         <ProfileEmptyState

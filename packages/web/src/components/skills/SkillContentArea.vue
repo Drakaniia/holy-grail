@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import SkillSummary from './SkillSummary.vue'
 import SkillMDViewer from './SkillMDViewer.vue'
-import SkillRatings from './SkillRatings.vue'
-import SkillReviews from './SkillReviews.vue'
 import InstallationTab from './InstallationTab.vue'
 import SkillMDTab from './SkillMDTab.vue'
 import ResourcesTab from './ResourcesTab.vue'
@@ -60,10 +58,6 @@ const emit = defineEmits<{
         :error="contentError"
         @toggle-expand="emit('toggle-skillmd')"
       />
-
-      <!-- Ratings & Reviews -- TODO: show when data available -->
-      <SkillRatings />
-      <SkillReviews />
 
       <!-- Related Skills at bottom -->
       <div class="block lg:hidden">
