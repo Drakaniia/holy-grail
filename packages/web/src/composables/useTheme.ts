@@ -35,9 +35,7 @@ function applyTheme(nextTheme: ThemeMode) {
   }
 
   const root = document.documentElement
-  root.dataset.theme = nextTheme
   root.classList.toggle('light', nextTheme === 'light')
-  root.classList.toggle('dark', nextTheme === 'dark')
   root.style.colorScheme = nextTheme
 }
 
@@ -57,21 +55,12 @@ function setTheme(nextTheme: ThemeMode) {
   persistTheme(nextTheme)
 }
 
-function toggleTheme() {
-  setTheme(theme.value === 'dark' ? 'light' : 'dark')
-}
-
 export function useTheme() {
   initializeTheme()
 
-  const isLightMode = computed(() => theme.value === 'light')
-  const themeToggleLabel = computed(() => 'Toggle Theme')
-
   return {
     theme: readonly(theme),
-    isLightMode,
-    themeToggleLabel,
+    isLightMode: computed(() => theme.value === 'light'),
     setTheme,
-    toggleTheme,
   }
 }

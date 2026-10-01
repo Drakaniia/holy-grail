@@ -1,6 +1,11 @@
 import { defineStore } from 'pinia'
 import { computed, ref, shallowRef } from 'vue'
-import { clearAnalyticsSettingsCache } from '@/lib/analytics'
+import {
+  clearAnalyticsSettingsCache,
+  ANALYTICS_SETTINGS_COLUMNS,
+  type AnalyticsEventType,
+  type AnalyticsSettings as AnalyticsToggles,
+} from '@/lib/analytics'
 import { supabase } from '@/lib/supabase'
 import { getSupabaseErrorMessage } from '@/lib/supabaseErrors'
 import { useAuthStore } from '@/stores/auth'
@@ -9,7 +14,6 @@ export type SubmissionStatus = 'pending' | 'approved' | 'rejected'
 export type SiteIssueStatus = 'open' | 'resolved' | 'ignored'
 export type SiteIssueType = 'down' | 'deprecated' | 'wrong-url' | 'other'
 export type AnalyticsRange = 7 | 30 | 90 | 'all'
-export type AnalyticsEventType = 'page_view' | 'search' | 'outbound_click' | 'signup' | 'bookmark'
 
 export interface Submission {
   id: string
@@ -58,12 +62,9 @@ export interface AnalyticsEvent {
   created_at: string
 }
 
-export interface AnalyticsSettings {
+/** The full admin row: the tracking toggles plus the retention/audit columns the panel edits. */
+export interface AnalyticsSettings extends AnalyticsToggles {
   id: 'global'
-  tracking_enabled: boolean
-  track_authenticated_users: boolean
-  track_search_terms: boolean
-  track_outbound_clicks: boolean
   retention_days: 30 | 90 | 365
   updated_by: string | null
   updated_at: string
@@ -123,8 +124,6 @@ const SITE_ISSUE_COLUMNS =
   'id,slug,name,url,category,issue_type,note,reporter_email,status,resolved_by,resolved_at,created_at'
 const ANALYTICS_EVENT_COLUMNS =
   'id,event_type,session_id,user_id,route_path,route_name,resource_type,resource_slug,target_url,search_query,device_type,browser_family,referrer_host,created_at'
-const ANALYTICS_SETTINGS_COLUMNS =
-  'id,tracking_enabled,track_authenticated_users,track_search_terms,track_outbound_clicks,retention_days,updated_by,updated_at,created_at'
 const MAX_ANALYTICS_EVENTS = 10000
 
 const DEFAULT_ANALYTICS_SETTINGS: AnalyticsSettings = {

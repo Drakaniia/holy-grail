@@ -7,41 +7,16 @@ const AVATAR_SIZE = 320
 const AUTO_SAVE_DELAY_MS = 650
 const SAVED_VISIBLE_MS = 1800
 
-function readFileAsDataUrl(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-
-    reader.onerror = () => reject(new Error('Avatar image could not be read.'))
-    reader.onload = () => {
-      if (typeof reader.result === 'string') {
-        resolve(reader.result)
-        return
-      }
-
-      reject(new Error('Avatar image could not be read.'))
-    }
-
-    reader.readAsDataURL(file)
-  })
-}
-
-function loadImage(source: string): Promise<HTMLImageElement> {
-  return new Promise((resolve, reject) => {
-    const image = new Image()
-
-    image.onload = () => resolve(image)
-    image.onerror = () => reject(new Error('Avatar image could not be loaded.'))
-    image.src = source
-  })
-}
-
 async function createAvatarDataUrl(file: File): Promise<string> {
   if (!file.type.startsWith('image/')) {
     throw new Error('Choose an image file for your avatar.')
   }
 
-  const source = await readFileAsDataUrl(file)
-  const image = await loadImage(source)
+  // createImageBitmap decodes and gives us the dimensions the crop needs, without an <img> round-trip.
+  const image = await createImageBitmap(file).catch(() => {
+    throw new Error('Avatar image could not be loaded.')
+  })
+
   const canvas = document.createElement('canvas')
   const context = canvas.getContext('2d')
 
@@ -49,13 +24,14 @@ async function createAvatarDataUrl(file: File): Promise<string> {
     throw new Error('Avatar image could not be prepared.')
   }
 
-  const side = Math.min(image.naturalWidth, image.naturalHeight)
-  const sourceX = Math.max(0, (image.naturalWidth - side) / 2)
-  const sourceY = Math.max(0, (image.naturalHeight - side) / 2)
+  const side = Math.min(image.width, image.height)
+  const sourceX = Math.max(0, (image.width - side) / 2)
+  const sourceY = Math.max(0, (image.height - side) / 2)
 
   canvas.width = AVATAR_SIZE
   canvas.height = AVATAR_SIZE
   context.drawImage(image, sourceX, sourceY, side, side, 0, 0, AVATAR_SIZE, AVATAR_SIZE)
+  image.close()
 
   return canvas.toDataURL('image/webp', 0.86)
 }

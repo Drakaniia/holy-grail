@@ -3,7 +3,8 @@ import { scheduleIdleTask } from '@/lib/idle'
 
 export type AnalyticsEventType = 'page_view' | 'search' | 'outbound_click' | 'signup' | 'bookmark'
 
-interface AnalyticsSettings {
+/** The admin-controlled tracking toggles; the full admin row extends these with audit columns. */
+export interface AnalyticsSettings {
   tracking_enabled: boolean
   track_authenticated_users: boolean
   track_search_terms: boolean
@@ -19,6 +20,12 @@ interface AnalyticsPayload {
   target_url?: string | null
   search_query?: string | null
 }
+
+export const ANALYTICS_SETTINGS_COLUMNS =
+  'id,tracking_enabled,track_authenticated_users,track_search_terms,track_outbound_clicks,retention_days,updated_by,updated_at,created_at'
+/** The event writer only needs the toggles, so it reads a subset of the admin's column list. */
+const ANALYTICS_TOGGLE_COLUMNS =
+  'tracking_enabled,track_authenticated_users,track_search_terms,track_outbound_clicks'
 
 const ANALYTICS_SESSION_KEY = 'holy-grail-analytics-session'
 const SETTINGS_CACHE_MS = 5 * 60 * 1000
@@ -39,8 +46,9 @@ const DISABLED_SETTINGS: AnalyticsSettings = {
 }
 
 let settingsCache: { value: AnalyticsSettings; expiresAt: number } | null = null
-const searchTimers = new Map<string, number>()
-const lastTrackedSearch = new Map<string, string>()
+/** One search field is focused at a time, so a single timer and last-value are enough to debounce. */
+let searchTimer: number | null = null
+let lastTrackedSearch: string | null = null
 
 async function getSupabaseClient() {
   const { supabase } = await import('@/lib/supabase')
@@ -165,7 +173,7 @@ async function loadAnalyticsSettings(): Promise<AnalyticsSettings> {
   try {
     const { data, error } = await supabase
       .from('analytics_settings')
-      .select('tracking_enabled,track_authenticated_users,track_search_terms,track_outbound_clicks')
+      .select(ANALYTICS_TOGGLE_COLUMNS)
       .eq('id', 'global')
       .maybeSingle()
 
@@ -249,19 +257,17 @@ export function trackSearchQuery(query: string, source: string) {
   if (typeof window === 'undefined') return
 
   const normalizedQuery = normalizeSearchQuery(query)
-  const timerKey = source
-  const existingTimer = searchTimers.get(timerKey)
 
-  if (existingTimer) {
-    window.clearTimeout(existingTimer)
+  if (searchTimer !== null) {
+    window.clearTimeout(searchTimer)
   }
 
   if (normalizedQuery.length < 2) return
 
-  const timer = window.setTimeout(() => {
-    if (lastTrackedSearch.get(timerKey) === normalizedQuery) return
+  searchTimer = window.setTimeout(() => {
+    if (lastTrackedSearch === normalizedQuery) return
 
-    lastTrackedSearch.set(timerKey, normalizedQuery)
+    lastTrackedSearch = normalizedQuery
     void insertAnalyticsEvent({
       event_type: 'search',
       route_path: window.location.pathname,
@@ -269,8 +275,6 @@ export function trackSearchQuery(query: string, source: string) {
       search_query: normalizedQuery,
     })
   }, SEARCH_DEBOUNCE_MS)
-
-  searchTimers.set(timerKey, timer)
 }
 
 export function trackSignup() {

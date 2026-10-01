@@ -4,15 +4,11 @@ import type { useAuthStore } from '@/stores/auth'
 
 type AuthStore = ReturnType<typeof useAuthStore>
 
-interface DeferredAuthStatusOptions {
-  delay?: number
-  immediate?: boolean
-  timeout?: number
-}
+const LOAD_DELAY_MS = 3500
+const LOAD_TIMEOUT_MS = 7000
 
-export function useDeferredAuthStatus(options: DeferredAuthStatusOptions = {}) {
+export function useDeferredAuthStatus() {
   const auth = shallowRef<AuthStore | null>(null)
-  const isLoading = shallowRef(false)
   let cancelScheduledLoad: (() => void) | undefined
   let disposed = false
   let loadPromise: Promise<AuthStore | null> | null = null
@@ -20,8 +16,6 @@ export function useDeferredAuthStatus(options: DeferredAuthStatusOptions = {}) {
   async function loadAuth() {
     if (auth.value) return auth.value
     if (loadPromise) return loadPromise
-
-    isLoading.value = true
 
     loadPromise = (async () => {
       const { useAuthStore } = await import('@/stores/auth')
@@ -36,7 +30,6 @@ export function useDeferredAuthStatus(options: DeferredAuthStatusOptions = {}) {
 
       return store
     })().finally(() => {
-      isLoading.value = false
       loadPromise = null
     })
 
@@ -44,18 +37,13 @@ export function useDeferredAuthStatus(options: DeferredAuthStatusOptions = {}) {
   }
 
   onMounted(() => {
-    if (options.immediate) {
-      void loadAuth()
-      return
-    }
-
     cancelScheduledLoad = scheduleIdleTask(
       () => {
         void loadAuth()
       },
       {
-        delay: options.delay ?? 3500,
-        timeout: options.timeout ?? 7000,
+        delay: LOAD_DELAY_MS,
+        timeout: LOAD_TIMEOUT_MS,
       },
     )
   })
@@ -68,7 +56,5 @@ export function useDeferredAuthStatus(options: DeferredAuthStatusOptions = {}) {
   return {
     auth,
     isAuthenticated: computed(() => auth.value?.isAuthenticated ?? false),
-    isLoading,
-    loadAuth,
   }
 }

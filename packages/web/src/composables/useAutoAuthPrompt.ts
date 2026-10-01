@@ -5,10 +5,10 @@ import { useAuthDialog } from '@/composables/useAuthDialog'
 import type { Ref } from 'vue'
 
 export interface AutoAuthPromptOptions {
-  pageCountThreshold?: number
-  delayMs?: number
   isAuthenticated?: Ref<boolean>
 }
+
+const PROMPT_DELAY_MS = 2000
 
 const AUTH_ROUTE_NAMES = new Set(['login', 'signup', 'auth-callback'])
 
@@ -30,7 +30,6 @@ function isAuthPath(path: string): boolean {
   )
 }
 
-const pageVisitedCount = shallowRef(0)
 const isDismissed = shallowRef(false)
 const isShowing = shallowRef(false)
 
@@ -67,20 +66,9 @@ function whenPageLoaded(run: () => void) {
   window.addEventListener('load', onWindowLoad, { once: true })
 }
 
-export function resetAutoAuthPromptForTest() {
-  pageVisitedCount.value = 0
-  isDismissed.value = false
-  isShowing.value = false
-  autoTriggered = false
-  clearTimer()
-  isWatching = false
-}
-
 export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
   const route = useRoute()
   const { authDialogState, openAuthDialog } = useAuthDialog()
-  const threshold = options.pageCountThreshold ?? 1
-  const delayMs = options.delayMs ?? 2000
   const isAuthenticated = options.isAuthenticated
 
   function isCurrentAuthRoute(): boolean {
@@ -101,7 +89,6 @@ export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
     autoTriggered = true
     isShowing.value = true
     posthog.capture('auto_auth_modal_shown', {
-      page_visited_count: pageVisitedCount.value,
       current_route: route.fullPath,
     })
     openAuthDialog('signup')
@@ -114,7 +101,7 @@ export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
     if (autoTriggered) return
     whenPageLoaded(() => {
       if (isDismissed.value || autoTriggered) return
-      timer = setTimeout(handleTrigger, delayMs)
+      timer = setTimeout(handleTrigger, PROMPT_DELAY_MS)
     })
   }
 
@@ -143,13 +130,8 @@ export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
           clearTimer()
           return
         }
-        if (pageVisitedCount.value >= threshold) return
 
-        pageVisitedCount.value += 1
-
-        if (pageVisitedCount.value >= threshold) {
-          scheduleTrigger()
-        }
+        scheduleTrigger()
       },
       { immediate: true },
     )
@@ -187,7 +169,6 @@ export function useAutoAuthPrompt(options: AutoAuthPromptOptions = {}) {
   })
 
   return {
-    pageVisitedCount,
     isDismissed,
     isShowing,
     dismiss,

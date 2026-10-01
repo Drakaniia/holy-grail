@@ -1,7 +1,7 @@
 // src/services/grailInstaller.ts
 // CLI wrapper service for the grail skill installer.
 
-export type InstallStatus = 'idle' | 'copying' | 'copied' | 'installing' | 'installed' | 'error'
+export type InstallStatus = 'idle' | 'copying' | 'copied' | 'error'
 
 export async function copyInstallCommand(command: string): Promise<boolean> {
   try {

@@ -3,12 +3,7 @@ import { computed, onMounted, onUnmounted, shallowRef, watch, type Ref } from 'v
 const SLIDE_DURATION_MS = 6000
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
 
-export function useCarouselProgress(options: {
-  slideCount: Ref<number>
-  durationMs?: number
-  autoplay?: Ref<boolean> | boolean
-}) {
-  const durationMs = options.durationMs ?? SLIDE_DURATION_MS
+export function useCarouselProgress(options: { slideCount: Ref<number> }) {
   const activeIndex = shallowRef(0)
   const progress = shallowRef(0)
   const isPaused = shallowRef(false)
@@ -18,12 +13,6 @@ export function useCarouselProgress(options: {
   let lastTimestamp = 0
   let elapsedMs = 0
   let prefersReducedMotion = false
-
-  const autoplayEnabled = computed(() => {
-    if (typeof options.autoplay === 'boolean') return options.autoplay
-    if (options.autoplay) return options.autoplay.value
-    return true
-  })
 
   const canNavigate = computed(() => options.slideCount.value > 1)
 
@@ -66,12 +55,7 @@ export function useCarouselProgress(options: {
   function tick(timestamp: number) {
     frameId = window.requestAnimationFrame(tick)
 
-    if (
-      !autoplayEnabled.value ||
-      isPaused.value ||
-      prefersReducedMotion ||
-      options.slideCount.value <= 1
-    ) {
+    if (isPaused.value || prefersReducedMotion || options.slideCount.value <= 1) {
       lastTimestamp = 0
       return
     }
@@ -83,9 +67,9 @@ export function useCarouselProgress(options: {
 
     elapsedMs += timestamp - lastTimestamp
     lastTimestamp = timestamp
-    progress.value = Math.min(1, elapsedMs / durationMs)
+    progress.value = Math.min(1, elapsedMs / SLIDE_DURATION_MS)
 
-    if (elapsedMs >= durationMs) {
+    if (elapsedMs >= SLIDE_DURATION_MS) {
       next()
     }
   }
