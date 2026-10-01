@@ -62,4 +62,3 @@ extensionSpecific:
     - contextMenus
     - storage
   manifestVersion: 3
-  installButtonBehavior: redirect-to-chrome-web-store

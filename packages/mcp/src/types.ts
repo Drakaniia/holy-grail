@@ -79,7 +79,6 @@ export interface Extension {
   userCount?: number
   permissions?: string[]
   manifestVersion?: string
-  installButtonBehavior?: string
 }
 
 interface McpTool {

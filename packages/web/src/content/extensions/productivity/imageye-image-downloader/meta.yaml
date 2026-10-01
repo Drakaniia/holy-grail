@@ -58,4 +58,3 @@ extensionSpecific:
     - scripting
     - download
   manifestVersion: 3
-  installButtonBehavior: redirect-to-chrome-web-store
