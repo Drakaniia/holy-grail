@@ -153,25 +153,11 @@ fn cmd_index(home: &PathBuf) {
         skills.len()
     );
 
-    // Option B: Also write to the Holy Grail project's public/content/ when detected.
-    // Only write if there are actual skills — never overwrite the committed
-    // fallback index with an empty one (the project may rely on the committed
-    // fallback when the global CLI index is empty).
+    // Also write to the Holy Grail project's public/skills-index.json — that is
+    // the only one the SPA fetches (at /skills-index.json). Only write if there
+    // are actual skills, so a committed index is never clobbered with an empty one.
     if !skills.is_empty() {
         if let Some(project_root) = find_holy_grail_project() {
-            let project_index = project_root.join("public").join("content").join("skills-index.json");
-            fs_err::create_dir_all(project_index.parent().unwrap()).ok();
-            if let Err(e) = fs_err::write(&project_index, &json) {
-                eprintln!("Warning: Could not write project index: {}", e);
-            } else {
-                println!(
-                    "  → Also written to {} ({} skills)",
-                    project_index.display(),
-                    skills.len()
-                );
-            }
-
-            // Also write to public/skills-index.json for browser fetch at /skills-index.json
             let root_index = project_root.join("public").join("skills-index.json");
             if let Err(e) = fs_err::write(&root_index, &json) {
                 eprintln!("Warning: Could not write root index: {}", e);
@@ -193,14 +179,14 @@ fn read_skill_metadata(path: &std::path::Path, slug: &str) -> serde_json::Value 
     if let Some(yaml_str) = frontmatter {
         if let Ok(yaml_val) = serde_yaml::from_str::<serde_json::Value>(&yaml_str) {
             let obj = yaml_val.as_object().cloned().unwrap_or_default();
-            return fill_skill_json(&obj, slug, &content);
+            return fill_skill_json(&obj, slug);
         }
     }
 
     fallback_skill_json(slug, &content)
 }
 
-fn fill_skill_json(obj: &serde_json::Map<String, serde_json::Value>, slug: &str, _content: &str) -> serde_json::Value {
+fn fill_skill_json(obj: &serde_json::Map<String, serde_json::Value>, slug: &str) -> serde_json::Value {
     let date_added = obj
         .get("dateAdded")
         .and_then(|v| v.as_str())
@@ -250,20 +236,17 @@ fn fallback_skill_json(slug: &str, content: &str) -> serde_json::Value {
     })
 }
 
+/// Slice the `---`-fenced YAML header out of a SKILL.md body.
+/// The slice is load-bearing, not redundant: `serde_yaml` 0.9 rejects the whole
+/// file with "more than one document is not supported" (the closing `---` opens
+/// a second document). The same fence-slice is implemented in JS under
+/// packages/web/scripts — keep all three in sync.
 fn extract_yaml_frontmatter(content: &str) -> Option<String> {
-    let content = content.trim();
-    if content.starts_with("---") {
-        if let Some(end) = content[3..].find("---") {
-            return Some(content[3..3 + end].to_string());
-        }
-    }
-    None
+    let trimmed = content.trim();
+    let body = trimmed.strip_prefix("---")?;
+    let end = body.find("---")?;
+    Some(body[..end].to_string())
 }
-
-/// Skills are now in the community registry (skills-registry.json) that ships with
-/// the Holy Grail app at public/content/skills-registry.json. The CLI `find` command
-/// reads from that file instead of a hardcoded list. Users add repos to the registry
-/// via PRs, not CLI changes.
 
 fn github_api_base() -> String {
     std::env::var("GRAIL_GITHUB_API")
@@ -493,21 +476,15 @@ fn fetch_github_repo(owner: &str, repo: &str) -> PathBuf {
 }
 
 /// Create a temporary directory for downloaded GitHub content.
+/// pid + nanosecond timestamp: unique per process without a uuid dependency.
 fn create_temp_skill_dir() -> PathBuf {
-    let base = std::env::temp_dir().join(format!("grail-{}", std::process::id()));
-    let dir = base.join(uuid_v4_simple());
-    std::fs::create_dir_all(&dir).expect("Failed to create temp directory");
-    dir
-}
-
-/// Generate a simple unique ID (no external dependency needed).
-fn uuid_v4_simple() -> String {
-    use std::time::{SystemTime, UNIX_EPOCH};
-    let nanos = SystemTime::now()
-        .duration_since(UNIX_EPOCH)
+    let nanos = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
         .unwrap_or_default()
         .as_nanos();
-    format!("{:x}", nanos)
+    let dir = std::env::temp_dir().join(format!("grail-{}-{:x}", std::process::id(), nanos));
+    std::fs::create_dir_all(&dir).expect("Failed to create temp directory");
+    dir
 }
 
 /// Find skill directories in a source path (directories that contain SKILL.md).
@@ -536,8 +513,6 @@ fn find_skills_in_source(source: &Path) -> Vec<(String, PathBuf)> {
                     let slug = entry.file_name().to_string_lossy().to_string();
                     skills.push((slug, path));
                 }
-            } else if path.is_file() {
-                // Check if the file itself is SKILL.md at root level (already handled above)
             }
         }
     }

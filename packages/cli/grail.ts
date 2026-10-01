@@ -22,26 +22,20 @@ const scriptPath = fileURLToPath(import.meta.url);
 const scriptDir = dirname(scriptPath);
 /** The cli/ package directory (one level up from dist/). */
 const cliDir = scriptDir.endsWith("dist") ? dirname(scriptDir) : scriptDir;
-/** Project root (parent of cli/). */
-const rootDir = dirname(cliDir);
 
 /**
  * Find the grail binary. Search paths in priority order:
  * 1. Development: `cli/target/debug/grail` or `cli/target/release/grail`
- * 2. Legacy: `<project>/target/debug/grail` or `<project>/target/release/grail`
- * 3. Production: `cli/bin/grail-{platform}`
- * 4. Same dir as cli/ (standalone binary)
+ * 2. Production: `cli/bin/grail-{platform}`
+ * 3. Same dir as cli/ (standalone binary)
  */
 function findBinary(): string | null {
   const binaryName = process.platform === "win32" ? "grail.exe" : "grail";
 
-  // Check for development build — first relative to cli/ (most common)
+  // Check for development build
   const devPaths = [
     resolve(cliDir, "target", "debug", binaryName),
     resolve(cliDir, "target", "release", binaryName),
-    // Legacy: also check project-root target/
-    resolve(rootDir, "target", "debug", binaryName),
-    resolve(rootDir, "target", "release", binaryName),
   ];
 
   for (const p of devPaths) {
