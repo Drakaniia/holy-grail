@@ -8,16 +8,13 @@ import { useSkillsStore } from '@/stores/skills'
 import { useExtensionsStore } from '@/stores/extensions'
 import { useMcpStore } from '@/stores/mcp'
 import type { useAdminStore } from '@/stores/admin'
-import {
-  SidebarHeader,
-  SidebarMenuPanel,
-  SidebarSectionPanel,
-  SidebarSearchPanel,
-  SidebarFooter,
-  useSidebarSearch,
-  sidebarSections,
-  type SidebarSectionKey,
-} from '@/components/sidebar'
+import SidebarHeader from './sidebar/SidebarHeader.vue'
+import SidebarMenuPanel from './sidebar/SidebarMenuPanel.vue'
+import SidebarSectionPanel from './sidebar/SidebarSectionPanel.vue'
+import SidebarSearchPanel from './sidebar/SidebarSearchPanel.vue'
+import SidebarFooter from './sidebar/SidebarFooter.vue'
+import { useSidebarSearch } from './sidebar/useSidebarSearch'
+import { sidebarSections, type SidebarSectionKey } from './sidebar/sidebarNav'
 
 type AdminStore = ReturnType<typeof useAdminStore>
 

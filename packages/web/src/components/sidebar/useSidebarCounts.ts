@@ -7,7 +7,6 @@ import {
   extensionCategories,
   mcpCategories,
   siteSubcategoryGroups,
-  skillsNav,
   type SiteGroup,
 } from './sidebarNav'
 
@@ -75,14 +74,6 @@ export function useSidebarCounts() {
     ...mcpRouteCounts.value,
   }))
 
-  const totalSites = computed(() =>
-    Object.values(siteGroupCounts.value).reduce((total, count) => total + count, 0),
-  )
-
-  const totalSkills = computed(() =>
-    skillsNav.reduce((total, item) => total + (skillRouteCounts.value[item.route] ?? 0), 0),
-  )
-
   function getRouteCount(route: string) {
     return routeCounts.value[route] ?? 0
   }
@@ -92,14 +83,6 @@ export function useSidebarCounts() {
   }
 
   return {
-    siteRouteCounts,
-    skillRouteCounts,
-    extensionRouteCounts,
-    mcpRouteCounts,
-    siteGroupCounts,
-    routeCounts,
-    totalSites,
-    totalSkills,
     getRouteCount,
     getSiteGroupCount,
   }

@@ -7,6 +7,7 @@ import PaginationControls from '@/components/PaginationControls.vue'
 import SiteCard from '@/components/sites/SiteCard.vue'
 import SiteCardSkeleton from '@/components/sites/SiteCardSkeleton.vue'
 import { trackSearchQuery } from '@/lib/analytics'
+import { labelFor } from '@/components/sidebar/sidebarNav'
 
 type SiteTimeRange = 'all' | 'trending' | 'week' | 'month' | 'year'
 
@@ -36,54 +37,7 @@ const timeRangeMenu = useTemplateRef<HTMLDivElement>('timeRangeMenu')
 const category = computed(() => route.params.category as string)
 const subcategory = computed(() => route.params.subcategory as string | undefined)
 
-const routeLabels: Record<string, string> = {
-  'cli-tools': 'CLI Tools',
-  'ui-libraries': 'UI Libraries',
-  ai: 'AI',
-  design: 'Design',
-  development: 'Development',
-  watch: 'Watch',
-  downloads: 'Downloads',
-  image: 'Image',
-  api: 'API',
-  detector: 'Detector',
-  automation: 'Automation',
-  'agent-skills': 'Agent Skills',
-  video: 'Video',
-  ml: 'Machine Learning',
-  chat: 'CHAT',
-  wb: 'Website Development',
-  research: 'Research',
-  ppt: 'PPT',
-  others: 'Others',
-  inspiration: 'Inspiration',
-  fonts: 'Fonts',
-  '3d': '3D',
-  prompts: 'Prompts',
-  'icons-svg': 'ICONS/SVG',
-  md: 'MD',
-  'design-tools': 'Design Tools',
-  learning: 'Learning',
-  'cloud-hosting': 'Cloud & Hosting',
-  references: 'References',
-  tooling: 'Tooling',
-  repositories: 'Repositories',
-  mcp: 'MCP',
-  monitoring: 'Monitoring',
-  anime: 'Anime',
-  'game-download': 'Game Download',
-  'vfx-download': 'VFX Download',
-  'software-download': 'Software Download',
-  torrents: 'Torrents',
-  movies: 'Movies',
-}
-
-const pageTitle = computed(() => {
-  if (subcategory.value) {
-    return routeLabels[subcategory.value] || subcategory.value
-  }
-  return routeLabels[category.value] || category.value
-})
+const pageTitle = computed(() => labelFor(subcategory.value ?? category.value))
 
 const pageDescription = computed(() => {
   const descriptions: Record<string, string> = {

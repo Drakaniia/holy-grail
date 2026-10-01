@@ -1,6 +1,6 @@
 import { computed, ref } from 'vue'
 import type { Component } from 'vue'
-import { Layers, LayoutGrid, Plug, Puzzle, Sparkles } from 'lucide-vue-next'
+import { LayoutGrid } from 'lucide-vue-next'
 import {
   sidebarSections,
   sidebarSearchEntries,
@@ -45,14 +45,7 @@ export const sidebarScopeOptions: SidebarScopeOption[] = [
   ...sidebarSections.map((section) => ({
     key: section.key as SidebarScope,
     name: section.name,
-    icon:
-      section.key === 'sites'
-        ? Layers
-        : section.key === 'extensions'
-          ? Puzzle
-          : section.key === 'mcp'
-            ? Plug
-            : Sparkles,
+    icon: section.icon,
   })),
 ]
 

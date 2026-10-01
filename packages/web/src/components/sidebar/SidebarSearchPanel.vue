@@ -2,7 +2,7 @@
 import { computed, shallowRef, useTemplateRef } from 'vue'
 import { useRoute } from 'vue-router'
 import { ChevronDown } from 'lucide-vue-next'
-import type { SidebarScope } from './sidebarNav'
+import { isActive, type SidebarScope } from './sidebarNav'
 import SidebarDisclosure from './SidebarDisclosure.vue'
 import SidebarNavRow from './SidebarNavRow.vue'
 import SidebarScrollFades from './SidebarScrollFades.vue'
@@ -37,8 +37,8 @@ const activeSortName = computed(
   () => props.sortOptions.find((option) => option.key === props.sort)?.name ?? 'Best match',
 )
 
-function isActive(path: string) {
-  return route.path === path
+function isActiveResult(path: string) {
+  return isActive(path, route.path)
 }
 </script>
 
@@ -167,7 +167,7 @@ function isActive(path: string) {
                 :label="result.name"
                 :to="result.route"
                 :count="result.count"
-                :active="isActive(result.route)"
+                :active="isActiveResult(result.route)"
               />
             </li>
           </ul>
