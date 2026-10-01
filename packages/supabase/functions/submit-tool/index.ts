@@ -1,5 +1,14 @@
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
 import { createClient, type SupabaseClient, type User } from 'jsr:@supabase/supabase-js@2'
+import {
+  DEFAULT_PUBLIC_SITE_URL,
+  getCorsHeaders,
+  getUserFromRequest,
+  jsonResponse,
+  readServiceRoleKey,
+} from '../_shared/http.ts'
+import { checkRateLimit } from '../_shared/rate-limit.ts'
+import { normalizeUrl, readString } from '../_shared/validate.ts'
 
 interface SubmissionPayload {
   name?: unknown
@@ -20,18 +29,7 @@ interface NormalizedSubmission {
   status: 'pending'
 }
 
-interface RateLimitResult {
-  allowed: boolean
-  remaining: number
-  retry_after_seconds: number
-}
-
-const DEFAULT_PUBLIC_SITE_URL = 'https://holy-grail-eta.vercel.app'
 const MAX_BODY_BYTES = 12_000
-const DEFAULT_RATE_LIMIT = 5
-const DEFAULT_RATE_LIMIT_WINDOW_SECONDS = 60 * 60
-const CORS_ALLOWED_HEADERS = 'authorization, x-client-info, apikey, content-type'
-const CORS_ALLOWED_METHODS = 'POST, OPTIONS'
 
 const CATEGORIES = new Set([
   'Platforms',
@@ -67,123 +65,6 @@ const CATEGORIES = new Set([
   'Skills - Other',
   'Other',
 ])
-
-function readPositiveInteger(name: string, fallback: number) {
-  const value = Number(Deno.env.get(name))
-  return Number.isInteger(value) && value > 0 ? value : fallback
-}
-
-function readServiceRoleKey() {
-  const legacyKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')?.trim()
-  if (legacyKey) {
-    return legacyKey
-  }
-
-  const secretKeys = Deno.env.get('SUPABASE_SECRET_KEYS')?.trim()
-  if (!secretKeys) {
-    return ''
-  }
-
-  try {
-    const parsed = JSON.parse(secretKeys)
-    if (typeof parsed === 'string') {
-      return parsed
-    }
-
-    if (parsed && typeof parsed === 'object') {
-      const values = Object.values(parsed as Record<string, unknown>)
-      const secretKey = values.find(
-        (value): value is string => typeof value === 'string' && value.trim().length > 0,
-      )
-
-      return secretKey?.trim() ?? ''
-    }
-  } catch {
-    return secretKeys
-  }
-
-  return ''
-}
-
-function normalizeOrigin(value: string) {
-  try {
-    return new URL(value).origin
-  } catch {
-    return value.trim().replace(/\/+$/, '')
-  }
-}
-
-function getAllowedOrigins() {
-  const configuredOrigins = Deno.env.get('SUBMISSION_ALLOWED_ORIGINS')?.trim()
-  const fallbackOrigin = Deno.env.get('PUBLIC_SITE_URL')?.trim() || DEFAULT_PUBLIC_SITE_URL
-  const origins = configuredOrigins ? configuredOrigins.split(',') : [fallbackOrigin]
-
-  return new Set(
-    origins
-      .map((origin) => origin.trim())
-      .filter(Boolean)
-      .map(normalizeOrigin),
-  )
-}
-
-function getCorsHeaders(origin: string | null) {
-  const allowedOrigins = getAllowedOrigins()
-  const normalizedOrigin = origin ? normalizeOrigin(origin) : null
-  const allowed = Boolean(normalizedOrigin && allowedOrigins.has(normalizedOrigin))
-
-  return {
-    allowed,
-    headers: {
-      ...(allowed && normalizedOrigin ? { 'Access-Control-Allow-Origin': normalizedOrigin } : {}),
-      'Access-Control-Allow-Headers': CORS_ALLOWED_HEADERS,
-      'Access-Control-Allow-Methods': CORS_ALLOWED_METHODS,
-      'Access-Control-Max-Age': '86400',
-      Vary: 'Origin',
-    },
-  }
-}
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status: number,
-  corsHeaders: Record<string, string>,
-  extraHeaders: Record<string, string> = {},
-) {
-  return new Response(JSON.stringify(body), {
-    headers: {
-      ...corsHeaders,
-      ...extraHeaders,
-      'Content-Type': 'application/json',
-      'Cache-Control': 'no-store',
-    },
-    status,
-  })
-}
-
-function readString(value: unknown, maxLength: number) {
-  if (typeof value !== 'string') {
-    return ''
-  }
-
-  return value.trim().slice(0, maxLength)
-}
-
-function normalizeUrl(value: string) {
-  try {
-    const parsed = new URL(value)
-    if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
-      return null
-    }
-
-    if (!parsed.hostname || parsed.username || parsed.password) {
-      return null
-    }
-
-    return parsed.toString()
-  } catch {
-    return null
-  }
-}
 
 function normalizeSubmission(rawSubmission: SubmissionPayload | null, user: User | null) {
   const name = readString(rawSubmission?.name, 120)
@@ -221,11 +102,6 @@ function escapeHtml(value: string) {
 }
 
 function getAdminUrl() {
-  const explicitReviewUrl = Deno.env.get('ADMIN_REVIEW_URL')?.trim()
-  if (explicitReviewUrl) {
-    return explicitReviewUrl
-  }
-
   const siteUrl = Deno.env.get('PUBLIC_SITE_URL')?.trim()
   if (
     siteUrl &&
@@ -309,76 +185,11 @@ async function notifyAdmin(submission: NormalizedSubmission) {
   return response.ok
 }
 
-function getClientIp(req: Request) {
-  const forwardedFor = req.headers
-    .get('x-forwarded-for')
-    ?.split(',')
-    .map((value) => value.trim())
-    .filter(Boolean)
-
-  return (
-    req.headers.get('cf-connecting-ip') ||
-    req.headers.get('x-real-ip') ||
-    (forwardedFor?.length ? forwardedFor[forwardedFor.length - 1] : null) ||
-    'unknown'
-  )
-}
-
-async function sha256Hex(value: string) {
-  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value))
-  return Array.from(new Uint8Array(digest))
-    .map((byte) => byte.toString(16).padStart(2, '0'))
-    .join('')
-}
-
-async function getUserFromRequest(adminClient: SupabaseClient, req: Request) {
-  const authHeader = req.headers.get('authorization') ?? ''
-  const token = authHeader.replace(/^Bearer\s+/i, '').trim()
-  const anonKey = Deno.env.get('SUPABASE_ANON_KEY')?.trim()
-
-  if (!token || token === anonKey) {
-    return null
-  }
-
-  const { data, error } = await adminClient.auth.getUser(token)
-  if (error) {
-    return null
-  }
-
-  return data.user ?? null
-}
-
-async function checkRateLimit(adminClient: SupabaseClient, req: Request) {
-  const serviceRoleKey = readServiceRoleKey()
-  const salt = Deno.env.get('SUBMISSION_RATE_LIMIT_SALT')?.trim() || serviceRoleKey
-  const key = await sha256Hex(`${salt}:${getClientIp(req)}`)
-  const pLimit = readPositiveInteger('SUBMISSION_RATE_LIMIT_MAX', DEFAULT_RATE_LIMIT)
-  const pWindowSeconds = readPositiveInteger(
-    'SUBMISSION_RATE_LIMIT_WINDOW_SECONDS',
-    DEFAULT_RATE_LIMIT_WINDOW_SECONDS,
-  )
-
-  const { data, error } = await adminClient
-    .rpc('check_submission_rate_limit', {
-      p_key: key,
-      p_limit: pLimit,
-      p_window_seconds: pWindowSeconds,
-    })
-    .single()
-
-  if (error || !data) {
-    return {
-      allowed: false,
-      remaining: 0,
-      retry_after_seconds: 60,
-    } satisfies RateLimitResult
-  }
-
-  return data as RateLimitResult
-}
-
 Deno.serve(async (req) => {
-  const { allowed, headers: corsHeaders } = getCorsHeaders(req.headers.get('origin'))
+  const { allowed, headers: corsHeaders } = getCorsHeaders(
+    req.headers.get('origin'),
+    'SUBMISSION_ALLOWED_ORIGINS',
+  )
 
   if (req.method === 'OPTIONS') {
     return new Response(null, {
