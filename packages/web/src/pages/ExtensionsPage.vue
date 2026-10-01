@@ -3,6 +3,8 @@ import { computed, onMounted, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useExtensionsStore } from '@/stores/extensions'
 import { Star, Users, Sparkles } from 'lucide-vue-next'
+import { labelFor } from '@/components/sidebar/sidebarNav'
+import { formatNumber } from '@/lib/format'
 
 const route = useRoute()
 const store = useExtensionsStore()
@@ -16,16 +18,7 @@ onMounted(() => {
   void store.loadExtensions()
 })
 
-const pageTitle = computed(() => {
-  const labels: Record<string, string> = {
-    writing: 'Writing',
-    productivity: 'Productivity',
-    'developer-tools': 'Developer Tools',
-    privacy: 'Privacy',
-    design: 'Design',
-  }
-  return labels[parentCategory.value] || parentCategory.value
-})
+const pageTitle = computed(() => labelFor(parentCategory.value))
 
 const pageDescription = computed(() => {
   const descriptions: Record<string, string> = {
@@ -57,12 +50,6 @@ function clearFilters() {
 watch(parentCategory, () => {
   showNewlyAdded.value = false
 })
-
-function formatNumber(num: number): string {
-  if (num >= 1000000) return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M'
-  if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  return num.toString()
-}
 </script>
 
 <template>

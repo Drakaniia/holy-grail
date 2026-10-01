@@ -2,6 +2,8 @@
 import { computed, reactive, useTemplateRef } from 'vue'
 import { useRoute } from 'vue-router'
 import {
+  isActive,
+  siteGroupNav,
   sidebarSections,
   type SidebarSection,
   type SidebarSectionKey,
@@ -30,13 +32,12 @@ const scroller = useTemplateRef<HTMLElement>('scroller')
  * expand. The group row still highlights when it holds the current route, so a deep link is never
  * invisible — just collapsed.
  */
-const expandedGroups = reactive<Record<SiteGroup, boolean>>({
-  ai: false,
-  design: false,
-  development: false,
-  watch: false,
-  downloads: false,
-})
+const expandedGroups = reactive<Record<SiteGroup, boolean>>(
+  Object.fromEntries(siteGroupNav.map((group) => [group.group, false])) as Record<
+    SiteGroup,
+    boolean
+  >,
+)
 
 const section = computed<SidebarSection | undefined>(() =>
   sidebarSections.find((entry) => entry.key === props.sectionKey),
@@ -50,14 +51,14 @@ const groups = computed(() =>
     name: group.name,
     route: group.route,
     count: counts.getSiteGroupCount(group.group),
-    active: isActive(group.route, false),
+    active: isActive(group.route, route.path, false),
     expanded: expandedGroups[group.group],
     items: group.items.map((item) => ({
       name: item.name,
       icon: item.icon,
       route: item.route,
       count: counts.getRouteCount(item.route),
-      active: isActive(item.route),
+      active: isActive(item.route, route.path),
     })),
   })),
 )
@@ -68,13 +69,9 @@ const items = computed(() =>
     icon: item.icon,
     route: item.route,
     count: counts.getRouteCount(item.route),
-    active: isActive(item.route),
+    active: isActive(item.route, route.path),
   })),
 )
-
-function isActive(path: string, exact = true) {
-  return exact ? route.path === path : route.path === path || route.path.startsWith(`${path}/`)
-}
 
 function toggleGroup(group: SiteGroup) {
   expandedGroups[group] = !expandedGroups[group]

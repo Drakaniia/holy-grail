@@ -4,6 +4,7 @@ import { RouterLink, useRoute } from 'vue-router'
 import {
   getSectionChips,
   getSidebarSectionForPath,
+  isActive,
   sidebarSections,
 } from '@/components/sidebar/sidebarNav'
 
@@ -20,8 +21,8 @@ const section = computed(() => {
 
 const chips = computed(() => (section.value ? getSectionChips(section.value.key) : []))
 
-function isActive(path: string) {
-  return route.path === path || route.path.startsWith(`${path}/`)
+function isActiveChip(path: string) {
+  return isActive(path, route.path, false)
 }
 </script>
 
@@ -40,11 +41,11 @@ function isActive(path: string) {
         :to="chip.route"
         class="inline-flex h-7 shrink-0 items-center gap-1.5 rounded-full border px-2.5 text-xs font-medium transition-colors"
         :class="
-          isActive(chip.route)
+          isActiveChip(chip.route)
             ? 'border-transparent bg-[#1f1f1f] text-white'
             : 'border-gray-800 text-gray-400 hover:text-white'
         "
-        :aria-current="isActive(chip.route) ? 'page' : undefined"
+        :aria-current="isActiveChip(chip.route) ? 'page' : undefined"
       >
         <component :is="chip.icon" class="h-3.5 w-3.5" />
         <span>{{ chip.name }}</span>

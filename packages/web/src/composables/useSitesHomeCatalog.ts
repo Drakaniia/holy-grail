@@ -1,5 +1,7 @@
 import { computed, type Ref } from 'vue'
 import { sortSitesForTab, type Site } from '@/stores/sites'
+import { SEGMENT_LABELS, titleCase } from '@/components/sidebar/sidebarNav'
+import { faviconUrl, formatNumber } from '@/lib/format'
 import type {
   SitesHomeCategoryItem,
   SitesHomeGroupKey,
@@ -51,48 +53,6 @@ export const SITE_GROUP_META: Record<
     icon: 'download',
     route: '/sites/downloads',
   },
-}
-
-const ROUTE_LABELS: Record<string, string> = {
-  ai: 'AI',
-  design: 'Design',
-  development: 'Development',
-  watch: 'Watch',
-  downloads: 'Downloads',
-  image: 'Image',
-  api: 'API',
-  detector: 'Detector',
-  automation: 'Automation',
-  'agent-skills': 'Agent Skills',
-  video: 'Video',
-  ml: 'Machine Learning',
-  chat: 'Chat',
-  wb: 'Website Development',
-  research: 'Research',
-  ppt: 'PPT',
-  others: 'Others',
-  inspiration: 'Inspiration',
-  fonts: 'Fonts',
-  '3d': '3D',
-  prompts: 'Prompts',
-  'icons-svg': 'Icons/SVG',
-  md: 'Markdown',
-  'design-tools': 'Design Tools',
-  learning: 'Learning',
-  'cloud-hosting': 'Cloud & Hosting',
-  references: 'References',
-  tooling: 'Tooling',
-  'cli-tools': 'CLI Tools',
-  'ui-libraries': 'UI Libraries',
-  repositories: 'Repositories',
-  mcp: 'MCP',
-  monitoring: 'Monitoring',
-  movies: 'Movies',
-  anime: 'Anime',
-  'game-download': 'Game Download',
-  'vfx-download': 'VFX Download',
-  'software-download': 'Software Download',
-  torrents: 'Torrents',
 }
 
 const LIBRARY_DEFINITIONS: {
@@ -162,16 +122,9 @@ const GENERIC_FEATURE_TAGS = new Set([
   'watch',
 ])
 
-function formatCount(value: number) {
-  return Intl.NumberFormat('en', {
-    notation: value >= 1000 ? 'compact' : 'standard',
-    maximumFractionDigits: 1,
-  }).format(value)
-}
-
 function formatCountLabel(value: number, noun: string) {
   const suffix = value === 1 ? noun : `${noun}s`
-  return `${formatCount(value)} ${suffix}`
+  return `${formatNumber(value)} ${suffix}`
 }
 
 function getPreviewName(site: Site) {
@@ -181,19 +134,7 @@ function getPreviewName(site: Site) {
 function getRouteLabel(slug: string | null) {
   if (!slug) return 'Sites'
 
-  const generatedLabel = slug
-    .split('-')
-    .filter(Boolean)
-    .map((part) => part[0]?.toUpperCase() + part.slice(1))
-    .join(' ')
-
-  return ROUTE_LABELS[slug] || generatedLabel
-}
-
-function getFaviconUrl(website: string) {
-  if (!website) return ''
-  const domain = website.replace(/^https?:\/\//, '').replace(/\/.*$/, '')
-  return `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
+  return SEGMENT_LABELS[slug] ?? titleCase(slug)
 }
 
 function getAccentColor(parentCategory: string) {
@@ -206,13 +147,7 @@ function buildFeatures(site: Site): string[] {
 
   const fromTags = (site.tags ?? [])
     .filter((tag) => !GENERIC_FEATURE_TAGS.has(tag.toLowerCase()))
-    .map((tag) =>
-      tag
-        .split(/[-_\s]+/)
-        .filter(Boolean)
-        .map((part) => part[0]?.toUpperCase() + part.slice(1))
-        .join(' '),
-    )
+    .map((tag) => titleCase(tag))
 
   if (fromTags.length > 0) return fromTags.slice(0, 4)
 
@@ -262,7 +197,7 @@ export function useSitesHomeCatalog(options: {
       id: site.slug,
       name: getPreviewName(site),
       slug: site.slug,
-      logo: getFaviconUrl(site.website),
+      logo: faviconUrl(site.website, 128),
       coverImage,
       coverImageSmall,
       description: site.description,
@@ -402,6 +337,5 @@ export function useSitesHomeCatalog(options: {
     trendingUiLibraries,
     categories,
     libraries,
-    formatCount,
   }
 }

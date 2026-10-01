@@ -165,8 +165,58 @@ export const siteGroupNav: SidebarNavGroup[] = [
   },
 ] as const
 
-export const isSiteGroupRoute = (path: string, group: SiteGroup): boolean => {
-  return path === `/sites/${group}` || path.startsWith(`/sites/${group}/`)
+/**
+ * Route-active predicate shared by every panel: `exact` only matches the row's own route, otherwise
+ * the row also owns everything drilled in beneath it.
+ */
+export function isActive(path: string, routePath: string, exact = true) {
+  return routePath === path || (!exact && routePath.startsWith(`${path}/`))
+}
+
+/** Top-level route segments that have no nav row of their own. */
+const TOP_LEVEL_LABELS: Record<string, string> = {
+  sites: 'Sites',
+  skills: 'Skills',
+  extensions: 'Extensions',
+  publish: 'Publish',
+  submit: 'Publish',
+  login: 'Sign In',
+  signup: 'Sign Up',
+  account: 'Account',
+  bookmarks: 'Bookmarks',
+  changelog: 'Changelog',
+  docs: 'Documentation',
+  admin: 'Admin',
+}
+
+/**
+ * The one slug → display-label table, derived from the browse tree so a new category is labelled the
+ * moment its row exists. Page titles, breadcrumb trails and home cards all read it.
+ */
+export const SEGMENT_LABELS: Record<string, string> = {
+  ...TOP_LEVEL_LABELS,
+  ...Object.fromEntries(
+    [
+      ...siteGroupNav.flatMap((group) => [group, ...group.items]),
+      ...skillsNav,
+      ...extensionCategories,
+      ...mcpCategories,
+    ].map((item) => [item.route.split('/').pop() as string, item.name]),
+  ),
+}
+
+/** `game-download` → `Game Download`, for slugs with no row and therefore no label. */
+export function titleCase(slug: string): string {
+  return slug
+    .split(/[-_\s]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+
+/** Display label for a url segment, falling back to the raw slug. */
+export function labelFor(segment: string): string {
+  return SEGMENT_LABELS[segment] ?? segment
 }
 
 export type SidebarSectionKey = 'sites' | 'extensions' | 'mcp' | 'skills'
@@ -310,22 +360,21 @@ export const sidebarMainMenuItems: SidebarMainMenuItem[] = [
     section: section.key,
     // The sites section's route is the app root, which belongs to Home alone — otherwise landing on
     // `/` lights up both rows.
-    isActive: (path: string) =>
-      path !== '/' && (path === section.route || path.startsWith(`${section.route}/`)),
+    isActive: (path: string) => path !== '/' && isActive(section.route, path, false),
   })),
   {
     name: 'Bookmarks',
     icon: Bookmark,
     route: '/bookmarks',
     group: 'build',
-    isActive: (path) => path === '/bookmarks' || path.startsWith('/bookmarks/'),
+    isActive: (path: string) => isActive('/bookmarks', path, false),
   },
   {
     name: 'Account',
     icon: UserRound,
     route: '/account',
     group: 'build',
-    isActive: (path) => path === '/account' || path.startsWith('/account/'),
+    isActive: (path: string) => isActive('/account', path, false),
   },
 ]
 

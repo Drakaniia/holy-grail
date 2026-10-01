@@ -8,6 +8,7 @@ import { useExtensionsStore } from '@/stores/extensions'
 import { useDeferredAuthStatus } from '@/composables/useDeferredAuthStatus'
 import { useAuthDialog } from '@/composables/useAuthDialog'
 import holyGrailLogo from '@/assets/holy-grail.png'
+import { SEGMENT_LABELS, titleCase } from '@/components/sidebar/sidebarNav'
 
 const props = withDefaults(
   defineProps<{
@@ -56,46 +57,6 @@ function resetTooltipWarm() {
   isTooltipWarm.value = false
 }
 
-const collectionLabels: Record<string, string> = {
-  '3d': '3D',
-  ai: 'AI',
-  anime: 'Anime',
-  api: 'API',
-  automation: 'Automation',
-  chat: 'Chat',
-  'cli-tools': 'CLI Tools',
-  'cloud-hosting': 'Cloud & Hosting',
-  design: 'Design',
-  'design-tools': 'Design Tools',
-  detector: 'Detector',
-  development: 'Development',
-  downloads: 'Downloads',
-  fonts: 'Fonts',
-  'game-download': 'Game Download',
-  icons: 'Icons',
-  'icons-svg': 'Icons/SVG',
-  image: 'Images',
-  inspiration: 'Inspiration',
-  learning: 'Learning',
-  mcp: 'MCP',
-  md: 'MD',
-  ml: 'Machine Learning',
-  monitoring: 'Monitoring',
-  movies: 'Movies',
-  others: 'Others',
-  ppt: 'PPT',
-  prompts: 'Prompts',
-  references: 'References',
-  repositories: 'Repositories',
-  'software-download': 'Software Download',
-  tooling: 'Tooling',
-  torrents: 'Torrents',
-  'ui-libraries': 'UI Libraries',
-  video: 'Videos',
-  'vfx-download': 'VFX Download',
-  watch: 'Watch',
-  wb: 'Website Development',
-}
 const currentSite = computed(() => {
   if (route.name !== 'site-detail' || typeof route.params.slug !== 'string') {
     return null
@@ -137,14 +98,7 @@ const currentSiteCollectionTrail = computed(() => {
 const isHomePage = computed(() => route.path === '/')
 
 function formatCollectionLabel(value: string): string {
-  return (
-    collectionLabels[value] ??
-    value
-      .split(/[-_]/)
-      .filter(Boolean)
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ')
-  )
+  return SEGMENT_LABELS[value] ?? titleCase(value)
 }
 </script>
 

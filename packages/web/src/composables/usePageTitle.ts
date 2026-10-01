@@ -18,86 +18,14 @@
  *   - /docs            → "Documentation | Holy Grail"
  */
 
+import { labelFor } from '@/components/sidebar/sidebarNav'
+
 const SITE_APP_NAME = 'Holy Grail'
-
-/** Human-readable labels for url path segments. */
-const SEGMENT_LABELS: Record<string, string> = {
-  // top-level
-  sites: 'Sites',
-  skills: 'Skills',
-  extensions: 'Extensions',
-  publish: 'Publish',
-  submit: 'Publish',
-  login: 'Sign In',
-  signup: 'Sign Up',
-  account: 'Account',
-  bookmarks: 'Bookmarks',
-  changelog: 'Changelog',
-  docs: 'Documentation',
-  admin: 'Admin',
-
-  // sites categories
-  ai: 'AI',
-  design: 'Design',
-  development: 'Development',
-  watch: 'Watch',
-  downloads: 'Downloads',
-
-  // sites subcategories
-  image: 'Image',
-  api: 'API',
-  detector: 'Detector',
-  automation: 'Automation',
-  'agent-skills': 'Agent Skills',
-  video: 'Video',
-  ml: 'Machine Learning',
-  chat: 'CHAT',
-  wb: 'Website Development',
-  research: 'Research',
-  ppt: 'PPT',
-  others: 'Others',
-  inspiration: 'Inspiration',
-  fonts: 'Fonts',
-  '3d': '3D',
-  prompts: 'Prompts',
-  'icons-svg': 'ICONS/SVG',
-  md: 'MD',
-  'design-tools': 'Design Tools',
-  'cloud-hosting': 'Cloud & Hosting',
-  learning: 'Learning',
-  references: 'References',
-  tooling: 'Tooling',
-  'cli-tools': 'CLI Tools',
-  'ui-libraries': 'UI Libraries',
-  repositories: 'Repositories',
-  mcp: 'MCP',
-  monitoring: 'Monitoring',
-  movies: 'Movies',
-  anime: 'Anime',
-  'game-download': 'Game Download',
-  'vfx-download': 'VFX Download',
-  'software-download': 'Software Download',
-  torrents: 'Torrents',
-
-  // skills subcategories
-  // "skills" is the parent category AND the path segment for the skills list
-  // We handle this in the title builder below.
-
-  // extensions categories
-  writing: 'Writing',
-  productivity: 'Productivity',
-  'developer-tools': 'Developer Tools',
-  privacy: 'Privacy',
-}
-
-function labelFor(segment: string): string {
-  return SEGMENT_LABELS[segment] ?? segment
-}
 
 /**
  * Given a route path, returns the full document title string.
  */
-export function titleFromPath(path: string): string {
+function titleFromPath(path: string): string {
   const clean = path.replace(/\/$/, '') || '/'
 
   if (clean === '/' || clean === '') {
