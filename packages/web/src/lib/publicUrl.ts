@@ -29,7 +29,7 @@ export function isLocalOrigin(origin: string) {
   }
 }
 
-export function getCurrentOrigin() {
+function getCurrentOrigin() {
   return typeof window === 'undefined' ? '' : window.location.origin
 }
 

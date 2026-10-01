@@ -16,6 +16,7 @@ import {
   Puzzle,
 } from 'lucide-vue-next'
 import { useExtensionsStore } from '@/stores/extensions'
+import { formatNumber } from '@/lib/format'
 
 const route = useRoute()
 const router = useRouter()
@@ -55,16 +56,6 @@ const installUrl = computed(() => {
 const hasDistinctDocs = computed(() =>
   Boolean(extension.value?.docs && extension.value.docs !== extension.value.website),
 )
-
-function formatNumber(num: number): string {
-  if (num >= 1000000) {
-    return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M'
-  }
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  }
-  return num.toString()
-}
 
 function formatAddedMonths(months: number): string {
   return months === 0 ? 'Added recently' : `Added ${months}mo ago`

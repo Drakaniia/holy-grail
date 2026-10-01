@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Eye, Code2 } from 'lucide-vue-next'
 import { RouterLink } from 'vue-router'
+import { formatNumber } from '@/lib/format'
 
 interface RelatedSkill {
   slug: string
@@ -16,11 +17,6 @@ interface RelatedSkill {
 defineProps<{
   skills: RelatedSkill[]
 }>()
-
-function formatNumber(n: number): string {
-  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  return n.toString()
-}
 </script>
 
 <template>

@@ -4,6 +4,7 @@ import { Star, Eye, CheckCircle2, RefreshCw } from 'lucide-vue-next'
 import SiteFavicon from './SiteFavicon.vue'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
 import type { Site } from '@/stores/sites'
+import { formatNumber } from '@/lib/format'
 
 const props = defineProps<{
   site: Site
@@ -17,13 +18,6 @@ const bookmarkResource = computed(() => ({
   url: props.site.website,
   category: props.site.category,
 }))
-
-function formatNumber(num: number): string {
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  }
-  return num.toString()
-}
 
 function formatAddedAge(days: number): string {
   if (days <= 0) return 'Added today'

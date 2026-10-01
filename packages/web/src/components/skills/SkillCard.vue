@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { Code2, Eye } from 'lucide-vue-next'
 import BookmarkButton from '@/components/bookmarks/BookmarkButton.vue'
 import type { Skill } from '@/stores/skills'
+import { formatNumber } from '@/lib/format'
 
 const props = defineProps<{
   skill: Skill
@@ -49,13 +50,6 @@ const displayTags = computed(() => {
   if (tags.length <= 3) return tags
   return [...tags.slice(0, 2), `+${tags.length - 2} more`]
 })
-
-function formatNumber(num: number): string {
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-  }
-  return num.toString()
-}
 
 function getAuthorColor(name: string): string {
   const colors = [
