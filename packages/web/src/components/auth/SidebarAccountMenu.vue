@@ -126,7 +126,7 @@ async function handleSignOut() {
   <div ref="menuRoot" class="relative z-[90] w-full">
     <button
       type="button"
-      class="flex h-10 w-full items-center gap-2 rounded-lg px-2 text-left text-white transition hover:bg-accent-500/10"
+      class="flex h-10 w-full items-center gap-2 rounded-lg px-2 text-left text-white"
       :aria-expanded="isOpen"
       aria-haspopup="menu"
       aria-label="Open Holy Grail account menu"
@@ -138,10 +138,7 @@ async function handleSignOut() {
           Holy Grail
         </span>
       </span>
-      <ChevronDown
-        class="h-3.5 w-3.5 shrink-0 text-gray-500 transition-transform"
-        :class="isOpen ? 'rotate-180' : ''"
-      />
+      <ChevronDown class="h-3.5 w-3.5 shrink-0 text-gray-500" />
     </button>
 
     <div

@@ -176,8 +176,14 @@ function handleGlobalShortcut(event: KeyboardEvent) {
   }
 }
 
+/**
+ * The column hands its space back through `margin-left`, not `width`: a shrinking width re-wraps
+ * every label and the pinned promo card on each frame, so the collapse reads as a jolt. Holding the
+ * width and sliding the whole box out keeps that text laid out exactly once.
+ */
 const sidebarShellStyle = computed(() => ({
-  width: isSidebarCollapsed.value ? '0px' : `${sidebarWidth.value}px`,
+  width: `${sidebarWidth.value}px`,
+  marginLeft: isSidebarCollapsed.value ? `-${sidebarWidth.value}px` : '0px',
   opacity: isSidebarCollapsed.value ? '0' : '1',
 }))
 
@@ -328,7 +334,7 @@ onUnmounted(() => {
   overflow: hidden;
   /* Explicit properties only: `transition: all` would animate max-width and the hairline border. */
   transition:
-    width 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    margin-left 200ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
