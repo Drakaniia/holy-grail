@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/Drakaniia/holy-grail/compare/holy-grail-mcp-v1.3.0...holy-grail-mcp-v1.4.0) (2026-10-03)
+
+
+### Features
+
+* **catalog:** derive addedDaysAgo from first git commit ([453948f](https://github.com/Drakaniia/holy-grail/commit/453948f7abd31791fb9d8cd2eb2583db8d9ac7d8))
+* **core:** extract the search scorer into @holy-grail/core ([65503bb](https://github.com/Drakaniia/holy-grail/commit/65503bb92416af20d28adb4498c34893b3afd236))
+
 ## [1.3.0](https://github.com/Drakaniia/holy-grail/compare/holy-grail-mcp-v1.2.0...holy-grail-mcp-v1.3.0) (2026-09-14)
 
 
