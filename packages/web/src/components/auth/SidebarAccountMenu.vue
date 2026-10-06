@@ -3,7 +3,6 @@ import { computed, onBeforeUnmount, onMounted, shallowRef, useTemplateRef } from
 import { useRoute, useRouter } from 'vue-router'
 import {
   Bookmark,
-  ChevronDown,
   ChevronRight,
   CircleHelp,
   ExternalLink,
@@ -138,7 +137,6 @@ async function handleSignOut() {
           Holy Grail
         </span>
       </span>
-      <ChevronDown class="h-3.5 w-3.5 shrink-0 text-gray-500" />
     </button>
 
     <div
