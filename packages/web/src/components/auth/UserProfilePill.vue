@@ -7,13 +7,14 @@ const auth = useAuthStore()
 
 <template>
   <div
-    class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-gray-700 bg-[#1f1f1f] text-white"
+    class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-700 bg-[#1f1f1f] text-white"
     :aria-label="`Current profile: ${auth.displayName}`"
   >
     <UserAvatar
       :src="auth.avatarUrl"
       :initial="auth.avatarInitial"
       :label="auth.displayName"
+      shape="circle"
       size="sm"
     />
   </div>
