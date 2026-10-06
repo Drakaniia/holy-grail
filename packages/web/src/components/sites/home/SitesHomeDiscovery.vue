@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { computed, type Component } from 'vue'
 import { Code2, Download, Layers, Palette, Play, Sparkles } from 'lucide-vue-next'
-import type { Component } from 'vue'
+import { siFigma, siFramer, siGithub, siReact, siTailwindcss, siVercel } from 'simple-icons'
 import SitesHomeSectionHeader from '@/components/sites/home/SitesHomeSectionHeader.vue'
 import type { SitesHomeCategoryItem, SitesHomeLibraryItem } from '@/types/sitesHome'
 
-defineProps<{
+const props = defineProps<{
   categories: SitesHomeCategoryItem[]
   libraries: SitesHomeLibraryItem[]
   isLoading: boolean
@@ -17,6 +18,26 @@ const categoryIcons: Record<string, Component> = {
   play: Play,
   download: Download,
 }
+
+const brandIcons: Record<string, { path: string; hex: string }> = {
+  react: siReact,
+  tailwind: siTailwindcss,
+  github: siGithub,
+  vercel: siVercel,
+  figma: siFigma,
+  framer: siFramer,
+}
+
+function brandFor(name: string) {
+  const brand = brandIcons[name.trim().toLowerCase()]
+  if (!brand) return null
+  const [r, g, b] = [1, 3, 5].map((i) => Number.parseInt(brand.hex.slice(i, i + 2), 16))
+  return { path: brand.path, ink: r < 0x40 && g < 0x40 && b < 0x40 ? '#f5f5f5' : `#${brand.hex}` }
+}
+
+const libraryBrands = computed(
+  () => new Map(props.libraries.map((library) => [library.id, brandFor(library.name)])),
+)
 </script>
 
 <template>
@@ -82,7 +103,15 @@ const categoryIcons: Record<string, Component> = {
           class="discovery__item discovery__item--library"
         >
           <span class="discovery__icon discovery__icon--muted" aria-hidden="true">
-            {{ library.name.charAt(0) }}
+            <svg
+              v-if="libraryBrands.get(library.id)"
+              viewBox="0 0 24 24"
+              class="h-4 w-4"
+              :fill="libraryBrands.get(library.id)?.ink"
+            >
+              <path :d="libraryBrands.get(library.id)?.path" />
+            </svg>
+            <template v-else>{{ library.name.charAt(0) }}</template>
           </span>
           <span class="discovery__copy">
             <strong>{{ library.name }}</strong>
