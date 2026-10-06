@@ -1,0 +1,88 @@
+slug: runs-on
+name: runs-on.dev - Free Subdomain Registry
+description: Claim a free name.runs-on.dev subdomain and point it at your own hosting, or deploy a static site through the API.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 393
+watchers: 0
+addedDaysAgo: 0
+license: AGPL-3.0
+lastCommit: Today
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+  - Self-hosted
+website: https://runs-on.dev
+docs: https://runs-on.dev/docs/quickstart
+sourceCode: https://github.com/zordhalo/runs-on.dev
+icon: runs-on
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - domain
+  - dns
+  - subdomain
+  - free
+  - open-source
+atGlance: Free name.runs-on.dev subdomains for portfolios, side projects, and status pages.
+fullDescription: >-
+  runs-on.dev is a free subdomain registry in the spirit of is-a.dev and js.org: sign in with GitHub,
+  claim a name like you.runs-on.dev, and point it at your own hosting without buying a domain or
+  managing DNS. Claiming writes a record to a public registry and the name resolves within seconds.
+  Records support CNAME, A, TXT, MX, and URL redirects plus one level of subdomains, and you can edit
+  them from the dashboard or straight through a pull request that CI validates against the schema. A
+  claimed name can also host a static site directly via a deploy token, with instant rollback across the
+  last five deployments.
+coreFeatures:
+  - name: Free Subdomain Claims
+    description: Sign in with GitHub and claim a name.runs-on.dev subdomain in seconds, no DNS to configure.
+    icon: check
+  - name: Full DNS Records
+    description: CNAME, A, TXT, MX, and URL redirects plus one level of subdomains.
+    icon: layers
+  - name: Static Site Deploys
+    description: Zip your build and POST it to the deploy API, with the last five versions kept for rollback.
+    icon: rocket
+additionalFeatures:
+  - name: GitHub PR Workflow
+    description: Edit domains/<name>.json and let CI validate the record before DNS updates on merge.
+    icon: check
+  - name: Built for Agents
+    description: OpenAPI spec at /openapi.json and an MCP server at /.well-known/mcp.
+    icon: sparkles
+  - name: Host Guides Included
+    description: Copy-paste setup for Vercel, Netlify, Cloudflare Pages, GitHub Pages, Render, Railway, and more.
+    icon: check
+similarTools:
+  - slug: digitalplat-freedomain
+    name: DigitalPlat FreeDomain
+    description: Non-profit platform offering free domain subdomains with full DNS control.
+    stars: 179694
+    addedDaysAgo: 0
+    verified: true
+    website: https://domain.digitalplat.org
+  - slug: netlify
+    name: Netlify
+    description: Web platform for building, deploying, and hosting modern sites and apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.netlify.com/
+  - slug: vercel
+    name: Vercel
+    description: Develop, preview, and ship web applications with the fastest global edge network.
+    stars: 12500
+    addedDaysAgo: 2
+    verified: true
+    website: https://vercel.com

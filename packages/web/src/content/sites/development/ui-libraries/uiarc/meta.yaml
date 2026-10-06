@@ -1,0 +1,86 @@
+slug: uiarc
+name: Arc UI - Animated React Components and Blocks for shadcn
+description: 149 animated React components and 87 production blocks with motion built in, installable via the shadcn CLI.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 319
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: Yesterday
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - npm
+  - Cloud
+website: https://uiarc.dev
+docs: https://uiarc.dev/docs/introduction
+sourceCode: https://github.com/kuratlielia/arc-library
+icon: uiarc
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - react
+  - shadcn
+  - motion
+  - animation
+  - tailwind
+  - components
+atGlance: 149 animated React components and 87 blocks with motion built in.
+fullDescription: >-
+  Arc UI is a component library for React and Next.js built on top of shadcn, where motion is not an
+  afterthought. It ships 149 components and 87 complete blocks covering everything from a morphing
+  select and a scrubbing line chart to dashboards, checkout summaries, and inbox triage flows. Every
+  example on the site is live and interactive rather than a recording, and components install with the
+  shadcn CLI or by copying source. Each component ships a Markdown page plus an llms.txt index and an
+  MCP endpoint, so Claude, Cursor, or Codex can read the docs and build with them directly.
+coreFeatures:
+  - name: 149 Motion Components
+    description: Animated React components for shadcn covering inputs, charts, overlays, and more.
+    icon: sparkles
+  - name: 87 Complete Blocks
+    description: Full flows like scheduling, triage, onboarding, and metrics dashboards.
+    icon: layers
+  - name: Every Example Is Live
+    description: Open menus, scrub charts, and send messages instead of watching a video.
+    icon: check
+additionalFeatures:
+  - name: AI-Readable Docs
+    description: A Markdown page per component, an llms.txt index, and an MCP endpoint for coding agents.
+    icon: sparkles
+  - name: shadcn CLI Registry
+    description: Add any component with one command, or copy the source files directly.
+    icon: check
+  - name: Reduced Motion Aware
+    description: Components ship with reduced-motion behavior for device preferences.
+    icon: check
+similarTools:
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: reui
+    name: ReUI
+    description: Animated UI components and blocks for shadcn and Tailwind CSS.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://reui.io/
+  - slug: smoothui
+    name: SmoothUI
+    description: Animated shadcn-style React components powered by Motion and Tailwind.
+    stars: 825
+    addedDaysAgo: 0
+    verified: true
+    website: https://smoothui.dev/

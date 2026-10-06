@@ -1,0 +1,86 @@
+slug: libraries-dev
+name: Libraries.dev - UI Effect Libraries for AI Agents
+description: High-crafted MIT UI effect libraries for React with live playgrounds, tuned for apps built by coding agents.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 4094
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: Today
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - npm
+  - Cloud
+website: https://libraries.dev
+docs: https://libraries.dev/how-to-use.html
+sourceCode: https://github.com/Jakubantalik/Libraries.dev
+icon: libraries-dev
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - react
+  - effects
+  - animation
+  - npm
+  - ai-agents
+atGlance: Border beam, thinking orbs, gooey, liquid metal, and image-generation effects for React.
+fullDescription: >-
+  Libraries.dev is the umbrella home for a suite of standalone React effect libraries by Jakub Antalik,
+  covering border beams, thinking orbs, gooey merges, liquid metal, voice-reactive glow, animated bot
+  avatars, and image-generation loaders. All five core libraries are MIT licensed, free on npm, and
+  have zero runtime dependencies, so all of them together weigh about 83 KB gzipped. Each library ships
+  as a single prompt you paste into Claude Code, Cursor, or Codex, so an agent can install and wire it
+  up without hand-written integration code. Border Beam and Orb also ship SwiftUI and React Native
+  versions.
+coreFeatures:
+  - name: Seven Effect Libraries
+    description: Border beam, thinking orbs, gooey, liquid metal, voice, bot avatars, and image gen.
+    icon: sparkles
+  - name: Built for Coding Agents
+    description: Each library ships as a one-paste prompt that installs and wires itself in.
+    icon: check
+  - name: Live Playgrounds
+    description: Tune every effect in the browser and copy the exact configuration you land on.
+    icon: wind
+additionalFeatures:
+  - name: MIT and Free on npm
+    description: All core libraries are MIT licensed with zero runtime dependencies.
+    icon: check
+  - name: Tiny Bundle
+    description: Every library together comes to roughly 83 KB gzipped.
+    icon: check
+  - name: Beyond React
+    description: Border Beam and Orb also ship SwiftUI and React Native versions.
+    icon: layers
+similarTools:
+  - slug: border-beam
+    name: Border Beam
+    description: Lightweight React component for animated glowing border beam effects.
+    stars: 1959
+    addedDaysAgo: 0
+    verified: false
+    website: https://beam.jakubantalik.com/
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/
+  - slug: smoothui
+    name: SmoothUI
+    description: Animated shadcn-style React components powered by Motion and Tailwind.
+    stars: 825
+    addedDaysAgo: 0
+    verified: true
+    website: https://smoothui.dev/

@@ -1,0 +1,85 @@
+slug: ui-layouts
+name: UI Layouts - Copy-Paste Components and Blocks for Developers
+description: Copy, paste, and ship frontend components, effects, and 100+ production-ready blocks for React and Tailwind.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 3633
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: 1 month ago
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - npm
+  - Cloud
+website: https://www.ui-layouts.com
+docs: https://www.ui-layouts.com/components
+sourceCode: https://github.com/ui-layouts/uilayouts
+icon: ui-layouts
+verified: false
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - react
+  - tailwind
+  - shadcn
+  - blocks
+  - landing-pages
+atGlance: Copy-paste components, effects, and 100+ ready-to-use blocks for Tailwind.
+fullDescription: >-
+  UI Layouts is a copy-paste frontend resource that bundles components, visual effects, design tools,
+  and ready-made blocks in one place. The blocks cover the sections landing pages actually need, from
+  hero and feature sections to about, team, stats, and testimonial layouts, plus individual components
+  like tabs, accordions, date pickers, tags inputs, file upload, clip-path image reveals, and mouse
+  trails. Everything integrates with the shadcn registry so you can install instead of copy, and the
+  site also exposes its catalog over an MCP server for coding agents.
+coreFeatures:
+  - name: 100+ Ready-to-Use Blocks
+    description: Hero, feature, about, team, stats, and testimonial sections ready to drop in.
+    icon: layers
+  - name: Component and Effect Library
+    description: Tabs, accordions, date pickers, tags input, file upload, and clip-path reveals.
+    icon: sparkles
+  - name: shadcn Registry Integration
+    description: Install blocks and components through the registry instead of pasting files by hand.
+    icon: check
+additionalFeatures:
+  - name: MCP Server
+    description: The component catalog is exposed over MCP for coding agents to browse.
+    icon: sparkles
+  - name: Live Previews
+    description: Every component and block can be previewed in the browser before you install it.
+    icon: check
+  - name: Open Source Core
+    description: MIT licensed and community maintained on GitHub, with a Pro tier for more blocks.
+    icon: check
+similarTools:
+  - slug: tailgrids
+    name: TailGrids
+    description: Free Tailwind CSS UI components and blocks for building interfaces faster.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://tailgrids.com/
+  - slug: reui
+    name: ReUI
+    description: Animated UI components and blocks for shadcn and Tailwind CSS.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://reui.io/
+  - slug: magicui
+    name: Magic UI
+    description: Animated copy-paste React components for landing pages and product UI.
+    stars: 21334
+    addedDaysAgo: 0
+    verified: true
+    website: https://magicui.design/

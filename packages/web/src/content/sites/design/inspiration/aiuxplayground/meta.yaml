@@ -1,0 +1,87 @@
+slug: aiuxplayground
+name: AI UX Playground - Patterns, Teardowns, Prompts and Skills for AI Product Design
+description: Free reference for AI product design with 150+ interface patterns, 46 product teardowns, 217 prompts, and agent skills.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.aiuxplayground.com
+docs: https://www.aiuxplayground.com/patterns
+sourceCode: ""
+icon: aiuxplayground
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - ai
+  - ai-ux
+  - patterns
+  - teardowns
+  - prompts
+  - agent-skills
+atGlance: Patterns, teardowns, guides, prompts, and skills for designing AI products.
+fullDescription: >-
+  AI UX Playground is a free editorial reference for people designing AI products, cataloging over 150
+  interface patterns with live demos, 46 screenshot-backed teardowns of shipped AI products, 217
+  copy-paste prompts including 18 multi-step packs, 175 agent skills, and a 92-term glossary. Unlike a
+  general UI pattern library that covers buttons and forms, it focuses on the problems that only appear
+  once models stream, act autonomously, need trust signals, call tools, or move across voice and
+  ambient surfaces. Guides walk through shipping one AI feature at a time, linking the patterns and
+  teardowns you need in order.
+coreFeatures:
+  - name: 150+ AI Interface Patterns
+    description: Documented UX solutions with live demos, when-to-use guidance, and anti-patterns.
+    icon: layers
+  - name: 46 Product Teardowns
+    description: Screenshot walkthroughs of how shipped AI products solve real design problems.
+    icon: check
+  - name: Prompts and Agent Skills
+    description: 217 copy-paste prompts, 18 multi-step prompt packs, and 175 installable SKILL.md files.
+    icon: sparkles
+additionalFeatures:
+  - name: Step-by-Step Build Guides
+    description: Ship one AI feature at a time, with the patterns and teardowns linked in order.
+    icon: check
+  - name: AI UX Glossary
+    description: 92 terms from RAG to agent handoffs, written to paste straight into a spec.
+    icon: check
+  - name: Curated Inspirations
+    description: A hand-picked gallery of 65 vibe-coded projects to spark ideas.
+    icon: wind
+similarTools:
+  - slug: mobbin
+    name: Mobbin
+    description: UI and UX design inspiration for mobile and web apps.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://mobbin.com/
+  - slug: dribbble
+    name: Dribbble
+    description: Destination for designers to share and find design inspiration.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://dribbble.com/
+  - slug: screensdesign
+    name: ScreensDesign
+    description: Curated inspiration for designers, featuring screenshots of real product interfaces.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://screensdesign.com/

@@ -1,0 +1,89 @@
+slug: t3-code
+name: T3 Code - Open-Source Control Plane for Coding Agents
+description: Open-source desktop and mobile control plane that orchestrates Claude Code, Codex, OpenCode, Cursor, and Grok from one surface.
+category: Tooling
+parentCategory: development
+subcategory: tooling
+stars: 25614
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: Today
+lastRelease: N/A
+version: ""
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - Desktop
+  - Mobile
+deployment:
+  - Desktop
+  - Cloud
+  - Self-hosted
+website: https://t3.codes
+docs: https://github.com/pingdotgg/t3code
+sourceCode: https://github.com/pingdotgg/t3code
+icon: t3-code
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - tooling
+  - ai
+  - coding-agent
+  - orchestration
+  - open-source
+atGlance: Orchestrates Claude Code, Codex, OpenCode, Cursor, and Grok from one desktop app.
+fullDescription: >-
+  T3 Code is an open-source control plane for coding agents, built by Theo's team at Ping Labs. It
+  lets you run Claude Code, Codex, Antigravity, OpenCode, Cursor, and Grok side by side from a single
+  desktop interface, with companion iOS and Android apps for driving agents from a phone. You bring
+  your own subscription, so no tokens are resold and no quota caps apply. Every agent thread writes
+  to its own branch, and one button commits, pushes, and opens a pull request with a generated title,
+  body, and changelog. MIT licensed and forkable, so you can restyle the UI, add your own agents, or
+  ship your own build.
+coreFeatures:
+  - name: Multi-Harness Orchestration
+    description: Run Claude Code, Codex, OpenCode, Cursor, Grok, and Antigravity from one surface.
+    icon: layers
+  - name: Bring Your Own Subscription
+    description: Plug in the credentials you already have. No tokens resold, no quota caps.
+    icon: check
+  - name: One-Button Pull Requests
+    description: Each thread gets its own branch, then commits, pushes, and opens the PR for you.
+    icon: rocket
+additionalFeatures:
+  - name: Mobile Remote Control
+    description: Native iOS and Android companion apps for driving agents away from the desk.
+    icon: rocket
+  - name: Inline Diff Review
+    description: Review diffs in the app before pushing, with draft, stacked, and amend support.
+    icon: check
+  - name: Forkable and MIT Licensed
+    description: Change the UI, wire in new models, or self-host and distribute your own build.
+    icon: check
+similarTools:
+  - slug: autoskills
+    name: Autoskills
+    description: Toolkit for wiring reusable agent skills into your development workflow.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://autoskills.dev/
+  - slug: replit
+    name: Replit
+    description: Browser IDE and hosting platform for building and shipping software.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://replit.com/
+  - slug: opencode-cli
+    name: OpenCode
+    description: Open-source terminal-based coding agent for building applications.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://opencode.ai/
