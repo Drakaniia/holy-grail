@@ -1,0 +1,82 @@
+slug: reelfolio
+name: Reelfolio - Showreel Videos from Screenshots
+description: Cloud video builder that transforms screenshots and screen recordings into polished showreels with 245+ motion templates.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://reelfolio.io
+docs: https://reelfolio.io
+sourceCode: ''
+icon: reelfolio
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - motion
+  - video
+  - showreel
+atGlance: Turn screenshots into stunning showreel videos with 245+ motion templates.
+fullDescription: >-
+  Reelfolio is a cloud-based video creation tool that transforms static screenshots and screen
+  recordings into polished, animated showreels. Choose from 245+ professionally designed motion
+  templates, customize backgrounds, timing, and audio, then render 1080p or 4K MP4s in under a
+  minute. Built for designers, creators, and founders who want to showcase work on portfolios,
+  pitches, and social media without After Effects or video editing skills.
+coreFeatures:
+  - name: 245+ Motion Templates
+    description: Title-sequence-level animation templates for showreels and social content.
+    icon: layers
+  - name: Fast Cloud Rendering
+    description: Most videos render in under a minute, 1080p and 4K ready.
+    icon: rocket
+  - name: No Watermark
+    description: Exports render clean without branding on paid plans.
+    icon: check
+additionalFeatures:
+  - name: Audio Support
+    description: Add soundtracks with per-reel volume control.
+    icon: check
+  - name: Background Customization
+    description: Wallpapers, gradients, and flat colors with blur and dim controls.
+    icon: palette
+  - name: Commercial License
+    description: Usage rights for client work included.
+    icon: check
+similarTools:
+  - slug: shotreel
+    name: Shotreel
+    description: Browser motion design tool for looping showcase videos.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://shotreel.app
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: animos
+    name: Animos
+    description: Browser-based motion design tool for portfolio showcases.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://animos.app

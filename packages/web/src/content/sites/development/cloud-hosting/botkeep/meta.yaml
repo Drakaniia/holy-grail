@@ -1,0 +1,82 @@
+slug: botkeep
+name: Botkeep - Free Cloud Hosting for Apps and Bots
+description: Free cloud hosting for apps, bots, and databases with no renewal timers and multi-runtime support.
+category: Hosting
+parentCategory: development
+subcategory: cloud-hosting
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+  - API
+deployment:
+  - Cloud
+website: https://botkeep.cloud
+docs: https://botkeep.cloud
+sourceCode: ''
+icon: botkeep
+verified: false
+featured: false
+tags:
+  - bookmark
+  - development
+  - cloud-hosting
+  - hosting
+  - free
+  - bots
+atGlance: Free cloud hosting for apps, bots & databases — no renewal timers.
+fullDescription: >-
+  Botkeep is a beta cloud hosting platform that runs your apps, Discord bots, databases, and
+  websites from one panel — with no renewal timers and no idle sleep, which sets it apart from
+  typical free tiers. It supports Node.js, Python, Java, PHP, Go, Rust, and more, with GitHub/ZIP
+  deploys, managed databases, encrypted secrets, and a shared resource pool split across workloads.
+coreFeatures:
+  - name: No Renewal Timers
+    description: Free slots stay alive 24/7 without manual keep-alive clicks or idle sleep.
+    icon: check
+  - name: Multi-Runtime Support
+    description: Node.js, Python, Java, PHP, Go, Rust, C++, Lua, and Bun from one panel.
+    icon: layers
+  - name: Managed Databases
+    description: MariaDB, MySQL, PostgreSQL, and Redis provisioned alongside your workloads.
+    icon: database
+additionalFeatures:
+  - name: GitHub + ZIP Deploys
+    description: Import repos with branch selection and start-command review.
+    icon: rocket
+  - name: Encrypted Secrets
+    description: Environment variables encrypted at rest with isolated non-root workloads.
+    icon: check
+  - name: Panel API
+    description: Programmatic deployment and resource management with shared-budget checks.
+    icon: sparkles
+similarTools:
+  - slug: runs-on
+    name: runs-on.dev - Free Subdomain Registry
+    description: Claim a free name.runs-on.dev subdomain and point it at your own hosting.
+    stars: 393
+    addedDaysAgo: 0
+    verified: false
+    website: https://runs-on.dev
+  - slug: coolify
+    name: Coolify
+    description: Self-hostable open-source cloud platform for apps, databases, and services.
+    stars: 57271
+    addedDaysAgo: 0
+    verified: true
+    website: https://coolify.io/
+  - slug: railway
+    name: Railway
+    description: Cloud hosting for apps, bots, and databases with usage-based pricing.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://railway.com/

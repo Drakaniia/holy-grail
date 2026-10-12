@@ -382,6 +382,15 @@
     "height": 600,
     "bytes": 40300
   },
+  "backgrounds-supply": {
+    "image": "/previews/backgrounds-supply.webp",
+    "small": "/previews/backgrounds-supply-sm.webp",
+    "sourceUrl": "https://www.backgrounds.supply/",
+    "capturedAt": "2026-10-12T15:05:50.784Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 4230
+  },
   "badtz-ui": {
     "image": "/previews/badtz-ui.webp",
     "small": "/previews/badtz-ui-sm.webp",
@@ -516,6 +525,15 @@
     "width": 960,
     "height": 600,
     "bytes": 4330
+  },
+  "botkeep": {
+    "image": "/previews/botkeep.webp",
+    "small": "/previews/botkeep-sm.webp",
+    "sourceUrl": "https://botkeep.cloud/",
+    "capturedAt": "2026-10-12T15:05:56.200Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 31008
   },
   "brandingboard": {
     "image": "/previews/brandingboard.webp",
@@ -3334,6 +3352,15 @@
     "height": 600,
     "bytes": 23148
   },
+  "reelfolio": {
+    "image": "/previews/reelfolio.webp",
+    "small": "/previews/reelfolio-sm.webp",
+    "sourceUrl": "https://reelfolio.io/",
+    "capturedAt": "2026-10-12T15:05:51.532Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 34344
+  },
   "reflex": {
     "image": "/previews/reflex.webp",
     "small": "/previews/reflex-sm.webp",
@@ -3651,6 +3678,15 @@
     "width": 960,
     "height": 600,
     "bytes": 20438
+  },
+  "shotreel": {
+    "image": "/previews/shotreel.webp",
+    "small": "/previews/shotreel-sm.webp",
+    "sourceUrl": "https://shotreel.app/",
+    "capturedAt": "2026-10-12T15:05:48.685Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 23446
   },
   "shutterstock": {
     "image": "/previews/shutterstock.webp",

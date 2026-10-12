@@ -1,0 +1,82 @@
+slug: backgrounds-supply
+name: Backgrounds Supply - Curated 4K Backgrounds and Gradients
+description: Curated library of handcrafted gradient, AI-generated, and animated 4K backgrounds plus a free gradient shader tool.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.backgrounds.supply
+docs: https://www.backgrounds.supply
+sourceCode: ''
+icon: backgrounds-supply
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - backgrounds
+  - assets
+  - gradients
+atGlance: Curated 4K gradient, AI & animated backgrounds — $49 lifetime.
+fullDescription: >-
+  Backgrounds Supply is a curated digital-asset shop selling 1,359 handcrafted gradient,
+  AI-generated, and animated 4K backgrounds across 31 themed collections, plus a free in-browser
+  gradient shader tool (Gradient Lab) that exports PNG, MP4, or WebM up to 4K with no watermark.
+  A one-time $49 purchase includes lifetime access, monthly drops, and a commercial license
+  covering client work, web, apps, and motion projects.
+coreFeatures:
+  - name: 1,359 Curated Assets
+    description: Handcrafted gradients, AI-generated visuals, and animated 4K loops in 31 collections.
+    icon: layers
+  - name: Free Gradient Lab
+    description: In-browser shader tool with 20+ animated gradient modes, no signup required.
+    icon: palette
+  - name: Commercial License
+    description: One-time purchase covers client work, web, apps, and motion projects.
+    icon: check
+additionalFeatures:
+  - name: 4K + Animated Options
+    description: 3K-class 16:9 PNGs, native 4K subset, and animated MP4 loops.
+    icon: image
+  - name: Monthly Drops
+    description: 30+ new assets added every month with lifetime access.
+    icon: refresh-cw
+  - name: No Subscription
+    description: Single $49 payment via Lemon Squeezy, no recurring billing.
+    icon: check
+similarTools:
+  - slug: unsplash
+    name: Unsplash
+    description: Beautiful free images and pictures.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://unsplash.com/
+  - slug: storyset
+    name: Storyset
+    description: Customize, animate and download illustrations for free.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://storyset.com/
+  - slug: texturelabs
+    name: Texture Labs
+    description: Free textures, tutorials, and more.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://texturelabs.org/

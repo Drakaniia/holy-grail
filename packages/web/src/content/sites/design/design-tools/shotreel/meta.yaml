@@ -1,0 +1,82 @@
+slug: shotreel
+name: Shotreel - Screenshots into Looping Showcase Videos
+description: Browser motion design tool that turns static screenshots into seamless looping showcase videos with 131 templates.
+category: Design Tools
+parentCategory: design
+subcategory: design-tools
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://shotreel.app
+docs: https://shotreel.app
+sourceCode: ''
+icon: shotreel
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - design-tools
+  - motion
+  - animation
+  - video
+atGlance: Turn screenshots into looping showcase videos in your browser.
+fullDescription: >-
+  Shotreel is a browser-based motion design tool that transforms static images and screenshots
+  into seamless looping showcase videos. Choose from 131 templates across 9 animation categories
+  (3D walls, carousels, orbits, grids, reveals, and more), drop in your work, and export MP4 or
+  WebM at up to 4K. Everything renders client-side — nothing is uploaded, no install is required,
+  and no account is needed to start.
+coreFeatures:
+  - name: 131 Motion Templates
+    description: Animation presets across 9 categories including 3D, isometric, orbit, and grid.
+    icon: layers
+  - name: Browser-Native Rendering
+    description: Videos render frame-by-frame client-side; images never leave the device.
+    icon: check
+  - name: MP4 + WebM Export
+    description: Six aspect ratios at 30 or 60 fps, 720p free and up to 4K on Pro.
+    icon: rocket
+additionalFeatures:
+  - name: Video Input Support
+    description: Any template slot accepts images or short video clips synced to the loop.
+    icon: check
+  - name: No Watermark
+    description: Free exports render clean without branding.
+    icon: check
+  - name: Seamless Loops
+    description: Every template ends exactly where it starts for perfect playback loops.
+    icon: refresh-cw
+similarTools:
+  - slug: reelfolio
+    name: Reelfolio
+    description: Cloud video builder that turns screenshots into polished showreels.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://reelfolio.io
+  - slug: jitter
+    name: Jitter
+    description: Fast and simple motion design tool for creatives.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://jitter.video/
+  - slug: rotato
+    name: Rotato
+    description: 3D mockup and motion design tool for product showcases.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://rotato.app/
