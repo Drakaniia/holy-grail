@@ -41,12 +41,7 @@ defineProps<{
     </div>
 
     <div v-else-if="tools.length > 0" class="trending-ui-libraries__grid">
-      <SitesHomeFeaturedCard
-        v-for="(tool, index) in tools"
-        :key="tool.id"
-        :tool="tool"
-        :index="index"
-      />
+      <SitesHomeFeaturedCard v-for="tool in tools" :key="tool.id" :tool="tool" />
     </div>
 
     <p v-else class="trending-ui-libraries__empty">No trending UI libraries available yet.</p>
@@ -62,23 +57,14 @@ defineProps<{
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  border: 1px solid var(--sh-border-soft, rgba(255, 255, 255, 0.08));
-  border-radius: 9999px;
-  padding: 0.55rem 0.7rem;
   color: var(--sh-text-soft, rgba(255, 255, 255, 0.7));
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
-  transition:
-    border-color 160ms ease,
-    background-color 160ms ease,
-    color 160ms ease;
+  transition: color 140ms ease;
 }
 
-.trending-ui-libraries__view-all:hover,
-.trending-ui-libraries__view-all:focus-visible {
-  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.14));
-  background: var(--sh-surface-hover, #1b1b1b);
+.trending-ui-libraries__view-all:hover {
   color: var(--sh-text-strong, #f5f5f5);
 }
 
@@ -95,17 +81,15 @@ defineProps<{
 
 .trending-ui-libraries__skeleton {
   aspect-ratio: 16 / 10;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .trending-ui-libraries__empty {
   margin: 0;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 20px;
-  background: var(--sh-surface, #121212);
-  padding: 2rem;
+  border-top: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  padding: 1.5rem 0;
   color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
-  text-align: center;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 1200px) {

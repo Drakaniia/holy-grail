@@ -18,6 +18,8 @@ defineProps<{
       </span>
     </div>
 
+    <span class="sites-section-header__rule" aria-hidden="true"></span>
+
     <div v-if="$slots.actions" class="sites-section-header__actions">
       <slot name="actions" />
     </div>
@@ -25,49 +27,60 @@ defineProps<{
 </template>
 
 <style scoped>
+/*
+  Section titles sit on a ledger rule instead of a boxed card header: the hairline
+  carries the section break, so the page needs no alternating fills to read as sections.
+*/
 .sites-section-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
 }
 
 .sites-section-header__title-row {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.55rem;
+  flex-shrink: 0;
   min-width: 0;
 }
 
 .sites-section-header__title {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.45rem;
   margin: 0;
   color: var(--sh-text-strong, #f5f5f5);
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 .sites-section-header__title :deep(svg) {
-  width: 1.35rem;
-  height: 1.35rem;
-  color: var(--sh-accent, #ff8c1a);
+  width: 1rem;
+  height: 1rem;
+  color: var(--sh-text-muted, rgba(255, 255, 255, 0.5));
+}
+
+.sites-section-header__rule {
+  height: 1px;
+  flex: 1;
+  background: var(--sh-border, rgba(255, 255, 255, 0.08));
 }
 
 .sites-section-header__hint {
   display: inline-flex;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--sh-border-strong, rgba(255, 255, 255, 0.12));
+  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.12));
   border-radius: 9999px;
-  color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
-  font-size: 0.7rem;
+  color: var(--sh-text-muted, rgba(255, 255, 255, 0.5));
+  cursor: help;
+  font-size: 0.62rem;
   font-weight: 700;
   font-style: italic;
   line-height: 1;
@@ -81,8 +94,8 @@ defineProps<{
 }
 
 @media (max-width: 640px) {
-  .sites-section-header__title {
-    font-size: 1.35rem;
+  .sites-section-header {
+    gap: 0.6rem;
   }
 }
 </style>

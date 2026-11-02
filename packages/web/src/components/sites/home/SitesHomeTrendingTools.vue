@@ -37,13 +37,7 @@ function markLogoFailed(slug: string) {
     </div>
 
     <div v-else-if="tools.length > 0" class="trending-tools__grid">
-      <RouterLink
-        v-for="(tool, index) in tools"
-        :key="tool.id"
-        :to="tool.to"
-        class="trending-tools__item"
-        :style="{ '--stagger': `${index * 35}ms` }"
-      >
+      <RouterLink v-for="tool in tools" :key="tool.id" :to="tool.to" class="trending-tools__item">
         <span class="trending-tools__logo">
           <img
             v-if="tool.logo && !failedLogos.has(tool.slug)"
@@ -87,25 +81,21 @@ function markLogoFailed(slug: string) {
   align-items: center;
   gap: 0.8rem;
   min-width: 0;
-  border: 1px solid transparent;
-  border-radius: 14px;
-  background: transparent;
-  padding: 0.75rem 0.8rem;
+  border-radius: 8px;
+  padding: 0.6rem 0.65rem;
   color: inherit;
   text-decoration: none;
-  animation: trending-in 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation-delay: var(--stagger, 0ms);
-  transition: background-color 160ms ease;
+  transition: background-color 140ms ease;
 }
 
-.trending-tools__item:hover,
-.trending-tools__item:focus-visible {
-  background: var(--sh-item-hover, #1b1b1b);
-  outline: none;
+.trending-tools__item:hover {
+  background: var(--sh-item-hover, #2a2a2a);
 }
 
 .trending-tools__item:focus-visible {
-  border-color: color-mix(in srgb, var(--sh-accent, #ff8c1a) 45%, transparent);
+  background: var(--sh-item-hover, #2a2a2a);
+  outline: 2px solid var(--sh-accent, #ff8c1a);
+  outline-offset: -2px;
 }
 
 .trending-tools__logo {
@@ -115,16 +105,12 @@ function markLogoFailed(slug: string) {
   height: 2.5rem;
   flex-shrink: 0;
   overflow: hidden;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 12px;
-  background: var(--sh-surface, #121212);
+  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  border-radius: 8px;
+  background: transparent;
   color: var(--sh-text-soft, rgba(255, 255, 255, 0.7));
   font-size: 0.95rem;
-  font-weight: 700;
-  transition:
-    background-color 200ms ease,
-    border-color 200ms ease,
-    color 200ms ease;
+  font-weight: 600;
 }
 
 .trending-tools__logo img {
@@ -176,7 +162,7 @@ function markLogoFailed(slug: string) {
 .trending-tools__sk-logo {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 12px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 
@@ -202,18 +188,6 @@ function markLogoFailed(slug: string) {
   color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
 }
 
-@keyframes trending-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 1100px) {
   .trending-tools__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -223,12 +197,6 @@ function markLogoFailed(slug: string) {
 @media (max-width: 640px) {
   .trending-tools__grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .trending-tools__item {
-    animation: none;
   }
 }
 </style>

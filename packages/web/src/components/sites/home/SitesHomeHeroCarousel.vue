@@ -79,9 +79,6 @@ function onPointerCancel() {
         <span class="hero-carousel__sk hero-carousel__sk--body hg-skeleton"></span>
         <span class="hero-carousel__sk hero-carousel__sk--chip hg-skeleton"></span>
       </div>
-      <div class="hero-carousel__col hero-carousel__col--mid">
-        <span class="hero-carousel__sk hero-carousel__sk--shot hg-skeleton"></span>
-      </div>
       <div class="hero-carousel__col hero-carousel__col--right">
         <span
           v-for="n in 4"
@@ -98,6 +95,16 @@ function onPointerCancel() {
     >
       <Transition :name="direction >= 0 ? 'hero-slide-next' : 'hero-slide-prev'" mode="out-in">
         <div :key="activeTool.id" class="hero-carousel__slide">
+          <div class="hero-carousel__backdrop" aria-hidden="true">
+            <img
+              v-if="!imageFailed"
+              :src="activeTool.coverImage"
+              alt=""
+              class="hero-carousel__backdrop-image"
+              @error="imageFailed = true"
+            />
+          </div>
+
           <div class="hero-carousel__col hero-carousel__col--left">
             <div class="hero-carousel__logo-wrap">
               <img
@@ -127,25 +134,6 @@ function onPointerCancel() {
             <span class="hero-carousel__category">{{ activeTool.category }}</span>
 
             <RouterLink :to="activeTool.to" class="hero-carousel__cta"> View tool </RouterLink>
-          </div>
-
-          <div class="hero-carousel__col hero-carousel__col--mid">
-            <RouterLink
-              :to="activeTool.to"
-              class="hero-carousel__preview"
-              :aria-label="`Open ${activeTool.name}`"
-            >
-              <img
-                v-if="!imageFailed"
-                :src="activeTool.coverImage"
-                :srcset="`${activeTool.coverImageSmall} 720w, ${activeTool.coverImage} 1440w`"
-                sizes="(max-width: 900px) 90vw, 30vw"
-                :alt="`${activeTool.name} screenshot`"
-                class="hero-carousel__preview-image"
-                @error="imageFailed = true"
-              />
-              <span v-else class="hero-carousel__preview-fallback">{{ activeTool.name }}</span>
-            </RouterLink>
           </div>
 
           <div class="hero-carousel__col hero-carousel__col--right" aria-label="Highlights">
@@ -208,7 +196,7 @@ function onPointerCancel() {
 .hero-carousel {
   --accent: var(--sh-accent, #ff8c1a);
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
   outline: none;
 }
@@ -219,44 +207,90 @@ function onPointerCancel() {
   border-radius: 8px;
 }
 
+/*
+  The page has exactly one atmosphere and it lives here: a single low-opacity
+  accent wash behind the hero. No panel fill, radius, or shadow, so the
+  screenshot and the type carry the section instead of its container.
+*/
 .hero-carousel__shell {
   position: relative;
   min-height: 520px;
-  overflow: hidden;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 24px;
-  background:
-    radial-gradient(
-      ellipse 80% 70% at 12% 20%,
-      color-mix(in srgb, var(--accent) 22%, transparent),
-      transparent 58%
-    ),
-    radial-gradient(
-      ellipse 50% 50% at 88% 80%,
-      color-mix(in srgb, var(--accent) 10%, transparent),
-      transparent 55%
-    ),
-    var(--sh-surface, #121212);
-  box-shadow: var(--sh-shadow-hero, 0 20px 50px rgba(0, 0, 0, 0.28));
-  transition:
-    background-color 200ms ease,
-    border-color 200ms ease,
-    box-shadow 200ms ease;
+  padding-block: 0.5rem;
+}
+
+.hero-carousel__shell::before {
+  content: '';
+  position: absolute;
+  top: -3rem;
+  left: -3rem;
+  width: min(40rem, 100%);
+  height: 26rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in srgb, var(--accent) 15%, transparent),
+    transparent 74%
+  );
+  pointer-events: none;
 }
 
 .hero-carousel__shell--skeleton {
   display: grid;
-  grid-template-columns: 1.15fr 0.95fr 0.9fr;
+  grid-template-columns: 1.1fr 0.9fr 0.85fr;
   gap: 1.25rem;
   padding: clamp(1.25rem, 2.5vw, 2rem);
 }
 
+.hero-carousel__shell--skeleton .hero-carousel__col--right {
+  gap: 0.75rem;
+}
+
+/*
+  Two content columns with a deliberately empty middle track: the screenshot
+  lives there as the hero's backdrop, so the centre of the section is image
+  and the copy reads on top of the page, not on top of a card.
+*/
 .hero-carousel__slide {
+  position: relative;
+  isolation: isolate;
   display: grid;
-  grid-template-columns: 1.15fr 0.95fr 0.9fr;
+  grid-template-columns: 1.1fr 0.9fr 0.85fr;
   gap: 1.25rem;
   min-height: 520px;
-  padding: clamp(1.25rem, 2.5vw, 2rem);
+  padding: 0.5rem 0.75rem;
+}
+
+/*
+  The page screenshot is atmosphere, not a framed figure: it fills the hero,
+  keeps its full aspect (object-fit: contain, so nothing is cropped), and
+  dissolves into the page on both sides through a horizontal mask.
+*/
+.hero-carousel__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Absolute fill so the image is bounded by the hero, never by its own ratio. */
+.hero-carousel__backdrop-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: var(--sh-backdrop-opacity, 0.9);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 36%, #000 64%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 36%, #000 64%, transparent 100%);
+}
+
+/* Type reads over the fade, so a page-colour wash keeps it ahead of the image. */
+.hero-carousel__backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--sh-bg, #1a1a1a) var(--sh-backdrop-scrim, 40%), transparent);
 }
 
 .hero-carousel__col {
@@ -266,20 +300,17 @@ function onPointerCancel() {
 }
 
 .hero-carousel__col--left {
+  grid-column: 1;
+  z-index: 1;
   justify-content: center;
   gap: 1rem;
 }
 
-.hero-carousel__col--mid {
-  align-items: center;
-  justify-content: center;
-}
-
 .hero-carousel__col--right {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-  align-content: center;
+  grid-column: 3;
+  z-index: 1;
+  justify-content: center;
+  gap: 0;
 }
 
 .hero-carousel__logo-wrap {
@@ -288,9 +319,9 @@ function onPointerCancel() {
   width: 3.75rem;
   height: 3.75rem;
   overflow: hidden;
-  border: 1px solid var(--sh-border-strong, rgba(255, 255, 255, 0.1));
-  border-radius: 16px;
-  background: var(--sh-logo-bg, rgba(0, 0, 0, 0.35));
+  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  border-radius: 10px;
+  background: transparent;
 }
 
 .hero-carousel__logo {
@@ -340,106 +371,61 @@ function onPointerCancel() {
 }
 
 .hero-carousel__category {
-  width: fit-content;
-  border: 1px solid
-    color-mix(in srgb, var(--accent) 40%, var(--sh-border-soft, rgba(255, 255, 255, 0.08)));
-  border-radius: 9999px;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  padding: 0.35rem 0.75rem;
-  color: color-mix(in srgb, var(--accent) 55%, var(--sh-chip-mix-base, #fff));
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
+  font-size: 0.85rem;
 }
 
 .hero-carousel__cta {
   display: inline-flex;
   width: fit-content;
   align-items: center;
-  margin-top: 0.35rem;
-  border-radius: 9999px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
   background: var(--sh-cta-bg, #fff);
-  padding: 0.7rem 1.15rem;
+  padding: 0.62rem 1rem;
   color: var(--sh-cta-fg, #0a0a0a);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   transition:
-    transform 160ms ease,
+    transform 140ms var(--ease-out-quint, ease-out),
     background-color 160ms ease,
     color 160ms ease;
 }
 
 .hero-carousel__cta:hover {
   background: var(--sh-cta-bg-hover, #f3f3f3);
-  transform: translateY(-1px);
 }
 
-.hero-carousel__preview {
-  display: block;
-  width: 100%;
-  max-width: 22rem;
-  overflow: hidden;
-  border: 1px solid var(--sh-border-strong, rgba(255, 255, 255, 0.1));
-  border-radius: 18px;
-  background: var(--sh-surface-deep, #0a0a0a);
-  box-shadow: var(--sh-shadow-preview, 0 24px 48px rgba(0, 0, 0, 0.4));
-  aspect-ratio: 10 / 13;
-  transition: transform 220ms ease;
-}
-
-.hero-carousel__preview:hover {
-  transform: translateY(-3px) scale(1.01);
-}
-
-.hero-carousel__preview-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.hero-carousel__preview-fallback {
-  display: grid;
-  place-items: center;
-  height: 100%;
-  min-height: 16rem;
-  color: var(--sh-text-muted, rgba(255, 255, 255, 0.5));
-  font-weight: 600;
+.hero-carousel__cta:active {
+  transform: scale(0.98);
 }
 
 .hero-carousel__feature {
-  display: grid;
-  gap: 0.45rem;
-  min-height: 5.5rem;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 16px;
-  background: var(--sh-feature-bg, rgba(255, 255, 255, 0.03));
-  padding: 0.9rem;
-  transition:
-    background-color 160ms ease,
-    border-color 160ms ease;
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  border-top: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  padding: 0.8rem 0;
 }
 
-.hero-carousel__feature:hover {
-  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.12));
-  background: var(--sh-feature-bg-hover, rgba(255, 255, 255, 0.06));
+.hero-carousel__feature:first-child {
+  border-top: 0;
 }
 
 .hero-carousel__feature-index {
-  color: var(--sh-text-faint, rgba(255, 255, 255, 0.35));
+  color: var(--sh-text-soft, rgba(255, 255, 255, 0.7));
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
 }
 
 .hero-carousel__feature-label {
-  color: var(--sh-text-strong, #f2f2f2);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
+  color: var(--sh-text-strong, #f0f0f0);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
 }
 
 .hero-carousel__controls {
@@ -453,16 +439,15 @@ function onPointerCancel() {
 
 .hero-carousel__nav {
   display: inline-flex;
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 2.75rem;
+  height: 2.75rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--sh-border-strong, rgba(255, 255, 255, 0.1));
-  border-radius: 9999px;
-  background: var(--sh-control-bg, rgba(0, 0, 0, 0.45));
-  color: var(--sh-control-fg, #fff);
+  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  border-radius: 8px;
+  background: transparent;
+  color: var(--sh-text-soft, rgba(255, 255, 255, 0.7));
   cursor: pointer;
-  backdrop-filter: blur(8px);
   transition:
     background-color 160ms ease,
     border-color 160ms ease,
@@ -470,8 +455,9 @@ function onPointerCancel() {
 }
 
 .hero-carousel__nav:hover {
-  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.22));
-  background: var(--sh-control-bg-hover, rgba(0, 0, 0, 0.7));
+  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.18));
+  background: var(--sh-item-hover, #2a2a2a);
+  color: var(--sh-text-strong, #f5f5f5);
 }
 
 .hero-carousel__indicators {
@@ -515,9 +501,7 @@ function onPointerCancel() {
   display: grid;
   place-items: center;
   min-height: 280px;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 24px;
-  background: var(--sh-surface, #121212);
+  border-block: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
   color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
 }
 
@@ -529,7 +513,7 @@ function onPointerCancel() {
 .hero-carousel__sk--logo {
   width: 3.75rem;
   height: 3.75rem;
-  border-radius: 16px;
+  border-radius: 10px;
 }
 
 .hero-carousel__sk--title {
@@ -548,17 +532,9 @@ function onPointerCancel() {
   border-radius: 9999px;
 }
 
-.hero-carousel__sk--shot {
-  width: 100%;
-  max-width: 22rem;
-  height: 18rem;
-  margin-inline: auto;
-  border-radius: 18px;
-}
-
 .hero-carousel__sk--feature {
-  height: 5.5rem;
-  border-radius: 16px;
+  height: 3.1rem;
+  border-radius: 6px;
 }
 
 .hero-slide-next-enter-active,
@@ -566,39 +542,52 @@ function onPointerCancel() {
 .hero-slide-prev-enter-active,
 .hero-slide-prev-leave-active {
   transition:
-    opacity 500ms ease,
-    transform 500ms ease;
+    opacity 260ms var(--ease-out-quint, ease-out),
+    transform 260ms var(--ease-out-quint, ease-out);
 }
 
 .hero-slide-next-enter-from {
   opacity: 0;
-  transform: translateX(18px);
+  transform: translateX(10px);
 }
 
 .hero-slide-next-leave-to {
   opacity: 0;
-  transform: translateX(-12px);
+  transform: translateX(-8px);
 }
 
 .hero-slide-prev-enter-from {
   opacity: 0;
-  transform: translateX(-18px);
+  transform: translateX(-10px);
 }
 
 .hero-slide-prev-leave-to {
   opacity: 0;
-  transform: translateX(12px);
+  transform: translateX(8px);
 }
 
 @media (max-width: 1100px) {
   .hero-carousel__slide,
   .hero-carousel__shell--skeleton {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     min-height: auto;
   }
 
+  .hero-carousel__col--left,
   .hero-carousel__col--right {
-    grid-column: 1 / -1;
+    grid-column: 1;
+  }
+
+  /* Below this width the copy sits directly over the image, so it dims behind
+     a stronger wash instead of competing with the type. */
+  .hero-carousel__slide {
+    --sh-backdrop-scrim: 60%;
+
+    gap: 2.5rem;
+  }
+
+  .hero-carousel__backdrop-image {
+    opacity: calc(var(--sh-backdrop-opacity, 0.9) * 0.6);
   }
 
   .hero-carousel__shell {
@@ -607,28 +596,26 @@ function onPointerCancel() {
 }
 
 @media (max-width: 720px) {
-  .hero-carousel__slide,
-  .hero-carousel__shell--skeleton {
-    grid-template-columns: 1fr;
-  }
-
   .hero-carousel__col--right {
-    display: flex;
-    grid-template-columns: none;
-    gap: 0.65rem;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
-    scroll-snap-type: x mandatory;
+    gap: 0;
   }
 
-  .hero-carousel__feature {
-    min-width: 9.5rem;
-    scroll-snap-align: start;
+  .hero-carousel__shell::before {
+    top: -2rem;
+    right: -1.5rem;
+    left: -1.5rem;
+    width: auto;
+    height: 20rem;
   }
 
-  .hero-carousel__preview {
-    max-width: none;
-    aspect-ratio: 16 / 10;
+  .hero-carousel__slide {
+    --sh-backdrop-scrim: 65%;
+
+    padding-inline: 0;
+  }
+
+  .hero-carousel__backdrop-image {
+    opacity: calc(var(--sh-backdrop-opacity, 0.9) * 0.45);
   }
 
   .hero-carousel__name {
@@ -658,7 +645,6 @@ function onPointerCancel() {
   }
 
   .hero-carousel__cta,
-  .hero-carousel__preview,
   .hero-carousel__indicator {
     transition: none;
   }

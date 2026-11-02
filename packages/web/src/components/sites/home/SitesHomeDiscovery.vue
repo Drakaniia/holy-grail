@@ -100,9 +100,9 @@ const libraryBrands = computed(
           v-for="library in libraries"
           :key="library.id"
           :to="library.to"
-          class="discovery__item discovery__item--library"
+          class="discovery__item"
         >
-          <span class="discovery__icon discovery__icon--muted" aria-hidden="true">
+          <span class="discovery__icon" aria-hidden="true">
             <svg
               v-if="libraryBrands.get(library.id)"
               viewBox="0 0 24 24"
@@ -124,95 +124,91 @@ const libraryBrands = computed(
 </template>
 
 <style scoped>
+/*
+  Two index lists, not two cards: no fills, no radius, no shadows. The only rule
+  between them is a hairline, so the category counts stay the loudest thing here.
+*/
 .discovery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 2.5rem;
   width: 100%;
 }
 
-.discovery__panel {
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 20px;
-  background: var(--sh-surface, #121212);
-  padding: 1.15rem 1.15rem 1.25rem;
-  transition:
-    background-color 200ms ease,
-    border-color 200ms ease;
+.discovery__panel + .discovery__panel {
+  border-left: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  padding-left: 2.5rem;
 }
 
 .discovery__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.45rem;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 .discovery__item {
   --accent: var(--sh-accent, #ff8c1a);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.7rem;
   min-width: 0;
-  border: 1px solid transparent;
-  border-radius: 14px;
-  background: transparent;
-  padding: 0.75rem;
+  border-radius: 6px;
+  padding: 0.55rem 0.5rem;
   color: inherit;
   text-decoration: none;
-  transition:
-    background-color 160ms ease,
-    border-color 160ms ease;
+  transition: background-color 140ms ease;
 }
 
-.discovery__item:hover,
-.discovery__item:focus-visible {
-  border-color: var(--sh-border, transparent);
-  background: var(--sh-item-hover, #1b1b1b);
-  outline: none;
+.discovery__item:hover {
+  background: var(--sh-item-hover, #2a2a2a);
 }
 
 .discovery__item:focus-visible {
-  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+  background: var(--sh-item-hover, #2a2a2a);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 
 .discovery__icon {
   display: grid;
   place-items: center;
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 1.1rem;
   flex-shrink: 0;
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--accent) 16%, var(--sh-surface-deep, #0d0d0d));
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 700;
+  color: var(--sh-text-muted, rgba(255, 255, 255, 0.5));
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: color 140ms ease;
 }
 
-.discovery__icon--muted {
-  border: 1px solid var(--sh-border-soft, rgba(255, 255, 255, 0.08));
-  background: var(--sh-surface-deep, #0d0d0d);
+.discovery__item:hover .discovery__icon,
+.discovery__item:focus-visible .discovery__icon {
   color: var(--sh-text-soft, rgba(255, 255, 255, 0.75));
 }
 
 .discovery__copy {
-  display: grid;
-  gap: 0.12rem;
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.85rem;
   min-width: 0;
 }
 
 .discovery__copy strong {
   overflow: hidden;
   color: var(--sh-text-strong, #f5f5f5);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 500;
   letter-spacing: -0.01em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .discovery__copy span {
-  color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
-  font-size: 0.8rem;
+  flex-shrink: 0;
+  color: var(--sh-text-soft, rgba(255, 255, 255, 0.7));
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .discovery__item--skeleton {
@@ -220,10 +216,10 @@ const libraryBrands = computed(
 }
 
 .discovery__sk-icon {
-  width: 2.35rem;
-  height: 2.35rem;
-  border-radius: 12px;
+  width: 1.1rem;
+  height: 0.9rem;
   flex-shrink: 0;
+  border-radius: 4px;
 }
 
 .discovery__sk-lines {
@@ -246,12 +242,14 @@ const libraryBrands = computed(
 @media (max-width: 1100px) {
   .discovery {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-}
 
-@media (max-width: 640px) {
-  .discovery__grid {
-    grid-template-columns: 1fr;
+  .discovery__panel + .discovery__panel {
+    border-top: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+    border-left: 0;
+    padding-top: 2rem;
+    padding-left: 0;
   }
 }
 </style>

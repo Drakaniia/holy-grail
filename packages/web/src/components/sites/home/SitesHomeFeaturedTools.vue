@@ -61,7 +61,7 @@ function nextPage() {
         </button>
         <RouterLink
           to="/sites/ai"
-          class="featured-tools__control featured-tools__control--plus"
+          class="featured-tools__control"
           aria-label="Browse all tools"
           title="Browse all"
         >
@@ -85,10 +85,9 @@ function nextPage() {
 
     <div v-else-if="visibleTools.length > 0" class="featured-tools__grid">
       <SitesHomeFeaturedCard
-        v-for="(tool, index) in visibleTools"
+        v-for="tool in visibleTools"
         :key="`${tool.id}-${page}`"
         :tool="tool"
-        :index="index"
       />
     </div>
 
@@ -107,31 +106,33 @@ function nextPage() {
   height: 2.25rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--sh-border-soft, rgba(255, 255, 255, 0.08));
-  border-radius: 9999px;
-  background: var(--sh-surface, #121212);
-  color: var(--sh-text-strong, #f5f5f5);
+  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  border-radius: 6px;
+  background: transparent;
+  color: var(--sh-text-soft, rgba(255, 255, 255, 0.7));
   cursor: pointer;
   text-decoration: none;
   transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    opacity 160ms ease,
-    color 160ms ease;
+    background-color 140ms ease,
+    border-color 140ms ease,
+    opacity 140ms ease,
+    color 140ms ease;
 }
 
 .featured-tools__control:hover:not(:disabled) {
-  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.16));
-  background: var(--sh-surface-hover, #1b1b1b);
+  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.18));
+  background: var(--sh-item-hover, #2a2a2a);
+  color: var(--sh-text-strong, #f5f5f5);
+}
+
+.featured-tools__control:focus-visible {
+  outline: 2px solid var(--sh-accent, #ff8c1a);
+  outline-offset: 2px;
 }
 
 .featured-tools__control:disabled {
   cursor: not-allowed;
   opacity: 0.35;
-}
-
-.featured-tools__control--plus {
-  color: var(--sh-accent, #ff8c1a);
 }
 
 .featured-tools__grid {
@@ -142,17 +143,15 @@ function nextPage() {
 
 .featured-tools__skeleton {
   aspect-ratio: 16 / 10;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .featured-tools__empty {
   margin: 0;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 20px;
-  background: var(--sh-surface, #121212);
-  padding: 2rem;
+  border-top: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  padding: 1.5rem 0;
   color: var(--sh-text-muted, rgba(255, 255, 255, 0.55));
-  text-align: center;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 1200px) {

@@ -5,7 +5,6 @@ import type { SitesHomeTool } from '@/types/sitesHome'
 
 defineProps<{
   tool: SitesHomeTool
-  index?: number
 }>()
 
 const imageFailed = shallowRef(false)
@@ -15,7 +14,7 @@ const imageFailed = shallowRef(false)
   <RouterLink
     :to="tool.to"
     class="featured-card"
-    :style="{ '--stagger': `${(index ?? 0) * 45}ms`, '--accent': tool.accentColor }"
+    :style="{ '--accent': tool.accentColor }"
     :aria-label="`Open ${tool.name}`"
   >
     <span class="featured-card__media">
@@ -51,60 +50,37 @@ const imageFailed = shallowRef(false)
   position: relative;
   display: block;
   overflow: hidden;
-  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.06));
-  border-radius: 20px;
-  background: var(--sh-surface, #121212);
+  border: 1px solid var(--sh-border, rgba(255, 255, 255, 0.08));
+  border-radius: 10px;
+  background: transparent;
   color: inherit;
   aspect-ratio: 16 / 10;
   text-decoration: none;
-  box-shadow: var(--sh-shadow, 0 8px 24px rgba(0, 0, 0, 0.22));
-  animation: featured-card-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation-delay: var(--stagger, 0ms);
-  transition:
-    transform 220ms ease,
-    border-color 220ms ease,
-    box-shadow 220ms ease,
-    background-color 200ms ease;
+  transition: border-color 180ms ease;
 }
 
-.featured-card:hover,
-.featured-card:focus-visible {
-  z-index: 1;
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--sh-border, rgba(255, 255, 255, 0.08)));
-  box-shadow: var(--sh-shadow-strong, 0 18px 40px rgba(0, 0, 0, 0.38));
-  transform: translateY(-4px) scale(1.02);
-  outline: none;
+.featured-card:hover {
+  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.2));
 }
 
 .featured-card:focus-visible {
+  border-color: var(--sh-border-strong, rgba(255, 255, 255, 0.2));
   outline: 2px solid var(--accent);
-  outline-offset: 3px;
+  outline-offset: 2px;
 }
 
 .featured-card__media {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 20% 0%,
-      color-mix(in srgb, var(--accent) 28%, transparent),
-      transparent 48%
-    ),
-    var(--sh-surface-deep, #0d0d0d);
+  background: var(--sh-surface-deep, #0d0d0d);
 }
 
 .featured-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1);
-  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.featured-card:hover .featured-card__image,
-.featured-card:focus-visible .featured-card__image {
-  transform: scale(1.06);
+  object-position: top center;
 }
 
 .featured-card__fallback {
@@ -149,7 +125,7 @@ const imageFailed = shallowRef(false)
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
-  color: #4ade80;
+  color: var(--sh-verified, #4ade80);
 }
 
 .featured-card__category {
@@ -157,28 +133,9 @@ const imageFailed = shallowRef(false)
   font-size: 0.82rem;
 }
 
-@keyframes featured-card-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .featured-card,
-  .featured-card__image {
-    animation: none;
+  .featured-card {
     transition: none;
-  }
-
-  .featured-card:hover,
-  .featured-card:focus-visible {
-    transform: none;
   }
 }
 </style>

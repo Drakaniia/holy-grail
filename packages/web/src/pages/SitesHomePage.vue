@@ -75,27 +75,15 @@ onMounted(() => {
 */
 .sites-home {
   --sh-bg: #1a1a1a;
-  --sh-surface: #222222;
-  --sh-surface-elevated: #262626;
-  --sh-surface-hover: #2a2a2a;
   --sh-surface-deep: #181818;
   --sh-border: rgba(255, 255, 255, 0.08);
   --sh-border-strong: rgba(255, 255, 255, 0.14);
-  --sh-border-soft: rgba(255, 255, 255, 0.1);
   --sh-text: #e8e8e8;
   --sh-text-strong: #f0f0f0;
   --sh-text-soft: rgba(255, 255, 255, 0.7);
   --sh-text-muted: rgba(255, 255, 255, 0.5);
-  --sh-text-faint: rgba(255, 255, 255, 0.3);
   --sh-accent: #ff8c1a;
   --sh-verified: #4ade80;
-  --sh-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  --sh-shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.45);
-  --sh-shadow-hero: 0 20px 50px rgba(0, 0, 0, 0.35);
-  --sh-shadow-preview: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.04);
-  --sh-control-bg: rgba(0, 0, 0, 0.5);
-  --sh-control-bg-hover: rgba(0, 0, 0, 0.7);
-  --sh-control-fg: #e8e8e8;
   --sh-cta-bg: #e8e8e8;
   --sh-cta-fg: #141414;
   --sh-cta-bg-hover: #f0f0f0;
@@ -103,14 +91,12 @@ onMounted(() => {
   --sh-indicator-track: rgba(255, 255, 255, 0.16);
   --sh-indicator-fill: #e8e8e8;
   --sh-meta-scrim: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85) 62%);
-  --sh-logo-bg: rgba(0, 0, 0, 0.4);
-  --sh-feature-bg: rgba(255, 255, 255, 0.04);
-  --sh-feature-bg-hover: rgba(255, 255, 255, 0.07);
   --sh-item-hover: #2a2a2a;
   --sh-error-border: rgba(248, 113, 113, 0.35);
   --sh-error-bg: rgba(248, 113, 113, 0.1);
   --sh-error-text: #fecaca;
   --sh-chip-mix-base: #e8e8e8;
+  --sh-backdrop-opacity: 0.9;
 
   min-height: 100%;
   background: var(--sh-bg);
@@ -122,27 +108,15 @@ onMounted(() => {
 
 :global(html.light .sites-home) {
   --sh-bg: var(--mocha-bg);
-  --sh-surface: var(--mocha-surface);
-  --sh-surface-elevated: var(--mocha-surface-strong);
-  --sh-surface-hover: var(--mocha-surface-strong);
   --sh-surface-deep: var(--mocha-surface-muted);
   --sh-border: var(--mocha-border);
   --sh-border-strong: var(--mocha-border-strong);
-  --sh-border-soft: var(--mocha-border);
   --sh-text: var(--mocha-text);
   --sh-text-strong: var(--mocha-text);
   --sh-text-soft: var(--mocha-text-soft);
   --sh-text-muted: var(--mocha-muted);
-  --sh-text-faint: var(--mocha-faint);
   --sh-accent: #ff7a00;
   --sh-verified: #16a34a;
-  --sh-shadow: 0 8px 20px rgba(45, 33, 25, 0.08);
-  --sh-shadow-strong: 0 16px 36px rgba(45, 33, 25, 0.14);
-  --sh-shadow-hero: 0 16px 40px rgba(45, 33, 25, 0.1);
-  --sh-shadow-preview: 0 18px 36px rgba(45, 33, 25, 0.12), 0 0 0 1px var(--mocha-border);
-  --sh-control-bg: rgba(255, 250, 243, 0.88);
-  --sh-control-bg-hover: #fff5e8;
-  --sh-control-fg: var(--mocha-text);
   --sh-cta-bg: var(--mocha-text);
   --sh-cta-fg: #fffaf3;
   --sh-cta-bg-hover: #3d2d22;
@@ -150,14 +124,12 @@ onMounted(() => {
   --sh-indicator-track: rgba(45, 33, 25, 0.1);
   --sh-indicator-fill: var(--mocha-text);
   --sh-meta-scrim: linear-gradient(180deg, transparent, rgba(45, 33, 25, 0.86) 62%);
-  --sh-logo-bg: var(--mocha-surface-muted);
-  --sh-feature-bg: rgba(255, 250, 243, 0.72);
-  --sh-feature-bg-hover: rgba(255, 245, 232, 0.95);
   --sh-item-hover: rgba(255, 140, 26, 0.1);
   --sh-error-border: rgba(197, 0, 0, 0.2);
   --sh-error-bg: rgba(247, 212, 214, 0.55);
   --sh-error-text: #c50000;
   --sh-chip-mix-base: var(--mocha-text);
+  --sh-backdrop-opacity: 0.82;
 
   background: var(--mocha-bg);
   color: var(--mocha-text);
