@@ -1,0 +1,84 @@
+slug: details-so
+name: Details.so - Web Design Inspiration and Animation Code Vault
+description: Curated interface details from real websites plus a Vault of production-ready animation and interaction code, searchable by AI over MCP.
+category: Inspiration
+parentCategory: design
+subcategory: inspiration
+stars: 0
+watchers: 0
+addedDaysAgo: 0
+license: Proprietary
+lastCommit: N/A
+lastRelease: N/A
+version: ''
+contributors: 0
+commitsThisYear: 0
+releases: 0
+platforms:
+  - Web
+deployment:
+  - Cloud
+website: https://www.details.so/
+docs: https://www.details.so/vault
+sourceCode: ''
+icon: details-so
+verified: false
+featured: false
+tags:
+  - bookmark
+  - design
+  - inspiration
+  - animation
+  - interactions
+  - code-snippets
+  - page-transitions
+  - mcp
+atGlance: Curated web design inspiration plus hand-crafted animation code and an MCP server.
+fullDescription: >-
+  Details.so collects the small interface details that make real websites feel good — page
+  transitions, text reveals, scroll effects, section transitions, hero sections and footers —
+  organised by category and refreshed weekly. Its Vault goes a step further with hand-crafted,
+  production-ready animation and interaction code you can copy straight into a project, and a
+  built-in MCP server lets coding agents query the whole library from tools like Cursor or Claude.
+coreFeatures:
+  - name: Curated Inspiration Feed
+    description: Real-site examples of page transitions, text reveals, scroll effects, and section animations.
+    icon: sparkles
+  - name: Animation Code Vault
+    description: Hand-crafted, production-ready interaction code that is copy and paste ready.
+    icon: terminal
+  - name: Natural-Language Search
+    description: Query examples in plain English, such as "morphing navigation", to surface matching details.
+    icon: layers
+additionalFeatures:
+  - name: MCP Server for Agents
+    description: Point your mcp.json at api.details.so/mcp so coding agents can browse the library.
+    icon: bot
+  - name: Category Browsing
+    description: Filter by interaction type, from page transitions to playful, corporate, and industrial sites.
+    icon: check
+  - name: Weekly Updates
+    description: New interactions and layouts are added every week to the Inspo library.
+    icon: refresh-cw
+similarTools:
+  - slug: designspells
+    name: Design Spells
+    description: Details, micro-interactions, and easter eggs from the best interfaces.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.designspells.com/
+  - slug: godly
+    name: Godly - Astronomically good web design inspiration
+    description: Astronomically good web design inspiration hand-picked from around the web.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://godly.website/
+  - slug: siteinspire
+    name: Best Website Design Inspiration | Siteinspire
+    description: Curated gallery of the best website design inspiration.
+    stars: 0
+    addedDaysAgo: 0
+    verified: false
+    website: https://www.siteinspire.com/

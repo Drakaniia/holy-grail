@@ -1127,6 +1127,15 @@
     "height": 600,
     "bytes": 23706
   },
+  "details-so": {
+    "image": "/previews/details-so.webp",
+    "small": "/previews/details-so-sm.webp",
+    "sourceUrl": "https://www.details.so/",
+    "capturedAt": "2026-10-25T14:10:47.242Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 27930
+  },
   "devin-cli": {
     "image": "/previews/devin-cli.webp",
     "small": "/previews/devin-cli-sm.webp",
@@ -3852,6 +3861,15 @@
     "width": 960,
     "height": 600,
     "bytes": 9842
+  },
+  "suiss-ui": {
+    "image": "/previews/suiss-ui.webp",
+    "small": "/previews/suiss-ui-sm.webp",
+    "sourceUrl": "https://suiss.app/ui",
+    "capturedAt": "2026-10-25T14:10:45.587Z",
+    "width": 960,
+    "height": 600,
+    "bytes": 39564
   },
   "supabase": {
     "image": "/previews/supabase.webp",

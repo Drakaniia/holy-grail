@@ -1,0 +1,91 @@
+slug: suiss-ui
+name: suiss/ui - Copy-Paste Components for Web and Mobile
+description: Open-source registry of 271 accessible components, charts, blocks, and patterns for React, React Native, SwiftUI, and Jetpack Compose.
+category: UI Library
+parentCategory: development
+subcategory: ui-libraries
+stars: 15
+watchers: 0
+addedDaysAgo: 0
+license: MIT
+lastCommit: today
+lastRelease: 6 days ago
+version: v0.21.0
+contributors: 2
+commitsThisYear: 1085
+releases: 30
+platforms:
+  - Web
+  - Mobile
+deployment:
+  - Cloud
+  - npm
+website: https://suiss.app/ui
+docs: https://suiss.app/ui/docs/components
+sourceCode: https://github.com/e-suiss/ui
+icon: suiss-ui
+verified: true
+featured: false
+tags:
+  - bookmark
+  - ui-libraries
+  - ui
+  - components
+  - react
+  - nextjs
+  - react-native
+  - expo
+  - swiftui
+  - jetpack-compose
+  - tailwind
+  - shadcn
+atGlance: One minimal design language, 271 pieces, every web and mobile platform.
+fullDescription: >-
+  suiss/ui is an open-source, copy-paste component registry that keeps a single clean, minimal
+  design language across platforms: 84 components for React (Next.js and Vite), React Native via
+  Expo, SwiftUI and Jetpack Compose, plus 70 charts, 56 blocks, 19 patterns, 21 AI-chat pieces,
+  15 interactions and 6 hooks. Components are copied into your project with the CLI rather than
+  imported from a package, so you own and can change every line. Built on Base UI and
+  Tailwind CSS v4, with accessible markup and theme tokens that each carry a dark twin.
+coreFeatures:
+  - name: Copy-Paste Ownership
+    description: Add components with one CLI command and edit the source freely in your own project.
+    icon: check
+  - name: One Design on Every Platform
+    description: The same look for React, React Native, SwiftUI, and Jetpack Compose.
+    icon: layers
+  - name: 271 Registry Pieces
+    description: 84 components, 70 charts, 56 blocks, 19 patterns, 21 AI pieces, 15 interactions.
+    icon: sparkles
+additionalFeatures:
+  - name: Accessible and Themeable
+    description: Built on Base UI and Tailwind CSS v4 with tokens that each have a dark twin.
+    icon: palette
+  - name: Live Previews
+    description: Every demo is the real component running in the docs, not a screenshot.
+    icon: check
+  - name: AI Interface Primitives
+    description: Messages, reasoning, tools, and prompt components for agent and chat UIs.
+    icon: bot
+similarTools:
+  - slug: ui-the-foundation-for-your-design-system-shadcn-ui
+    name: shadcn/ui
+    description: Copy-paste component system for building design systems with Tailwind CSS.
+    stars: 117109
+    addedDaysAgo: 0
+    verified: true
+    website: https://ui.shadcn.com/
+  - slug: base-ui
+    name: Base UI
+    description: Unstyled, accessible React components for building custom design systems.
+    stars: 10025
+    addedDaysAgo: 0
+    verified: true
+    website: https://base-ui.com/
+  - slug: heroui
+    name: HeroUI
+    description: Beautiful, fast UI library for building modern React applications.
+    stars: 29676
+    addedDaysAgo: 0
+    verified: true
+    website: https://www.heroui.com/
