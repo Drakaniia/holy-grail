@@ -129,6 +129,8 @@ async function main(): Promise<void> {
   const transport = new StdioClientTransport({
     command: 'bun',
     args: [serverPath],
+    // Answers are pinned to the repo's generated indexes, not the live site.
+    env: { HOLY_GRAIL_LIVE: '0' },
     stderr: 'pipe',
   })
   const client = new Client({ name: 'holy-grail-evals', version: '1.0.0' })

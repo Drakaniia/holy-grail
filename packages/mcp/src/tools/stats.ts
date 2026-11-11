@@ -3,7 +3,14 @@
 
 import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
-import { loadExtensions, loadMcpServers, loadSites, loadSkills } from '../data.js'
+import {
+  ensureCatalog,
+  getCatalogStatus,
+  loadExtensions,
+  loadMcpServers,
+  loadSites,
+  loadSkills,
+} from '../data.js'
 import { formatStats } from '../format.js'
 import { buildResponse } from './common.js'
 
@@ -27,7 +34,7 @@ Args:
   - response_format ('markdown' | 'json'): Output format (default: 'markdown')
 
 Returns:
-  { "counts": { "sites": number, "extensions": number, "mcp": number, "skills": number }, "total": number, "byParentCategory": { [parent]: { "sites": number, "extensions": number, "mcp": number, "skills": number } } }
+  { "counts": { "sites": number, "extensions": number, "mcp": number, "skills": number }, "total": number, "byParentCategory": { [parent]: { "sites": number, "extensions": number, "mcp": number, "skills": number } }, "data": { "source": "live"|"snapshot", "liveEnabled": boolean, "baseUrl": string|null, "fetchedAt": string|null, "lastError": string|null } }
 
 Examples:
   - "How many MCP servers are in the catalog?" -> get_stats then read counts.mcp
@@ -41,6 +48,7 @@ Examples:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const sites = loadSites()
       const extensions = loadExtensions()
       const servers = loadMcpServers()
@@ -75,6 +83,7 @@ Examples:
         byParentCategory: Object.fromEntries(
           sortedParents.map((parent) => [parent, byParentCategory[parent]]),
         ),
+        data: getCatalogStatus(),
       }
       return buildResponse(params.response_format, formatStats(payload), payload)
     },

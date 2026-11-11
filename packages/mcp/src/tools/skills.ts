@@ -3,10 +3,10 @@
 import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
-import { loadSkills } from '../data.js'
+import { ensureCatalog, loadSkills } from '../data.js'
 import { formatSkill, formatSkillList, installHint } from '../format.js'
 import type { Skill } from '../types.js'
-import { buildResponse, notFound, page } from './common.js'
+import { buildResponse, notFound, page, responseFormatSchema } from './common.js'
 
 const GetSkillInputSchema = z
   .object({
@@ -14,6 +14,7 @@ const GetSkillInputSchema = z
       .string()
       .min(1)
       .describe('Skill slug, e.g. "audit-codebase". Find valid slugs via search or list_skills'),
+    response_format: responseFormatSchema,
   })
   .strict()
 
@@ -60,12 +61,14 @@ export function registerSkillTools(server: SdkMcpServer): void {
 
 Args:
   - slug (string): Skill slug, e.g. "audit-codebase"
+  - response_format ('markdown' | 'json'): Summary or complete record (default: 'markdown')
 
 Returns:
   Full skill record (JSON) — slug, title, description, category, parentCategory, tags, views, uses, author, authorName, repoLink, skillPath, branch, addedBy, featured, dateAdded, hasLocalContent, installHint
 
 Examples:
   - "How do I install the folder-architecture skill?" -> slug="folder-architecture" (installHint: npx grail add <repo> --skill <slug>)
+  - Use get_skill_files to fetch the skill's actual files (SKILL.md + supporting files).
   - Don't use for finding slugs — use search or list_skills first.
 
 Error Handling:
@@ -79,10 +82,11 @@ Error Handling:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const skill = loadSkills().find((s) => s.slug === params.slug)
       if (!skill) return notFound('skill', params.slug)
       const payload = withInstallHint(skill)
-      return buildResponse('markdown', formatSkill(skill), payload)
+      return buildResponse(params.response_format, formatSkill(skill), payload)
     },
   )
 
@@ -115,6 +119,7 @@ Examples:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const lowerCategory = params.category?.toLowerCase()
       const lowerParent = params.parentCategory?.toLowerCase()
       let skills = loadSkills()

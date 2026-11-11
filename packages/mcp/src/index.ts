@@ -12,7 +12,7 @@ if (useHttp) {
   const port = Number(process.env.PORT ?? 3000)
   await serveHttp(port, process.env.HOST ?? '127.0.0.1')
 } else {
-  const server = createServer()
+  const server = createServer({ transport: 'stdio' })
   const transport = new StdioServerTransport()
   await server.connect(transport)
   console.error('holy-grail-mcp-server running via stdio (TRANSPORT=http for streamable HTTP)')

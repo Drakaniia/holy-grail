@@ -3,9 +3,9 @@
 import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
-import { loadMcpServers } from '../data.js'
+import { ensureCatalog, loadMcpServers } from '../data.js'
 import { formatMcpServer, formatMcpServerList } from '../format.js'
-import { buildResponse, notFound, page } from './common.js'
+import { buildResponse, notFound, page, responseFormatSchema } from './common.js'
 
 const GetMcpServerInputSchema = z
   .object({
@@ -15,6 +15,7 @@ const GetMcpServerInputSchema = z
       .describe(
         'MCP server slug, e.g. "playwright-mcp". Find valid slugs via search or list_mcp_servers',
       ),
+    response_format: responseFormatSchema,
   })
   .strict()
 
@@ -57,6 +58,7 @@ export function registerMcpTools(server: SdkMcpServer): void {
 
 Args:
   - slug (string): MCP server slug, e.g. "playwright-mcp"
+  - response_format ('markdown' | 'json'): Summary or complete record (default: 'markdown')
 
 Returns:
   Full MCP server record (JSON) — slug, name, description, category, parentCategory, icon, verified, featured, tags, website, docs, sourceCode, installCommand, transport, tools [{ name, description }], connections
@@ -76,9 +78,10 @@ Error Handling:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const server = loadMcpServers().find((m) => m.slug === params.slug)
       if (!server) return notFound('MCP server', params.slug)
-      return buildResponse('markdown', formatMcpServer(server), server)
+      return buildResponse(params.response_format, formatMcpServer(server), server)
     },
   )
 
@@ -111,6 +114,7 @@ Examples:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const lowerCategory = params.category?.toLowerCase()
       const lowerTransport = params.transport?.toLowerCase()
       let servers = loadMcpServers()

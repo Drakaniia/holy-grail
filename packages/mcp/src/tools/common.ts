@@ -2,12 +2,21 @@
 // CHARACTER_LIMIT handling for both markdown and JSON response formats.
 
 import type { CallToolResult } from '@modelcontextprotocol/sdk/types.js'
+import { z } from 'zod'
 import { CHARACTER_LIMIT } from '../constants.js'
 import { truncate, type PageMeta } from '../format.js'
 
 type ResponseFormat = 'markdown' | 'json'
 
-function ok(text: string, structuredContent?: unknown): CallToolResult {
+/** Shared response_format input for every read tool. */
+export const responseFormatSchema = z
+  .enum(['markdown', 'json'])
+  .default('markdown')
+  .describe(
+    "Output format: 'markdown' for a compact human-readable summary or 'json' for the complete record",
+  )
+
+export function ok(text: string, structuredContent?: unknown): CallToolResult {
   const result: CallToolResult = { content: [{ type: 'text', text }] }
   if (structuredContent !== undefined) {
     result.structuredContent = structuredContent as Record<string, unknown>
@@ -15,7 +24,7 @@ function ok(text: string, structuredContent?: unknown): CallToolResult {
   return result
 }
 
-function fail(message: string): CallToolResult {
+export function fail(message: string): CallToolResult {
   return { isError: true, content: [{ type: 'text', text: message }] }
 }
 

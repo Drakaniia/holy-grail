@@ -9,6 +9,7 @@ import {
   SEARCH_DEFAULT_LIMIT,
   SEARCH_MAX_LIMIT,
 } from '../constants.js'
+import { ensureCatalog } from '../data.js'
 import { formatSearchResults } from '../format.js'
 import { searchCatalog } from '../search.js'
 import { buildResponse } from './common.js'
@@ -35,6 +36,10 @@ const SearchInputSchema = z
       .min(0)
       .default(0)
       .describe('Number of results to skip for pagination (default: 0)'),
+    kind: z
+      .enum(['site', 'extension', 'mcp', 'skill'])
+      .optional()
+      .describe('Restrict results to one entity kind (default: all kinds)'),
     response_format: z
       .enum(['markdown', 'json'])
       .default('markdown')
@@ -55,6 +60,7 @@ Args:
   - query (string): Search string, 2-200 characters. Examples: "browser automation", "postgres database", "ad blocker"
   - limit (number): Maximum results to return, 1-50 (default: 10)
   - offset (number): Results to skip for pagination (default: 0)
+  - kind ('site' | 'extension' | 'mcp' | 'skill', optional): Only return this entity kind
   - response_format ('markdown' | 'json'): Output format (default: 'markdown')
 
 Returns:
@@ -76,7 +82,13 @@ Examples:
       },
     },
     async (params) => {
-      const page = searchCatalog(params.query, params.limit, params.offset)
+      await ensureCatalog()
+      const page = searchCatalog(
+        params.query,
+        params.limit,
+        params.offset,
+        params.kind ? [params.kind] : undefined,
+      )
       const payload = {
         results: page.results,
         total: page.total,

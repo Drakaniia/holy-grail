@@ -184,7 +184,7 @@ export async function handleWebRequest(request: Request): Promise<Response> {
   }
 
   // Fresh transport + server per request: stateless, no session store.
-  const server = createServer()
+  const server = createServer({ transport: 'http' })
   const transport = new WebStandardStreamableHTTPServerTransport({
     sessionIdGenerator: undefined,
     enableJsonResponse: true,

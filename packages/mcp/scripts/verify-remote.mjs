@@ -20,8 +20,9 @@ if (!url) {
   process.exit(2)
 }
 
-// Must match the number of tools registered in src/server.ts.
-const EXPECTED_TOOL_COUNT = 10
+// Must match the number of tools src/server.ts registers for the hosted
+// (http) transport — every tool except the stdio-only install_skill.
+const EXPECTED_TOOL_COUNT = 18
 
 function fail(message) {
   console.error(`FAIL ${url}: ${message}`)

@@ -68,7 +68,7 @@ Monorepo: **Bun workspaces** (`packages/*`) with a single lockfile, orchestrated
 | `Site` | type | `packages/web/src/stores/sites.ts` | Core domain model (24 callers) |
 | `useSmartSearch` | composable | `packages/web/src/composables/useSmartSearch.ts` | SPA cross-entity search; scoring delegated to `@holy-grail/core` |
 | `generateSitePreviews` | script | `packages/web/scripts/previews/` | Puppeteer screenshot pipeline |
-| `createServer` | MCP | `packages/mcp/src/server.ts` | Registers all 10 tools + resources |
+| `createServer` | MCP | `packages/mcp/src/server.ts` | Registers 19 tools (18 hosted; `install_skill` is stdio-only) + resources + 5 prompts |
 | `searchCatalog` | MCP | `packages/mcp/src/search.ts` | MCP corpus + paginated search; scoring delegated to `@holy-grail/core` (same code as `useSmartSearch`) |
 | `grail` | CLI | `packages/cli/src/main.rs` | Rust skill-management binary |
 

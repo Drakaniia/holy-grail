@@ -3,9 +3,9 @@
 import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
-import { loadPreviews, loadSites } from '../data.js'
+import { ensureCatalog, loadPreviews, loadSites } from '../data.js'
 import { formatSite, formatSiteList, previewToPayload } from '../format.js'
-import { buildResponse, notFound, page } from './common.js'
+import { buildResponse, notFound, page, responseFormatSchema } from './common.js'
 
 const GetSiteInputSchema = z
   .object({
@@ -13,6 +13,7 @@ const GetSiteInputSchema = z
       .string()
       .min(1)
       .describe('Site slug, e.g. "appwrite". Find valid slugs via search or list_sites'),
+    response_format: responseFormatSchema,
   })
   .strict()
 
@@ -55,6 +56,7 @@ export function registerSiteTools(server: SdkMcpServer): void {
 
 Args:
   - slug (string): Site slug, e.g. "appwrite"
+  - response_format ('markdown' | 'json'): Summary or complete record (default: 'markdown')
 
 Returns:
   Full site record (JSON) — slug, name, description, category, parentCategory, stars, watchers, license, version, platforms, deployment, website, docs, sourceCode, tags, verified, featured, atGlance, fullDescription, coreFeatures, additionalFeatures, installCommand, similarTools, preview { image, small, width, height, capturedAt }
@@ -74,11 +76,12 @@ Error Handling:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const site = loadSites().find((s) => s.slug === params.slug)
       if (!site) return notFound('site', params.slug)
       const preview = loadPreviews()[site.slug]
       const payload = { ...site, preview: previewToPayload(preview) }
-      return buildResponse('markdown', formatSite(site, preview), payload)
+      return buildResponse(params.response_format, formatSite(site, preview), payload)
     },
   )
 
@@ -111,6 +114,7 @@ Examples:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const lowerCategory = params.category?.toLowerCase()
       const lowerParent = params.parentCategory?.toLowerCase()
       let sites = loadSites()

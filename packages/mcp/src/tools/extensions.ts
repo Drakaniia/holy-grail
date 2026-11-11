@@ -3,9 +3,9 @@
 import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 import { LIST_DEFAULT_LIMIT, LIST_MAX_LIMIT } from '../constants.js'
-import { loadExtensions } from '../data.js'
+import { ensureCatalog, loadExtensions } from '../data.js'
 import { formatExtension, formatExtensionList } from '../format.js'
-import { buildResponse, notFound, page } from './common.js'
+import { buildResponse, notFound, page, responseFormatSchema } from './common.js'
 
 const GetExtensionInputSchema = z
   .object({
@@ -15,6 +15,7 @@ const GetExtensionInputSchema = z
       .describe(
         'Extension slug, e.g. "ublock-origin". Find valid slugs via search or list_extensions',
       ),
+    response_format: responseFormatSchema,
   })
   .strict()
 
@@ -54,6 +55,7 @@ export function registerExtensionTools(server: SdkMcpServer): void {
 
 Args:
   - slug (string): Extension slug, e.g. "ublock-origin"
+  - response_format ('markdown' | 'json'): Summary or complete record (default: 'markdown')
 
 Returns:
   Full extension record (JSON) — slug, name, description, category, parentCategory, version, license, website, docs, sourceCode, tags, verified, featured, atGlance, fullDescription, coreFeatures, additionalFeatures, chromeWebStoreId, permissions, manifestVersion
@@ -73,9 +75,10 @@ Error Handling:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const extension = loadExtensions().find((e) => e.slug === params.slug)
       if (!extension) return notFound('extension', params.slug)
-      return buildResponse('markdown', formatExtension(extension), extension)
+      return buildResponse(params.response_format, formatExtension(extension), extension)
     },
   )
 
@@ -108,6 +111,7 @@ Examples:
       },
     },
     async (params) => {
+      await ensureCatalog()
       const lowerCategory = params.category?.toLowerCase()
       const lowerParent = params.parentCategory?.toLowerCase()
       let extensions = loadExtensions()

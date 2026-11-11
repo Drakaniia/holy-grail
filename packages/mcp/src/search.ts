@@ -10,7 +10,7 @@
 // evals/search-corpus.test.ts (pinned corpus) and
 // packages/web/tests/mcp-search-mirror.test.ts (SPA-vs-MCP parity).
 
-import { loadExtensions, loadMcpServers, loadSites, loadSkills } from './data.js'
+import { getCatalogVersion, loadExtensions, loadMcpServers, loadSites, loadSkills } from './data.js'
 import type { PageMeta } from './format.js'
 import type { Extension, McpServer, MatchStrength, Site } from './types.js'
 import { page } from './tools/common.js'
@@ -104,6 +104,18 @@ const scoreCache = createScoreCache()
 // ---- Corpus + search ----
 
 let corpus: SearchItem<SearchKind>[] | null = null
+let corpusVersion = -1
+
+/** The search corpus, rebuilt (and the score cache cleared) after a live data swap. */
+function getCorpus(): SearchItem<SearchKind>[] {
+  const version = getCatalogVersion()
+  if (corpus === null || corpusVersion !== version) {
+    corpus = buildCorpus()
+    corpusVersion = getCatalogVersion()
+    scoreCache.clear()
+  }
+  return corpus
+}
 
 function buildCorpus(): SearchItem<SearchKind>[] {
   return [
@@ -118,11 +130,19 @@ export interface SearchCatalogPage extends PageMeta {
   results: SearchHit[]
 }
 
-export function searchCatalog(query: string, limit: number, offset: number): SearchCatalogPage {
-  if (corpus === null) corpus = buildCorpus()
+export function searchCatalog(
+  query: string,
+  limit: number,
+  offset: number,
+  kinds?: readonly SearchKind[],
+): SearchCatalogPage {
   const normalized = normalizeText(query)
+  const items =
+    kinds && kinds.length > 0
+      ? getCorpus().filter((item) => kinds.includes(item.kind))
+      : getCorpus()
 
-  const ranked = corpus
+  const ranked = items
     .map((item) => {
       const cached = scoreCache.get(normalized, item.id)
       const score = cached ?? scoreSearchItem(normalized, item)

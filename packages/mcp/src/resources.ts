@@ -6,7 +6,14 @@
 import type { McpServer as SdkMcpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { ResourceTemplate } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { ErrorCode, McpError } from '@modelcontextprotocol/sdk/types.js'
-import { loadExtensions, loadMcpServers, loadPreviews, loadSites, loadSkills } from './data.js'
+import {
+  ensureCatalog,
+  loadExtensions,
+  loadMcpServers,
+  loadPreviews,
+  loadSites,
+  loadSkills,
+} from './data.js'
 import { installHint, previewToPayload } from './format.js'
 import type { CatalogKind } from './types.js'
 
@@ -99,13 +106,17 @@ export function registerResources(server: SdkMcpServer): void {
 
   for (const spec of specs) {
     const template = new ResourceTemplate(spec.uri, {
-      list: async () => ({ resources: spec.listResources() }),
+      list: async () => {
+        await ensureCatalog()
+        return { resources: spec.listResources() }
+      },
     })
     server.registerResource(
       spec.name,
       template,
       { mimeType: 'application/json', description: spec.description },
       async (uri) => {
+        await ensureCatalog()
         const slugMatch = /\/([^/]+)$/.exec(uri.toString())
         const slug = slugMatch ? decodeURIComponent(slugMatch[1]) : ''
         const payload = entityPayload(kindFromUri(uri.toString()), slug)
