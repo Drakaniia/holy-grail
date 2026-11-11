@@ -97,6 +97,11 @@ const router = createRouter({
       component: () => import('@/pages/McpDetail.vue'),
     },
     {
+      path: '/mcp-server',
+      name: 'mcp-server',
+      component: () => import('@/pages/McpServerPage.vue'),
+    },
+    {
       path: '/login',
       name: 'login',
       component: AuthPage,

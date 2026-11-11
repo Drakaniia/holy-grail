@@ -6,6 +6,7 @@ import {
   Bot,
   Box,
   BrainCircuit,
+  Cable,
   Code2,
   Component as ComponentIcon,
   Disc3,
@@ -187,6 +188,7 @@ const TOP_LEVEL_LABELS: Record<string, string> = {
   changelog: 'Changelog',
   docs: 'Documentation',
   admin: 'Admin',
+  'mcp-server': 'MCP Server',
 }
 
 /**
@@ -363,6 +365,13 @@ export const sidebarMainMenuItems: SidebarMainMenuItem[] = [
     isActive: (path: string) => path !== '/' && isActive(section.route, path, false),
   })),
   {
+    name: 'Connect via MCP',
+    icon: Cable,
+    route: '/mcp-server',
+    group: 'build',
+    isActive: (path: string) => isActive('/mcp-server', path, false),
+  },
+  {
     name: 'Bookmarks',
     icon: Bookmark,
     route: '/bookmarks',
@@ -382,7 +391,8 @@ export const sidebarMainMenuItems: SidebarMainMenuItem[] = [
 export function getSidebarSectionForPath(path: string): SidebarSectionKey | null {
   if (path === '/' || path === '/sites' || path.startsWith('/sites/')) return 'sites'
   if (path.startsWith('/extensions')) return 'extensions'
-  if (path.startsWith('/mcp')) return 'mcp'
+  // Exact segment match: `/mcp-server` is the connect page, not part of the MCP catalog section.
+  if (path === '/mcp' || path.startsWith('/mcp/')) return 'mcp'
   if (path.startsWith('/skills')) return 'skills'
 
   return null

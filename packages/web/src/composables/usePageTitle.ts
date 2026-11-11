@@ -16,6 +16,7 @@
  *   - /bookmarks       → "Bookmarks | Holy Grail"
  *   - /changelog       → "Changelog | Holy Grail"
  *   - /docs            → "Documentation | Holy Grail"
+ *   - /mcp-server      → "MCP Server | Holy Grail"
  */
 
 import { labelFor } from '@/components/sidebar/sidebarNav'

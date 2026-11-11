@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
+import { ArrowRight, Cable } from 'lucide-vue-next'
 import { useMcpStore } from '@/stores/mcp'
 import McpCard from '@/components/mcp/McpCard.vue'
 
@@ -39,6 +40,17 @@ const servers = computed(() => {
         <p class="max-w-2xl text-base leading-relaxed text-gray-400">
           Model Context Protocol servers that connect AI agents to tools and data sources.
         </p>
+        <RouterLink
+          to="/mcp-server"
+          class="group mt-6 inline-flex items-center gap-2 rounded-lg border border-gray-800 px-3 py-2 text-sm font-medium text-gray-300 transition-[border-color,color,transform] duration-150 ease-out-quint hover:border-gray-700 hover:text-white active:scale-[0.98] motion-reduce:transition-none"
+        >
+          <Cable class="h-4 w-4 text-accent-400" aria-hidden="true" />
+          Connect your agent to this catalog via MCP
+          <ArrowRight
+            class="h-4 w-4 transition-transform duration-150 group-hover:translate-x-0.5 motion-reduce:transition-none"
+            aria-hidden="true"
+          />
+        </RouterLink>
       </div>
     </div>
 

@@ -6,9 +6,12 @@ const props = withDefaults(
   defineProps<{
     code: string
     label?: string
+    /** Accessible name for the copy button; defaults to a generic "Copy code". */
+    copyLabel?: string
   }>(),
   {
     label: '',
+    copyLabel: '',
   },
 )
 
@@ -42,7 +45,7 @@ onUnmounted(() => {
       <button
         type="button"
         class="docs-code-block__copy"
-        :aria-label="copied ? 'Copied code' : 'Copy code'"
+        :aria-label="copied ? 'Copied code' : copyLabel || 'Copy code'"
         :title="copied ? 'Copied' : 'Copy code'"
         @click="copyCode"
       >
