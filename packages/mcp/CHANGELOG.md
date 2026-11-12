@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/Drakaniia/holy-grail/compare/holy-grail-mcp-v1.3.0...holy-grail-mcp-v1.4.0) (2026-11-12)
+
+
+### Features
+
+* **catalog:** derive addedDaysAgo from first git commit ([453948f](https://github.com/Drakaniia/holy-grail/commit/453948f7abd31791fb9d8cd2eb2583db8d9ac7d8))
+* **core:** extract the search scorer into @holy-grail/core ([65503bb](https://github.com/Drakaniia/holy-grail/commit/65503bb92416af20d28adb4498c34893b3afd236))
+* **mcp:** live catalog data, discovery tools, prompts, skill install and submissions ([fc77ea8](https://github.com/Drakaniia/holy-grail/commit/fc77ea89dfb96364395b06f2766e3e32ed151b5c))
+
+
+### Bug Fixes
+
+* **deps:** bump zod to 4.6.6 to patch memory exhaustion advisory ([e350b0f](https://github.com/Drakaniia/holy-grail/commit/e350b0f6198b40439a61682c458a96244101e0e4))
+
 ## [1.3.0](https://github.com/Drakaniia/holy-grail/compare/holy-grail-mcp-v1.2.0...holy-grail-mcp-v1.3.0) (2026-09-14)
 
 
